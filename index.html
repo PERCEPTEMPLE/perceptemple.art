@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <!-- Prevent auto-translation — PERCEPTEMPLE is a proper noun -->
+  <meta name="google" content="notranslate">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- SEO & Social sharing -->
+  <meta name="description" content="PERCEPTEMPLE — Arte conceptual y teoría filosófica originaria de El Salvador. Panperceptual Theory of the Universe por Dany D. Ruiz. Before They See Us, We Already Are.">
+  <meta name="keywords" content="arte salvadoreño, arte de El Salvador, arte conceptual, filosofía perceptual, Panperceptual Theory, PTU, PERCEPTEMPLE, Dany D. Ruiz, arte digital, arte latinoamericano, arte contemporáneo centroamericano, Salvadoran art, conceptual art El Salvador, ciencia El Salvador, tecnología El Salvador, conciencia artificial, inteligencia artificial El Salvador, robótica El Salvador, robot El Salvador, filosofía de la conciencia, teoría de la percepción, neurotecnología, mente y máquina, consciencia digital, innovación tecnológica centroamérica, ciencia y arte El Salvador, tecnología y humanidad, posthumanismo latinoamericano, singularidad tecnológica, percepción artificial, El Salvador innovación, ciencia cognitiva, pensamiento computacional El Salvador">
+  <meta name="author" content="Dany D. Ruiz">
+  <meta name="geo.region" content="SV">
+  <meta name="geo.country" content="El Salvador">
+
+  <meta property="og:title" content="PERCEPTEMPLE">
+  <meta property="og:description" content="Arte conceptual originario de El Salvador. Before They See Us, We Already Are — Panperceptual Theory of the Universe.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_SV">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="PERCEPTEMPLE">
+  <meta name="twitter:description" content="Arte conceptual originario de El Salvador. Before They See Us, We Already Are.">
+  <meta name="twitter:creator" content="@panperceptual">
+
+  <!-- Structured data — invisible, for search engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VisualArtwork",
+    "name": "PERCEPTEMPLE",
+    "alternateName": "Templo de la Percepción",
+    "description": "Obra de arte conceptual digital basada en la Panperceptual Theory of the Universe (PTU). Arte originario de El Salvador en la intersección entre conciencia, tecnología y percepción. Una exploración de la mente, la inteligencia artificial y el futuro humano desde Centroamérica.",
+    "creator": {
+      "@type": "Person",
+      "name": "Dany D. Ruiz",
+      "nationality": "Salvadoran",
+      "countryOfOrigin": {
+        "@type": "Country",
+        "name": "El Salvador"
+      }
+    },
+    "artMedium": "Digital Interactive Art",
+    "genre": "Arte Conceptual",
+    "countryOfOrigin": {
+      "@type": "Country",
+      "name": "El Salvador"
+    },
+    "inLanguage": ["es", "en"],
+    "keywords": "arte salvadoreño, arte conceptual, filosofía perceptual, PTU, arte digital latinoamericano, ciencia El Salvador, tecnología El Salvador, conciencia artificial, robótica El Salvador, inteligencia artificial centroamérica, filosofía de la mente, percepción y tecnología, innovación El Salvador"
+  }
+  </script>
+
+  <title>PERCEPTEMPLE</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.3/p5.min.js"></script>
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      width: 100%; height: 100%;
+      background: #000;
+      overflow: hidden;
+      touch-action: none;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      user-select: none;
+    }
+
+    body { cursor: crosshair; }
+    canvas { display: block; }
+
+    /* ── UI overlay ───────────────────────────────────────── */
+    #ui {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    #title {
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: 400;
+      font-size: clamp(1.4rem, 5vw, 4.8rem);
+      letter-spacing: 0.38em;
+      color: #00ff00;
+      text-shadow:
+        0 0 12px rgba(0, 255, 0, 0.45),
+        0 0 38px rgba(0, 255, 0, 0.10);
+      text-transform: uppercase;
+      animation: flicker 8s ease-in-out infinite;
+    }
+
+    #tagline {
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: 400;
+      font-style: italic;
+      /* FIX: min 0.75rem so it's readable on any phone */
+      font-size: clamp(0.75rem, 3.5vw, 1.2rem);
+      letter-spacing: 0.05em;
+      color: #00ff00;
+      opacity: 0.6;
+      margin-top: 6px;
+      text-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+    }
+
+    /* ── Scanlines ────────────────────────────────────────── */
+    #scanlines {
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        to bottom,
+        transparent 0px, transparent 3px,
+        rgba(0,0,0,0.08) 3px, rgba(0,0,0,0.08) 4px
+      );
+      pointer-events: none;
+      z-index: 20;
+    }
+
+    /* ── Corner marks ────────────────────────────────────── */
+    .corner {
+      position: fixed;
+      width: 18px; height: 18px;
+      border-color: rgba(0, 255, 0, 0.18);
+      border-style: solid;
+      pointer-events: none;
+      z-index: 10;
+    }
+    .tl { top: 24px;    left: 24px;  border-width: 1px 0 0 1px; }
+    .tr { top: 24px;    right: 24px; border-width: 1px 1px 0 0; }
+    .bl { bottom: 24px; left: 24px;  border-width: 0 0 1px 1px; }
+    .br { bottom: 24px; right: 24px; border-width: 0 1px 1px 0; }
+
+    /* ── Flicker ──────────────────────────────────────────── */
+    @keyframes flicker {
+      0%, 100% { opacity: 1;    }
+      92%      { opacity: 1;    }
+      93%      { opacity: 0.85; }
+      94%      { opacity: 1;    }
+      96%      { opacity: 0.90; }
+      97%      { opacity: 1;    }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="ui">
+    <div id="title" translate="no">PERCEPTEMPLE</div>
+    <div id="tagline">— Before They See Us, We Already Are</div>
+  </div>
+
+  <div id="scanlines"></div>
+  <div class="corner tl"></div>
+  <div class="corner tr"></div>
+  <div class="corner bl"></div>
+  <div class="corner br"></div>
+
+<script>
+// ── PRAM 3D — Draggable Living Atom ───────────────────────────────────────
+
+const ORBITS = [
+  { n: 4, r_frac: 0.18, baseSpeed: 0.00055, seed: 0,
+    concepts: ['Vision','Hearing','Touch','Smell'] },
+  { n: 6, r_frac: 0.30, baseSpeed: 0.00032, seed: 10,
+    concepts: ['Memory','Attention','Processing','Analysis','Integration','Recognition'] },
+  { n: 8, r_frac: 0.42, baseSpeed: 0.00018, seed: 20,
+    concepts: ['Response','Action','Feedback','Adaptation','Learning','Expression','Communication','Decision'] },
+];
+
+const RESONANCE = [
+  [[0,0],[1,0]], [[0,1],[1,1]], [[1,2],[2,0]],
+  [[1,3],[2,1]], [[2,2],[1,4]]
+];
+
+const GRAB_RADIUS = 38;
+const FOV = 500;
+
+let orbitNodes  = [];
+let allNodes    = [];
+let pulseWaves  = [];
+let grabbedNode = null;
+
+// Global tilt (gyro or mouse)
+let gTiltX = 0, gTiltY = 0;
+let gravX = 0, gravY = 0, gravVX = 0, gravVY = 0;
+let targetGravX = 0, targetGravY = 0;
+let hasGyro = false, gyroActive = false;
+
+// FIX: flag to prevent mousePressed firing after touchStarted on mobile
+let touchActive = false;
+
+// Touch throw tracking
+let lastTouchX = 0, lastTouchY = 0;
+let prevTouchX = 0, prevTouchY = 0;
+
+// ── Gyroscope ─────────────────────────────────────────────────────────────
+function handleOrientation(e) {
+  if (e.gamma === null || e.beta === null) return;
+
+  // Ignore Android devices that fire zeros before real data
+  if (!gyroActive && (Math.abs(e.gamma) > 0.5 || Math.abs(e.beta) > 0.5)) {
+    gyroActive = true;
+  }
+  if (!gyroActive) return;
+  hasGyro = true;
+
+  // Detect landscape vs portrait
+  let orient = (screen.orientation || {}).angle || window.orientation || 0;
+  let tiltFB, tiltLR;
+
+  if (Math.abs(orient) === 90) {
+    // Landscape: axes swap
+    tiltFB = (Math.max(-60, Math.min(60, e.beta))  / 60) * 0.8;
+    tiltLR = (Math.max(-60, Math.min(60, e.gamma)) / 60) * 0.8;
+  } else {
+    // Portrait: offset beta by natural ~45° hold angle
+    tiltFB = (Math.max(-60, Math.min(60, e.beta - 45)) / 60) * 0.8;
+    tiltLR = (Math.max(-60, Math.min(60, e.gamma))      / 60) * 0.8;
+  }
+
+  targetGravX = tiltFB;
+  targetGravY = tiltLR;
+}
+
+function requestGyroPermission() {
+  if (typeof DeviceOrientationEvent !== 'undefined' &&
+      typeof DeviceOrientationEvent.requestPermission === 'function') {
+    // iOS 13+ requires user gesture
+    DeviceOrientationEvent.requestPermission()
+      .then(state => {
+        if (state === 'granted') {
+          window.addEventListener('deviceorientation', handleOrientation);
+        }
+      })
+      .catch(() => {});
+  } else {
+    // Android & older iOS — no permission needed
+    window.addEventListener('deviceorientation', handleOrientation);
+  }
+}
+
+// First touch triggers gyro permission (iOS requirement)
+document.addEventListener('touchstart', requestGyroPermission, { once: true });
+
+// ── 3D math ────────────────────────────────────────────────────────────────
+function project(x3, y3, z3) {
+  let s = FOV / (FOV + z3);
+  return { x: width/2 + x3*s, y: height/2 + y3*s, scale: s };
+}
+function rotX(y, z, a) {
+  return { y: y*cos(a) - z*sin(a), z: y*sin(a) + z*cos(a) };
+}
+function rotY(x, z, a) {
+  return { x: x*cos(a) + z*sin(a), z: -x*sin(a) + z*cos(a) };
+}
+
+// ── Node ───────────────────────────────────────────────────────────────────
+class OrbNode {
+  constructor(orbit, index, concept) {
+    this.orbit     = orbit;
+    this.index     = index;
+    this.concept   = concept;
+    this.baseAngle = (TWO_PI / ORBITS[orbit].n) * index;
+    this.phase     = random(TWO_PI);
+    this.ox = 0; this.oy = 0; this.oz = 0;
+    this.vx = 0; this.vy = 0; this.vz = 0;
+    this.grabbed   = false;
+  }
+
+  ideal3D() {
+    let orb = ORBITS[this.orbit];
+    let R   = min(width, height) * orb.r_frac;
+    let dir = this.orbit % 2 === 0 ? 1 : -1;
+    let ang = this.baseAngle + frameCount * orb.baseSpeed * dir;
+    let t   = frameCount * 0.0006;
+
+    // Perlin-driven tilts — never the same twice
+    let pX = (noise(orb.seed,     t) - 0.5) * TWO_PI * 0.7;
+    let pY = (noise(orb.seed + 3, t) - 0.5) * TWO_PI * 0.7;
+    let pZ = (noise(orb.seed + 6, t) - 0.5) * TWO_PI * 0.5;
+
+    let x = R*cos(ang), y = R*sin(ang), z = 0;
+
+    // Apply Perlin tilts
+    let r1 = rotX(y, z, pX); y = r1.y; z = r1.z;
+    let r2 = rotY(x, z, pY); x = r2.x; z = r2.z;
+    let r3 = rotX(y, z, pZ); y = r3.y; z = r3.z;
+
+    // Apply global gyro/mouse tilt
+    let r4 = rotY(x, z, gTiltY * 0.3); x = r4.x; z = r4.z;
+    let r5 = rotX(y, z, gTiltX * 0.3); y = r5.y; z = r5.z;
+
+    return { x, y, z };
+  }
+
+  pos3D() {
+    let i = this.ideal3D();
+    return { x: i.x + this.ox, y: i.y + this.oy, z: i.z + this.oz };
+  }
+
+  pos() {
+    let p = this.pos3D();
+    return project(p.x, p.y, p.z);
+  }
+
+  update(others, curX, curY) {
+    if (this.grabbed) {
+      // Follow pointer exactly
+      let id = this.ideal3D();
+      let ip = project(id.x, id.y, id.z);
+      this.ox += (curX - ip.x) * 0.2;
+      this.oy += (curY - ip.y) * 0.2;
+      this.vx = 0; this.vy = 0; this.vz = 0;
+      return;
+    }
+
+    // Soft spring back toward orbit
+    this.vx += -this.ox * 0.018;
+    this.vy += -this.oy * 0.018;
+    this.vz += -this.oz * 0.018;
+
+    // Perlin drift
+    let t  = frameCount * 0.004 + this.phase;
+    let p3 = this.pos3D();
+    let na = noise(p3.x * 0.004, p3.y * 0.004, t) * TWO_PI * 2;
+    this.vx += cos(na) * 0.012;
+    this.vy += sin(na) * 0.012;
+    this.vz += (noise(p3.z * 0.004, t) - 0.5) * 0.015;
+
+    // Inter-node forces (attract/repel)
+    others.forEach(other => {
+      if (other === this) return;
+      let op = other.pos3D();
+      let dx = op.x - p3.x, dy = op.y - p3.y, dz = op.z - p3.z;
+      let d  = sqrt(dx*dx + dy*dy + dz*dz);
+      if (d < 1) return;
+      let f = 0;
+      if      (d < 60)  f = map(d, 0, 60, -0.15, 0);
+      else if (d < 200) f = map(d, 60, 200, 0.05, 0);
+      else return;
+      this.vx += (dx/d)*f;
+      this.vy += (dy/d)*f;
+      this.vz += (dz/d)*f;
+    });
+
+    // Speed cap + damping
+    let spd = sqrt(this.vx*this.vx + this.vy*this.vy + this.vz*this.vz);
+    if (spd > 1.6) {
+      let sc = 1.6/spd;
+      this.vx *= sc; this.vy *= sc; this.vz *= sc;
+    }
+    this.ox += this.vx; this.oy += this.vy; this.oz += this.vz;
+    this.vx *= 0.92;   this.vy *= 0.92;   this.vz *= 0.92;
+
+    // Pulse wave push
+    let pr = this.pos();
+    pulseWaves.forEach(w => {
+      let dw = dist(pr.x, pr.y, w.x, w.y);
+      if (abs(dw - w.r) < 32) {
+        let ax = pr.x - w.x, ay = pr.y - w.y;
+        let am = sqrt(ax*ax + ay*ay) || 1;
+        let f  = map(abs(dw - w.r), 0, 32, 1.4, 0);
+        this.ox += (ax/am)*f;
+        this.oy += (ay/am)*f;
+      }
+    });
+  }
+
+  show(curX, curY) {
+    let pr    = this.pos();
+    let pulse = sin(frameCount * 0.028 + this.phase) * 0.35 + 0.65;
+    let r     = (5 + this.orbit * 2.5) * pulse * pr.scale;
+    let alpha = map(pr.scale, 0.6, 1.3, 0.4, 1.0);
+
+    // Glow halo
+    noStroke();
+    fill(0, 255, 0, 8 * pulse * alpha);
+    ellipse(pr.x, pr.y, r * 7, r * 7);
+
+    // Core
+    fill(0, 255, 0, (this.grabbed ? 255 : 170) * pulse * alpha);
+    stroke(0, 255, 0, 60 * alpha);
+    strokeWeight(this.grabbed ? 1.2 : 0.5);
+    ellipse(pr.x, pr.y, r * (this.grabbed ? 1.8 : 1), r * (this.grabbed ? 1.8 : 1));
+
+    // Concept label on hover or while grabbed
+    let d = dist(curX, curY, pr.x, pr.y);
+    if (d < 50 || this.grabbed) {
+      noStroke();
+      fill(0, 255, 0, this.grabbed ? 255 : 190);
+      textFont('Courier New');
+      textSize(10);
+      textAlign(CENTER);
+      text(this.concept.toUpperCase(), pr.x, pr.y - r - 8);
+    }
+  }
+}
+
+// ── Setup ──────────────────────────────────────────────────────────────────
+function setup() {
+  let cnv = createCanvas(windowWidth, windowHeight);
+  cnv.style('display', 'block');
+  pixelDensity(min(pixelDensity(), 2)); // cap at 2x for performance
+  buildModel();
+}
+
+function buildModel() {
+  // Reset all state to prevent stale references after resize
+  orbitNodes = []; allNodes = [];
+  grabbedNode = null; pulseWaves = [];
+  ORBITS.forEach((orb, oi) => {
+    let group = [];
+    for (let i = 0; i < orb.n; i++) {
+      let node = new OrbNode(oi, i, orb.concepts[i]);
+      group.push(node);
+      allNodes.push(node);
+    }
+    orbitNodes.push(group);
+  });
+}
+
+// ── Draw ───────────────────────────────────────────────────────────────────
+function draw() {
+  background(0, 0, 0, 26); // ghost trail
+
+  // Pointer position — touch takes priority over mouse
+  let curX = mouseX, curY = mouseY;
+  if (touches.length > 0) { curX = touches[0].x; curY = touches[0].y; }
+
+  // ── Gravity / tilt ─────────────────────────────────────
+  if (hasGyro) {
+    // Fluid inertia — sloshes like a bubble level
+    gravVX += (targetGravX - gravX) * 0.04;
+    gravVY += (targetGravY - gravY) * 0.04;
+    gravVX *= 0.82;
+    gravVY *= 0.82;
+    gravX  += gravVX;
+    gravY  += gravVY;
+  } else {
+    // Desktop: mouse position drives a gentle tilt
+    gravX += (map(mouseY, 0, height, -0.35, 0.35) - gravX) * 0.04;
+    gravY += (map(mouseX, 0, width,  -0.35, 0.35) - gravY) * 0.04;
+  }
+  gTiltX = gravX;
+  gTiltY = gravY;
+
+  // ── Update ─────────────────────────────────────────────
+  allNodes.forEach(n => n.update(allNodes, curX, curY));
+
+  // Back-to-front sort (painter's algorithm)
+  let sorted = [...allNodes].sort((a, b) => a.pos3D().z - b.pos3D().z);
+
+  // ── Orbit rings ────────────────────────────────────────
+  noFill();
+  ORBITS.forEach((orb, oi) => {
+    let R  = min(width, height) * orb.r_frac;
+    let t  = frameCount * 0.0006;
+    let tx = (noise(orb.seed,     t) - 0.5) * TWO_PI * 0.7;
+    let ty = (noise(orb.seed + 3, t) - 0.5) * TWO_PI * 0.7;
+    let tz = (noise(orb.seed + 6, t) - 0.5) * TWO_PI * 0.5;
+    stroke(0, 255, 0, 18 + oi * 5);
+    strokeWeight(0.5);
+    drawingContext.setLineDash([4, 9]);
+    beginShape();
+    for (let a = 0; a <= TWO_PI; a += TWO_PI / 60) {
+      let x = R*cos(a), y = R*sin(a), z = 0;
+      let r1 = rotX(y, z, tx); y = r1.y; z = r1.z;
+      let r2 = rotY(x, z, ty); x = r2.x; z = r2.z;
+      let r3 = rotX(y, z, tz); y = r3.y; z = r3.z;
+      let r4 = rotY(x, z, gTiltY * 0.3); x = r4.x; z = r4.z;
+      let r5 = rotX(y, z, gTiltX * 0.3); y = r5.y; z = r5.z;
+      let pr = project(x, y, z);
+      vertex(pr.x, pr.y);
+    }
+    endShape(CLOSE);
+  });
+  drawingContext.setLineDash([]);
+
+  // ── Full mesh connections ──────────────────────────────
+  let diag = sqrt(width*width + height*height);
+  for (let i = 0; i < allNodes.length; i++) {
+    for (let j = i+1; j < allNodes.length; j++) {
+      let pa = allNodes[i].pos(), pb = allNodes[j].pos();
+      let d  = dist(pa.x, pa.y, pb.x, pb.y);
+      let grabbed = allNodes[i].grabbed || allNodes[j].grabbed;
+      let baseA = map(d, 0, diag * 0.5, 22, 4);
+      stroke(0, 255, 0, grabbed ? baseA * 2.5 : baseA);
+      strokeWeight(grabbed ? 0.7 : 0.3);
+      line(pa.x, pa.y, pb.x, pb.y);
+    }
+  }
+
+  // ── Resonance connections (red dashed) ─────────────────
+  RESONANCE.forEach(([a, b]) => {
+    let na = orbitNodes[a[0]]?.[a[1]];
+    let nb = orbitNodes[b[0]]?.[b[1]];
+    if (!na || !nb) return;
+    let pa = na.pos(), pb = nb.pos();
+    let rp = sin(frameCount * 0.03 + na.phase) * 0.5 + 0.5;
+    stroke(255, 40, 40, 65 * rp);
+    strokeWeight(0.9);
+    drawingContext.setLineDash([3, 7]);
+    line(pa.x, pa.y, pb.x, pb.y);
+  });
+  drawingContext.setLineDash([]);
+
+  // ── Nodes ──────────────────────────────────────────────
+  sorted.forEach(n => n.show(curX, curY));
+
+  // ── Pulse waves ────────────────────────────────────────
+  pulseWaves = pulseWaves.filter(w => w.r < w.max);
+  pulseWaves.forEach(w => {
+    w.r += 2.5;
+    noFill();
+    stroke(0, 255, 0, map(w.r, 0, w.max, 60, 0));
+    strokeWeight(map(w.r, 0, w.max, 1.5, 0.2));
+    ellipse(w.x, w.y, w.r*2, w.r*2);
+  });
+}
+
+// ── Interaction ────────────────────────────────────────────────────────────
+function tryGrab(px, py) {
+  let best = null, bestD = GRAB_RADIUS;
+  allNodes.forEach(n => {
+    let p = n.pos();
+    let d = dist(px, py, p.x, p.y);
+    if (d < bestD) { bestD = d; best = n; }
+  });
+  if (best) {
+    best.grabbed = true;
+    grabbedNode  = best;
+  } else {
+    pulseWaves.push({ x: px, y: py, r: 0, max: 400 });
+  }
+}
+
+function tryRelease(dvx, dvy) {
+  if (!grabbedNode) return;
+  grabbedNode.vx    = dvx * 0.15;
+  grabbedNode.vy    = dvy * 0.15;
+  grabbedNode.grabbed = false;
+  grabbedNode = null;
+}
+
+// Mouse — FIX: skip if touch is active to prevent double-firing
+function mousePressed() {
+  if (touchActive) return;
+  tryGrab(mouseX, mouseY);
+}
+
+// FIX: track pmouseX/Y manually for accurate throw on desktop
+let _pmx = 0, _pmy = 0;
+function mouseReleased() {
+  if (touchActive) return;
+  tryRelease(mouseX - _pmx, mouseY - _pmy);
+}
+// Update previous mouse each frame via p5's mouseMoved/mouseDragged
+function mouseMoved()   { _pmx = mouseX; _pmy = mouseY; }
+function mouseDragged() { _pmx = mouseX; _pmy = mouseY; }
+
+// Touch
+function touchStarted() {
+  touchActive = true;
+  if (touches.length > 0) {
+    lastTouchX = touches[0].x;
+    lastTouchY = touches[0].y;
+    prevTouchX = lastTouchX;
+    prevTouchY = lastTouchY;
+    tryGrab(touches[0].x, touches[0].y);
+  }
+  return false; // prevent scroll & zoom
+}
+
+function touchMoved() {
+  if (touches.length > 0) {
+    prevTouchX = lastTouchX;
+    prevTouchY = lastTouchY;
+    lastTouchX = touches[0].x;
+    lastTouchY = touches[0].y;
+  }
+  return false;
+}
+
+function touchEnded() {
+  tryRelease(lastTouchX - prevTouchX, lastTouchY - prevTouchY);
+  touchActive = false;
+  return false;
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  buildModel();
+}
+</script>
+</body>
+</html>
