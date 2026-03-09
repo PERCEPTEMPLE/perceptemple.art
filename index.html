@@ -57,6 +57,9 @@
   </script>
 
   <title>PERCEPTEMPLE</title>
+  <!-- Web font: ensures Courier New renders correctly on Linux/Ubuntu -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.3/p5.min.js"></script>
 
   <style>
@@ -89,7 +92,7 @@
     }
 
     #title {
-      font-family: 'Courier New', Courier, monospace;
+      font-family: 'Courier New', 'Courier Prime', Courier, monospace;
       font-weight: 400;
       font-size: clamp(1.4rem, 5vw, 4.8rem);
       letter-spacing: 0.38em;
@@ -102,7 +105,7 @@
     }
 
     #tagline {
-      font-family: 'Courier New', Courier, monospace;
+      font-family: 'Courier New', 'Courier Prime', Courier, monospace;
       font-weight: 400;
       font-style: italic;
       /* FIX: min 0.75rem so it's readable on any phone */
@@ -398,7 +401,7 @@ class OrbNode {
     if (d < 50 || this.grabbed) {
       noStroke();
       fill(0, 255, 0, this.grabbed ? 255 : 190);
-      textFont('Courier New');
+      textFont('Courier Prime');
       textSize(10);
       textAlign(CENTER);
       text(this.concept.toUpperCase(), pr.x, pr.y - r - 8);
