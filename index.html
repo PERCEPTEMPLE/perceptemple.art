@@ -10,59 +10,81 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="mobile-web-app-capable" content="yes">
 
-  <!-- SEO & Social sharing -->
+  <!-- SEO -->
   <meta name="description" content="Before They See Us, We Already Are.">
   <meta name="keywords" content="arte salvadoreño, arte de El Salvador, arte conceptual, filosofía perceptual, Panperceptual Theory, PTU, PERCEPTEMPLE, Dany D. Ruiz, arte digital, arte latinoamericano, arte contemporáneo centroamericano, Salvadoran art, conceptual art El Salvador, ciencia El Salvador, tecnología El Salvador, conciencia artificial, inteligencia artificial El Salvador, robótica El Salvador, robot El Salvador, filosofía de la conciencia, teoría de la percepción, neurotecnología, mente y máquina, consciencia digital, innovación tecnológica centroamérica, ciencia y arte El Salvador, tecnología y humanidad, posthumanismo latinoamericano, singularidad tecnológica, percepción artificial, El Salvador innovación, ciencia cognitiva, pensamiento computacional El Salvador">
   <meta name="author" content="Dany D. Ruiz">
   <meta name="geo.region" content="SV">
   <meta name="geo.country" content="El Salvador">
 
+  <!-- Social sharing — tagline only, visible in previews -->
   <meta property="og:title" content="PERCEPTEMPLE">
   <meta property="og:description" content="Before They See Us, We Already Are.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://perceptemple.github.io/perceptemple.art/">
   <meta property="og:locale" content="es_SV">
   <meta property="og:locale:alternate" content="en_US">
-
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="PERCEPTEMPLE">
   <meta name="twitter:description" content="Before They See Us, We Already Are.">
   <meta name="twitter:creator" content="@DanyDRuiz">
 
-  <!-- Structured data — invisible, for search engines -->
+  <!-- Structured data — invisible, search engines only -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "VisualArtwork",
     "name": "PERCEPTEMPLE",
     "alternateName": "Templo de la Percepción",
-    "description": "Obra de arte conceptual digital basada en la Panperceptual Theory of the Universe (PTU). Arte originario de El Salvador en la intersección entre conciencia, tecnología y percepción. Una exploración de la mente, la inteligencia artificial y el futuro humano desde Centroamérica.",
+    "description": "Obra de arte conceptual digital basada en la Panperceptual Theory of the Universe (PTU). Arte originario de El Salvador en la intersección entre conciencia, tecnología y percepción.",
     "creator": {
       "@type": "Person",
       "name": "Dany D. Ruiz",
       "nationality": "Salvadoran",
-      "countryOfOrigin": {
-        "@type": "Country",
-        "name": "El Salvador"
-      }
+      "countryOfOrigin": { "@type": "Country", "name": "El Salvador" }
     },
     "artMedium": "Digital Interactive Art",
     "genre": "Arte Conceptual",
-    "countryOfOrigin": {
-      "@type": "Country",
-      "name": "El Salvador"
-    },
+    "countryOfOrigin": { "@type": "Country", "name": "El Salvador" },
     "inLanguage": ["es", "en"],
     "keywords": "arte salvadoreño, arte conceptual, filosofía perceptual, PTU, arte digital latinoamericano, ciencia El Salvador, tecnología El Salvador, conciencia artificial, robótica El Salvador, inteligencia artificial centroamérica, filosofía de la mente, percepción y tecnología, innovación El Salvador"
   }
   </script>
 
   <title>PERCEPTEMPLE</title>
-  <!-- Web font: ensures Courier New renders correctly on Linux/Ubuntu -->
+
+  <!--
+    Courier Prime via Google Fonts — visually identical to Courier New,
+    guaranteed on ALL systems: Linux, Ubuntu, Chromebook, Android, iOS,
+    Windows, macOS. Loads before page renders (display=swap).
+  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.3/p5.min.js"></script>
 
   <style>
+    /*
+      @font-face directo — blindaje para Firefox con Enhanced Tracking Protection.
+      Si el <link> de Google Fonts es bloqueado, este @font-face actúa como respaldo
+      independiente usando el mismo origen. Ambas rutas apuntan a Courier Prime.
+    */
+    @font-face {
+      font-family: 'Courier Prime';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('https://fonts.gstatic.com/s/courierprime/v9/u-450q2lgwslOqpF_6gQ8kELaw.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Courier Prime';
+      font-style: italic;
+      font-weight: 400;
+      font-display: swap;
+      src: url('https://fonts.gstatic.com/s/courierprime/v9/u-4n0q2lgwslOqpF_6gQ8kELaw5ZQQ.woff2') format('woff2');
+    }
+
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     html, body {
@@ -91,8 +113,13 @@
       z-index: 10;
     }
 
+    /*
+      Courier Prime first — web font, guaranteed on every OS.
+      Courier New second — native on Windows/Android/macOS.
+      Courier and monospace as final fallbacks.
+    */
     #title {
-      font-family: 'Courier New', 'Courier Prime', Courier, monospace;
+      font-family: 'Courier Prime', 'Courier New', Courier, monospace;
       font-weight: 400;
       font-size: clamp(1.4rem, 5vw, 4.8rem);
       letter-spacing: 0.38em;
@@ -105,10 +132,9 @@
     }
 
     #tagline {
-      font-family: 'Courier New', 'Courier Prime', Courier, monospace;
+      font-family: 'Courier Prime', 'Courier New', Courier, monospace;
       font-weight: 400;
       font-style: italic;
-      /* FIX: min 0.75rem so it's readable on any phone */
       font-size: clamp(0.75rem, 3.5vw, 1.2rem);
       letter-spacing: 0.05em;
       color: #00ff00;
@@ -199,7 +225,7 @@ let gravX = 0, gravY = 0, gravVX = 0, gravVY = 0;
 let targetGravX = 0, targetGravY = 0;
 let hasGyro = false, gyroActive = false;
 
-// FIX: flag to prevent mousePressed firing after touchStarted on mobile
+// Prevents mousePressed from firing after touchStarted on mobile
 let touchActive = false;
 
 // Touch throw tracking
@@ -217,16 +243,16 @@ function handleOrientation(e) {
   if (!gyroActive) return;
   hasGyro = true;
 
-  // Detect landscape vs portrait
+  // Correct for screen orientation (landscape flips axes)
   let orient = (screen.orientation || {}).angle || window.orientation || 0;
   let tiltFB, tiltLR;
 
   if (Math.abs(orient) === 90) {
-    // Landscape: axes swap
+    // Landscape — axes swap
     tiltFB = (Math.max(-60, Math.min(60, e.beta))  / 60) * 0.8;
     tiltLR = (Math.max(-60, Math.min(60, e.gamma)) / 60) * 0.8;
   } else {
-    // Portrait: offset beta by natural ~45° hold angle
+    // Portrait — offset beta by natural ~45° hold angle
     tiltFB = (Math.max(-60, Math.min(60, e.beta - 45)) / 60) * 0.8;
     tiltLR = (Math.max(-60, Math.min(60, e.gamma))      / 60) * 0.8;
   }
@@ -238,7 +264,7 @@ function handleOrientation(e) {
 function requestGyroPermission() {
   if (typeof DeviceOrientationEvent !== 'undefined' &&
       typeof DeviceOrientationEvent.requestPermission === 'function') {
-    // iOS 13+ requires user gesture
+    // iOS 13+ — requires user gesture
     DeviceOrientationEvent.requestPermission()
       .then(state => {
         if (state === 'granted') {
@@ -252,7 +278,7 @@ function requestGyroPermission() {
   }
 }
 
-// First touch triggers gyro permission (iOS requirement)
+// First touch activates gyro (iOS requirement)
 document.addEventListener('touchstart', requestGyroPermission, { once: true });
 
 // ── 3D math ────────────────────────────────────────────────────────────────
@@ -318,7 +344,6 @@ class OrbNode {
 
   update(others, curX, curY) {
     if (this.grabbed) {
-      // Follow pointer exactly
       let id = this.ideal3D();
       let ip = project(id.x, id.y, id.z);
       this.ox += (curX - ip.x) * 0.2;
@@ -348,8 +373,8 @@ class OrbNode {
       let d  = sqrt(dx*dx + dy*dy + dz*dz);
       if (d < 1) return;
       let f = 0;
-      if      (d < 60)  f = map(d, 0, 60, -0.15, 0);
-      else if (d < 200) f = map(d, 60, 200, 0.05, 0);
+      if      (d < 60)  f = map(d, 0,  60, -0.15, 0);
+      else if (d < 200) f = map(d, 60, 200,  0.05, 0);
       else return;
       this.vx += (dx/d)*f;
       this.vy += (dy/d)*f;
@@ -401,7 +426,7 @@ class OrbNode {
     if (d < 50 || this.grabbed) {
       noStroke();
       fill(0, 255, 0, this.grabbed ? 255 : 190);
-      textFont('Courier Prime');
+      textFont('monospace');
       textSize(10);
       textAlign(CENTER);
       text(this.concept.toUpperCase(), pr.x, pr.y - r - 8);
@@ -413,12 +438,11 @@ class OrbNode {
 function setup() {
   let cnv = createCanvas(windowWidth, windowHeight);
   cnv.style('display', 'block');
-  pixelDensity(min(pixelDensity(), 2)); // cap at 2x for performance
+  pixelDensity(min(pixelDensity(), 2));
   buildModel();
 }
 
 function buildModel() {
-  // Reset all state to prevent stale references after resize
   orbitNodes = []; allNodes = [];
   grabbedNode = null; pulseWaves = [];
   ORBITS.forEach((orb, oi) => {
@@ -434,7 +458,7 @@ function buildModel() {
 
 // ── Draw ───────────────────────────────────────────────────────────────────
 function draw() {
-  background(0, 0, 0, 26); // ghost trail
+  background(0, 0, 0, 26);
 
   // Pointer position — touch takes priority over mouse
   let curX = mouseX, curY = mouseY;
@@ -450,7 +474,7 @@ function draw() {
     gravX  += gravVX;
     gravY  += gravVY;
   } else {
-    // Desktop: mouse position drives a gentle tilt
+    // Desktop: mouse drives a gentle tilt
     gravX += (map(mouseY, 0, height, -0.35, 0.35) - gravX) * 0.04;
     gravY += (map(mouseX, 0, width,  -0.35, 0.35) - gravY) * 0.04;
   }
@@ -549,25 +573,23 @@ function tryGrab(px, py) {
 
 function tryRelease(dvx, dvy) {
   if (!grabbedNode) return;
-  grabbedNode.vx    = dvx * 0.15;
-  grabbedNode.vy    = dvy * 0.15;
+  grabbedNode.vx      = dvx * 0.15;
+  grabbedNode.vy      = dvy * 0.15;
   grabbedNode.grabbed = false;
   grabbedNode = null;
 }
 
-// Mouse — FIX: skip if touch is active to prevent double-firing
+// Mouse — skip if touch is active (prevents double-firing on mobile)
 function mousePressed() {
   if (touchActive) return;
   tryGrab(mouseX, mouseY);
 }
 
-// FIX: track pmouseX/Y manually for accurate throw on desktop
 let _pmx = 0, _pmy = 0;
 function mouseReleased() {
   if (touchActive) return;
   tryRelease(mouseX - _pmx, mouseY - _pmy);
 }
-// Update previous mouse each frame via p5's mouseMoved/mouseDragged
 function mouseMoved()   { _pmx = mouseX; _pmy = mouseY; }
 function mouseDragged() { _pmx = mouseX; _pmy = mouseY; }
 
@@ -581,7 +603,7 @@ function touchStarted() {
     prevTouchY = lastTouchY;
     tryGrab(touches[0].x, touches[0].y);
   }
-  return false; // prevent scroll & zoom
+  return false;
 }
 
 function touchMoved() {
