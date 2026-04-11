@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="google" content="notranslate" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="mobile-web-app-capable" content="yes" />
+
+  <!-- SEO -->
+  <meta name="description" content="BitNeko — Bridging Ancestral Wisdom with Digital Innovation. Digital symbol of the PERCEPTEMPLE ecosystem by Dany D. Ruiz, El Salvador." />
+  <meta name="keywords" content="BitNeko, PERCEPTEMPLE, Dany D. Ruiz, arte digital El Salvador, gato digital, símbolo ancestral, arte conceptual salvadoreño, Panperceptual Theory, PTU, digital cat, arte latinoamericano, innovación digital centroamérica, arte y tecnología, filosofía perceptual, arte contemporáneo El Salvador, BitNeko licencia, BitNeko whitepaper" />
+  <meta name="author" content="Dany D. Ruiz" />
+  <meta name="geo.region" content="SV" />
+  <meta name="geo.country" content="El Salvador" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="BITNEKO — PERCEPTEMPLE" />
+  <meta property="og:description" content="Bridging Ancestral Wisdom with Digital Innovation. Before They See Us, We Already Are." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://perceptemple.art/bitneko" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="es_SV" />
+  <meta property="og:image" content="https://perceptemple.art/bitneko/bitneko.gif" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="BITNEKO — PERCEPTEMPLE" />
+  <meta name="twitter:description" content="Bridging Ancestral Wisdom with Digital Innovation. Before They See Us, We Already Are." />
+  <meta name="twitter:creator" content="@panperceptual" />
+  <meta name="twitter:image" content="https://perceptemple.art/bitneko/bitneko.gif" />
+
+  <link rel="icon" type="image/png" href="../favicon.png" />
+  <link rel="canonical" href="https://perceptemple.art/bitneko" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VisualArtwork",
+    "name": "BitNeko",
+    "alternateName": "BitNeko — PERCEPTEMPLE",
+    "description": "BitNeko is a digital cultural symbol bridging ancestral wisdom with digital innovation, created within the PERCEPTEMPLE ecosystem by Dany D. Ruiz.",
+    "url": "https://perceptemple.art/bitneko",
+    "creator": {
+      "@type": "Person",
+      "name": "Dany D. Ruiz",
+      "nationality": "Salvadoran",
+      "sameAs": [
+        "https://orcid.org/0009-0002-3432-1710",
+        "https://twitter.com/panperceptual",
+        "https://github.com/PERCEPTEMPLE"
+      ],
+      "countryOfOrigin": { "@type": "Country", "name": "El Salvador" }
+    },
+    "artMedium": "Digital Art",
+    "genre": "Arte Conceptual Digital",
+    "countryOfOrigin": { "@type": "Country", "name": "El Salvador" },
+    "inLanguage": ["es", "en"],
+    "license": "https://perceptemple.art/bitneko/BITNEKO_LICENCE_ENGLISH.pdf",
+    "keywords": "BitNeko, arte digital El Salvador, PERCEPTEMPLE, símbolo ancestral digital, arte conceptual latinoamericano, Panperceptual Theory"
+  }
+  </script>
+
+  <title>BITNEKO — PERCEPTEMPLE</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --green: #00ff00;
+      --green-dim: #00cc00;
+      --green-glow: rgba(0, 255, 0, 0.15);
+      --green-glow-strong: rgba(0, 255, 0, 0.35);
+      --bg: #000000;
+    }
+
+    html, body {
+      background-color: var(--bg);
+      color: var(--green);
+      font-family: 'Share Tech Mono', 'Courier New', Courier, monospace;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* CRT scanlines */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        to bottom,
+        transparent 0px, transparent 3px,
+        rgba(0, 0, 0, 0.08) 3px, rgba(0, 0, 0, 0.08) 4px
+      );
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    /* Vignette */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse at center, transparent 60%, rgba(0,0,0,0.6) 100%);
+      pointer-events: none;
+      z-index: 99;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    /* ── Language toggle ── */
+    .lang-toggle {
+      position: fixed;
+      top: 1.2rem;
+      right: 1.4rem;
+      z-index: 200;
+      display: flex;
+      gap: 0.4rem;
+    }
+
+    .lang-btn {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      color: var(--green-dim);
+      background: transparent;
+      border: 1px solid rgba(0,255,0,0.2);
+      padding: 0.3em 0.7em;
+      cursor: pointer;
+      transition: border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .lang-btn.active {
+      color: var(--green);
+      border-color: var(--green-dim);
+      box-shadow: 0 0 8px var(--green-glow);
+    }
+
+    .lang-btn:hover {
+      color: var(--green);
+      border-color: var(--green);
+    }
+
+    /* ── Header ── */
+    .header {
+      text-align: center;
+      margin-bottom: 1.8rem;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    h1 {
+      font-family: 'VT323', monospace;
+      font-size: clamp(2.4rem, 8vw, 4rem);
+      letter-spacing: 0.25em;
+      line-height: 1;
+      color: var(--green);
+      text-shadow:
+        0 0 8px var(--green),
+        0 0 20px var(--green-glow-strong),
+        0 0 40px var(--green-glow);
+      animation: flicker 8s infinite;
+    }
+
+    .tagline {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: clamp(0.6rem, 2.2vw, 0.78rem);
+      letter-spacing: 0.12em;
+      color: var(--green-dim);
+      margin-top: 0.6rem;
+      text-transform: uppercase;
+      opacity: 0.85;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      width: 100%;
+      max-width: 440px;
+      border: none;
+      border-top: 1px solid var(--green-dim);
+      opacity: 0.3;
+      margin: 1.4rem 0;
+    }
+
+    /* ── GIF link ── */
+    .gif-link {
+      display: block;
+      cursor: pointer;
+      margin-bottom: 0.6rem;
+      outline: none;
+      transition: transform 0.2s ease;
+    }
+
+    .gif-link:hover,
+    .gif-link:focus-visible { transform: scale(1.04); }
+
+    .gif-link img {
+      display: block;
+      width: 320px;
+      max-width: 90vw;
+      height: auto;
+      border: 1px solid rgba(0, 255, 0, 0.2);
+      box-shadow: 0 0 12px var(--green-glow), 0 0 30px rgba(0,255,0,0.08);
+      transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .gif-link:hover img,
+    .gif-link:focus-visible img {
+      box-shadow: 0 0 20px var(--green-glow-strong), 0 0 50px rgba(0,255,0,0.2);
+      border-color: rgba(0, 255, 0, 0.6);
+    }
+
+    .gif-caption {
+      font-size: clamp(0.55rem, 1.8vw, 0.65rem);
+      color: var(--green-dim);
+      opacity: 0.5;
+      text-align: center;
+      margin-top: 0.4rem;
+      letter-spacing: 0.1em;
+    }
+
+    /* ── Section label ── */
+    .section-label {
+      font-family: 'VT323', monospace;
+      font-size: clamp(1.4rem, 5vw, 2rem);
+      letter-spacing: 0.3em;
+      color: var(--green);
+      text-align: center;
+      margin: 2rem 0 1rem;
+      text-shadow: 0 0 8px var(--green-glow);
+      opacity: 0.9;
+    }
+
+    /* ── Buttons ── */
+    .license-row {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: clamp(0.7rem, 2.5vw, 0.82rem);
+      letter-spacing: 0.12em;
+      color: var(--green);
+      background: transparent;
+      border: 1px solid var(--green-dim);
+      padding: 0.65em 1.4em;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      -webkit-tap-highlight-color: transparent;
+      min-width: 160px;
+      text-align: center;
+    }
+
+    .btn::before { content: '> '; opacity: 0.6; }
+
+    .btn:hover,
+    .btn:focus-visible {
+      background: rgba(0, 255, 0, 0.06);
+      border-color: var(--green);
+      box-shadow: 0 0 12px var(--green-glow), inset 0 0 8px var(--green-glow);
+      outline: none;
+    }
+
+    .btn:active { background: rgba(0, 255, 0, 0.12); }
+
+    /* ── Contact ── */
+    .contact-block {
+      margin-top: 2.4rem;
+      text-align: center;
+    }
+
+    .contact-label {
+      font-size: clamp(0.55rem, 1.8vw, 0.68rem);
+      letter-spacing: 0.18em;
+      color: var(--green-dim);
+      opacity: 0.6;
+      margin-bottom: 0.35rem;
+      text-transform: uppercase;
+    }
+
+    .contact-value {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: clamp(0.65rem, 2vw, 0.78rem);
+      letter-spacing: 0.12em;
+      color: var(--green-dim);
+      opacity: 0.6;
+    }
+
+    /* ── Closing ── */
+    .closing {
+      margin-top: 3rem;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: clamp(0.6rem, 2vw, 0.75rem);
+      letter-spacing: 0.15em;
+      color: var(--green-dim);
+      text-align: center;
+      opacity: 0.55;
+      font-style: italic;
+      max-width: 380px;
+      line-height: 1.6;
+    }
+
+    .closing::before { content: '// '; opacity: 0.5; }
+
+    /* ── Animations ── */
+    @keyframes flicker {
+      0%, 97%, 100% { opacity: 1; }
+      97.5% { opacity: 0.85; }
+      98%   { opacity: 1; }
+      98.5% { opacity: 0.7; }
+      99%   { opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 400px) {
+      .license-row { flex-direction: column; align-items: center; }
+      .btn { width: 100%; max-width: 280px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Language toggle -->
+  <nav class="lang-toggle" aria-label="Language selector">
+    <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+    <button class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+  </nav>
+
+  <main class="container" role="main">
+
+    <header class="header">
+      <h1>BITNEKO</h1>
+      <p class="tagline" data-i18n="tagline"></p>
+    </header>
+
+    <hr class="divider" aria-hidden="true" />
+
+    <a
+      class="gif-link"
+      href="https://perceptemple.art"
+      target="_blank"
+      rel="noopener noreferrer"
+      data-i18n-aria="gifAria"
+      title="perceptemple.art"
+    >
+      <img
+        src="bitneko.gif"
+        data-i18n-alt="gifAlt"
+        width="320"
+        height="268"
+        loading="eager"
+        decoding="async"
+      />
+    </a>
+    <p class="gif-caption" data-i18n="gifCaption"></p>
+
+    <hr class="divider" aria-hidden="true" />
+
+    <p class="section-label" data-i18n="licenseLabel"></p>
+
+    <div class="license-row">
+      <a
+        class="btn"
+        href="BITNEKO_LICENCIA_ESPAÑOL.pdf"
+        download="BITNEKO_LICENCIA_ESPAÑOL.pdf"
+        data-i18n-aria="btnEs"
+        data-i18n="btnEs"
+      ></a>
+      <a
+        class="btn"
+        href="BITNEKO_LICENCE_ENGLISH.pdf"
+        download="BITNEKO_LICENCE_ENGLISH.pdf"
+        data-i18n-aria="btnEn"
+        data-i18n="btnEn"
+      ></a>
+    </div>
+
+    <div class="contact-block">
+      <p class="contact-label" data-i18n="contactLabel"></p>
+      <p class="contact-value">+503 0000 0000</p>
+    </div>
+
+    <p class="closing" data-i18n="closing"></p>
+
+  </main>
+
+  <script>
+    // ─────────────────────────────────────────────
+    // TRANSLATIONS
+    // To add a new language: duplicate one block,
+    // change the key, and translate each value.
+    // ─────────────────────────────────────────────
+    const i18n = {
+      en: {
+        tagline:      "Bridging Ancestral Wisdom with Digital Innovation",
+        gifCaption:   "[ click to enter perceptemple.art ]",
+        gifAria:      "BitNeko — go to perceptemple.art",
+        gifAlt:       "BitNeko — animated digital symbol of the PERCEPTEMPLE ecosystem",
+        licenseLabel: "LICENSE",
+        btnEs:        "ES — Español",
+        btnEn:        "EN — English",
+        contactLabel: "BitNeko Support Contact — El Salvador",
+        closing:      "Before They See Us, We Already Are",
+      },
+      es: {
+        tagline:      "Uniendo la Sabiduría Ancestral con la Innovación Digital",
+        gifCaption:   "[ haz clic para entrar a perceptemple.art ]",
+        gifAria:      "BitNeko — ir a perceptemple.art",
+        gifAlt:       "BitNeko — símbolo digital animado del ecosistema PERCEPTEMPLE",
+        licenseLabel: "LICENCIA",
+        btnEs:        "ES — Español",
+        btnEn:        "EN — Inglés",
+        contactLabel: "Contacto de Soporte BitNeko — El Salvador",
+        closing:      "Antes de que nos Vean, ya Somos",
+      }
+    };
+
+    // ─────────────────────────────────────────────
+    // ENGINE — no need to edit below this line
+    // ─────────────────────────────────────────────
+    let currentLang = 'en';
+
+    function applyLang(lang) {
+      const t = i18n[lang];
+      if (!t) return;
+      currentLang = lang;
+
+      // Text content
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) el.textContent = t[key];
+      });
+
+      // aria-label
+      document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+        const key = el.getAttribute('data-i18n-aria');
+        if (t[key] !== undefined) el.setAttribute('aria-label', t[key]);
+      });
+
+      // img alt
+      document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+        const key = el.getAttribute('data-i18n-alt');
+        if (t[key] !== undefined) el.setAttribute('alt', t[key]);
+      });
+
+      // html lang attribute
+      document.documentElement.setAttribute('lang', lang === 'es' ? 'es' : 'en');
+
+      // toggle button states
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        const isActive = btn.getAttribute('data-lang') === lang;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      });
+    }
+
+    // Wire up buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => applyLang(btn.getAttribute('data-lang')));
+    });
+
+    // Auto-detect browser language on load
+    const browserLang = (navigator.language || navigator.userLanguage || 'en').slice(0, 2);
+    applyLang(i18n[browserLang] ? browserLang : 'en');
+  </script>
+
+</body>
+</html>
