@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PERCEPTEMPLE</title>
+
+    
+    <meta name="description" content="Poetic exploration of perception, time, and mystery through conceptual artworks by Dany D. Ruiz. A module of PERCEPTEMPLE — Panperceptual Theory of the Universe.">
+    <meta name="author" content="Dany D. Ruiz">
+    <meta name="last-modified" content="2026-06-07">
+    <meta name="keywords" content="PERCEPTEMPLE, Dany D. Ruiz, poetry, perception, Panperceptual Theory of the Universe, conceptual art, time">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://perceptemple.art/poetry/">
+
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="POETRY · PERCEPTEMPLE">
+    <meta property="og:description" content="Poetic exploration of perception, time, and mystery through conceptual artworks by Dany D. Ruiz. A module of PERCEPTEMPLE — Panperceptual Theory of the Universe.">
+    <meta property="og:url" content="https://perceptemple.art/poetry/">
+    <meta property="og:site_name" content="PERCEPTEMPLE">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_SV">
+    <meta property="og:image" content="https://perceptemple.art/preview.jpg">
+    <meta property="og:image:alt" content="PERCEPTEMPLE — POETRY">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@panperceptual">
+    <meta name="twitter:creator" content="@panperceptual">
+    <meta name="twitter:title" content="POETRY · PERCEPTEMPLE">
+    <meta name="twitter:description" content="Poetic exploration of perception, time, and mystery through conceptual artworks by Dany D. Ruiz. A module of PERCEPTEMPLE — Panperceptual Theory of the Universe.">
+    <meta name="twitter:image" content="https://perceptemple.art/preview.jpg">
+
+    <link rel="icon" href="../favicon.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================ */
+        /*  VARIABLES                                   */
+        /* ============================================ */
+        :root {
+            --bg:      #020805;
+            --panel:   #020805;
+            --rule:    #0a5c1e;
+            --hi:      #00ff41;
+            --hi2:     #39ff14;
+            --amber:   #ffb200;
+            --amber2:  #ffcc00;
+            --txt:     rgba(0,255,65,0.75);
+            --txt2:    rgba(0,255,65,0.9);
+            --txt3:    rgba(0,255,65,0.35);
+            --white:   #39ff14;
+            --red:     #ff2020;
+
+            --fs-xs:  clamp(0.65rem, 1.2vw, 0.75rem);
+            --fs-sm:  clamp(0.75rem, 1.4vw, 0.85rem);
+            --fs-md:  clamp(0.8rem,  1.6vw, 1rem);
+            --fs-lg:  clamp(1rem,    2vw,   1.25rem);
+            --fs-xl:  clamp(1.25rem, 3vw,   1.75rem);
+        }
+
+        /* ============================================ */
+        /*  RESET                                       */
+        /* ============================================ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* ============================================ */
+        /*  BILINGUAL · HIDDEN CLASS                    */
+        /* ============================================ */
+        .lang-hidden {
+            display: none !important;
+        }
+
+        /* ============================================ */
+        /*  BODY · BASE + INTEGRATED ANIMATION          */
+        /* ============================================ */
+        body {
+            background: var(--bg);
+            color: var(--txt2);
+            font-family: 'Share Tech Mono', monospace;
+            font-weight: 400;
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeUp 0.4s ease both;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        /* ============================================ */
+        /*  BACKGROUND EFFECTS                          */
+        /* ============================================ */
+
+        /* Scanlines */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 3px,
+                rgba(0,0,0,0.06) 3px,
+                rgba(0,0,0,0.06) 6px
+            );
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        /* Grid */
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0,255,65,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,255,65,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 9998;
+        }
+
+        /* ============================================ */
+        /*  DECORATIVE BRACKETS                         */
+        /* ============================================ */
+        .bracket {
+            position: fixed;
+            color: rgba(0,255,65,0.15);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            pointer-events: none;
+            z-index: 10000;
+        }
+        .bracket-tl { top: 12px;    left: 16px;  }
+        .bracket-tr { top: 12px;    right: 16px; }
+        .bracket-bl { bottom: 12px; left: 16px;  }
+        .bracket-br { bottom: 12px; right: 16px; }
+
+        /* ============================================ */
+        /*  IMÁGENES · SVG · CANVAS                     */
+        /* ============================================ */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        canvas {
+            max-width: 100%;
+        }
+
+        /* ============================================ */
+        /*  PCH BUTTON · BELOW THE LOGO                 */
+        /* ============================================ */
+        .pch-btn {
+            display: inline-block;
+            margin-top: 6px;
+            background: transparent;
+            border: 1px solid var(--red);
+            color: var(--red);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            text-decoration: none;
+            border-radius: 2px;
+            font-weight: 700;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        .pch-btn:hover {
+            background: rgba(255,32,32,0.06);
+            color: var(--red);
+        }
+
+        /* ============================================ */
+        /*  LANGUAGE BUTTON · INSIDE HEADER-NAV         */
+        /* ============================================ */
+        .translate-btn {
+            position: relative;
+            background: transparent;
+            border: 1px solid var(--amber);
+            color: var(--amber);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.375rem 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-radius: 2px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .translate-btn:hover {
+            background: rgba(255,178,0,0.08);
+            color: var(--amber2);
+            border-color: var(--amber2);
+        }
+
+        /* ============================================ */
+        /*  HEADER                                      */
+        /* ============================================ */
+        .header {
+            width: 100%;
+            max-width: 75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 3rem;
+            border-bottom: 1px solid var(--rule);
+            background: var(--bg);
+            position: relative;
+            z-index: 100;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .logo-mark {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            color: var(--hi);
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .nav-link:hover,
+        .nav-link.highlight {
+            color: var(--hi);
+        }
+
+        /* ============================================ */
+        /*  SECTION LABELS                              */
+        /* ============================================ */
+        .section-label {
+            width: 100%;
+            max-width: 60rem;
+            padding: 0.8125rem 3rem;
+            border-bottom: 1px solid var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--amber);
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            font-weight: 600;
+        }
+        .section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--rule);
+            min-width: 20px;
+        }
+
+        /* ============================================ */
+        /*  HERO                                        */
+        /* ============================================ */
+        .hero {
+            width: 100%;
+            max-width: 60rem;
+            padding: 4rem 3rem 3.5rem;
+            border-bottom: 1px solid var(--rule);
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .hero-kicker {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 4px;
+            color: var(--txt3);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .hero-h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            line-height: 0.95;
+            color: var(--hi2);
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            word-break: break-word;
+        }
+        .hero-h1 em {
+            color: var(--hi);
+            font-style: normal;
+        }
+
+        .hero-body {
+            font-size: var(--fs-sm);
+            color: var(--txt);
+            line-height: 1.8;
+            max-width: 65ch;
+        }
+        .hero-body strong {
+            color: var(--txt2);
+        }
+
+        .hero-right {
+            display: flex;
+            flex-direction: column;
+            padding-top: 0.5rem;
+        }
+
+        /* ============================================ */
+        /*  KEY-VALUE PAIRS                             */
+        /* ============================================ */
+        .kv {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0.6875rem 1rem;
+            border-bottom: 1px solid var(--rule);
+            gap: 0.5rem;
+        }
+        .kv:first-child {
+            border-top: 1px solid var(--rule);
+        }
+        .kv-key {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .kv-val {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-md);
+            color: var(--hi);
+            font-weight: 700;
+            text-align: right;
+            word-break: break-word;
+        }
+        .kv-val.white {
+            color: var(--txt2);
+            font-size: var(--fs-sm);
+            font-family: 'Share Tech Mono', monospace;
+            font-weight: 400;
+        }
+        .kv-val.amber {
+            color: var(--amber);
+        }
+
+        /* ============================================ */
+        /*  BUTTONS                                     */
+        /* ============================================ */
+        .hero-actions {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: transparent;
+            border: 1px solid var(--hi);
+            color: var(--hi);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-sm);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.625rem 1.125rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 2px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .btn-primary:hover {
+            background: rgba(0,255,65,0.06);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid var(--rule);
+            color: var(--txt3);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-sm);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.625rem 1.125rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 2px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .btn-secondary:hover {
+            border-color: var(--amber);
+            color: var(--amber);
+        }
+
+        /* ============================================ */
+        /*  CONTENT SECTIONS                            */
+        /* ============================================ */
+        .content-section {
+            width: 100%;
+            max-width: 60rem;
+            padding: 3rem;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .content-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            color: var(--hi2);
+            margin-bottom: 0.625rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            word-break: break-word;
+        }
+
+        .content-section h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: var(--hi);
+            margin-top: 1.75rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .content-section h4 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-sm);
+            color: var(--amber);
+            margin-top: 1.125rem;
+            margin-bottom: 0.375rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .content-section p {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-sm);
+            color: var(--txt);
+            line-height: 1.9;
+            margin-bottom: 0.75rem;
+            word-break: break-word;
+            max-width: 70ch;
+        }
+        .content-section p strong {
+            color: var(--txt2);
+        }
+
+        .content-section ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 1rem;
+        }
+        .content-section ul li {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-sm);
+            color: var(--txt);
+            line-height: 1.8;
+            padding-left: 0.875rem;
+            position: relative;
+            max-width: 70ch;
+        }
+        .content-section ul li::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            color: var(--hi);
+            font-weight: bold;
+        }
+
+        .content-section ol {
+            list-style: none;
+            counter-reset: item;
+            padding-left: 0;
+            margin-bottom: 1rem;
+        }
+        .content-section ol li {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-sm);
+            color: var(--txt);
+            line-height: 1.8;
+            padding-left: 2rem;
+            position: relative;
+            max-width: 70ch;
+            counter-increment: item;
+        }
+        .content-section ol li::before {
+            content: counter(item) ".";
+            position: absolute;
+            left: 0;
+            color: var(--hi);
+            font-weight: bold;
+        }
+
+        .content-section pre {
+            background: rgba(0,255,65,0.03);
+            border: 1px solid var(--rule);
+            padding: 1rem;
+            margin: 0.75rem 0;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-xs);
+            color: var(--txt);
+            line-height: 1.4;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+
+        .content-section pre code {
+            font-family: 'Share Tech Mono', monospace;
+            color: var(--hi);
+        }
+
+        .content-section hr {
+            border: none;
+            border-top: 1px solid var(--rule);
+            margin: 1.5rem 0;
+        }
+
+        /* ============================================ */
+        /*  TABLES                                      */
+        /* ============================================ */
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 0.75rem 0 1.125rem;
+        }
+
+        .pw-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-xs);
+        }
+        .pw-table th {
+            text-align: left;
+            padding: 0.5rem 0.625rem;
+            background: var(--bg);
+            color: var(--amber);
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--rule);
+            font-size: var(--fs-xs);
+        }
+        .pw-table td {
+            padding: 0.5rem 0.625rem;
+            color: var(--txt);
+            border-bottom: 1px solid var(--rule);
+            line-height: 1.5;
+            vertical-align: top;
+            word-break: break-word;
+        }
+        .pw-table tr:last-child td {
+            border-bottom: none;
+        }
+        .pw-table .dim {
+            color: var(--txt2);
+            font-weight: 600;
+        }
+
+        /* ============================================ */
+        /*  SPECIAL BLOCKS                              */
+        /* ============================================ */
+        .spectrum {
+            padding: 1.25rem 1.5rem;
+            background: var(--bg);
+            border: 1px solid var(--rule);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-sm);
+            color: var(--hi);
+            line-height: 2.2;
+            margin: 1rem 0;
+            border-radius: 2px;
+            text-align: center;
+            word-break: break-word;
+        }
+        .spectrum .l1 { color: var(--amber);  }
+        .spectrum .l2 { color: var(--amber2); }
+        .spectrum .l3 { color: var(--hi2);    }
+        .spectrum .l4 { color: var(--hi);     }
+
+        .quote-block {
+            padding: 1rem 1.25rem;
+            background: rgba(0,255,65,0.03);
+            border-left: 2px solid var(--hi);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: var(--fs-sm);
+            color: var(--hi);
+            line-height: 1.8;
+            margin: 1rem 0;
+            border-radius: 0 2px 2px 0;
+            font-weight: 400;
+            word-break: break-word;
+        }
+
+        .note-block {
+            padding: 0.75rem 1rem;
+            background: rgba(255,178,0,0.04);
+            border-left: 2px solid var(--amber);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: var(--fs-xs);
+            color: var(--amber2);
+            line-height: 1.7;
+            margin: 0.75rem 0;
+            border-radius: 0 2px 2px 0;
+            font-weight: 500;
+        }
+        .note-block strong {
+            color: var(--amber);
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+        }
+
+        /* ============================================ */
+        /*  LINKS                                       */
+        /* ============================================ */
+        a {
+            color: var(--hi);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        a:hover {
+            color: var(--hi2);
+        }
+
+        /* ============================================ */
+        /*  FOOTER                                      */
+        /* ============================================ */
+        .footer {
+            width: 100%;
+            max-width: 60rem;
+            padding: 1.625rem 3rem;
+            border-top: 1px solid var(--rule);
+            position: relative;
+            z-index: 50;
+        }
+
+        .footer-modules {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 0.875rem;
+        }
+        .footer-modules a {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .footer-modules a:hover,
+        .footer-modules a.footer-current {
+            color: var(--hi);
+        }
+        .footer-modules span {
+            color: var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+        }
+
+        .footer-social {
+            text-align: center;
+            margin-bottom: 0.875rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-xs);
+            color: var(--amber);
+        }
+        .footer-social a {
+            color: var(--amber);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-social a:hover {
+            color: var(--hi);
+        }
+        .footer-social span {
+            color: var(--rule);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: var(--fs-xs);
+            color: rgba(0,255,65,0.25);
+            line-height: 1.8;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        /* ============================================ */
+        /*  ANIMATION                                   */
+        /* ============================================ */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0);    }
+        }
+
+        /* ============================================ */
+        /*  MEDIA QUERIES                               */
+        /* ============================================ */
+        @media (max-width: 1024px) {
+            /* Reducción proporcional de gaps y tamaños en tablets grandes */
+            .header { gap: 0.75rem; }
+            .hero { gap: 1.5rem; }
+            /* Tipografía: los clamp() ya escalan solos — no redefinir --fs-* aquí */
+            /* Solo ajustar elementos con tamaños no escalables */
+            .nav-link { font-size: var(--fs-xs); }
+            .section-label { font-size: var(--fs-xs); }
+            .footer-modules a { font-size: var(--fs-xs); }
+            .footer-social { font-size: var(--fs-xs); }
+            .footer-bottom { font-size: var(--fs-xs); }
+            .pch-btn { font-size: var(--fs-xs); }
+            .translate-btn { font-size: var(--fs-xs); }
+            .kv-key { font-size: var(--fs-xs); }
+            .content-section pre { font-size: var(--fs-xs); }
+            .pw-table th { font-size: var(--fs-xs); }
+            .note-block { font-size: var(--fs-xs); }
+            .spectrum { font-size: var(--fs-sm); }
+            .quote-block { font-size: var(--fs-sm); }
+            .hero-body { font-size: var(--fs-sm); }
+            .content-section p { font-size: var(--fs-sm); }
+            .content-section ul li { font-size: var(--fs-sm); }
+            .content-section ol li { font-size: var(--fs-sm); }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 1rem 1.5rem;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .header-nav {
+                width: 100%;
+                gap: 1rem;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 4px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+            .header-nav::-webkit-scrollbar {
+                display: none;
+            }
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 2.5rem 1.5rem 2.25rem;
+                gap: 1.5rem;
+            }
+            .hero-body {
+                max-width: 100%;
+            }
+            .hero-actions {
+                flex-direction: column;
+            }
+            .btn-primary,
+            .btn-secondary {
+                text-align: center;
+                width: 100%;
+            }
+            .content-section {
+                padding: 2rem 1.5rem;
+            }
+            .section-label {
+                padding: 0.8125rem 1.5rem;
+            }
+            .footer {
+                padding: 1.25rem 1.5rem;
+            }
+            .bracket {
+                font-size: var(--fs-xs);
+            }
+            /* Colapso de grids a 1 columna */
+            [class*="grid"],
+            [class*="cols"],
+            [class*="columns"] {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header          { padding: 0.75rem 1rem; }
+            .hero            { padding: 1.75rem 1rem 1.5rem; }
+            .content-section { padding: 1.5rem 1rem; }
+            .footer          { padding: 1rem; }
+            .footer-modules  { gap: 0.75rem; }
+        }
+    </style>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0002-3432-1710",
+      "name": "Dany D. Ruiz",
+      "alternateName": "panperceptual",
+      "jobTitle": "Anartist · Independent Researcher",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "url": "https://perceptemple.art",
+      "sameAs": [
+        "https://orcid.org/0009-0002-3432-1710",
+        "https://x.com/panperceptual",
+        "https://github.com/PERCEPTEMPLE",
+        "https://doi.org/10.17605/OSF.IO/FVCAX",
+        "https://doi.org/10.5281/zenodo.17683631",
+        "https://doi.org/10.2139/ssrn.5794102"
+      ]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["CreativeWork", "Book"],
+      "name": "PERCEPTEMPLE · POETRY",
+      "description": "Poetic exploration of perception, time, and mystery through conceptual artworks by Dany D. Ruiz. A module of PERCEPTEMPLE — Panperceptual Theory of the Universe.",
+      "datePublished": "2026-06-07",
+      "dateModified": "2026-06-07",
+      "url": "https://perceptemple.art/poetry/",
+      "inLanguage": ["en", "es"],
+      "creator": {
+        "@type": "Person",
+        "@id": "https://orcid.org/0009-0002-3432-1710",
+        "name": "Dany D. Ruiz"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "license": "https://perceptemple.art/licence/",
+      "sameAs": [
+        "https://doi.org/10.17605/OSF.IO/FVCAX",
+        "https://doi.org/10.5281/zenodo.17683631",
+        "https://doi.org/10.2139/ssrn.5794102"
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    
+    <span class="bracket bracket-tl">[</span>
+    <span class="bracket bracket-tr">]</span>
+    <span class="bracket bracket-bl">[</span>
+    <span class="bracket bracket-br">]</span>
+
+    
+    <div class="header">
+        <div class="logo">
+            <strong class="logo-mark" data-lang="es" class="lang-hidden">PERCEPTEMPLE</strong>
+            <strong class="logo-mark" data-lang="en">PERCEPTEMPLE</strong>
+            <br>
+            <a class="pch-btn" href="../index.html">
+                <span data-lang="es" class="lang-hidden">PRUEBA DE CONCIENCIA HUMANA</span>
+                <span data-lang="en">HUMAN CONSCIOUSNESS TEST</span>
+            </a>
+        </div>
+        <nav class="header-nav">
+            <a class="nav-link" href="../percepware/index.html">
+                <span data-lang="es" class="lang-hidden">PercepWare</span><span data-lang="en">PercepWare</span>
+            </a>
+            <a class="nav-link" href="../pci/index.html">
+                <span data-lang="es" class="lang-hidden">PCI</span><span data-lang="en">PCI</span>
+            </a>
+            <a class="nav-link" href="../aei/index.html">
+                <span data-lang="es" class="lang-hidden">AEI</span><span data-lang="en">AEI</span>
+            </a>
+            <a class="nav-link" href="../neohaki/index.html">
+                <span data-lang="es" class="lang-hidden">NEOHAKI</span><span data-lang="en">NEOHAKI</span>
+            </a>
+            <a class="nav-link" href="../pram/index.html">
+                <span data-lang="es" class="lang-hidden">PRAM</span><span data-lang="en">PRAM</span>
+            </a>
+            <a class="nav-link" href="../licence/index.html">
+                <span data-lang="es" class="lang-hidden">LICENCIA</span><span data-lang="en">LICENSE</span>
+            </a>
+            <a class="nav-link" href="../bitneko/index.html">
+                <span data-lang="es" class="lang-hidden">BITNEKO</span><span data-lang="en">BITNEKO</span>
+            </a>
+            <a class="nav-link" href="../space/index.html">
+                <span data-lang="es" class="lang-hidden">SPACE</span><span data-lang="en">SPACE</span>
+            </a>
+            <a class="nav-link" href="../agamottor/index.html">
+                <span data-lang="es" class="lang-hidden">AGAMOTTOR</span><span data-lang="en">AGAMOTTOR</span>
+            </a>
+            <a class="nav-link" href="../little-prince/index.html">
+                <span data-lang="es" class="lang-hidden">LITTLE PRINCE</span><span data-lang="en">LITTLE PRINCE</span>
+            </a>
+            <a class="nav-link" href="../ptu/index.html">
+                <span data-lang="es" class="lang-hidden">PTU</span><span data-lang="en">PTU</span>
+            </a>
+            <a class="nav-link" href="../time-machine/index.html">
+                <span data-lang="es" class="lang-hidden">MÁQUINA DEL TIEMPO</span><span data-lang="en">TIME MACHINE</span>
+            </a>
+            <a class="nav-link highlight" href="index.html">
+                <span data-lang="es" class="lang-hidden">POESÍA</span><span data-lang="en">POETRY</span>
+            </a>
+            <button class="translate-btn" id="langToggle" onclick="toggleLanguage()">ES</button>
+        </nav>
+    </div>
+
+    
+    <div class="section-label">
+        <span data-lang="es" class="lang-hidden">POESÍA</span>
+        <span data-lang="en">POETRY</span>
+    </div>
+
+    
+    <div class="hero">
+        <div class="hero-left">
+            <h1 class="hero-h1">
+                <span data-lang="es" class="lang-hidden">TODA LA TECNOLOGÍA ES UNA ONTOLOGÍA CONDENSADA</span>
+                <span data-lang="en">ALL TECHNOLOGY IS A CONDENSED ONTOLOGY</span>
+            </h1>
+            <div class="hero-body">
+                <p data-lang="es" class="lang-hidden">Hoy he vuelto a pensar que no sé bien qué es la poesía. Deseo creer que no son emociones hechas palabras. Quiero creer que la poesía tiene que ver con el misterio. Por ejemplo, ¿cuánto pesa una nube? Lo poético es indescriptible, la poesía trata de capturarlo. Y en ese sentido, sí, toca el misterio.</p>
+                <p data-lang="en">Today I've returned to thinking that I don't really know what poetry is. I want to believe it isn't emotions turned into words. I want to believe that poetry has to do with mystery. For example, how much does a cloud weigh? The poetic is indescribable; poetry tries to capture it. And in that sense, yes, it touches the mystery.</p>
+            </div>
+        </div>
+    </div>
+
+    
+   
+    
+    <div class="content-section">
+        <h2>I.</h2>
+        <h3>
+            <span data-lang="es" class="lang-hidden">Lección de vida por un libro de geometría</span>
+            <span data-lang="en">Life lesson by a geometry book</span>
+        </h3>
+        <p data-lang="es" class="lang-hidden">Y en un día en la vida de Dany Ruiz, los materiales a usar son:</p>
+        <p data-lang="en">And on a day in the life of Dany Ruiz, the materials to use are:</p>
+        <ul>
+            <li data-lang="es" class="lang-hidden">Un libro de geometría</li>
+            <li data-lang="en">A geometry book</li>
+            <li data-lang="es" class="lang-hidden">Un cordel o hilo resistente</li>
+            <li data-lang="en">A cord or resistant thread</li>
+            <li data-lang="es" class="lang-hidden">Una ventana o un espacio donde se pueda colgar el libro y permitir que el viento lo mueva.</li>
+            <li data-lang="en">A window or a space where the book can be hung and allow the wind to move it.</li>
+        </ul>
+        <p><strong data-lang="es" class="lang-hidden">Instrucciones:</strong> <strong data-lang="en">Instructions:</strong></p>
+        <p data-lang="es" class="lang-hidden">Toma el libro de geometría y ábrelo en una página que tenga muchas figuras geométricas dibujadas.</p>
+        <p data-lang="en">Take the geometry book and open it to a page that has many geometric figures drawn.</p>
+        <p data-lang="es" class="lang-hidden">Ata el cordel o hilo resistente alrededor del libro, justo en el centro de la página elegida.</p>
+        <p data-lang="en">Tie the cord or resistant thread around the book, right in the center of the chosen page.</p>
+        <p data-lang="es" class="lang-hidden">Busca una ventana o espacio donde puedas colgar el libro con el cordel.</p>
+        <p data-lang="en">Find a window or space where you can hang the book with the cord.</p>
+        <p data-lang="es" class="lang-hidden">Asegúrate de que el cordel quede fijado al libro y que esté colgado en un lugar donde pueda ser movido por el viento.</p>
+        <p data-lang="en">Make sure the cord is fixed to the book and that it is hung in a place where it can be moved by the wind.</p>
+        <p data-lang="es" class="lang-hidden">Deje que el viento sople y mueva las paginas: Aprenda dos o tres cosas sobre la vida.</p>
+        <p data-lang="en">Let the wind blow and move the pages: Learn two or three things about life.</p>
+
+        <hr>
+
+        <h3>
+            <span data-lang="es" class="lang-hidden">Cartografía</span>
+            <span data-lang="en">Cartography</span>
+        </h3>
+        <p data-lang="es" class="lang-hidden">Hace mucho, deseé ubicar una señal de tránsito de curvas sinuosas a la orilla del mar. Al situar esta señal, un símbolo de orden y control, en un entorno tan impredecible como la orilla del mar, las olas, en su movimiento perpetuo, trazan y retrazan el camino señalado por la señal.</p>
+        <p data-lang="en">Long ago, I wished to place a winding road traffic sign at the seashore. By placing this sign, a symbol of order and control, in an environment as unpredictable as the seashore, the waves, in their perpetual movement, trace and retrace the path indicated by the sign.</p>
+        <p data-lang="es" class="lang-hidden">Este acto de ubicar la señal junto al mar es una forma de cartografía, un esfuerzo por trazar y comprender el territorio donde lo previsible se encuentra con lo inesperado.</p>
+        <p data-lang="en">This act of placing the sign by the sea is a form of cartography, an effort to trace and understand the territory where the predictable meets the unexpected.</p>
+        <p data-lang="es" class="lang-hidden">Las olas, con su vaivén incesante, siguen un camino que nunca es igual. A pesar de nuestras avanzadas tecnologías y esfuerzos por controlar nuestro entorno, se abren fronteras en la ciencia, contrapuestas a la naturaleza plena, impredecible, cambiante y sin nombre.</p>
+        <p data-lang="en">The waves, with their incessant swaying, follow a path that is never the same. Despite our advanced technologies and efforts to control our environment, frontiers open in science, opposed to full, unpredictable, changing and nameless nature.</p>
+
+        <hr>
+
+        <h3>
+            <span data-lang="es" class="lang-hidden">¿A qué altura empieza el cielo?</span>
+            <span data-lang="en">At what height does the sky begin?</span>
+        </h3>
+        <p data-lang="es" class="lang-hidden">Hace un tiempo deseé ubicar un flotador salvavidas en mar abierto y, sobre él, colocar un nivel de albañil.</p>
+        <p data-lang="en">Some time ago I wished to place a lifebuoy in the open sea and, on it, place a mason's level.</p>
+        <p data-lang="es" class="lang-hidden">El flotador salvavidas, destinado a protegernos del abismo marino, se convierte en el punto de partida, flotando en la incertidumbre del océano. Sobre él, el nivel de albañil introduce la noción de equilibrio, la búsqueda de una línea recta en un entorno donde todo es inestable y cambiante.</p>
+        <p data-lang="en">The lifebuoy, destined to protect us from the marine abyss, becomes the starting point, floating in the uncertainty of the ocean. On it, the mason's level introduces the notion of balance, the search for a straight line in an environment where everything is unstable and changing.</p>
+        <p data-lang="es" class="lang-hidden">Nombrarle "¿A qué altura empieza el cielo?" sugiere que lo infinito y lo etéreo no están tan lejos de lo mundano. Es una reflexión sobre la percepción, la imposibilidad de medir lo inalcanzable con herramientas destinadas a lo tangible.</p>
+        <p data-lang="en">Naming it "At what height does the sky begin?" suggests that the infinite and the ethereal are not so far from the mundane. It is a reflection on perception, the impossibility of measuring the unattainable with tools meant for the tangible.</p>
+        <p data-lang="es" class="lang-hidden">El cielo, al que intentas ponerle una distancia, parece más una pregunta que una respuesta.</p>
+        <p data-lang="en">The sky, to which you try to assign a distance, seems more like a question than an answer.</p>
+        <p data-lang="es" class="lang-hidden">Es un diálogo entre lo que flota y lo que cae, entre la salvación y el vacío, entre lo que creemos poder controlar y aquello que escapa a nuestra comprensión.</p>
+        <p data-lang="en">It is a dialogue between what floats and what falls, between salvation and the void, between what we believe we can control and that which escapes our understanding.</p>
+
+        <hr>
+
+        <h3>
+            <span data-lang="es" class="lang-hidden">Cosmómetro</span>
+            <span data-lang="en">Cosmometer</span>
+        </h3>
+        <p data-lang="es" class="lang-hidden">Pienso en una bóveda como un cubo, transparente, con la cara superior equipada con una lupa que me ayude a ver el fondo. En ese fondo pondré 100 centímetros, divididos de 10 en 10; será una regla cuadrada. Ejemplo:</p>
+        <p data-lang="en">I think of a vault as a cube, transparent, with the upper face equipped with a magnifying glass that helps me see the bottom. On that bottom I will place 100 centimeters, divided 10 by 10; it will be a square ruler. Example:</p>
+        <pre>
+'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1
+'''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'
+'''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1''
+''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''
+'''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1''''
+''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''
+'''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1''''''
+''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''
+'1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1''''''''
+1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''1'''''''''
+        </pre>
+        <p data-lang="es" class="lang-hidden">Me acercaré y me alejaré de la lupa para ver la regla del fondo. A mi obra le he dado el nombre de "Cosmómetro". Quiero explorar la dualidad entre lo micro y lo macro; la regla, dispuesta en una cuadrícula precisa, actúa como un sistema de medida que se despliega en diferentes escalas.</p>
+        <p data-lang="en">I will approach and move away from the magnifying glass to see the ruler at the bottom. I have named my work "Cosmometer". I want to explore the duality between the micro and the macro; the ruler, arranged in a precise grid, acts as a measurement system that unfolds at different scales.</p>
+        <p data-lang="es" class="lang-hidden">A través de la lupa, los observadores pueden ver cómo la percepción de la regla cambia a medida que se acercan o se alejan. Nuestra percepción y comprensión del universo varían según la escala a la que lo observemos.</p>
+        <p data-lang="en">Through the magnifying glass, observers can see how the perception of the ruler changes as they approach or move away. Our perception and understanding of the universe vary according to the scale at which we observe it.</p>
+        <p data-lang="es" class="lang-hidden">A medida que uno se aleja, la visión se convierte en una representación más abstracta del sistema de medida, reflejando cómo el universo, en su vasta magnitud, puede parecer más difuso y menos definido. Nuestra percepción cambia con la distancia, mostrando cómo lo infinitamente pequeño y lo vastamente grande están intrínsecamente conectados.</p>
+        <p data-lang="en">As one moves away, the vision becomes a more abstract representation of the measurement system, reflecting how the universe, in its vast magnitude, can appear more diffuse and less defined. Our perception changes with distance, showing how the infinitely small and the vastly large are intrinsically connected.</p>
+        <p data-lang="es" class="lang-hidden">Pienso en el lugar del ser humano en el cosmos.</p>
+        <p data-lang="en">I think about the place of the human being in the cosmos.</p>
+    </div>
+
+    
+    <div class="content-section">
+        <h2>II.</h2>
+        <h3>
+            <span data-lang="es" class="lang-hidden">Jaula</span>
+            <span data-lang="en">Cage</span>
+        </h3>
+        <p data-lang="es" class="lang-hidden">Retiramos cada número.</p>
+        <p data-lang="en">We remove each number.</p>
+        <p data-lang="es" class="lang-hidden">Retiramos la aguja que marca la hora.</p>
+        <p data-lang="en">We remove the hand that marks the hour.</p>
+        <p data-lang="es" class="lang-hidden">Retiramos la aguja de los minutos.</p>
+        <p data-lang="en">We remove the minute hand.</p>
+        <p data-lang="es" class="lang-hidden">Dejemos solo la aguja que marca los segundos.</p>
+        <p data-lang="en">We leave only the hand that marks the seconds.</p>
+        <p data-lang="es" class="lang-hidden">A mi reloj le he dado el nombre de "Jaula".</p>
+        <p data-lang="en">I have named my watch "Cage".</p>
+        <p data-lang="es" class="lang-hidden">Aunque intentemos simplificar nuestra percepción del tiempo, mi reloj es un recordatorio de que la vida no se mide en minutos y horas.</p>
+        <p data-lang="en">Although we try to simplify our perception of time, my watch is a reminder that life is not measured in minutes and hours.</p>
+        <p data-lang="es" class="lang-hidden">En lugar de números rígidos, la esfera de mi reloj se transforma en un espacio sin límites.</p>
+        <p data-lang="en">Instead of rigid numbers, the face of my watch transforms into a limitless space.</p>
+        <p data-lang="es" class="lang-hidden">Al mismo tiempo, la única aguja en movimiento constante puede darnos la sensación de estar atrapados en un ciclo interminable, un recordatorio de que el tiempo sigue avanzando inexorablemente, incluso, si intentamos ignorarlo...</p>
+        <p data-lang="en">At the same time, the single hand in constant motion can give us the feeling of being trapped in an endless cycle, a reminder that time continues to advance inexorably, even if we try to ignore it...</p>
+
+        <hr>
+
+        <h3>
+            <span data-lang="es" class="lang-hidden">Devenir</span>
+            <span data-lang="en">Becoming</span>
+        </h3>
+        <p data-lang="es" class="lang-hidden">Construí una brújula, para ello usé un reloj. Al reloj le quité las agujas y le puse la de una brújula. ¿Lo imaginas? La aguja de mi brújula se movía como la de un reloj. A mi obra le di por nombre Devenir.</p>
+        <p data-lang="en">I built a compass; for that, I used a watch. I removed the watch hands and put on one from a compass. Can you imagine it? The needle of my compass moved like a clock hand. I named my work Becoming.</p>
+        <p data-lang="es" class="lang-hidden">Al reemplazar las agujas del reloj por la de una brújula, he creado un híbrido que pone en duda las funciones más básicas de ambos instrumentos. La brújula, destinada a señalar el norte y darnos dirección, se ve atrapada en el ciclo constante y predecible del reloj, que siempre avanza sin detenerse. El tiempo deja de ser lineal y el norte, esa referencia fija, se convierte en algo móvil, incierto.</p>
+        <p data-lang="en">By replacing the watch hands with a compass needle, I have created a hybrid that questions the most basic functions of both instruments. The compass, meant to point north and give us direction, is trapped in the constant and predictable cycle of the clock, which always advances without stopping. Time ceases to be linear and north, that fixed reference, becomes something mobile, uncertain.</p>
+
+        <hr>
+
+        <h3>
+            <span data-lang="es" class="lang-hidden">El tiempo en el retrovisor</span>
+            <span data-lang="en">Time in the rearview mirror</span>
+        </h3>
+        <p data-lang="es" class="lang-hidden">He dispuesto sesenta relojes, cada uno con una sola aguja, de manera que cada reloj sigue al anterior en la secuencia. Cada aguja marca un segundo diferente, siguiendo la dirección del reloj anterior, creando una serie continua de momentos en el tiempo.</p>
+        <p data-lang="en">I have arranged sixty watches, each with a single hand, so that each watch follows the previous one in the sequence. Each hand marks a different second, following the direction of the previous watch, creating a continuous series of moments in time.</p>
+        <p data-lang="es" class="lang-hidden">Al organizar los relojes de esta manera, no solo te muestro una secuencia de instantes, sino que también invito a observar cómo el tiempo se despliega ante nosotros, similar a cómo miramos atrás en un retrovisor para entender el trayecto recorrido. Cada reloj no es solo un marcador de tiempo, sino una pieza en una narrativa más amplia que nos permite reflexionar sobre la continuidad del tiempo y cómo lo percibimos.</p>
+        <p data-lang="en">By organizing the watches in this way, I not only show you a sequence of instants, but also invite you to observe how time unfolds before us, similar to how we look back in a rearview mirror to understand the journey traveled. Each watch is not just a time marker, but a piece in a broader narrative that allows us to reflect on the continuity of time and how we perceive it.</p>
+        <p data-lang="es" class="lang-hidden">En esencia, "El tiempo en el retrovisor" busca ser una meditación sobre la relación entre los segundos y nuestra interpretación del flujo del tiempo:</p>
+        <p data-lang="en">In essence, "Time in the rearview mirror" seeks to be a meditation on the relationship between seconds and our interpretation of the flow of time:</p>
+        <ul>
+            <li>Watch 1 = 0 seconds</li>
+            <li>Watch 2 = 1 second</li>
+            <li>Watch 3 = 2 seconds</li>
+            <li>Watch 4 = 3 seconds</li>
+            <li>Watch 5 = 4 seconds</li>
+            <li>Watch 6 = 5 seconds</li>
+            <li>Watch 7 = 6 seconds</li>
+            <li>Watch 8 = 7 seconds</li>
+            <li>Watch 9 = 8 seconds</li>
+            <li>Watch 10 = 9 seconds</li>
+            <li>Watch 11 = 10 seconds</li>
+            <li>Watch 12 = 11 seconds</li>
+            <li>Watch 13 = 12 seconds</li>
+            <li>Watch 14 = 13 seconds</li>
+            <li>Watch 15 = 14 seconds</li>
+            <li>Watch 16 = 15 seconds</li>
+            <li>Watch 17 = 16 seconds</li>
+            <li>Watch 18 = 17 seconds</li>
+            <li>Watch 19 = 18 seconds</li>
+            <li>Watch 20 = 19 seconds</li>
+            <li>Watch 21 = 20 seconds</li>
+            <li>Watch 22 = 21 seconds</li>
+            <li>Watch 23 = 22 seconds</li>
+            <li>Watch 24 = 23 seconds</li>
+            <li>Watch 25 = 24 seconds</li>
+            <li>Watch 26 = 25 seconds</li>
+            <li>Watch 27 = 26 seconds</li>
+            <li>Watch 28 = 27 seconds</li>
+            <li>Watch 29 = 28 seconds</li>
+            <li>Watch 30 = 29 seconds</li>
+            <li>Watch 31 = 30 seconds</li>
+            <li>Watch 32 = 31 seconds</li>
+            <li>Watch 33 = 32 seconds</li>
+            <li>Watch 34 = 33 seconds</li>
+            <li>Watch 35 = 34 seconds</li>
+            <li>Watch 36 = 35 seconds</li>
+            <li>Watch 37 = 36 seconds</li>
+            <li>Watch 38 = 37 seconds</li>
+            <li>Watch 39 = 38 seconds</li>
+            <li>Watch 40 = 39 seconds</li>
+            <li>Watch 41 = 40 seconds</li>
+            <li>Watch 42 = 41 seconds</li>
+            <li>Watch 43 = 42 seconds</li>
+            <li>Watch 44 = 43 seconds</li>
+            <li>Watch 45 = 44 seconds</li>
+            <li>Watch 46 = 45 seconds</li>
+            <li>Watch 47 = 46 seconds</li>
+            <li>Watch 48 = 47 seconds</li>
+            <li>Watch 49 = 48 seconds</li>
+            <li>Watch 50 = 49 seconds</li>
+            <li>Watch 51 = 50 seconds</li>
+            <li>Watch 52 = 51 seconds</li>
+            <li>Watch 53 = 52 seconds</li>
+            <li>Watch 54 = 53 seconds</li>
+            <li>Watch 55 = 54 seconds</li>
+            <li>Watch 56 = 55 seconds</li>
+            <li>Watch 57 = 56 seconds</li>
+            <li>Watch 58 = 57 seconds</li>
+            <li>Watch 59 = 58 seconds</li>
+            <li>Watch 60 = 59 seconds</li>
+        </ul>
+    </div>
+
+    
+    <div class="content-section">
+        <h2>III.</h2>
+        <h3>2 + 2</h3>
+        <p data-lang="es" class="lang-hidden">Antes que todo, el número 1 ignoraba la presencia de otro 1; al encontrarse, se enfrentaron a la discusión de quién debe ser el número 2.</p>
+        <p data-lang="en">Before everything, the number 1 ignored the presence of another 1; upon meeting, they faced the discussion of who should be the number 2.</p>
+        <p data-lang="es" class="lang-hidden">- Ambos números 1 ignoraban la presencia de otro número 1 más.</p>
+        <p data-lang="en">- Both numbers 1 ignored the presence of yet another number 1.</p>
+        <p data-lang="es" class="lang-hidden">- Ambos números 1 decidieron que le llamarían 3.</p>
+        <p data-lang="en">- Both numbers 1 decided they would call it 3.</p>
+        <p data-lang="es" class="lang-hidden">El número 3, ignorando las discusiones del primer encuentro entre ambos números 1, asumió su lugar siguiendo sus reglas.</p>
+        <p data-lang="en">The number 3, ignoring the discussions of the first meeting between both numbers 1, assumed its place following their rules.</p>
+        <p data-lang="es" class="lang-hidden">Al llegar otro número 1, se ubicó detrás del tercer número 1 sin preguntar y así, se nombró a sí mismo como 2.</p>
+        <p data-lang="en">When another number 1 arrived, it placed itself behind the third number 1 without asking and thus, named itself as 2.</p>
+
+        <hr>
+
+        <h3>Nullius in verba</h3>
+        <p data-lang="es" class="lang-hidden">"Nullius in verba" nos recuerda no aceptar la palabra de nadie como verdad absoluta. Esta máxima, nacida en la Royal Society del siglo XVII, promovió la investigación y el escrutinio independiente frente a los dogmas establecidos.</p>
+        <p data-lang="en">"Nullius in verba" reminds us not to accept anyone's word as absolute truth. This maxim, born in the Royal Society of the 17th century, promoted independent research and scrutiny against established dogmas.</p>
+        <p data-lang="es" class="lang-hidden">Aplicando este principio al punto de partida del plano cartesiano, vemos que su elección es una convención humana. Aunque esencial para el análisis matemático, este punto no revela una verdad intrínseca del universo, sino que es una herramienta para entender y representar nuestra realidad.</p>
+        <p data-lang="en">Applying this principle to the starting point of the Cartesian plane, we see that its choice is a human convention. Although essential for mathematical analysis, this point does not reveal an intrinsic truth of the universe, but is a tool to understand and represent our reality.</p>
+        <p data-lang="es" class="lang-hidden">De igual manera, al restar 1 al número 700, obtenemos 699. El número 1, considerado la base del 700, parece perder su relevancia al ser eliminado. Esta paradoja, sin embargo, puede servir como una metáfora para explorar la naturaleza del conocimiento y la infinitud, sugiriendo que lo que consideramos fundamental puede ser una construcción de nuestro entendimiento más que una verdad absoluta.</p>
+        <p data-lang="en">Similarly, when subtracting 1 from the number 700, we obtain 699. The number 1, considered the basis of 700, seems to lose its relevance when eliminated. This paradox, however, can serve as a metaphor to explore the nature of knowledge and infinity, suggesting that what we consider fundamental may be a construction of our understanding rather than an absolute truth.</p>
+
+        <hr>
+
+        <h3>
+            <span data-lang="es" class="lang-hidden">Rueda de piedra</span>
+            <span data-lang="en">Stone wheel</span>
+        </h3>
+        <p data-lang="es" class="lang-hidden">Si imaginamos el momento en que se hizo girar la primera rueda de piedra, notaremos que esta rodaría en la dirección en que fue lanzada. Si regresamos al inicio y giramos la dirección levemente a la derecha, observaremos que a medida que avance, el camino será distinto. De esta manera, podemos volver al inicio y girar levemente a la izquierda una y otra vez hasta hacer girar la rueda sobre su propio eje. Imaginemos que al girar la rueda, esta da una y otra vuelta, una y otra y otra. En cada una de las vueltas marca un paso. A cada paso se le dio un nombre y, probablemente, esos nombres son los que hoy conocemos como números.</p>
+        <p data-lang="en">If we imagine the moment when the first stone wheel was spun, we will notice that it would roll in the direction it was launched. If we return to the beginning and turn the direction slightly to the right, we will observe that as it advances, the path will be different. In this way, we can return to the beginning and turn slightly to the left again and again until we make the wheel spin on its own axis. Let's imagine that when spinning the wheel, it goes around and around, again and again. In each turn, it marks a step. Each step was given a name and, probably, those names are what we now know as numbers.</p>
+        <p data-lang="es" class="lang-hidden">Si no hemos olvidado la posibilidad de volver al inicio y girar la rueda levemente a la derecha, esto probablemente puede ilustrarnos la manera en que percibimos el tiempo...</p>
+        <p data-lang="en">If we haven't forgotten the possibility of returning to the beginning and turning the wheel slightly to the right, this can probably illustrate the way we perceive time...</p>
+    </div>
+
+    
+    <div class="content-section">
+        <h2>IV.</h2>
+        <h3>
+            <span data-lang="es" class="lang-hidden">Astrología</span>
+            <span data-lang="en">Astrology</span>
+        </h3>
+        <p data-lang="es" class="lang-hidden">A partir del "retraso de la luz", donde lo qué vemos en el cielo puede estar desactualizado en el tiempo, si una estrella está a una distancia de un millón de años luz, significa que la luz que estamos viendo hoy en realidad dejó la estrella hace un millón de años. Esto implica que la estrella podría haber muerto o cambiado significativamente desde entonces, pero solo nos enteramos de eso cuando la luz finalmente llega a nosotros. Y si la astrología es un sistema de creencias que sostiene que las posiciones relativas y los movimientos de los cuerpos celestes, como planetas y estrellas, pueden influir en la vida y la personalidad de las personas, así como en eventos terrenales. Se basa en la idea de que hay una relación entre los patrones celestiales y los acontecimientos en la Tierra, incluidos los aspectos de la personalidad, las relaciones, la salud y más. Dicho todo lo anterior, ¿Como pueden las estrellas guiar nuestro futuro si probablemente murieron hace mucho?</p>
+        <p data-lang="en">Based on the "light delay", where what we see in the sky may be outdated in time, if a star is at a distance of one million light-years, it means that the light we are seeing today actually left the star one million years ago. This implies that the star could have died or changed significantly since then, but we only find out when the light finally reaches us. And if astrology is a belief system that holds that the relative positions and movements of celestial bodies, such as planets and stars, can influence people's lives and personalities, as well as earthly events. It is based on the idea that there is a relationship between celestial patterns and events on Earth, including aspects of personality, relationships, health and more. Having said all of the above, how can the stars guide our future if they probably died long ago?</p>
+
+        <hr>
+
+        <h3>
+            <span data-lang="es" class="lang-hidden">Manifiesto cieloplano</span>
+            <span data-lang="en">Flat-sky manifesto</span>
+        </h3>
+        <ul>
+            <li data-lang="es" class="lang-hidden">Pienso que las constelaciones son trazos imaginarios que proyectamos sobre el caos del cielo, buscando orden en lo inabarcable.</li>
+            <li data-lang="en">I think that constellations are imaginary lines we project onto the chaos of the sky, seeking order in the uncontainable.</li>
+            <li data-lang="es" class="lang-hidden">Pienso que esas líneas entre estrellas reflejan nuestro deseo de imponer un mapa sobre la vastedad, como si nombrar lo eterno nos diera control.</li>
+            <li data-lang="en">I think that those lines between stars reflect our desire to impose a map on vastness, as if naming the eternal gave us control.</li>
+            <li data-lang="es" class="lang-hidden">Pienso que estas figuras, que consideramos fijas, se desvanecen cuando cambiamos de perspectiva, revelando su fragilidad.</li>
+            <li data-lang="en">I think that these figures, which we consider fixed, vanish when we change perspective, revealing their fragility.</li>
+            <li data-lang="es" class="lang-hidden">Pienso que nuestras verdades, como las constelaciones, se quiebran al ser vistas desde otros ángulos del universo.</li>
+            <li data-lang="en">I think that our truths, like the constellations, shatter when seen from other angles of the universe.</li>
+            <li data-lang="es" class="lang-hidden">Pienso que el oscurantismo es la sombra que insiste en la inmutabilidad de esos trazos, cegándonos ante la vastedad del cosmos.</li>
+            <li data-lang="en">I think that obscurantism is the shadow that insists on the immutability of those traces, blinding us to the vastness of the cosmos.</li>
+            <li data-lang="es" class="lang-hidden">Pienso que si las constelaciones se deshacen con el movimiento, nuestras certezas también podrían ser ilusiones pasajeras.</li>
+            <li data-lang="en">I think that if constellations dissolve with movement, our certainties could also be fleeting illusions.</li>
+            <li data-lang="es" class="lang-hidden">Pienso que aferrarnos a las constelaciones como verdades inmutables es negar la posibilidad de nuevas configuraciones.</li>
+            <li data-lang="en">I think that clinging to constellations as immutable truths is to deny the possibility of new configurations.</li>
+            <li data-lang="es" class="lang-hidden">Pienso que el caos que surge al abandonar los patrones conocidos abre espacio para nuevas formas de comprender el mundo.</li>
+            <li data-lang="en">I think that the chaos that emerges when abandoning known patterns opens space for new ways of understanding the world.</li>
+            <li data-lang="es" class="lang-hidden">Pienso que el cosmos es una invitación al asombro, donde lo que parece fijo siempre puede cambiar.</li>
+            <li data-lang="en">I think that the cosmos is an invitation to wonder, where what seems fixed can always change.</li>
+        </ul>
+
+        <hr>
+
+        <h3>
+            <span data-lang="es" class="lang-hidden">Probablemente el infinito sea un delirio</span>
+            <span data-lang="en">Probably infinity is a delirium</span>
+        </h3>
+        <p data-lang="es" class="lang-hidden">El infinito, ese concepto que se extiende como una promesa sin fin, quizás no sea más que un espejismo tejido por la mente. Nos han hecho creer que existe, que allá, en algún lugar más allá de todo lo que conocemos, lo finito se disuelve en una expansión eterna, inabarcable. Pero el delirio se disfraza de verdad cuando lo miramos demasiado de cerca.</p>
+        <p data-lang="en">Infinity, that concept that extends like an endless promise, is perhaps nothing more than a mirage woven by the mind. We have been made to believe it exists, that there, somewhere beyond everything we know, the finite dissolves into an eternal, uncontainable expansion. But delirium disguises itself as truth when we look at it too closely.</p>
+        <p data-lang="es" class="lang-hidden">Tal vez, el infinito no es más que un reflejo de nuestra incapacidad de aceptar límites, un eco que resuena dentro de las cavidades de nuestras ambiciones desbordadas. Queremos creer en él porque nos resulta insoportable admitir que todo podría tener un fin, que la eternidad no es más que un malentendido, un intento vano de escapar al ciclo implacable de lo tangible.</p>
+        <p data-lang="en">Perhaps infinity is nothing more than a reflection of our inability to accept limits, an echo that resonates within the cavities of our overflowing ambitions. We want to believe in it because we find it unbearable to admit that everything could have an end, that eternity is nothing more than a misunderstanding, a vain attempt to escape the relentless cycle of the tangible.</p>
+        <p data-lang="es" class="lang-hidden">Pero, ¿qué es el infinito sino la desesperada huida de aquello que termina? Quizás, lo eterno no sea más que un sueño que hemos decidido no despertar. Una fiebre prolongada. Un delirio.</p>
+        <p data-lang="en">But what is infinity if not the desperate flight from that which ends? Perhaps the eternal is nothing more than a dream we have decided not to wake from. A prolonged fever. A delirium.</p>
+    </div>
+
+    
+    <div class="content-section">
+        <h2>V.</h2>
+        <h3>
+            <span data-lang="es" class="lang-hidden">Alegoría del Guernica</span>
+            <span data-lang="en">Allegory of Guernica</span>
+        </h3>
+        <p data-lang="es" class="lang-hidden">El artista, con su pincel, traza líneas que, sin intención aparente, pueden devenir en un eco de la propaganda. Lo que nace como una expresión personal, un reflejo íntimo de su mundo interior, se encuentra, de pronto, al borde de la manipulación. La frontera entre el arte y la propaganda es tenue, un límite que se difumina bajo la mirada interpretativa del público.</p>
+        <p data-lang="en">The artist, with their brush, traces lines that, without apparent intention, can become an echo of propaganda. What is born as a personal expression, an intimate reflection of their inner world, finds itself, suddenly, on the edge of manipulation. The border between art and propaganda is tenuous, a limit that blurs under the interpretative gaze of the public.</p>
+        <p data-lang="es" class="lang-hidden">En cada trazo, en cada sombra, se esconde la posibilidad de influir, de moldear percepciones sin quererlo. Como en la "Alegoría de la Caverna" de Platón, lo que vemos no es más que un reflejo, una sombra de las ideas que danzan en la penumbra del entendimiento humano. Y así, el Guernica de Picasso, nacido del dolor de la guerra, se convierte en algo más que una obra; es una sombra proyectada en la caverna, una manifestación de la violencia y el sufrimiento universales.</p>
+        <p data-lang="en">In each stroke, in each shadow, hides the possibility of influencing, of shaping perceptions without meaning to. As in Plato's "Allegory of the Cave", what we see is nothing more than a reflection, a shadow of the ideas that dance in the twilight of human understanding. And so, Picasso's Guernica, born from the pain of war, becomes something more than a work; it is a shadow projected in the cave, a manifestation of universal violence and suffering.</p>
+        <p data-lang="es" class="lang-hidden">La manipulación se desliza sutil, como una serpiente entre las hojas, tocando lo emocional, lo político, lo social. Pero ¿acaso no es también el arte una forma de manipulación? ¿No guía el artista nuestras emociones, nuestras reflexiones? En esa guía, en esa dirección dada a la mente del espectador, se halla la habilidad del creador, que sin quererlo, puede moldear la realidad que percibimos.</p>
+        <p data-lang="en">Manipulation slides subtly, like a serpent among the leaves, touching the emotional, the political, the social. But is not art also a form of manipulation? Doesn't the artist guide our emotions, our reflections? In that guidance, in that direction given to the viewer's mind, lies the creator's skill, who, without meaning to, can shape the reality we perceive.</p>
+        <p data-lang="es" class="lang-hidden">El arte, entonces, es una paradoja: una liberación personal que puede encadenar a otros en nuevas formas de pensamiento. En la luz del taller, el pintor no solo da vida a su visión; también, consciente o no, da forma a las sombras que proyecta en la mente de quienes miran. Y en esas sombras, se entrelazan la verdad, la mentira y todo lo que hay en medio.</p>
+        <p data-lang="en">Art, then, is a paradox: a personal liberation that can chain others in new forms of thought. In the light of the workshop, the painter not only brings their vision to life; they also, consciously or not, give shape to the shadows they project in the minds of those who look. And in those shadows, truth, lies and everything in between intertwine.</p>
+
+        <hr>
+
+        <h3>
+            <span data-lang="es" class="lang-hidden">Encarnación</span>
+            <span data-lang="en">Incarnation</span>
+        </h3>
+        <p data-lang="es" class="lang-hidden">Si pienso en ARTE, empiezo a creer que no soy un predicador. La estructura que le da forma a mis pensamientos debería adaptarse a cualquier área del conocimiento. Pensar en ARTE para seguir hablando de arte no tiene sentido para mí.</p>
+        <p data-lang="en">If I think about ART, I begin to believe that I am not a preacher. The structure that shapes my thoughts should adapt to any area of knowledge. Thinking about ART to keep talking about art makes no sense to me.</p>
+        <p data-lang="es" class="lang-hidden">En Dany Ruiz, en su encarnación, el ARTE se manifiesta en carne.</p>
+        <p data-lang="en">In Dany Ruiz, in his incarnation, ART manifests in flesh.</p>
+
+        <hr>
+
+        <h3>
+            <span data-lang="es" class="lang-hidden">Me gustaría crear una serie de pintura que demostrara que el ciego y el que ve no son iguales</span>
+            <span data-lang="en">I would like to create a series of paintings that demonstrate that the blind and the sighted are not the same</span>
+        </h3>
+        <p data-lang="es" class="lang-hidden">Si pudiera crear una serie de pinturas que demostraran que el ciego y el que ve no son iguales, en la escuela solo aprendí los nombres de las cosas, pero no a nombrarlas por mí mismo. Descubrí que debía memorizar respuestas a preguntas ya planteadas, sin detenerme nunca a reflexionar sobre los nombres.</p>
+        <p data-lang="en">If I could create a series of paintings that demonstrated that the blind and the sighted are not the same, in school I only learned the names of things, but not to name them for myself. I discovered that I had to memorize answers to questions already posed, never stopping to reflect on the names.</p>
+        <p data-lang="es" class="lang-hidden">Asignar nombres no es un acto neutral; las sociedades no solo describen el mundo, también lo crean. Los nombres y categorías que empleamos moldean nuestra percepción y comprensión de la realidad.</p>
+        <p data-lang="en">Assigning names is not a neutral act; societies not only describe the world, they also create it. The names and categories we use shape our perception and understanding of reality.</p>
+        <p data-lang="es" class="lang-hidden">En las tiendas de pintura, las cartas de color son esenciales para que los clientes puedan ver y elegir el tono exacto que desean. Yo buscaría crear mis propias cartas de color, una serie de pinturas casi infinita, donde los nombres de los colores serán tomados de los nombres ya dados arbitrariamente a la naturaleza.</p>
+        <p data-lang="en">In paint stores, color charts are essential so that customers can see and choose the exact shade they want. I would seek to create my own color charts, an almost infinite series of paintings, where the names of the colors will be taken from the names already arbitrarily given to nature.</p>
+    </div>
+
+    
+    <div class="content-section">
+        <h2>VI.</h2>
+        <h3>
+            <span data-lang="es" class="lang-hidden">RW NW PRT M HRW</span>
+            <span data-lang="en">RW NW PRT M HRW</span>
+        </h3>
+        <ol>
+            <li data-lang="es" class="lang-hidden">Y en los días de sufrimiento y dolor, en un lugar donde las almas buscaban alivio, un hombre con gran compasión pensó en un gesto de consuelo.</li>
+            <li data-lang="en">And in the days of suffering and pain, in a place where souls sought relief, a man with great compassion thought of a gesture of consolation.</li>
+            <li data-lang="es" class="lang-hidden">En la capilla del hospital psiquiátrico, donde el lamento y la desesperanza se entrelazaban, el hombre dispuso colocar una balanza de antigua manera.</li>
+            <li data-lang="en">In the chapel of the psychiatric hospital, where lament and hopelessness intertwined, the man arranged to place a balance in the ancient manner.</li>
+            <li data-lang="es" class="lang-hidden">Y habló al pueblo: "Venid, aquellos que cargáis el peso de la aflicción. Venid y pesad vuestras almas en esta balanza, no como juicio, sino como símbolo de aligerar vuestra carga."</li>
+            <li data-lang="en">And he spoke to the people: "Come, you who carry the weight of affliction. Come and weigh your souls on this balance, not as judgment, but as a symbol of lightening your burden."</li>
+            <li data-lang="es" class="lang-hidden">Y al pesar de la balanza, cada uno recibiría una moneda de chocolate, dulce ofrenda en medio de la tristeza, para recordar que, aun en la adversidad, puede haber un momento de dulzura.</li>
+            <li data-lang="en">And upon the weighing of the balance, each would receive a chocolate coin, a sweet offering in the midst of sadness, to remember that, even in adversity, there can be a moment of sweetness.</li>
+            <li data-lang="es" class="lang-hidden">Entonces, de entre las almas en pena, el hombre oyó que Anubis, el guardián del más allá, también pesaba las almas en tiempos antiguos para discernir su destino.</li>
+            <li data-lang="en">Then, from among the souls in sorrow, the man heard that Anubis, the guardian of the beyond, also weighed souls in ancient times to discern their destiny.</li>
+            <li data-lang="es" class="lang-hidden">Y el hombre comprendió que su gesto, aunque sencillo y sin el conocimiento de las antiguas costumbres, no buscaba juzgar, sino aliviar. Su ignorancia lo hizo pensar como un dios, pero no uno de juicio, sino de compasión, capaz de ofrecer alivio donde más se necesitaba.</li>
+            <li data-lang="en">And the man understood that his gesture, although simple and without knowledge of the ancient customs, did not seek to judge, but to relieve. His ignorance made him think like a god, but not one of judgment, but of compassion, capable of offering relief where it was most needed.</li>
+            <li data-lang="es" class="lang-hidden">Y así, el acto simbólico de la balanza y la moneda se convirtió en un signo de la compasión y del cuidado hacia el prójimo, enseñando que incluso el gesto más humilde puede traer esperanza y consuelo.</li>
+            <li data-lang="en">And so, the symbolic act of the balance and the coin became a sign of compassion and care towards one's neighbor, teaching that even the humblest gesture can bring hope and consolation.</li>
+            <li data-lang="es" class="lang-hidden">Porque, en la simplicidad de un acto, hay grandeza; en la dulzura de un presente, se revela la humanidad.</li>
+            <li data-lang="en">Because, in the simplicity of an act, there is greatness; in the sweetness of a present, humanity is revealed.</li>
+            <li data-lang="es" class="lang-hidden">Y el hombre vio que su propósito había sido bien recibido, y en el pesar y en el dulce regalo, encontró que el alivio y la empatía son caminos hacia la sanación del espíritu.</li>
+            <li data-lang="en">And the man saw that his purpose had been well received, and in the sorrow and in the sweet gift, he found that relief and empathy are paths toward the healing of the spirit.</li>
+        </ol>
+
+        <hr>
+
+        <h3>
+            <span data-lang="es" class="lang-hidden">Epístolas del Conejo Blanco</span>
+            <span data-lang="en">Epistles of the White Rabbit</span>
+        </h3>
+        <p><strong>El Salvador, Siglo XXI.</strong></p>
+        <p data-lang="es" class="lang-hidden">Estimada Señora de las Visiones Controvertidas:</p>
+        <p data-lang="en">Dear Lady of the Controversial Visions:</p>
+        <p data-lang="es" class="lang-hidden">Le escribo desde el fondo de una madriguera que algunos insisten en llamar "alucinación", donde el tiempo fluye tan erráticamente como los pensamientos de aquellos que los médicos etiquetan como "desordenados". Me pregunto, ¿alguna vez le han sugerido que sus apariciones podrían beneficiarse de una dosis de realidad farmacológicamente inducida?</p>
+        <p data-lang="en">I write to you from the bottom of a burrow that some insist on calling "hallucination", where time flows as erratically as the thoughts of those whom doctors label as "disordered". I wonder, have you ever been suggested that your apparitions could benefit from a dose of pharmacologically induced reality?</p>
+        <p data-lang="es" class="lang-hidden">Sus visitas a los pastorcillos han causado tanto revuelo como mi presencia en la vida de cierta joven llamada Alicia. Curioso, ¿no le parece? Cómo algunos pueden ver la divinidad en una figura luminosa, mientras otros ven locura en un conejo parlante. Me pregunto qué pensarían esos escépticos hombres de ciencia si intentaran "curar" nuestras respectivas apariciones con sus píldoras mágicas.</p>
+        <p data-lang="en">Your visits to the little shepherds have caused as much commotion as my presence in the life of a certain young lady named Alice. Curious, don't you think? How some can see divinity in a luminous figure, while others see madness in a talking rabbit. I wonder what those skeptical men of science would think if they tried to "cure" our respective apparitions with their magic pills.</p>
+        <p data-lang="es" class="lang-hidden">He oído que en su mundo, al igual que en el mío, hay quienes insisten en etiquetar lo extraordinario como patológico. ¿Alguna vez le han ofrecido un "tratamiento" para dejar de aparecer? A mí me lo sugieren constantemente, aunque sospecho que una dosis de curiosidad sería más efectiva que cualquier antipsicótico.</p>
+        <p data-lang="en">I have heard that in your world, as in mine, there are those who insist on labeling the extraordinary as pathological. Have you ever been offered a "treatment" to stop appearing? They constantly suggest it to me, although I suspect that a dose of curiosity would be more effective than any antipsychotic.</p>
+        <p data-lang="es" class="lang-hidden">A veces me pregunto si la línea entre la revelación divina y el delirio es tan delgada como la que separa la cordura de la locura en el País de las Maravillas. ¿Qué opina usted? ¿Es la fe simplemente una locura socialmente aceptada, o es la locura una forma de fe incomprendida?</p>
+        <p data-lang="en">Sometimes I wonder if the line between divine revelation and delirium is as thin as the one that separates sanity from madness in Wonderland. What do you think? Is faith simply a socially accepted madness, or is madness a form of misunderstood faith?</p>
+        <p data-lang="es" class="lang-hidden">Por cierto, ¿ha notado cómo aquellos que no pueden vernos insisten en que necesitamos "ayuda"? Es como si la incapacidad de percibir lo extraordinario fuera considerada salud, y la habilidad de ver más allá de lo ordinario, una enfermedad. Qué mundo tan curioso, ¿no le parece?</p>
+        <p data-lang="en">By the way, have you noticed how those who cannot see us insist that we need "help"? It's as if the inability to perceive the extraordinary were considered health, and the ability to see beyond the ordinary, an illness. What a curious world, don't you think?</p>
+        <p data-lang="es" class="lang-hidden">En fin, debo irme antes de que alguien decida que mi puntualidad obsesiva requiere terapia. Si alguna vez se cansa de que intenten explicar sus milagros con diagnósticos, sepa que en el País de las Maravillas siempre hay lugar para aquellos que ven más allá de lo que otros llaman "realidad".</p>
+        <p data-lang="en">Anyway, I must go before someone decides that my obsessive punctuality requires therapy. If you ever tire of them trying to explain your miracles with diagnoses, know that in Wonderland there is always a place for those who see beyond what others call "reality".</p>
+        <p data-lang="es" class="lang-hidden">Siempre suyo en la más lúcida de las locuras,</p>
+        <p data-lang="en">Always yours in the most lucid of madnesses,</p>
+        <p><strong data-lang="es" class="lang-hidden">El Conejo Blanco</strong><strong data-lang="en">The White Rabbit</strong></p>
+        <p data-lang="es" class="lang-hidden">P.D. Si alguna vez se cansa de los milagros, las profecías y todo ese asunto celestial, sepa que en el País de las Maravillas siempre hay sitio para una santa más. Aunque le advierto, aquí la santidad se mide por lo bien que uno toma el té. Si decide visitarnos, le ruego que no intente hacer que el agua se convierta en vino. Ya tenemos suficientes problemas con el Sombrerero Loco sin añadir alcohol a la ecuación.</p>
+        <p data-lang="en">P.S. If you ever tire of miracles, prophecies and all that heavenly business, know that in Wonderland there is always room for one more saint. Although I warn you, here holiness is measured by how well one takes tea. If you decide to visit us, I beg you not to try to turn water into wine. We already have enough problems with the Mad Hatter without adding alcohol to the equation.</p>
+
+        <hr>
+
+        <h3>
+            <span data-lang="es" class="lang-hidden">Mis carros de Teseo</span>
+            <span data-lang="en">My Ships of Theseus</span>
+        </h3>
+        <p data-lang="es" class="lang-hidden">En la encrucijada del tiempo, donde lo tangible se enfrenta a lo inevitable, se alza TESEO, un vehículo que desafía la caducidad. Como el barco que llevó el nombre del héroe griego, cada componente reemplazado es un acto de continuidad, no de pérdida. La esencia permanece, inmutable, en un mundo que exige cambio constante.</p>
+        <p data-lang="en">At the crossroads of time, where the tangible faces the inevitable, THESEUS rises, a vehicle that defies expiration. Like the ship that bore the name of the Greek hero, each replaced component is an act of continuity, not of loss. The essence remains, immutable, in a world that demands constant change.</p>
+        <p data-lang="es" class="lang-hidden">TESEO no es solo un carro; es un manifiesto contra la obsolescencia, un retorno a la ingeniería que valora lo duradero. Sin caer en nostalgias estériles, fusiona la robustez de la mecánica pasada con la precisión de la tecnología moderna. No se trata de preservar por preservar, sino de resistir el descarte innecesario, de extender el ciclo de vida sin sacrificar la integridad.</p>
+        <p data-lang="en">THESEUS is not just a car; it is a manifesto against obsolescence, a return to engineering that values the durable. Without falling into sterile nostalgia, it fuses the robustness of past mechanics with the precision of modern technology. It's not about preserving for preserving's sake, but about resisting unnecessary discarding, extending the life cycle without sacrificing integrity.</p>
+        <p data-lang="es" class="lang-hidden">En un tiempo donde los recursos son finitos y las promesas tecnológicas a menudo dejan una huella amarga, TESEO opta por un camino consciente. Su estructura modular no solo es un avance técnico, sino una declaración ética. Cada pieza intercambiable es un paso hacia un futuro donde la sostenibilidad no es un ideal, sino una práctica diaria.</p>
+        <p data-lang="en">In a time where resources are finite and technological promises often leave a bitter footprint, THESEUS opts for a conscious path. Its modular structure is not only a technical advancement, but an ethical declaration. Each interchangeable piece is a step toward a future where sustainability is not an ideal, but a daily practice.</p>
+        <p data-lang="es" class="lang-hidden">TESEO se mueve, no por inercia, sino por un propósito renovado. Su identidad no se diluye en el cambio, sino que se fortalece con cada renovación. En su andar, no busca ser un artefacto de su tiempo, sino un compañero duradero, fiel al espíritu de permanencia en un mundo transitorio.</p>
+        <p data-lang="en">THESEUS moves, not by inertia, but by a renewed purpose. Its identity is not diluted in change, but is strengthened with each renewal. In its journey, it does not seek to be an artifact of its time, but a lasting companion, faithful to the spirit of permanence in a transitory world.</p>
+    </div>
+
+    
+    <div class="content-section">
+        <h2>VII.</h2>
+        <h3>
+            <span data-lang="es" class="lang-hidden">¿Si lo veo, existe?</span>
+            <span data-lang="en">If I see it, does it exist?</span>
+        </h3>
+        <p data-lang="es" class="lang-hidden">En los sueños, la materia parece ser algo diferente de lo que conocemos en la realidad física. ¿Cómo podemos describir esta sustancia que experimentamos mientras dormimos? ¿De qué tipo de materia están hechos los sueños?</p>
+        <p data-lang="en">In dreams, matter seems to be something different from what we know in physical reality. How can we describe this substance we experience while we sleep? What kind of matter are dreams made of?</p>
+        <p data-lang="es" class="lang-hidden">En lugar de colores y ondas de luz, podríamos estar experimentando una forma interna de vibraciones y frecuencias que se mezclan y se transforman.</p>
+        <p data-lang="en">Instead of colors and light waves, we could be experiencing an internal form of vibrations and frequencies that mix and transform.</p>
+        <p data-lang="es" class="lang-hidden">Las imágenes en los sueños cambian rápidamente, los paisajes y los rostros parecen transformarse sin aviso. Esto puede reflejar cómo en el mundo cuántico, las partículas y las frecuencias se comportan de manera no predecible.</p>
+        <p data-lang="en">Images in dreams change rapidly, landscapes and faces seem to transform without warning. This may reflect how in the quantum world, particles and frequencies behave unpredictably.</p>
+        <p data-lang="es" class="lang-hidden">Intentar explicar el proceso atómico de la luz en los sueños es como tratar de medir el tamaño de un sueño con una regla.</p>
+        <p data-lang="en">Trying to explain the atomic process of light in dreams is like trying to measure the size of a dream with a ruler.</p>
+
+        <hr>
+
+        <h3>
+            <span data-lang="es" class="lang-hidden">¿Qué es la vida?</span>
+            <span data-lang="en">What is life?</span>
+        </h3>
+        <p data-lang="es" class="lang-hidden">En lo imposible, Jesús y Schrödinger se encuentran en un diálogo que trasciende la física y la fe.</p>
+        <p data-lang="en">In the impossible, Jesus and Schrödinger meet in a dialogue that transcends physics and faith.</p>
+        <p data-lang="es" class="lang-hidden">Jesús saluda con una calma que desarma, mientras Erwin, inquisitivo, lanza la pregunta que desafía la realidad: ¿es posible estar vivo y muerto al mismo tiempo? Jesús, con la serenidad de quien ha cruzado el río del entendimiento, responde que en su visión, tal estado no existe. La muerte es para él una transición, un paso hacia un ámbito diferente de existencia, donde la simultaneidad no tiene lugar.</p>
+        <p data-lang="en">Jesus greets with a disarming calm, while Erwin, inquisitive, launches the question that defies reality: is it possible to be alive and dead at the same time? Jesus, with the serenity of one who has crossed the river of understanding, responds that in his vision, such a state does not exist. Death for him is a transition, a step toward a different realm of existence, where simultaneity has no place.</p>
+        <p data-lang="es" class="lang-hidden">Schrödinger, el maestro de la superposición cuántica, plantea su reflexión: si un objeto puede estar en dos estados simultáneamente, ¿podría la vida y la muerte ser una danza paralela en ese reino de posibilidades? Jesús escucha, comprensivo, pero reafirma que la vida es un don para experimentar y aprender, y que la muerte marca un final y un comienzo, sin lugar para el cruce de estados.</p>
+        <p data-lang="en">Schrödinger, the master of quantum superposition, poses his reflection: if an object can be in two states simultaneously, could life and death be a parallel dance in that realm of possibilities? Jesus listens, understanding, but reaffirms that life is a gift to experience and learn, and that death marks an end and a beginning, with no room for the crossing of states.</p>
+        <p data-lang="es" class="lang-hidden">El pensamiento de Erwin se adentra en el misterio del momento en que uno pasa al siguiente estado. Jesús, desde su perspectiva trascendental, señala que la muerte es una liberación del cuerpo y de las ataduras terrenales, un misterio conocido solo por Dios.</p>
+        <p data-lang="en">Erwin's thought delves into the mystery of the moment one passes to the next state. Jesus, from his transcendental perspective, points out that death is a liberation from the body and earthly ties, a mystery known only to God.</p>
+
+        <hr>
+
+        <h3>
+            <span data-lang="es" class="lang-hidden">Embajador del Tiempo</span>
+            <span data-lang="en">Ambassador of Time</span>
+        </h3>
+        <p data-lang="es" class="lang-hidden">Los Estados nacen de la necesidad y los intereses del poder. Desde el momento en que un grupo de personas decide unirse y formar una nación, hasta los procesos de independencia donde se busca definir un nuevo destino, cada paso está lleno de sueños y aspiraciones.</p>
+        <p data-lang="en">States are born from necessity and the interests of power. From the moment a group of people decides to unite and form a nation, to the processes of independence where they seek to define a new destiny, each step is full of dreams and aspirations.</p>
+        <p data-lang="es" class="lang-hidden">Ahora, soy el 'Embajador del Tiempo'.</p>
+        <p data-lang="en">Now, I am the 'Ambassador of Time'.</p>
+        <p data-lang="es" class="lang-hidden">Estas credenciales no solo representarán mi compromiso, sino que también mostrarán la conexión entre nuestras historias y nuestras aspiraciones compartidas.</p>
+        <p data-lang="en">These credentials will not only represent my commitment, but will also show the connection between our histories and our shared aspirations.</p>
+        <p data-lang="es" class="lang-hidden">Inicialmente, podría parecer que enviar mis credenciales a la ONU y a los líderes mundiales sería una forma de validar mi posición. Sin embargo, he llegado a la conclusión de que esto podría contradecir mi objetivo. Mi enfoque no se basa en la validación externa, sino en una reflexión interna sobre cómo el tiempo y las experiencias nos conectan</p>
+        <p data-lang="en">Initially, it might seem that sending my credentials to the UN and world leaders would be a way to validate my position. However, I have come to the conclusion that this could contradict my objective. My approach is not based on external validation, but on an internal reflection on how time and experiences connect us.</p>
+        <p data-lang="es" class="lang-hidden">Así, el tiempo mismo se convierte en un portador de nuestro pasado y nuestro futuro.</p>
+        <p data-lang="en">Thus, time itself becomes a bearer of our past and our future.</p>
+
+        <hr>
+
+        <h3>
+            <span data-lang="es" class="lang-hidden">Dónde trato de explicar el destino de las nubes</span>
+            <span data-lang="en">Where I try to explain the destiny of clouds</span>
+        </h3>
+        <p data-lang="es" class="lang-hidden">No soy un árbol. No estoy atado a la tierra por raíces profundas que me anclan a un solo lugar, a una sola historia.</p>
+        <p data-lang="en">I am not a tree. I am not tied to the earth by deep roots that anchor me to a single place, to a single story.</p>
+        <p data-lang="es" class="lang-hidden">Soy una nube. Sigo mi propio ciclo, navegando por los cielos, adaptándome y transformándome. Las fronteras que definen territorios, culturas o identidades, para mí, son como líneas dibujadas. Aunque existen, no me limitan ni me definen.</p>
+        <p data-lang="en">I am a cloud. I follow my own cycle, navigating the skies, adapting and transforming myself. The borders that define territories, cultures or identities, for me, are like drawn lines. Although they exist, they do not limit or define me.</p>
+        <p data-lang="es" class="lang-hidden">En cada paso, en cada cruce de frontera, me deshago y me rearmo</p>
+        <p data-lang="en">At every step, at every border crossing, I dissolve and reassemble myself.</p>
+        <p data-lang="es" class="lang-hidden">Soy libre, soy una nube.</p>
+        <p data-lang="en">I am free, I am a cloud.</p>
+
+        <hr>
+
+        <h3>CODE</h3>
+        <pre><code>
+import os
+
+class PanperceptualDiagnostic:
+    def __init__(self):
+        self.tech_seed = os.urandom(4)
+        self.mind_seed = len(open(__file__).read()) if os.path.exists(__file__) else 0
+
+    def diagnose(self):
+        tech_velocity = int.from_bytes(self.tech_seed, 'big') % 100
+        cognitive_frame = self.mind_seed % 100
+        gap = tech_velocity - cognitive_frame
+
+        return {
+            "tech_velocity": tech_velocity,
+            "cognitive_frame": cognitive_frame,
+            "gap": gap,
+            "status": "Mismatch" if gap > 0 else "Stable",
+            "origin_tech": "os.urandom(4)",
+            "origin_mind": f"{self.mind_seed} bytes of self",
+            "blindspot": "This code cannot measure what it will become after this line"
+        }
+
+print(PanperceptualDiagnostic().diagnose())
+        </code></pre>
+    </div>
+
+    
+    <div class="footer">
+
+        
+        <div class="footer-modules">
+            <a href="../index.html">
+                <span data-lang="es" class="lang-hidden">[PERCEPTEMPLE]</span><span data-lang="en">[PERCEPTEMPLE]</span>
+            </a>
+            <span>|</span>
+            <a href="../percepware/index.html">
+                <span data-lang="es" class="lang-hidden">PERCEPWARE</span><span data-lang="en">PERCEPWARE</span>
+            </a>
+            <span>|</span>
+            <a href="../pci/index.html">
+                <span data-lang="es" class="lang-hidden">PCI</span><span data-lang="en">PCI</span>
+            </a>
+            <span>|</span>
+            <a href="../aei/index.html">
+                <span data-lang="es" class="lang-hidden">AEI</span><span data-lang="en">AEI</span>
+            </a>
+            <span>|</span>
+            <a href="../neohaki/index.html">
+                <span data-lang="es" class="lang-hidden">NEOHAKI</span><span data-lang="en">NEOHAKI</span>
+            </a>
+            <span>|</span>
+            <a href="../pram/index.html">
+                <span data-lang="es" class="lang-hidden">PRAM</span><span data-lang="en">PRAM</span>
+            </a>
+            <span>|</span>
+            <a href="../licence/index.html">
+                <span data-lang="es" class="lang-hidden">LICENCIA</span><span data-lang="en">LICENSE</span>
+            </a>
+            <span>|</span>
+            <a href="../bitneko/index.html">
+                <span data-lang="es" class="lang-hidden">BITNEKO</span><span data-lang="en">BITNEKO</span>
+            </a>
+            <span>|</span>
+            <a href="../space/index.html">
+                <span data-lang="es" class="lang-hidden">SPACE</span><span data-lang="en">SPACE</span>
+            </a>
+            <span>|</span>
+            <a href="../agamottor/index.html">
+                <span data-lang="es" class="lang-hidden">AGAMOTTOR</span><span data-lang="en">AGAMOTTOR</span>
+            </a>
+            <span>|</span>
+            <a href="../little-prince/index.html">
+                <span data-lang="es" class="lang-hidden">LITTLE PRINCE</span><span data-lang="en">LITTLE PRINCE</span>
+            </a>
+            <span>|</span>
+            <a href="../ptu/index.html">
+                <span data-lang="es" class="lang-hidden">PTU</span><span data-lang="en">PTU</span>
+            </a>
+            <span>|</span>
+            <a href="../time-machine/index.html">
+                <span data-lang="es" class="lang-hidden">MÁQUINA DEL TIEMPO</span><span data-lang="en">TIME MACHINE</span>
+            </a>
+            <span>|</span>
+            <a class="footer-current" href="index.html">
+                <span data-lang="es" class="lang-hidden">POESÍA</span><span data-lang="en">POETRY</span>
+            </a>
+        </div>
+
+        
+        <div class="footer-social">
+            <a href="https://orcid.org/0009-0002-3432-1710" target="_blank" rel="noopener">
+                <span data-lang="es" class="lang-hidden">ORCID</span><span data-lang="en">ORCID</span>
+            </a>
+            <span> / </span>
+            <a href="https://github.com/PERCEPTEMPLE" target="_blank" rel="noopener">
+                <span data-lang="es" class="lang-hidden">GITHUB</span><span data-lang="en">GITHUB</span>
+            </a>
+            <span> / </span>
+            <a href="https://x.com/panperceptual" target="_blank" rel="noopener">
+                <span data-lang="es" class="lang-hidden">X</span><span data-lang="en">X</span>
+            </a>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <span data-lang="es" class="lang-hidden">DEPOSITADO EN EL REGISTRO DE LA PROPIEDAD INTELECTUAL · EL SALVADOR · DANY D. RUIZ</span>
+            <span data-lang="en">DEPOSITED IN THE INTELLECTUAL PROPERTY REGISTRY · EL SALVADOR · DANY D. RUIZ</span>
+            <br>
+            <span data-lang="es" class="lang-hidden">Antes de que nos vean, ya somos</span>
+            <span data-lang="en">Before They See Us, We Already Are</span>
+        </div>
+
+    </div>
+
+    
+    <script>
+        function toggleLanguage() {
+            var html    = document.documentElement;
+            var current = html.lang || 'en';
+            var next    = current === 'en' ? 'es' : 'en';
+            var hide    = next === 'en' ? 'es' : 'en';
+            html.lang = next;
+            document.querySelectorAll('[data-lang="' + next + '"]')
+                .forEach(function(el) { el.classList.remove('lang-hidden'); });
+            document.querySelectorAll('[data-lang="' + hide + '"]')
+                .forEach(function(el) { el.classList.add('lang-hidden'); });
+            document.getElementById('langToggle').textContent =
+                next === 'en' ? 'ES' : 'EN';
+            localStorage.setItem('perceptemple-lang', next);
+        }
+        (function() {
+            var saved = localStorage.getItem('perceptemple-lang');
+            if (saved && saved === 'es') { toggleLanguage(); }
+        })();
+    </script>
+
+</body>
+</html>
