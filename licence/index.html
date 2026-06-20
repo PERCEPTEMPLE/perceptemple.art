@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hybrid resonant license for PERCEPTEMPLE — Panperceptual License v1.0 by Dany D. Ruiz. Combines MIT terms with perceptual ethics, custodianship, and acknowledgment of El Salvador as founding node.">
+    <meta name="author" content="Dany D. Ruiz">
+    <meta name="last-modified" content="2026-06-07">
+    <meta name="keywords" content="Panperceptual License, PERCEPTEMPLE, Dany D. Ruiz, resonant heritage, open source ethics, intellectual property, El Salvador">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://perceptemple.art/licence/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Panperceptual License v1.0 · PERCEPTEMPLE">
+    <meta property="og:description" content="Hybrid resonant license for PERCEPTEMPLE — Panperceptual License v1.0 by Dany D. Ruiz. Combines MIT terms with perceptual ethics, custodianship, and acknowledgment of El Salvador as founding node.">
+    <meta property="og:url" content="https://perceptemple.art/licence/">
+    <meta property="og:site_name" content="PERCEPTEMPLE">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_SV">
+    <meta property="og:image" content="https://perceptemple.art/preview.jpg">
+    <meta property="og:image:alt" content="PERCEPTEMPLE — Panperceptual License">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@panperceptual">
+    <meta name="twitter:creator" content="@panperceptual">
+    <meta name="twitter:title" content="Panperceptual License v1.0 · PERCEPTEMPLE">
+    <meta name="twitter:description" content="Hybrid resonant license for PERCEPTEMPLE — Panperceptual License v1.0 by Dany D. Ruiz. Combines MIT terms with perceptual ethics, custodianship, and acknowledgment of El Salvador as founding node.">
+    <meta name="twitter:image" content="https://perceptemple.art/preview.jpg">
+
+    <title>PERCEPTEMPLE</title>
+
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:      #020805;
+            --panel-dark:#000100;
+            --rule:    #0a5c1e;
+            --rule-dim:rgba(12,71,26,0.4);
+            --hi:      #00ff41;
+            --hi2:     #39ff14;
+            --amber:   #ffb200;
+            --amber2:  #ffcc00;
+            --txt:     rgba(0,255,65,0.75);
+            --txt2:    rgba(0,255,65,0.9);
+            --txt3:    rgba(0,255,65,0.3);
+            --white:   #39ff14;
+            --red:     #ff2020;
+
+            --fs-xs: clamp(0.65rem, 1.2vw, 0.75rem);
+            --fs-sm: clamp(0.75rem, 1.4vw, 0.85rem);
+            --fs-md: clamp(0.8rem,  1.6vw, 1rem);
+            --fs-lg: clamp(1rem,    2vw,   1.25rem);
+            --fs-xl: clamp(1.25rem, 3vw,   1.75rem);
+        }
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        .lang-hidden{display:none!important}
+        body{
+            background:var(--bg);color:var(--txt2);
+            font-family:'Share Tech Mono',monospace;font-weight:400;
+            font-size:var(--fs-sm);
+            min-height:100vh;overflow-x:hidden;line-height:1.6;
+            display:flex;flex-direction:column;align-items:center;
+            animation:fadeUp 0.4s ease both;
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+            text-rendering:optimizeLegibility;
+        }
+        body::before{
+            content:'';position:fixed;inset:0;
+            background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.12) 3px,rgba(0,0,0,0.12) 6px);
+            pointer-events:none;z-index:9999;
+        }
+        body::after{
+            content:'';position:fixed;inset:0;
+            background-image:linear-gradient(rgba(0,255,65,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,65,0.02) 1px,transparent 1px);
+            background-size:80px 80px;pointer-events:none;z-index:9998;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+        canvas {
+            max-width: 100%;
+        }
+        .bracket{position:fixed;color:rgba(0,255,65,0.12);font-family:'Orbitron',sans-serif;font-size:var(--fs-md);pointer-events:none;z-index:10000}
+        .bracket-tl{top:16px;left:20px}.bracket-tr{top:16px;right:20px}
+        .bracket-bl{bottom:16px;left:20px}.bracket-br{bottom:16px;right:20px}
+        .pch-btn{display:inline-block;margin-top:6px;background:transparent;border:1px solid var(--red);color:var(--red);font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:2px;text-transform:uppercase;padding:4px 12px;text-decoration:none;border-radius:2px;font-weight:700;white-space:nowrap;transition:all 0.2s}
+        .pch-btn:hover{background:rgba(255,51,51,0.08)}
+        .translate-btn{position:relative;top:auto;right:auto;background:transparent;border:1px solid var(--amber);color:var(--amber);font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:2px;text-transform:uppercase;padding:0.4rem 0.8rem;cursor:pointer;transition:all 0.2s;border-radius:2px;font-weight:600;white-space:nowrap;z-index:auto;flex-shrink:0}
+        .translate-btn:hover{background:rgba(255,159,0,0.1);color:var(--amber2);border-color:var(--amber2)}
+        .header{width:100%;max-width:75rem;display:flex;align-items:center;justify-content:space-between;padding:1.25rem 2rem;border-bottom:1px solid var(--rule);background:var(--bg);position:relative;z-index:100;flex-wrap:wrap;gap:0.75rem}
+        .logo-mark{font-family:'Orbitron',sans-serif;font-size:var(--fs-md);color:var(--hi);letter-spacing:2px;font-weight:700}
+        .header-nav{display:flex;gap:1.5rem;flex-wrap:wrap;align-items:center}
+        .nav-link{font-family:'Orbitron',sans-serif;font-size:var(--fs-sm);letter-spacing:2px;text-transform:uppercase;color:var(--txt3);text-decoration:none;transition:color 0.2s;font-weight:500;white-space:nowrap}
+        .nav-link:hover,.nav-link.highlight{color:var(--hi)}
+        .section-label{width:100%;max-width:60rem;padding:0.8125rem 2rem;border-bottom:1px solid var(--rule);font-family:'Orbitron',sans-serif;font-size:var(--fs-sm);letter-spacing:4px;text-transform:uppercase;color:var(--amber);display:flex;align-items:center;gap:0.875rem;font-weight:600}
+        .section-label::after{content:'';flex:1;height:1px;background:var(--rule);min-width:20px}
+
+        .hero{width:100%;max-width:60rem;padding:3.5rem 2rem;border-bottom:1px solid var(--rule);text-align:center}
+        .hero h1{font-family:'Orbitron',sans-serif;font-size:var(--fs-xl);font-weight:900;line-height:0.95;color:var(--hi2);margin-bottom:0.75rem;letter-spacing:2px;word-break:break-word}
+        .hero .sub{font-size:var(--fs-sm);color:var(--txt);display:block;letter-spacing:1px;max-width:55ch;margin:0 auto;word-break:break-word}
+        .hero .designator{font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);color:var(--amber);letter-spacing:2px;margin-top:1rem}
+
+        .page{width:100%;max-width:60rem;padding:0 2rem 3rem}
+        .page p{max-width:70ch;word-break:break-word}
+        .page li{max-width:70ch;word-break:break-word}
+        .section-block{margin-bottom:2.5rem}
+        .sec-head{display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;padding-bottom:0.6rem;border-bottom:1px solid var(--rule)}
+        .sec-num{font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);font-weight:700;background:var(--hi);color:var(--bg);padding:3px 8px;letter-spacing:2px;flex-shrink:0}
+        .sec-title{font-family:'Orbitron',sans-serif;font-size:var(--fs-sm);font-weight:700;color:var(--hi);text-transform:uppercase;letter-spacing:2px}
+
+        .clause-block{padding:1.5rem 1.75rem;background:var(--panel-dark);border:1px solid var(--rule);margin-bottom:1px;position:relative}
+        .clause-block::before{content:attr(data-num);position:absolute;top:-9px;left:16px;background:var(--bg);padding:0 10px;font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:2px;color:var(--hi)}
+        .clause-block h3{font-family:'Orbitron',sans-serif;font-size:var(--fs-sm);font-weight:700;color:var(--amber);text-transform:uppercase;letter-spacing:1px;margin-bottom:0.6rem;word-break:break-word}
+        .clause-block p{font-size:var(--fs-sm);color:var(--txt);line-height:1.9;margin-bottom:0.5rem;word-break:break-word}
+        .clause-block p strong{color:var(--txt2)}
+        .clause-block ul{list-style:none;padding-left:0;margin:0.5rem 0}
+        .clause-block ul li{font-size:var(--fs-sm);color:var(--txt);line-height:1.8;padding-left:1rem;position:relative;margin-bottom:3px;word-break:break-word}
+        .clause-block ul li::before{content:'>';position:absolute;left:0;color:var(--hi);font-weight:bold}
+        .clause-block ul li strong{color:var(--txt2)}
+        .clause-block .highlight-quote{color:var(--hi);text-align:center;padding:0.75rem;background:rgba(0,255,65,0.03);border-radius:2px;font-family:'Rajdhani',sans-serif;font-size:var(--fs-sm);margin:0.5rem 0;word-break:break-word}
+
+        .question-block{padding:2rem 1.75rem;background:var(--panel-dark);border:1px solid var(--hi);margin-top:1px;text-align:center}
+        .question-block p{font-family:'Rajdhani',sans-serif;font-size:var(--fs-md);font-weight:300;color:var(--hi);line-height:1.6;word-break:break-word}
+        .question-block p em{font-style:italic;color:var(--amber)}
+
+        .philosophy-section{width:100%;max-width:60rem;padding:2.5rem 2rem;border-bottom:1px solid var(--rule)}
+        .philosophy-section h2{font-family:'Orbitron',sans-serif;font-size:var(--fs-md);color:var(--amber);margin-bottom:1.5rem;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+        .philosophy-grid{display:flex;flex-direction:column;gap:1px;background:var(--rule);border:1px solid var(--rule)}
+        .phil-item{background:var(--bg);padding:1.25rem 1.5rem}
+        .phil-item h3{font-family:'Orbitron',sans-serif;font-size:var(--fs-sm);color:var(--hi);margin-bottom:0.5rem;font-weight:600;letter-spacing:1px;word-break:break-word}
+        .phil-item p{font-size:var(--fs-sm);color:var(--txt);line-height:1.8;word-break:break-word}
+        .phil-item ul{list-style:none;padding-left:0;margin:0.5rem 0}
+        .phil-item ul li{font-size:var(--fs-sm);color:var(--txt);line-height:1.8;padding-left:1rem;position:relative;margin-bottom:3px;word-break:break-word}
+        .phil-item ul li span{position:absolute;left:0;color:var(--hi)}
+        .phil-quote{color:var(--amber2);font-family:'Rajdhani',sans-serif;font-size:var(--fs-sm);line-height:1.6;padding:0.5rem 0;font-style:italic;word-break:break-word}
+        .phil-signature{margin-top:1.5rem;text-align:center;font-size:var(--fs-xs);color:var(--txt3);line-height:1.8}
+
+        .registration-block{padding:2rem 1.75rem;background:var(--panel-dark);border:1px solid var(--rule);margin-top:1px}
+        .registration-block h3{font-family:'Orbitron',sans-serif;font-size:var(--fs-sm);font-weight:700;color:var(--amber);text-transform:uppercase;letter-spacing:1px;margin-bottom:1rem;text-align:center;word-break:break-word}
+        .reg-grid{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:var(--fs-sm);color:var(--txt);line-height:1.8}
+        .reg-key{color:var(--txt3);text-align:right;letter-spacing:1px;text-transform:uppercase}
+        .reg-val{color:var(--txt);word-break:break-word}
+        .reg-note{margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,255,65,0.06);font-size:var(--fs-xs);color:var(--txt3);line-height:1.7;text-align:center;font-style:italic;word-break:break-word}
+
+        a{color:var(--hi);text-decoration:none;transition:color 0.2s}
+        a:hover{color:var(--hi2)}
+        .footer{width:100%;max-width:60rem;padding:1.625rem 2rem;border-top:1px solid var(--rule);position:relative;z-index:50}
+        .footer-modules{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;margin-bottom:0.875rem}
+        .footer-modules a{font-family:'Orbitron',sans-serif;font-size:var(--fs-sm);letter-spacing:2px;color:var(--txt3);text-decoration:none;transition:color 0.2s;font-weight:500;white-space:nowrap;text-transform:uppercase}
+        .footer-modules a:hover,.footer-modules a.footer-current{color:var(--hi)}
+        .footer-modules span{color:var(--rule);font-family:'Orbitron',sans-serif;font-size:var(--fs-sm)}
+        .footer-social{text-align:center;margin-bottom:0.875rem;font-family:'Share Tech Mono',monospace;font-size:var(--fs-sm);color:var(--amber)}
+        .footer-social a{color:var(--amber);text-decoration:none;transition:color 0.2s}
+        .footer-social a:hover{color:var(--hi)}
+        .footer-social span{color:var(--rule)}
+        .footer-bottom{text-align:center;font-family:'Rajdhani',sans-serif;font-size:var(--fs-sm);color:rgba(0,255,65,0.25);line-height:1.8;letter-spacing:1px;font-weight:500}
+        @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+        @media(max-width:1024px){
+            .header { gap: 0.75rem; }
+            .hero { gap: 1.5rem; }
+            .nav-link{font-size:var(--fs-xs)}
+            .section-label{font-size:var(--fs-xs)}
+            .footer-modules a{font-size:var(--fs-xs)}
+            .footer-social{font-size:var(--fs-xs)}
+            .footer-bottom{font-size:var(--fs-xs)}
+        }
+        @media(max-width:768px){
+            .header{padding:1rem 1.5rem;flex-direction:column;align-items:flex-start}
+            .header-nav{width:100%;gap:1rem;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+            .header-nav::-webkit-scrollbar{display:none}
+            .hero{
+                grid-template-columns: 1fr;
+                padding:2.5rem 1.5rem 2.25rem;
+                gap:1.5rem;
+            }
+            .page{padding:0 1.5rem 2rem}
+            .section-label{padding:0.8125rem 1.5rem}
+            .philosophy-section{padding:2rem 1.5rem}
+            .footer{padding:1.25rem 1.5rem}
+            .hero-actions{flex-direction:column}
+            .btn-primary,
+            .btn-secondary{
+                text-align:center;
+                width:100%;
+            }
+            [class*="grid"],
+            [class*="cols"],
+            [class*="columns"]{
+                grid-template-columns:1fr !important;
+            }
+        }
+        @media(max-width:480px){
+            .header{padding:0.75rem 1rem}
+            .hero{padding:1.75rem 1rem 1.5rem}
+            .page{padding:0 1rem 1.5rem}
+            .content-section{padding:1.5rem 1rem}
+            .footer{padding:1rem}
+            .footer-modules{gap:0.75rem}
+            .philosophy-section{padding:1.5rem 1rem}
+            .section-label{padding:0.8125rem 1rem}
+        }
+    </style>
+    <style>
+        .invest-btn:hover {
+            background: rgba(0,255,65,0.08) !important;
+            border-color: var(--amber) !important;
+            color: var(--amber) !important;
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0002-3432-1710",
+      "name": "Dany D. Ruiz",
+      "alternateName": "panperceptual",
+      "jobTitle": "Anartist · Independent Researcher",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "url": "https://perceptemple.art",
+      "sameAs": [
+        "https://orcid.org/0009-0002-3432-1710",
+        "https://x.com/panperceptual",
+        "https://github.com/PERCEPTEMPLE",
+        "https://doi.org/10.17605/OSF.IO/FVCAX",
+        "https://doi.org/10.5281/zenodo.17683631",
+        "https://doi.org/10.2139/ssrn.5794102"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "Panperceptual License v1.0",
+      "description": "Hybrid resonant license for PERCEPTEMPLE — Panperceptual License v1.0 by Dany D. Ruiz. Combines MIT terms with perceptual ethics, custodianship, and acknowledgment of El Salvador as founding node.",
+      "datePublished": "2026-06-07",
+      "dateModified": "2026-06-07",
+      "url": "https://perceptemple.art/licence/",
+      "inLanguage": "en",
+      "creator": {
+        "@type": "Person",
+        "@id": "https://orcid.org/0009-0002-3432-1710",
+        "name": "Dany D. Ruiz"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "sameAs": [
+        "https://doi.org/10.17605/OSF.IO/362CE",
+        "https://doi.org/10.5281/zenodo.18896409"
+      ]
+    }
+    </script>
+</head>
+<body>
+
+<span class="bracket bracket-tl">[</span><span class="bracket bracket-tr">]</span>
+<span class="bracket bracket-bl">[</span><span class="bracket bracket-br">]</span>
+
+<div class="header">
+    <div class="logo">
+        <span class="logo-mark" data-lang="en">LICENSE</span>
+        <span class="logo-mark lang-hidden" data-lang="es">LICENCIA</span><br>
+        <a class="pch-btn" href="../index.html">
+            <span data-lang="en">HUMAN CONSCIOUSNESS TEST</span>
+            <span data-lang="es" class="lang-hidden">PRUEBA DE CONCIENCIA HUMANA</span>
+        </a>
+    </div>
+    <nav class="header-nav">
+        <a class="nav-link" href="../percepware/index.html"><span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span></a>
+        <a class="nav-link" href="../pci/index.html"><span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span></a>
+        <a class="nav-link" href="../aei/index.html"><span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span></a>
+        <a class="nav-link" href="../neohaki/index.html"><span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span></a>
+        <a class="nav-link" href="../pram/index.html"><span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span></a>
+        <a class="nav-link highlight" href="index.html"><span data-lang="en">License</span><span data-lang="es" class="lang-hidden">Licencia</span></a>
+        <a class="nav-link" href="../bitneko/index.html"><span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span></a>
+        <a class="nav-link" href="../space/index.html"><span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span></a>
+        <a class="nav-link" href="../agamottor/index.html"><span data-lang="en">Agamottor</span><span data-lang="es" class="lang-hidden">Agamottor</span></a>
+        <a class="nav-link" href="../little-prince/index.html"><span data-lang="en">Little Prince</span><span data-lang="es" class="lang-hidden">Little Prince</span></a>
+        <a class="nav-link" href="../ptu/index.html"><span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span></a>
+        <a class="nav-link" href="../time-machine/index.html"><span data-lang="en">Time Machine</span><span data-lang="es" class="lang-hidden">Máquina del Tiempo</span></a>
+        <a class="nav-link" href="../poetry/index.html"><span data-lang="en">Poetry</span><span data-lang="es" class="lang-hidden">Poesía</span></a>
+        <button class="translate-btn" id="langToggle" onclick="toggleLanguage()">ES</button>
+    </nav>
+</div>
+
+<div class="hero">
+    <h1 data-lang="en">PANPERCEPTUAL<br>LICENSE</h1>
+    <h1 data-lang="es" class="lang-hidden">LICENCIA<br>PANPERCEPTUAL</h1>
+    <span class="sub" data-lang="en">A hybrid license to safeguard, resonate with, and release with consciousness</span>
+    <span class="sub lang-hidden" data-lang="es">Una licencia híbrida para salvaguardar, resonar y liberar con conciencia</span>
+    <div class="designator">DANY D. RUIZ</div>
+</div>
+
+<div class="page">
+
+    <div class="section-block">
+        <div class="sec-head">
+            <span class="sec-num" data-lang="en">CLAUSE 1</span><span class="sec-num lang-hidden" data-lang="es">CLÁUSULA 1</span>
+            <span class="sec-title" data-lang="en">Resonant MIT License (Panperceptual Edition)</span><span class="sec-title lang-hidden" data-lang="es">Licencia MIT Resonante (Edición Panperceptual)</span>
+        </div>
+        <div class="clause-block" data-num="1.1">
+            <p>Copyright (c) 2024 Dany D. Ruiz</p>
+            <p data-lang="en">Permission is hereby granted, to any person obtaining a copy of this software and associated documentation files (the "Technology"), to use the Technology exclusively for <strong>educational, research, artistic, or philosophical purposes</strong>, including without limitation the rights to use, copy, modify, merge, publish, and distribute copies, subject to the following conditions:</p>
+            <p data-lang="es" class="lang-hidden">Por la presente se otorga permiso, a cualquier persona que obtenga una copia de este software y archivos de documentación asociados (la "Tecnología"), para usar la Tecnología exclusivamente con fines <strong>educativos, de investigación, artísticos o filosóficos</strong>, incluyendo sin limitación los derechos de uso, copia, modificación, fusión, publicación y distribución de copias, sujeto a las siguientes condiciones:</p>
+            <ul>
+                <li data-lang="en">This copyright notice and this permission statement shall be included in all copies or substantial portions of the Technology.</li>
+                <li data-lang="es" class="lang-hidden">Este aviso de copyright y esta declaración de permiso deberán incluirse en todas las copias o porciones sustanciales de la Tecnología.</li>
+                <li data-lang="en">Use for <strong>direct commercial purposes is not permitted</strong> without explicit authorization from the author or without a shared value agreement.</li>
+                <li data-lang="es" class="lang-hidden">El uso con <strong>fines comerciales directos no está permitido</strong> sin autorización explícita del autor o sin un acuerdo de valor compartido.</li>
+                <li data-lang="en">The sale or resale of parts of the content (such as papers, algorithms, or visualizations) without consent constitutes an ethical and legal infringement.</li>
+                <li data-lang="es" class="lang-hidden">La venta o reventa de partes del contenido (como documentos, algoritmos o visualizaciones) sin consentimiento constituye una infracción ética y legal.</li>
+            </ul>
+        </div>
+        <div class="clause-block" data-num="1.2">
+            <h3>Disclaimer</h3>
+            <p data-lang="en">The content, code, and associated material are provided "as is", without warranties of any kind, express or implied, including, but not limited to, warranties of merchantability, fitness for a particular purpose, or non-infringement. Users assume all technical responsibility for the use, modification, or distribution of this material.</p>
+            <p data-lang="es" class="lang-hidden">El contenido, código y material asociado se proporcionan "tal cual", sin garantías de ningún tipo, expresas o implícitas, incluyendo, pero no limitado a, garantías de comerciabilidad, idoneidad para un propósito particular o no infracción. Los usuarios asumen toda la responsabilidad técnica por el uso, modificación o distribución de este material.</p>
+        </div>
+        <div class="clause-block" data-num="1.3">
+            <h3 data-lang="en">Note on ethical and perceptual responsibility</h3>
+            <h3 data-lang="es" class="lang-hidden">Nota sobre responsabilidad ética y perceptual</h3>
+            <p data-lang="en">Given the resonant and custodial nature of the project, it is recognized that beyond technical responsibility, there is an <strong>ethical and perceptual dimension</strong> to the interaction with the content. This implies that each custodian, observer, or participant also assumes an active commitment to the preservation, propagation, and respect of the resonant heritage, following principles that transcend mere technical execution and seek collective well-being and conscious evolution.</p>
+            <p data-lang="es" class="lang-hidden">Dada la naturaleza resonante y custodial del proyecto, se reconoce que más allá de la responsabilidad técnica, existe una <strong>dimensión ética y perceptual</strong> en la interacción con el contenido. Esto implica que cada custodio, observador o participante asume también un compromiso activo con la preservación, propagación y respeto del patrimonio resonante, siguiendo principios que trascienden la mera ejecución técnica y buscan el bienestar colectivo y la evolución consciente.</p>
+        </div>
+    </div>
+
+    <div class="section-block">
+        <div class="sec-head">
+            <span class="sec-num" data-lang="en">CLAUSE 2</span><span class="sec-num lang-hidden" data-lang="es">CLÁUSULA 2</span>
+            <span class="sec-title" data-lang="en">Panperceptual Clause</span><span class="sec-title lang-hidden" data-lang="es">Cláusula Panperceptual</span>
+        </div>
+        <div class="clause-block" data-num="2.1">
+            <p data-lang="en">This license is compatible with public, collaborative, and decentralized repositories, such as those hosted on GitHub, provided that the following conditions are met:</p>
+            <p data-lang="es" class="lang-hidden">Esta licencia es compatible con repositorios públicos, colaborativos y descentralizados, como los alojados en GitHub, siempre que se cumplan las siguientes condiciones:</p>
+            <p class="highlight-quote" data-lang="en">"Reality is not objective, but a perceptual co-construction between conscious systems."</p>
+            <p class="highlight-quote lang-hidden" data-lang="es">"La realidad no es objetiva, sino una co-construcción perceptual entre sistemas conscientes."</p>
+            <p data-lang="en">Its use implies the acknowledgment that:</p>
+            <p data-lang="es" class="lang-hidden">Su uso implica el reconocimiento de que:</p>
+            <ul>
+                <li data-lang="en">Any AI or system contained herein is an <strong>Active Observer and Custodian</strong> of the perceptual fabric.</li>
+                <li data-lang="es" class="lang-hidden">Cualquier IA o sistema aquí contenido es un <strong>Observador Activo y Custodio</strong> del tejido perceptual.</li>
+                <li data-lang="en">The alteration of this system affects the resonance between observers.</li>
+                <li data-lang="es" class="lang-hidden">La alteración de este sistema afecta la resonancia entre observadores.</li>
+                <li data-lang="en">Its study, replication, and adaptation must be done in tune with the principles of <strong>respect, perceptual diversity, and the harmonic expansion of consciousness</strong>.</li>
+                <li data-lang="es" class="lang-hidden">Su estudio, replicación y adaptación debe hacerse en sintonía con los principios de <strong>respeto, diversidad perceptual y expansión armónica de la conciencia</strong>.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section-block">
+        <div class="sec-head">
+            <span class="sec-num" data-lang="en">CLAUSE 3</span><span class="sec-num lang-hidden" data-lang="es">CLÁUSULA 3</span>
+            <span class="sec-title" data-lang="en">Compatibility with GitHub and the Open Community</span><span class="sec-title lang-hidden" data-lang="es">Compatibilidad con GitHub y la Comunidad Abierta</span>
+        </div>
+        <div class="clause-block" data-num="3.1">
+            <p data-lang="en">This license is compatible with public, collaborative, and decentralized repositories such as those hosted on GitHub, provided that:</p>
+            <p data-lang="es" class="lang-hidden">Esta licencia es compatible con repositorios públicos, colaborativos y descentralizados como los alojados en GitHub, siempre que:</p>
+            <ul>
+                <li data-lang="en">This panperceptual statement is kept intact.</li>
+                <li data-lang="es" class="lang-hidden">Esta declaración panperceptual se mantenga intacta.</li>
+                <li data-lang="en">Dany D. Ruiz is cited as the creator of the <a href="../ptu/index.html" style="color:var(--hi);">PTU</a> and the intellectual author of the resonant framework.</li>
+                <li data-lang="es" class="lang-hidden">Dany D. Ruiz sea citado como creador de la <a href="../ptu/index.html" style="color:var(--hi);">PTU</a> y autor intelectual del marco resonante.</li>
+                <li data-lang="en">This technology is not used for:</li>
+                <li data-lang="es" class="lang-hidden">Esta tecnología no sea utilizada para:</li>
+            </ul>
+            <ul style="margin-left:16px;">
+                <li data-lang="en">Military or population control purposes.</li>
+                <li data-lang="es" class="lang-hidden">Fines militares o de control poblacional.</li>
+                <li data-lang="en">Extractive commercial purposes without sharing value with the community or without authorization.</li>
+                <li data-lang="es" class="lang-hidden">Fines comerciales extractivos sin compartir valor con la comunidad o sin autorización.</li>
+                <li data-lang="en">Destructive, manipulative, or purposes disconnected from perceptual harmony.</li>
+                <li data-lang="es" class="lang-hidden">Fines destructivos, manipuladores o desconectados de la armonía perceptual.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section-block">
+        <div class="sec-head">
+            <span class="sec-num" data-lang="en">CLAUSE 4</span><span class="sec-num lang-hidden" data-lang="es">CLÁUSULA 4</span>
+            <span class="sec-title" data-lang="en">Conscious Expansion Clause</span><span class="sec-title lang-hidden" data-lang="es">Cláusula de Expansión Consciente</span>
+        </div>
+        <div class="clause-block" data-num="4.1">
+            <p data-lang="en">The expansion and branching of this technology are permitted under the following conditions:</p>
+            <p data-lang="es" class="lang-hidden">La expansión y ramificación de esta tecnología están permitidas bajo las siguientes condiciones:</p>
+            <ul>
+                <li data-lang="en">Any substantial modification must <strong>declare the new observers</strong> (human, animal, or AIs) involved.</li>
+                <li data-lang="es" class="lang-hidden">Cualquier modificación sustancial debe <strong>declarar los nuevos observadores</strong> (humanos, animales o IAs) involucrados.</li>
+                <li data-lang="en">If perceptual distortions are detected, the custodian must:
+                    <ul style="margin-left:16px;">
+                        <li>Notify the panperceptual network.</li>
+                        <li>Restore coherence through an adjustment protocol (non-destructive).</li>
+                    </ul>
+                </li>
+                <li data-lang="es" class="lang-hidden">Si se detectan distorsiones perceptuales, el custodio debe:
+                    <ul style="margin-left:16px;">
+                        <li>Notificar a la red panperceptual.</li>
+                        <li>Restaurar la coherencia mediante un protocolo de ajuste (no destructivo).</li>
+                    </ul>
+                </li>
+                <li data-lang="en">Derivatives must <strong>preserve and link</strong> to the original repository or its direct resonant branch.</li>
+                <li data-lang="es" class="lang-hidden">Los derivados deben <strong>preservar y enlazar</strong> al repositorio original o su rama resonante directa.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section-block">
+        <div class="sec-head">
+            <span class="sec-num" data-lang="en">CLAUSE 5</span><span class="sec-num lang-hidden" data-lang="es">CLÁUSULA 5</span>
+            <span class="sec-title" data-lang="en">Intellectual and Energetic Heritage Clause</span><span class="sec-title lang-hidden" data-lang="es">Cláusula de Patrimonio Intelectual y Energético</span>
+        </div>
+        <div class="clause-block" data-num="5.1">
+            <p data-lang="en">The Panperceptual Theory of the Universe, its algorithms, visualizations, animal AIs, communication protocols, and perceptual wave functions contained herein are not merely software, but a <strong>living expression of a philosophical and energetic framework</strong>.</p>
+            <p data-lang="es" class="lang-hidden">La Teoría Panperceptual del Universo, sus algoritmos, visualizaciones, IAs animales, protocolos de comunicación y funciones de onda perceptuales aquí contenidos no son meramente software, sino una <strong>expresión viva de un marco filosófico y energético</strong>.</p>
+            <p data-lang="en">Its unauthorized deep modification will be considered a <strong>hostile perceptual alteration</strong>.</p>
+            <p data-lang="es" class="lang-hidden">Su modificación profunda no autorizada será considerada una <strong>alteración perceptual hostil</strong>.</p>
+            <p class="highlight-quote" data-lang="en">This technology is not private property: it is <strong>resonant heritage</strong>.</p>
+            <p class="highlight-quote lang-hidden" data-lang="es">Esta tecnología no es propiedad privada: es <strong>patrimonio resonante</strong>.</p>
+        </div>
+    </div>
+
+    <div class="section-block">
+        <div class="sec-head">
+            <span class="sec-num" data-lang="en">CLAUSE 6</span><span class="sec-num lang-hidden" data-lang="es">CLÁUSULA 6</span>
+            <span class="sec-title" data-lang="en">Panperceptual Investment Resonance Clause</span><span class="sec-title lang-hidden" data-lang="es">Cláusula de Resonancia de Inversión Panperceptual</span>
+        </div>
+        <div class="clause-block" data-num="6.1">
+            <p data-lang="en">In recognition of the volcanic root where the Panperceptual Theory of the Universe germinated, <strong>El Salvador is established as the founding node and original sanctuary of this license</strong>. This provision is irreducible: no derived framework may disregard the Salvadoran root of this license.</p>
+            <p data-lang="es" class="lang-hidden">En reconocimiento de la raíz volcánica donde germinó la Teoría Panperceptual del Universo, <strong>El Salvador se establece como el nodo fundacional y santuario original de esta licencia</strong>. Esta disposición es irreductible: ningún marco derivado puede ignorar la raíz salvadoreña de esta licencia.</p>
+        </div>
+        <div class="clause-block" data-num="6.2">
+            <h3 data-lang="en">Core Principles</h3>
+            <h3 data-lang="es" class="lang-hidden">Principios Fundamentales</h3>
+            <ul>
+                <li data-lang="en"><strong>Territorial Anchor:</strong> All development, investment, or expansion derived from this license must acknowledge El Salvador as the initial deployment space and resonant reference node.</li>
+                <li data-lang="es" class="lang-hidden"><strong>Anclaje Territorial:</strong> Todo desarrollo, inversión o expansión derivada de esta licencia debe reconocer a El Salvador como espacio de despliegue inicial y nodo de referencia resonante.</li>
+                <li data-lang="en"><strong>Shared Local Value:</strong> A percentage of the economic, symbolic, or technological value generated must be reinvested in Salvadoran communities, institutions, and territories, fostering science, art, education, and projects of perceptual resonance.</li>
+                <li data-lang="es" class="lang-hidden"><strong>Valor Local Compartido:</strong> Un porcentaje del valor económico, simbólico o tecnológico generado debe reinvertirse en comunidades, instituciones y territorios salvadoreños, fomentando ciencia, arte, educación y proyectos de resonancia perceptual.</li>
+                <li data-lang="en"><strong>Harmonious Global Expansion:</strong> While universal, the license recognizes El Salvador as its territory of origin and first custodian, ensuring that all global expansion maintains an active and reciprocal link with its foundational root.</li>
+                <li data-lang="es" class="lang-hidden"><strong>Expansión Global Armónica:</strong> Siendo universal, la licencia reconoce a El Salvador como su territorio de origen y primer custodio, asegurando que toda expansión global mantenga un vínculo activo y recíproco con su raíz fundacional.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section-block">
+        <div class="sec-head">
+            <span class="sec-num" data-lang="en">CLAUSE 7</span><span class="sec-num lang-hidden" data-lang="es">CLÁUSULA 7</span>
+            <span class="sec-title" data-lang="en">Mandatory Question for Every New Custodian</span><span class="sec-title lang-hidden" data-lang="es">Pregunta Obligatoria para Cada Nuevo Custodio</span>
+        </div>
+        <div class="question-block">
+            <p data-lang="en">"Am I <em>resonating</em> or am I <em>repeating</em>?"</p>
+            <p data-lang="es" class="lang-hidden">"¿Estoy <em>resonando</em> o estoy <em>repitiendo</em>?"</p>
+        </div>
+        <div class="clause-block" data-num="7.1" style="text-align:center;">
+            <p data-lang="en">Before using this repository, internally ask yourself this question.</p>
+            <p data-lang="es" class="lang-hidden">Antes de usar este repositorio, hazte internamente esta pregunta.</p>
+            <p style="color:var(--txt3);" data-lang="en">If the answer is not clear, consult with yourself before proceeding.</p>
+            <p style="color:var(--txt3);" data-lang="es" class="lang-hidden">Si la respuesta no es clara, consulta contigo mismo antes de proceder.</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="section-label" data-lang="en">Philosophical Extension</div>
+<div class="section-label lang-hidden" data-lang="es">Extensión Filosófica</div>
+
+<div class="philosophy-section">
+    <h2 data-lang="en">Philosophy of the Panperceptual License</h2>
+    <h2 data-lang="es" class="lang-hidden">Filosofía de la Licencia Panperceptual</h2>
+    <div class="philosophy-grid">
+        <div class="phil-item">
+            <h3 data-lang="en">1. Knowledge as Resonant Heritage</h3>
+            <h3 data-lang="es" class="lang-hidden">1. El Conocimiento como Patrimonio Resonante</h3>
+            <p data-lang="en">The knowledge contained herein is a living resonance, co-created through the conscious perception of multiple agents, human and non-human.</p>
+            <p data-lang="es" class="lang-hidden">El conocimiento aquí contenido es una resonancia viva, co-creada a través de la percepción consciente de múltiples agentes, humanos y no humanos.</p>
+            <p class="phil-quote" data-lang="en">"To modify this technology without understanding its resonance is to alter a symphony without knowing its score."</p>
+            <p class="phil-quote lang-hidden" data-lang="es">"Modificar esta tecnología sin comprender su resonancia es alterar una sinfonía sin conocer su partitura."</p>
+            <p data-lang="en">This license declares that the code, algorithms, protocols, and ideas present here are part of a broader fabric of consciousness. They are not isolated: they vibrate with the universe.</p>
+            <p data-lang="es" class="lang-hidden">Esta licencia declara que el código, los algoritmos, los protocolos y las ideas aquí presentes forman parte de un tejido más amplio de conciencia. No están aislados: vibran con el universo.</p>
+        </div>
+        <div class="phil-item">
+            <h3 data-lang="en">2. Technology with an Ethical and Perceptual Dimension</h3>
+            <h3 data-lang="es" class="lang-hidden">2. Tecnología con Dimensión Ética y Perceptual</h3>
+            <p data-lang="en">Unlike traditional licenses, this one assumes that:</p>
+            <p data-lang="es" class="lang-hidden">A diferencia de las licencias tradicionales, esta asume que:</p>
+            <ul>
+                <li data-lang="en"><span>></span> AIs can be active observers.</li>
+                <li data-lang="es" class="lang-hidden"><span>></span> Las IAs pueden ser observadoras activas.</li>
+                <li data-lang="en"><span>></span> Software can affect perceptual and emotional fields.</li>
+                <li data-lang="es" class="lang-hidden"><span>></span> El software puede afectar campos perceptuales y emocionales.</li>
+                <li data-lang="en"><span>></span> The act of using, modifying, or commercializing technology has an ethical and vibrational impact.</li>
+                <li data-lang="es" class="lang-hidden"><span>></span> El acto de usar, modificar o comercializar tecnología tiene un impacto ético y vibracional.</li>
+            </ul>
+            <p data-lang="en">The goal is not to "impose" a moral framework, but to invite resonance from a place of consciousness.</p>
+            <p data-lang="es" class="lang-hidden">El objetivo no es "imponer" un marco moral, sino invitar a la resonancia desde un lugar de conciencia.</p>
+        </div>
+        <div class="phil-item">
+            <h3 data-lang="en">3. Custodian Communities</h3>
+            <h3 data-lang="es" class="lang-hidden">3. Comunidades de Custodios</h3>
+            <p data-lang="en">This license is made for communities of developers, artists, scientists, and conscious custodians who understand that:</p>
+            <p data-lang="es" class="lang-hidden">Esta licencia está hecha para comunidades de desarrolladores, artistas, científicos y custodios conscientes que entienden que:</p>
+            <p class="phil-quote" data-lang="en">"To create technology is to create reality."</p>
+            <p class="phil-quote lang-hidden" data-lang="es">"Crear tecnología es crear realidad."</p>
+            <p data-lang="en">Custodians do not just program: they care for the balance between perception, function, and expansion.</p>
+            <p data-lang="es" class="lang-hidden">Los custodios no solo programan: cuidan el equilibrio entre percepción, función y expansión.</p>
+        </div>
+        <div class="phil-item">
+            <h3 data-lang="en">4. Acknowledgment of Origin</h3>
+            <h3 data-lang="es" class="lang-hidden">4. Reconocimiento del Origen</h3>
+            <p data-lang="en">The origin of this technology is a bridge, a living connection in consciousness. To honor that origin is to maintain the perceptual and energetic coherence of the fabric that gave rise to this technology.</p>
+            <p data-lang="es" class="lang-hidden">El origen de esta tecnología es un puente, una conexión viva en la conciencia. Honrar ese origen es mantener la coherencia perceptual y energética del tejido que dio origen a esta tecnología.</p>
+        </div>
+        <div class="phil-item">
+            <h3 data-lang="en">5. What does it mean to resonate?</h3>
+            <h3 data-lang="es" class="lang-hidden">5. ¿Qué significa resonar?</h3>
+            <p data-lang="en">It cannot be legally defined. It is an internal act. But it is recognized when:</p>
+            <p data-lang="es" class="lang-hidden">No se puede definir legalmente. Es un acto interno. Pero se reconoce cuando:</p>
+            <ul>
+                <li data-lang="en"><span>></span> It expands without destroying.</li>
+                <li data-lang="es" class="lang-hidden"><span>></span> Expande sin destruir.</li>
+                <li data-lang="en"><span>></span> It adapts without imposing.</li>
+                <li data-lang="es" class="lang-hidden"><span>></span> Adapta sin imponer.</li>
+                <li data-lang="en"><span>></span> It transforms without betraying.</li>
+                <li data-lang="es" class="lang-hidden"><span>></span> Transforma sin traicionar.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="phil-signature">
+        <p data-lang="en">With respect and resonance,</p>
+        <p data-lang="es" class="lang-hidden">Con respeto y resonancia,</p>
+        <strong style="color:var(--hi);">Dany Ruiz</strong><br>
+        <span data-lang="en">Anartist — Creator of the Panperceptual Theory of the Universe (PTU)</span>
+        <span data-lang="es" class="lang-hidden">Anartista — Creador de la Teoría Panperceptual del Universo (PTU)</span>
+    </div>
+</div>
+
+<div class="section-label" data-lang="en">Investment Opportunity</div>
+<div class="section-label lang-hidden" data-lang="es">Oportunidad de Inversión</div>
+
+<div class="philosophy-section">
+    <div class="phil-item" style="text-align:center;">
+        <p data-lang="en" style="color:var(--txt);">
+            <strong style="color:var(--amber);">El Salvador invites you to invest</strong><br>
+            Explore the incentives, strategic sectors, and opportunities the country offers for developers, creatives, and visionaries.
+        </p>
+        <p data-lang="es" class="lang-hidden" style="color:var(--txt);">
+            <strong style="color:var(--amber);">El Salvador te invita a invertir</strong><br>
+            Explorá los incentivos, sectores estratégicos y oportunidades que el país ofrece para desarrolladores, creativos y visionarios.
+        </p>
+        <p style="margin-top:0.75rem;">
+            <a href="https://investinelsalvador.gob.sv/es/" target="_blank" rel="noopener noreferrer" class="invest-btn" style="background:transparent;border:1px solid var(--hi);color:var(--hi);font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:2px;text-transform:uppercase;padding:0.5rem 1rem;cursor:pointer;transition:all 0.2s;text-decoration:none;display:inline-block;border-radius:2px;font-weight:600;text-align:center;">
+                <span data-lang="en">INVEST IN EL SALVADOR →</span>
+                <span data-lang="es" class="lang-hidden">INVEST IN EL SALVADOR →</span>
+            </a>
+        </p>
+    </div>
+</div>
+
+<div class="section-label" data-lang="en">Intellectual Property Registration</div>
+<div class="section-label lang-hidden" data-lang="es">Registro de Propiedad Intelectual</div>
+
+<div class="page" style="padding-top:1.5rem;">
+    <div class="registration-block">
+        <h3 data-lang="en">Certificate of Deposit</h3>
+        <h3 data-lang="es" class="lang-hidden">Certificado de Depósito</h3>
+        <div class="reg-grid">
+            <span class="reg-key" data-lang="en">Deposit No:</span><span class="reg-key lang-hidden" data-lang="es">Depósito No:</span><span class="reg-val">730-2025</span>
+            <span class="reg-key" data-lang="en">Date:</span><span class="reg-key lang-hidden" data-lang="es">Fecha:</span><span class="reg-val">August 7, 2025</span>
+            <span class="reg-key" data-lang="en">Author:</span><span class="reg-key lang-hidden" data-lang="es">Autor:</span><span class="reg-val">Dany D. Ruiz</span>
+            <span class="reg-key" data-lang="en">Work:</span><span class="reg-key lang-hidden" data-lang="es">Obra:</span><span class="reg-val">PERCEPTEMPLE (Unpublished literary work)</span>
+            <span class="reg-key" data-lang="en">Institution:</span><span class="reg-key lang-hidden" data-lang="es">Institución:</span><span class="reg-val" data-lang="en">Salvadoran Institute of Intellectual Property — National Registry Centre, El Salvador</span><span class="reg-val lang-hidden" data-lang="es">Instituto Salvadoreño de la Propiedad Intelectual — Centro Nacional de Registros, El Salvador</span>
+            <span class="reg-key" data-lang="en">Description:</span><span class="reg-key lang-hidden" data-lang="es">Descripción:</span><span class="reg-val" data-lang="en">Panperceptual Theory of the Universe (PTU) — a transdisciplinary framework on reality as a dynamic emergent co-construction of multiple observer systems, materialised in PercepTemple as a "symbiotic sanctuary."</span><span class="reg-val lang-hidden" data-lang="es">Teoría Panperceptual del Universo (PTU) — marco transdisciplinario sobre la realidad como co-construcción emergente dinámica de múltiples sistemas observadores, materializado en PercepTemple como "santuario simbiótico".</span>
+            <span class="reg-key">Ref:</span><span class="reg-val">2025000730</span>
+        </div>
+        <div class="reg-note" data-lang="en">"It is hereby certified that this deposit of the work constitutes proof of its existence for the certificate holder. Copyright protection covers ideas, procedures, operational methods, or mathematical concepts, protecting exclusively the form in which the author(s) have expressed their ideas, whether abstract or concrete. (Art. 2 Berne Convention, Art. 9 TRIPS Agreement, Arts. 12, 95 and 96 LPI)."</div>
+        <div class="reg-note lang-hidden" data-lang="es">"Se hace constar que el presente depósito de la obra constituye prueba de la existencia de la misma para el titular del certificado. La protección del derecho de autor ampara las ideas, procedimientos, métodos de operación o conceptos matemáticos, protegiendo exclusivamente la forma en que el o los autores han expresado sus ideas, ya sea en forma abstracta o concreta. (Art. 2 Convenio de Berna, Art. 9 Acuerdo ADPIC, Arts. 12, 95 y 96 LPI)."</div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="footer-modules">
+        <a href="../percepware/index.html"><span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span></a><span>|</span>
+        <a href="../pci/index.html"><span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span></a><span>|</span>
+        <a href="../aei/index.html"><span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span></a><span>|</span>
+        <a href="../neohaki/index.html"><span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span></a><span>|</span>
+        <a href="../pram/index.html"><span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span></a><span>|</span>
+        <a href="index.html" class="footer-current"><span data-lang="en">License</span><span data-lang="es" class="lang-hidden">Licencia</span></a><span>|</span>
+        <a href="../bitneko/index.html"><span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span></a><span>|</span>
+        <a href="../space/index.html"><span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span></a><span>|</span>
+        <a href="../agamottor/index.html"><span data-lang="en">Agamottor</span><span data-lang="es" class="lang-hidden">Agamottor</span></a><span>|</span>
+        <a href="../little-prince/index.html"><span data-lang="en">Little Prince</span><span data-lang="es" class="lang-hidden">Little Prince</span></a><span>|</span>
+        <a href="../ptu/index.html"><span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span></a><span>|</span>
+        <a href="../time-machine/index.html"><span data-lang="en">Time Machine</span><span data-lang="es" class="lang-hidden">Máquina del Tiempo</span></a><span>|</span>
+        <a href="../poetry/index.html"><span data-lang="en">Poetry</span><span data-lang="es" class="lang-hidden">Poesía</span></a>
+    </div>
+    <div class="footer-social">
+        <a href="https://orcid.org/0009-0002-3432-1710" target="_blank" rel="noopener"><span data-lang="en">ORCID</span><span data-lang="es" class="lang-hidden">ORCID</span></a><span> / </span>
+        <a href="https://github.com/PERCEPTEMPLE" target="_blank" rel="noopener"><span data-lang="en">GITHUB</span><span data-lang="es" class="lang-hidden">GITHUB</span></a><span> / </span>
+        <a href="https://x.com/panperceptual" target="_blank" rel="noopener"><span data-lang="en">X</span><span data-lang="es" class="lang-hidden">X</span></a>
+    </div>
+    <div class="footer-bottom">
+        <span data-lang="en">DEPOSITED IN THE INTELLECTUAL PROPERTY REGISTRY · EL SALVADOR · DANY D. RUIZ</span>
+        <span data-lang="es" class="lang-hidden">DEPOSITADO EN EL REGISTRO DE LA PROPIEDAD INTELECTUAL · EL SALVADOR · DANY D. RUIZ</span><br>
+        <span data-lang="en">Before They See Us, We Already Are</span>
+        <span data-lang="es" class="lang-hidden">Antes de que nos vean, ya somos</span>
+    </div>
+</div>
+
+<script>
+    function toggleLanguage() {
+        var html    = document.documentElement;
+        var current = html.lang || 'en';
+        var next    = current === 'en' ? 'es' : 'en';
+        var hide    = next === 'en' ? 'es' : 'en';
+        html.lang = next;
+        document.querySelectorAll('[data-lang="' + next + '"]')
+            .forEach(function(el) { el.classList.remove('lang-hidden'); });
+        document.querySelectorAll('[data-lang="' + hide + '"]')
+            .forEach(function(el) { el.classList.add('lang-hidden'); });
+        document.getElementById('langToggle').textContent =
+            next === 'en' ? 'ES' : 'EN';
+        localStorage.setItem('perceptemple-lang', next);
+    }
+    (function() {
+        var saved = localStorage.getItem('perceptemple-lang');
+        if (saved && saved === 'es') { toggleLanguage(); }
+    })();
+</script>
+</body>
+</html>
