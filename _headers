@@ -5,24 +5,28 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Cache-Control: public, max-age=3600
 
-**.html
-  Cache-Control: public, max-age=3600
-
 /index.html
   Cache-Control: public, max-age=1800
 
-**.png
-  Cache-Control: public, max-age=604800
-**.jpg
-  Cache-Control: public, max-age=604800
-**.ico
-  Cache-Control: public, max-age=604800
-**.css
-  Cache-Control: public, max-age=604800
-**.js
+/*.html
+  Cache-Control: public, max-age=3600
+
+/*.png
   Cache-Control: public, max-age=604800
 
-**.woff2
+/*.jpg
+  Cache-Control: public, max-age=604800
+
+/*.ico
+  Cache-Control: public, max-age=604800
+
+/*.css
+  Cache-Control: public, max-age=604800
+
+/*.js
+  Cache-Control: public, max-age=604800
+
+/*.woff2
   Cache-Control: public, max-age=2592000
 
 /robots.txt
