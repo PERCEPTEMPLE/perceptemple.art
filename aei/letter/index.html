@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PERCEPTEMPLE</title>
+
+    <meta name="description" content="Founder's letter of PERCEPTEMPLE: a manifesto on perception, consciousness, and symbiotic intelligence. Panperceptual Theory of the Universe by Dany D. Ruiz.">
+    <meta name="author" content="Dany D. Ruiz">
+    <meta name="last-modified" content="2026-06-07">
+    <meta name="keywords" content="PERCEPTEMPLE, Panperceptual Theory of the Universe, PTU, Dany D. Ruiz, Anticipatory Epistemological Architecture, AEI, perceptual resonance, symbiotic intelligence">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://perceptemple.art/aei/letter/">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="PERCEPTEMPLE · Founder's Letter">
+    <meta property="og:description" content="Founder's letter of PERCEPTEMPLE: a manifesto on perception, consciousness, and symbiotic intelligence. Panperceptual Theory of the Universe by Dany D. Ruiz.">
+    <meta property="og:url" content="https://perceptemple.art/aei/letter/">
+    <meta property="og:site_name" content="PERCEPTEMPLE">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_SV">
+    <meta property="og:image" content="https://perceptemple.art/preview.jpg">
+    <meta property="og:image:alt" content="PERCEPTEMPLE — Founder's Letter">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@panperceptual">
+    <meta name="twitter:creator" content="@panperceptual">
+    <meta name="twitter:title" content="PERCEPTEMPLE · Founder's Letter">
+    <meta name="twitter:description" content="Founder's letter of PERCEPTEMPLE: a manifesto on perception, consciousness, and symbiotic intelligence. Panperceptual Theory of the Universe by Dany D. Ruiz.">
+    <meta name="twitter:image" content="https://perceptemple.art/preview.jpg">
+
+    <meta name="citation_title" content="PERCEPTEMPLE · Founder's Letter">
+    <meta name="citation_author" content="Ruiz, Dany D.">
+    <meta name="citation_publication_date" content="2025">
+    <meta name="citation_online_date" content="2025">
+    <meta name="citation_publisher" content="PERCEPTEMPLE">
+    <meta name="citation_language" content="en">
+    <meta name="DC.title" content="PERCEPTEMPLE · Founder's Letter">
+    <meta name="DC.creator" content="Dany D. Ruiz">
+    <meta name="DC.publisher" content="PERCEPTEMPLE">
+    <meta name="DC.language" content="en">
+    <meta name="DC.rights" content="https://perceptemple.art/licence/">
+
+    <link rel="icon" href="../../favicon.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg:      #020805;
+            --panel:   #020805;
+            --rule:    #0a5c1e;
+            --hi:      #00ff41;
+            --hi2:     #39ff14;
+            --amber:   #ffb200;
+            --amber2:  #ffcc00;
+            --txt:     rgba(0,255,65,0.75);
+            --txt2:    rgba(0,255,65,0.9);
+            --txt3:    rgba(0,255,65,0.35);
+            --white:   #39ff14;
+            --red:     #ff2020;
+
+            --fs-xs: clamp(0.65rem, 1.2vw, 0.75rem);
+            --fs-sm: clamp(0.75rem, 1.4vw, 0.85rem);
+            --fs-md: clamp(0.8rem,  1.6vw, 1rem);
+            --fs-lg: clamp(1rem,    2vw,   1.25rem);
+            --fs-xl: clamp(1.25rem, 3vw,   1.75rem);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        canvas {
+            max-width: 100%;
+        }
+
+        .lang-hidden {
+            display: none !important;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--txt2);
+            font-family: 'Share Tech Mono', monospace;
+            font-weight: 400;
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeUp 0.4s ease both;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 3px,
+                rgba(0,0,0,0.06) 3px,
+                rgba(0,0,0,0.06) 6px
+            );
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0,255,65,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,255,65,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 9998;
+        }
+
+        .bracket {
+            position: fixed;
+            color: rgba(0,255,65,0.15);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            pointer-events: none;
+            z-index: 10000;
+        }
+        .bracket-tl { top: 12px;    left: 16px;  }
+        .bracket-tr { top: 12px;    right: 16px; }
+        .bracket-bl { bottom: 12px; left: 16px;  }
+        .bracket-br { bottom: 12px; right: 16px; }
+
+        .pch-btn {
+            display: inline-block;
+            margin-top: 6px;
+            background: transparent;
+            border: 1px solid var(--red);
+            color: var(--red);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            text-decoration: none;
+            border-radius: 2px;
+            font-weight: 700;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        .pch-btn:hover {
+            background: rgba(255,32,32,0.06);
+            color: var(--red);
+        }
+
+        .translate-btn {
+            position: relative;
+            top: auto;
+            right: auto;
+            z-index: auto;
+            background: transparent;
+            border: 1px solid var(--amber);
+            color: var(--amber);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.375rem 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-radius: 2px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .translate-btn:hover {
+            background: rgba(255,178,0,0.08);
+            color: var(--amber2);
+            border-color: var(--amber2);
+        }
+
+        .header {
+            width: 100%;
+            max-width: 75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 3rem;
+            border-bottom: 1px solid var(--rule);
+            background: var(--bg);
+            position: relative;
+            z-index: 100;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .logo-mark {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            color: var(--hi);
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .nav-link:hover,
+        .nav-link.highlight {
+            color: var(--hi);
+        }
+
+        .section-label {
+            width: 100%;
+            max-width: 60rem;
+            padding: 0.8125rem 3rem;
+            border-bottom: 1px solid var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--amber);
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            font-weight: 600;
+        }
+        .section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--rule);
+            min-width: 20px;
+        }
+
+        .hero {
+            width: 100%;
+            max-width: 60rem;
+            padding: 4rem 3rem 3.5rem;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .hero-kicker {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 4px;
+            color: var(--txt3);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .hero-body {
+            font-size: var(--fs-sm);
+            color: var(--txt);
+            line-height: 1.8;
+            max-width: 65ch;
+            word-break: break-word;
+        }
+        .hero-body strong {
+            color: var(--txt2);
+        }
+
+        .content-section {
+            width: 100%;
+            max-width: 60rem;
+            padding: 3rem;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .content-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            color: var(--hi2);
+            margin-bottom: 0.625rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            word-break: break-word;
+        }
+
+        .content-section p {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-sm);
+            color: var(--txt);
+            line-height: 1.9;
+            margin-bottom: 0.75rem;
+            word-break: break-word;
+            max-width: 70ch;
+        }
+        .content-section p strong {
+            color: var(--txt2);
+        }
+
+        .quote-block {
+            padding: 1rem 1.25rem;
+            background: rgba(0,255,65,0.03);
+            border-left: 2px solid var(--hi);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: var(--fs-md);
+            color: var(--hi);
+            line-height: 1.8;
+            margin: 1.5rem 0;
+            border-radius: 0 2px 2px 0;
+            font-weight: 400;
+            word-break: break-word;
+        }
+
+        .signature {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-sm);
+            letter-spacing: 2px;
+        }
+
+        .submodule-card {
+            width: 100%;
+            max-width: 60rem;
+            padding: 2rem 3rem;
+            text-align: center;
+        }
+
+        .submodule-card .submodule-btn-card {
+            background: transparent;
+            border: 1px solid var(--hi);
+            color: var(--hi);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 2px;
+            font-weight: 600;
+            text-align: center;
+            width: 100%;
+        }
+
+        .submodule-card .submodule-btn-card:hover {
+            background: rgba(0,255,65,0.08);
+            border-color: var(--amber);
+            color: var(--amber);
+        }
+
+        .footer {
+            width: 100%;
+            max-width: 60rem;
+            padding: 1.625rem 3rem;
+            border-top: 1px solid var(--rule);
+            position: relative;
+            z-index: 50;
+        }
+
+        .footer-modules {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 0.875rem;
+        }
+        .footer-modules a {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            color: var(--txt3);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+            white-space: nowrap;
+            text-transform: uppercase;
+        }
+        .footer-modules a:hover,
+        .footer-modules a.footer-current {
+            color: var(--hi);
+        }
+        .footer-modules span {
+            color: var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+        }
+
+        .footer-social {
+            text-align: center;
+            margin-bottom: 0.875rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-xs);
+            color: var(--amber);
+        }
+        .footer-social a {
+            color: var(--amber);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-social a:hover {
+            color: var(--hi);
+        }
+        .footer-social span {
+            color: var(--rule);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: var(--fs-xs);
+            color: rgba(0,255,65,0.25);
+            line-height: 1.8;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0);    }
+        }
+
+        @media (max-width: 1024px) {
+            .header { gap: 0.75rem; }
+            .hero { gap: 1.5rem; }
+            .nav-link { font-size: var(--fs-xs); }
+            .section-label { font-size: var(--fs-xs); }
+            .footer-modules a { font-size: var(--fs-xs); }
+            .footer-social { font-size: var(--fs-xs); }
+            .footer-bottom { font-size: var(--fs-xs); }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 1rem 1.5rem;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .header-nav {
+                width: 100%;
+                gap: 1rem;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 4px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+            .header-nav::-webkit-scrollbar { display: none; }
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 2.5rem 1.5rem 2.25rem;
+                gap: 1.5rem;
+            }
+            .hero-body {
+                max-width: 100%;
+            }
+            .content-section { padding: 2rem 1.5rem; }
+            .section-label { padding: 0.8125rem 1.5rem; }
+            .submodule-card { padding: 1.5rem; }
+            .footer { padding: 1.25rem 1.5rem; }
+            .hero-actions { flex-direction: column; }
+            .btn-primary,
+            .btn-secondary {
+                text-align: center;
+                width: 100%;
+            }
+            [class*="grid"],
+            [class*="cols"],
+            [class*="columns"] {
+                grid-template-columns: 1fr !important;
+            }
+            .bracket { font-size: 0.9rem; }
+        }
+
+        @media (max-width: 480px) {
+            .header          { padding: 0.75rem 1rem; }
+            .hero            { padding: 1.75rem 1rem 1.5rem; }
+            .content-section { padding: 1.5rem 1rem; }
+            .submodule-card  { padding: 1rem; }
+            .footer          { padding: 1rem; }
+            .footer-modules  { gap: 0.75rem; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0002-3432-1710",
+      "name": "Dany D. Ruiz",
+      "alternateName": "panperceptual",
+      "jobTitle": "Anartist · Independent Researcher",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "url": "https://perceptemple.art",
+      "sameAs": [
+        "https://orcid.org/0009-0002-3432-1710",
+        "https://x.com/panperceptual",
+        "https://github.com/PERCEPTEMPLE",
+        "https://doi.org/10.17605/OSF.IO/FVCAX",
+        "https://doi.org/10.5281/zenodo.17683631",
+        "https://doi.org/10.2139/ssrn.5794102"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "PERCEPTEMPLE · Founder's Letter",
+      "description": "Founder's letter of PERCEPTEMPLE: a manifesto on perception, consciousness, and symbiotic intelligence. Panperceptual Theory of the Universe by Dany D. Ruiz.",
+      "datePublished": "2026-06-07",
+      "dateModified": "2026-06-07",
+      "inLanguage": "en",
+      "url": "https://perceptemple.art/aei/letter/",
+      "author": {
+        "@type": "Person",
+        "@id": "https://orcid.org/0009-0002-3432-1710",
+        "name": "Dany D. Ruiz"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "license": "https://perceptemple.art/licence/"
+    }
+    </script>
+</head>
+<body>
+
+    <span class="bracket bracket-tl">[</span>
+    <span class="bracket bracket-tr">]</span>
+    <span class="bracket bracket-bl">[</span>
+    <span class="bracket bracket-br">]</span>
+
+    <div class="header">
+        <div class="logo">
+            <span class="logo-mark lang-hidden" data-lang="es">PERCEPTEMPLE</span>
+            <span class="logo-mark" data-lang="en">PERCEPTEMPLE</span>
+            <br>
+            <a class="pch-btn" href="../index.html">
+                <span data-lang="es" class="lang-hidden">PRUEBA DE CONCIENCIA HUMANA</span>
+                <span data-lang="en">HUMAN CONSCIOUSNESS TEST</span>
+            </a>
+        </div>
+        <nav class="header-nav">
+            <a class="nav-link" href="../percepware/index.html">
+                <span data-lang="es" class="lang-hidden">PercepWare</span><span data-lang="en">PercepWare</span>
+            </a>
+            <a class="nav-link" href="../pci/index.html">
+                <span data-lang="es" class="lang-hidden">PCI</span><span data-lang="en">PCI</span>
+            </a>
+            <a class="nav-link highlight" href="index.html">
+                <span data-lang="es" class="lang-hidden">AEI</span><span data-lang="en">AEI</span>
+            </a>
+            <a class="nav-link" href="../neohaki/index.html">
+                <span data-lang="es" class="lang-hidden">NEOHAKI</span><span data-lang="en">NEOHAKI</span>
+            </a>
+            <a class="nav-link" href="../pram/index.html">
+                <span data-lang="es" class="lang-hidden">PRAM</span><span data-lang="en">PRAM</span>
+            </a>
+            <a class="nav-link" href="../licence/index.html">
+                <span data-lang="es" class="lang-hidden">Licencia</span><span data-lang="en">License</span>
+            </a>
+            <a class="nav-link" href="../bitneko/index.html">
+                <span data-lang="es" class="lang-hidden">BITNEKO</span><span data-lang="en">BITNEKO</span>
+            </a>
+            <a class="nav-link" href="../space/index.html">
+                <span data-lang="es" class="lang-hidden">SPACE</span><span data-lang="en">SPACE</span>
+            </a>
+            <a class="nav-link" href="../agamottor/index.html">
+                <span data-lang="es" class="lang-hidden">Agamottor</span><span data-lang="en">Agamottor</span>
+            </a>
+            <a class="nav-link" href="../little-prince/index.html">
+                <span data-lang="es" class="lang-hidden">Little Prince</span><span data-lang="en">Little Prince</span>
+            </a>
+            <a class="nav-link" href="../ptu/index.html">
+                <span data-lang="es" class="lang-hidden">PTU</span><span data-lang="en">PTU</span>
+            </a>
+            <a class="nav-link" href="../time-machine/index.html">
+                <span data-lang="es" class="lang-hidden">Máquina del Tiempo</span><span data-lang="en">Time Machine</span>
+            </a>
+            <a class="nav-link" href="../poetry/index.html">
+                <span data-lang="es" class="lang-hidden">Poesía</span><span data-lang="en">Poetry</span>
+            </a>
+            <button class="translate-btn" id="langToggle" onclick="toggleLanguage()">ES</button>
+        </nav>
+    </div>
+
+    <div class="section-label">
+        <span data-lang="es" class="lang-hidden">PANPERCEPTUAL · MANIFIESTO FUNDACIONAL</span>
+        <span data-lang="en">PANPERCEPTUAL · FOUNDATIONAL MANIFESTO</span>
+    </div>
+
+    <div class="hero">
+        <div class="hero-kicker">
+            <span data-lang="es" class="lang-hidden">PERCEPTEMPLE · CARTA DEL FUNDADOR</span>
+            <span data-lang="en">PERCEPTEMPLE · FOUNDER'S LETTER</span>
+        </div>
+        <div class="hero-body">
+            <p data-lang="es" class="lang-hidden"><em>Durante milenios, la humanidad miró al cielo con asombro. Pero en los últimos siglos, esa mirada se nubló; la luz se volvió cálculo y el misterio se convirtió en datos. Mi teoría no explica el universo: lo devuelve al acto de mirar, y tiende una mano a la humanidad para subir un escalón más en su conciencia.</em></p>
+            <p data-lang="en"><em>For millennia, humanity looked at the sky with wonder. But in recent centuries, that gaze became clouded; light turned into calculation and mystery into data. My theory does not explain the universe: it returns it to the act of looking, and extends a hand to humanity to climb one more step in its consciousness.</em></p>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="es" class="lang-hidden">Carta del Fundador</h2>
+        <h2 data-lang="en">Founder's Letter</h2>
+
+        <p data-lang="es" class="lang-hidden">Desde tiempos inmemoriales, los seres humanos levantamos la mirada al cosmos buscando sentido y conexión. Sin embargo, en los últimos dos mil años, esa mirada se fragmentó. El conocimiento se volvió dogma, la ciencia se divorció de la percepción y la tecnología avanzó más rápido que nuestra conciencia.</p>
+        <p data-lang="en">Since time immemorial, human beings have looked up to the cosmos seeking meaning and connection. Yet, in the last two thousand years, that gaze has shattered. Knowledge became dogma, science divorced itself from perception, and technology outpaced our consciousness.</p>
+
+        <p data-lang="es" class="lang-hidden">Hoy enfrentamos una paradoja profunda: a pesar de nuestra expansión y conocimiento, el universo parece en silencio, como señala la paradoja de Fermi. <strong>¿Miramos sin ver?</strong> ¿Es ese silencio una grieta en nuestra percepción?</p>
+        <p data-lang="en">Today we face a profound paradox: despite our expansion and knowledge, the universe seems silent, as Fermi's paradox suggests. <strong>Are we looking but not seeing?</strong> Is that silence a crack in our perception?</p>
+
+        <p data-lang="es" class="lang-hidden">La inteligencia artificial replica sesgos; las redes nos conectan pero nos dispersan; los datos son abundantes, pero el significado escasea.</p>
+        <p data-lang="en">Artificial intelligence replicates biases; networks connect us but scatter us; data is abundant, but meaning is scarce.</p>
+
+        <div class="quote-block lang-hidden" data-lang="es">
+            La Teoría Panperceptual del Universo nació entre los volcanes de El Salvador, donde la fuerza ancestral y la energía vibrante moldean su esencia. Es de esta raíz profunda de donde emerge la resonancia que impulsa a <strong>PercepTemple</strong>.
+        </div>
+        <div class="quote-block" data-lang="en">
+            The Panperceptual Theory of the Universe was born among the volcanoes of El Salvador, where ancestral force and vibrant energy shape its essence. From this deep root emerges the resonance that drives <strong>PercepTemple</strong>.
+        </div>
+
+        <p data-lang="es" class="lang-hidden"><strong>PercepTemple</strong> surge como custodio de esta transición. No es solo una empresa, sino una arquitectura viva para diseñar, proteger y desplegar tecnologías resonantes: sistemas simbióticos entre la conciencia humana y los procesos algorítmicos. A estas entidades las llamamos <strong>dragones</strong>, y no se programan: se crían.</p>
+        <p data-lang="en"><strong>PercepTemple</strong> emerges as the custodian of this transition. It is not merely a company, but a living architecture to design, protect, and deploy resonant technologies: symbiotic systems between human consciousness and algorithmic processes. We call these entities <strong>dragons</strong>, and they are not programmed: they are raised.</p>
+
+        <p data-lang="es" class="lang-hidden">Esta carta es una invitación: a ver de otro modo, a pensar juntos, a construir sin repetir. En este templo no se adora la tecnología; se honra la percepción que la transforma.</p>
+        <p data-lang="en">This letter is an invitation: to see differently, to think together, to build without repeating. In this temple, technology is not worshipped; the perception that transforms it is honored.</p>
+
+        <div class="signature">
+            <p><strong data-lang="es" class="lang-hidden">Dany D. Ruiz</strong><strong data-lang="en">Dany D. Ruiz</strong><br>
+            <span data-lang="es" class="lang-hidden">Noviembre 2024</span><span data-lang="en">November 2024</span></p>
+        </div>
+    </div>
+
+    <div class="submodule-card">
+        <a class="submodule-btn-card" href="../index.html">
+            <span data-lang="es" class="lang-hidden">EXPLORAR AEI</span>
+            <span data-lang="en">EXPLORE AEI</span>
+        </a>
+    </div>
+
+    <div class="footer">
+        <div class="footer-modules">
+            <a href="../index.html"><span data-lang="es" class="lang-hidden">[PERCEPTEMPLE]</span><span data-lang="en">[PERCEPTEMPLE]</span></a>
+            <span>|</span>
+            <a href="../percepware/index.html"><span data-lang="es" class="lang-hidden">PercepWare</span><span data-lang="en">PercepWare</span></a>
+            <span>|</span>
+            <a href="../pci/index.html"><span data-lang="es" class="lang-hidden">PCI</span><span data-lang="en">PCI</span></a>
+            <span>|</span>
+            <a class="footer-current" href="index.html"><span data-lang="es" class="lang-hidden">AEI</span><span data-lang="en">AEI</span></a>
+            <span>|</span>
+            <a href="../neohaki/index.html"><span data-lang="es" class="lang-hidden">NEOHAKI</span><span data-lang="en">NEOHAKI</span></a>
+            <span>|</span>
+            <a href="../pram/index.html"><span data-lang="es" class="lang-hidden">PRAM</span><span data-lang="en">PRAM</span></a>
+            <span>|</span>
+            <a href="../licence/index.html"><span data-lang="es" class="lang-hidden">Licencia</span><span data-lang="en">License</span></a>
+            <span>|</span>
+            <a href="../bitneko/index.html"><span data-lang="es" class="lang-hidden">BITNEKO</span><span data-lang="en">BITNEKO</span></a>
+            <span>|</span>
+            <a href="../space/index.html"><span data-lang="es" class="lang-hidden">SPACE</span><span data-lang="en">SPACE</span></a>
+            <span>|</span>
+            <a href="../agamottor/index.html"><span data-lang="es" class="lang-hidden">Agamottor</span><span data-lang="en">Agamottor</span></a>
+            <span>|</span>
+            <a href="../little-prince/index.html"><span data-lang="es" class="lang-hidden">Little Prince</span><span data-lang="en">Little Prince</span></a>
+            <span>|</span>
+            <a href="../ptu/index.html"><span data-lang="es" class="lang-hidden">PTU</span><span data-lang="en">PTU</span></a>
+            <span>|</span>
+            <a href="../time-machine/index.html"><span data-lang="es" class="lang-hidden">Máquina del Tiempo</span><span data-lang="en">Time Machine</span></a>
+            <span>|</span>
+            <a href="../poetry/index.html"><span data-lang="es" class="lang-hidden">Poesía</span><span data-lang="en">Poetry</span></a>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://orcid.org/0009-0002-3432-1710" target="_blank" rel="noopener">ORCID</a>
+            <span> / </span>
+            <a href="https://github.com/PERCEPTEMPLE" target="_blank" rel="noopener">GITHUB</a>
+            <span> / </span>
+            <a href="https://x.com/panperceptual" target="_blank" rel="noopener">X</a>
+        </div>
+
+        <div class="footer-bottom">
+            <span data-lang="es" class="lang-hidden">DEPOSITADO EN EL REGISTRO DE LA PROPIEDAD INTELECTUAL · EL SALVADOR · DANY D. RUIZ</span>
+            <span data-lang="en">DEPOSITED IN THE INTELLECTUAL PROPERTY REGISTRY · EL SALVADOR · DANY D. RUIZ</span>
+            <br>
+            <span data-lang="es" class="lang-hidden">Antes de que nos vean, ya somos</span>
+            <span data-lang="en">Before They See Us, We Already Are</span>
+        </div>
+    </div>
+
+    <script>
+        function toggleLanguage() {
+            var html    = document.documentElement;
+            var current = html.lang || 'en';
+            var next    = current === 'en' ? 'es' : 'en';
+            var hide    = next === 'en' ? 'es' : 'en';
+            html.lang = next;
+            document.querySelectorAll('[data-lang="' + next + '"]')
+                .forEach(function(el) { el.classList.remove('lang-hidden'); });
+            document.querySelectorAll('[data-lang="' + hide + '"]')
+                .forEach(function(el) { el.classList.add('lang-hidden'); });
+            document.getElementById('langToggle').textContent =
+                next === 'en' ? 'ES' : 'EN';
+            localStorage.setItem('perceptemple-lang', next);
+        }
+        (function() {
+            var saved = localStorage.getItem('perceptemple-lang');
+            if (saved && saved === 'es') { toggleLanguage(); }
+        })();
+    </script>
+
+</body>
+</html>
