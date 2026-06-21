@@ -15,12 +15,12 @@
   <meta name="last-modified" content="2026-06-07">
   <meta name="keywords" content="BITNEKO, PERCEPTEMPLE, Dany D. Ruiz, Panperceptual Theory of the Universe, PTU, digital art El Salvador, ancestral digital symbol" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://perceptemple.art/bitneko/" />
+  <link rel="canonical" href="https://perceptemple.art/bitneko/white-paper/" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="BITNEKO · PERCEPTEMPLE" />
   <meta property="og:description" content="BITNEKO — Digital cultural symbol bridging ancestral wisdom with digital innovation within the PERCEPTEMPLE ecosystem, by Dany D. Ruiz. El Salvador." />
-  <meta property="og:url" content="https://perceptemple.art/bitneko/" />
+  <meta property="og:url" content="https://perceptemple.art/bitneko/white-paper/" />
   <meta property="og:site_name" content="PERCEPTEMPLE" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:locale:alternate" content="es_SV" />
@@ -66,7 +66,7 @@
     "description": "BITNEKO — Digital cultural symbol bridging ancestral wisdom with digital innovation within the PERCEPTEMPLE ecosystem, by Dany D. Ruiz. El Salvador.",
     "datePublished": "2026-06-07",
     "dateModified": "2026-06-07",
-    "url": "https://perceptemple.art/bitneko/",
+    "url": "https://perceptemple.art/bitneko/white-paper/",
     "inLanguage": "en",
     "creator": {
       "@type": "Person",
@@ -88,7 +88,7 @@
 
   <title>PERCEPTEMPLE</title>
 
-  <link rel="icon" href="../favicon.png" type="image/png" />
+  <link rel="icon" href="../../favicon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -113,22 +113,20 @@
       --txt3:    rgba(0,255,65,0.35);
       --white:   #39ff14;
       --red:     #ff2020;
+      --red2:    #ff4d4d;
 
       --fs-xs: clamp(0.65rem, 1.2vw, 0.75rem);
       --fs-sm: clamp(0.75rem, 1.4vw, 0.85rem);
       --fs-md: clamp(0.8rem,  1.6vw, 1rem);
       --fs-lg: clamp(1rem,    2vw,   1.25rem);
       --fs-xl: clamp(1.25rem, 3vw,   1.75rem);
-
-      --glow-soft: rgba(0, 255, 65, 0.15);
-      --glow-medium: rgba(0, 255, 65, 0.35);
-      --glow-amber: rgba(255, 178, 0, 0.25);
     }
 
     html, body {
       background-color: var(--bg);
-      color: var(--txt);
+      color: var(--txt2);
       font-family: 'Share Tech Mono', monospace;
+      font-weight: 400;
       font-size: var(--fs-sm);
       min-height: 100vh;
       overflow-x: hidden;
@@ -169,18 +167,50 @@
       z-index: 9998;
     }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
+    .bracket {
+      position: fixed;
+      color: rgba(0,255,65,0.15);
+      font-family: 'Orbitron', sans-serif;
+      font-size: var(--fs-md);
+      pointer-events: none;
+      z-index: 10000;
+    }
+    .bracket-tl { top: 12px;    left: 16px;  }
+    .bracket-tr { top: 12px;    right: 16px; }
+    .bracket-bl { bottom: 12px; left: 16px;  }
+    .bracket-br { bottom: 12px; right: 16px; }
+
+    .lang-toggle {
+      position: fixed;
+      top: 1.2rem;
+      right: 1.4rem;
+      z-index: 2000;
+      display: flex;
+      gap: 0.4rem;
     }
 
-    .vignette {
-      position: fixed;
-      inset: 0;
-      background: radial-gradient(ellipse at center, transparent 50%, rgba(2, 8, 5, 0.8) 100%);
-      pointer-events: none;
-      z-index: 998;
+    .lang-btn {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: var(--fs-xs);
+      letter-spacing: 0.12em;
+      color: var(--txt);
+      background: transparent;
+      border: 1px solid var(--rule);
+      padding: 0.3em 0.7em;
+      cursor: pointer;
+      transition: border-color 0.2s ease, color 0.2s ease;
+      -webkit-tap-highlight-color: transparent;
+      border-radius: 0;
+    }
+
+    .lang-btn.active {
+      color: var(--hi);
+      border-color: var(--hi);
+    }
+
+    .lang-btn:hover {
+      color: var(--hi);
+      border-color: var(--hi2);
     }
 
     .container {
@@ -191,44 +221,96 @@
       min-height: 100vh;
       padding: 2rem;
       position: relative;
-      z-index: 10;
+      z-index: 100;
       width: 100%;
       max-width: 42rem;
+      text-align: center;
     }
 
-    .gif-link {
-      display: block;
-      cursor: pointer;
-      outline: none;
-      transition: transform 0.2s ease;
-      position: relative;
+    .pch-btn {
+      display: inline-block;
+      margin-top: 6px;
+      margin-bottom: 2.5rem;
+      background: transparent;
+      border: 1px solid var(--red);
+      color: var(--red);
+      font-family: 'Orbitron', sans-serif;
+      font-size: var(--fs-xs);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      text-decoration: none;
+      border-radius: 2px;
+      font-weight: 700;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .pch-btn:hover {
+      background: rgba(255,32,32,0.08);
+      color: var(--red2);
+      border-color: var(--red2);
     }
 
-    .gif-link:hover,
-    .gif-link:focus-visible {
-      transform: scale(1.04);
+    .insight {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: var(--fs-md);
+      color: var(--txt);
+      line-height: 1.9;
+      margin-bottom: 2.5rem;
+      max-width: 52ch;
+      font-weight: 400;
     }
 
-    .gif-link img {
-      display: block;
-      max-width: 100%;
+    .divider-line {
       width: 100%;
-      height: auto;
-      border: 1px solid var(--rule);
-      box-shadow: 0 0 12px var(--glow-soft), 0 0 30px rgba(0, 255, 65, 0.05);
-      transition: box-shadow 0.3s ease, border-color 0.3s ease;
-      border-radius: 0;
+      max-width: 440px;
+      border: none;
+      border-top: 1px solid var(--rule);
+      opacity: 0.4;
+      margin: 0 0 2rem;
     }
 
-    .gif-link:hover img,
-    .gif-link:focus-visible img {
-      box-shadow: 0 0 20px var(--glow-medium), 0 0 50px rgba(0, 255, 65, 0.15);
-      border-color: var(--hi);
+    .file-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .file-eyebrow {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: var(--fs-xs);
+      color: var(--txt3);
+      letter-spacing: 1px;
+      word-break: break-all;
+    }
+
+    .file-link {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: var(--fs-xs);
+      color: var(--txt3);
+      text-decoration: none;
+      letter-spacing: 1px;
+      transition: color 0.2s;
+      word-break: break-all;
+    }
+    .file-link:hover {
+      color: var(--hi);
+    }
+    .file-link::before {
+      content: '> ';
+      color: var(--amber);
+      opacity: 0.6;
     }
 
     @media (max-width: 768px) {
       .container {
         padding: 1.5rem;
+      }
+      .bracket {
+        font-size: var(--fs-sm);
       }
     }
 
@@ -248,26 +330,72 @@
 </head>
 <body>
 
-  <div class="vignette" aria-hidden="true"></div>
+  <span class="bracket bracket-tl">[</span>
+  <span class="bracket bracket-tr">]</span>
+  <span class="bracket bracket-bl">[</span>
+  <span class="bracket bracket-br">]</span>
+
+  <nav class="lang-toggle" aria-label="Language selector">
+    <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+    <button class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+  </nav>
 
   <main class="container" role="main">
 
-    <a
-      class="gif-link"
-      href="white-paper/index.html"
-      title="BITNEKO · White-Paper"
-    >
-      <img
-        src="bitneko.gif"
-        alt="BitNeko"
-        width="320"
-        height="268"
-        loading="eager"
-        decoding="async"
-      />
-    </a>
+    <a class="pch-btn" href="../../index.html">HUMAN CONSCIOUSNESS TEST</a>
+
+    <p class="insight" data-i18n="insight"></p>
+
+    <hr class="divider-line" aria-hidden="true" />
+
+    <div class="file-links">
+      <span class="file-eyebrow" data-i18n="eyebrow"></span>
+      <a class="file-link" href="BITNEKO_LICENCIA_ESPAÑOL.pdf" download>BITNEKO_LICENCIA_ESPAÑOL.pdf</a>
+      <a class="file-link" href="BITNEKO_LICENCE_ENGLISH.pdf" download>BITNEKO_LICENCE_ENGLISH.pdf</a>
+    </div>
 
   </main>
+
+  <script>
+    const i18n = {
+      en: {
+        eyebrow: "ACCESS THE WHITE-PAPER",
+        insight: "What if Satoshi Nakamoto were a Salvadoran artisan? BITNEKO as proof that true consensus does not reside in code, but in collective perception.",
+      },
+      es: {
+        eyebrow: "ACCEDE AL WHITE-PAPER",
+        insight: "¿Y si Satoshi Nakamoto fuera un artesano salvadoreño? BITNEKO como prueba de que el verdadero consenso no reside en el código, sino en la percepción colectiva.",
+      }
+    };
+
+    let currentLang = 'en';
+
+    function applyLang(lang) {
+      const t = i18n[lang];
+      if (!t) return;
+      currentLang = lang;
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) el.textContent = t[key];
+      });
+
+      document.documentElement.setAttribute('lang', lang === 'es' ? 'es' : 'en');
+
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        const isActive = btn.getAttribute('data-lang') === lang;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      });
+    }
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => applyLang(btn.getAttribute('data-lang')));
+    });
+
+    const browserLang = (navigator.language || navigator.userLanguage || 'en').slice(0, 2);
+    applyLang(i18n[browserLang] ? browserLang : 'en');
+  </script>
 
 </body>
 </html>
