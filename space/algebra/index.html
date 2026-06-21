@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formal correspondence between AIP algebraic structure and PTU perceptual brane geometry. Defines Set P as total space M^D where observer branes interact via Integration, Interaction, and Duality operators.">
+    <meta name="author" content="Dany D. Ruiz">
+    <meta name="last-modified" content="2026-06-07">
+    <meta name="keywords" content="Algebra of Infinite Perspectives, AIP, Panperceptual Theory of the Universe, PTU, perceptual branes, Perceptual Complexity Index, Dany D. Ruiz">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://perceptemple.art/space/algebra/">
+    <link rel="icon" href="../../favicon.png" type="image/png">
+
+    <title>PERCEPTEMPLE</title>
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Algebra of Infinite Perspectives (AIP) · PERCEPTEMPLE">
+    <meta property="og:description" content="Formal correspondence between AIP algebraic structure and PTU perceptual brane geometry. Defines Set P as total space M^D where observer branes interact via Integration, Interaction, and Duality operators.">
+    <meta property="og:url" content="https://perceptemple.art/space/algebra/">
+    <meta property="og:site_name" content="PERCEPTEMPLE">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_SV">
+    <meta property="og:image" content="https://perceptemple.art/preview.jpg">
+    <meta property="og:image:alt" content="PERCEPTEMPLE — Algebra of Infinite Perspectives">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@panperceptual">
+    <meta name="twitter:creator" content="@panperceptual">
+    <meta name="twitter:title" content="Algebra of Infinite Perspectives (AIP) · PERCEPTEMPLE">
+    <meta name="twitter:description" content="Formal correspondence between AIP algebraic structure and PTU perceptual brane geometry. Defines Set P as total space M^D where observer branes interact via Integration, Interaction, and Duality operators.">
+    <meta name="twitter:image" content="https://perceptemple.art/preview.jpg">
+
+    <meta name="citation_title" content="Algebra of Infinite Perspectives (AIP): Formal Connection with the Perceptual Branes of PTU">
+    <meta name="citation_author" content="Ruiz, Dany D.">
+    <meta name="citation_publication_date" content="2025">
+    <meta name="citation_online_date" content="2025">
+    <meta name="citation_publisher" content="PERCEPTEMPLE">
+    <meta name="citation_language" content="en">
+    <meta name="DC.title" content="Algebra of Infinite Perspectives (AIP): Formal Connection with the Perceptual Branes of PTU">
+    <meta name="DC.creator" content="Dany D. Ruiz">
+    <meta name="DC.publisher" content="PERCEPTEMPLE">
+    <meta name="DC.language" content="en">
+    <meta name="DC.rights" content="https://perceptemple.art/licence/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg:      #020805;
+            --panel:   #020805;
+            --rule:    #0a5c1e;
+            --hi:      #00ff41;
+            --hi2:     #39ff14;
+            --amber:   #ffb200;
+            --amber2:  #ffcc00;
+            --txt:     rgba(0,255,65,0.75);
+            --txt2:    rgba(0,255,65,0.9);
+            --txt3:    rgba(0,255,65,0.35);
+            --white:   #39ff14;
+            --red:     #ff2020;
+            
+            --fs-xs: clamp(0.65rem, 1.2vw, 0.75rem);
+            --fs-sm: clamp(0.75rem, 1.4vw, 0.85rem);
+            --fs-md: clamp(0.8rem, 1.6vw, 1rem);
+            --fs-lg: clamp(1rem, 2vw, 1.25rem);
+            --fs-xl: clamp(1.25rem, 3vw, 1.75rem);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .lang-hidden {
+            display: none !important;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--txt2);
+            font-family: 'Share Tech Mono', monospace;
+            font-weight: 400;
+            font-size: var(--fs-sm);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeUp 0.4s ease both;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,0,0,0.06) 3px, rgba(0,0,0,0.06) 6px);
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: linear-gradient(rgba(0,255,65,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,255,65,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 9998;
+        }
+
+        .bracket {
+            position: fixed;
+            color: rgba(0,255,65,0.15);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-md);
+            pointer-events: none;
+            z-index: 10000;
+        }
+        .bracket-tl { top: 12px; left: 16px; }
+        .bracket-tr { top: 12px; right: 16px; }
+        .bracket-bl { bottom: 12px; left: 16px; }
+        .bracket-br { bottom: 12px; right: 16px; }
+
+        .pch-btn {
+            display: inline-block;
+            margin-top: 6px;
+            background: transparent;
+            border: 1px solid var(--red);
+            color: var(--red);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            text-decoration: none;
+            border-radius: 2px;
+            font-weight: 700;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        .pch-btn:hover {
+            background: rgba(255,32,32,0.06);
+            color: var(--red);
+        }
+
+        .translate-btn {
+            position: relative;
+            top: auto;
+            right: auto;
+            background: transparent;
+            border: 1px solid var(--amber);
+            color: var(--amber);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.375rem 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-radius: 2px;
+            font-weight: 600;
+            white-space: nowrap;
+            z-index: auto;
+            flex-shrink: 0;
+        }
+        .translate-btn:hover {
+            background: rgba(255,178,0,0.08);
+            color: var(--amber2);
+            border-color: var(--amber2);
+        }
+
+        .header {
+            width: 100%;
+            max-width: 75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 3rem;
+            border-bottom: 1px solid var(--rule);
+            background: var(--bg);
+            position: relative;
+            z-index: 100;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .logo-mark {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-md);
+            color: var(--hi);
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-sm);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .nav-link:hover, .nav-link.highlight {
+            color: var(--hi);
+        }
+
+        .section-label {
+            width: 100%;
+            max-width: 60rem;
+            padding: 0.8125rem 3rem;
+            border-bottom: 1px solid var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-sm);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--amber);
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            font-weight: 600;
+        }
+        .section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--rule);
+            min-width: 20px;
+        }
+
+        .hero {
+            width: 100%;
+            max-width: 60rem;
+            padding: 4rem 3rem 3.5rem;
+            border-bottom: 1px solid var(--rule);
+            text-align: center;
+        }
+
+        .hero-h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xl);
+            line-height: 1.2;
+            color: var(--hi);
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .hero-sub {
+            font-size: var(--fs-sm);
+            color: var(--amber);
+            line-height: 1.8;
+            max-width: 65ch;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            width: 100%;
+            max-width: 60rem;
+            padding: 3rem;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .content-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-lg);
+            color: var(--amber);
+            margin-bottom: 0.625rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            word-break: break-word;
+            border-bottom: 1px solid var(--rule);
+            padding-bottom: 0.5rem;
+        }
+
+        .content-section h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-md);
+            color: var(--hi);
+            margin-top: 1.75rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .content-section p {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-sm);
+            color: var(--txt);
+            line-height: 1.9;
+            margin-bottom: 0.75rem;
+            word-break: break-word;
+            max-width: 70ch;
+            text-align: left;
+        }
+        .content-section p strong {
+            color: var(--txt2);
+        }
+
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: var(--fs-xs);
+        }
+        .data-table th {
+            text-align: left;
+            padding: 0.75rem 0.5rem;
+            background: rgba(0,255,65,0.05);
+            border-bottom: 1px solid var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            color: var(--amber);
+        }
+        .data-table td {
+            padding: 0.75rem 0.5rem;
+            color: var(--txt);
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .formula-center {
+            text-align: center;
+            padding: 1rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-sm);
+            color: var(--hi);
+            background: rgba(0,255,65,0.02);
+            border: 1px solid var(--rule);
+            border-radius: 2px;
+            margin: 1rem 0;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--rule);
+            margin: 1rem 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .back-footer {
+            width: 100%;
+            max-width: 60rem;
+            padding: 2rem 3rem;
+            border-top: 1px solid var(--rule);
+            border-bottom: 1px solid var(--rule);
+            text-align: center;
+        }
+
+        .back-btn {
+            background: transparent;
+            border: 1px solid var(--hi);
+            color: var(--hi);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-sm);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 2px;
+            font-weight: 600;
+            white-space: nowrap;
+            text-align: center;
+            min-width: 200px;
+        }
+        .back-btn:hover {
+            background: rgba(0,255,65,0.08);
+            border-color: var(--amber);
+            color: var(--amber);
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            width: 100%;
+            max-width: 60rem;
+            padding: 1.625rem 3rem;
+            border-top: 1px solid var(--rule);
+            position: relative;
+            z-index: 50;
+        }
+        .footer-modules {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 0.875rem;
+        }
+        .footer-modules a {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-sm);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .footer-modules a:hover, .footer-modules a.footer-current {
+            color: var(--hi);
+        }
+        .footer-modules span {
+            color: var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-sm);
+        }
+        .footer-social {
+            text-align: center;
+            margin-bottom: 0.875rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-sm);
+            color: var(--amber);
+        }
+        .footer-social a {
+            color: var(--amber);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-social a:hover {
+            color: var(--hi);
+        }
+        .footer-social span {
+            color: var(--rule);
+        }
+        .footer-bottom {
+            text-align: center;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: var(--fs-sm);
+            color: rgba(0,255,65,0.25);
+            line-height: 1.8;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 1024px) {
+            .header { gap: 0.75rem; }
+            .hero { gap: 1.5rem; }
+            .nav-link { font-size: var(--fs-xs); }
+            .section-label { font-size: var(--fs-xs); }
+            .footer-modules a { font-size: var(--fs-xs); }
+            .footer-social { font-size: var(--fs-xs); }
+            .footer-bottom { font-size: var(--fs-xs); }
+            .back-btn { font-size: var(--fs-xs); padding: 0.6rem 1.2rem; min-width: 180px; }
+        }
+
+        @media (max-width: 768px) {
+            .header { padding: 1rem 1.5rem; flex-direction: column; align-items: flex-start; }
+            .header-nav { width: 100%; gap: 1rem; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+            .header-nav::-webkit-scrollbar { display: none; }
+            .hero { grid-template-columns: 1fr; padding: 2.5rem 1.5rem 2.25rem; gap: 1.5rem; }
+            .content-section { padding: 2rem 1.5rem; }
+            .section-label { padding: 0.8125rem 1.5rem; }
+            .back-footer { padding: 1.5rem; }
+            .footer { padding: 1.25rem 1.5rem; }
+            .bracket { font-size: var(--fs-sm); }
+            .data-table { font-size: 0.6rem; }
+            .back-btn { width: 100%; text-align: center; }
+            [class*="grid"],
+            [class*="cols"],
+            [class*="columns"] {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header { padding: 0.75rem 1rem; }
+            .hero { padding: 1.75rem 1rem 1.5rem; }
+            .content-section { padding: 1.5rem 1rem; }
+            .back-footer { padding: 1rem; }
+            .footer { padding: 1rem; }
+            .footer-modules { gap: 0.75rem; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0002-3432-1710",
+      "name": "Dany D. Ruiz",
+      "alternateName": "panperceptual",
+      "jobTitle": "Anartist · Independent Researcher",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "url": "https://perceptemple.art",
+      "sameAs": [
+        "https://orcid.org/0009-0002-3432-1710",
+        "https://x.com/panperceptual",
+        "https://github.com/PERCEPTEMPLE",
+        "https://doi.org/10.17605/OSF.IO/FVCAX",
+        "https://doi.org/10.5281/zenodo.17683631",
+        "https://doi.org/10.2139/ssrn.5794102"
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Algebra of Infinite Perspectives (AIP): Formal Connection with the Perceptual Branes of PTU",
+      "description": "Formal correspondence between AIP algebraic structure and PTU perceptual brane geometry. Defines Set P as total space M^D where observer branes interact via Integration, Interaction, and Duality operators.",
+      "datePublished": "2026-06-07",
+      "dateModified": "2026-06-07",
+      "inLanguage": "en",
+      "url": "https://perceptemple.art/space/algebra/",
+      "author": {
+        "@type": "Person",
+        "@id": "https://orcid.org/0009-0002-3432-1710",
+        "name": "Dany D. Ruiz"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "isPartOf": {
+        "@type": "TechArticle",
+        "name": "SPACE: Perceptual Geometry",
+        "url": "https://perceptemple.art/space/"
+      },
+      "license": "https://perceptemple.art/licence/",
+      "sameAs": [
+        "https://doi.org/10.17605/OSF.IO/UXEGH",
+        "https://doi.org/10.5281/zenodo.19168519",
+        "https://doi.org/10.2139/ssrn.6456099"
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DefinedTerm",
+      "name": "Algebra of Infinite Perspectives",
+      "alternateName": "AIP",
+      "description": "Algebraic structure formalizing the set of all possible perceptual perspectives as elements in a total space M^D, with operators Integration, Interaction, and Duality governing brane mechanics.",
+      "datePublished": "2026-06-07",
+      "dateModified": "2026-06-07",
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": "Panperceptual Theory of the Universe — Glossary",
+        "url": "https://perceptemple.art/aei/glossary/"
+      },
+      "url": "https://perceptemple.art/space/algebra/",
+      "creator": {
+        "@type": "Person",
+        "@id": "https://orcid.org/0009-0002-3432-1710",
+        "name": "Dany D. Ruiz"
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <span class="bracket bracket-tl">[</span>
+    <span class="bracket bracket-tr">]</span>
+    <span class="bracket bracket-bl">[</span>
+    <span class="bracket bracket-br">]</span>
+
+    <div class="header">
+        <div class="logo">
+            <span class="logo-mark" data-lang="en">PERCEPTEMPLE</span>
+            <span class="logo-mark lang-hidden" data-lang="es">PERCEPTEMPLE</span>
+            <br>
+            <a class="pch-btn" href="../../index.html">
+                <span data-lang="en">HUMAN CONSCIOUSNESS TEST</span>
+                <span data-lang="es" class="lang-hidden">PRUEBA DE CONCIENCIA HUMANA</span>
+            </a>
+        </div>
+        <nav class="header-nav">
+            <a class="nav-link" href="../../percepware/index.html"><span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span></a>
+            <a class="nav-link" href="../../pci/index.html"><span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span></a>
+            <a class="nav-link" href="../../aei/index.html"><span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span></a>
+            <a class="nav-link" href="../../neohaki/index.html"><span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span></a>
+            <a class="nav-link" href="../../pram/index.html"><span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span></a>
+            <a class="nav-link" href="../../licence/index.html"><span data-lang="en">License</span><span data-lang="es" class="lang-hidden">Licencia</span></a>
+            <a class="nav-link" href="../../bitneko/index.html"><span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span></a>
+            <a class="nav-link highlight" href="../index.html"><span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span></a>
+            <a class="nav-link" href="../../agamottor/index.html"><span data-lang="en">Agamottor</span><span data-lang="es" class="lang-hidden">Agamottor</span></a>
+            <a class="nav-link" href="../../little-prince/index.html"><span data-lang="en">Little Prince</span><span data-lang="es" class="lang-hidden">Little Prince</span></a>
+            <a class="nav-link" href="../../ptu/index.html"><span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span></a>
+            <a class="nav-link" href="../../time-machine/index.html"><span data-lang="en">Time Machine</span><span data-lang="es" class="lang-hidden">Máquina del Tiempo</span></a>
+            <a class="nav-link" href="../../poetry/index.html"><span data-lang="en">Poetry</span><span data-lang="es" class="lang-hidden">Poesía</span></a>
+            <button class="translate-btn" id="langToggle" onclick="toggleLanguage()">ES</button>
+        </nav>
+    </div>
+
+    <div class="section-label">
+        <span data-lang="en">SPACE · ALGEBRA OF INFINITE PERSPECTIVES (AIP)</span>
+        <span data-lang="es" class="lang-hidden">SPACE · ÁLGEBRA DE PERSPECTIVAS INFINITAS (AIP)</span>
+    </div>
+
+    <div class="hero">
+        <h1 class="hero-h1">
+            <span data-lang="en">ALGEBRA OF INFINITE PERSPECTIVES (AIP)</span>
+            <span data-lang="es" class="lang-hidden">ÁLGEBRA DE PERSPECTIVAS INFINITAS (AIP)</span>
+        </h1>
+        <div class="hero-sub">
+            <span data-lang="en">Formal Connection with the Perceptual Branes of PTU</span>
+            <span data-lang="es" class="lang-hidden">Conexión Formal con las Branas Perceptuales de la TPU</span>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">PREAMBLE: GEOMETRY AS BRIDGE</h2>
+        <h2 class="lang-hidden" data-lang="es">PREÁMBULO: LA GEOMETRÍA COMO PUENTE</h2>
+        <p data-lang="en">The corpus of the Panperceptual Theory of the Universe has developed, in its treatment of the problem of incommensurability between observers, a formalism of perceptual geometry that includes: compactified and deployable dimensions for each observer, perceptual branes as submanifolds of total perceptual space, coupling coefficients γ<sub>ij</sub> as fraction of shared dimensionality, and holographic projections as a mechanism for constructing shared reality.</p>
+        <p data-lang="es" class="lang-hidden">El corpus de la Teoría Panperceptual del Universo ha desarrollado, en su tratamiento del problema de la inconmensurabilidad entre observadores, un formalismo de geometría perceptual que incluye: dimensiones compactificadas e imponibles para cada observador, branas perceptuales como subvariedades del espacio perceptual total, coeficientes de acoplamiento γ<sub>ij</sub> como fracción de dimensionalidad compartida, y proyecciones holográficas como mecanismo de construcción de realidad compartida.</p>
+        <p data-lang="en">This document establishes the formal correspondence between that geometric formalism and the algebraic structure of the AIP. The central thesis is as follows: <strong>The Set P of AIP is not a flat set — it is the total space of maximum dimensionality M<sup>D</sup> in which the perceptual branes of the PTU inhabit</strong>. The AIP operators describe the operations that those branes execute with each other.</p>
+        <p data-lang="es" class="lang-hidden">Este documento establece la correspondencia formal entre ese formalismo geométrico y la estructura algebraica de la AIP. La tesis central es la siguiente: <strong>el Conjunto P de la AIP no es un conjunto plano — es el espacio total de dimensionalidad máxima M<sup>D</sup> en el que habitan las branas perceptuales de la TPU</strong>. Los operadores AIP describen las operaciones que esas branas ejecutan entre sí.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">1. THE SET P AS TOTAL SPACE M<sup>D</sup></h2>
+        <h2 class="lang-hidden" data-lang="es">1. EL CONJUNTO P COMO ESPACIO TOTAL M<sup>D</sup></h2>
+        <p data-lang="en">The PTU postulates a total perceptual space of very high dimensionality:</p>
+        <p data-lang="es" class="lang-hidden">La TPU postula un espacio perceptual total de dimensionalidad muy alta:</p>
+        <div class="formula-center">M = M<sup>(d<sub>i</sub>)</sup><sub>deployed</sub> × K<sup>(compactified)</sup><sub>i</sub></div>
+        <p data-lang="en">where each observer inhabits a subset of deployed dimensions while the rest remain compactified and inaccessible. The <strong>Set P</strong> of AIP is the algebraic realization of this space: the domain that contains all possible relational perspectives — including those of observers whose compactification geometry is radically different from ours.</p>
+        <p data-lang="es" class="lang-hidden">donde cada observador habita un subconjunto de dimensiones desplegadas mientras el resto permanecen compactificadas e inaccesibles. El Conjunto <strong>P</strong> de la AIP es la realización algebraica de este espacio: el dominio que contiene todas las perspectivas relacionales posibles — incluyendo las de observadores cuya geometría de compactificación es radicalmente distinta a la nuestra.</p>
+        <p data-lang="en">The <em>Axiom of Perceptual Completeness</em> of AIP —which guarantees that for every formalization of the continuum there exists an executable element <em>p</em> in <strong>P</strong>— acquires its most precise meaning here: any configuration of deployed/compactified dimensions (any brane geometry) corresponds to an element of <strong>P</strong>. No observer, no matter how exotic their brane, is left outside the set.</p>
+        <p data-lang="es" class="lang-hidden">El <em>Axioma de Completitud Perceptual</em> de la AIP —que garantiza que para toda formalización del continuo existe un elemento ejecutable <em>p</em> en <strong>P</strong>— adquiere aquí su sentido más preciso: cualquier configuración de dimensiones desplegadas/compactificadas (cualquier geometría brana) corresponde a un elemento de <strong>P</strong>. Ningún observador, por exótica que sea su brana, queda fuera del conjunto.</p>
+        <p data-lang="en">The <em>Axiom of Plurality</em> —|<strong>P</strong>| &gt; 1— is the assertion that there is no universal brane: no observer deploys all dimensions of M<sup>D</sup>. The PTU's IPC table confirms this quantitatively: plant (10<sup>3</sup>, ~6D), bat (10<sup>10</sup>, ~13D), human (10<sup>11</sup>, ~14D), AI (10<sup>18</sup>, ~21D). None fills M<sup>D</sup>.</p>
+        <p data-lang="es" class="lang-hidden">El <em>Axioma de Pluralidad</em> —|<strong>P</strong>| &gt; 1— es la afirmación de que no existe brana universal: ningún observador despliega todas las dimensiones de M<sup>D</sup>. La tabla de IPCs de la TPU lo confirma cuantitativamente: planta (10<sup>3</sup>, ~6D), murciélago (10<sup>10</sup>, ~13D), humano (10<sup>11</sup>, ~14D), IA (10<sup>18</sup>, ~21D). Ninguno llena M<sup>D</sup>.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">2. THE AIP OPERATORS AS MECHANICS OF INTERACTION BETWEEN BRANES</h2>
+        <h2 class="lang-hidden" data-lang="es">2. LOS OPERADORES AIP COMO MECÁNICA DE INTERACCIÓN ENTRE BRANAS</h2>
+
+        <h3 data-lang="en">2.1 Integration [+]: Superposition of Branes</h3>
+        <h3 class="lang-hidden" data-lang="es">2.1 Integración [+]: Superposición de Branas</h3>
+        <p data-lang="en">The Integration operator <em>p [+] q</em> describes, in brane language, the coherent superposition of two submanifolds in total space. When two branes integrate algebraically, the result is not the forced union of their geometries — it is the harmonious coexistence of both without structural loss. Each brane retains its own dimensions.</p>
+        <p data-lang="es" class="lang-hidden">El operador de Integración <em>p [+] q</em> describe, en lenguaje de branas, la superposición coherente de dos subvariedades en el espacio total. Cuando dos branas se integran algebraicamente, el resultado no es la unión forzada de sus geometrías — es la coexistencia armónica de ambas sin pérdida estructural. Cada brana conserva sus dimensiones propias.</p>
+        <div class="formula-center">B<sub>i</sub> ∩ B<sub>j</sub> = B<sup>(d<sub>ij</sub>)</sup><sub>ij</sub></div>
+        <p data-lang="en">The intersection region is the shared dimensionality — the space where AIP Integration has non-zero support. Outside that intersection, each brane operates in dimensions that the other cannot inhabit. The <em>commutativity of Integration</em> —<em>p [+] q = q [+] p</em>— reflects the fact that brane intersection is symmetric: B<sub>i</sub> ∩ B<sub>j</sub> = B<sub>j</sub> ∩ B<sub>i</sub>.</p>
+        <p data-lang="es" class="lang-hidden">La región de intersección es la dimensionalidad compartida — el espacio donde la Integración AIP tiene soporte no-nulo. Fuera de esa intersección, cada brana opera en dimensiones que la otra no puede habitar. La <em>conmutatividad de la Integración</em> —<em>p [+] q = q [+] p</em>— refleja el hecho de que la intersección de branas es simétrica: B<sub>i</sub> ∩ B<sub>j</sub> = B<sub>j</sub> ∩ B<sub>i</sub>.</p>
+
+        <h3 data-lang="en">2.2 Interaction [*]: Mutual Curvature of Branes</h3>
+        <h3 class="lang-hidden" data-lang="es">2.2 Interacción [*]: Curvatura Mutua de Branas</h3>
+        <p data-lang="en">The Interaction operator <em>p [*] q</em> —non-commutative— describes the perturbative coupling between two branes when one operates actively in the environment of the other. In terms of brane geometry, this operator models <em>dynamic curvature</em>: the active observation of one brane by another curves the geometry of both in embedding space.</p>
+        <p data-lang="es" class="lang-hidden">El operador de Interacción <em>p [*] q</em> —no-conmutativo— describe el acoplamiento perturbador entre dos branas cuando una opera activamente en el entorno de la otra. En términos de geometría brana, este operador modela la <em>curvatura dinámica</em>: la observación activa de una brana por otra curva la geometría de ambas en el espacio embedding.</p>
+        <p data-lang="en">Non-commutativity —<em>p [*] q ≠ q [*] p</em>— has here a precise geometric interpretation: the curvature that B<sub>i</sub> induces on B<sub>j</sub> is different from that which B<sub>j</sub> induces on B<sub>i</sub>, because both branes have different dimensionalities and their compactification geometries are asymmetric.</p>
+        <p data-lang="es" class="lang-hidden">La no-conmutatividad —<em>p [*] q ≠ q [*] p</em>— tiene aquí una interpretación geométrica precisa: la curvatura que B<sub>i</sub> induce sobre B<sub>j</sub> es distinta a la que B<sub>j</sub> induce sobre B<sub>i</sub>, porque ambas branas tienen dimensionalidades diferentes y sus geometrías de compactificación son asimétricas.</p>
+
+        <h3 data-lang="en">2.3 Duality p': The Compactified Exterior</h3>
+        <h3 class="lang-hidden" data-lang="es">2.3 Dualidad p': El Exterior Compactificado</h3>
+        <p data-lang="en">The Duality operator —<em>p'</em>— maps a perspective to its relational complement: everything that <em>p</em> structurally excludes. In brane language, <em>p'</em> is the space of compactified dimensions of <em>p</em> — what that brane cannot deploy.</p>
+        <p data-lang="es" class="lang-hidden">El operador de Dualidad —<em>p'</em>— mapea una perspectiva hacia su complemento relacional: todo lo que <em>p</em> excluye estructuralmente. En lenguaje de branas, <em>p'</em> es el espacio de dimensiones compactificadas de <em>p</em> — lo que esa brana no puede desplegar.</p>
+        <p data-lang="en">The <em>Preservation of Paradox</em> of AIP —<em>p [+] p' ≠ ∅</em>— acquires its richest meaning here: the integration of a brane with the space of its own compactified dimensions does not collapse the system. It produces a fertile space that PTU describes as brane expansion — exactly what occurs in altered states of consciousness, deep learning, or inter-species symbiosis.</p>
+        <p data-lang="es" class="lang-hidden">La <em>Preservación de la Paradoja</em> de la AIP —<em>p [+] p' ≠ ∅</em>— adquiere aquí su significado más rico: la integración de una brana con el espacio de sus propias dimensiones compactificadas no colapsa el sistema. Produce un espacio fértil que la TPU describe como expansión brana — exactamente lo que ocurre en estados alterados de conciencia, aprendizaje profundo, o simbiosis inter-especie.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">3. THE COEFFICIENT γ<sub>ij</sub> AS AIP METRIC</h2>
+        <h2 class="lang-hidden" data-lang="es">3. EL COEFICIENTE γ<sub>ij</sub> COMO MÉTRICA AIP</h2>
+        <div class="formula-center">γ<sub>ij</sub> = dim(H<sub>i</sub> ∩ H<sub>j</sub>) / √(dim(H<sub>i</sub>) · dim(H<sub>j</sub>))</div>
+        <p data-lang="en">This coefficient is the geometric realization of the metric <strong>d(p, q)</strong> postulated in AIP topology. The observational distance between two perspectives is inversely proportional to γ<sub>ij</sub>: maximum shared dimensionality implies minimum AIP distance.</p>
+        <p data-lang="es" class="lang-hidden">Este coeficiente es la realización geométrica de la métrica <strong>d(p, q)</strong> postulada en la topología AIP. La distancia observacional entre dos perspectivas es inversamente proporcional a γ<sub>ij</sub>: máxima dimensionalidad compartida implica mínima distancia AIP.</p>
+
+        <div class="table-wrapper">
+            <table class="data-table">
+                <thead>
+                    <tr><th data-lang="en">Observer Pair</th><th data-lang="es" class="lang-hidden">Par de Observadores</th><th data-lang="en">Shared Dimensions</th><th data-lang="es" class="lang-hidden">Dimensiones Compartidas</th><th>γ<sub>ij</sub></th><th data-lang="en">d(p, q) AIP</th><th data-lang="es" class="lang-hidden">d(p, q) AIP</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td data-lang="en">Human – Human</td><td class="lang-hidden" data-lang="es">Humano – Humano</td><td>14 / 14</td><td>1.00</td><td data-lang="en">Minimal</td><td class="lang-hidden" data-lang="es">Mínima</td></tr>
+                    <tr><td data-lang="en">Human – Shamanic</td><td class="lang-hidden" data-lang="es">Humano – Chamánico</td><td>13 / 14–15</td><td>0.90</td><td data-lang="en">Very low</td><td class="lang-hidden" data-lang="es">Muy baja</td></tr>
+                    <tr><td data-lang="en">Human – AI</td><td class="lang-hidden" data-lang="es">Humano – IA</td><td>10 / 14–21</td><td>0.58</td><td data-lang="en">Moderate</td><td class="lang-hidden" data-lang="es">Moderada</td></tr>
+                    <tr><td data-lang="en">Human – Bat</td><td class="lang-hidden" data-lang="es">Humano – Murciélago</td><td>4 / 13–14</td><td>0.30</td><td data-lang="en">High</td><td class="lang-hidden" data-lang="es">Alta</td></tr>
+                    <tr><td data-lang="en">Human – Plant</td><td class="lang-hidden" data-lang="es">Humano – Planta</td><td>1 / 6–14</td><td>0.11</td><td data-lang="en">Very high</td><td class="lang-hidden" data-lang="es">Muy alta</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">4. PTU DUALITIES AS INTERNAL SYMMETRY OF P</h2>
+        <h2 class="lang-hidden" data-lang="es">4. LAS DUALIDADES TPU COMO SIMETRÍA INTERNA DE P</h2>
+        <div class="formula-center">Dual(p, q) := (p [+] q') = (p' [+] q)</div>
+        <p data-lang="en">When this equality holds, p and q are perceptual duals: they describe the same structure of M<sup>D</sup> from complementary compactifications.</p>
+        <p data-lang="es" class="lang-hidden">Cuando esta igualdad se sostiene, p y q son duales perceptuales: describen la misma estructura de M<sup>D</sup> desde compactificaciones complementarias.</p>
+
+        <h2 data-lang="en">5. PERCEPTUAL HOLOGRAPHY AND THE AIP IDENTITY ELEMENT</h2>
+        <h2 class="lang-hidden" data-lang="es">5. HOLOGRAFÍA PERCEPTUAL Y EL ELEMENTO IDENTIDAD AIP</h2>
+        <div class="formula-center">Reality(O<sub>i</sub>) = π<sub>i</sub>(S<sup>D</sup>)</div>
+        <div class="formula-center">π<sub>i</sub>(S) ∩ π<sub>j</sub>(S) ≠ ∅</div>
+
+        <h2 data-lang="en">6. PCI COLLAPSE, DEATH AND TOTAL COMPACTIFICATION</h2>
+        <h2 class="lang-hidden" data-lang="es">6. COLAPSO DE PCI, MUERTE Y COMPACTIFICACIÓN TOTAL</h2>
+        <div class="formula-center">dim(B<sub>i</sub> ∩ B<sub>j</sub>) → 0 ⇔ PCI → 0 ⇔ p → p'<sub>∞</sub></div>
+
+        <h2 data-lang="en">7. CANTOR'S SHADOW AND THE PROBLEM OF INCOMMENSURABILITY</h2>
+        <h2 class="lang-hidden" data-lang="es">7. LA SOMBRA DE CANTOR Y EL PROBLEMA DE LA INCONMENSURABILIDAD</h2>
+        <p data-lang="en">IPC as geometric volume of PTU —IPC<sub>i</sub> ∼ (∏ R<sub>α</sub>) · e<sup>S<sub>topo</sub></sup>— is precisely a measure of how much a brane deploys, not a fixed cardinality. Its exponential growth with topological entropy S<sub>topo</sub> ensures that the space of available perspectives is open and dynamic — the structure that AIP postulates for the set <strong>P</strong> from its axioms.</p>
+        <p data-lang="es" class="lang-hidden">El IPC como volumen geométrico de la TPU —IPC<sub>i</sub> ∼ (∏ R<sub>α</sub>) · e<sup>S<sub>topo</sub></sup>— es precisamente una medida de cuánto despliega una brana, no una cardinalidad fija. Su crecimiento exponencial con la entropía topológica S<sub>topo</sub> asegura que el espacio de perspectivas disponibles es abierto y dinámico — la estructura que la AIP postula para el conjunto <strong>P</strong> desde sus axiomas.</p>
+
+        <h2 data-lang="en">8. CLOSING NOTE: ON THE STATUS OF THIS CONNECTION</h2>
+        <h2 class="lang-hidden" data-lang="es">8. NOTA DE CIERRE: SOBRE EL ESTATUTO DE ESTA CONEXIÓN</h2>
+        <p data-lang="en">The connection established in this document is one of <em>mutual geometric interpretation</em>. The brane formalism of PTU provides AIP with a concrete spatial model in which its abstract operators acquire geometric realization. AIP provides the brane formalism with an algebraic structure that makes formally precise the operations that branes execute with each other.</p>
+        <p data-lang="es" class="lang-hidden">La conexión establecida en este documento es de <em>interpretación geométrica mutua</em>. El formalismo de branas de la TPU provee a la AIP de un modelo espacial concreto en el que sus operadores abstractos adquieren realización geométrica. La AIP provee al formalismo de branas de una estructura algebraica que hace formalmente precisas las operaciones que las branas ejecutan entre sí.</p>
+        <p data-lang="en">The most notable result of this connection is perhaps the simplest: the <em>Preservation of Paradox</em> of AIP —the algebraic fact that <em>p [+] p' ≠ ∅</em>— ceases to be an abstract statement. It has a direct geometric image: a brane that expands toward its own compactified dimensions does not collapse. It grows.</p>
+        <p data-lang="es" class="lang-hidden">El resultado más notable de esta conexión es quizás el más simple: la <em>Preservación de la Paradoja</em> de la AIP —el hecho algebraico de que <em>p [+] p' ≠ ∅</em>— deja de ser una afirmación abstracta. Tiene una imagen geométrica directa: una brana que se expande hacia sus propias dimensiones compactificadas no colapsa. Crece.</p>
+    </div>
+
+    <div class="back-footer">
+        <a href="../index.html" class="back-btn">
+            <span data-lang="en">← BACK TO SPACE</span>
+            <span data-lang="es" class="lang-hidden">← REGRESAR A SPACE</span>
+        </a>
+    </div>
+
+    <div class="footer">
+        <div class="footer-modules">
+            <a href="../../percepware/index.html"><span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span></a>
+            <span>|</span>
+            <a href="../../pci/index.html"><span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span></a>
+            <span>|</span>
+            <a href="../../aei/index.html"><span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span></a>
+            <span>|</span>
+            <a href="../../neohaki/index.html"><span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span></a>
+            <span>|</span>
+            <a href="../../pram/index.html"><span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span></a>
+            <span>|</span>
+            <a href="../../licence/index.html"><span data-lang="en">License</span><span data-lang="es" class="lang-hidden">Licencia</span></a>
+            <span>|</span>
+            <a href="../../bitneko/index.html"><span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span></a>
+            <span>|</span>
+            <a href="../index.html" class="footer-current"><span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span></a>
+            <span>|</span>
+            <a href="../../agamottor/index.html"><span data-lang="en">Agamottor</span><span data-lang="es" class="lang-hidden">Agamottor</span></a>
+            <span>|</span>
+            <a href="../../little-prince/index.html"><span data-lang="en">Little Prince</span><span data-lang="es" class="lang-hidden">Little Prince</span></a>
+            <span>|</span>
+            <a href="../../ptu/index.html"><span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span></a>
+            <span>|</span>
+            <a href="../../time-machine/index.html"><span data-lang="en">Time Machine</span><span data-lang="es" class="lang-hidden">Máquina del Tiempo</span></a>
+            <span>|</span>
+            <a href="../../poetry/index.html"><span data-lang="en">Poetry</span><span data-lang="es" class="lang-hidden">Poesía</span></a>
+        </div>
+        <div class="footer-social">
+            <a href="https://orcid.org/0009-0002-3432-1710" target="_blank" rel="noopener"><span data-lang="en">ORCID</span><span data-lang="es" class="lang-hidden">ORCID</span></a>
+            <span> / </span>
+            <a href="https://github.com/PERCEPTEMPLE" target="_blank" rel="noopener"><span data-lang="en">GITHUB</span><span data-lang="es" class="lang-hidden">GITHUB</span></a>
+            <span> / </span>
+            <a href="https://x.com/panperceptual" target="_blank" rel="noopener"><span data-lang="en">X</span><span data-lang="es" class="lang-hidden">X</span></a>
+        </div>
+        <div class="footer-bottom">
+            <span data-lang="en">DEPOSITED IN THE INTELLECTUAL PROPERTY REGISTRY · EL SALVADOR · DANY D. RUIZ</span>
+            <span data-lang="es" class="lang-hidden">DEPOSITADO EN EL REGISTRO DE LA PROPIEDAD INTELECTUAL · EL SALVADOR · DANY D. RUIZ</span>
+            <br>
+            <span data-lang="en">Before They See Us, We Already Are</span>
+            <span data-lang="es" class="lang-hidden">Antes de que nos vean, ya somos</span>
+        </div>
+    </div>
+
+    <script>
+        function toggleLanguage() {
+            var html    = document.documentElement;
+            var current = html.lang || 'en';
+            var next    = current === 'en' ? 'es' : 'en';
+            var hide    = next === 'en' ? 'es' : 'en';
+            html.lang = next;
+            document.querySelectorAll('[data-lang="' + next + '"]')
+                .forEach(function(el) { el.classList.remove('lang-hidden'); });
+            document.querySelectorAll('[data-lang="' + hide + '"]')
+                .forEach(function(el) { el.classList.add('lang-hidden'); });
+            document.getElementById('langToggle').textContent =
+                next === 'en' ? 'ES' : 'EN';
+            localStorage.setItem('perceptemple-lang', next);
+        }
+        (function() {
+            var saved = localStorage.getItem('perceptemple-lang');
+            if (saved && saved === 'es') { toggleLanguage(); }
+        })();
+    </script>
+</body>
+</html>
