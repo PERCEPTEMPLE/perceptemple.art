@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERCEPTEMPLE</title>
+    
+    <meta name="description" content="Conceptual weapon designed to collapse epistemological frameworks through the Perceptual Resonance Atomic Model. The PRAM Core carries a seven-layer cognitive-perceptual network.">
+    <meta name="author" content="Dany D. Ruiz">
+    <meta name="last-modified" content="2026-06-07">
+    <meta name="keywords" content="Perceptual Resonance Atomic Model, PRAM, PWF, PTU, Dany D. Ruiz, PERCEPTEMPLE, Panperceptual Theory of the Universe">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://perceptemple.art/pram/">
+    
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="PRAM · Perceptual Resonance Atomic Model · PERCEPTEMPLE">
+    <meta property="og:description" content="Conceptual weapon designed to collapse epistemological frameworks through the Perceptual Resonance Atomic Model. The PRAM Core carries a seven-layer cognitive-perceptual network.">
+    <meta property="og:url" content="https://perceptemple.art/pram/">
+    <meta property="og:site_name" content="PERCEPTEMPLE">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_SV">
+    <meta property="og:image" content="https://perceptemple.art/preview.jpg">
+    <meta property="og:image:alt" content="PERCEPTEMPLE — PRAM · Perceptual Resonance Atomic Model">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@panperceptual">
+    <meta name="twitter:creator" content="@panperceptual">
+    <meta name="twitter:title" content="PRAM · Perceptual Resonance Atomic Model · PERCEPTEMPLE">
+    <meta name="twitter:description" content="Conceptual weapon designed to collapse epistemological frameworks through the Perceptual Resonance Atomic Model. The PRAM Core carries a seven-layer cognitive-perceptual network.">
+    <meta name="twitter:image" content="https://perceptemple.art/preview.jpg">
+    
+    <meta name="citation_title" content="PRAM · Perceptual Resonance Atomic Model">
+    <meta name="citation_author" content="Ruiz, Dany D.">
+    <meta name="citation_publication_date" content="2025">
+    <meta name="citation_online_date" content="2025">
+    <meta name="citation_publisher" content="PERCEPTEMPLE">
+    <meta name="citation_language" content="en">
+    <meta name="DC.title" content="PRAM · Perceptual Resonance Atomic Model">
+    <meta name="DC.creator" content="Dany D. Ruiz">
+    <meta name="DC.publisher" content="PERCEPTEMPLE">
+    <meta name="DC.language" content="en">
+    <meta name="DC.rights" content="https://perceptemple.art/licence/">
+    
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:#010603;--panel-dark:#000100;--rule:#0c471a;--rule-dim:rgba(12,71,26,0.4);
+            --hi:#00ff41;--hi2:#39ff14;--amber:#ff9f00;--amber2:#ffc200;
+            --txt:rgba(0,255,65,0.75);--txt2:rgba(0,255,65,0.9);--txt3:rgba(0,255,65,0.3);
+            --white:#39ff14;
+            --red:#ff3333;
+            --fs-xs: clamp(0.65rem, 1.2vw, 0.75rem);
+            --fs-sm: clamp(0.75rem, 1.4vw, 0.85rem);
+            --fs-md: clamp(0.8rem, 1.6vw, 1rem);
+            --fs-lg: clamp(1rem, 2vw, 1.25rem);
+            --fs-xl: clamp(1.25rem, 3vw, 1.75rem);
+        }
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        .lang-hidden{display:none!important}
+        body{
+            background:var(--bg);color:var(--txt2);
+            font-family:'Share Tech Mono',monospace;font-weight:400;
+            min-height:100vh;overflow-x:hidden;line-height:1.6;
+            display:flex;flex-direction:column;align-items:center;
+            animation:fadeUp 0.4s ease both;
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+            text-rendering:optimizeLegibility;
+        }
+        body::before{
+            content:'';position:fixed;inset:0;
+            background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.12) 3px,rgba(0,0,0,0.12) 6px);
+            pointer-events:none;z-index:9999;
+        }
+        body::after{
+            content:'';position:fixed;inset:0;
+            background-image:linear-gradient(rgba(0,255,65,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,65,0.02) 1px,transparent 1px);
+            background-size:80px 80px;pointer-events:none;z-index:9998;
+        }
+        .bracket{position:fixed;color:rgba(0,255,65,0.12);font-family:'Orbitron',sans-serif;font-size:1.5rem;pointer-events:none;z-index:10000}
+        .bracket-tl{top:16px;left:20px}.bracket-tr{top:16px;right:20px}
+        .bracket-bl{bottom:16px;left:20px}.bracket-br{bottom:16px;right:20px}
+        .pch-btn{display:inline-block;margin-top:6px;background:transparent;border:1px solid var(--red);color:var(--red);font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;text-decoration:none;border-radius:2px;font-weight:700;white-space:nowrap;transition:all 0.2s}
+        .pch-btn:hover{background:rgba(255,51,51,0.08)}
+        .stamp-link{display:inline-block;border:2px solid var(--red);color:var(--red);font-family:'Orbitron',sans-serif;font-size:0.7rem;font-weight:700;padding:4px 12px;letter-spacing:3px;text-transform:uppercase;text-decoration:none;transition:all 0.2s;width:fit-content;cursor:pointer}
+        .stamp-link:hover{background:rgba(255,51,51,0.08);color:#ff5555;border-color:#ff5555;box-shadow:0 0 10px rgba(255,51,51,0.2)}
+        .translate-btn{position:relative;top:auto;right:auto;z-index:auto;background:var(--bg);border:1px solid var(--amber);color:var(--amber);font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;padding:0.4rem 0.8rem;cursor:pointer;transition:all 0.2s;border-radius:2px;font-weight:600;white-space:nowrap}
+        .translate-btn:hover{background:rgba(255,159,0,0.1);color:var(--amber2);border-color:var(--amber2)}
+        .header{width:100%;max-width:75rem;display:flex;align-items:center;justify-content:space-between;padding:1.25rem 2rem;border-bottom:1px solid var(--rule);background:var(--bg);position:relative;z-index:100;flex-wrap:wrap;gap:0.75rem}
+        .logo-mark{font-family:'Orbitron',sans-serif;font-size:1.2rem;color:var(--hi);letter-spacing:2px;font-weight:700}
+        .header-nav{display:flex;gap:1.5rem;flex-wrap:wrap;align-items:center}
+        .nav-link{font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:2px;text-transform:uppercase;color:var(--txt3);text-decoration:none;transition:color 0.2s;font-weight:500;white-space:nowrap}
+        .nav-link:hover,.nav-link.highlight{color:var(--hi)}
+        .section-label{width:100%;max-width:60rem;padding:0.8125rem 2rem;border-bottom:1px solid var(--rule);font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:4px;text-transform:uppercase;color:var(--amber);display:flex;align-items:center;gap:0.875rem;font-weight:600}
+        .section-label::after{content:'';flex:1;height:1px;background:var(--rule);min-width:20px}
+
+        .hero{width:100%;max-width:60rem;padding:3rem 2rem;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+        .hero-left{display:flex;flex-direction:column;gap:1rem}
+        .stamp{display:inline-block;border:2px solid var(--red);color:var(--red);font-family:'Orbitron',sans-serif;font-size:0.7rem;font-weight:700;padding:4px 12px;letter-spacing:3px;width:fit-content;text-transform:uppercase}
+        .hero-tag{font-size:var(--fs-xs);letter-spacing:3px;color:var(--txt3);text-transform:uppercase}
+        .hero-title{font-family:'Orbitron',sans-serif;font-size:clamp(1.8rem,4vw,3rem);line-height:0.95;color:var(--hi2);font-weight:800;word-break:break-word}
+        .hero-title .sub{font-size:0.7rem;color:var(--txt3);display:block;letter-spacing:1px;margin-top:6px;font-weight:400}
+        .hero-designator{font-family:'Orbitron',sans-serif;font-size:0.7rem;color:var(--amber);letter-spacing:2px}
+        .hero-desc{font-size:var(--fs-xs);color:var(--txt);line-height:1.8;border-left:2px solid var(--rule);padding-left:1rem;max-width:45ch;word-break:break-word}
+        .spec-mini{display:grid;grid-template-columns:1fr 1fr;gap:1px;border:1px solid var(--rule);margin-top:0.5rem}
+        .spec-row{padding:0.5rem 0.75rem;background:rgba(0,255,65,0.02);display:flex;flex-direction:column;gap:2px}
+        .spec-row:nth-child(odd){background:rgba(0,255,65,0.04)}
+        .spec-k{font-size:var(--fs-xs);letter-spacing:2px;color:var(--txt3);text-transform:uppercase}
+        .spec-v{font-size:0.7rem;color:var(--hi);font-family:'Orbitron',sans-serif;font-weight:700}
+        .hero-right{display:flex;align-items:center;justify-content:center}
+        .hero-right img{width:100%;max-width:460px;height:auto;filter:drop-shadow(0 0 22px rgba(0,255,65,0.25))}
+
+        .content-section{width:100%;max-width:60rem;padding:3rem 2rem;border-bottom:1px solid var(--rule)}
+        .content-section p{max-width:70ch;word-break:break-word}
+        .content-section li{max-width:70ch;word-break:break-word}
+        .sec-head{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding-bottom:0.6rem;border-bottom:1px solid var(--rule)}
+        .sec-num{font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);font-weight:700;background:var(--hi);color:var(--bg);padding:3px 8px;letter-spacing:2px;flex-shrink:0}
+        .sec-title{font-family:'Orbitron',sans-serif;font-size:0.75rem;font-weight:700;color:var(--hi);text-transform:uppercase;letter-spacing:2px;word-break:break-word}
+        .sec-sub{font-size:var(--fs-xs);color:var(--txt3);letter-spacing:1px;margin-left:auto}
+
+        .blueprint-grid{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule)}
+        .bp-cell{background:var(--panel-dark);padding:1.5rem;position:relative;display:flex;align-items:center;justify-content:center;min-height:200px}
+        .bp-label{position:absolute;top:10px;left:14px;font-size:var(--fs-xs);letter-spacing:2px;color:var(--txt3);text-transform:uppercase}
+        .bp-main{grid-row:1/3;border-right:1px solid var(--rule)}
+        .bp-cell img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 0 8px rgba(0,255,65,0.15))}
+
+        /* PRAM CORE */
+        .nucleus-wrap{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start}
+        .nucleus-diagram{border:1px solid var(--rule);background:var(--panel-dark);padding:2rem;display:flex;align-items:center;justify-content:center;min-height:360px;position:relative;overflow:hidden}
+        .nucleus-diagram::before{content:'CROSS SECTION · PRAM CORE';position:absolute;top:10px;left:14px;font-size:var(--fs-xs);letter-spacing:2px;color:var(--txt3);text-transform:uppercase;z-index:2}
+        .nucleus-svg{width:100%;max-width:340px;height:auto;position:relative;z-index:1}
+        @keyframes orbit-outer{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+        @keyframes orbit-inner{from{transform:rotate(360deg)}to{transform:rotate(0deg)}}
+        @keyframes pulse-core{0%,100%{r:30;opacity:0.6}50%{r:35;opacity:0.95}}
+        @keyframes pulse-center{0%,100%{r:7;fill:#00ff41}50%{r:10;fill:#39ff14}}
+        @keyframes resonate-lines{0%,100%{stroke-opacity:0.15}50%{stroke-opacity:0.6}}
+        @keyframes float-particle{0%{transform:translate(0,0);opacity:0}20%{opacity:0.8}100%{transform:translate(var(--dx),var(--dy));opacity:0}}
+        @keyframes scan-nodes{0%,100%{fill:#010603}10%{fill:rgba(0,255,65,0.15)}20%{fill:#010603}}
+        .orbit-outer{animation:orbit-outer 24s linear infinite;transform-origin:170px 170px}
+        .orbit-inner{animation:orbit-inner 18s linear infinite;transform-origin:170px 170px}
+        .pulse-core{animation:pulse-core 3.5s ease-in-out infinite}
+        .pulse-center{animation:pulse-center 2.5s ease-in-out infinite}
+        .resonate-lines{animation:resonate-lines 5s ease-in-out infinite}
+        .particle-1{animation:float-particle 6s ease-in infinite;--dx:40px;--dy:-50px}
+        .particle-2{animation:float-particle 8s ease-in 2s infinite;--dx:-35px;--dy:45px}
+        .particle-3{animation:float-particle 7s ease-in 4s infinite;--dx:30px;--dy:30px}
+        .particle-4{animation:float-particle 9s ease-in 1s infinite;--dx:-40px;--dy:-30px}
+        .scan-node{animation:scan-nodes 8s ease-in-out infinite}
+        .scan-node:nth-child(1){animation-delay:0s}
+        .scan-node:nth-child(2){animation-delay:0.6s}
+        .scan-node:nth-child(3){animation-delay:1.2s}
+        .scan-node:nth-child(4){animation-delay:1.8s}
+        .scan-node:nth-child(5){animation-delay:2.4s}
+        .scan-node:nth-child(6){animation-delay:3s}
+
+        .nucleus-data{display:flex;flex-direction:column;gap:0.75rem}
+        .data-block{border:1px solid var(--rule);padding:1rem 1.25rem;background:rgba(0,255,65,0.02);position:relative}
+        .data-block::before{content:attr(data-label);position:absolute;top:-8px;left:12px;background:var(--bg);padding:0 8px;font-size:var(--fs-xs);letter-spacing:2px;color:var(--hi)}
+        .data-block p{font-size:var(--fs-xs);color:var(--txt);line-height:1.8;margin:0;word-break:break-word}
+        .data-block .eq{font-family:'Share Tech Mono',monospace;font-size:var(--fs-xs);color:var(--amber);margin:6px 0 0;word-break:break-word}
+
+        /* 7 PRINCIPLES + CLASSIFIED BUTTON */
+        .p-scroll{display:grid;grid-template-columns:repeat(8,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule)}
+        .p-card{background:var(--panel-dark);padding:1.25rem 0.75rem;position:relative;overflow:hidden;transition:background 0.2s}
+        .p-card:hover{background:rgba(0,255,65,0.03)}
+        .p-card::before{content:attr(data-n);font-family:'Orbitron',sans-serif;font-size:2.8rem;font-weight:900;color:rgba(0,255,65,0.04);position:absolute;bottom:-6px;right:-4px;line-height:1}
+        .p-card h4{font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);font-weight:700;color:var(--hi);text-transform:uppercase;letter-spacing:1px;margin-bottom:0.4rem;word-break:break-word}
+        .p-card .p-eq{font-family:'Share Tech Mono',monospace;font-size:var(--fs-xs);color:var(--amber);background:rgba(255,159,0,0.06);padding:3px 5px;border-left:2px solid var(--amber);margin:4px 0;word-break:break-all}
+        .p-card p{font-size:var(--fs-xs);color:var(--txt);margin:0;line-height:1.4;word-break:break-word}
+        /* Classified button */
+        .classified-btn{background:var(--panel-dark);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.3s ease;position:relative;overflow:hidden;min-height:100%}
+        .classified-btn:hover{background:rgba(255,51,51,0.06);border-color:var(--red)}
+        .classified-btn .cls-text{font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;transition:all 0.3s ease}
+        .classified-btn:hover .cls-text{color:#ff5555;text-shadow:0 0 12px rgba(255,51,51,0.5)}
+        .classified-btn::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 4px,rgba(255,51,51,0.03) 4px,rgba(255,51,51,0.03) 8px);pointer-events:none}
+
+        .ops-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule)}
+        .ops-card{background:var(--panel-dark);padding:1.5rem 1rem;text-align:center}
+        .ops-card .o-sys{font-size:var(--fs-xs);letter-spacing:1px;color:var(--txt3);text-transform:uppercase;margin-bottom:6px}
+        .ops-card .o-val{font-family:'Orbitron',sans-serif;font-size:1.4rem;font-weight:700;color:var(--hi);line-height:1;margin:4px 0}
+        .ops-card .o-sub{font-size:var(--fs-xs);color:var(--txt3);letter-spacing:1px}
+        .status{display:inline-flex;align-items:center;gap:5px;font-size:var(--fs-xs);letter-spacing:1px;color:var(--hi);margin-top:8px}
+        .status-dot{width:5px;height:5px;border-radius:50%;background:var(--hi);box-shadow:0 0 6px var(--hi);animation:pulse-dot 2s infinite}
+        @keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:0.3}}
+
+        .table-wrapper{width:100%;overflow-x:auto;border:1px solid var(--rule);-webkit-overflow-scrolling:touch}
+        .pw-table{width:100%;border-collapse:collapse;font-family:'Share Tech Mono',monospace;font-size:var(--fs-xs)}
+        .pw-table th{text-align:left;padding:0.5rem 0.6rem;background:var(--bg);color:var(--amber);font-family:'Orbitron',sans-serif;font-weight:600;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--rule);font-size:var(--fs-xs);white-space:nowrap}
+        .pw-table td{padding:0.5rem 0.6rem;color:var(--txt);border-bottom:1px solid rgba(12,71,26,0.3);white-space:nowrap}
+        .pw-table tr:hover td{background:rgba(0,255,65,0.02)}
+        .bar-cell{width:80px}
+        .bar-wrap{height:3px;background:rgba(0,255,65,0.08)}
+        .bar-fill{height:3px;background:var(--hi);box-shadow:0 0 6px var(--hi)}
+
+        .manifesto{border:1px solid var(--rule);padding:2rem;background:rgba(0,255,65,0.02)}
+        .manifesto blockquote{font-family:'Rajdhani',sans-serif;font-size:var(--fs-md);font-weight:300;line-height:1.6;color:var(--txt);border:none;word-break:break-word}
+        .manifesto blockquote em{font-style:normal;color:var(--hi);font-weight:600}
+
+        /* PYRAMID */
+        .pyramid-section{width:100%;max-width:60rem;padding:3rem 2rem;border-bottom:1px solid var(--rule);text-align:center}
+        .pyramid-section h2{font-family:'Orbitron',sans-serif;font-size:1.2rem;color:var(--hi2);margin-bottom:0.5rem;font-weight:700;letter-spacing:2px;word-break:break-word}
+        .pyramid-subtitle{font-size:var(--fs-xs);color:var(--txt3);letter-spacing:2px;text-transform:uppercase;margin-bottom:2rem}
+        .pyramid-wrapper{display:flex;align-items:center;justify-content:center;gap:1rem;max-width:600px;margin:0 auto}
+        .pyramid-side-label{font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);color:rgba(0,255,65,0.3);text-transform:uppercase;letter-spacing:2px;writing-mode:vertical-rl;text-orientation:mixed;white-space:nowrap;flex-shrink:0}
+        .pyramid-container{display:flex;flex-direction:column;align-items:center;width:100%;max-width:480px;padding:0.5rem 0}
+        .pyramid-level{width:100%;margin-bottom:0;display:flex;justify-content:center}
+        .pyramid-box{border:1.5px solid var(--hi);border-radius:2px;background:var(--panel-dark);padding:1rem 1.25rem;width:100%;box-shadow:0 0 18px rgba(0,255,65,0.06),inset 0 0 18px rgba(0,255,65,0.02);transition:box-shadow 0.3s ease}
+        .pyramid-box:hover{box-shadow:0 0 24px rgba(0,255,65,0.12)}
+        .pyramid-content{display:flex;flex-direction:column;align-items:center;gap:6px}
+        .pyramid-num{font-family:'Orbitron',sans-serif;font-size:2rem;font-weight:900;color:rgba(0,255,65,0.35);text-align:center;line-height:1}
+        .pyramid-info{text-align:center}
+        .pyramid-title{font-family:'Orbitron',sans-serif;font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--hi);margin-bottom:3px;word-break:break-word}
+        .pyramid-desc{font-size:var(--fs-xs);color:var(--txt3);letter-spacing:1px}
+        .pyramid-connector{width:2px;height:20px;background:var(--hi);margin:0 auto;box-shadow:0 0 8px rgba(0,255,65,0.4)}
+        .pyramid-footer{font-size:var(--fs-xs);color:var(--txt3);letter-spacing:1px;margin-top:1rem}
+        .pyramid-manifesto{border:1px solid var(--rule);padding:2rem;background:rgba(0,255,65,0.02);margin-top:2rem;text-align:left}
+        .pyramid-manifesto-text{font-family:'Rajdhani',sans-serif;font-size:0.8rem;font-weight:300;line-height:1.8;color:var(--txt)}
+        .pyramid-manifesto-text p{margin-bottom:1em;word-break:break-word}
+        .pyramid-manifesto-text .highlight{color:var(--hi);font-weight:600}
+        .pyramid-manifesto-text .emphasis{color:var(--amber);font-style:italic}
+        .pyramid-end{text-align:center;font-size:var(--fs-xs);color:var(--txt3);letter-spacing:2px;margin-top:1.5rem}
+
+        /* Imágenes y SVG universales */
+        img{max-width:100%;height:auto;display:block}
+        svg{max-width:100%;height:auto}
+
+        a{color:var(--hi);text-decoration:none;transition:color 0.2s}
+        a:hover{color:var(--hi2)}
+        .footer{width:100%;max-width:60rem;padding:1.625rem 2rem;border-top:1px solid var(--rule);position:relative;z-index:50}
+        .footer-modules{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;margin-bottom:0.875rem}
+        .footer-modules a{font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:2px;color:var(--txt3);text-decoration:none;transition:color 0.2s;font-weight:500;white-space:nowrap;text-transform:uppercase}
+        .footer-modules a:hover,.footer-modules a.footer-current{color:var(--hi)}
+        .footer-modules span{color:var(--rule);font-family:'Orbitron',sans-serif;font-size:var(--fs-xs)}
+        .footer-social{text-align:center;margin-bottom:0.875rem;font-family:'Share Tech Mono',monospace;font-size:var(--fs-xs);color:var(--amber)}
+        .footer-social a{color:var(--amber);text-decoration:none;transition:color 0.2s}
+        .footer-social a:hover{color:var(--hi)}
+        .footer-social span{color:var(--rule)}
+        .footer-bottom{text-align:center;font-family:'Rajdhani',sans-serif;font-size:var(--fs-xs);color:rgba(0,255,65,0.25);line-height:1.8;letter-spacing:1px;font-weight:500}
+        @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+        @media(max-width:1024px){
+            .header{gap:0.75rem}
+            .hero{gap:1.5rem}
+            .hero-desc{font-size:var(--fs-xs)}
+            .sec-title{font-size:clamp(0.7rem,1.6vw,0.8rem)}
+            .manifesto blockquote{font-size:clamp(0.75rem,1.8vw,0.9rem)}
+            .spec-k{font-size:var(--fs-xs)}
+            .spec-v{font-size:var(--fs-xs)}
+            .nav-link{font-size:var(--fs-xs)}
+            .section-label{font-size:var(--fs-xs)}
+            .footer-modules a{font-size:var(--fs-xs)}
+            .footer-social{font-size:var(--fs-xs)}
+            .footer-bottom{font-size:var(--fs-xs)}
+        }
+        @media(max-width:900px){
+            .hero{grid-template-columns:1fr}.hero-right{display:none}
+            .blueprint-grid{grid-template-columns:1fr}.bp-main{grid-row:auto;border-right:none;border-bottom:1px solid var(--rule)}
+            .nucleus-wrap{grid-template-columns:1fr}
+            .p-scroll{grid-template-columns:repeat(4,1fr)}
+            .ops-grid{grid-template-columns:repeat(2,1fr)}
+            .pyramid-wrapper{flex-direction:column;gap:0.5rem}
+            .pyramid-side-label{writing-mode:horizontal-tb;text-orientation:mixed}
+        }
+        @media(max-width:768px){
+            .header{
+                padding:1rem 1.5rem;
+                flex-direction:column;
+                align-items:flex-start;
+            }
+            .header-nav{
+                width:100%;
+                gap:1rem;
+                overflow-x:auto;
+                flex-wrap:nowrap;
+                padding-bottom:4px;
+                -webkit-overflow-scrolling:touch;
+                scrollbar-width:none;
+            }
+            .header-nav::-webkit-scrollbar{display:none}
+            .hero{
+                grid-template-columns:1fr;
+                padding:2.5rem 1.5rem 2.25rem;
+                gap:1.5rem;
+            }
+            .hero-right{min-height:200px}
+            .content-section{padding:2rem 1.5rem}
+            .section-label{padding:0.8125rem 1.5rem}
+            .footer{padding:1.25rem 1.5rem}
+            .hero-actions{flex-direction:column}
+            .btn-primary,.btn-secondary{text-align:center;width:100%}
+            [class*="grid"],[class*="cols"],[class*="columns"]{grid-template-columns:1fr!important}
+        }
+        @media(max-width:480px){
+            .header{padding:0.75rem 1rem}
+            .hero,.content-section,.pyramid-section{padding:1.75rem 1rem 1.5rem}
+            .section-label{padding:0.8125rem 1.5rem}
+            .footer{padding:1rem}
+            .footer-modules{gap:0.75rem}
+            .p-scroll{grid-template-columns:repeat(2,1fr)}
+            .ops-grid{grid-template-columns:1fr}
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0002-3432-1710",
+      "name": "Dany D. Ruiz",
+      "alternateName": "panperceptual",
+      "jobTitle": "Anartist · Independent Researcher",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "url": "https://perceptemple.art",
+      "sameAs": [
+        "https://orcid.org/0009-0002-3432-1710",
+        "https://x.com/panperceptual",
+        "https://github.com/PERCEPTEMPLE",
+        "https://doi.org/10.17605/OSF.IO/FVCAX",
+        "https://doi.org/10.5281/zenodo.17683631",
+        "https://doi.org/10.2139/ssrn.5794102"
+      ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "headline": "PRAM · Perceptual Resonance Atomic Model",
+      "description": "Conceptual weapon designed to collapse epistemological frameworks through the Perceptual Resonance Atomic Model. The PRAM Core carries a seven-layer cognitive-perceptual network.",
+      "datePublished": "2026-06-07",
+      "dateModified": "2026-06-07",
+      "inLanguage": "en",
+      "url": "https://perceptemple.art/pram/",
+      "author": {
+        "@type": "Person",
+        "@id": "https://orcid.org/0009-0002-3432-1710",
+        "name": "Dany D. Ruiz"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "isPartOf": {
+        "@type": "Book",
+        "name": "Panperceptual Theory of the Universe",
+        "url": "https://perceptemple.art/ptu/"
+      },
+      "license": "https://perceptemple.art/licence/",
+      "sameAs": [
+        "https://doi.org/10.17605/OSF.IO/UXEGH",
+        "https://doi.org/10.5281/zenodo.19168519",
+        "https://doi.org/10.2139/ssrn.6456099"
+      ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DefinedTerm",
+      "name": "Perceptual Resonance Atomic Model",
+      "alternateName": "PRAM",
+      "description": "Cognitive-perceptual network replacing the proton core with Central Perception and electrons with sensory, cognitive, and physical wave functions, forming the conceptual warhead of the PRAM-DR·I.",
+      "datePublished": "2026-06-07",
+      "dateModified": "2026-06-07",
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": "Panperceptual Theory of the Universe — Glossary",
+        "url": "https://perceptemple.art/aei/glossary/"
+      },
+      "url": "https://perceptemple.art/pram/",
+      "creator": {
+        "@type": "Person",
+        "@id": "https://orcid.org/0009-0002-3432-1710",
+        "name": "Dany D. Ruiz"
+      }
+    }
+    </script>
+</head>
+<body>
+
+<span class="bracket bracket-tl">[</span><span class="bracket bracket-tr">]</span>
+<span class="bracket bracket-bl">[</span><span class="bracket bracket-br">]</span>
+
+<div class="header">
+    <div class="logo"><span class="logo-mark" data-lang="en">PRAM</span><span class="logo-mark lang-hidden" data-lang="es">PRAM</span><br><a class="pch-btn" href="../index.html"><span data-lang="en">HUMAN CONSCIOUSNESS TEST</span><span data-lang="es" class="lang-hidden">PRUEBA DE CONCIENCIA HUMANA</span></a></div>
+    <nav class="header-nav">
+        <a class="nav-link" href="../percepware/index.html"><span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span></a>
+        <a class="nav-link" href="../pci/index.html"><span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span></a>
+        <a class="nav-link" href="../aei/index.html"><span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span></a>
+        <a class="nav-link" href="../neohaki/index.html"><span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span></a>
+        <a class="nav-link highlight" href="index.html"><span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span></a>
+        <a class="nav-link" href="../licence/index.html"><span data-lang="en">LICENSE</span><span data-lang="es" class="lang-hidden">LICENCIA</span></a>
+        <a class="nav-link" href="../bitneko/index.html"><span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span></a>
+        <a class="nav-link" href="../space/index.html"><span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span></a>
+        <a class="nav-link" href="../agamottor/index.html"><span data-lang="en">AGAMOTTOR</span><span data-lang="es" class="lang-hidden">AGAMOTTOR</span></a>
+        <a class="nav-link" href="../little-prince/index.html"><span data-lang="en">LITTLE PRINCE</span><span data-lang="es" class="lang-hidden">LITTLE PRINCE</span></a>
+        <a class="nav-link" href="../ptu/index.html"><span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span></a>
+        <a class="nav-link" href="../time-machine/index.html"><span data-lang="en">TIME MACHINE</span><span data-lang="es" class="lang-hidden">MÁQUINA DEL TIEMPO</span></a>
+        <a class="nav-link" href="../poetry/index.html"><span data-lang="en">POETRY</span><span data-lang="es" class="lang-hidden">POESÍA</span></a>
+        <button class="translate-btn" id="langToggle" onclick="toggleLanguage()">ES</button>
+    </nav>
+</div>
+
+<div class="hero">
+    <div class="hero-left">
+        <a class="stamp-link" href="../ptu/part-10/index.html"><span data-lang="en">CONCEPTUAL WEAPON</span><span data-lang="es" class="lang-hidden">ARMA CONCEPTUAL</span></a>
+        <div class="hero-tag" data-lang="en">PercepTemple · Cognitive Weaponry </div><div class="hero-tag lang-hidden" data-lang="es">PercepTemple · Armamento Cognitivo </div>
+        <h1 class="hero-title">PRAM<br>DR·I<span class="sub" data-lang="en">Perceptual Resonance Atomic Missile</span><span class="sub lang-hidden" data-lang="es">Misil Atómico de Resonancia Perceptual</span></h1>
+        <div class="hero-designator">PTU/ART/PRAM-001 · PWF-Ω</div>
+        <p class="hero-desc" data-lang="en">Conceptual weapon designed to detonate within perception. The PRAM-DR·I does not destroy infrastructure — it collapses the observer's epistemological frameworks. Its warhead is the PRAM Core: a seven-layer cognitive-perceptual network capable of inducing resonance between matter, mind, and cosmos.</p>
+        <p class="hero-desc lang-hidden" data-lang="es">Arma conceptual diseñada para detonar dentro de la percepción. El PRAM-DR·I no destruye infraestructura — colapsa los marcos epistemológicos del observador. Su ogiva es el Núcleo PRAM: una red cognitivo-perceptual de siete capas capaz de inducir resonancia entre materia, mente y cosmos.</p>
+        <div class="spec-mini">
+            <div class="spec-row"><span class="spec-k" data-lang="en">Classification</span><span class="spec-k lang-hidden" data-lang="es">Clasificación</span><span class="spec-v" data-lang="en">ART / CONCEPT</span><span class="spec-v lang-hidden" data-lang="es">ARTE / CONCEPTO</span></div>
+            <div class="spec-row"><span class="spec-k" data-lang="en">Length</span><span class="spec-k lang-hidden" data-lang="es">Longitud</span><span class="spec-v">1000 mm</span></div>
+            <div class="spec-row"><span class="spec-k" data-lang="en">Core</span><span class="spec-k lang-hidden" data-lang="es">Núcleo</span><span class="spec-v">PWF-Ω / PRAM</span></div>
+            <div class="spec-row"><span class="spec-k" data-lang="en">Material</span><span class="spec-k lang-hidden" data-lang="es">Material</span><span class="spec-v" data-lang="en">COTTON</span><span class="spec-v lang-hidden" data-lang="es">ALGODÓN</span></div>
+        </div>
+    </div>
+    <div class="hero-right"><img src="PRAM_XYZ.webp" alt="PRAM DR-I Overview"></div>
+</div>
+
+<div class="section-label" data-lang="en">Technical Blueprints · Orthogonal Views</div><div class="section-label lang-hidden" data-lang="es">Planos Técnicos · Vistas Ortogonales</div>
+<div class="content-section">
+    <div class="sec-head"><span class="sec-num">DOC-01</span><span class="sec-title" data-lang="en">Orthogonal Views</span><span class="sec-title lang-hidden" data-lang="es">Vistas Ortogonales</span><span class="sec-sub">PRAM-DR·I</span></div>
+    <div class="blueprint-grid">
+        <div class="bp-cell bp-main"><div class="bp-label" data-lang="en">SIDE VIEW</div><div class="bp-label lang-hidden" data-lang="es">VISTA LATERAL</div><img src="PRAM_X.webp" alt="PRAM Side View"></div>
+        <div class="bp-cell" style="border-bottom:1px solid var(--rule);"><div class="bp-label" data-lang="en">FRONT VIEW</div><div class="bp-label lang-hidden" data-lang="es">VISTA FRONTAL</div><img src="PRAM_1.webp" alt="PRAM Front View"></div>
+        <div class="bp-cell"><div class="bp-label" data-lang="en">REAR VIEW</div><div class="bp-label lang-hidden" data-lang="es">VISTA TRASERA</div><img src="PRAM_-1.webp" alt="PRAM Rear View"></div>
+    </div>
+</div>
+
+<div class="section-label" data-lang="en">PRAM Core · Internal Architecture</div><div class="section-label lang-hidden" data-lang="es">Núcleo PRAM · Arquitectura Interna</div>
+<div class="content-section">
+    <div class="sec-head"><span class="sec-num">DOC-02</span><span class="sec-title" data-lang="en">PRAM Core</span><span class="sec-title lang-hidden" data-lang="es">Núcleo PRAM</span><span class="sec-sub">PWF-Ω · LIVING ORGANISM</span></div>
+    <div class="nucleus-wrap">
+        <div class="nucleus-diagram">
+            <svg viewBox="0 0 340 340" class="nucleus-svg" xmlns="http://www.w3.org/2000/svg">
+                <defs><radialGradient id="ng" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#00ff41" stop-opacity="0.35"/><stop offset="100%" stop-color="#00ff41" stop-opacity="0"/></radialGradient><filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+                <g class="orbit-outer"><ellipse cx="170" cy="170" rx="148" ry="144" fill="none" stroke="rgba(0,255,65,0.06)" stroke-width="1" stroke-dasharray="8,7"/></g>
+                <g class="orbit-inner"><ellipse cx="170" cy="170" rx="108" ry="104" fill="none" stroke="rgba(0,255,65,0.1)" stroke-width="1" stroke-dasharray="5,5"/></g>
+                <ellipse cx="170" cy="170" rx="64" ry="62" fill="none" stroke="rgba(0,255,65,0.18)" stroke-width="1" stroke-dasharray="3,3"/>
+                <circle cx="170" cy="170" r="34" fill="url(#ng)" stroke="#00ff41" stroke-width="1.5" filter="url(#glow)" class="pulse-core"/>
+                <circle cx="170" cy="170" r="8" fill="#00ff41" class="pulse-center"/>
+                <text x="170" y="174" text-anchor="middle" font-family="Orbitron" font-size="7" font-weight="900" fill="#00ff41">PWF-Ω</text>
+                <circle cx="200" cy="120" r="1.5" fill="#39ff14" class="particle-1"/><circle cx="140" cy="210" r="1.5" fill="#39ff14" class="particle-2"/>
+                <circle cx="210" cy="200" r="1.2" fill="#00ff41" class="particle-3"/><circle cx="130" cy="130" r="1.2" fill="#00ff41" class="particle-4"/>
+                <g class="scan-node"><circle cx="170" cy="104" r="13" fill="#010603" stroke="#00ff41" stroke-width="1.2"/><text x="170" y="106" font-family="Share Tech Mono" font-size="5" fill="#00ff41" text-anchor="middle">VIS</text></g>
+                <g class="scan-node"><circle cx="226" cy="139" r="13" fill="#010603" stroke="#00ff41" stroke-width="1.2"/><text x="226" y="141" font-family="Share Tech Mono" font-size="5" fill="#00ff41" text-anchor="middle">HEAR</text></g>
+                <g class="scan-node"><circle cx="226" cy="201" r="13" fill="#010603" stroke="#00ff41" stroke-width="1.2"/><text x="226" y="203" font-family="Share Tech Mono" font-size="5" fill="#00ff41" text-anchor="middle">TOUCH</text></g>
+                <g class="scan-node"><circle cx="170" cy="236" r="13" fill="#010603" stroke="#00ff41" stroke-width="1.2"/><text x="170" y="238" font-family="Share Tech Mono" font-size="5" fill="#00ff41" text-anchor="middle">SMELL</text></g>
+                <g class="scan-node"><circle cx="114" cy="201" r="13" fill="#010603" stroke="#00ff41" stroke-width="1.2"/><text x="114" y="203" font-family="Share Tech Mono" font-size="5" fill="#00ff41" text-anchor="middle">SOUND</text></g>
+                <g class="scan-node"><circle cx="114" cy="139" r="13" fill="#010603" stroke="#00ff41" stroke-width="1.2"/><text x="114" y="141" font-family="Share Tech Mono" font-size="5" fill="#00ff41" text-anchor="middle">PROP</text></g>
+                <g stroke="#ff3333" stroke-width="0.7" stroke-dasharray="3,2" class="resonate-lines"><line x1="170" y1="104" x2="170" y2="60"/><line x1="226" y1="139" x2="241" y2="96"/><line x1="114" y1="139" x2="99" y2="96"/><line x1="170" y1="236" x2="170" y2="280"/><line x1="260" y1="170" x2="226" y2="201"/><line x1="80" y1="170" x2="114" y2="201"/></g>
+                <g stroke="rgba(0,255,65,0.12)" stroke-width="0.5"><line x1="170" y1="136" x2="170" y2="104"/><line x1="170" y1="136" x2="226" y2="139"/><line x1="170" y1="136" x2="226" y2="201"/><line x1="170" y1="136" x2="170" y2="236"/><line x1="170" y1="136" x2="114" y2="201"/><line x1="170" y1="136" x2="114" y2="139"/></g>
+                <text x="274" y="54" font-family="Orbitron" font-size="5" fill="rgba(0,255,65,0.22)" letter-spacing="1">PHYSICAL</text>
+                <text x="228" y="46" font-family="Orbitron" font-size="5" fill="rgba(0,255,65,0.3)" letter-spacing="1">COGNITIVE</text>
+                <text x="186" y="40" font-family="Orbitron" font-size="5" fill="rgba(0,255,65,0.45)" letter-spacing="1">SENSORY</text>
+            </svg>
+        </div>
+        <div class="nucleus-data">
+            <div class="data-block" data-label="PRIMARY FUNCTION"><p data-lang="en">The PRAM Core is the conceptual warhead. It carries no conventional explosive — it carries an epistemological collapse.</p><p data-lang="es" class="lang-hidden">El Núcleo PRAM es la ogiva conceptual del misil. No porta explosivo convencional — porta un colapso epistemológico.</p></div>
+            <div class="data-block" data-label="PWF"><p data-lang="en">The perceptual wave function Φ(x,t) acts as the carrier field:</p><p data-lang="es" class="lang-hidden">La función de onda perceptual Φ(x,t) actúa como campo portador:</p><div class="eq">Φ(x,t) = ∫ d³k/(2π)³ [aₖ e^(i(kx−ωt)) + h.c.]</div></div>
+            <div class="data-block" data-label="PCIT"><p data-lang="en">PCIT quantifies the resonance power of the core:</p><p data-lang="es" class="lang-hidden">El PCIT cuantifica la potencia de resonancia del núcleo:</p><div class="eq">PCIT = N · I · (F/T) · (1 + αST)</div></div>
+            <div class="data-block" data-label="DETONATION"><p data-lang="en">Final state: perceptual superposition of coexisting realities.</p><p data-lang="es" class="lang-hidden">Estado final: superposición perceptual de realidades coexistentes.</p><div class="eq">M = Σ Φᵢ(Mᵢ,Pᵢ,T) + Σ γᵢⱼΦᵢΦⱼ</div></div>
+        </div>
+    </div>
+</div>
+
+<div class="section-label" data-lang="en">Weapons Systems · 7 Principles of Resonance</div><div class="section-label lang-hidden" data-lang="es">Sistemas de Armas · 7 Principios de Resonancia</div>
+<div class="content-section">
+    <div class="sec-head"><span class="sec-num">DOC-03</span><span class="sec-title" data-lang="en">7 Principles</span><span class="sec-title lang-hidden" data-lang="es">7 Principios</span></div>
+    <div class="p-scroll">
+        <div class="p-card" data-n="1"><h4>Observer</h4><p data-lang="en">Atomic states emerge from perception and quantum information.</p><p data-lang="es" class="lang-hidden">Estados atómicos emergen de percepción e información cuántica.</p><div class="p-eq">M = Σ Φᵢ(Iq,Pᵢ)</div></div>
+        <div class="p-card" data-n="2"><h4>Temporal Dynamics</h4><p data-lang="en">Electronic transitions depend on temporal density.</p><p data-lang="es" class="lang-hidden">Transiciones electrónicas dependen de densidad temporal.</p><div class="p-eq">Fm = F/(ST·T)</div></div>
+        <div class="p-card" data-n="3"><h4>Info Conservation</h4><p data-lang="en">Information persists through all perceptual states.</p><p data-lang="es" class="lang-hidden">La información persiste a través de todos los estados perceptuales.</p><div class="p-eq">I = Σ Tr(−ρᵢ ln ρᵢ)</div></div>
+        <div class="p-card" data-n="4"><h4>T-P Interaction</h4><p data-lang="en">Structure emerges from temporal resonance.</p><p data-lang="es" class="lang-hidden">La estructura emerge de resonancia temporal.</p><div class="p-eq">M = Σ Φᵢ(tt)·Pᵢ</div></div>
+        <div class="p-card" data-n="5"><h4>Temporal Friction</h4><p data-lang="en">Information transmission varies with frequency.</p><p data-lang="es" class="lang-hidden">Transmisión de información varía con frecuencia.</p><div class="p-eq">Vᵢ = Ft/(ST·I)</div></div>
+        <div class="p-card" data-n="6"><h4>Analog Simulation</h4><p data-lang="en">Simulated states are driven by PWF.</p><p data-lang="es" class="lang-hidden">Estados simulados son conducidos por la PWF.</p><div class="p-eq">Tst = Φs(x,t)</div></div>
+        <div class="p-card" data-n="7"><h4>Reality Superposition</h4><p data-lang="en">Coexisting realities form the final impact state.</p><p data-lang="es" class="lang-hidden">Realidades coexistentes forman el estado final de impacto.</p><div class="p-eq">M = Σ Φᵢ + Σ γᵢⱼΦᵢΦⱼ</div></div>
+        <div class="classified-btn"><span class="cls-text" data-lang="en">CLASSIFIED</span><span class="cls-text lang-hidden" data-lang="es">CLASIFICADO</span></div>
+    </div>
+</div>
+
+<div class="section-label" data-lang="en">Operational Status · Impact Data</div><div class="section-label lang-hidden" data-lang="es">Estado Operacional · Datos de Impacto</div>
+<div class="content-section">
+    <div class="sec-head"><span class="sec-num">DOC-04</span><span class="sec-title" data-lang="en">Operational Status</span><span class="sec-title lang-hidden" data-lang="es">Estado Operacional</span></div>
+    <div class="ops-grid">
+        <div class="ops-card"><div class="o-sys">EEG</div><div class="o-val">0.83</div><div class="o-sub">R² · CI [0.79, 0.87]</div><div class="status"><span class="status-dot"></span>ACTIVE · p&lt;0.001</div></div>
+        <div class="ops-card"><div class="o-sys">VR</div><div class="o-val">−13%</div><div class="o-sub" data-lang="en">Reduction · PCIT +10%</div><div class="o-sub lang-hidden" data-lang="es">Reducción · PCIT +10%</div><div class="status"><span class="status-dot"></span>ACTIVE · p&lt;0.01</div></div>
+        <div class="ops-card"><div class="o-sys">LIGO/CMB</div><div class="o-val">0.68</div><div class="o-sub">R² · CI [0.63, 0.73]</div><div class="status"><span class="status-dot"></span>ACTIVE · p&lt;0.05</div></div>
+        <div class="ops-card"><div class="o-sys">AI</div><div class="o-val">0.96</div><div class="o-sub">F₁ Score</div><div class="status"><span class="status-dot"></span>VALIDATED</div></div>
+    </div>
+</div>
+
+<div class="section-label" data-lang="en">Impact Targets · Observers</div><div class="section-label lang-hidden" data-lang="es">Objetivos de Impacto · Observadores</div>
+<div class="content-section">
+    <div class="sec-head"><span class="sec-num">DOC-05</span><span class="sec-title" data-lang="en">Observer Table</span><span class="sec-title lang-hidden" data-lang="es">Tabla de Observadores</span></div>
+    <div class="table-wrapper"><table class="pw-table"><thead><tr><th data-lang="en">System</th><th data-lang="es" class="lang-hidden">Sistema</th><th>N</th><th>I</th><th>F (Hz)</th><th>T (s)</th><th>PCIT</th><th data-lang="en">Intensity</th><th data-lang="es" class="lang-hidden">Intensidad</th></tr></thead><tbody><tr><td data-lang="en">Human</td><td data-lang="es" class="lang-hidden">Humano</td><td>10¹⁰</td><td>0.5</td><td>40</td><td>0.25</td><td>9×10¹¹</td><td class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:12%"></div></div></td></tr><tr><td>AI</td><td>10⁹</td><td>0.1</td><td>10⁹</td><td>0.05</td><td>2.2×10¹⁸</td><td class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:35%"></div></div></td></tr><tr><td data-lang="en">Dream</td><td data-lang="es" class="lang-hidden">Sueño</td><td>10¹⁰</td><td>0.3</td><td>6</td><td>0.5</td><td>3.6×10¹¹</td><td class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:8%"></div></div></td></tr><tr><td data-lang="en">Simulation</td><td data-lang="es" class="lang-hidden">Simulación</td><td>10⁸</td><td>0.5</td><td>10⁶</td><td>0.01</td><td>5×10¹⁶</td><td class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:52%"></div></div></td></tr><tr><td data-lang="en">Quantum</td><td data-lang="es" class="lang-hidden">Cuántico</td><td>10⁶</td><td>0.9</td><td>10⁷</td><td>10⁻⁶</td><td>10¹⁹</td><td class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:70%"></div></div></td></tr><tr><td>CMB</td><td>10²⁰</td><td>0.95</td><td>10¹⁰</td><td>10⁻¹⁰</td><td>10³⁰</td><td class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:100%"></div></div></td></tr></tbody></table></div>
+</div>
+
+<div class="section-label" data-lang="en">Declaration of Intent</div><div class="section-label lang-hidden" data-lang="es">Declaración de Intención</div>
+<div class="content-section">
+    <div class="sec-head"><span class="sec-num">DOC-06</span><span class="sec-title" data-lang="en">Art as Weaponry</span><span class="sec-title lang-hidden" data-lang="es">Arte como Armamento</span></div>
+    <div class="manifesto"><blockquote data-lang="en">"This missile does not destroy worlds.<br><em>It destroys the certainty that matter exists without an observer.</em><br><br>Its warhead is a reimagined atom —<br>the PRAM: cognitive-perceptual network that replaces the proton core<br>with <em>Central Perception</em>, and the electrons with<br>sensory, cognitive, and physical wave functions."</blockquote><blockquote data-lang="es" class="lang-hidden">"Este misil no destruye mundos.<br><em>Destruye la certeza de que la materia existe sin observador.</em><br><br>Su ogiva es un átomo reimaginado —<br>el PRAM: red cognitivo-perceptual que reemplaza al núcleo de protones<br>con <em>Percepción Central</em>, y a los electrones con<br>funciones de onda sensoriales, cognitivas y físicas."</blockquote></div>
+</div>
+
+<div class="section-label" data-lang="en">The Inverted Pyramid of Creation</div><div class="section-label lang-hidden" data-lang="es">La Pirámide Invertida de la Creación</div>
+<div class="pyramid-section">
+    <h2 data-lang="en">THE INVERTED PYRAMID OF CREATION</h2><h2 data-lang="es" class="lang-hidden">PIRÁMIDE INVERTIDA DE LA CREACIÓN</h2>
+    <p class="pyramid-subtitle" data-lang="en">FROM THE INEFFABLE → TO THE MEASURABLE</p><p class="pyramid-subtitle lang-hidden" data-lang="es">DESDE LO INEFABLE → HACIA LO MEDIBLE</p>
+    <div class="pyramid-wrapper">
+        <span class="pyramid-side-label" data-lang="en">MAX UNCERTAINTY</span><span class="pyramid-side-label lang-hidden" data-lang="es">MÁXIMA INCERTIDUMBRE</span>
+        <div class="pyramid-container">
+            <div class="pyramid-level"><div class="pyramid-box"><div class="pyramid-content"><div class="pyramid-num">05</div><div class="pyramid-info"><div class="pyramid-title">PHYSICS</div><div class="pyramid-desc" data-lang="en">DETECT THE IMPERCEPTIBLE</div><div class="pyramid-desc lang-hidden" data-lang="es">DETECTAR LO IMPERCEPTIBLE</div></div></div></div></div>
+            <div class="pyramid-connector"></div>
+            <div class="pyramid-level"><div class="pyramid-box"><div class="pyramid-content"><div class="pyramid-num">04</div><div class="pyramid-info"><div class="pyramid-title">ENGINEERING</div><div class="pyramid-desc" data-lang="en">MATERIALIZE THE POSSIBLE</div><div class="pyramid-desc lang-hidden" data-lang="es">MATERIALIZAR LO POSIBLE</div></div></div></div></div>
+            <div class="pyramid-connector"></div>
+            <div class="pyramid-level"><div class="pyramid-box"><div class="pyramid-content"><div class="pyramid-num">03</div><div class="pyramid-info"><div class="pyramid-title">SCIENCE</div><div class="pyramid-desc" data-lang="en">RESPOND SYSTEMATICALLY</div><div class="pyramid-desc lang-hidden" data-lang="es">RESPONDER SISTEMÁTICAMENTE</div></div></div></div></div>
+            <div class="pyramid-connector"></div>
+            <div class="pyramid-level"><div class="pyramid-box"><div class="pyramid-content"><div class="pyramid-num">02</div><div class="pyramid-info"><div class="pyramid-title">ART</div><div class="pyramid-desc" data-lang="en">DISTURB, DESTABILIZE CERTAINTIES</div><div class="pyramid-desc lang-hidden" data-lang="es">DISTURBAR, DESESTABILIZAR CERTEZAS</div></div></div></div></div>
+            <div class="pyramid-connector"></div>
+            <div class="pyramid-level"><div class="pyramid-box"><div class="pyramid-content"><div class="pyramid-num">01</div><div class="pyramid-info"><div class="pyramid-title">POETRY</div><div class="pyramid-desc" data-lang="en">INHABIT THE UNSPEAKABLE</div><div class="pyramid-desc lang-hidden" data-lang="es">HABITAR LO INDECIBLE</div></div></div></div></div>
+        </div>
+        <span class="pyramid-side-label" data-lang="en">MAX PRECISION</span><span class="pyramid-side-label lang-hidden" data-lang="es">MÁXIMA PRECISIÓN</span>
+    </div>
+    <p class="pyramid-footer">Dany D. Ruiz · PercepTemple</p>
+    <div class="pyramid-manifesto">
+        <div class="pyramid-manifesto-text">
+            <p data-lang="en">One might ask: why does Physics appear below Engineering in this pyramid? The answer lies not in intellectual hierarchy, but in historical and instrumental reality.</p>
+            <p data-lang="es" class="lang-hidden">Uno podría preguntarse: ¿por qué aparece la Física debajo de la Ingeniería en esta pirámide? La respuesta no reside en una jerarquía intelectual, sino en la realidad histórica e instrumental.</p>
+            <p data-lang="en">Humanity did not access the imperceptible through pure thought — it carved its way there <span class="emphasis">by building</span>. The telescope preceded modern astronomy. The particle accelerator preceded quantum confirmation.</p>
+            <p data-lang="es" class="lang-hidden">La humanidad no accedió a lo imperceptible a través del pensamiento puro — se abrió camino hacia allí <span class="emphasis">construyendo</span>. El telescopio precedió a la astronomía moderna. El acelerador de partículas precedió a la confirmación cuántica.</p>
+            <p data-lang="en">Engineering is not the application of Physics; in many decisive moments, it was its <span class="highlight">precondition</span>.</p>
+            <p data-lang="es" class="lang-hidden">La Ingeniería no es la aplicación de la Física; en muchos momentos decisivos, fue su <span class="highlight">precondición</span>.</p>
+            <p data-lang="en">To detect the imperceptible, you must first build the instrument capable of perceiving it. In this pyramid, precision is not a gift of nature — it is a <span class="highlight">conquest of fabrication</span>.</p>
+            <p data-lang="es" class="lang-hidden">Para detectar lo imperceptible, primero debes construir el instrumento capaz de percibirlo. En esta pirámide, la precisión no es un don de la naturaleza — es una <span class="highlight">conquista de la fabricación</span>.</p>
+        </div>
+        <div class="pyramid-end" data-lang="en">END OF TRANSMISSION</div><div class="pyramid-end lang-hidden" data-lang="es">FIN DE TRANSMISIÓN</div>
+    </div>
+</div>
+
+<div class="section-label" data-lang="en">Detailed View</div><div class="section-label lang-hidden" data-lang="es">Vista Detallada</div>
+<div class="content-section" style="text-align:center;"><img src="PRAM_0.webp" alt="PRAM Detailed View" style="width:100%;max-width:600px;height:auto;filter:drop-shadow(0 0 14px rgba(0,255,65,0.2));margin-left:auto;margin-right:auto;"></div>
+
+<div class="footer">
+    <div class="footer-modules">
+        <a href="../percepware/index.html"><span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span></a><span>|</span>
+        <a href="../pci/index.html"><span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span></a><span>|</span>
+        <a href="../aei/index.html"><span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span></a><span>|</span>
+        <a href="../neohaki/index.html"><span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span></a><span>|</span>
+        <a href="index.html" class="footer-current"><span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span></a><span>|</span>
+        <a href="../licence/index.html"><span data-lang="en">LICENSE</span><span data-lang="es" class="lang-hidden">LICENCIA</span></a><span>|</span>
+        <a href="../bitneko/index.html"><span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span></a><span>|</span>
+        <a href="../space/index.html"><span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span></a><span>|</span>
+        <a href="../agamottor/index.html"><span data-lang="en">AGAMOTTOR</span><span data-lang="es" class="lang-hidden">AGAMOTTOR</span></a><span>|</span>
+        <a href="../little-prince/index.html"><span data-lang="en">LITTLE PRINCE</span><span data-lang="es" class="lang-hidden">LITTLE PRINCE</span></a><span>|</span>
+        <a href="../ptu/index.html"><span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span></a><span>|</span>
+        <a href="../time-machine/index.html"><span data-lang="en">TIME MACHINE</span><span data-lang="es" class="lang-hidden">MÁQUINA DEL TIEMPO</span></a><span>|</span>
+        <a href="../poetry/index.html"><span data-lang="en">POETRY</span><span data-lang="es" class="lang-hidden">POESÍA</span></a>
+    </div>
+    <div class="footer-social">
+        <a href="https://orcid.org/0009-0002-3432-1710" target="_blank" rel="noopener"><span data-lang="en">ORCID</span><span data-lang="es" class="lang-hidden">ORCID</span></a><span> / </span>
+        <a href="https://github.com/PERCEPTEMPLE" target="_blank" rel="noopener"><span data-lang="en">GITHUB</span><span data-lang="es" class="lang-hidden">GITHUB</span></a><span> / </span>
+        <a href="https://x.com/panperceptual" target="_blank" rel="noopener"><span data-lang="en">X</span><span data-lang="es" class="lang-hidden">X</span></a>
+    </div>
+    <div class="footer-bottom">
+        <span data-lang="en">DEPOSITED IN THE INTELLECTUAL PROPERTY REGISTRY · EL SALVADOR · DANY D. RUIZ</span>
+        <span data-lang="es" class="lang-hidden">DEPOSITADO EN EL REGISTRO DE LA PROPIEDAD INTELECTUAL · EL SALVADOR · DANY D. RUIZ</span><br>
+        <span data-lang="en">Before They See Us, We Already Are</span>
+        <span data-lang="es" class="lang-hidden">Antes de que nos vean, ya somos</span>
+    </div>
+</div>
+
+<script>
+    function toggleLanguage() {
+        var html    = document.documentElement;
+        var current = html.lang || 'en';
+        var next    = current === 'en' ? 'es' : 'en';
+        var hide    = next === 'en' ? 'es' : 'en';
+        html.lang = next;
+        document.querySelectorAll('[data-lang="' + next + '"]')
+            .forEach(function(el) { el.classList.remove('lang-hidden'); });
+        document.querySelectorAll('[data-lang="' + hide + '"]')
+            .forEach(function(el) { el.classList.add('lang-hidden'); });
+        document.getElementById('langToggle').textContent =
+            next === 'en' ? 'ES' : 'EN';
+        localStorage.setItem('perceptemple-lang', next);
+    }
+    (function() {
+        var saved = localStorage.getItem('perceptemple-lang');
+        if (saved && saved === 'es') { toggleLanguage(); }
+    })();
+</script>
+</body>
+</html>
