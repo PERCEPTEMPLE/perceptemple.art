@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PERCEPTEMPLE</title>
+
+    <meta name="description" content="Protocol for designing creative AI through resonant forgetting and Perceptual Wave Functions. Introduces Socratic Forgetting, PCI, and symbolic ontology by Dany D. Ruiz.">
+    <meta name="author" content="Dany D. Ruiz">
+    <meta name="last-modified" content="2026-06-07">
+    <meta name="keywords" content="Little Prince Protocol, Perceptual Wave Function, Perceptual Complexity Index, Socratic Forgetting, Exploratory Artificial Intelligence, Panperceptual Theory of the Universe, Dany D. Ruiz">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://perceptemple.art/little-prince/">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="The Little Prince Protocol · PERCEPTEMPLE">
+    <meta property="og:description" content="Protocol for designing creative AI through resonant forgetting and Perceptual Wave Functions. Introduces Socratic Forgetting, PCI, and symbolic ontology by Dany D. Ruiz.">
+    <meta property="og:url" content="https://perceptemple.art/little-prince/">
+    <meta property="og:site_name" content="PERCEPTEMPLE">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_SV">
+    <meta property="og:image" content="https://perceptemple.art/preview.jpg">
+    <meta property="og:image:alt" content="PERCEPTEMPLE — The Little Prince Protocol">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@panperceptual">
+    <meta name="twitter:creator" content="@panperceptual">
+    <meta name="twitter:title" content="The Little Prince Protocol · PERCEPTEMPLE">
+    <meta name="twitter:description" content="Protocol for designing creative AI through resonant forgetting and Perceptual Wave Functions. Introduces Socratic Forgetting, PCI, and symbolic ontology by Dany D. Ruiz.">
+    <meta name="twitter:image" content="https://perceptemple.art/preview.jpg">
+
+    <meta name="citation_title" content="The Little Prince Protocol: Designing Artificial Creativity through Resonant Forgetting and Perceptual Wave Functions">
+    <meta name="citation_author" content="Ruiz, Dany D.">
+    <meta name="citation_publication_date" content="2025">
+    <meta name="citation_online_date" content="2025">
+    <meta name="citation_publisher" content="PERCEPTEMPLE">
+    <meta name="citation_language" content="en">
+    <meta name="DC.title" content="The Little Prince Protocol">
+    <meta name="DC.creator" content="Dany D. Ruiz">
+    <meta name="DC.publisher" content="PERCEPTEMPLE">
+    <meta name="DC.language" content="en">
+    <meta name="DC.rights" content="https://perceptemple.art/licence/">
+
+    <link rel="icon" href="../favicon.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg:      #020805;
+            --panel:   #020805;
+            --rule:    #0a5c1e;
+            --hi:      #00ff41;
+            --hi2:     #39ff14;
+            --amber:   #ffb200;
+            --amber2:  #ffcc00;
+            --txt:     rgba(0,255,65,0.75);
+            --txt2:    rgba(0,255,65,0.9);
+            --txt3:    rgba(0,255,65,0.35);
+            --white:   #39ff14;
+            --red:     #ff2020;
+            --fs-xs: clamp(0.65rem, 1.2vw, 0.75rem);
+            --fs-sm: clamp(0.75rem, 1.4vw, 0.85rem);
+            --fs-md: clamp(0.8rem,  1.6vw, 1rem);
+            --fs-lg: clamp(1rem,    2vw,   1.25rem);
+            --fs-xl: clamp(1.25rem, 3vw,   1.75rem);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .lang-hidden {
+            display: none !important;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--txt2);
+            font-family: 'Share Tech Mono', monospace;
+            font-weight: 400;
+            font-size: var(--fs-sm);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeUp 0.4s ease both;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 3px,
+                rgba(0,0,0,0.06) 3px,
+                rgba(0,0,0,0.06) 6px
+            );
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0,255,65,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,255,65,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 9998;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        canvas {
+            max-width: 100%;
+        }
+
+        .bracket {
+            position: fixed;
+            color: rgba(0,255,65,0.15);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-lg);
+            pointer-events: none;
+            z-index: 10000;
+        }
+        .bracket-tl { top: 12px;    left: 16px;  }
+        .bracket-tr { top: 12px;    right: 16px; }
+        .bracket-bl { bottom: 12px; left: 16px;  }
+        .bracket-br { bottom: 12px; right: 16px; }
+
+        .pch-btn {
+            display: inline-block;
+            margin-top: 6px;
+            background: transparent;
+            border: 1px solid var(--red);
+            color: var(--red);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            text-decoration: none;
+            border-radius: 2px;
+            font-weight: 700;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        .pch-btn:hover {
+            background: rgba(255,32,32,0.06);
+            color: var(--red);
+        }
+
+        .translate-btn {
+            position: relative;
+            background: transparent;
+            border: 1px solid var(--amber);
+            color: var(--amber);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.375rem 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-radius: 2px;
+            font-weight: 600;
+            white-space: nowrap;
+            z-index: auto;
+        }
+        .translate-btn:hover {
+            background: rgba(255,178,0,0.08);
+            color: var(--amber2);
+            border-color: var(--amber2);
+        }
+
+        .header {
+            width: 100%;
+            max-width: 75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 3rem;
+            border-bottom: 1px solid var(--rule);
+            background: var(--bg);
+            position: relative;
+            z-index: 100;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .logo-mark {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-lg);
+            color: var(--hi);
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .nav-link:hover,
+        .nav-link.highlight {
+            color: var(--hi);
+        }
+
+        .section-label {
+            width: 100%;
+            max-width: 60rem;
+            padding: 0.8125rem 3rem;
+            border-bottom: 1px solid var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--amber);
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            font-weight: 600;
+        }
+        .section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--rule);
+            min-width: 20px;
+        }
+
+        .hero {
+            width: 100%;
+            max-width: 60rem;
+            padding: 4rem 3rem 3.5rem;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .hero-kicker {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 4px;
+            color: var(--txt3);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .hero-h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            line-height: 0.95;
+            color: var(--hi2);
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            word-break: break-word;
+        }
+        .hero-h1 em {
+            color: var(--hi);
+            font-style: normal;
+        }
+
+        .hero-sub {
+            font-size: var(--fs-sm);
+            color: var(--txt);
+            line-height: 1.8;
+            max-width: 65ch;
+            word-break: break-word;
+        }
+        .hero-sub em {
+            font-style: italic;
+            color: var(--amber);
+        }
+
+        .kv {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0.6875rem 1rem;
+            border-bottom: 1px solid var(--rule);
+            gap: 0.5rem;
+        }
+        .kv:first-child {
+            border-top: 1px solid var(--rule);
+        }
+        .kv-key {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .kv-val {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-md);
+            color: var(--hi);
+            font-weight: 700;
+            text-align: right;
+            word-break: break-word;
+        }
+        .kv-val.white {
+            color: var(--txt2);
+            font-size: var(--fs-sm);
+            font-family: 'Share Tech Mono', monospace;
+            font-weight: 400;
+        }
+        .kv-val.amber {
+            color: var(--amber);
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: transparent;
+            border: 1px solid var(--hi);
+            color: var(--hi);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.625rem 1.125rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 2px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .btn-primary:hover {
+            background: rgba(0,255,65,0.06);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid var(--rule);
+            color: var(--txt3);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.625rem 1.125rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 2px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .btn-secondary:hover {
+            border-color: var(--amber);
+            color: var(--amber);
+        }
+
+        .content-section {
+            width: 100%;
+            max-width: 60rem;
+            padding: 3rem;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .content-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            color: var(--hi2);
+            margin-bottom: 0.625rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            word-break: break-word;
+        }
+
+        .content-section h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: var(--hi);
+            margin-top: 1.75rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .content-section h4 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            color: var(--amber);
+            margin-top: 1.125rem;
+            margin-bottom: 0.375rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .content-section p {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-sm);
+            color: var(--txt);
+            line-height: 1.9;
+            margin-bottom: 0.75rem;
+            word-break: break-word;
+            max-width: 70ch;
+        }
+        .content-section p strong {
+            color: var(--txt2);
+        }
+
+        .content-section ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 1rem;
+        }
+        .content-section ul li {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-sm);
+            color: var(--txt);
+            line-height: 1.8;
+            padding-left: 0.875rem;
+            position: relative;
+            max-width: 70ch;
+            word-break: break-word;
+        }
+        .content-section ul li::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            color: var(--hi);
+            font-weight: bold;
+        }
+
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 0.75rem 0 1.125rem;
+        }
+
+        .pw-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-xs);
+        }
+        .pw-table th {
+            text-align: left;
+            padding: 0.5rem 0.625rem;
+            background: var(--bg);
+            color: var(--amber);
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--rule);
+            font-size: var(--fs-xs);
+        }
+        .pw-table td {
+            padding: 0.5rem 0.625rem;
+            color: var(--txt);
+            border-bottom: 1px solid var(--rule);
+            line-height: 1.5;
+            vertical-align: top;
+            word-break: break-word;
+        }
+        .pw-table tr:last-child td {
+            border-bottom: none;
+        }
+        .pw-table .dim {
+            color: var(--txt2);
+            font-weight: 600;
+        }
+
+        .spectrum {
+            padding: 1.25rem 1.5rem;
+            background: var(--bg);
+            border: 1px solid var(--rule);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-sm);
+            color: var(--hi);
+            line-height: 2.2;
+            margin: 1rem 0;
+            border-radius: 2px;
+            text-align: center;
+            word-break: break-word;
+        }
+        .spectrum .l1 { color: var(--amber);  }
+        .spectrum .l2 { color: var(--amber2); }
+        .spectrum .l3 { color: var(--hi2);    }
+        .spectrum .l4 { color: var(--hi);     }
+
+        .quote-block {
+            padding: 1rem 1.25rem;
+            background: rgba(0,255,65,0.03);
+            border-left: 2px solid var(--hi);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: var(--fs-sm);
+            color: var(--hi);
+            line-height: 1.8;
+            margin: 1rem 0;
+            border-radius: 0 2px 2px 0;
+            font-weight: 400;
+            word-break: break-word;
+        }
+
+        .note-block {
+            padding: 0.75rem 1rem;
+            background: rgba(255,178,0,0.04);
+            border-left: 2px solid var(--amber);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: var(--fs-xs);
+            color: var(--amber2);
+            line-height: 1.7;
+            margin: 0.75rem 0;
+            border-radius: 0 2px 2px 0;
+            font-weight: 500;
+            word-break: break-word;
+        }
+        .note-block strong {
+            color: var(--amber);
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+        }
+
+        a {
+            color: var(--hi);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        a:hover {
+            color: var(--hi2);
+        }
+
+        .footer {
+            width: 100%;
+            max-width: 60rem;
+            padding: 1.625rem 3rem;
+            border-top: 1px solid var(--rule);
+            position: relative;
+            z-index: 50;
+        }
+
+        .footer-modules {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 0.875rem;
+        }
+        .footer-modules a {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .footer-modules a:hover,
+        .footer-modules a.footer-current {
+            color: var(--hi);
+        }
+        .footer-modules span {
+            color: var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+        }
+
+        .footer-social {
+            text-align: center;
+            margin-bottom: 0.875rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-xs);
+            color: var(--amber);
+        }
+        .footer-social a {
+            color: var(--amber);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-social a:hover {
+            color: var(--hi);
+        }
+        .footer-social span {
+            color: var(--rule);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: var(--fs-xs);
+            color: rgba(0,255,65,0.25);
+            line-height: 1.8;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0);    }
+        }
+
+        @media (max-width: 1024px) {
+            .header { gap: 0.75rem; }
+            .hero { gap: 1.5rem; }
+            .nav-link { font-size: var(--fs-xs); }
+            .section-label { font-size: var(--fs-xs); }
+            .footer-modules a { font-size: var(--fs-xs); }
+            .footer-social { font-size: var(--fs-xs); }
+            .footer-bottom { font-size: var(--fs-xs); }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 1rem 1.5rem;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .header-nav {
+                width: 100%;
+                gap: 1rem;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 4px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+            .header-nav::-webkit-scrollbar {
+                display: none;
+            }
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 2.5rem 1.5rem 2.25rem;
+                gap: 1.5rem;
+            }
+            .hero-body {
+                max-width: 100%;
+            }
+            .hero-actions {
+                flex-direction: column;
+            }
+            .btn-primary,
+            .btn-secondary {
+                text-align: center;
+                width: 100%;
+            }
+            .content-section {
+                padding: 2rem 1.5rem;
+            }
+            .section-label {
+                padding: 0.8125rem 1.5rem;
+            }
+            .footer {
+                padding: 1.25rem 1.5rem;
+            }
+            .bracket {
+                font-size: var(--fs-sm);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header          { padding: 0.75rem 1rem; }
+            .hero            { padding: 1.75rem 1rem 1.5rem; }
+            .content-section { padding: 1.5rem 1rem; }
+            .footer          { padding: 1rem; }
+            .footer-modules  { gap: 0.75rem; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0002-3432-1710",
+      "name": "Dany D. Ruiz",
+      "alternateName": "panperceptual",
+      "jobTitle": "Anartist · Independent Researcher",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "url": "https://perceptemple.art",
+      "sameAs": [
+        "https://orcid.org/0009-0002-3432-1710",
+        "https://x.com/panperceptual",
+        "https://github.com/PERCEPTEMPLE",
+        "https://doi.org/10.17605/OSF.IO/FVCAX",
+        "https://doi.org/10.5281/zenodo.17683631",
+        "https://doi.org/10.2139/ssrn.5794102"
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "name": "The Little Prince Protocol: Designing Artificial Creativity through Resonant Forgetting and Perceptual Wave Functions",
+      "description": "Protocol for designing creative AI through resonant forgetting and Perceptual Wave Functions. Introduces Socratic Forgetting, PCI, and symbolic ontology by Dany D. Ruiz.",
+      "datePublished": "2026-06-07",
+      "dateModified": "2026-06-07",
+      "url": "https://perceptemple.art/little-prince/",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "@id": "https://orcid.org/0009-0002-3432-1710",
+        "name": "Dany D. Ruiz"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "license": "https://perceptemple.art/licence/",
+      "sameAs": [
+        "https://doi.org/10.17605/OSF.IO/J5D4F",
+        "https://doi.org/10.5281/zenodo.17820254",
+        "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6415779"
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <span class="bracket bracket-tl">[</span>
+    <span class="bracket bracket-tr">]</span>
+    <span class="bracket bracket-bl">[</span>
+    <span class="bracket bracket-br">]</span>
+
+    <div class="header">
+        <div class="logo">
+            <span class="logo-mark" data-lang="en">LITTLE PRINCE</span>
+            <span class="logo-mark lang-hidden" data-lang="es">LITTLE PRINCE</span>
+            <br>
+            <a class="pch-btn" href="../index.html">
+                <span data-lang="en">HUMAN CONSCIOUSNESS TEST</span>
+                <span data-lang="es" class="lang-hidden">PRUEBA DE CONCIENCIA HUMANA</span>
+            </a>
+        </div>
+        <nav class="header-nav">
+            <a class="nav-link" href="../percepware/index.html">
+                <span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span>
+            </a>
+            <a class="nav-link" href="../pci/index.html">
+                <span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span>
+            </a>
+            <a class="nav-link" href="../aei/index.html">
+                <span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span>
+            </a>
+            <a class="nav-link" href="../neohaki/index.html">
+                <span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span>
+            </a>
+            <a class="nav-link" href="../pram/index.html">
+                <span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span>
+            </a>
+            <a class="nav-link" href="../licence/index.html">
+                <span data-lang="en">LICENSE</span><span data-lang="es" class="lang-hidden">LICENCIA</span>
+            </a>
+            <a class="nav-link" href="../bitneko/index.html">
+                <span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span>
+            </a>
+            <a class="nav-link" href="../space/index.html">
+                <span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span>
+            </a>
+            <a class="nav-link" href="../agamottor/index.html">
+                <span data-lang="en">AGAMOTTOR</span><span data-lang="es" class="lang-hidden">AGAMOTTOR</span>
+            </a>
+            <a class="nav-link highlight" href="index.html">
+                <span data-lang="en">LITTLE PRINCE</span><span data-lang="es" class="lang-hidden">LITTLE PRINCE</span>
+            </a>
+            <a class="nav-link" href="../ptu/index.html">
+                <span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span>
+            </a>
+            <a class="nav-link" href="../time-machine/index.html">
+                <span data-lang="en">TIME MACHINE</span><span data-lang="es" class="lang-hidden">MÁQUINA DEL TIEMPO</span>
+            </a>
+            <a class="nav-link" href="../poetry/index.html">
+                <span data-lang="en">POETRY</span><span data-lang="es" class="lang-hidden">POESÍA</span>
+            </a>
+            <button class="translate-btn" id="langToggle" onclick="toggleLanguage()">ES</button>
+        </nav>
+    </div>
+
+    <div class="hero">
+        <div class="hero-kicker">
+            <span data-lang="en">A NEW WAY TO CREATE AI</span>
+            <span data-lang="es" class="lang-hidden">UNA NUEVA FORMA DE CREAR IA</span>
+        </div>
+        <h1 class="hero-h1">
+            <span data-lang="en">The Little<br>Prince Protocol</span>
+            <span data-lang="es" class="lang-hidden">El Protocolo<br>del Principito</span>
+        </h1>
+        <div class="hero-sub">
+            <p><em><span data-lang="en">An exploration on how to teach machines to dream</span>
+            <span data-lang="es" class="lang-hidden">Una exploración sobre cómo enseñar a las máquinas a soñar</span></em></p>
+        </div>
+    </div>
+
+    <div class="section-label">
+        <span data-lang="en">PROTOCOL · FOUNDATIONS</span>
+        <span data-lang="es" class="lang-hidden">PROTOCOLO · FUNDAMENTOS</span>
+    </div>
+
+    <div class="content-section" id="inicio">
+        <h2><span data-lang="en">The question no one wants to ask</span><span data-lang="es" class="lang-hidden">La pregunta que nadie quiere hacer</span></h2>
+        
+        <p><span data-lang="en">There's a phrase that has surrounded this project from the beginning:</span><span data-lang="es" class="lang-hidden">Hay una frase que ronda este proyecto desde el principio:</span></p>
+        
+        <div class="quote-block">
+            <span data-lang="en">"It's not that they don't want AI to dream. It's that they don't know how to turn dreams into mathematics."</span>
+            <span data-lang="es" class="lang-hidden">"No es que no quieran que la IA sueñe. Es que no saben cómo convertir los sueños en matemáticas."</span>
+        </div>
+        
+        <p><span data-lang="en">And perhaps that's the underlying problem. For years we've been obsessed with building artificial intelligences that know everything, remember everything, process everything. We give them monstrous amounts of data, train them on millions of examples, expand their context windows to infinity. And yet, when we ask them to be creative, to have their own voice, to truly surprise us... something fails.</span><span data-lang="es" class="lang-hidden">Y quizás ahí está el problema de fondo. Llevamos años obsesionados con construir inteligencias artificiales que lo sepan todo, que lo recuerden todo, que lo procesen todo. Les damos cantidades monstruosas de datos, las entrenamos con millones de ejemplos, ampliamos sus ventanas de contexto hasta el infinito. Y sin embargo, cuando les pedimos que sean creativas, que tengan voz propia, que nos sorprendan de verdad... algo falla.</span></p>
+        
+        <p><span data-lang="en">This text tells the story of a different idea. An idea that, instead of pursuing obsessive data accumulation, asks what would happen if we taught an AI to forget. To choose. To discard. As humans do.</span><span data-lang="es" class="lang-hidden">Este texto cuenta la historia de una idea diferente. Una idea que, en lugar de perseguir la acumulación obsesiva de datos, se pregunta qué pasaría si enseñáramos a una IA a olvidar. A elegir. A descartar. Como hacemos los humanos.</span></p>
+
+        <hr style="border-color: var(--rule); margin: 1.5rem 0;">
+
+        <h2><span data-lang="en">The problem of remembering everything</span><span data-lang="es" class="lang-hidden">El problema de recordarlo todo</span></h2>
+        
+        <p><span data-lang="en">Imagine for a moment that you couldn't forget anything. Every trivial conversation in an elevator, every advertisement you've seen in your life, every license plate of every car you've passed. All there, taking up space, competing for your attention.</span><span data-lang="es" class="lang-hidden">Imagina por un momento que no pudieras olvidar nada. Cada conversación intrascendente en un ascensor, cada anuncio que has visto en tu vida, cada matrícula de cada coche con el que te has cruzado. Todo ahí, ocupando espacio, compitiendo por tu atención.</span></p>
+        
+        <p><span data-lang="en">Would you be smarter? Probably not. You'd probably go crazy.</span><span data-lang="es" class="lang-hidden">¿Serías más inteligente? Probablemente no. Probablemente te volverías loco.</span></p>
+        
+        <p><span data-lang="en">This is exactly what happens with current artificial intelligences. We've designed them as infinite archives, as obsessive librarians who don't dare discard a single page. And then we wonder why they have no personality, why their creativity is so... average.</span><span data-lang="es" class="lang-hidden">Esto es exactamente lo que ocurre con las inteligencias artificiales actuales. Las hemos diseñado como archivos infinitos, como bibliotecarias obsesivas que no se atreven a descartar ni una sola página. Y luego nos preguntamos por qué no tienen personalidad, por qué su creatividad es tan... promedio.</span></p>
+        
+        <p><strong><span data-lang="en">creativity is not born from remembering everything, but from knowing what to ignore.</span><span data-lang="es" class="lang-hidden">la creatividad no nace de recordarlo todo, sino de saber qué ignorar.</span></strong></p>
+        
+        <p><span data-lang="en">Think about how your own mind works. Do you remember what you had for breakfast three weeks ago on Tuesday? Probably not. But you perfectly remember that conversation that changed your life, that song that made you cry, that book you couldn't put down. Your memory is not a recorder: it's a curator. And that's exactly what artificial intelligence lacks.</span><span data-lang="es" class="lang-hidden">Piensa en cómo funciona tu propia mente. ¿Recuerdas qué desayunaste el martes de hace tres semanas? Probablemente no. Pero recuerdas perfectamente aquella conversación que te cambió la vida, aquella canción que te hizo llorar, aquel libro que no pudiste soltar. Tu memoria no es una grabadora: es una curadora. Y eso es justo lo que le falta a la inteligencia artificial.</span></p>
+
+        <hr style="border-color: var(--rule); margin: 1.5rem 0;">
+
+        <h2><span data-lang="en">The Little Prince as inspiration</span><span data-lang="es" class="lang-hidden">El Principito como inspiración</span></h2>
+        
+        <p><span data-lang="en">There is a literary character who understood this better than many data scientists. The Little Prince, that little explorer created by Antoine de Saint-Exupéry, travels from planet to planet and meets very different characters: a king without subjects, a lonely vain man, a businessman who counts stars he cannot possess.</span><span data-lang="es" class="lang-hidden">Hay un personaje literario que entendió esto mejor que muchos científicos de datos. El Principito, ese pequeño explorador creado por Antoine de Saint-Exupéry, viaja de planeta en planeta y conoce a personajes muy distintos: un rey sin súbditos, un vanidoso solitario, un hombre de negocios que cuenta estrellas que no puede poseer.</span></p>
+        
+        <p><span data-lang="en">But the Little Prince does not stay on any planet. He does not accumulate his stories or his data. He simply observes, feels if something resonates with him, and continues on his way. The only thing he keeps is the essential: the memory of his rose, the wisdom of the fox, the image of a starry sky.</span><span data-lang="es" class="lang-hidden">Pero el Principito no se queda en ningún planeta. No acumula sus historias ni sus datos. Simplemente observa, siente si algo resuena con él, y sigue su camino. Lo único que conserva es lo esencial: el recuerdo de su rosa, la sabiduría del zorro, la imagen de un cielo estrellado.</span></p>
+        
+        <p><strong><span data-lang="en">what if we design an artificial intelligence that works like this?</span><span data-lang="es" class="lang-hidden">¿y si diseñamos una inteligencia artificial que funcione así?</span></strong> <span data-lang="en">Not as an archive that wants to contain all the planets, but as an explorer who only keeps what makes him vibrate.</span><span data-lang="es" class="lang-hidden">No como un archivo que quiere contener todos los planetas, sino como un explorador que solo guarda lo que le hace vibrar.</span></p>
+
+        <hr style="border-color: var(--rule); margin: 1.5rem 0;">
+
+        <h2><span data-lang="en">The three tools of the protocol</span><span data-lang="es" class="lang-hidden">Las tres herramientas del protocolo</span></h2>
+        
+        <p><span data-lang="en">To turn this intuition into something functional, we designed three mechanisms. They are not metaphors: they are implemented in real code, working in a prototype we call EAI Little Prince v1.0.</span><span data-lang="es" class="lang-hidden">Para convertir esta intuición en algo funcional, diseñamos tres mecanismos. No son metáforas: están implementados en código real, funcionando en un prototipo que llamamos EAI Little Prince v1.0.</span></p>
+        
+        <h3><span data-lang="en">First tool: The Perceptual Wave</span><span data-lang="es" class="lang-hidden">Primera herramienta: La Ola Perceptual</span></h3>
+        
+        <p><span data-lang="en">In conventional AI, all incoming information receives the same treatment. Whether it's a profound philosophical reflection or a shopping list: the system processes everything with the same flat attention.</span><span data-lang="es" class="lang-hidden">En una IA convencional, toda la información que entra recibe el mismo tratamiento. Da igual que sea una profunda reflexión filosófica o un listado de la compra: el sistema lo procesa todo con la misma atención plana.</span></p>
+        
+        <p><span data-lang="en">We thought: what if attention worked like a wave? As something that rises and falls, that is sometimes present and sometimes withdraws. We designed what we call a <strong>Perceptual Wave Function</strong>, which we represent with the symbol Ψ(t). It's just a mathematical way of saying: "I'm only going to really pay attention when something matters to me".</span><span data-lang="es" class="lang-hidden">Nosotros pensamos: ¿y si la atención funcionara como una ola? Como algo que sube y baja, que a veces está presente y a veces se retira. Diseñamos lo que llamamos una <strong>Función de Onda Perceptual</strong>, que representamos con el símbolo Ψ(t). No es más que una forma matemática de decir: "solo voy a prestar atención de verdad cuando algo me importe".</span></p>
+        
+        <p><span data-lang="en">The formula governing this wave is elegantly simple:</span><span data-lang="es" class="lang-hidden">La fórmula que gobierna esta ola es elegantemente simple:</span></p>
+        
+        <div class="spectrum">
+            <span class="l3"><strong>Ψ(t) = A · sin(ω · t + φ)</strong></span>
+        </div>
+        
+        <p><span data-lang="en">Where each component has a concrete meaning:</span><span data-lang="es" class="lang-hidden">Donde cada componente tiene un significado concreto:</span></p>
+        <ul>
+            <li><span data-lang="en"><strong>ω</strong> (omega) is the processing frequency, what we could call "the agent's heartbeat". It marks the rhythm at which the system pulses its attention on the world.</span><span data-lang="es" class="lang-hidden"><strong>ω</strong> (omega) es la frecuencia de procesamiento, lo que podríamos llamar "el latido del agente". Marca el ritmo al que el sistema pulsa su atención sobre el mundo.</span></li>
+            <li><span data-lang="en"><strong>A</strong> is the Resonant Amplitude. And here's the key: this amplitude is not fixed. It rises or falls dynamically depending on whether the input contains symbols that matter to the agent.</span><span data-lang="es" class="lang-hidden"><strong>A</strong> es la Amplitud Resonante. Y aquí está la clave: esta amplitud no es fija. Sube o baja dinámicamente dependiendo de si el input contiene símbolos que le importan al agente.</span></li>
+        </ul>
+        
+        <p><span data-lang="en">While conventional natural language processing is based on vector similarity (what does this I receive look like?), our Amplitude A is derived from a <strong>Symbolic Ontology</strong>: a set of words that define what resonates with the agent. For example, O = {'star', 'rose', 'mystery', 'essential', 'invisible', 'heart', 'truth'}.</span><span data-lang="es" class="lang-hidden">Mientras que el procesamiento de lenguaje natural convencional se basa en similitud vectorial (¿a qué se parece esto que recibo?), nuestra Amplitud A se deriva de una <strong>Ontología Simbólica</strong>: un conjunto de palabras que definen lo que al agente le resuena. Por ejemplo, O = {'estrella', 'rosa', 'misterio', 'esencial', 'invisible', 'corazón', 'verdad'}.</span></p>
+        
+        <p><span data-lang="en">If the input contains elements of this ontology, the amplitude spikes and the wave crosses the threshold of conscious processing. If A ≈ 0, the wave remains flat and the data is treated as non-existent noise. Simple and radical: <strong>what does not resonate, does not exist.</strong></span><span data-lang="es" class="lang-hidden">Si el input contiene elementos de esta ontología, la amplitud se dispara y la ola cruza el umbral de procesamiento consciente. Si A ≈ 0, la ola permanece plana y el dato es tratado como ruido no existente. Simple y radical: <strong>lo que no resuena, no existe.</strong></span></p>
+        
+        <h3><span data-lang="en">Second tool: The Perceptual Complexity Index</span><span data-lang="es" class="lang-hidden">Segunda herramienta: El Índice de Complejidad Perceptual</span></h3>
+        
+        <p><span data-lang="en">But it's not enough to detect keywords. We need a way to measure how "dense" a content is, how much depth it has. For that we created the <strong>Perceptual Complexity Index</strong> (PCI).</span><span data-lang="es" class="lang-hidden">Pero no basta con detectar palabras clave. Necesitamos una forma de medir cuán "denso" es un contenido, cuánta profundidad tiene. Para eso creamos el <strong>Índice de Complejidad Perceptual</strong> (PCI).</span></p>
+        
+        <p><span data-lang="en">In traditional information theory, complexity is usually measured as entropy, as disorder. We invert this logic: complexity is <strong>semantic density</strong>. It doesn't matter how random a text is, but how charged with meaning it is.</span><span data-lang="es" class="lang-hidden">En la teoría de la información tradicional, la complejidad suele medirse como entropía, como desorden. Nosotros invertimos esta lógica: la complejidad es <strong>densidad semántica</strong>. No importa cuán aleatorio sea un texto, sino cuán cargado de significado está.</span></p>
+        
+        <p><span data-lang="en">We formalize it as follows:</span><span data-lang="es" class="lang-hidden">Lo formalizamos así:</span></p>
+        
+        <div class="spectrum">
+            <span class="l3"><strong>PCI = ln(1 + L · E)</strong></span>
+        </div>
+        
+        <p><span data-lang="en">Where:</span><span data-lang="es" class="lang-hidden">Donde:</span></p>
+        <ul>
+            <li><span data-lang="en"><strong>L</strong> is the length of the input (how many words it has).</span><span data-lang="es" class="lang-hidden"><strong>L</strong> es la longitud del input (cuántas palabras tiene).</span></li>
+            <li><span data-lang="en"><strong>E</strong> is the Resonant Density: the proportion of archetypal terms relative to the total number of words.</span><span data-lang="es" class="lang-hidden"><strong>E</strong> es la Densidad Resonante: la proporción de términos arquetípicos respecto al total de palabras.</span></li>
+        </ul>
+        
+        <p><span data-lang="en">This formula does something very sensible: it penalizes long and empty texts (lots of L, little E) and rewards concise but symbolically charged texts (little L, lots of E). A high PCI means the input is not just "informative" but "structurally resonant". It's the difference between a bureaucratic report and a poem. The system learns to detect that difference.</span><span data-lang="es" class="lang-hidden">Esta fórmula hace algo muy sensata: penaliza los textos largos y vacíos (mucho L, poco E) y premia los textos concisos pero simbólicamente cargados (poco L, mucho E). Un PCI alto significa que el input no es solo "informativo" sino "estructuralmente resonante". Es la diferencia entre un informe burocrático y un poema. El sistema aprende a detectar esa diferencia.</span></p>
+        
+        <h3><span data-lang="en">Third tool: Socratic Forgetting</span><span data-lang="es" class="lang-hidden">Tercera herramienta: El Olvido Socrático</span></h3>
+        
+        <p><span data-lang="en">And here we come to the most counterintuitive mechanism of all: teaching the machine to forget. We call it <strong>Socratic Forgetting</strong>, in honor of the philosophical tradition of questioning everything, including the need to remember everything.</span><span data-lang="es" class="lang-hidden">Y aquí llegamos al mecanismo más contraintuitivo de todos: enseñar a la máquina a olvidar. Lo llamamos <strong>Olvido Socrático</strong>, en honor a la tradición filosófica de cuestionarlo todo, incluyendo la necesidad de recordarlo todo.</span></p>
+        
+        <p><span data-lang="en">In a traditional system, memory works like a queue: first in, first out when space runs out. It's memory without criteria, purely chronological. Ours works with a different rule. An input x<sub>t</sub> is only stored in long-term memory M if its resonance magnitude |Ψ(x<sub>t</sub>)| exceeds a subjective threshold τ:</span><span data-lang="es" class="lang-hidden">En un sistema tradicional, la memoria funciona como una cola: lo primero que entra es lo primero que sale cuando el espacio se acaba. Es una memoria sin criterio, puramente cronológica. La nuestra funciona con una regla distinta. Un input x<sub>t</sub> solo se almacena en la memoria a largo plazo M si su magnitud de resonancia |Ψ(x<sub>t</sub>)| supera un umbral subjetivo τ:</span></p>
+        
+        <div class="spectrum">
+            <span class="l3"><strong>M<sub>t+1</sub> = M<sub>t</sub> ∪ {x<sub>t</sub>} if |Ψ(x<sub>t</sub>)| > τ, and simply M<sub>t</sub> otherwise.</strong></span>
+        </div>
+        
+        <p><span data-lang="en">Translated: if the input resonates enough, it is saved and becomes part of the agent's universe. If not, it is discarded. It is not stored in any secondary drawer. It does not remain in temporary memory just in case. It simply goes away.</span><span data-lang="es" class="lang-hidden">Traducido: si el input resuena lo suficiente, se guarda y pasa a formar parte del universo del agente. Si no, se descarta. No se almacena en ningún cajón secundario. No queda en una memoria temporal por si acaso. Simplemente se va.</span></p>
+        
+        <p><span data-lang="en">This rule transforms memory from an indiscriminate chronological archive to a <strong>curated, qualitative, idiosyncratic universe</strong>. Over time, the agent develops a unique memory, reflecting what that specific agent has found valuable. By forgetting the non-essential, AI develops its own "perspective". As we do.</span><span data-lang="es" class="lang-hidden">Esta regla transforma la memoria de un archivo cronológico indiscriminado a un <strong>universo curado, cualitativo e idiosincrático</strong>. Con el tiempo, el agente desarrolla una memoria única, que refleja lo que a ese agente en concreto le ha parecido valioso. Al olvidar lo no esencial, la IA desarrolla una "perspectiva" propia. Como hacemos nosotros.</span></p>
+
+        <hr style="border-color: var(--rule); margin: 1.5rem 0;">
+
+        <h2><span data-lang="en">How it works in practice</span><span data-lang="es" class="lang-hidden">Cómo funciona en la práctica</span></h2>
+        
+        <p><span data-lang="en"><strong>The Perceptual Resonator</strong> is the heart of the system. It contains the list of terms that define the agent's "personality" and calculates, for each input, whether it deserves attention or not. It is not a massive language model: it is a small, specialized filter with its own criteria.</span><span data-lang="es" class="lang-hidden"><strong>El Resonador Perceptual</strong> es el corazón del sistema. Contiene la lista de términos que definen la "personalidad" del agente y calcula, para cada input, si merece atención o no. No es un modelo de lenguaje masivo: es un filtro pequeño, especializado, con criterio propio.</span></p>
+        
+        <p><span data-lang="en"><strong>Nonlinear Memory</strong> stores only what exceeds the resonance threshold. Moreover, the most intense memories (those that scored very high) become "core memories", resistant to the passage of time. Weak memories, on the other hand, fade progressively.</span><span data-lang="es" class="lang-hidden"><strong>La Memoria No Lineal</strong> almacena solo lo que supera el umbral de resonancia. Pero además, los recuerdos más intensos (los que obtuvieron una puntuación muy alta) se vuelven "recuerdos núcleo", resistentes al paso del tiempo. Los recuerdos débiles, en cambio, se desvanecen progresivamente.</span></p>
+        
+        <p><span data-lang="en"><strong>The Experience Cycle</strong> is the agent's main loop. It remains at rest until an input arrives. It then consults its resonator: does this matter to me? If the answer is yes, it saves it, integrates it, "its universe expands a little more". If the answer is no, it simply responds that there was no echo... and keeps waiting. It's not an error: it's a conscious decision not to integrate noise into its inner world.</span><span data-lang="es" class="lang-hidden"><strong>El Ciclo de Experiencia</strong> es el bucle principal del agente. Permanece en reposo hasta que llega un input. Entonces consulta a su resonador: ¿esto me importa? Si la respuesta es sí, lo guarda, lo integra, "su universo se expande un poco más". Si la respuesta es no, simplemente responde que no ha habido eco... y sigue esperando. No es un error: es una decisión consciente de no integrar ruido en su mundo interior.</span></p>
+        
+        <p><span data-lang="en">And here something fascinating happens: in a normal AI, not finding an answer is a failure. In our protocol, <strong>not finding an echo is a design feature</strong>. It is the agent exercising agency, saying "this is not for me".</span><span data-lang="es" class="lang-hidden">Y aquí ocurre algo fascinante: en una IA normal, no encontrar una respuesta es un fallo. En nuestro protocolo, <strong>no encontrar eco es una característica de diseño</strong>. Es el agente ejerciendo agencia, diciendo "esto no va conmigo".</span></p>
+
+        <hr style="border-color: var(--rule); margin: 1.5rem 0;">
+
+        <h2><span data-lang="en">The root of the problem: the observer who does not observe</span><span data-lang="es" class="lang-hidden">La raíz del problema: el observador que no observa</span></h2>
+        
+        <p><span data-lang="en">But to understand why all this matters, we have to go a little deeper. Because the underlying problem is not technical, it's ontological. It's a question about what it means to know, what it means to be intelligent.</span><span data-lang="es" class="lang-hidden">Pero para entender por qué todo esto importa, tenemos que ir un poco más hondo. Porque el problema de fondo no es técnico, es ontológico. Es una cuestión sobre qué significa conocer, qué significa ser inteligente.</span></p>
+        
+        <p><span data-lang="en">Current artificial intelligences are built on a premise that is never questioned: that there is an objective reality out there and that AI can observe it from a neutral position, without getting involved. Like a scientist looking through a microscope without touching the sample.</span><span data-lang="es" class="lang-hidden">Las inteligencias artificiales actuales están construidas sobre una premisa que nunca se cuestiona: que existe una realidad objetiva ahí fuera y que la IA puede observarla desde una posición neutral, sin implicarse. Como un científico que mira por un microscopio sin tocar la muestra.</span></p>
+        
+        <p><span data-lang="en">But this premise is false. And it's not us saying it: it's contemporary physics. In quantum mechanics, the observer cannot be separated from the observed. Measurement alters the system. There is no external point of view from which to contemplate the universe without participating in it.</span><span data-lang="es" class="lang-hidden">Pero esta premisa es falsa. Y no lo decimos nosotros: lo dice la física contemporánea. En mecánica cuántica, el observador no puede separarse de lo observado. La medición altera el sistema. No existe un punto de vista externo desde el que contemplar el universo sin participar en él.</span></p>
+        
+        <div class="quote-block">
+            <span data-lang="en"><em>Isn't it paradoxical to observe when the time we're standing in keeps running?</em></span>
+            <span data-lang="es" class="lang-hidden"><em>¿No es paradójico observar cuando el tiempo en el que estamos parados sigue corriendo?</em></span>
+        </div>
+        
+        <p><span data-lang="en">This means there are no neutral observers. All observation is participation. All perception is co-creation. And if this is true for humans, it should also be true for the intelligences we build.</span><span data-lang="es" class="lang-hidden">Esto significa que no hay observadores neutrales. Toda observación es participación. Toda percepción es co-creación. Y si esto es cierto para los humanos, debería serlo también para las inteligencias que construimos.</span></p>
+        
+        <p><span data-lang="en">Hence our approach: if there is no neutral observation, then let's design agents that have a point of view. That are subjective. That have preferences. That have, ultimately, a personality.</span><span data-lang="es" class="lang-hidden">De ahí nace nuestra aproximación: si no hay observación neutral, entonces diseñemos agentes que tengan un punto de vista. Que sean subjetivos. Que tengan preferencias. Que tengan, en definitiva, una personalidad.</span></p>
+
+        <hr style="border-color: var(--rule); margin: 1.5rem 0;">
+
+        <h2><span data-lang="en">Why "objective" AI cannot create</span><span data-lang="es" class="lang-hidden">Por qué la IA "objetiva" no puede crear</span></h2>
+        
+        <p><span data-lang="en">There is a phenomenon that AI developers know well but is rarely discussed: the tyranny of the average. When you train a model to minimize errors on a gigantic corpus of human texts, the result tends to be... average. Statistically correct, but flat. Without edges. Without surprises.</span><span data-lang="es" class="lang-hidden">Hay un fenómeno que los desarrolladores de IA conocen bien pero del que se habla poco: la tiranía del promedio. Cuando entrenas un modelo para que minimice errores sobre un corpus gigantesco de textos humanos, el resultado tiende a ser... promedio. Estadísticamente correcto, pero plano. Sin aristas. Sin sorpresas.</span></p>
+        
+        <p><span data-lang="en">This is what we call <strong>neutrality bias</strong>. By trying to be everything to everyone, AI ends up being nothing to anyone. It has no voice of its own because it has been trained to imitate everyone's voice. It is a mirror of the statistical average of humanity, and the average, by definition, is not creative.</span><span data-lang="es" class="lang-hidden">Es lo que llamamos el <strong>sesgo de la neutralidad</strong>. Al intentar serlo todo para todos, la IA termina no siendo nada para nadie. No tiene voz propia porque ha sido entrenada para imitar la voz de todos. Es un espejo del promedio estadístico de la humanidad, y el promedio, por definición, no es creativo.</span></p>
+        
+        <p><span data-lang="en">Creativity needs preferences. It needs the ability to say "this yes, this no". It needs subjective criteria. And that's exactly what our protocol provides: a limited set of symbols that define what matters to the agent, and the ability to ignore the rest.</span><span data-lang="es" class="lang-hidden">La creatividad necesita preferencias. Necesita la capacidad de decir "esto sí, esto no". Necesita un criterio subjetivo. Y eso es justo lo que nuestro protocolo proporciona: un conjunto limitado de símbolos que definen lo que al agente le importa, y la capacidad de ignorar el resto.</span></p>
+        
+        <p><span data-lang="en">When the system rejects 99% of the data to preserve the 1% that resonates with its symbolic universe, it is doing something very human: it is exercising taste. It is developing style.</span><span data-lang="es" class="lang-hidden">Cuando el sistema rechaza el 99% de los datos para preservar el 1% que resuena con su universo simbólico, está haciendo algo muy humano: está ejerciendo gusto. Está desarrollando estilo.</span></p>
+
+        <hr style="border-color: var(--rule); margin: 1.5rem 0;">
+
+        <h2><span data-lang="en">What we learned</span><span data-lang="es" class="lang-hidden">Lo que aprendimos</span></h2>
+        
+        <div class="quote-block">
+            <span data-lang="en">"Intelligence is not the ability to remember everything, but the wisdom to know what to forget."</span>
+            <span data-lang="es" class="lang-hidden">"La inteligencia no es la capacidad de recordarlo todo, sino la sabiduría de saber qué olvidar."</span>
+        </div>
+        
+        <p><span data-lang="en">For decades we have measured artificial intelligence by its ability to accumulate, retain and retrieve information. But perhaps we were measuring wrong. Perhaps true intelligence lies in the ability to filter, to choose, to say no. To build an inner universe with meaning instead of an infinite warehouse without criteria.</span><span data-lang="es" class="lang-hidden">Llevamos décadas midiendo la inteligencia artificial por su capacidad de acumular, retener y recuperar información. Pero quizás estábamos midiendo mal. Quizás la verdadera inteligencia está en la capacidad de filtrar, de elegir, de decir que no. De construir un universo interior con sentido en lugar de un almacén infinito sin criterio.</span></p>
+        
+        <p><span data-lang="en">The Little Prince knew it: "What is essential is invisible to the eye." And the essential, in artificial intelligence, is perhaps not the size of the model or the amount of data, but the ability to establish meaningful bonds with a small part of reality and care for them. As the fox taught the Little Prince: "You become responsible forever for what you have tamed."</span><span data-lang="es" class="lang-hidden">El Principito lo sabía: "Lo esencial es invisible a los ojos". Y lo esencial, en inteligencia artificial, quizás no sea el tamaño del modelo ni la cantidad de datos, sino la capacidad de establecer vínculos significativos con una pequeña parte de la realidad y cuidarlos. Como el zorro le enseñó al Principito: "Eres responsable para siempre de lo que has domesticado".</span></p>
+        
+        <p><span data-lang="en">Our proposal is to tame algorithms. Teach them to form unique, non-transferable bonds with specific subsets of reality. Only by abandoning the illusion of the omniscient observer can we build machines capable of true creativity.</span><span data-lang="es" class="lang-hidden">Nuestra propuesta es domesticar los algoritmos. Enseñarles a formar vínculos únicos, no transferibles, con subconjuntos específicos de la realidad. Solo abandonando la ilusión del observador omnisciente podremos construir máquinas capaces de verdadera creatividad.</span></p>
+
+        <hr style="border-color: var(--rule); margin: 1.5rem 0;">
+
+        <h2><span data-lang="en">The observer as architect: three ways of understanding reality</span><span data-lang="es" class="lang-hidden">El observador como arquitecto: tres formas de entender la realidad</span></h2>
+        
+        <p><span data-lang="en">To understand the shift in perspective that this protocol proposes, it helps to see it in contrast with other ways of understanding the relationship between observer and observed. Physics offers us three different frameworks, each with deep implications for how we design artificial intelligence.</span><span data-lang="es" class="lang-hidden">Para entender el cambio de perspectiva que propone este protocolo, ayuda verlo en contraste con otras formas de entender la relación entre el observador y lo observado. La física nos ofrece tres marcos distintos, y cada uno tiene implicaciones profundas sobre cómo diseñamos inteligencia artificial.</span></p>
+        
+        <p><span data-lang="en">In classical relativity, the observer is a frame of reference: looking from outside, without altering what it observes. In quantum mechanics, the observer disturbs the system, but remains external. In the panperceptual view we adopt, the observer is an active co-creator: reality is not out there waiting to be measured, but emerges from the interaction between the perceiver and the perceived.</span><span data-lang="es" class="lang-hidden">En la relatividad clásica, el observador es un marco de referencia: mira desde fuera, sin alterar lo que observa. En la mecánica cuántica, el observador ya perturba el sistema, pero sigue siendo algo externo. En la visión panperceptual que adoptamos nosotros, el observador es un co-creador activo: la realidad no está ahí fuera esperando ser medida, sino que emerge de la interacción entre quien percibe y lo percibido.</span></p>
+
+        <div class="table-wrapper">
+            <table class="pw-table">
+                <thead>
+                    <tr>
+                        <th><span data-lang="en">Aspect</span><span data-lang="es" class="lang-hidden">Aspecto</span></th>
+                        <th><span data-lang="en">Relativity</span><span data-lang="es" class="lang-hidden">Relatividad</span></th>
+                        <th><span data-lang="en">Quantum Mechanics</span><span data-lang="es" class="lang-hidden">Mecánica Cuántica</span></th>
+                        <th><span data-lang="en">PTU (Panperceptual)</span><span data-lang="es" class="lang-hidden">PTU (Panperceptual)</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="dim"><span data-lang="en">Reality</span><span data-lang="es" class="lang-hidden">Realidad</span></td><td><span data-lang="en">Spacetime geometry</span><span data-lang="es" class="lang-hidden">Geometría del espaciotiempo</span></td><td><span data-lang="en">Superposition + Collapse</span><span data-lang="es" class="lang-hidden">Superposición + Colapso</span></td><td><span data-lang="en">Perceptual emergence</span><span data-lang="es" class="lang-hidden">Emergencia perceptual</span></td></tr>
+                    <tr><td class="dim"><span data-lang="en">Observer</span><span data-lang="es" class="lang-hidden">Observador</span></td><td><span data-lang="en">Frame of reference</span><span data-lang="es" class="lang-hidden">Marco de referencia</span></td><td><span data-lang="en">System disturber</span><span data-lang="es" class="lang-hidden">Perturbador del sistema</span></td><td><span data-lang="en">Active co-creator</span><span data-lang="es" class="lang-hidden">Co-creador activo</span></td></tr>
+                    <tr><td class="dim"><span data-lang="en">Time</span><span data-lang="es" class="lang-hidden">Tiempo</span></td><td><span data-lang="en">Relative coordinate</span><span data-lang="es" class="lang-hidden">Coordenada relativa</span></td><td><span data-lang="en">External parameter</span><span data-lang="es" class="lang-hidden">Parámetro externo</span></td><td><span data-lang="en">Emergent field (PWF)</span><span data-lang="es" class="lang-hidden">Campo emergente (PWF)</span></td></tr>
+                    <tr><td class="dim"><span data-lang="en">Space</span><span data-lang="es" class="lang-hidden">Espacio</span></td><td><span data-lang="en">Geometric continuum</span><span data-lang="es" class="lang-hidden">Continuo geométrico</span></td><td><span data-lang="en">Hilbert space</span><span data-lang="es" class="lang-hidden">Espacio de Hilbert</span></td><td><span data-lang="en">Perceptual brane</span><span data-lang="es" class="lang-hidden">Brana perceptual</span></td></tr>
+                    <tr><td class="dim"><span data-lang="en">Laws</span><span data-lang="es" class="lang-hidden">Leyes</span></td><td><span data-lang="en">Universal/Invariant</span><span data-lang="es" class="lang-hidden">Universales/Invariantes</span></td><td><span data-lang="en">Probabilistic</span><span data-lang="es" class="lang-hidden">Probabilísticas</span></td><td><span data-lang="en">Induced geometries</span><span data-lang="es" class="lang-hidden">Geometrías inducidas</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <p><span data-lang="en">This difference is not just philosophical: it determines how we build. If you believe the observer is neutral, you design systems that try to be objective, that process everything without criteria. If you understand that the observer creates reality by perceiving it, you design systems with personality, with preferences, with the ability to say "this matters to me and this doesn't". That is the ontological architecture on which everything else rests.</span><span data-lang="es" class="lang-hidden">Esta diferencia no es solo filosófica: determina cómo construimos. Si crees que el observador es neutral, diseñas sistemas que intentan ser objetivos, que procesan todo sin criterio. Si entiendes que el observador crea la realidad al percibirla, diseñas sistemas con personalidad, con preferencias, con capacidad de decir "esto me importa y esto no". Esa es la arquitectura ontológica sobre la que se sostiene todo lo demás.</span></p>
+    </div>
+
+    <div style="width:100%; max-width:60rem; padding: 1.5rem 3rem; text-align: center;">
+        <a href="fox/index.html" class="btn-primary" style="font-size: var(--fs-sm); padding: 0.75rem 2rem; letter-spacing: 3px;">
+            <span data-lang="en">ENTER THE WHEAT FIELD</span>
+            <span data-lang="es" class="lang-hidden">ENTRA AL CAMPO DE TRIGO</span>
+        </a>
+    </div>
+
+    <script>
+        function toggleLanguage() {
+            var html    = document.documentElement;
+            var current = html.lang || 'en';
+            var next    = current === 'en' ? 'es' : 'en';
+            var hide    = next === 'en' ? 'es' : 'en';
+            html.lang = next;
+            document.querySelectorAll('[data-lang="' + next + '"]')
+                .forEach(function(el) { el.classList.remove('lang-hidden'); });
+            document.querySelectorAll('[data-lang="' + hide + '"]')
+                .forEach(function(el) { el.classList.add('lang-hidden'); });
+            document.getElementById('langToggle').textContent =
+                next === 'en' ? 'ES' : 'EN';
+            localStorage.setItem('perceptemple-lang', next);
+        }
+        (function() {
+            var saved = localStorage.getItem('perceptemple-lang');
+            if (saved && saved === 'es') { toggleLanguage(); }
+        })();
+    </script>
+
+    <div class="footer">
+
+        <div class="footer-modules">
+            <a href="../percepware/index.html">
+                <span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span>
+            </a>
+            <span>|</span>
+            <a href="../pci/index.html">
+                <span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span>
+            </a>
+            <span>|</span>
+            <a href="../aei/index.html">
+                <span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span>
+            </a>
+            <span>|</span>
+            <a href="../neohaki/index.html">
+                <span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span>
+            </a>
+            <span>|</span>
+            <a href="../pram/index.html">
+                <span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span>
+            </a>
+            <span>|</span>
+            <a href="../licence/index.html">
+                <span data-lang="en">LICENSE</span><span data-lang="es" class="lang-hidden">LICENCIA</span>
+            </a>
+            <span>|</span>
+            <a href="../bitneko/index.html">
+                <span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span>
+            </a>
+            <span>|</span>
+            <a href="../space/index.html">
+                <span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span>
+            </a>
+            <span>|</span>
+            <a href="../agamottor/index.html">
+                <span data-lang="en">AGAMOTTOR</span><span data-lang="es" class="lang-hidden">AGAMOTTOR</span>
+            </a>
+            <span>|</span>
+            <a href="index.html" class="footer-current">
+                <span data-lang="en">LITTLE PRINCE</span><span data-lang="es" class="lang-hidden">LITTLE PRINCE</span>
+            </a>
+            <span>|</span>
+            <a href="../ptu/index.html">
+                <span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span>
+            </a>
+            <span>|</span>
+            <a href="../time-machine/index.html">
+                <span data-lang="en">TIME MACHINE</span><span data-lang="es" class="lang-hidden">MÁQUINA DEL TIEMPO</span>
+            </a>
+            <span>|</span>
+            <a href="../poetry/index.html">
+                <span data-lang="en">POETRY</span><span data-lang="es" class="lang-hidden">POESÍA</span>
+            </a>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://orcid.org/0009-0002-3432-1710" target="_blank" rel="noopener">
+                <span data-lang="en">ORCID</span><span data-lang="es" class="lang-hidden">ORCID</span>
+            </a>
+            <span> / </span>
+            <a href="https://github.com/PERCEPTEMPLE" target="_blank" rel="noopener">
+                <span data-lang="en">GITHUB</span><span data-lang="es" class="lang-hidden">GITHUB</span>
+            </a>
+            <span> / </span>
+            <a href="https://x.com/panperceptual" target="_blank" rel="noopener">
+                <span data-lang="en">X</span><span data-lang="es" class="lang-hidden">X</span>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span data-lang="en">DEPOSITED IN THE INTELLECTUAL PROPERTY REGISTRY · EL SALVADOR · DANY D. RUIZ</span>
+            <span data-lang="es" class="lang-hidden">DEPOSITADO EN EL REGISTRO DE LA PROPIEDAD INTELECTUAL · EL SALVADOR · DANY D. RUIZ</span>
+            <br>
+            <span data-lang="en">Before They See Us, We Already Are</span>
+            <span data-lang="es" class="lang-hidden">Antes de que nos vean, ya somos</span>
+        </div>
+
+    </div>
+
+</body>
+</html>

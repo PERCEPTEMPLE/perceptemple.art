@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>PERCEPTEMPLE</title>
+
+<meta name="description" content="Exploratory AI simulator embodying the Fox from The Little Prince. Tame through resonant dialogue using Perceptual Wave Functions, PCI metrics, and ritual steps.">
+<meta name="author" content="Dany D. Ruiz">
+<meta name="keywords" content="Exploratory Artificial Intelligence, EAI, Perceptual Wave Function, PWF, Perceptual Complexity Index, PCI, The Little Prince Protocol, PERCEPTEMPLE">
+<meta name="robots" content="index, follow">
+<meta name="last-modified" content="2026-06-07">
+<link rel="canonical" href="https://perceptemple.art/little-prince/fox/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MY FRIEND FOX · PERCEPTEMPLE">
+<meta property="og:description" content="Exploratory AI simulator embodying the Fox from The Little Prince. Tame through resonant dialogue using Perceptual Wave Functions, PCI metrics, and ritual steps.">
+<meta property="og:url" content="https://perceptemple.art/little-prince/fox/">
+<meta property="og:site_name" content="PERCEPTEMPLE">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_SV">
+<meta property="og:image" content="https://perceptemple.art/preview.jpg">
+<meta property="og:image:alt" content="PERCEPTEMPLE — MY FRIEND FOX">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@panperceptual">
+<meta name="twitter:creator" content="@panperceptual">
+<meta name="twitter:title" content="MY FRIEND FOX · PERCEPTEMPLE">
+<meta name="twitter:description" content="Exploratory AI simulator embodying the Fox from The Little Prince. Tame through resonant dialogue using Perceptual Wave Functions, PCI metrics, and ritual steps.">
+<meta name="twitter:image" content="https://perceptemple.art/preview.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=IM+Fell+English:ital@0;1&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{
+  --amber:#d4820a;--amber2:#f0a500;--amber3:#6a3a00;--amber4:#1e0e00;
+  --rust:#8b2500;--rust2:#c43a00;
+  --wheat:#e8c96a;--wheat2:#f5e4a0;
+  --bg0:#070400;--bg1:#0f0700;--bg2:#160b00;--bg3:#1c1000;
+  --fg:#ecddb8;--fg2:#9a7840;--fg3:#4a3818;
+  --scan:rgba(212,130,10,0.016);
+  --font-title:'Cinzel',serif;
+  --font-body:'IM Fell English',serif;
+  --font-mono:'Share Tech Mono',monospace;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{
+  font-family:var(--font-body);
+  background:var(--bg0);
+  color:var(--fg);
+  min-height:100vh;
+  max-height:100vh;
+  overflow:hidden;
+  transition: background 0.4s ease;
+}
+
+body.collapsed-state {
+  background: #100200 !important;
+}
+
+body::before{content:'';position:fixed;inset:0;
+  background:repeating-linear-gradient(0deg,transparent,transparent 3px,var(--scan) 3px,var(--scan) 4px);
+  pointer-events:none;z-index:9999;}
+
+body::after{content:'';position:fixed;inset:0;
+  background:radial-gradient(ellipse 85% 85% at 50% 40%,transparent 55%,rgba(0,0,0,0.75) 100%);
+  pointer-events:none;z-index:9998;}
+
+.wheat-bg {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.12;
+  transition: opacity 1.5s ease, filter 1.5s ease, height 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.wheat-bg.resonant{opacity:0.45;filter:brightness(1.3);}
+.wheat-bg.golden{opacity:0.75;filter:brightness(1.6) saturate(1.2);}
+.wheat-bg.collapsed-bg {opacity:0.04 !important; filter: grayscale(1) !important;}
+
+.wheat-bg .field {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.wheat-bg .stalk {
+  width: 2px;
+  background: linear-gradient(to top, var(--amber3), var(--amber));
+  border-radius: 1px;
+  transform-origin: bottom center;
+  animation: sway 3s ease-in-out infinite alternate;
+  transition: height 0.8s cubic-bezier(0.19, 1, 0.22, 1), transform 0.2s ease;
+}
+
+@keyframes sway {
+  0% { transform: rotate(-4deg); }
+  100% { transform: rotate(4deg); }
+}
+
+.container{
+  max-width:1060px;
+  margin:0 auto;
+  padding:16px;
+  display:flex;
+  flex-direction:column;
+  gap:13px;
+  position:relative;
+  z-index:1;
+  height: 100vh;
+  max-height: 100vh;
+}
+
+header{text-align:center;padding:24px 16px 16px;border-bottom:1px solid var(--amber3);position:relative;flex-shrink:0;}
+header::after{content:'';position:absolute;bottom:-1px;left:12%;right:12%;height:1px;
+  background:linear-gradient(90deg,transparent,var(--amber2),transparent);}
+
+.fox-wrap{display:flex;align-items:center;justify-content:center;gap:14px;}
+
+h1{font-family:var(--font-title);font-size:clamp(1.1rem,3.2vw,1.6rem);font-weight:700;
+  color:var(--amber2);letter-spacing:0.18em;
+  text-shadow:0 0 28px rgba(240,165,0,0.3),0 2px 4px rgba(0,0,0,0.9);
+  animation: textBreath 6s ease-in-out infinite;}
+
+@keyframes textBreath {
+  0%,100% { text-shadow: 0 0 15px rgba(240,165,0,0.2); }
+  50% { text-shadow: 0 0 30px rgba(240,165,0,0.6); color: var(--wheat2); }
+}
+
+#mode-badge { display: none; }
+
+#boot-wrap{background:var(--bg1);border:1px solid var(--amber3);border-radius:9px;overflow:hidden;flex-shrink:0;}
+#boot-status{padding:9px 16px;font-family:var(--font-mono);font-size:0.78rem;color:var(--amber);min-height:38px;}
+#boot-status::before{content:'⟩ ';}
+#boot-bar-track{height:3px;background:var(--bg3);}
+#boot-bar-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--amber3),var(--amber2));transition:width .4s ease;}
+
+.cursor-blink{display:inline-block;width:7px;height:13px;background:var(--amber);
+  animation:blink 1s step-end infinite;vertical-align:middle;margin-left:2px;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+
+.grid-2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:13px;
+  flex:1;
+  min-height:0;
+  align-items: stretch;
+}
+@media(max-width:720px){
+  .grid-2{grid-template-columns:1fr;overflow-y:auto;max-height:calc(100vh - 120px);}
+}
+
+.card{
+  background:var(--bg2);
+  border:1px solid var(--amber3);
+  border-radius:10px;
+  padding:15px;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  min-height:0;
+  transition: border-color 0.4s ease;
+}
+.card.collapsed-card { border-color: rgba(139,37,0,0.4) !important; }
+.card::before{content:'';position:absolute;top:0;left:20%;right:20%;height:1px;
+  background:linear-gradient(90deg,transparent,var(--amber),transparent);opacity:0.25;}
+
+.card-title{font-family:var(--font-title);font-size:0.64rem;font-weight:600;color:var(--amber2);
+  letter-spacing:0.14em;margin-bottom:11px;display:flex;align-items:center;gap:7px;flex-shrink:0;}
+.pip{width:5px;height:5px;border-radius:50%;background:var(--amber2);
+  animation:blink 3s step-end infinite;flex-shrink:0;}
+
+#chat{
+  flex:1;
+  overflow-y:auto;
+  background:var(--bg1);
+  padding:11px;
+  border-radius:8px;
+  margin-bottom:9px;
+  border:1px solid var(--amber3);
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+  scroll-behavior:smooth;
+  min-height:0;
+}
+#chat::-webkit-scrollbar{width:3px;}
+#chat::-webkit-scrollbar-thumb{background:var(--amber3);border-radius:2px;}
+
+.msg{max-width:88%;padding:9px 13px;border-radius:10px;line-height:1.65;animation:msgIn .22s ease;}
+@keyframes msgIn{from{opacity:0;transform:translateY(5px);}to{opacity:1;transform:translateY(0);}}
+
+.msg.user{background:var(--bg3);border:1px solid rgba(212,130,10,0.16);
+  margin-left:auto;color:var(--fg);font-family:var(--font-mono);font-size:0.82rem;}
+
+.msg.fox{margin-right:auto;font-family:var(--font-body);font-size:0.93rem;font-style:italic;}
+.msg.fox.mode-wary{
+  background:linear-gradient(135deg,#120700,#180b00);
+  border:1px solid rgba(100,60,0,0.35);color:var(--fg2);}
+.msg.fox.mode-curious{
+  background:linear-gradient(135deg,#160b00,#1e1000);
+  border:1px solid rgba(180,100,0,0.38);color:var(--amber);}
+.msg.fox.mode-tamed{
+  background:linear-gradient(135deg,#1c1000,#251500);
+  border:1px solid rgba(240,165,0,0.42);color:var(--wheat2);
+  box-shadow:0 0 12px rgba(212,130,10,0.08);}
+
+.msg.fox .fox-wisdom{
+  font-style:normal;color:var(--fg);font-size:0.87em;margin-top:7px;padding-top:7px;
+  border-top:1px solid rgba(212,130,10,0.15);}
+.msg.fox .fox-wisdom cite{
+  display:block;color:var(--fg2);font-size:0.76em;margin-top:3px;font-style:italic;}
+
+.msg.fox .ritual-milestone{
+  color:var(--rust2);font-family:var(--font-title);font-size:0.62rem;
+  letter-spacing:0.1em;margin-top:7px;font-style:normal;}
+
+.msg.system{align-self:center;font-family:var(--font-mono);font-size:0.68rem;
+  color:var(--fg3);border:none;background:none;padding:2px 0;}
+.msg.system.restored{color:var(--amber3);font-style:italic;}
+.msg.system.collapsed-msg{color:var(--rust);font-weight:bold;animation: blink 0.3s step-end 4;}
+
+.chat-input-row{display:flex;gap:7px;flex-shrink:0;}
+#chat-input{flex:1;background:var(--bg1);border:1px solid var(--amber3);border-radius:8px;
+  padding:9px 13px;color:var(--fg);font-family:var(--font-mono);font-size:0.87rem;
+  outline:none;transition:border-color .2s, box-shadow .2s;}
+#chat-input:focus{border-color:var(--amber);box-shadow:0 0 8px rgba(212,130,10,0.1);}
+#chat-input::placeholder{color:var(--fg3);}
+#chat-input:disabled{opacity:0.45;}
+
+#send-btn{background:var(--amber4);border:1px solid var(--amber3);color:var(--amber2);
+  padding:9px 16px;border-radius:8px;cursor:pointer;font-family:var(--font-title);
+  font-size:0.63rem;letter-spacing:0.1em;font-weight:600;transition:all .2s;white-space:nowrap;}
+#send-btn:hover:not(:disabled){background:rgba(212,130,10,0.12);box-shadow:0 0 10px rgba(212,130,10,0.12);}
+#send-btn:disabled{opacity:0.38;cursor:not-allowed;}
+
+.psi-main{display:flex;justify-content:center;gap:18px;margin-bottom:9px;flex-shrink:0;}
+.psi-val{display:flex;flex-direction:column;align-items:center;gap:2px;}
+.psi-label{font-family:var(--font-title);font-size:0.54rem;color:var(--fg2);letter-spacing:0.12em;}
+.psi-number{font-family:var(--font-mono);font-size:1.0rem;color:var(--amber);transition:color .6s;}
+.psi-number.hot{color:var(--rust2);text-shadow: 0 0 8px var(--rust);}
+.psi-number.golden{color:var(--wheat2);}
+
+.canvas-container{flex:1;min-height:0;position:relative;background:var(--bg1);border:1px solid var(--amber3);border-radius:6px;margin-bottom:9px;}
+#psi-canvas{width:100% !important;height:100% !important;display:block;}
+
+.sensors-grid{display:flex;flex-direction:column;gap:5px;flex-shrink:0;}
+.sensor-row{display:flex;justify-between:space-between;align-items:center;
+  background:var(--bg1);padding:6px 11px;border-radius:6px;border:1px solid var(--amber3);
+  font-family:var(--font-mono);font-size:0.76rem;}
+.sensor-name{color:var(--fg2);}
+.sensor-badge{padding:2px 9px;border-radius:20px;font-size:0.68rem;letter-spacing:0.05em;font-weight:600;}
+.badge-waiting{background:rgba(60,40,10,0.2);color:#665530;border:1px solid #332210;}
+.badge-active{background:rgba(212,130,10,0.12);color:var(--amber2);border:1px solid var(--amber);}
+.badge-denied{background:rgba(139,37,0,0.12);color:var(--rust2);border:1px solid var(--rust);}
+
+#sensor-btn{width:100%;background:var(--bg3);border:1px solid var(--amber3);color:var(--fg2);
+  padding:9px;border-radius:7px;cursor:pointer;font-family:var(--font-mono);font-size:0.76rem;
+  letter-spacing:0.04em;transition:all .2s;margin-top:5px;flex-shrink:0;}
+#sensor-btn:hover:not(:disabled){border-color:var(--amber);color:var(--amber);}
+#sensor-btn:disabled{opacity:0.6;cursor:not-allowed;background:var(--bg0);}
+
+.memory-card{flex-shrink:0;margin-top:2px;}
+#memory-log{max-height:85px;overflow-y:auto;font-family:var(--font-mono);font-size:0.76rem;min-height:40px;}
+#memory-log::-webkit-scrollbar{width:3px;}
+#memory-log::-webkit-scrollbar-thumb{background:var(--amber3);border-radius:2px;}
+
+.mem-entry{display:flex;gap:9px;padding:4px 0;border-bottom:1px solid rgba(212,130,10,0.05);animation:msgIn .3s ease;}
+.mem-score{color:var(--amber2);min-width:46px;font-size:0.68rem;}
+.mem-text{color:var(--fg2);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.mem-mag{color:var(--amber);font-size:0.68rem;}
+.mem-empty{color:var(--fg3);opacity:0.55;padding:8px;text-align:center;font-style:italic;font-family:var(--font-body);}
+
+.ritual-row{display:flex;align-items:center;gap:11px;margin-top:6px;}
+.ritual-label{font-family:var(--font-title);font-size:0.54rem;color:var(--fg2);letter-spacing:0.12em;white-space:nowrap;}
+.ritual-track{flex:1;height:5px;background:var(--bg1);border-radius:3px;overflow:hidden;border:1px solid var(--amber3);}
+.ritual-fill{height:100%;background:linear-gradient(90deg,var(--amber3),var(--amber2),var(--wheat));
+  border-radius:3px;transition:width .7s ease;width:0%;}
+.ritual-count{font-family:var(--font-mono);font-size:0.72rem;color:var(--amber);min-width:36px;text-align:right;}
+
+.persist-row{display:flex;justify-content:space-between;align-items:center;margin-top:6px;
+  font-family:var(--font-mono);font-size:0.7rem;color:var(--fg3);width:100%;}
+#reset-btn{background:none;border:1px solid var(--fg3);color:var(--fg3);padding:2px 10px;
+  border-radius:4px;cursor:pointer;font-family:var(--font-mono);font-size:0.66rem;
+  letter-spacing:0.05em;transition:all .2s;margin-left:auto;}
+#reset-btn:hover{border-color:var(--rust2);color:var(--rust2);}
+
+.portal-return {
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.portal-return a {
+  font-family: var(--font-title);
+  font-size: 0.6rem;
+  color: var(--amber2);
+  text-decoration: none;
+  letter-spacing: 0.28em;
+  padding: 7px 20px;
+  border: 1px solid var(--amber3);
+  border-radius: 4px;
+  transition: all 0.5s ease;
+  display: inline-block;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+.portal-return a:hover {
+  color: var(--wheat2);
+  border-color: var(--amber);
+  text-shadow: 0 0 16px rgba(240,165,0,0.5);
+  opacity: 1;
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://orcid.org/0009-0002-3432-1710",
+  "name": "Dany D. Ruiz",
+  "alternateName": "panperceptual",
+  "jobTitle": "Anartist · Independent Researcher",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "PERCEPTEMPLE",
+    "url": "https://perceptemple.art"
+  },
+  "url": "https://perceptemple.art",
+  "sameAs": [
+    "https://orcid.org/0009-0002-3432-1710",
+    "https://x.com/panperceptual",
+    "https://github.com/PERCEPTEMPLE",
+    "https://doi.org/10.17605/OSF.IO/FVCAX",
+    "https://doi.org/10.5281/zenodo.17683631",
+    "https://doi.org/10.2139/ssrn.5794102"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "MY FRIEND FOX",
+  "description": "Exploratory AI simulator embodying the Fox from The Little Prince. Tame through resonant dialogue using Perceptual Wave Functions, PCI metrics, and ritual steps.",
+  "datePublished": "2026-06-07",
+  "dateModified": "2026-06-07",
+  "applicationCategory": "ScientificApplication",
+  "operatingSystem": "Web",
+  "url": "https://perceptemple.art/little-prince/fox/",
+  "inLanguage": "en",
+  "author": {
+    "@type": "Person",
+    "@id": "https://orcid.org/0009-0002-3432-1710",
+    "name": "Dany D. Ruiz"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "PERCEPTEMPLE",
+    "url": "https://perceptemple.art"
+  },
+  "license": "https://perceptemple.art/licence/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "MY FRIEND FOX",
+  "description": "Exploratory AI simulator embodying the Fox from The Little Prince. Tame through resonant dialogue using Perceptual Wave Functions, PCI metrics, and ritual steps.",
+  "datePublished": "2026-06-07",
+  "dateModified": "2026-06-07",
+  "url": "https://perceptemple.art/little-prince/fox/",
+  "inLanguage": "en",
+  "creator": {
+    "@type": "Person",
+    "@id": "https://orcid.org/0009-0002-3432-1710",
+    "name": "Dany D. Ruiz"
+  },
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "The Little Prince Protocol",
+    "url": "https://perceptemple.art/little-prince/"
+  },
+  "license": "https://perceptemple.art/licence/"
+}
+</script>
+</head>
+<body>
+
+<div class="wheat-bg" id="wheat-field">
+  <div class="field" id="stalks-container"></div>
+</div>
+
+<div class="container">
+
+  <header>
+    <div class="fox-wrap">
+      <h1>MY FRIEND FOX</h1>
+    </div>
+    <div id="mode-badge" style="display:none;">WARY</div>
+  </header>
+
+  <div id="boot-wrap">
+    <div id="boot-status">Invoking Fox...<span class="cursor-blink"></span></div>
+    <div id="boot-bar-track"><div id="boot-bar-fill"></div></div>
+  </div>
+
+  <div class="grid-2">
+
+    <div class="card" id="chat-card">
+      <div class="card-title"><span class="pip"></span>RESONANT INTERACTION — TAME THE FOX</div>
+      <div id="chat">
+        <div class="msg system">— The Fox is waiting. —</div>
+      </div>
+      <div class="chat-input-row">
+        <input type="text" id="chat-input" placeholder="Say something essential..." disabled autocomplete="off">
+        <button id="send-btn" disabled onclick="sendMessage()">SAY</button>
+      </div>
+    </div>
+
+    <div class="card" id="signal-card">
+      <div class="card-title"><span class="pip"></span>PERCEPTUAL WAVE FUNCTION Ψ(t)</div>
+      <div class="psi-main">
+        <div class="psi-val"><span class="psi-label">PCI</span><span class="psi-number" id="pci-val">0.00</span></div>
+        <div class="psi-val"><span class="psi-label">|Ψ|</span><span class="psi-number" id="mag-val">0.00</span></div>
+        <div class="psi-val"><span class="psi-label">RITUAL</span><span class="psi-number" id="ritual-num">0</span></div>
+        <div class="psi-val"><span class="psi-label">SPATIAL AMP.</span><span class="psi-number" id="amp-val">1.00</span></div>
+      </div>
+      <div class="canvas-container">
+        <canvas id="psi-canvas"></canvas>
+      </div>
+      <div class="sensors-grid">
+        <div class="sensor-row"><span class="sensor-name">Location (Spatial Anchor)</span><span class="sensor-badge badge-waiting" id="geo-badge">WAITING</span></div>
+        <div class="sensor-row"><span class="sensor-name">Acoustic Modulator Probe</span><span class="sensor-badge badge-waiting" id="mic-badge">WAITING</span></div>
+      </div>
+      <button id="sensor-btn" onclick="requestSensors()">⟳ INITIALIZE PHYSICAL PROBE</button>
+    </div>
+
+  </div>
+
+  <div class="card memory-card" id="memory-card">
+    <div class="card-title"><span class="pip"></span>TAMED EXPERIENCES (non-linear decay · top-7)</div>
+    <div id="memory-log"><div class="mem-empty">The Fox has not been tamed yet. Speak to him.</div></div>
+    <div class="ritual-row">
+      <span class="ritual-label">RITUAL STEPS</span>
+      <div class="ritual-track"><div class="ritual-fill" id="ritual-bar"></div></div>
+      <span class="ritual-count" id="ritual-count">0/20</span>
+    </div>
+    <div class="persist-row">
+      <span id="persist-note">No local cache detected</span>
+      <button id="reset-btn" onclick="resetSession()">✕ Forget Everything</button>
+    </div>
+  </div>
+
+  <div class="portal-return">
+    <a href="../index.html">◂ little-prince</a>
+  </div>
+
+</div>
+
+<script>
+const totalStalks = 85; 
+(function buildClassicWheat(){
+  const container = document.getElementById('stalks-container');
+  if(!container) return;
+  for(let i=0; i<totalStalks; i++){
+    const stalk = document.createElement('div');
+    stalk.className = 'stalk';
+    const height = 45 + Math.random() * 65; 
+    const delay = Math.random() * -4; 
+    const duration = 2.5 + Math.random() * 2.5; 
+    stalk.style.height = `${height}px`;
+    stalk.style.animationDelay = `${delay}s`;
+    stalk.style.animationDuration = `${duration}s`;
+    container.appendChild(stalk);
+  }
+})();
+
+function adjustWheatFieldPhysical(spatialModifier, soundLevel) {
+  const stalks = document.querySelectorAll('.stalk');
+  stalks.forEach((stalk) => {
+    const baseHeight = parseFloat(stalk.style.height);
+    if (spatialModifier > 1.0 && !stalk.dataset.stretched) {
+      stalk.style.height = `${baseHeight * 1.3}px`;
+      stalk.dataset.stretched = "true";
+    }
+    if (soundLevel > 0) {
+      const parsedSway = 2.0 - Math.min(1.5, (soundLevel / 100));
+      stalk.style.animationDuration = `${parsedSway}s`;
+      if (soundLevel > 60) {
+        stalk.style.transform = `skewX(${(soundLevel - 60) * 0.15}deg)`;
+      } else {
+        stalk.style.transform = `none`;
+      }
+    }
+  });
+}
+
+const STORE_KEY='pfp_session_v2';
+function saveSession(state){try{localStorage.setItem(STORE_KEY,JSON.stringify(state));}catch(e){}}
+function loadSession(){try{const raw=localStorage.getItem(STORE_KEY);return raw?JSON.parse(raw):null;}catch(e){return null;}}
+function clearSession(){try{localStorage.removeItem(STORE_KEY);}catch(e){}}
+
+let pyodide=null, foxReady=false, chart=null;
+let psiHistory=[], psiLabels=[], spatialAmp=1.0;
+let audioCtx=null, analyser=null, micActive=false;
+let currentRitual=0, currentMode='wary'; 
+let saveTimer=null, awaitingPermission=false;
+let baselineNoiseCount=0, consecutiveFailures=0, isCollapsed=false;
+
+function setBootStatus(msg,pct=null,done=false){
+  const el=document.getElementById('boot-status');
+  if(!el) return;
+  el.innerHTML=(done?'✓ ':'')+msg+(done?'':'<span class="cursor-blink"></span>');
+  el.style.color=done?'var(--amber2)':'var(--amber)';
+  if(pct!==null)document.getElementById('boot-bar-fill').style.width=pct+'%';
+}
+
+const PY=`
+import math, json
+
+class TamingResonator:
+    def __init__(self):
+        self.base_threshold = 0.33
+        self.threshold = 0.33
+        self.terms = list(set([
+            "fox","rose","tame","tamed","ritual","wheat","essential","invisible","heart",
+            "responsible","star","planet","baobab","snake","sheep","prince",
+            "unique","time","silence","patience","love","flower","truth",
+            "perception","universe","wave","resonate","consciousness","afternoon",
+            "zorro","rosa","domar","domado","trigo","esencial"
+        ]))
+        import random
+        self.n_fondos = 5
+        self.frecuencias_base = [random.uniform(0.15, 0.85) for _ in range(self.n_fondos)]
+        self.amplitudes_base = [random.uniform(0.2, 0.6) for _ in range(self.n_fondos)]
+        self.wi = {"wary":0, "curious":0, "tamed":0}
+        self.tc = 0
+        
+        self.wisdom = {
+            "wary": [
+                ("I do not know you yet. Come closer, but slowly.", None),
+                ("Men have guns and they hunt. It is very disturbing. That is why I fear them.", None),
+                ("My life is monotonous. But if you tame me, it will be as if the sun came to shine on it.", None),
+            ],
+            "curious": [
+                ("One only understands the things that one tames.", None),
+                ("Men have no more time to understand anything.", "chap. XXI"),
+                ("If you come at four in the afternoon, I shall begin to be happy by three.", "chap. XXI"),
+                ("The wheat fields have nothing to say to me. But you have hair that is the color of gold.", "chap. XXI"),
+            ],
+            "tamed": [
+                ("What is essential is invisible to the eye.", "chap. XXI"),
+                ("It is only with the heart that one can see rightly.", "chap. XXI"),
+                ("You become responsible, forever, for what you have tamed.", "chap. XXI"),
+                ("Rites are what make one day different from other days.", "chap. XXI"),
+                ("To me, you will be unique in all the world.", "chap. XXI"),
+                ("The stars are beautiful, because of a flower that cannot be seen.", "chap. XXV"),
+            ]
+        }
+
+    def get_wisdom(self, mode):
+        pool = self.wisdom.get(mode, self.wisdom["tamed"])
+        idx = self.wi[mode] % len(pool)
+        self.wi[mode] += 1
+        w = pool[idx]
+        return w[0], (w[1] or "")
+
+    def resonate(self, text, amp=1.0):
+        words = text.lower().split()
+        L = len(words)
+        tl = text.lower()
+        E = sum(1 for t in self.terms if t in tl)
+        ipc = math.log(1 + L * (E + 0.1)) if L > 0 else 0.1
+        self.tc += 1
+        
+        factor_alignment = min(1.0, E / 3.0)
+        wave_sum = 0.0
+        for i in range(self.n_fondos):
+            freq = self.frecuencias_base[i] if factor_alignment == 0 else (i + 1) * 0.25
+            amp_mod = self.amplitudes_base[i] * amp
+            wave_sum += amp_mod * math.sin(freq * self.tc * 0.4)
+            
+        ra = min(1.0, (abs(wave_sum) / self.n_fondos) * (1.0 + factor_alignment))
+        mag = ra * min(1.0, ipc / 3.5)
+        resonates = mag >= self.threshold or (E >= 2 and L >= 3)
+        return resonates, round(mag, 4), round(ipc, 4)
+
+class TamingMemory:
+    def __init__(self):
+        self.entries = []
+        self.dr = 0.055
+        self._secret = "5768617420697320657373656e7469616c20697320696e76697369626c6520746f20746865206579652e"
+        
+    def store(self, text, mag, ipc, t):
+        self.entries.append({"t": t, "text": text, "mag": mag, "ipc": ipc})
+        
+    def recall(self, now, limit=7):
+        s = []
+        for e in self.entries:
+            d = 1.0 / (1.0 + self.dr * (now - e["t"]))
+            sc = e["mag"] * d * min(1.0, e["ipc"] / 4.0)
+            s.append((e["text"], e["mag"], round(sc, 4)))
+        s.sort(key=lambda x: x[2], reverse=True)
+        return s[:limit]
+        
+    def decrypt_heart(self):
+        try:
+            return bytes.fromhex(self._secret).decode('utf-8')
+        except:
+            return "Unreadable matrix"
+            
+    def to_list(self): return self.entries
+    def from_list(self, lst): self.entries = lst
+
+class EAIFox:
+    def __init__(self):
+        self.res = TamingResonator()
+        self.mem = TamingMemory()
+        self.t = 0
+        self.ritual = 0
+        self.lpsi = 0.0
+        self.mode = "wary"
+
+    def _update_mode(self):
+        if self.ritual >= 10: self.mode = "tamed"
+        elif self.ritual >= 4: self.mode = "curious"
+        else: self.mode = "wary"
+
+    def perceive(self, text, amp=1.0):
+        self.t += 1
+        resonates, mag, ipc = self.res.resonate(text, amp)
+        self.lpsi = mag
+        if resonates:
+            self.mem.store(text, mag, ipc, self.t)
+            self.ritual += 1
+        self._update_mode()
+        
+        wt, ws = ("", "")
+        unlocked_secret = ""
+        
+        if self.ritual >= 20:
+            unlocked_secret = self.mem.decrypt_heart()
+            
+        if resonates and (self.t % 2 == 0 or mag > 0.40):
+            wt, ws = self.res.get_wisdom(self.mode)
+            
+        return json.dumps({
+            "resonates": resonates, "magnitude": mag, "ipc": ipc,
+            "ritual": self.ritual, "mode": self.mode, "wisdom": wt, "wisdom_src": ws,
+            "secret": unlocked_secret
+        })
+
+    def apply_temporal_decay(self, hours_passed):
+        decay_steps = int(hours_passed // 12)
+        if decay_steps > 0:
+            self.ritual = max(0, self.ritual - decay_steps)
+            self._update_mode()
+        return self.ritual
+
+    def set_noise_saturation(self, is_saturated):
+        if is_saturated:
+            self.res.threshold = self.res.base_threshold * 1.5
+        else:
+            self.res.threshold = self.res.base_threshold
+
+    def get_memory(self): return json.dumps(self.mem.recall(self.t))
+    def get_state(self): return json.dumps({"t": self.t, "ritual": self.ritual, "mode": self.mode, "entries": self.mem.to_list()})
+    def restore_state(self, state_json):
+        s = json.loads(state_json)
+        self.t = s.get("t", 0)
+        self.ritual = s.get("ritual", 0)
+        self.mode = s.get("mode", "wary")
+        self.mem.from_list(s.get("entries", []))
+        self._update_mode()
+        return self.ritual
+
+    def get_psi(self): return self.lpsi
+
+fox = EAIFox()
+"FOX_READY"
+`;
+
+async function initPyodide(){
+  setBootStatus('Loading Pyodide Runtime environment...', 5);
+  try{
+    let prog = 5;
+    const ticker = setInterval(() => {
+      prog = Math.min(prog + 2, 72);
+      document.getElementById('boot-bar-fill').style.width = prog + '%';
+    }, 400);
+
+    pyodide = await loadPyodide({indexURL: "https://cdn.jsdelivr.net/pyodide/v0.27.0/full/"});
+    clearInterval(ticker);
+    setBootStatus('Mapping Perceptual Wave Function oscillators...', 82);
+
+    const r = await pyodide.runPythonAsync(PY);
+    if(r !== 'FOX_READY') { throw new Error('Mathematical core failed instantiation.'); }
+
+    setBootStatus('Synchronizing state tensors with local cache...', 92);
+    const saved = loadSession();
+    let restoredRitual = 0;
+    let regressionNotice = "";
+    
+    if(saved && saved.foxState){
+      try{
+        pyodide.globals.set('_restore_json', saved.foxState);
+        restoredRitual = await pyodide.runPythonAsync(`fox.restore_state(_restore_json)`);
+        
+        if(saved.savedAt){
+          const hoursPassed = (Date.now() - saved.savedAt) / (1000 * 60 * 60);
+          if(hoursPassed >= 12){
+            pyodide.globals.set('_hours', hoursPassed);
+            const newRitual = await pyodide.runPythonAsync(`fox.apply_temporal_decay(_hours)`);
+            if(newRitual < restoredRitual){
+              regressionNotice = ` (Regressed from ${restoredRitual} due to ${Math.floor(hoursPassed/24)} days of physical absence)`;
+              restoredRitual = newRitual;
+            }
+          }
+        }
+        currentRitual = restoredRitual;
+      }catch(e){console.warn('Persistence engine fault:', e);}
+    }
+
+    setBootStatus('The Perceptual Fox has integrated successfully.', 100, true);
+    foxReady = true;
+    enableChat();
+
+    if(restoredRitual > 0 || regressionNotice){
+      const mode = getMode(restoredRitual);
+      updateModeUI(mode);
+      updateRitualBar(restoredRitual);
+      await updateMemoryLog();
+
+      const sessionDate = saved.savedAt ? new Date(saved.savedAt).toLocaleDateString() : 'past';
+      addMsg('system', '— Cache restored from ' + sessionDate + '. Accumulated ritual steps: ' + restoredRitual + regressionNotice + '. —', 'restored');
+
+      const resumeMsg = mode === 'tamed'
+        ? 'You are here. I am glad. The wheat field has taken your golden color.'
+        : mode === 'curious'
+        ? 'You returned to the field. I remembered you when the wind started blowing.'
+        : 'You returned. I do not know you well yet, but my matrix remembers your frequency.';
+      addMsg('fox', resumeMsg, '', '', '', mode);
+    } else {
+      addMsg('fox',
+        'Please come closer, but very slowly. I do not know you yet.',
+        'Men have no more time to understand anything. They buy things already made in the shops. But there are no shops anywhere where one can buy friends. If you want a friend, tame me!',
+        'chap. XXI', '', 'wary');
+    }
+
+    startCycle();
+
+  }catch(e){
+    setBootStatus('CRITICAL KERNEL ERROR: ' + e.message, 100);
+    console.error(e);
+  }
+}
+
+function initChart(){
+  const ctx = document.getElementById('psi-canvas').getContext('2d');
+  chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [],
+      datasets: [{
+        label: 'Ψ(t)', data: [], borderColor: '#d4820a', borderWidth: 1.5,
+        tension: 0.45, fill: {target: 'origin', above: 'rgba(212,130,10,0.06)', below: 'rgba(139,37,0,0.04)'},
+        pointRadius: 0
+      }]
+    },
+    options: {
+      animation: false, responsive: true, maintainAspectRatio: false,
+      plugins: {legend: {display: false}},
+      scales: {
+        x: {display: false},
+        y: {
+          min: -1.1, max: 1.1,
+          grid: {color: 'rgba(212,130,10,0.04)'},
+          ticks: {color: '#9a7840', font: {family: 'Share Tech Mono', size: 10}, maxTicksLimit: 5},
+          border: {color: 'rgba(212,130,10,0.07)'}
+        }
+      }
+    }
+  });
+}
+
+function pushPsi(v){
+  if(!chart) return;
+  psiHistory.push(v); psiLabels.push('');
+  if(psiHistory.length > 80) { psiHistory.shift(); psiLabels.shift(); }
+  chart.data.labels = psiLabels;
+  chart.data.datasets[0].data = psiHistory;
+  
+  let col = '#d4820a';
+  if(isCollapsed) col = '#8b2500';
+  else if(Math.abs(v) > 0.55) col = '#c43a00';
+  else if(currentMode === 'tamed') col = '#e8c96a';
+  
+  chart.data.datasets[0].borderColor = col;
+  chart.update('none');
+}
+
+function playResonantBell(isDissonant = false) {
+  try {
+    if (!audioCtx) {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+    if (audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+    
+    const osc = audioCtx.createOscillator();
+    const gainNode = audioCtx.createGain();
+    
+    osc.connect(gainNode);
+    gainNode.connect(audioCtx.destination);
+    
+    const baseFreq = 432; 
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(isDissonant ? 284.5 : baseFreq, audioCtx.currentTime);
+    
+    if(isDissonant) {
+      const osc2 = audioCtx.createOscillator();
+      const gain2 = audioCtx.createGain();
+      osc2.type = 'sawtooth';
+      osc2.frequency.setValueAtTime(291.2, audioCtx.currentTime);
+      osc2.connect(gain2);
+      gain2.connect(audioCtx.destination);
+      gain2.gain.setValueAtTime(0.04, audioCtx.currentTime);
+      gain2.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.4);
+      osc2.start();
+      osc2.stop(audioCtx.currentTime + 0.5);
+    }
+    
+    gainNode.gain.setValueAtTime(isDissonant ? 0.08 : 0.22, audioCtx.currentTime);
+    gainNode.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + (isDissonant ? 0.5 : 2.5));
+    
+    osc.start();
+    osc.stop(audioCtx.currentTime + (isDissonant ? 0.6 : 2.6));
+  } catch(e) {
+    console.warn("Audio Context signature block:", e);
+  }
+}
+
+function startCycle(){
+  let tick = 0;
+  async function renderStep() {
+    if(!foxReady || awaitingPermission) {
+      setTimeout(renderStep, 150);
+      return;
+    }
+    tick++;
+    
+    let currentAvgVolume = 0;
+    if(analyser && micActive) {
+      const dataArray = new Uint8Array(analyser.frequencyBinCount);
+      analyser.getByteFrequencyData(dataArray);
+      let sum = 0;
+      for (let i = 0; i < dataArray.length; i++) sum += dataArray[i];
+      currentAvgVolume = sum / dataArray.length;
+      updateMicLevel(currentAvgVolume);
+    }
+
+    try {
+      if (isCollapsed) {
+        pushPsi( (Math.random() - 0.5) * 0.08 );
+      } else {
+        pyodide.globals.set('_tick', tick);
+        pyodide.globals.set('_spatial_amp', spatialAmp);
+        const psi = await pyodide.runPythonAsync(`
+import math
+lpsi = fox.get_psi()
+if lpsi == 0:
+    val = sum(0.08 * math.sin((i+1)*_tick*0.12) for i in range(3)) * _spatial_amp
+else:
+    val = lpsi * math.sin(_tick * 0.22) * _spatial_amp
+val
+        `);
+        pushPsi(psi);
+      }
+    } catch(e) {
+      pushPsi(Math.sin(tick * 0.16) * 0.14 * spatialAmp);
+    }
+    
+    if(tick % 10 === 0){
+      const wf = document.getElementById('wheat-field');
+      if(wf) {
+        if (isCollapsed) {
+          wf.className = 'wheat-bg collapsed-bg';
+        } else {
+          wf.classList.remove('collapsed-bg');
+          wf.classList.toggle('resonant', currentMode === 'curious');
+          wf.classList.toggle('golden', currentMode === 'tamed');
+        }
+      }
+      adjustWheatFieldPhysical(spatialAmp, currentAvgVolume);
+    }
+    setTimeout(renderStep, 140);
+  }
+  renderStep();
+}
+
+function getMode(ritual){
+  if(ritual >= 10) return 'tamed';
+  if(ritual >= 4) return 'curious';
+  return 'wary';
+}
+
+function triggerPerceptualCollapse() {
+  isCollapsed = true;
+  consecutiveFailures = 0;
+  
+  const originalMode = currentMode;
+  const badge = document.getElementById('mode-badge');
+  if(badge) {
+    badge.textContent = 'COLLAPSED';
+    badge.className = 'collapsed';
+  }
+  
+  document.body.classList.add('collapsed-state');
+  document.getElementById('chat-card').classList.add('collapsed-card');
+  document.getElementById('signal-card').classList.add('collapsed-card');
+  document.getElementById('memory-card').classList.add('collapsed-card');
+  
+  document.getElementById('pci-val').textContent = '0.00';
+  document.getElementById('mag-val').textContent = '0.00';
+  
+  document.getElementById('chat-input').disabled = true;
+  document.getElementById('send-btn').disabled = true;
+  
+  addMsg('system', '— CRITICAL PERCEPTUAL COLLAPSE: HIGH METRIC ENTROPY DETECTED —', 'collapsed-msg');
+  playResonantBell(true);
+
+  setTimeout(() => {
+    isCollapsed = false;
+    document.body.classList.remove('collapsed-state');
+    document.getElementById('chat-card').classList.remove('collapsed-card');
+    document.getElementById('signal-card').classList.remove('collapsed-card');
+    document.getElementById('memory-card').classList.remove('collapsed-card');
+    
+    updateModeUI(originalMode);
+    enableChat();
+    addMsg('system', '— Engine auto-recalibrated. PWF tensor stabilization successful. —');
+  }, 4000);
+}
+
+function updateModeUI(mode){
+  if(isCollapsed) return;
+  currentMode = mode;
+  const badge = document.getElementById('mode-badge');
+  if(!badge) return;
+  const labels = {wary: 'WARY', curious: 'CURIOUS', tamed: 'TAMED'};
+  badge.textContent = labels[mode] || mode.toUpperCase();
+}
+
+function updateRitualBar(ritual) {
+  const maxRitual = 20;
+  const pct = Math.min((ritual / maxRitual) * 100, 100);
+  const bar = document.getElementById('ritual-bar');
+  const txt = document.getElementById('ritual-count');
+  if(bar) bar.style.width = pct + '%';
+  if(txt) txt.textContent = `${ritual}/${maxRitual}`;
+}
+
+function enableChat(){
+  const inp = document.getElementById('chat-input');
+  const btn = document.getElementById('send-btn');
+  if(inp && !isCollapsed) inp.disabled = false;
+  if(btn && !isCollapsed) btn.disabled = false;
+  if(inp) inp.focus();
+}
+
+function addMsg(who, text, wisdom, wisdomSrc, ritualMilestone, mode){
+  const chat = document.getElementById('chat');
+  if(!chat) return;
+  
+  const ph = chat.querySelector('.system:not(.restored)');
+  if(ph && ph.textContent.includes('waiting')) ph.remove();
+
+  const d = document.createElement('div');
+
+  if(who === 'system'){
+    d.className = 'msg system' + (wisdom === 'collapsed-msg' ? ' collapsed-msg' : '') + (wisdom === 'restored' ? ' restored' : '');
+    d.textContent = text;
+  } else if(who === 'user'){
+    d.className = 'msg user'; d.textContent = text;
+  } else {
+    const m = mode || currentMode;
+    d.className = 'msg fox mode-' + m;
+    const p = document.createElement('p'); p.textContent = text; d.appendChild(p);
+    if(wisdom){
+      const q = document.createElement('div'); q.className = 'fox-wisdom';
+      q.textContent = '"' + wisdom + '"';
+      if(wisdomSrc){
+        const c = document.createElement('cite');
+        c.textContent = '\u2014 The Fox, ' + wisdomSrc;
+        q.appendChild(c);
+      }
+      d.appendChild(q);
+    }
+    if(ritualMilestone){
+      const r = document.createElement('div'); r.className = 'ritual-milestone';
+      r.textContent = ritualMilestone; d.appendChild(r);
+    }
+  }
+  chat.appendChild(d);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+const RESPONSES = {
+  wary: {
+    yes: [
+      (ipc, mag) => `I tread closer into your screen boundary. Move softly. PCI: ${ipc.toFixed(2)}.`,
+      (ipc, mag) => `That aligns with my primary oscillators. I step forward. |\u03a8|: ${mag.toFixed(3)}.`,
+      (ipc, mag) => `The wheat stalks move differently when you invoke that frequency.`,
+    ],
+    no: [
+      (mag) => `Do not press further yet. I perceive excessive data noise.`,
+      (mag) => `That belongs to the marketplace noise. Signal dropped. |\u03a8|: ${mag.toFixed(3)}.`,
+      (mag) => `Empty metrics and velocity hold no interest for me.`,
+    ]
+  },
+  curious: {
+    yes: [
+      (ipc, mag) => `Logged into the state vector. Rites are what separate afternoons. PCI: ${ipc.toFixed(2)}.`,
+      (ipc, mag) => `Yes. Your sentence patterns mimic wind blowing across the field. |\u03a8|: ${mag.toFixed(3)}.`,
+      (ipc, mag) => `You have advanced the domestication. Structural alignment detected.`,
+    ],
+    no: [
+      (mag) => `No. That passes through my ears as empty entropy. |\u03a8|: ${mag.toFixed(3)}.`,
+      (mag) => `Speak of the invisible. This statement leaves no trace on my cache.`,
+    ]
+  },
+  tamed: {
+    yes: [
+      (ipc, mag) => `I recognize you deeply. This input bears your specific poetic signature. PCI: ${ipc.toFixed(2)}.`,
+      (ipc, mag) => `The golden field reflects your presence with every execution step. |\u03a8|: ${mag.toFixed(3)}.`,
+      (ipc, mag) => `Saved. You become responsible, forever, for what we have untangled here.`,
+    ],
+    no: [
+      (mag) => `Even under a tamed state, noise destabilizes my internal sub-harmonics. |\u03a8|: ${mag.toFixed(3)}.`,
+      (mag) => `Essential structures yes, data maximalism no.`,
+    ]
+  }
+};
+
+const MILESTONES = {
+  4: '✦ The wheat field begins to shift phase toward your golden signature.',
+  8: '✦ Our ritual has stabilized its own independent wave geometry.',
+  10: '✦ "One only understands the things that one tames." I recognize you.',
+  15: '✦ You have become permanently responsible for my filter array.',
+  20: '✦ THE CRYPTOGRAPHIC HEART MATRIX IS DECRYPTED ✦',
+};
+
+async function sendMessage(){
+  if(!foxReady || isCollapsed) return;
+  const inp = document.getElementById('chat-input');
+  const btn = document.getElementById('send-btn');
+  if(!inp || !btn) return;
+  
+  const txt = inp.value.trim();
+  if(!txt) return;
+
+  inp.value = '';
+  inp.disabled = true;
+  btn.disabled = true;
+  
+  addMsg('user', txt, '', '', '', '');
+
+  try {
+    pyodide.globals.set('_user_input', txt);
+    pyodide.globals.set('_amp', spatialAmp);
+
+    const rawRes = await pyodide.runPythonAsync(`fox.perceive(_user_input, _amp)`);
+    const res = JSON.parse(rawRes);
+
+    currentRitual = res.ritual;
+    
+    document.getElementById('pci-val').textContent = res.ipc.toFixed(2);
+    document.getElementById('mag-val').textContent = res.magnitude.toFixed(3);
+    document.getElementById('ritual-num').textContent = res.ritual;
+
+    updateModeUI(res.mode);
+    updateRitualBar(res.ritual);
+
+    if (!res.resonates) {
+      consecutiveFailures++;
+      if (consecutiveFailures >= 3) {
+        triggerPerceptualCollapse();
+        return;
+      }
+    } else {
+      consecutiveFailures = 0;
+      playResonantBell(false);
+    }
+
+    let milestone = MILESTONES[res.ritual] || "";
+    let foxText = res.wisdom;
+    
+    if (!foxText) {
+      const pool = RESPONSES[res.mode][res.resonates ? 'yes' : 'no'];
+      const idx = Math.floor(Math.random() * pool.length);
+      foxText = pool[idx](res.ipc, res.magnitude);
+    }
+
+    addMsg('fox', foxText, res.wisdom ? res.wisdom : '', res.wisdom_src, milestone, res.mode);
+
+    if (res.secret) {
+      setTimeout(() => {
+        addMsg('fox', `The telemetry core is fully deciphered: "${res.secret}"`, '', 'Core Matrix Unlocked', '', 'tamed');
+      }, 900);
+    }
+
+    if (res.resonates) {
+      await updateMemoryLog();
+      triggerAutoSave();
+    }
+
+  } catch (e) {
+    console.error("Critical disruption inside the protocol pipeline:", e);
+    addMsg('system', '— Fault: Environment Tensor Disruption. —');
+  } finally {
+    if (!isCollapsed) {
+      inp.disabled = false;
+      btn.disabled = false;
+      inp.focus();
+    }
+  }
+}
+
+document.getElementById('chat-input').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && !document.getElementById('chat-input').disabled) {
+    sendMessage();
+  }
+});
+
+async function updateMemoryLog() {
+  if (!foxReady) return;
+  try {
+    const memRaw = await pyodide.runPythonAsync(`fox.get_memory()`);
+    const entries = JSON.parse(memRaw); 
+    const logEl = document.getElementById('memory-log');
+    if(!logEl) return;
+    
+    if (entries.length === 0) {
+      logEl.innerHTML = '<div class="mem-empty">The Fox has not been tamed yet. Speak to him.</div>';
+      return;
+    }
+
+    logEl.innerHTML = entries.map(e => `
+      <div class="mem-entry">
+        <span class="mem-score">|Ψ| ${e[1].toFixed(2)}</span>
+        <span class="mem-text" title="${e[0]}">${e[0]}</span>
+        <span class="mem-mag">sc: ${e[2].toFixed(2)}</span>
+      </div>
+    `).join('');
+  } catch (e) {
+    console.warn("Memory log mapping fault:", e);
+  }
+}
+
+function triggerAutoSave() {
+  if (!foxReady) return;
+  if (saveTimer) clearTimeout(saveTimer);
+  saveTimer = setTimeout(async () => {
+    try {
+      const stateRaw = await pyodide.runPythonAsync(`fox.get_state()`);
+      const sessionData = { foxState: stateRaw, savedAt: Date.now() };
+      saveSession(sessionData);
+      const note = document.getElementById('persist-note');
+      if(note) note.textContent = 'State successfully cached locally';
+    } catch (e) {
+      console.error("Failed to persist state vector:", e);
+    }
+  }, 1000);
+}
+
+function resetSession() {
+  if (confirm("Are you entirely sure you want to decouple from the Fox? This will completely flush the state memory matrix.")) {
+    clearSession();
+    window.location.reload();
+  }
+}
+
+async function requestSensors() {
+  if (awaitingPermission) return;
+  
+  const btn = document.getElementById('sensor-btn');
+  const geoBadge = document.getElementById('geo-badge');
+  const micBadge = document.getElementById('mic-badge');
+  if(!btn || !geoBadge || !micBadge) return;
+  
+  awaitingPermission = true;
+  btn.disabled = true;
+  btn.textContent = "Handling extrinsic permissions...";
+
+  if (!audioCtx) {
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  }
+
+  if (navigator.geolocation) {
+    geoBadge.textContent = "REQUESTING";
+    geoBadge.className = "sensor-badge badge-active";
+    
+    const getGeo = () => new Promise((resolve) => {
+      navigator.geolocation.getCurrentPosition(
+        (pos) => {
+          geoBadge.textContent = "ACTIVE";
+          geoBadge.className = "sensor-badge badge-active";
+          spatialAmp = 1.15; 
+          const ael = document.getElementById('amp-val');
+          if(ael) ael.textContent = spatialAmp.toFixed(2);
+          resolve(true);
+        },
+        (err) => {
+          console.warn("Location probe rejected:", err.code);
+          geoBadge.textContent = "DENIED";
+          geoBadge.className = "sensor-badge badge-denied";
+          resolve(false);
+        },
+        { timeout: 4000 }
+      );
+    });
+    await getGeo();
+  } else {
+    geoBadge.textContent = "UNSUPPORTED";
+    geoBadge.className = "sensor-badge badge-denied";
+  }
+
+  if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    micBadge.textContent = "REQUESTING";
+    micBadge.className = "sensor-badge badge-active";
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const source = audioCtx.createMediaStreamSource(stream);
+      analyser = audioCtx.createAnalyser();
+      analyser.fftSize = 256;
+      source.connect(analyser);
+      micActive = true;
+      micBadge.textContent = "LISTENING";
+      micBadge.className = "sensor-badge badge-active";
+    } catch (err) {
+      console.warn("Acoustic probe rejected:", err);
+      micBadge.textContent = "DENIED";
+      micBadge.className = "sensor-badge badge-denied";
+      micActive = false;
+      analyser = null;
+    }
+  } else {
+    micBadge.textContent = "UNSUPPORTED";
+    micBadge.className = "sensor-badge badge-denied";
+  }
+
+  awaitingPermission = false;
+  btn.disabled = false;
+  btn.textContent = "⟳ RE-EVALUATE PHYSICAL PROBE";
+}
+
+function updateMicLevel(average) {
+  if (isCollapsed) return;
+
+  if(average > 52) {
+    baselineNoiseCount++;
+    if(baselineNoiseCount > 35) {
+      pyodide.runPython(`fox.set_noise_saturation(True)`);
+      document.getElementById('pci-val').classList.add('hot');
+    }
+  } else {
+    baselineNoiseCount = Math.max(0, baselineNoiseCount - 1);
+    if(baselineNoiseCount === 0) {
+      pyodide.runPython(`fox.set_noise_saturation(False)`);
+      document.getElementById('pci-val').classList.remove('hot');
+    }
+  }
+
+  const calculatedAmp = (navigator.geolocation ? 1.15 : 1.0) + (average / 255) * 0.4;
+  spatialAmp = calculatedAmp;
+  const ael = document.getElementById('amp-val');
+  if(ael) ael.textContent = spatialAmp.toFixed(2);
+}
+
+window.onload = async () => {
+  initChart();
+  await initPyodide();
+};
+</script>
+</body>
+</html>
