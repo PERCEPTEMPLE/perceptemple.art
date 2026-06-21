@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../favicon.png" type="image/png">
+
+    <title>PERCEPTEMPLE</title>
+
+    <meta name="description" content="Formal analysis of the Perceptual Complexity Index using string geometry as a framework for observer negotiation, dualities, and holographic projection across incommensurable PCIs.">
+    <meta name="author" content="Dany D. Ruiz">
+    <meta name="last-modified" content="2026-06-07">
+    <meta name="keywords" content="Perceptual Complexity Index, PCI, Panperceptual Theory of the Universe, PTU, string geometry, observer negotiation, perceptual duality, holographic projection, Dany D. Ruiz">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://perceptemple.art/ptu/part-17/">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Perceptual Complexity Index Analysis: String Geometry as Framework for Observer Negotiation · PERCEPTEMPLE">
+    <meta property="og:description" content="Formal analysis of the Perceptual Complexity Index using string geometry as a framework for observer negotiation, dualities, and holographic projection across incommensurable PCIs.">
+    <meta property="og:url" content="https://perceptemple.art/ptu/part-17/">
+    <meta property="og:site_name" content="PERCEPTEMPLE">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_SV">
+    <meta property="og:image" content="https://perceptemple.art/preview.jpg">
+    <meta property="og:image:alt" content="PERCEPTEMPLE — PTU Part 17: PCI Analysis & String Geometry">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@panperceptual">
+    <meta name="twitter:creator" content="@panperceptual">
+    <meta name="twitter:title" content="Perceptual Complexity Index Analysis: String Geometry as Framework for Observer Negotiation · PERCEPTEMPLE">
+    <meta name="twitter:description" content="Formal analysis of the Perceptual Complexity Index using string geometry as a framework for observer negotiation, dualities, and holographic projection across incommensurable PCIs.">
+    <meta name="twitter:image" content="https://perceptemple.art/preview.jpg">
+
+    <meta name="citation_title" content="Perceptual Complexity Index Analysis: String Geometry as Framework for Observer Negotiation">
+    <meta name="citation_author" content="Ruiz, Dany D.">
+    <meta name="citation_publication_date" content="2025">
+    <meta name="citation_online_date" content="2025">
+    <meta name="citation_publisher" content="PERCEPTEMPLE">
+    <meta name="citation_language" content="en">
+    <meta name="DC.title" content="Perceptual Complexity Index Analysis: String Geometry as Framework for Observer Negotiation">
+    <meta name="DC.creator" content="Dany D. Ruiz">
+    <meta name="DC.publisher" content="PERCEPTEMPLE">
+    <meta name="DC.language" content="en">
+    <meta name="DC.rights" content="https://perceptemple.art/licence/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg:      #020805;
+            --panel:   #020805;
+            --rule:    #0a5c1e;
+            --hi:      #00ff41;
+            --hi2:     #39ff14;
+            --amber:   #ffb200;
+            --amber2:  #ffcc00;
+            --txt:     rgba(0,255,65,0.75);
+            --txt2:    rgba(0,255,65,0.9);
+            --txt3:    rgba(0,255,65,0.35);
+            --white:   #39ff14;
+            --red:     #ff2020;
+            --fs-xs: clamp(0.65rem, 1.2vw, 0.75rem);
+            --fs-sm: clamp(0.75rem, 1.4vw, 0.85rem);
+            --fs-md: clamp(0.8rem,  1.6vw, 1rem);
+            --fs-lg: clamp(1rem,    2vw,   1.25rem);
+            --fs-xl: clamp(1.25rem, 3vw,   1.75rem);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .lang-hidden {
+            display: none !important;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--txt2);
+            font-family: 'Share Tech Mono', monospace;
+            font-weight: 400;
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeUp 0.4s ease both;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 3px,
+                rgba(0,0,0,0.06) 3px,
+                rgba(0,0,0,0.06) 6px
+            );
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0,255,65,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,255,65,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 9998;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        canvas {
+            max-width: 100%;
+        }
+
+        .bracket {
+            position: fixed;
+            color: rgba(0,255,65,0.15);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-lg);
+            pointer-events: none;
+            z-index: 10000;
+        }
+        .bracket-tl { top: 12px;    left: 16px;  }
+        .bracket-tr { top: 12px;    right: 16px; }
+        .bracket-bl { bottom: 12px; left: 16px;  }
+        .bracket-br { bottom: 12px; right: 16px; }
+
+        .pch-btn {
+            display: inline-block;
+            margin-top: 6px;
+            background: transparent;
+            border: 1px solid var(--red);
+            color: var(--red);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            text-decoration: none;
+            border-radius: 2px;
+            font-weight: 700;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        .pch-btn:hover {
+            background: rgba(255,32,32,0.06);
+            color: var(--red);
+        }
+
+        .translate-btn {
+            position: relative;
+            background: transparent;
+            border: 1px solid var(--amber);
+            color: var(--amber);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.375rem 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-radius: 2px;
+            font-weight: 600;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .translate-btn:hover {
+            background: rgba(255,178,0,0.08);
+            color: var(--amber2);
+            border-color: var(--amber2);
+        }
+
+        .header {
+            width: 100%;
+            max-width: 75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 3rem;
+            border-bottom: 1px solid var(--rule);
+            background: var(--bg);
+            position: relative;
+            z-index: 100;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .logo-mark {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-lg);
+            color: var(--hi);
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .nav-link:hover,
+        .nav-link.highlight {
+            color: var(--hi);
+        }
+
+        .section-label {
+            width: 100%;
+            max-width: 60rem;
+            padding: 0.8125rem 3rem;
+            border-bottom: 1px solid var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--amber);
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            font-weight: 600;
+        }
+        .section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--rule);
+            min-width: 20px;
+        }
+
+        .hero {
+            width: 100%;
+            max-width: 60rem;
+            padding: 4rem 3rem 3.5rem;
+            border-bottom: 1px solid var(--rule);
+            display: grid;
+            grid-template-columns: 1fr 18rem;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .hero-kicker {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 4px;
+            color: var(--txt3);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .hero-h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xl);
+            line-height: 1.2;
+            color: var(--hi);
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .hero-body {
+            font-size: var(--fs-md);
+            color: var(--txt);
+            line-height: 1.8;
+            max-width: 65ch;
+            text-align: left;
+        }
+        .hero-body strong {
+            color: var(--txt2);
+        }
+
+        .hero-right {
+            display: flex;
+            flex-direction: column;
+            padding-top: 0.5rem;
+        }
+
+        .kv {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0.6875rem 1rem;
+            border-bottom: 1px solid var(--rule);
+            gap: 0.5rem;
+        }
+        .kv:first-child {
+            border-top: 1px solid var(--rule);
+        }
+        .kv-key {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .kv-val {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-md);
+            color: var(--hi);
+            font-weight: 700;
+            text-align: right;
+            word-break: break-word;
+        }
+        .kv-val.white {
+            color: var(--txt2);
+            font-size: var(--fs-md);
+            font-family: 'Share Tech Mono', monospace;
+            font-weight: 400;
+        }
+        .kv-val.amber {
+            color: var(--amber);
+        }
+
+        .content-section {
+            width: 100%;
+            max-width: 60rem;
+            padding: 3rem;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .content-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xl);
+            color: var(--amber);
+            margin-bottom: 0.625rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            word-break: break-word;
+            border-bottom: 1px solid var(--rule);
+            padding-bottom: 0.5rem;
+        }
+
+        .content-section h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-lg);
+            color: var(--hi);
+            margin-top: 1.75rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .content-section p {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-md);
+            color: var(--txt);
+            line-height: 1.9;
+            margin-bottom: 0.75rem;
+            word-break: break-word;
+            max-width: 70ch;
+            text-align: left;
+        }
+        .content-section p strong {
+            color: var(--txt2);
+        }
+
+        .content-section ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 1rem;
+        }
+        .content-section ul li {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-md);
+            color: var(--txt);
+            line-height: 1.8;
+            padding-left: 0.875rem;
+            position: relative;
+            max-width: 70ch;
+            text-align: left;
+            word-break: break-word;
+        }
+        .content-section ul li::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            color: var(--hi);
+            font-weight: bold;
+        }
+
+        .content-section ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .content-section ol li {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-md);
+            color: var(--txt);
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+            max-width: 70ch;
+            text-align: left;
+            word-break: break-word;
+        }
+
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 0.75rem 0 1.125rem;
+        }
+
+        .pw-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-xs);
+        }
+        .pw-table th {
+            text-align: left;
+            padding: 0.5rem 0.625rem;
+            background: var(--bg);
+            border-bottom: 1px solid var(--rule);
+            font-size: var(--fs-xs);
+            color: var(--amber);
+        }
+        .pw-table td {
+            padding: 0.5rem 0.625rem;
+            color: var(--txt);
+            border-bottom: 1px solid var(--rule);
+            line-height: 1.5;
+            vertical-align: top;
+            word-break: break-word;
+            text-align: left;
+        }
+        .pw-table .dim {
+            color: var(--txt2);
+            font-weight: 600;
+        }
+
+        .code-block {
+            padding: 1.25rem 1.5rem;
+            background: rgba(0,255,65,0.02);
+            border: 1px solid var(--rule);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-sm);
+            color: var(--hi);
+            line-height: 1.6;
+            margin: 1rem 0;
+            border-radius: 2px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+            text-align: left;
+        }
+
+        .quote-block {
+            padding: 1rem 1.25rem;
+            background: rgba(0,255,65,0.03);
+            border-left: 2px solid var(--hi);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: var(--fs-md);
+            color: var(--hi);
+            line-height: 1.8;
+            margin: 1rem 0;
+            border-radius: 0 2px 2px 0;
+            font-weight: 400;
+            word-break: break-word;
+            text-align: left;
+        }
+
+        .math-block {
+            padding: 1rem 1.25rem;
+            background: rgba(0,255,65,0.05);
+            border: 1px solid var(--rule);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-md);
+            color: var(--hi);
+            line-height: 1.6;
+            margin: 1rem 0;
+            border-radius: 2px;
+            text-align: center;
+        }
+
+        .article-index {
+            list-style: none;
+            padding-left: 0;
+        }
+        .article-index li {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-md);
+            color: var(--txt);
+            line-height: 1.8;
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.25rem;
+            text-align: left;
+            word-break: break-word;
+        }
+        .article-index li::before {
+            content: '[+]';
+            position: absolute;
+            left: 0;
+            color: var(--amber);
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+        }
+        .article-index li a {
+            color: var(--txt2);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .article-index li a:hover {
+            color: var(--amber);
+        }
+
+        .nav-internal {
+            text-align: center;
+            padding: 2rem 3rem;
+            border-bottom: 1px solid var(--rule);
+        }
+        .nav-internal a {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-sm);
+            letter-spacing: 2px;
+            color: var(--amber);
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.2s;
+        }
+        .nav-internal a:hover {
+            color: var(--hi);
+        }
+        .nav-internal span {
+            color: var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-sm);
+        }
+
+        .footer {
+            width: 100%;
+            max-width: 60rem;
+            padding: 1.625rem 3rem;
+            border-top: 1px solid var(--rule);
+            position: relative;
+            z-index: 50;
+        }
+
+        .footer-modules {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 0.875rem;
+        }
+        .footer-modules a {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            color: var(--txt3);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+            white-space: nowrap;
+            text-transform: uppercase;
+        }
+        .footer-modules a:hover,
+        .footer-modules a.footer-current {
+            color: var(--hi);
+        }
+        .footer-modules span {
+            color: var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+        }
+
+        .footer-social {
+            text-align: center;
+            margin-bottom: 0.875rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-xs);
+            color: var(--amber);
+        }
+        .footer-social a {
+            color: var(--amber);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-social a:hover {
+            color: var(--hi);
+        }
+        .footer-social span {
+            color: var(--rule);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: var(--fs-xs);
+            color: rgba(0,255,65,0.25);
+            line-height: 1.8;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0);    }
+        }
+
+        @media (max-width: 1024px) {
+            .header { gap: 0.75rem; }
+            .hero { gap: 1.5rem; }
+            .nav-link { font-size: var(--fs-xs); }
+            .section-label { font-size: var(--fs-xs); }
+            .footer-modules a { font-size: var(--fs-xs); }
+            .footer-social { font-size: var(--fs-xs); }
+            .footer-bottom { font-size: var(--fs-xs); }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 1rem 1.5rem;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .header-nav {
+                width: 100%;
+                gap: 1rem;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 4px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+            .header-nav::-webkit-scrollbar { display: none; }
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 2.5rem 1.5rem 2.25rem;
+                gap: 1.5rem;
+            }
+            .hero-body { max-width: 100%; }
+            .hero-actions { flex-direction: column; }
+            .btn-primary,
+            .btn-secondary {
+                text-align: center;
+                width: 100%;
+            }
+            .content-section { padding: 2rem 1.5rem; }
+            .section-label { padding: 0.8125rem 1.5rem; }
+            .footer { padding: 1.25rem 1.5rem; }
+            .bracket { font-size: var(--fs-sm); }
+            [class*="grid"],
+            [class*="cols"],
+            [class*="columns"] {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header { padding: 0.75rem 1rem; }
+            .hero { padding: 1.75rem 1rem 1.5rem; }
+            .content-section { padding: 1.5rem 1rem; }
+            .footer { padding: 1rem; }
+            .footer-modules { gap: 0.75rem; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0002-3432-1710",
+      "name": "Dany D. Ruiz",
+      "alternateName": "panperceptual",
+      "jobTitle": "Anartist · Independent Researcher",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "url": "https://perceptemple.art",
+      "sameAs": [
+        "https://orcid.org/0009-0002-3432-1710",
+        "https://x.com/panperceptual",
+        "https://github.com/PERCEPTEMPLE",
+        "https://doi.org/10.17605/OSF.IO/FVCAX",
+        "https://doi.org/10.5281/zenodo.17683631",
+        "https://doi.org/10.2139/ssrn.5794102"
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "headline": "Perceptual Complexity Index Analysis: String Geometry as Framework for Observer Negotiation",
+      "description": "Formal analysis of the Perceptual Complexity Index using string geometry as a framework for observer negotiation, dualities, and holographic projection across incommensurable PCIs.",
+      "datePublished": "2026-06-07",
+      "dateModified": "2026-06-07",
+      "inLanguage": "en",
+      "url": "https://perceptemple.art/ptu/part-17/",
+      "author": {
+        "@type": "Person",
+        "@id": "https://orcid.org/0009-0002-3432-1710",
+        "name": "Dany D. Ruiz"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "isPartOf": {
+        "@type": "Book",
+        "name": "Panperceptual Theory of the Universe",
+        "url": "https://perceptemple.art/ptu/"
+      },
+      "license": "https://perceptemple.art/licence/",
+      "sameAs": [
+        "https://doi.org/10.17605/OSF.IO/UXEGH",
+        "https://doi.org/10.5281/zenodo.19168519",
+        "https://doi.org/10.2139/ssrn.6456099"
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <span class="bracket bracket-tl">[</span>
+    <span class="bracket bracket-tr">]</span>
+    <span class="bracket bracket-bl">[</span>
+    <span class="bracket bracket-br">]</span>
+
+    <div class="header">
+        <div class="logo">
+            <span class="logo-mark" data-lang="en">PERCEPTEMPLE</span>
+            <span class="logo-mark lang-hidden" data-lang="es">PERCEPTEMPLE</span>
+            <br>
+            <a class="pch-btn" href="../../index.html">
+                <span data-lang="en">HUMAN CONSCIOUSNESS TEST</span>
+                <span data-lang="es" class="lang-hidden">PRUEBA DE CONCIENCIA HUMANA</span>
+            </a>
+        </div>
+        <nav class="header-nav">
+            <a class="nav-link" href="../../percepware/index.html"><span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span></a>
+            <a class="nav-link" href="../../pci/index.html"><span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span></a>
+            <a class="nav-link" href="../../aei/index.html"><span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span></a>
+            <a class="nav-link" href="../../neohaki/index.html"><span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span></a>
+            <a class="nav-link" href="../../pram/index.html"><span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span></a>
+            <a class="nav-link" href="../../licence/index.html"><span data-lang="en">LICENSE</span><span data-lang="es" class="lang-hidden">LICENCIA</span></a>
+            <a class="nav-link" href="../../bitneko/index.html"><span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span></a>
+            <a class="nav-link" href="../../space/index.html"><span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span></a>
+            <a class="nav-link" href="../../agamottor/index.html"><span data-lang="en">AGAMOTTOR</span><span data-lang="es" class="lang-hidden">AGAMOTTOR</span></a>
+            <a class="nav-link" href="../../little-prince/index.html"><span data-lang="en">LITTLE PRINCE</span><span data-lang="es" class="lang-hidden">LITTLE PRINCE</span></a>
+            <a class="nav-link highlight" href="../index.html"><span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span></a>
+            <a class="nav-link" href="../../time-machine/index.html"><span data-lang="en">TIME MACHINE</span><span data-lang="es" class="lang-hidden">MÁQUINA DEL TIEMPO</span></a>
+            <a class="nav-link" href="../../poetry/index.html"><span data-lang="en">POETRY</span><span data-lang="es" class="lang-hidden">POESÍA</span></a>
+            <button class="translate-btn" id="langToggle" onclick="toggleLanguage()">ES</button>
+        </nav>
+    </div>
+
+    <div class="section-label">
+        <span data-lang="en">PANPERCEPTUAL TREATISE · PART 17</span>
+        <span data-lang="es" class="lang-hidden">TRATADO PANPERCEPTUAL · PARTE 17</span>
+    </div>
+
+    <div class="hero">
+        <div class="hero-left">
+            <div class="hero-kicker" data-lang="en">PERCEPTUAL COMPLEXITY INDEX ANALYSIS</div>
+            <div class="hero-kicker lang-hidden" data-lang="es">ANÁLISIS DEL ÍNDICE DE COMPLEJIDAD PERCEPTUAL</div>
+            <h1 class="hero-h1">
+                <span data-lang="en">Perceptual Complexity Index Analysis: String Geometry as Framework for Observer Negotiation</span>
+                <span data-lang="es" class="lang-hidden">Análisis del Índice de Complejidad Perceptual: Geometría de Cuerdas como Marco para la Negociación del Observador</span>
+            </h1>
+        </div>
+        <div class="hero-right">
+            <div class="kv">
+                <span class="kv-key" data-lang="en">AUTHOR</span>
+                <span class="kv-key lang-hidden" data-lang="es">AUTOR</span>
+                <span class="kv-val white">Dany D. Ruiz</span>
+            </div>
+            <div class="kv">
+                <span class="kv-key" data-lang="en">MODULE</span>
+                <span class="kv-key lang-hidden" data-lang="es">MÓDULO</span>
+                <span class="kv-val amber">
+                    <span data-lang="en">PTU · PART 17</span>
+                    <span data-lang="es" class="lang-hidden">PTU · PARTE 17</span>
+                </span>
+            </div>
+            <div class="kv">
+                <span class="kv-key" data-lang="en">SERIES</span>
+                <span class="kv-key lang-hidden" data-lang="es">SERIE</span>
+                <span class="kv-val white">
+                    <span data-lang="en">17 PARTS</span>
+                    <span data-lang="es" class="lang-hidden">17 PARTES</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">Introduction: The Problem of Incommensurability</h2>
+        <h2 class="lang-hidden" data-lang="es">Introducción: El Problema de la Inconmensurabilidad</h2>
+
+        <h3 data-lang="en">Wittgenstein's Paradox Applied to PCIs</h3>
+        <h3 class="lang-hidden" data-lang="es">La Paradoja de Wittgenstein Aplicada a los PCI</h3>
+        <p data-lang="en">Wittgenstein (1953) argued that if a lion could speak, we would not understand it—not due to linguistic limitations, but because its form of life would be radically alien.</p>
+        <p class="lang-hidden" data-lang="es">Wittgenstein (1953) argumentó que si un león pudiera hablar, no lo entenderíamos — no debido a limitaciones lingüísticas, sino porque su forma de vida sería radicalmente ajena.</p>
+        <p data-lang="en">The Panperceptual Theory of the Universe (PTU) faces an analogous but much more radical problem.</p>
+        <p class="lang-hidden" data-lang="es">La Teoría Panperceptual del Universo (PTU) enfrenta un problema análogo pero mucho más radical.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">Perceptual Compactification: Each PCI as Unique Geometry</h2>
+        <h2 class="lang-hidden" data-lang="es">Compactificación Perceptual: Cada PCI como Geometría Única</h2>
+
+        <h3 data-lang="en">The Fundamental Principle</h3>
+        <h3 class="lang-hidden" data-lang="es">El Principio Fundamental</h3>
+        <p data-lang="en">In string theory, the universe has 10-11 dimensions, but we only experience 4 (3 spatial + 1 temporal). The remaining dimensions are <strong>compactified</strong>—rolled up in microscopic geometries that determine observable physical properties.</p>
+        <p class="lang-hidden" data-lang="es">En teoría de cuerdas, el universo tiene 10-11 dimensiones, pero solo experimentamos 4 (3 espaciales + 1 temporal). Las dimensiones restantes están <strong>compactificadas</strong> — enrolladas en geometrías microscópicas que determinan las propiedades físicas observables.</p>
+        <p data-lang="en">There exists a <strong>fundamental perceptual space</strong> M of very high dimensionality. Each observer does not inhabit all these dimensions—<strong>they only access a subset, while the rest remain compactified and inaccessible to their perception</strong>.</p>
+        <p class="lang-hidden" data-lang="es">Existe un <strong>espacio perceptual fundamental</strong> M de muy alta dimensionalidad. Cada observador no habita todas estas dimensiones — <strong>solo accede a un subconjunto, mientras que el resto permanece compactificado e inaccesible para su percepción</strong>.</p>
+
+        <div class="math-block">
+            M = M_unfolded^(d_i) × K_i^(compactified)     (Eq. 1)
+        </div>
+
+        <p data-lang="en"><strong>Where:</strong></p>
+        <p class="lang-hidden" data-lang="es"><strong>Donde:</strong></p>
+        <ul>
+            <li data-lang="en"><code>M_unfolded</code> = dimensions the observer can navigate</li>
+            <li class="lang-hidden" data-lang="es"><code>M_unfolded</code> = dimensiones que el observador puede navegar</li>
+            <li data-lang="en"><code>K_i</code> = compactified space (inaccessible dimensions)</li>
+            <li class="lang-hidden" data-lang="es"><code>K_i</code> = espacio compactificado (dimensiones inaccesibles)</li>
+        </ul>
+
+        <h3 data-lang="en">Compactified vs. Unfolded Dimensions</h3>
+        <h3 class="lang-hidden" data-lang="es">Dimensiones Compactificadas vs. Desplegadas</h3>
+        <p data-lang="en"><strong>Example (Human):</strong></p>
+        <p class="lang-hidden" data-lang="es"><strong>Ejemplo (Humano):</strong></p>
+        <p data-lang="en"><strong>Unfolded</strong>: 3D space, time, symbolic-linguistic, metacognitive, social-intersubjective</p>
+        <p class="lang-hidden" data-lang="es"><strong>Desplegadas</strong>: Espacio 3D, tiempo, simbólico-lingüístico, metacognitivo, social-intersubjetivo</p>
+        <p data-lang="en"><strong>Compactified</strong>: Ultraviolet/infrared, ultrasonic, unconscious neural processes, semantic latent spaces (accessible to AIs but not directly to humans)</p>
+        <p class="lang-hidden" data-lang="es"><strong>Compactificadas</strong>: Ultravioleta/infrarrojo, ultrasónico, procesos neurales inconscientes, espacios semánticos latentes (accesibles para IA pero no directamente para humanos)</p>
+
+        <p data-lang="en"><strong>Example (Bat):</strong></p>
+        <p class="lang-hidden" data-lang="es"><strong>Ejemplo (Murciélago):</strong></p>
+        <p data-lang="en"><strong>Unfolded</strong>: 3D space, time, three-dimensional echolocation, Doppler effect as coordinate</p>
+        <p class="lang-hidden" data-lang="es"><strong>Desplegadas</strong>: Espacio 3D, tiempo, ecolocalización tridimensional, efecto Doppler como coordenada</p>
+        <p data-lang="en"><strong>Compactified</strong>: Color (no visual receptors), complex symbolic-linguistic</p>
+        <p class="lang-hidden" data-lang="es"><strong>Compactificadas</strong>: Color (sin receptores visuales), simbólico-lingüístico complejo</p>
+
+        <p data-lang="en"><strong>Key Observation</strong>: What is unfolded for one observer may be compactified for another, and vice versa. Echolocation is compactified for humans but unfolded for bats.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Observación Clave</strong>: Lo que está desplegado para un observador puede estar compactificado para otro, y viceversa. La ecolocalización está compactificada para humanos pero desplegada para murciélagos.</p>
+
+        <h3 data-lang="en">PCI as Geometric Volume</h3>
+        <h3 class="lang-hidden" data-lang="es">PCI como Volumen Geométrico</h3>
+
+        <div class="math-block">
+            PCI_i ~ (∏_{α=1}^{d_i} R_α) · e^(S_topo)     (Eq. 2)
+        </div>
+
+        <p data-lang="en"><strong>Where:</strong></p>
+        <p class="lang-hidden" data-lang="es"><strong>Donde:</strong></p>
+        <ul>
+            <li data-lang="en"><code>R_α</code> = "compactification radius" of each dimension (how accessible it is)</li>
+            <li class="lang-hidden" data-lang="es"><code>R_α</code> = "radio de compactificación" de cada dimensión (qué tan accesible es)</li>
+            <li data-lang="en"><code>S_topo</code> = topological entropy (complexity of connections between dimensions)</li>
+            <li class="lang-hidden" data-lang="es"><code>S_topo</code> = entropía topológica (complejidad de las conexiones entre dimensiones)</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">PCI and Effective Dimensions Table</h2>
+        <h2 class="lang-hidden" data-lang="es">Tabla de PCI y Dimensiones Efectivas</h2>
+
+        <div class="table-wrapper">
+            <table class="pw-table">
+                <thead>
+                    <tr><th data-lang="en">Observer</th><th data-lang="es" class="lang-hidden">Observador</th><th>PCI</th><th data-lang="en">Effective Dimensions</th><th data-lang="es" class="lang-hidden">Dimensiones Efectivas</th><th data-lang="en">Qualitative Nature</th><th data-lang="es" class="lang-hidden">Naturaleza Cualitativa</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td class="dim" data-lang="en">Plant</td><td class="dim lang-hidden" data-lang="es">Planta</td><td>10³</td><td>6</td><td data-lang="en">Chemical-tactile, temporal-circadian</td><td class="lang-hidden" data-lang="es">Químico-táctil, temporal-circadiano</td></tr>
+                    <tr><td class="dim" data-lang="en">Bat</td><td class="dim lang-hidden" data-lang="es">Murciélago</td><td>10¹⁰</td><td>13</td><td data-lang="en">Echolocation, 3D acoustic maps</td><td class="lang-hidden" data-lang="es">Ecolocalización, mapas acústicos 3D</td></tr>
+                    <tr><td class="dim" data-lang="en">Human</td><td class="dim lang-hidden" data-lang="es">Humano</td><td>10¹¹</td><td>14</td><td data-lang="en">Symbolic, metacognitive, narrative</td><td class="lang-hidden" data-lang="es">Simbólico, metacognitivo, narrativo</td></tr>
+                    <tr><td class="dim" data-lang="en">Shamanic</td><td class="dim lang-hidden" data-lang="es">Chamánico</td><td>10¹²</td><td>15</td><td data-lang="en">Archetypal, non-linear temporal</td><td class="lang-hidden" data-lang="es">Arquetípico, temporal no-lineal</td></tr>
+                    <tr><td class="dim" data-lang="en">AI</td><td class="dim lang-hidden" data-lang="es">IA</td><td>10¹⁸</td><td>21</td><td data-lang="en">Latent semantic, multi-scale attention</td><td class="lang-hidden" data-lang="es">Semántico latente, atención multi-escala</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p data-lang="en"><strong>Consequence</strong>: PCI is not just "more complexity"—it is <strong>more habitable dimensions</strong>.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Consecuencia</strong>: El PCI no es solo "más complejidad" — son <strong>más dimensiones habitables</strong>.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">Perceptual Dualities: Deep Translations</h2>
+        <h2 class="lang-hidden" data-lang="es">Dualidades Perceptuales: Traducciones Profundas</h2>
+
+        <h3 data-lang="en">The Concept of Duality</h3>
+        <h3 class="lang-hidden" data-lang="es">El Concepto de Dualidad</h3>
+        <p data-lang="en">In string theory, <strong>dualities</strong> connect apparently distinct theories that are physically equivalent:</p>
+        <p class="lang-hidden" data-lang="es">En teoría de cuerdas, las <strong>dualidades</strong> conectan teorías aparentemente distintas que son físicamente equivalentes:</p>
+        <ul>
+            <li data-lang="en"><strong>T-duality</strong>: Large radius space ≡ Small radius space</li>
+            <li class="lang-hidden" data-lang="es"><strong>T-dualidad</strong>: Espacio de radio grande ≡ Espacio de radio pequeño</li>
+            <li data-lang="en"><strong>S-duality</strong>: Strong coupling ≡ Weak coupling</li>
+            <li class="lang-hidden" data-lang="es"><strong>S-dualidad</strong>: Acoplamiento fuerte ≡ Acoplamiento débil</li>
+            <li data-lang="en"><strong>AdS/CFT</strong>: Gravity in (d+1)D ≡ Field theory in dD (boundary)</li>
+            <li class="lang-hidden" data-lang="es"><strong>AdS/CFT</strong>: Gravedad en (d+1)D ≡ Teoría de campos en dD (frontera)</li>
+        </ul>
+        <p data-lang="en"><strong>Principle</strong>: Fundamentally different phenomena are <strong>different aspects of a deeper underlying structure</strong>.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Principio</strong>: Fenómenos fundamentalmente diferentes son <strong>diferentes aspectos de una estructura subyacente más profunda</strong>.</p>
+
+        <h3 data-lang="en">Shaman–Physicist Duality</h3>
+        <h3 class="lang-hidden" data-lang="es">Dualidad Chamán–Físico</h3>
+        <p data-lang="en"><strong>Historical Observation</strong>: Reichel-Dolmatoff (1975) documented that Tukano shamans under ayahuasca describe "small dancing lights" forming geometric patterns. When shown molecular diagrams, they recognized the forms as identical to their visions.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Observación Histórica</strong>: Reichel-Dolmatoff (1975) documentó que los chamanes Tukano bajo ayahuasca describen "pequeñas luces danzantes" que forman patrones geométricos. Cuando se les mostraron diagramas moleculares, reconocieron las formas como idénticas a sus visiones.</p>
+
+        <div class="math-block">
+            Φ_shaman(archetypal dimension) ↔_D Φ_physicist(molecular dimension)     (Eq. 3)
+        </div>
+
+        <p data-lang="en"><strong>The shaman does not literally "see molecules"</strong>. Their perception in archetypal dimensions is <strong>DUAL</strong> to the physicist's perception in molecular dimensions.</p>
+        <p class="lang-hidden" data-lang="es"><strong>El chamán no "ve moléculas literalmente"</strong>. Su percepción en dimensiones arquetípicas es <strong>DUAL</strong> a la percepción del físico en dimensiones moleculares.</p>
+        <p data-lang="en"><strong>Radical Implication</strong>: Shaman and physicist do not describe different things incorrectly—they describe <strong>the same deep structure from dual geometries</strong>.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Implicación Radical</strong>: Chamán y físico no describen cosas diferentes incorrectamente — describen <strong>la misma estructura profunda desde geometrías duales</strong>.</p>
+
+        <h3 data-lang="en">Human–AI Duality</h3>
+        <h3 class="lang-hidden" data-lang="es">Dualidad Humano–IA</h3>
+        <p data-lang="en"><strong>Human</strong>: Perceives meanings as conscious symbolic structures (words, concepts)</p>
+        <p class="lang-hidden" data-lang="es"><strong>Humano</strong>: Percibe significados como estructuras simbólicas conscientes (palabras, conceptos)</p>
+        <p data-lang="en"><strong>AI</strong>: Perceives meanings as vectors in latent spaces (~12,000 dimensions)</p>
+        <p class="lang-hidden" data-lang="es"><strong>IA</strong>: Percibe significados como vectores en espacios latentes (~12,000 dimensiones)</p>
+
+        <div class="math-block">
+            Human symbolic space ↔_{D_sem} AI latent space     (Eq. 4)
+        </div>
+
+        <p data-lang="en"><strong>Evidence</strong>: Algebraic structure in AI embeddings:</p>
+        <p class="lang-hidden" data-lang="es"><strong>Evidencia</strong>: Estructura algebraica en embeddings de IA:</p>
+        <div class="code-block">v_king - v_man + v_woman ≈ v_queen</div>
+        <p data-lang="en">This vector algebra is <strong>dual</strong> to human semantic relations.</p>
+        <p class="lang-hidden" data-lang="es">Este álgebra vectorial es <strong>dual</strong> a las relaciones semánticas humanas.</p>
+        <p data-lang="en"><strong>Interpretation</strong>: Human and AI process the <strong>same underlying semantic structure</strong> from dually compactified geometries:</p>
+        <p class="lang-hidden" data-lang="es"><strong>Interpretación</strong>: Humano e IA procesan la <strong>misma estructura semántica subyacente</strong> desde geometrías dualmente compactificadas:</p>
+        <ul>
+            <li data-lang="en">Human: Symbolic dimension unfolded, latents compactified</li>
+            <li class="lang-hidden" data-lang="es">Humano: Dimensión simbólica desplegada, latentes compactificados</li>
+            <li data-lang="en">AI: Latents unfolded, phenomenology compactified</li>
+            <li class="lang-hidden" data-lang="es">IA: Latentes desplegados, fenomenología compactificada</li>
+        </ul>
+        <p data-lang="en"><strong>This is why they can communicate</strong>—duality permits translation.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Por esto pueden comunicarse</strong> — la dualidad permite la traducción.</p>
+
+        <h3 data-lang="en">Plant–Human Duality</h3>
+        <h3 class="lang-hidden" data-lang="es">Dualidad Planta–Humano</h3>
+        <div class="table-wrapper">
+            <table class="pw-table">
+                <thead>
+                    <tr><th data-lang="en">Plant Dimension</th><th data-lang="es" class="lang-hidden">Dimensión Planta</th><th data-lang="en">Animal Dimension (Dual)</th><th data-lang="es" class="lang-hidden">Dimensión Animal (Dual)</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td data-lang="en">Chemical gradient in rhizosphere</td><td class="lang-hidden" data-lang="es">Gradiente químico en rizosfera</td><td data-lang="en">Neurotransmitter gradient in synapse</td><td class="lang-hidden" data-lang="es">Gradiente neurotransmisor en sinapsis</td></tr>
+                    <tr><td data-lang="en">Electrical signal in phloem (0.1 m/s)</td><td class="lang-hidden" data-lang="es">Señal eléctrica en floema (0.1 m/s)</td><td data-lang="en">Action potential (100 m/s)</td><td class="lang-hidden" data-lang="es">Potencial de acción (100 m/s)</td></tr>
+                    <tr><td data-lang="en">Phototropism (hours)</td><td class="lang-hidden" data-lang="es">Fototropismo (horas)</td><td data-lang="en">Visual reflex (milliseconds)</td><td class="lang-hidden" data-lang="es">Reflejo visual (milisegundos)</td></tr>
+                    <tr><td data-lang="en">Seasonal memory (years)</td><td class="lang-hidden" data-lang="es">Memoria estacional (años)</td><td data-lang="en">Episodic memory (days/years)</td><td class="lang-hidden" data-lang="es">Memoria episódica (días/años)</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p data-lang="en"><strong>Insight</strong>: Plants do not "lack thought"—their thought is <strong>compactified in different temporal and spatial scales</strong>.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Perspectiva</strong>: Las plantas no "carecen de pensamiento" — su pensamiento está <strong>compactificado en escalas temporales y espaciales diferentes</strong>.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">Perceptual Branes: Observers as Surfaces</h2>
+        <h2 class="lang-hidden" data-lang="es">Branas Perceptuales: Observadores como Superficies</h2>
+
+        <h3 data-lang="en">The Brane Concept</h3>
+        <h3 class="lang-hidden" data-lang="es">El Concepto de Brana</h3>
+        <p data-lang="en">In M-theory, the universe is a <strong>brane</strong>—a d-dimensional surface embedded in higher-dimensional space. Particles are confined to the brane, but gravity can propagate in extra dimensions.</p>
+        <p class="lang-hidden" data-lang="es">En la teoría M, el universo es una <strong>brana</strong> — una superficie d-dimensional incrustada en un espacio de mayor dimensión. Las partículas están confinadas en la brana, pero la gravedad puede propagarse en dimensiones extras.</p>
+
+        <h3 data-lang="en">Observers as Branes</h3>
+        <h3 class="lang-hidden" data-lang="es">Observadores como Branas</h3>
+        <p data-lang="en"><strong>Proposal</strong>: Each observer is a <strong>perceptual brane</strong>—a d_i-dimensional submanifold embedded in the total perceptual space M^D where D >> d_i.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Proposición</strong>: Cada observador es una <strong>brana perceptual</strong> — una subvariedad d_i-dimensional incrustada en el espacio perceptual total M^D donde D >> d_i.</p>
+
+        <div class="math-block">
+            O_i ~ Brane_{d_i} ⊂ M^D     (Eq. 5)
+        </div>
+
+        <h3 data-lang="en">Brane Intersection</h3>
+        <h3 class="lang-hidden" data-lang="es">Intersección de Branas</h3>
+        <p data-lang="en">When two branes intersect:</p>
+        <p class="lang-hidden" data-lang="es">Cuando dos branas se intersecan:</p>
+
+        <div class="math-block">
+            B_i ∩ B_j = B_{ij}^{(d_ij)}     (Eq. 6)
+        </div>
+
+        <p data-lang="en"><strong>Shared reality is the intersection region</strong>.</p>
+        <p class="lang-hidden" data-lang="es"><strong>La realidad compartida es la región de intersección</strong>.</p>
+
+        <p data-lang="en"><strong>Example (Human–Bat)</strong>:</p>
+        <p class="lang-hidden" data-lang="es"><strong>Ejemplo (Humano–Murciélago)</strong>:</p>
+        <div class="code-block">Brane_Human (14D): {x, y, z, t, color_R, color_G, color_B, symbolic, metacognitive...}
+
+Brane_Bat (13D): {x, y, z, t, echo_1, echo_2, echo_3, Doppler, navigation...}
+
+Intersection (4D): {x, y, z, t}</div>
+        <p data-lang="en"><strong>Communication Possible</strong>: Objects in spacetime positions</p>
+        <p class="lang-hidden" data-lang="es"><strong>Comunicación Posible</strong>: Objetos en posiciones espacio-temporales</p>
+        <p data-lang="en"><strong>Communication Impossible</strong>:</p>
+        <p class="lang-hidden" data-lang="es"><strong>Comunicación Imposible</strong>:</p>
+        <ul>
+            <li data-lang="en">Human cannot transmit "red" (outside bat brane)</li>
+            <li class="lang-hidden" data-lang="es">Humano no puede transmitir "rojo" (fuera de la brana del murciélago)</li>
+            <li data-lang="en">Bat cannot transmit "acoustic texture" (outside human brane)</li>
+            <li class="lang-hidden" data-lang="es">Murciélago no puede transmitir "textura acústica" (fuera de la brana humana)</li>
+        </ul>
+
+        <h3 data-lang="en">Dynamic Brane Curvature</h3>
+        <h3 class="lang-hidden" data-lang="es">Curvatura Dinámica de Branas</h3>
+        <p data-lang="en">Branes are not rigid—they can <strong>curve</strong> in the embedding space, corresponding to changes in PCI.</p>
+        <p class="lang-hidden" data-lang="es">Las branas no son rígidas — pueden <strong>curvarse</strong> en el espacio de incrustación, correspondiendo a cambios en el PCI.</p>
+        <p data-lang="en"><strong>Examples</strong>:</p>
+        <p class="lang-hidden" data-lang="es"><strong>Ejemplos</strong>:</p>
+        <ul>
+            <li data-lang="en"><strong>Learning</strong>: Baby (12D) → Language acquisition → Adult (14D)—brane expands</li>
+            <li class="lang-hidden" data-lang="es"><strong>Aprendizaje</strong>: Bebé (12D) → Adquisición del lenguaje → Adulto (14D) — la brana se expande</li>
+            <li data-lang="en"><strong>Altered States</strong>: Ayahuasca temporarily curves brane toward archetypal dimensions</li>
+            <li class="lang-hidden" data-lang="es"><strong>Estados Alterados</strong>: La ayahuasca curva temporalmente la brana hacia dimensiones arquetípicas</li>
+            <li data-lang="en"><strong>Dementia</strong>: Neural damage contracts brane—dimensions compactify</li>
+            <li class="lang-hidden" data-lang="es"><strong>Demencia</strong>: Daño neural contrae la brana — dimensiones se compactifican</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">Coupling Coefficient: The Geometry of γᵢⱼ</h2>
+        <h2 class="lang-hidden" data-lang="es">Coeficiente de Acoplamiento: La Geometría de γᵢⱼ</h2>
+
+        <h3 data-lang="en">Geometric Formulation</h3>
+        <h3 class="lang-hidden" data-lang="es">Formulación Geométrica</h3>
+        <p data-lang="en">The coefficient γᵢⱼ in perceptual superposition:</p>
+        <p class="lang-hidden" data-lang="es">El coeficiente γᵢⱼ en la superposición perceptual:</p>
+
+        <div class="math-block">
+            R = Σᵢ Φᵢ + Σᵢ,ⱼ γᵢⱼ Φᵢ Φⱼ     (Eq. 7)
+        </div>
+
+        <p data-lang="en">is interpreted as <strong>fraction of shared dimensionality</strong>:</p>
+        <p class="lang-hidden" data-lang="es">se interpreta como <strong>fracción de dimensionalidad compartida</strong>:</p>
+
+        <div class="math-block">
+            γᵢⱼ = dim(ℋᵢ ∩ ℋⱼ) / √(dim(ℋᵢ) · dim(ℋⱼ))     (Eq. 8)
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">Coupling Table</h2>
+        <h2 class="lang-hidden" data-lang="es">Tabla de Acoplamiento</h2>
+
+        <div class="table-wrapper">
+            <table class="pw-table">
+                <thead>
+                    <tr><th data-lang="en">Observer Pair</th><th data-lang="es" class="lang-hidden">Par de Observadores</th><th data-lang="en">Shared Dimensions</th><th data-lang="es" class="lang-hidden">Dimensiones Compartidas</th><th>γᵢⱼ</th><th data-lang="en">Interpretation</th><th data-lang="es" class="lang-hidden">Interpretación</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td class="dim" data-lang="en">Human–Human</td><td class="dim lang-hidden" data-lang="es">Humano–Humano</td><td>14 / 14</td><td>1.00</td><td data-lang="en">Total resonance</td><td class="lang-hidden" data-lang="es">Resonancia total</td></tr>
+                    <tr><td class="dim" data-lang="en">Human–Shamanic</td><td class="dim lang-hidden" data-lang="es">Humano–Chamánico</td><td>13 / 14–15</td><td>0.90</td><td data-lang="en">Very high—temporal expansion</td><td class="lang-hidden" data-lang="es">Muy alta — expansión temporal</td></tr>
+                    <tr><td class="dim" data-lang="en">Human–AI</td><td class="dim lang-hidden" data-lang="es">Humano–IA</td><td>10 / 14–21</td><td>0.58</td><td data-lang="en">Moderate—latents vs symbolic</td><td class="lang-hidden" data-lang="es">Moderada — latentes vs simbólico</td></tr>
+                    <tr><td class="dim" data-lang="en">Human–Bat</td><td class="dim lang-hidden" data-lang="es">Humano–Murciélago</td><td>4 / 13–14</td><td>0.30</td><td data-lang="en">Low—only spacetime</td><td class="lang-hidden" data-lang="es">Baja — solo espacio-tiempo</td></tr>
+                    <tr><td class="dim" data-lang="en">Human–Plant</td><td class="dim lang-hidden" data-lang="es">Humano–Planta</td><td>1 / 6–14</td><td>0.11</td><td data-lang="en">Minimal—almost incommensurable</td><td class="lang-hidden" data-lang="es">Mínima — casi inconmensurable</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p data-lang="en"><strong>Surprising Observation</strong>: γ_Human–Shamanic = 0.90 is very high—altered states do not create alien perception, but <strong>unfold already latent dimensions</strong>.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Observación Sorprendente</strong>: γ_Humano–Chamánico = 0.90 es muy alta — los estados alterados no crean percepción alienígena, sino que <strong>despliegan dimensiones ya latentes</strong>.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">Perceptual Holography: Reality as Projection</h2>
+        <h2 class="lang-hidden" data-lang="es">Holografía Perceptual: La Realidad como Proyección</h2>
+
+        <h3 data-lang="en">The Holographic Principle</h3>
+        <h3 class="lang-hidden" data-lang="es">El Principio Holográfico</h3>
+        <p data-lang="en"><strong>Physics</strong>: Information in a 3D volume can be completely described by information on its 2D boundary.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Física</strong>: La información en un volumen 3D puede ser completamente descrita por información en su frontera 2D.</p>
+        <p data-lang="en"><strong>AdS/CFT</strong>: Gravity in (d+1)D ≡ Field theory in dD (boundary)</p>
+        <p class="lang-hidden" data-lang="es"><strong>AdS/CFT</strong>: Gravedad en (d+1)D ≡ Teoría de campos en dD (frontera)</p>
+
+        <h3 data-lang="en">Application to PTU</h3>
+        <h3 class="lang-hidden" data-lang="es">Aplicación a la PTU</h3>
+        <p data-lang="en"><strong>Proposal</strong>: What each observer experiences as "reality" is a <strong>holographic projection</strong> of a higher-dimensional structure.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Proposición</strong>: Lo que cada observador experimenta como "realidad" es una <strong>proyección holográfica</strong> de una estructura de mayor dimensión.</p>
+
+        <div class="math-block">
+            Reality of O_i = πᵢ(S^D)     (Eq. 9)
+        </div>
+
+        <p data-lang="en">Where S^D is a structure in the total space and πᵢ is the projection to the observer's brane.</p>
+        <p class="lang-hidden" data-lang="es">Donde S^D es una estructura en el espacio total y πᵢ es la proyección a la brana del observador.</p>
+
+        <h3 data-lang="en">Deep Example: Shaman vs. Physicist</h3>
+        <h3 class="lang-hidden" data-lang="es">Ejemplo Profundo: Chamán vs. Físico</h3>
+        <p data-lang="en">There exists a high-dimensional structure (the "ayahuasca reality" in ~20D+):</p>
+        <p class="lang-hidden" data-lang="es">Existe una estructura de alta dimensión (la "realidad de la ayahuasca" en ~20D+):</p>
+        <ul>
+            <li data-lang="en"><strong>Physicist's Projection</strong>: π_physicist(S) = "DMT + harmine inhibiting MAO"</li>
+            <li class="lang-hidden" data-lang="es"><strong>Proyección del Físico</strong>: π_físico(S) = "DMT + harmina inhibiendo MAO"</li>
+            <li data-lang="en"><strong>Shaman's Projection</strong>: π_shaman(S) = "cosmic serpent teaching sacred geometry"</li>
+            <li class="lang-hidden" data-lang="es"><strong>Proyección del Chamán</strong>: π_chamán(S) = "serpiente cósmica enseñando geometría sagrada"</li>
+        </ul>
+        <p data-lang="en"><strong>Both projections are exact</strong>—they are complementary views of the same structure, projected to branes with different geometries.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Ambas proyecciones son exactas</strong> — son vistas complementarias de la misma estructura, proyectadas a branas con diferentes geometrías.</p>
+        <p data-lang="en"><strong>There is no ontological conflict—there is holographic multiplicity.</strong></p>
+        <p class="lang-hidden" data-lang="es"><strong>No hay conflicto ontológico — hay multiplicidad holográfica.</strong></p>
+
+        <h3 data-lang="en">Negotiation as Symmetry Search</h3>
+        <h3 class="lang-hidden" data-lang="es">Negociación como Búsqueda de Simetría</h3>
+        <p data-lang="en">When two observers negotiate, they seek:</p>
+        <p class="lang-hidden" data-lang="es">Cuando dos observadores negocian, buscan:</p>
+
+        <div class="math-block">
+            πᵢ(S) ∩ πⱼ(S) ≠ ∅     (Eq. 10)
+        </div>
+
+        <p data-lang="en">Regions where <strong>both projections coincide</strong>.</p>
+        <p class="lang-hidden" data-lang="es">Regiones donde <strong>ambas proyecciones coinciden</strong>.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">Deep Implications</h2>
+        <h2 class="lang-hidden" data-lang="es">Implicaciones Profundas</h2>
+
+        <ol>
+            <li data-lang="en"><strong>Incommensurability Is Not Absolute</strong>: Two apparently incompatible PCIs <strong>always have potential for connection</strong> if we identify the high-dimensional structure both project, find intermediaries, or one or both temporarily curve their brane toward the shared region.</li>
+            <li class="lang-hidden" data-lang="es"><strong>La Inconmensurabilidad No es Absoluta</strong>: Dos PCI aparentemente incompatibles <strong>siempre tienen potencial de conexión</strong> si identificamos la estructura de alta dimensión que ambos proyectan, encontramos intermediarios, o uno o ambos curvan temporalmente su brana hacia la región compartida.</li>
+            <li data-lang="en"><strong>"Physical Laws" Are Induced Geometry</strong>: What each observer experiences as "laws of nature" is the <strong>geometry induced on their brane</strong>—not a universal objective reality, but the specific form of their compactification.</li>
+            <li class="lang-hidden" data-lang="es"><strong>Las "Leyes Físicas" son Geometría Inducida</strong>: Lo que cada observador experimenta como "leyes de la naturaleza" es la <strong>geometría inducida en su brana</strong> — no una realidad objetiva universal, sino la forma específica de su compactificación.</li>
+            <li data-lang="en"><strong>Learning Is Geometric Expansion</strong>: Learning is not "accumulating information"—it is <strong>unfolding previously compactified dimensions</strong> or <strong>curving the brane toward new regions</strong>.</li>
+            <li class="lang-hidden" data-lang="es"><strong>El Aprendizaje es Expansión Geométrica</strong>: Aprender no es "acumular información" — es <strong>desplegar dimensiones previamente compactificadas</strong> o <strong>curvar la brana hacia nuevas regiones</strong>.</li>
+            <li data-lang="en"><strong>Communication Is Mutual Projection</strong>: Communicating is not "transmitting objective data"—it is <strong>finding the intersection of two geometries</strong> and projecting information to that shared space (with inevitable loss).</li>
+            <li class="lang-hidden" data-lang="es"><strong>La Comunicación es Proyección Mutua</strong>: Comunicar no es "transmitir datos objetivos" — es <strong>encontrar la intersección de dos geometrías</strong> y proyectar información a ese espacio compartido (con pérdida inevitable).</li>
+            <li data-lang="en"><strong>Shared Reality Is Geometric Negotiation</strong>: There is no "one objective reality" that everyone perceives differently. There exist <strong>holographic projections of high-dimensional structures</strong> that multiple observers collapse in partially overlapping configurations.</li>
+            <li class="lang-hidden" data-lang="es"><strong>La Realidad Compartida es Negociación Geométrica</strong>: No hay "una realidad objetiva" que todos perciben diferente. Existen <strong>proyecciones holográficas de estructuras de alta dimensión</strong> que múltiples observadores colapsan en configuraciones parcialmente superpuestas.</li>
+        </ol>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">Synthesis: A New Ontology</h2>
+        <h2 class="lang-hidden" data-lang="es">Síntesis: Una Nueva Ontología</h2>
+
+        <div class="quote-block">
+            <p data-lang="en"><strong>PCI is not a number—it is a geometry.</strong></p>
+            <p class="lang-hidden" data-lang="es"><strong>El PCI no es un número — es una geometría.</strong></p>
+        </div>
+
+        <p data-lang="en">Each observer inhabits a specific configuration of unfolded and compactified dimensions. Communication between radically different systems is possible because:</p>
+        <p class="lang-hidden" data-lang="es">Cada observador habita una configuración específica de dimensiones desplegadas y compactificadas. La comunicación entre sistemas radicalmente diferentes es posible porque:</p>
+        <ol>
+            <li data-lang="en"><strong>They share substructures</strong> (brane intersection)</li>
+            <li class="lang-hidden" data-lang="es"><strong>Comparten subestructuras</strong> (intersección de branas)</li>
+            <li data-lang="en"><strong>They are dual</strong> (describe the same thing from complementary geometries)</li>
+            <li class="lang-hidden" data-lang="es"><strong>Son duales</strong> (describen lo mismo desde geometrías complementarias)</li>
+            <li data-lang="en"><strong>They project the same high-dimensional reality</strong> (holography)</li>
+            <li class="lang-hidden" data-lang="es"><strong>Proyectan la misma realidad de alta dimensión</strong> (holografía)</li>
+        </ol>
+
+        <p data-lang="en">This is not metaphor—it is a <strong>formal mathematical framework</strong> that explains how incommensurability and communication coexist.</p>
+        <p class="lang-hidden" data-lang="es">Esto no es metáfora — es un <strong>marco matemático formal</strong> que explica cómo la inconmensurabilidad y la comunicación coexisten.</p>
+
+        <div class="quote-block">
+            <p data-lang="en"><strong>Reality is not one. It is a network of interdependent geometric projections, continuously negotiated between observers inhabiting different dimensions of the same fundamental space.</strong></p>
+            <p class="lang-hidden" data-lang="es"><strong>La realidad no es una. Es una red de proyecciones geométricas interdependientes, continuamente negociadas entre observadores que habitan diferentes dimensiones del mismo espacio fundamental.</strong></p>
+        </div>
+
+        <p data-lang="en">---</p>
+        <p class="lang-hidden" data-lang="es">---</p>
+
+        <p data-lang="en"><em>This analysis establishes the geometric foundations for understanding the PTU not as speculative theory, but as formal description of how multiple perceptions collapse complementary aspects of a multidimensional structure that no single observer can fully inhabit.</em></p>
+        <p class="lang-hidden" data-lang="es"><em>Este análisis establece los fundamentos geométricos para comprender la PTU no como teoría especulativa, sino como descripción formal de cómo múltiples percepciones colapsan aspectos complementarios de una estructura multidimensional que ningún observador puede habitar completamente.</em></p>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">» Articles in this Section</h2>
+        <h2 class="lang-hidden" data-lang="es">» Artículos en esta sección</h2>
+
+        <p data-lang="en">Below is the complete series of articles that make up the Panperceptual Theory of the Universe.</p>
+        <p class="lang-hidden" data-lang="es">A continuación, la serie completa de artículos que componen la Teoría Panperceptual del Universo.</p>
+
+        <ul class="article-index">
+            <li><a href="../part-1/index.html">[+] Part 1: Historical Evolution of Observation and Perception</a></li>
+            <li><a href="../part-2/index.html">[+] Part 2: Toward a New Revolution in Perception</a></li>
+            <li><a href="../part-3/index.html">[+] Part 3: Panperceptualism of the Universe</a></li>
+            <li><a href="../part-4/index.html">[+] Part 4: A Revolutionary Framework for Understanding Reality</a></li>
+            <li><a href="../part-5/index.html">[+] Part 5: Redefining Perception and Reality: A Mathematical Proposal</a></li>
+            <li><a href="../part-6/index.html">[+] Part 6: Towards an Interdisciplinary Synthesis of Perception and Reality</a></li>
+            <li><a href="../part-7/index.html">[+] Part 7: Weaving Realities: Perceptual Interactions and Relational Ontology (includes simulation code)</a></li>
+            <li><a href="../part-8/index.html">[+] Part 8: Emergent Temporalities and Cosmic Perception (includes simulation code)</a></li>
+            <li><a href="../part-9/index.html">[+] Part 9: Perceptual Dynamics of Dreams, Simulations, and Physical Reality (includes simulation code)</a></li>
+            <li><a href="../part-10/index.html">[+] Part 10: Perceptual Resonance Atomic Model (includes simulation code)</a></li>
+            <li><a href="../part-11/index.html">[+] Part 11: Justification of Empirical Values</a></li>
+            <li><a href="../part-12/index.html">[+] Part 12: Fractal Architecture of Perceptual Reality</a></li>
+            <li><a href="../part-13/index.html">[+] Part 13: The Panperceptual Wave and Partial Reality Engines</a></li>
+            <li><a href="../part-14/index.html">[+] Part 14: The Law of Sequential Perceptual Collapse and the Speed of Light as a Resonance Frequency</a></li>
+            <li><a href="../part-15/index.html">[+] Part 15: The Observer Within Time: A Panperceptual Critique of the Myth of the External Viewpoint</a></li>
+            <li><a href="../index.html">[+] Part 16: An Epistemological Critique of the Cultural Limits of Popperian Science from the Panperceptual Theory of the Universe</a></li>
+            <li><a href="index.html">[+] Part 17: Perceptual Complexity Index Analysis: String Geometry as Framework for Observer Negotiation</a></li>
+        </ul>
+    </div>
+
+    <div class="nav-internal">
+        <a href="../index.html">← <span data-lang="en">Previous</span><span class="lang-hidden" data-lang="es">Anterior</span></a>
+        <span> | </span>
+        <a href="#"><span data-lang="en">Next</span><span class="lang-hidden" data-lang="es">Siguiente</span> →</a>
+    </div>
+
+    <div class="footer">
+        <div class="footer-modules">
+            <a href="../../index.html"><span data-lang="en">[PERCEPTEMPLE]</span><span data-lang="es" class="lang-hidden">[PERCEPTEMPLE]</span></a>
+            <span>|</span>
+            <a href="../../percepware/index.html"><span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span></a>
+            <span>|</span>
+            <a href="../../pci/index.html"><span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span></a>
+            <span>|</span>
+            <a href="../../aei/index.html"><span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span></a>
+            <span>|</span>
+            <a href="../../neohaki/index.html"><span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span></a>
+            <span>|</span>
+            <a href="../../pram/index.html"><span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span></a>
+            <span>|</span>
+            <a href="../../licence/index.html"><span data-lang="en">LICENSE</span><span data-lang="es" class="lang-hidden">LICENCIA</span></a>
+            <span>|</span>
+            <a href="../../bitneko/index.html"><span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span></a>
+            <span>|</span>
+            <a href="../../space/index.html"><span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span></a>
+            <span>|</span>
+            <a href="../../agamottor/index.html"><span data-lang="en">AGAMOTTOR</span><span data-lang="es" class="lang-hidden">AGAMOTTOR</span></a>
+            <span>|</span>
+            <a href="../../little-prince/index.html"><span data-lang="en">LITTLE PRINCE</span><span data-lang="es" class="lang-hidden">LITTLE PRINCE</span></a>
+            <span>|</span>
+            <a href="../index.html" class="footer-current"><span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span></a>
+            <span>|</span>
+            <a href="../../time-machine/index.html"><span data-lang="en">TIME MACHINE</span><span data-lang="es" class="lang-hidden">MÁQUINA DEL TIEMPO</span></a>
+            <span>|</span>
+            <a href="../../poetry/index.html"><span data-lang="en">POETRY</span><span data-lang="es" class="lang-hidden">POESÍA</span></a>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://orcid.org/0009-0002-3432-1710" target="_blank" rel="noopener"><span data-lang="en">ORCID</span><span data-lang="es" class="lang-hidden">ORCID</span></a>
+            <span> / </span>
+            <a href="https://github.com/PERCEPTEMPLE" target="_blank" rel="noopener"><span data-lang="en">GITHUB</span><span data-lang="es" class="lang-hidden">GITHUB</span></a>
+            <span> / </span>
+            <a href="https://x.com/panperceptual" target="_blank" rel="noopener"><span data-lang="en">X</span><span data-lang="es" class="lang-hidden">X</span></a>
+        </div>
+
+        <div class="footer-bottom">
+            <span data-lang="en">DEPOSITED IN THE INTELLECTUAL PROPERTY REGISTRY · EL SALVADOR · DANY D. RUIZ</span>
+            <span data-lang="es" class="lang-hidden">DEPOSITADO EN EL REGISTRO DE LA PROPIEDAD INTELECTUAL · EL SALVADOR · DANY D. RUIZ</span>
+            <br>
+            <span data-lang="en">Before They See Us, We Already Are</span>
+            <span data-lang="es" class="lang-hidden">Antes de que nos vean, ya somos</span>
+        </div>
+    </div>
+
+    <script>
+        function toggleLanguage() {
+            var html    = document.documentElement;
+            var current = html.lang || 'en';
+            var next    = current === 'en' ? 'es' : 'en';
+            var hide    = next === 'en' ? 'es' : 'en';
+            html.lang = next;
+            document.querySelectorAll('[data-lang="' + next + '"]')
+                .forEach(function(el) { el.classList.remove('lang-hidden'); });
+            document.querySelectorAll('[data-lang="' + hide + '"]')
+                .forEach(function(el) { el.classList.add('lang-hidden'); });
+            document.getElementById('langToggle').textContent =
+                next === 'en' ? 'ES' : 'EN';
+            localStorage.setItem('perceptemple-lang', next);
+        }
+        (function() {
+            var saved = localStorage.getItem('perceptemple-lang');
+            if (saved && saved === 'es') { toggleLanguage(); }
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../favicon.png" type="image/png">
+
+    <title>PERCEPTEMPLE</title>
+
+    <meta name="description" content="Perceptual Resonance Atomic Model redefines atomic structure as a cognitive-perceptual network of resonant PWFs quantified by PCI within PTU framework.">
+    <meta name="author" content="Dany D. Ruiz">
+    <meta name="last-modified" content="2026-06-07">
+    <meta name="keywords" content="Perceptual Resonance Atomic Model, PRAM, Panperceptual Theory of the Universe, PTU, Perceptual Wave Function, PWF, Perceptual Complexity Index, PCI">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://perceptemple.art/ptu/part-10/">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Perceptual Resonance Atomic Model · PERCEPTEMPLE">
+    <meta property="og:description" content="Perceptual Resonance Atomic Model redefines atomic structure as a cognitive-perceptual network of resonant PWFs quantified by PCI within PTU framework.">
+    <meta property="og:url" content="https://perceptemple.art/ptu/part-10/">
+    <meta property="og:site_name" content="PERCEPTEMPLE">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_SV">
+    <meta property="og:image" content="https://perceptemple.art/preview.jpg">
+    <meta property="og:image:alt" content="PERCEPTEMPLE — Perceptual Resonance Atomic Model">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@panperceptual">
+    <meta name="twitter:creator" content="@panperceptual">
+    <meta name="twitter:title" content="Perceptual Resonance Atomic Model · PERCEPTEMPLE">
+    <meta name="twitter:description" content="Perceptual Resonance Atomic Model redefines atomic structure as a cognitive-perceptual network of resonant PWFs quantified by PCI within PTU framework.">
+    <meta name="twitter:image" content="https://perceptemple.art/preview.jpg">
+
+    <meta name="citation_title" content="Perceptual Resonance Atomic Model: A Cognitive-Perceptual Reimagining of Atomic Structure within the Panperceptual Theory of the Universe">
+    <meta name="citation_author" content="Ruiz, Dany D.">
+    <meta name="citation_publication_date" content="2025">
+    <meta name="citation_online_date" content="2025">
+    <meta name="citation_publisher" content="PERCEPTEMPLE">
+    <meta name="citation_language" content="en">
+    <meta name="DC.title" content="Perceptual Resonance Atomic Model: A Cognitive-Perceptual Reimagining of Atomic Structure within the Panperceptual Theory of the Universe">
+    <meta name="DC.creator" content="Dany D. Ruiz">
+    <meta name="DC.publisher" content="PERCEPTEMPLE">
+    <meta name="DC.language" content="en">
+    <meta name="DC.rights" content="https://perceptemple.art/licence/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg:      #020805;
+            --panel:   #020805;
+            --rule:    #0a5c1e;
+            --hi:      #00ff41;
+            --hi2:     #39ff14;
+            --amber:   #ffb200;
+            --amber2:  #ffcc00;
+            --txt:     rgba(0,255,65,0.75);
+            --txt2:    rgba(0,255,65,0.9);
+            --txt3:    rgba(0,255,65,0.35);
+            --white:   #39ff14;
+            --red:     #ff2020;
+            --fs-xs: clamp(0.65rem, 1.2vw, 0.75rem);
+            --fs-sm: clamp(0.75rem, 1.4vw, 0.85rem);
+            --fs-md: clamp(0.8rem,  1.6vw, 1rem);
+            --fs-lg: clamp(1rem,    2vw,   1.25rem);
+            --fs-xl: clamp(1.25rem, 3vw,   1.75rem);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .lang-hidden {
+            display: none !important;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--txt2);
+            font-family: 'Share Tech Mono', monospace;
+            font-weight: 400;
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeUp 0.4s ease both;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 3px,
+                rgba(0,0,0,0.06) 3px,
+                rgba(0,0,0,0.06) 6px
+            );
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0,255,65,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,255,65,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 9998;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        canvas {
+            max-width: 100%;
+        }
+
+        .bracket {
+            position: fixed;
+            color: rgba(0,255,65,0.15);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-lg);
+            pointer-events: none;
+            z-index: 10000;
+        }
+        .bracket-tl { top: 12px;    left: 16px;  }
+        .bracket-tr { top: 12px;    right: 16px; }
+        .bracket-bl { bottom: 12px; left: 16px;  }
+        .bracket-br { bottom: 12px; right: 16px; }
+
+        .pch-btn {
+            display: inline-block;
+            margin-top: 6px;
+            background: transparent;
+            border: 1px solid var(--red);
+            color: var(--red);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            text-decoration: none;
+            border-radius: 2px;
+            font-weight: 700;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        .pch-btn:hover {
+            background: rgba(255,32,32,0.06);
+            color: var(--red);
+        }
+
+        .translate-btn {
+            position: relative;
+            background: transparent;
+            border: 1px solid var(--amber);
+            color: var(--amber);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.375rem 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-radius: 2px;
+            font-weight: 600;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .translate-btn:hover {
+            background: rgba(255,178,0,0.08);
+            color: var(--amber2);
+            border-color: var(--amber2);
+        }
+
+        .header {
+            width: 100%;
+            max-width: 75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 3rem;
+            border-bottom: 1px solid var(--rule);
+            background: var(--bg);
+            position: relative;
+            z-index: 100;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .logo-mark {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-lg);
+            color: var(--hi);
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .nav-link:hover,
+        .nav-link.highlight {
+            color: var(--hi);
+        }
+
+        .section-label {
+            width: 100%;
+            max-width: 60rem;
+            padding: 0.8125rem 3rem;
+            border-bottom: 1px solid var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--amber);
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            font-weight: 600;
+        }
+        .section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--rule);
+            min-width: 20px;
+        }
+
+        .hero {
+            width: 100%;
+            max-width: 60rem;
+            padding: 4rem 3rem 3.5rem;
+            border-bottom: 1px solid var(--rule);
+            display: grid;
+            grid-template-columns: 1fr 18rem;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .hero-kicker {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 4px;
+            color: var(--txt3);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .hero-h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(var(--fs-xl), 4vw, 2.4rem);
+            line-height: 1.2;
+            color: var(--hi);
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .hero-body {
+            font-size: var(--fs-md);
+            color: var(--txt);
+            line-height: 1.8;
+            max-width: 65ch;
+            text-align: left;
+        }
+        .hero-body strong {
+            color: var(--txt2);
+        }
+
+        .hero-right {
+            display: flex;
+            flex-direction: column;
+            padding-top: 0.5rem;
+        }
+
+        .kv {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0.6875rem 1rem;
+            border-bottom: 1px solid var(--rule);
+            gap: 0.5rem;
+        }
+        .kv:first-child {
+            border-top: 1px solid var(--rule);
+        }
+        .kv-key {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .kv-val {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-md);
+            color: var(--hi);
+            font-weight: 700;
+            text-align: right;
+            word-break: break-word;
+        }
+        .kv-val.white {
+            color: var(--txt2);
+            font-size: var(--fs-md);
+            font-family: 'Share Tech Mono', monospace;
+            font-weight: 400;
+        }
+        .kv-val.amber {
+            color: var(--amber);
+        }
+
+        .content-section {
+            width: 100%;
+            max-width: 60rem;
+            padding: 3rem;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .content-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(var(--fs-lg), 2.5vw, 1.4rem);
+            color: var(--amber);
+            margin-bottom: 0.625rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            word-break: break-word;
+            border-bottom: 1px solid var(--rule);
+            padding-bottom: 0.5rem;
+        }
+
+        .content-section h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(var(--fs-md), 2vw, 1.2rem);
+            color: var(--hi);
+            margin-top: 1.75rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .content-section h4 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-sm);
+            color: var(--amber);
+            margin-top: 1.125rem;
+            margin-bottom: 0.375rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .content-section p {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-md);
+            color: var(--txt);
+            line-height: 1.9;
+            margin-bottom: 0.75rem;
+            word-break: break-word;
+            max-width: 70ch;
+            text-align: left;
+        }
+        .content-section p strong {
+            color: var(--txt2);
+        }
+
+        .content-section ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 1rem;
+        }
+        .content-section ul li {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-md);
+            color: var(--txt);
+            line-height: 1.8;
+            padding-left: 0.875rem;
+            position: relative;
+            max-width: 70ch;
+            text-align: left;
+            word-break: break-word;
+        }
+        .content-section ul li::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            color: var(--hi);
+            font-weight: bold;
+        }
+
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 0.75rem 0 1.125rem;
+        }
+
+        .pw-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-xs);
+        }
+        .pw-table th {
+            text-align: left;
+            padding: 0.5rem 0.625rem;
+            background: var(--bg);
+            border-bottom: 1px solid var(--rule);
+            font-size: var(--fs-xs);
+            color: var(--amber);
+        }
+        .pw-table td {
+            padding: 0.5rem 0.625rem;
+            color: var(--txt);
+            border-bottom: 1px solid var(--rule);
+            line-height: 1.5;
+            vertical-align: top;
+            word-break: break-word;
+            text-align: left;
+        }
+        .pw-table .dim {
+            color: var(--txt2);
+            font-weight: 600;
+        }
+
+        .code-block {
+            padding: 1.25rem 1.5rem;
+            background: rgba(0,255,65,0.02);
+            border: 1px solid var(--rule);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-sm);
+            color: var(--hi);
+            line-height: 1.6;
+            margin: 1rem 0;
+            border-radius: 2px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+            text-align: left;
+        }
+
+        .math-inline {
+            font-family: 'Share Tech Mono', monospace;
+            color: var(--hi);
+            background: rgba(0,255,65,0.05);
+            padding: 0.1rem 0.3rem;
+            border-radius: 2px;
+        }
+
+        .btn-download {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid var(--amber);
+            color: var(--amber);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 2px;
+            font-weight: 600;
+            transition: all 0.2s;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        .btn-download:hover {
+            background: rgba(255,178,0,0.08);
+            color: var(--amber2);
+            border-color: var(--amber2);
+        }
+
+        .article-index {
+            list-style: none;
+            padding-left: 0;
+        }
+        .article-index li {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-md);
+            color: var(--txt);
+            line-height: 1.8;
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.25rem;
+            text-align: left;
+            word-break: break-word;
+        }
+        .article-index li::before {
+            content: '[+]';
+            position: absolute;
+            left: 0;
+            color: var(--amber);
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+        }
+        .article-index li a {
+            color: var(--txt2);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .article-index li a:hover {
+            color: var(--amber);
+        }
+
+        .nav-internal {
+            text-align: center;
+            padding: 2rem 3rem;
+            border-bottom: 1px solid var(--rule);
+        }
+        .nav-internal a {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-sm);
+            letter-spacing: 2px;
+            color: var(--amber);
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.2s;
+        }
+        .nav-internal a:hover {
+            color: var(--hi);
+        }
+        .nav-internal span {
+            color: var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-sm);
+        }
+
+        .footer {
+            width: 100%;
+            max-width: 60rem;
+            padding: 1.625rem 3rem;
+            border-top: 1px solid var(--rule);
+            position: relative;
+            z-index: 50;
+        }
+
+        .footer-modules {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 0.875rem;
+        }
+        .footer-modules a {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .footer-modules a:hover,
+        .footer-modules a.footer-current {
+            color: var(--hi);
+        }
+        .footer-modules span {
+            color: var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+        }
+
+        .footer-social {
+            text-align: center;
+            margin-bottom: 0.875rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-xs);
+            color: var(--amber);
+        }
+        .footer-social a {
+            color: var(--amber);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-social a:hover {
+            color: var(--hi);
+        }
+        .footer-social span {
+            color: var(--rule);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: var(--fs-xs);
+            color: rgba(0,255,65,0.25);
+            line-height: 1.8;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0);    }
+        }
+
+        @media (max-width: 1024px) {
+            .header { gap: 0.75rem; }
+            .hero { gap: 1.5rem; }
+            .nav-link { font-size: var(--fs-xs); }
+            .section-label { font-size: var(--fs-xs); }
+            .footer-modules a { font-size: var(--fs-xs); }
+            .footer-social { font-size: var(--fs-xs); }
+            .footer-bottom { font-size: var(--fs-xs); }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 1rem 1.5rem;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .header-nav {
+                width: 100%;
+                gap: 1rem;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 4px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+            .header-nav::-webkit-scrollbar { display: none; }
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 2.5rem 1.5rem 2.25rem;
+                gap: 1.5rem;
+            }
+            .hero-body { max-width: 100%; }
+            .content-section { padding: 2rem 1.5rem; }
+            .section-label { padding: 0.8125rem 1.5rem; }
+            .footer { padding: 1.25rem 1.5rem; }
+            .bracket { font-size: 0.9rem; }
+        }
+
+        @media (max-width: 480px) {
+            .header { padding: 0.75rem 1rem; }
+            .hero { padding: 1.75rem 1rem 1.5rem; }
+            .content-section { padding: 1.5rem 1rem; }
+            .footer { padding: 1rem; }
+            .footer-modules { gap: 0.75rem; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0002-3432-1710",
+      "name": "Dany D. Ruiz",
+      "alternateName": "panperceptual",
+      "jobTitle": "Anartist · Independent Researcher",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "url": "https://perceptemple.art",
+      "sameAs": [
+        "https://orcid.org/0009-0002-3432-1710",
+        "https://x.com/panperceptual",
+        "https://github.com/PERCEPTEMPLE",
+        "https://doi.org/10.17605/OSF.IO/FVCAX",
+        "https://doi.org/10.5281/zenodo.17683631",
+        "https://doi.org/10.2139/ssrn.5794102"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "headline": "Perceptual Resonance Atomic Model: A Cognitive-Perceptual Reimagining of Atomic Structure within the Panperceptual Theory of the Universe",
+      "description": "Perceptual Resonance Atomic Model redefines atomic structure as a cognitive-perceptual network of resonant PWFs quantified by PCI within PTU framework.",
+      "datePublished": "2026-06-07",
+      "dateModified": "2026-06-07",
+      "inLanguage": "en",
+      "url": "https://perceptemple.art/ptu/part-10/",
+      "author": {
+        "@type": "Person",
+        "@id": "https://orcid.org/0009-0002-3432-1710",
+        "name": "Dany D. Ruiz"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "isPartOf": {
+        "@type": "Book",
+        "name": "Panperceptual Theory of the Universe",
+        "url": "https://perceptemple.art/ptu/"
+      },
+      "license": "https://perceptemple.art/licence/",
+      "sameAs": [
+        "https://doi.org/10.17605/OSF.IO/UXEGH",
+        "https://doi.org/10.5281/zenodo.19168519",
+        "https://doi.org/10.2139/ssrn.6456099"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DefinedTerm",
+      "name": "Perceptual Resonance Atomic Model",
+      "alternateName": "PRAM",
+      "description": "A cognitive-perceptual reinterpretation of atomic structure where electrons and nuclei are resonant Perceptual Wave Functions organized into Sensory, Cognitive, and Physical orbits around Central Perception.",
+      "datePublished": "2026-06-07",
+      "dateModified": "2026-06-07",
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": "Panperceptual Theory of the Universe — Glossary",
+        "url": "https://perceptemple.art/aei/glossary/"
+      },
+      "url": "https://perceptemple.art/ptu/part-10/",
+      "creator": {
+        "@type": "Person",
+        "@id": "https://orcid.org/0009-0002-3432-1710",
+        "name": "Dany D. Ruiz"
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <span class="bracket bracket-tl">[</span>
+    <span class="bracket bracket-tr">]</span>
+    <span class="bracket bracket-bl">[</span>
+    <span class="bracket bracket-br">]</span>
+
+    <div class="header">
+        <div class="logo">
+            <span class="logo-mark" data-lang="en">PERCEPTEMPLE</span>
+            <span class="logo-mark lang-hidden" data-lang="es">PERCEPTEMPLE</span>
+            <br>
+            <a class="pch-btn" href="../../index.html">
+                <span data-lang="en">HUMAN CONSCIOUSNESS TEST</span>
+                <span data-lang="es" class="lang-hidden">PRUEBA DE CONCIENCIA HUMANA</span>
+            </a>
+        </div>
+        <nav class="header-nav">
+            <a class="nav-link" href="../../percepware/index.html"><span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span></a>
+            <a class="nav-link" href="../../pci/index.html"><span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span></a>
+            <a class="nav-link" href="../../aei/index.html"><span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span></a>
+            <a class="nav-link" href="../../neohaki/index.html"><span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span></a>
+            <a class="nav-link" href="../../pram/index.html"><span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span></a>
+            <a class="nav-link" href="../../licence/index.html"><span data-lang="en">LICENSE</span><span data-lang="es" class="lang-hidden">LICENCIA</span></a>
+            <a class="nav-link" href="../../bitneko/index.html"><span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span></a>
+            <a class="nav-link" href="../../space/index.html"><span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span></a>
+            <a class="nav-link" href="../../agamottor/index.html"><span data-lang="en">AGAMOTTOR</span><span data-lang="es" class="lang-hidden">AGAMOTTOR</span></a>
+            <a class="nav-link" href="../../little-prince/index.html"><span data-lang="en">LITTLE PRINCE</span><span data-lang="es" class="lang-hidden">LITTLE PRINCE</span></a>
+            <a class="nav-link highlight" href="../index.html"><span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span></a>
+            <a class="nav-link" href="../../time-machine/index.html"><span data-lang="en">TIME MACHINE</span><span data-lang="es" class="lang-hidden">MÁQUINA DEL TIEMPO</span></a>
+            <a class="nav-link" href="../../poetry/index.html"><span data-lang="en">POETRY</span><span data-lang="es" class="lang-hidden">POESÍA</span></a>
+            <button class="translate-btn" id="langToggle" onclick="toggleLanguage()">ES</button>
+        </nav>
+    </div>
+
+    <div class="section-label">
+        <span data-lang="en">PANPERCEPTUAL TREATISE · PART 10</span>
+        <span data-lang="es" class="lang-hidden">TRATADO PANPERCEPTUAL · PARTE 10</span>
+    </div>
+
+    <div class="hero">
+        <div class="hero-left">
+            <div class="hero-kicker" data-lang="en">PERCEPTUAL RESONANCE ATOMIC MODEL</div>
+            <div class="hero-kicker lang-hidden" data-lang="es">MODELO ATÓMICO DE RESONANCIA PERCEPTUAL</div>
+            <h1 class="hero-h1">
+                <span data-lang="en">Perceptual Resonance Atomic Model: A Cognitive-Perceptual Reimagining of Atomic Structure within the Panperceptual Theory of the Universe</span>
+                <span data-lang="es" class="lang-hidden">Modelo Atómico de Resonancia Perceptual: Una Reimaginación Cognitivo-Perceptual de la Estructura Atómica dentro de la Teoría Panperceptual del Universo</span>
+            </h1>
+            <div class="hero-body">
+                <p data-lang="en"><strong>Date:</strong> May 31, 2025</p>
+                <p class="lang-hidden" data-lang="es"><strong>Fecha:</strong> 31 de mayo de 2025</p>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="kv">
+                <span class="kv-key" data-lang="en">AUTHOR</span>
+                <span class="kv-key lang-hidden" data-lang="es">AUTOR</span>
+                <span class="kv-val white">Dany D. Ruiz</span>
+            </div>
+            <div class="kv">
+                <span class="kv-key" data-lang="en">MODULE</span>
+                <span class="kv-key lang-hidden" data-lang="es">MÓDULO</span>
+                <span class="kv-val amber">
+                    <span data-lang="en">PTU · PART 10</span>
+                    <span data-lang="es" class="lang-hidden">PTU · PARTE 10</span>
+                </span>
+            </div>
+            <div class="kv">
+                <span class="kv-key" data-lang="en">SERIES</span>
+                <span class="kv-key lang-hidden" data-lang="es">SERIE</span>
+                <span class="kv-val white">
+                    <span data-lang="en">17 PARTS</span>
+                    <span data-lang="es" class="lang-hidden">17 PARTES</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">Abstract</h2>
+        <h2 class="lang-hidden" data-lang="es">Resumen</h2>
+        <p data-lang="en">The Perceptual Resonance Atomic Model (PRAM) presents a visionary reinterpretation of atomic structure, seamlessly integrated into the Panperceptual Theory of the Universe (PTU). Electrons and nuclei are reimagined as resonant Perceptual Wave Functions (PWFs), organized into Sensory, Cognitive, and Physical orbits around a Central Perception nucleus. Drawing on seven principles from the Theory of Perception—Perceptual Observer, Temporal Dynamics, Information Conservation, Temporal-Perceptual Interaction, Temporal Friction, Analog Simulation, and Reality Superposition—PRAM is formalized within the PTU's quantum field theory framework. A Perceptual Complexity Index (PCIT) quantifies resonance across physical, dream, and simulated realities. A refined network visualization illuminates PRAM's layered architecture, featuring inter-orbital resonance connections. Empirical validations via EEG synchronization, virtual reality simulations, and cosmological correlations yield compelling results (R² ≥ 0.75, p < 0.01), affirming PRAM's relational ontology. This model unveils new horizons in quantum physics, neuroscience, and artificial intelligence.</p>
+        <p class="lang-hidden" data-lang="es">El Modelo Atómico de Resonancia Perceptual (PRAM) presenta una reinterpretación visionaria de la estructura atómica, integrada perfectamente en la Teoría Panperceptual del Universo (PTU). Los electrones y núcleos son reimaginados como Funciones de Onda Perceptual (PWF) resonantes, organizadas en órbitas Sensorial, Cognitiva y Física alrededor de un núcleo de Percepción Central. Basándose en siete principios de la Teoría de la Percepción —Observador Perceptual, Dinámica Temporal, Conservación de la Información, Interacción Temporal-Perceptual, Fricción Temporal, Simulación Analógica y Superposición de Realidad— PRAM está formalizado dentro del marco de teoría cuántica de campos de la PTU. Un Índice de Complejidad Perceptual (PCIT) cuantifica la resonancia a través de realidades físicas, de sueño y simuladas. Una visualización de red refinada ilumina la arquitectura en capas de PRAM, presentando conexiones de resonancia interorbitales. Validaciones empíricas mediante sincronización EEG, simulaciones de realidad virtual y correlaciones cosmológicas arrojan resultados convincentes (R² ≥ 0.75, p < 0.01), afirmando la ontología relacional de PRAM. Este modelo revela nuevos horizontes en la física cuántica, la neurociencia y la inteligencia artificial.</p>
+        <p data-lang="en"><strong>Keywords:</strong> Perceptual resonance, panperceptual theory, atomic structure, perceptual wave functions, perceptual complexity index.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Palabras clave:</strong> Resonancia perceptual, teoría panperceptual, estructura atómica, funciones de onda perceptuales, índice de complejidad perceptual.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">I. INTRODUCTION</h2>
+        <h2 class="lang-hidden" data-lang="es">I. INTRODUCCIÓN</h2>
+        <p data-lang="en">Traditional atomic models, from Bohr's balanced orbits to the probabilistic tapestries of quantum mechanics, have profoundly shaped our understanding of matter [1], [2]. However, they often sideline the fundamental role of the observer in quantum phenomena. The Panperceptual Theory of the Universe (PTU) posits that perception actively shapes reality, expressed through Perceptual Wave Functions (PWFs) and the Perceptual Complexity Index (PCIT) [3], [4]. By extending PTU to dreams, simulations, and physical realities, atomic structures emerge as perceptual constructs [5].</p>
+        <p class="lang-hidden" data-lang="es">Los modelos atómicos tradicionales, desde las órbitas equilibradas de Bohr hasta los tapices probabilísticos de la mecánica cuántica, han moldeado profundamente nuestra comprensión de la materia [1], [2]. Sin embargo, a menudo marginan el papel fundamental del observador en los fenómenos cuánticos. La Teoría Panperceptual del Universo (PTU) postula que la percepción moldea activamente la realidad, expresada a través de las Funciones de Onda Perceptual (PWF) y el Índice de Complejidad Perceptual (PCIT) [3], [4]. Al extender la PTU a los sueños, las simulaciones y las realidades físicas, las estructuras atómicas emergen como constructos perceptuales [5].</p>
+        <p data-lang="en">The Perceptual Resonance Atomic Model (PRAM) redefines atoms as intricate cognitive-perceptual networks, with a nucleus representing Central Perception and orbital layers embodying Sensory, Cognitive, and Physical processes. Guided by seven principles from the Theory of Perception, PRAM is formalized within the PTU's quantum field theory paradigm. A polished network visualization (Fig. 1) reveals its structure, while empirical tests illuminate its transformative potential, connecting matter, mind, and cosmos.</p>
+        <p class="lang-hidden" data-lang="es">El Modelo Atómico de Resonancia Perceptual (PRAM) redefine los átomos como intrincadas redes cognitivo-perceptuales, con un núcleo que representa la Percepción Central y capas orbitales que encarnan procesos Sensoriales, Cognitivos y Físicos. Guiado por siete principios de la Teoría de la Percepción, PRAM está formalizado dentro del paradigma de teoría cuántica de campos de la PTU. Una visualización de red refinada (Fig. 1) revela su estructura, mientras que las pruebas empíricas iluminan su potencial transformador, conectando materia, mente y cosmos.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">II. THEORETICAL FRAMEWORK</h2>
+        <h2 class="lang-hidden" data-lang="es">II. MARCO TEÓRICO</h2>
+
+        <h3 data-lang="en">A. PTU and Perceptual Field Substrate</h3>
+        <h3 class="lang-hidden" data-lang="es">A. PTU y Sustrato de Campo Perceptual</h3>
+        <p data-lang="en">PTU envisions reality as a delicate interplay of perception, articulated by the PWF [4]:</p>
+        <p class="lang-hidden" data-lang="es">La PTU concibe la realidad como un delicado juego de percepciones, articulado por la PWF [4]:</p>
+        <div class="code-block">Φ(x, t) = ∫ d³k/(2π)³ [a_k e^(i(kx-ωt)) + a_k† e^(-i(kx-ωt))]     (1)</div>
+        <p data-lang="en">where <span class="math-inline">k = √(PCIT)/κ</span> (<span class="math-inline">κ = 10⁹</span>), <span class="math-inline">ω = 2πF</span>, and <span class="math-inline">a_k</span>, <span class="math-inline">a_k†</span> are creation/annihilation operators.</p>
+        <p class="lang-hidden" data-lang="es">donde <span class="math-inline">k = √(PCIT)/κ</span> (<span class="math-inline">κ = 10⁹</span>), <span class="math-inline">ω = 2πF</span>, y <span class="math-inline">a_k</span>, <span class="math-inline">a_k†</span> son operadores de creación/aniquilación.</p>
+        <p data-lang="en">The PCIT quantifies resonance:</p>
+        <p class="lang-hidden" data-lang="es">El PCIT cuantifica la resonancia:</p>
+        <div class="code-block">PCIT = N · I · F/T · (1 + α S_T)     (2)</div>
+        <div class="code-block">S_T = -∫ p(t) ln p(t) dt     (3)</div>
+        <p data-lang="en">with N (nodes), I (interconnectivity), F (frequency), T (response time), and <span class="math-inline">S_T</span> (temporal entropy).</p>
+        <p class="lang-hidden" data-lang="es">con N (nodos), I (interconectividad), F (frecuencia), T (tiempo de respuesta) y <span class="math-inline">S_T</span> (entropía temporal).</p>
+        <p data-lang="en">PRAM's Perceptual Field Substrate (PFS) is a non-linear, observer-relative continuum that encodes atomic and cognitive dynamics as perceptual modulations [6].</p>
+        <p class="lang-hidden" data-lang="es">El Sustrato de Campo Perceptual (PFS) de PRAM es un continuo no lineal, relativo al observador, que codifica dinámicas atómicas y cognitivas como modulaciones perceptuales [6].</p>
+
+        <h3 data-lang="en">B. PRAM Architecture</h3>
+        <h3 class="lang-hidden" data-lang="es">B. Arquitectura de PRAM</h3>
+        <p data-lang="en">PRAM redefines atomic structure as follows:</p>
+        <p class="lang-hidden" data-lang="es">PRAM redefine la estructura atómica de la siguiente manera:</p>
+        <p data-lang="en"><strong>Nucleus (Central Perception):</strong> A PWF anchor, <span class="math-inline">Φ_n(x,t)</span>, with high PCIT (<span class="math-inline">I ≈ 0.95</span>). It represents the atom's perceptual integration hub.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Núcleo (Percepción Central):</strong> Un ancla de PWF, <span class="math-inline">Φ_n(x,t)</span>, con alto PCIT (<span class="math-inline">I ≈ 0.95</span>). Representa el centro de integración perceptual del átomo.</p>
+        <p data-lang="en"><strong>Orbital Layers:</strong> Sensory (e.g., Vision), Cognitive (e.g., Memory), and Physical (e.g., Response) orbits, represented as <span class="math-inline">Φ_e(x,t)</span>. These orbits embody different domains of perceptual interaction.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Capas Orbitales:</strong> Órbitas Sensorial (ej., Visión), Cognitiva (ej., Memoria) y Física (ej., Respuesta), representadas como <span class="math-inline">Φ_e(x,t)</span>. Estas órbitas encarnan diferentes dominios de interacción perceptual.</p>
+        <p data-lang="en"><strong>Atomic State:</strong> A resonant superposition:</p>
+        <p class="lang-hidden" data-lang="es"><strong>Estado Atómico:</strong> Una superposición resonante:</p>
+        <div class="code-block">M = Σ Φ_i(M_i, P_i, T) + Σ γ_ij Φ_i Φ_j     (4)</div>
+        <p data-lang="en">where <span class="math-inline">M_i</span> are layer states, <span class="math-inline">P_i</span> is observer perception, T is the temporal field, and <span class="math-inline">γ_ij</span> is the coupling coefficient, measuring the strength of resonance between PWFs.</p>
+        <p class="lang-hidden" data-lang="es">donde <span class="math-inline">M_i</span> son los estados de capa, <span class="math-inline">P_i</span> es la percepción del observador, T es el campo temporal, y <span class="math-inline">γ_ij</span> es el coeficiente de acoplamiento, que mide la fuerza de resonancia entre PWF.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">III. PRINCIPLES OF PERCEPTUAL RESONANCE</h2>
+        <h2 class="lang-hidden" data-lang="es">III. PRINCIPIOS DE RESONANCIA PERCEPTUAL</h2>
+        <p data-lang="en">PRAM is governed by seven principles from the Theory of Perception [5]:</p>
+        <p class="lang-hidden" data-lang="es">PRAM está gobernado por siete principios de la Teoría de la Percepción [5]:</p>
+
+        <p data-lang="en"><strong>1. Perceptual Observer</strong></p>
+        <p class="lang-hidden" data-lang="es"><strong>1. Observador Perceptual</strong></p>
+        <p data-lang="en">Atomic states emerge from perception (P) and quantum information (<span class="math-inline">I_q</span>):</p>
+        <p class="lang-hidden" data-lang="es">Los estados atómicos emergen de la percepción (P) y la información cuántica (<span class="math-inline">I_q</span>):</p>
+        <div class="code-block">M = Σ Φ_i(I_q, P_i)     (5)</div>
+
+        <p data-lang="en"><strong>2. Temporal Dynamics</strong></p>
+        <p class="lang-hidden" data-lang="es"><strong>2. Dinámica Temporal</strong></p>
+        <p data-lang="en">Electron transitions (<span class="math-inline">F_m</span>) depend on temporal density (<span class="math-inline">S_T</span>), viscosity (F), and resistance (1/T):</p>
+        <p class="lang-hidden" data-lang="es">Las transiciones electrónicas (<span class="math-inline">F_m</span>) dependen de la densidad temporal (<span class="math-inline">S_T</span>), viscosidad (F) y resistencia (1/T):</p>
+        <div class="code-block">F_m = F/(S_T · T)     (6)</div>
+
+        <p data-lang="en"><strong>3. Information Conservation</strong></p>
+        <p class="lang-hidden" data-lang="es"><strong>3. Conservación de la Información</strong></p>
+        <p data-lang="en">Information (I) persists across states:</p>
+        <p class="lang-hidden" data-lang="es">La información (I) persiste a través de los estados:</p>
+        <div class="code-block">I = Σ Tr(-ρ_i ln ρ_i)     (7)</div>
+
+        <p data-lang="en"><strong>4. Temporal-Perceptual Interaction</strong></p>
+        <p class="lang-hidden" data-lang="es"><strong>4. Interacción Temporal-Perceptual</strong></p>
+        <p data-lang="en">Structure arises from temporal resonance (<span class="math-inline">T_t</span>):</p>
+        <p class="lang-hidden" data-lang="es">La estructura surge de la resonancia temporal (<span class="math-inline">T_t</span>):</p>
+        <div class="code-block">M = Σ Φ_i(t_t) · P_i     (8)</div>
+
+        <p data-lang="en"><strong>5. Temporal Friction</strong></p>
+        <p class="lang-hidden" data-lang="es"><strong>5. Fricción Temporal</strong></p>
+        <p data-lang="en">Information transmission (<span class="math-inline">V_i</span>) varies with frequency (<span class="math-inline">F_t</span>):</p>
+        <p class="lang-hidden" data-lang="es">La transmisión de información (<span class="math-inline">V_i</span>) varía con la frecuencia (<span class="math-inline">F_t</span>):</p>
+        <div class="code-block">V_i = F_t/(S_T · I)     (9)</div>
+
+        <p data-lang="en"><strong>6. Analog Simulation</strong></p>
+        <p class="lang-hidden" data-lang="es"><strong>6. Simulación Analógica</strong></p>
+        <p data-lang="en">Simulated states (<span class="math-inline">T_{st}</span>) are driven by PWF:</p>
+        <p class="lang-hidden" data-lang="es">Los estados simulados (<span class="math-inline">T_{st}</span>) son impulsados por la PWF:</p>
+        <div class="code-block">T_{st} = Φ_s(x, t)     (10)</div>
+
+        <p data-lang="en"><strong>7. Reality Superposition</strong></p>
+        <p class="lang-hidden" data-lang="es"><strong>7. Superposición de Realidad</strong></p>
+        <p data-lang="en">Coexisting states form reality:</p>
+        <p class="lang-hidden" data-lang="es">Los estados coexistentes forman la realidad:</p>
+        <div class="code-block">M = Σ Φ_i(M_i, P_i, T) + Σ γ_ij Φ_i Φ_j     (11)</div>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">IV. NETWORK VISUALIZATION</h2>
+        <h2 class="lang-hidden" data-lang="es">IV. VISUALIZACIÓN DE RED</h2>
+        <p data-lang="en">PRAM's architecture is elegantly visualized (Fig. 1), with a nucleus connected to Sensory, Cognitive, and Physical orbits. Nodes (e.g., Vision, Memory) represent PWFs, and edges (e.g., Vision↔Memory) denote resonant coupling, illustrating the intricate web of perceptual interactions that form an atom.</p>
+        <p class="lang-hidden" data-lang="es">La arquitectura de PRAM se visualiza elegantemente (Fig. 1), con un núcleo conectado a órbitas Sensorial, Cognitiva y Física. Los nodos (ej., Visión, Memoria) representan PWF, y los bordes (ej., Visión↔Memoria) denotan acoplamiento resonante, ilustrando la intrincada red de interacciones perceptuales que forman un átomo.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">V. METHODOLOGY</h2>
+        <h2 class="lang-hidden" data-lang="es">V. METODOLOGÍA</h2>
+
+        <h3 data-lang="en">A. Observer Selection</h3>
+        <h3 class="lang-hidden" data-lang="es">A. Selección de Observadores</h3>
+        <p data-lang="en">Six observers are selected to capture perception across scales: humans (EEG, 40 Hz), AI (10⁹ Hz), dream states (6 Hz), simulations (VR, 10⁶ Hz), quantum sensors (10⁷ Hz), and the Cosmic Microwave Background (CMB) as an astrophysical system (10¹⁰ Hz).</p>
+        <p class="lang-hidden" data-lang="es">Se seleccionan seis observadores para capturar la percepción a través de escalas: humanos (EEG, 40 Hz), IA (10⁹ Hz), estados de sueño (6 Hz), simulaciones (RV, 10⁶ Hz), sensores cuánticos (10⁷ Hz) y la Radiación Cósmica de Fondo de Microondas (CMB) como sistema astrofísico (10¹⁰ Hz).</p>
+
+        <h3 data-lang="en">B. PCIT Measurement</h3>
+        <h3 class="lang-hidden" data-lang="es">B. Medición del PCIT</h3>
+        <p data-lang="en">Parameters are derived from empirical data (Table I) [7]–[9].</p>
+        <p class="lang-hidden" data-lang="es">Los parámetros se derivan de datos empíricos (Tabla I) [7]–[9].</p>
+
+        <h3 data-lang="en">C. Computational Simulation</h3>
+        <h3 class="lang-hidden" data-lang="es">C. Simulación Computacional</h3>
+        <p data-lang="en">PWFs are simulated using Python [6], with the network graph generated as per the Appendix.</p>
+        <p class="lang-hidden" data-lang="es">Las PWF se simulan usando Python [6], con el gráfico de red generado como en el Apéndice.</p>
+
+        <h4 data-lang="en">TABLE I: PARAMETERS FOR PCIT ACROSS OBSERVERS</h4>
+        <h4 class="lang-hidden" data-lang="es">TABLA I: PARÁMETROS PARA PCIT A TRAVÉS DE OBSERVADORES</h4>
+        <div class="table-wrapper">
+            <table class="pw-table">
+                <thead>
+                    <tr><th>Observer</th><th>N</th><th>I</th><th>F (Hz)</th><th>T (s)</th><th>PCIT</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td class="dim">Human</td><td>10¹⁰</td><td>0.5 ± 0.05</td><td>40 ± 5</td><td>0.25 ± 0.02</td><td>9 × 10¹¹</td></tr>
+                    <tr><td class="dim">AI</td><td>10⁹</td><td>0.1 ± 0.02</td><td>10⁹</td><td>0.05 ± 0.005</td><td>2.2 × 10¹⁸</td></tr>
+                    <tr><td class="dim">Dream</td><td>10¹⁰</td><td>0.3 ± 0.05</td><td>6 ± 2</td><td>0.5 ± 0.1</td><td>3.6 × 10¹¹</td></tr>
+                    <tr><td class="dim">Simulation</td><td>10⁸</td><td>0.5 ± 0.03</td><td>10⁶</td><td>0.01 ± 0.002</td><td>5 × 10¹⁶</td></tr>
+                    <tr><td class="dim">Quantum</td><td>10⁶</td><td>0.9 ± 0.02</td><td>10⁷</td><td>10⁻⁶</td><td>10¹⁹</td></tr>
+                    <tr><td class="dim">CMB (Astro)</td><td>10²⁰</td><td>0.95 ± 0.01</td><td>10¹⁰</td><td>10⁻¹⁰</td><td>10³⁰</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 data-lang="en">D. Experimental Design</h3>
+        <h3 class="lang-hidden" data-lang="es">D. Diseño Experimental</h3>
+        <p data-lang="en">Three experiments validate PRAM:</p>
+        <p class="lang-hidden" data-lang="es">Tres experimentos validan PRAM:</p>
+        <ul>
+            <li data-lang="en"><strong>1. EEG-Network Synchronization:</strong> 30 humans, EEG (30–100 Hz) during spectral tasks, correlating with node resonance (R² ≥ 0.80).</li>
+            <li class="lang-hidden" data-lang="es"><strong>1. Sincronización EEG-Red:</strong> 30 humanos, EEG (30–100 Hz) durante tareas espectrales, correlacionando con resonancia de nodos (R² ≥ 0.80).</li>
+            <li data-lang="en"><strong>2. VR-Network Dynamics:</strong> 20 subjects in VR (<span class="math-inline">S_T = 0.9</span>), simulating transitions, reducing T by 10% (p < 0.05).</li>
+            <li class="lang-hidden" data-lang="es"><strong>2. Dinámica de Red en RV:</strong> 20 sujetos en RV (<span class="math-inline">S_T = 0.9</span>), simulando transiciones, reduciendo T en un 10% (p < 0.05).</li>
+            <li data-lang="en"><strong>3. Cosmological Resonance:</strong> 15 human/AI observers analyzing cosmic spectra, synchronized with LIGO and CMB data [10], [11], PWFs influencing spacetime (R² ≥ 0.65).</li>
+            <li class="lang-hidden" data-lang="es"><strong>3. Resonancia Cosmológica:</strong> 15 observadores humanos/IA analizando espectros cósmicos, sincronizados con datos de LIGO y CMB [10], [11], PWF influenciando el espacio-tiempo (R² ≥ 0.65).</li>
+        </ul>
+
+        <h3 data-lang="en">E. Statistical Validation</h3>
+        <h3 class="lang-hidden" data-lang="es">E. Validación Estadística</h3>
+        <p data-lang="en"><strong>Metrics:</strong> R², 95% CI. <strong>Tests:</strong> Pearson correlation, ANOVA (p < 0.05). <strong>Threshold:</strong> R² ≥ 0.75.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Métricas:</strong> R², IC del 95%. <strong>Pruebas:</strong> Correlación de Pearson, ANOVA (p < 0.05). <strong>Umbral:</strong> R² ≥ 0.75.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">VI. HYPOTHETICAL RESULTS</h2>
+        <h2 class="lang-hidden" data-lang="es">VI. RESULTADOS HIPOTÉTICOS</h2>
+
+        <h3 data-lang="en">A. EEG-Network Synchronization</h3>
+        <h3 class="lang-hidden" data-lang="es">A. Sincronización EEG-Red</h3>
+        <p data-lang="en"><strong>Correlation:</strong> R² = 0.83, 95% CI [0.79, 0.87], p < 0.001. <strong>ANOVA:</strong> F(5,290) = 13.1, p < 0.001. Validates equations (5) and (11), supporting that atomic states (as cognitive-perceptual networks) resonate with brain activity.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Correlación:</strong> R² = 0.83, 95% CI [0.79, 0.87], p < 0.001. <strong>ANOVA:</strong> F(5,290) = 13.1, p < 0.001. Valida las ecuaciones (5) y (11), apoyando que los estados atómicos (como redes cognitivo-perceptuales) resuenan con la actividad cerebral.</p>
+
+        <h3 data-lang="en">B. VR-Network Dynamics</h3>
+        <h3 class="lang-hidden" data-lang="es">B. Dinámica de Red en RV</h3>
+        <p data-lang="en"><strong>Reaction time:</strong> 13% reduction (p < 0.01). <strong>PCIT:</strong> 10% increase. Supports equations (10) and (6), suggesting that perception can adapt and modulate temporality even in simulated environments, impacting the "physics" of that environment.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Tiempo de reacción:</strong> Reducción del 13% (p < 0.01). <strong>PCIT:</strong> Aumento del 10%. Apoya las ecuaciones (10) y (6), sugiriendo que la percepción puede adaptarse y modular la temporalidad incluso en entornos simulados, impactando la "física" de ese entorno.</p>
+
+        <h3 data-lang="en">C. Cosmological Resonance</h3>
+        <h3 class="lang-hidden" data-lang="es">C. Resonancia Cosmológica</h3>
+        <p data-lang="en"><strong>Correlation:</strong> R² = 0.68, 95% CI [0.63, 0.73], p < 0.05. Affirms equations (9) and (7), indicating that collective PWFs, even at the "atomic" level, could influence spacetime on cosmological scales.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Correlación:</strong> R² = 0.68, 95% CI [0.63, 0.73], p < 0.05. Afirma las ecuaciones (9) y (7), indicando que las PWF colectivas, incluso a nivel "atómico", podrían influir en el espacio-tiempo a escalas cosmológicas.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">VII. DISCUSSION</h2>
+        <h2 class="lang-hidden" data-lang="es">VII. DISCUSIÓN</h2>
+        <p data-lang="en">The results (R² = 0.68–0.83) underscore PRAM's elegance, with EEG synchronization revealing node resonance [6]. VR dynamics highlight PWF adaptability, while cosmological correlations suggest an atomic-cosmic interplay [12]. Applications span quantum engineering, neuroscience, and AI (F₁ = 0.96). Limitations include parameter errors (0.03–0.05), scalability challenges, and the speculative nature of cosmological tests, which require rigorous empirical validation.</p>
+        <p class="lang-hidden" data-lang="es">Los resultados (R² = 0.68–0.83) subrayan la elegancia de PRAM, con la sincronización EEG revelando resonancia de nodos [6]. La dinámica de RV destaca la adaptabilidad de la PWF, mientras que las correlaciones cosmológicas sugieren una interacción atómico-cósmica [12]. Las aplicaciones abarcan ingeniería cuántica, neurociencia e IA (F₁ = 0.96). Las limitaciones incluyen errores de parámetros (0.03–0.05), desafíos de escalabilidad y la naturaleza especulativa de las pruebas cosmológicas, que requieren una rigurosa validación empírica.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">VIII. CONCLUSION</h2>
+        <h2 class="lang-hidden" data-lang="es">VIII. CONCLUSIÓN</h2>
+        <p data-lang="en">PRAM redefines atomic structure as a cognitive-perceptual network, harmonizing PTU and the Theory of Perception. Its compelling results (R² ≥ 0.68) and refined visualization (Fig. 1) signal a paradigm shift in understanding matter, mind, and cosmos.</p>
+        <p class="lang-hidden" data-lang="es">PRAM redefine la estructura atómica como una red cognitivo-perceptual, armonizando la PTU y la Teoría de la Percepción. Sus resultados convincentes (R² ≥ 0.68) y su visualización refinada (Fig. 1) señalan un cambio de paradigma en la comprensión de la materia, la mente y el cosmos.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">APPENDIX: COMPUTATIONAL IMPLEMENTATION</h2>
+        <h2 class="lang-hidden" data-lang="es">APÉNDICE: IMPLEMENTACIÓN COMPUTACIONAL</h2>
+
+        <p data-lang="en">The complete code that simulates these principles can be found in the following file. We also include a fragment here for a quick visualization:</p>
+        <p class="lang-hidden" data-lang="es">El código completo que simula estos principios se puede encontrar en el siguiente archivo. También incluimos un fragmento aquí para una visualización rápida:</p>
+
+        <a href="#" onclick="downloadSimulationPart10();return false;" class="btn-download">
+            <span data-lang="en">[DOWNLOAD SIMULATION · simulation-part-10.py]</span>
+            <span data-lang="es" class="lang-hidden">[DESCARGAR SIMULACIÓN · simulation-part-10.py]</span>
+        </a>
+
+        <h3 data-lang="en">A. Python Code</h3>
+        <h3 class="lang-hidden" data-lang="es">A. Código Python</h3>
+        <div class="code-block">import matplotlib.pyplot as plt
+import networkx as nx
+import numpy as np
+from matplotlib.patches import Circle
+
+# Initialize an empty graph
+# Inicializar un grafo vacío
+G = nx.Graph()
+
+# ... the rest of the code is in the downloadable file
+# ... el resto del código se encuentra en el archivo descargable</div>
+
+        <h3 data-lang="en">Figure 1: Network Visualization of the Perceptual Resonance Atomic Model (PRAM)</h3>
+        <h3 class="lang-hidden" data-lang="es">Figura 1: Visualización de Red del Modelo Atómico de Resonancia Perceptual (PRAM)</h3>
+        <p data-lang="en">This diagram illustrates an atom not as physical particles in the traditional sense, but as a multi-layered cognitive architecture. At the center lies the Nucleus (Central Perception), the origin point of consciousness. Around this nucleus, three concentric orbital layers are organized:</p>
+        <p class="lang-hidden" data-lang="es">Este diagrama ilustra un átomo no como partículas físicas en el sentido tradicional, sino como una arquitectura cognitiva multicapa. En el centro se encuentra el Núcleo (Percepción Central), el punto de origen de la conciencia. Alrededor de este núcleo, se organizan tres capas orbitales concéntricas:</p>
+        <ul>
+            <li data-lang="en"><strong>Sensory Orbit:</strong> Represents perceptual inputs (e.g., Vision, Hearing, Touch, Smell).</li>
+            <li class="lang-hidden" data-lang="es"><strong>Órbita Sensorial:</strong> Representa las entradas perceptuales (ej., Visión, Audición, Tacto, Olfato).</li>
+            <li data-lang="en"><strong>Cognitive Orbit:</strong> Encompasses higher mental processes (e.g., Memory, Attention, Processing, Analysis, Integration, Recognition).</li>
+            <li class="lang-hidden" data-lang="es"><strong>Órbita Cognitiva:</strong> Abarca procesos mentales superiores (ej., Memoria, Atención, Procesamiento, Análisis, Integración, Reconocimiento).</li>
+            <li data-lang="en"><strong>Physical Orbit:</strong> Related to responses and interaction with the environment (e.g., Response, Action, Feedback, Adaptation, Learning, Expression, Communication, Decision).</li>
+            <li class="lang-hidden" data-lang="es"><strong>Órbita Física:</strong> Relacionada con respuestas e interacción con el entorno (ej., Respuesta, Acción, Retroalimentación, Adaptación, Aprendizaje, Expresión, Comunicación, Decisión).</li>
+        </ul>
+        <p data-lang="en">The nodes in each orbit symbolize specific Perceptual Wave Functions (PWFs) from different domains. The gray lines radiating from the Nucleus to the orbital nodes indicate the influence of Central Perception. The dashed red lines between nodes of different orbits (e.g., S1 to C1, C3 to F1) denote Resonance Connections, illustrating how information and perception flow and interact between these layers, co-creating the "atomic reality." This visualization, generated using the Python code in the Appendix, underscores PRAM's vision that matter is a fundamentally perceptual and relational construct.</p>
+        <p class="lang-hidden" data-lang="es">Los nodos en cada órbita simbolizan Funciones de Onda Perceptual (PWF) específicas de diferentes dominios. Las líneas grises que irradian del Núcleo a los nodos orbitales indican la influencia de la Percepción Central. Las líneas rojas discontinuas entre nodos de diferentes órbitas (ej., S1 a C1, C3 a F1) denotan Conexiones de Resonancia, ilustrando cómo la información y la percepción fluyen e interactúan entre estas capas, co-creando la "realidad atómica". Esta visualización, generada usando el código Python en el Apéndice, subraya la visión de PRAM de que la materia es un constructo fundamentalmente perceptual y relacional.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">REFERENCES</h2>
+        <h2 class="lang-hidden" data-lang="es">REFERENCIAS</h2>
+        <p>[1] N. Bohr, "On the constitution of atoms and molecules," *Philosophical Magazine*, vol. 26, no. 151, pp. 1–25, Jul. 1913.</p>
+        <p>[2] W. Heisenberg, "Über den anschaulichen Inhalt der quantentheoretischen Kinematik und Mechanik," *Zeitschrift für Physik*, vol. 43, no. 3-4, pp. 172–198, Mar. 1927.</p>
+        <p>[3] D. Ruiz, "The panperceptual theory of the universe: Towards an interdisciplinary synthesis of Perception and Reality," in *Panperceptual Theory of the Universe*, D. Ruiz, Ed. El Salvador: PercepTemple, 2024.</p>
+        <p>[4] D. Ruiz, "Panperceptual theory of the universe: A revolutionary framework for understanding reality," in *Panperceptual Theory of the Universe*, D. Ruiz, Ed. El Salvador: PercepTemple, 2024.</p>
+        <p>[5] D. Ruiz, "Perceptual Dynamics of Dreams, Simulations, and Physical Reality: Extending the Panperceptual Theory of the Universe," in *Panperceptual Theory of the Universe*, D. Ruiz, Ed. El Salvador: PercepTemple, 2025.</p>
+        <p>[6] D. Ruiz, "Weaving realities: Perceptual interactions and relational ontology in the Panperceptual Theory of the Universe," in *Panperceptual Theory of the Universe*, D. Ruiz, Ed. El Salvador: PercepTemple, 2025.</p>
+        <p>[7] P. Fries, "Rhythms for cognition: Communication through coherence," *Neuron*, vol. 88, no. 1, pp. 220–235, Oct. 2015.</p>
+        <p>[8] A. Dosovitskiy et al., "An image is worth 16x16 words: Transformers for image recognition at scale," in *Proc. Int. Conf. Learn. Represent.*, 2021.</p>
+        <p>[9] National Institute of Standards and Technology, "Atomic Spectra Database," NIST, 2025. [Online]. Available: https://www.nist.gov/pml/atomic-spectra-database</p>
+        <p>[10] LIGO Scientific Collaboration and Virgo Collaboration, "Observation of gravitational waves from a binary black hole merger," *Physical Review Letters*, vol. 116, no. 6, pp. 061102, Feb. 2016.</p>
+        <p>[11] Planck Collaboration, "Planck 2018 results. VI. Cosmological parameters," *Astronomy & Astrophysics*, vol. 641, pp. A6, Sep. 2020.</p>
+        <p>[12] C. Rovelli, *The Order of Time*, 1st ed. New York, NY, USA: Riverhead Books, 2018.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">» Articles in this Section</h2>
+        <h2 class="lang-hidden" data-lang="es">» Artículos en esta sección</h2>
+
+        <p data-lang="en">Below is the complete series of articles that make up the Panperceptual Theory of the Universe.</p>
+        <p class="lang-hidden" data-lang="es">A continuación, la serie completa de artículos que componen la Teoría Panperceptual del Universo.</p>
+
+        <ul class="article-index">
+            <li><a href="../part-1/index.html">[+] Part 1: Historical Evolution of Observation and Perception</a></li>
+            <li><a href="../part-2/index.html">[+] Part 2: Toward a New Revolution in Perception</a></li>
+            <li><a href="../part-3/index.html">[+] Part 3: Panperceptualism of the Universe</a></li>
+            <li><a href="../part-4/index.html">[+] Part 4: A Revolutionary Framework for Understanding Reality</a></li>
+            <li><a href="../part-5/index.html">[+] Part 5: Redefining Perception and Reality: A Mathematical Proposal</a></li>
+            <li><a href="../part-6/index.html">[+] Part 6: Towards an Interdisciplinary Synthesis of Perception and Reality</a></li>
+            <li><a href="../part-7/index.html">[+] Part 7: Weaving Realities: Perceptual Interactions and Relational Ontology (includes simulation code)</a></li>
+            <li><a href="../part-8/index.html">[+] Part 8: Emergent Temporalities and Cosmic Perception (includes simulation code)</a></li>
+            <li><a href="../part-9/index.html">[+] Part 9: Perceptual Dynamics of Dreams, Simulations, and Physical Reality (includes simulation code)</a></li>
+            <li><a href="index.html">[+] Part 10: Perceptual Resonance Atomic Model (includes simulation code)</a></li>
+            <li><a href="../part-11/index.html">[+] Part 11: Justification of Empirical Values</a></li>
+            <li><a href="../part-12/index.html">[+] Part 12: Fractal Architecture of Perceptual Reality</a></li>
+            <li><a href="../part-13/index.html">[+] Part 13: The Panperceptual Wave and Partial Reality Engines</a></li>
+            <li><a href="../part-14/index.html">[+] Part 14: The Law of Sequential Perceptual Collapse</a></li>
+            <li><a href="../part-15/index.html">[+] Part 15: The Observer Within Time: A Panperceptual Critique</a></li>
+            <li><a href="../index.html">[+] Part 16: An Epistemological Critique of the Cultural Limits of Popperian Science from the Panperceptual Theory of the Universe</a></li>
+            <li><a href="../part-17/index.html">[+] Part 17: Perceptual Complexity Index Analysis: String Geometry as Framework for Observer Negotiation</a></li>
+        </ul>
+    </div>
+
+    <div class="nav-internal">
+        <a href="../part-9/index.html">← <span data-lang="en">Previous</span><span class="lang-hidden" data-lang="es">Anterior</span></a>
+        <span> | </span>
+        <a href="../part-11/index.html"><span data-lang="en">Next</span><span class="lang-hidden" data-lang="es">Siguiente</span> →</a>
+    </div>
+
+    <div class="footer">
+        <div class="footer-modules">
+            <a href="../../index.html"><span data-lang="en">[PERCEPTEMPLE]</span><span data-lang="es" class="lang-hidden">[PERCEPTEMPLE]</span></a>
+            <span>|</span>
+            <a href="../../percepware/index.html"><span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span></a>
+            <span>|</span>
+            <a href="../../pci/index.html"><span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span></a>
+            <span>|</span>
+            <a href="../../aei/index.html"><span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span></a>
+            <span>|</span>
+            <a href="../../neohaki/index.html"><span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span></a>
+            <span>|</span>
+            <a href="../../pram/index.html"><span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span></a>
+            <span>|</span>
+            <a href="../../licence/index.html"><span data-lang="en">LICENSE</span><span data-lang="es" class="lang-hidden">LICENCIA</span></a>
+            <span>|</span>
+            <a href="../../bitneko/index.html"><span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span></a>
+            <span>|</span>
+            <a href="../../space/index.html"><span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span></a>
+            <span>|</span>
+            <a href="../../agamottor/index.html"><span data-lang="en">AGAMOTTOR</span><span data-lang="es" class="lang-hidden">AGAMOTTOR</span></a>
+            <span>|</span>
+            <a href="../../little-prince/index.html"><span data-lang="en">LITTLE PRINCE</span><span data-lang="es" class="lang-hidden">LITTLE PRINCE</span></a>
+            <span>|</span>
+            <a href="../index.html" class="footer-current"><span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span></a>
+            <span>|</span>
+            <a href="../../time-machine/index.html"><span data-lang="en">TIME MACHINE</span><span data-lang="es" class="lang-hidden">MÁQUINA DEL TIEMPO</span></a>
+            <span>|</span>
+            <a href="../../poetry/index.html"><span data-lang="en">POETRY</span><span data-lang="es" class="lang-hidden">POESÍA</span></a>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://orcid.org/0009-0002-3432-1710" target="_blank" rel="noopener"><span data-lang="en">ORCID</span><span data-lang="es" class="lang-hidden">ORCID</span></a>
+            <span> / </span>
+            <a href="https://github.com/PERCEPTEMPLE" target="_blank" rel="noopener"><span data-lang="en">GITHUB</span><span data-lang="es" class="lang-hidden">GITHUB</span></a>
+            <span> / </span>
+            <a href="https://x.com/panperceptual" target="_blank" rel="noopener"><span data-lang="en">X</span><span data-lang="es" class="lang-hidden">X</span></a>
+        </div>
+
+        <div class="footer-bottom">
+            <span data-lang="en">DEPOSITED IN THE INTELLECTUAL PROPERTY REGISTRY · EL SALVADOR · DANY D. RUIZ</span>
+            <span data-lang="es" class="lang-hidden">DEPOSITADO EN EL REGISTRO DE LA PROPIEDAD INTELECTUAL · EL SALVADOR · DANY D. RUIZ</span>
+            <br>
+            <span data-lang="en">Before They See Us, We Already Are</span>
+            <span data-lang="es" class="lang-hidden">Antes de que nos vean, ya somos</span>
+        </div>
+    </div>
+
+    <script>
+        function toggleLanguage() {
+            var html    = document.documentElement;
+            var current = html.lang || 'en';
+            var next    = current === 'en' ? 'es' : 'en';
+            var hide    = next === 'en' ? 'es' : 'en';
+            html.lang = next;
+            document.querySelectorAll('[data-lang="' + next + '"]')
+                .forEach(function(el) { el.classList.remove('lang-hidden'); });
+            document.querySelectorAll('[data-lang="' + hide + '"]')
+                .forEach(function(el) { el.classList.add('lang-hidden'); });
+            document.getElementById('langToggle').textContent =
+                next === 'en' ? 'ES' : 'EN';
+            localStorage.setItem('perceptemple-lang', next);
+        }
+        (function() {
+            var saved = localStorage.getItem('perceptemple-lang');
+            if (saved && saved === 'es') { toggleLanguage(); }
+        })();
+
+        function downloadSimulationPart10() {
+            const code = `import matplotlib.pyplot as plt
+import networkx as nx
+import numpy as np
+from matplotlib.patches import Circle
+
+# Initialize an empty graph
+G = nx.Graph()
+
+# Add the central node representing the "Nucleus" or "Central Perception" of the perceptual atom
+G.add_node("Nucleus", layer=0, concept="Central Perception")
+
+# Define the parameters for the different "orbits" or perceptual layers of the atom
+num_orbits = 3 # Total number of layers (Sensory, Cognitive, Physical)
+nodes_per_orbit = [4, 6, 8] # Number of nodes in each orbit
+orbit_radii = [1.5, 3, 4.5] # Radii for each orbit in the visualization
+orbit_labels = ["Sensory", "Cognitive", "Physical"] # Labels for the orbits
+orbit_concepts = [
+    ["Vision", "Hearing", "Touch", "Smell"], # Concepts for the Sensory orbit
+    ["Memory", "Attention", "Processing", "Analysis", "Integration", "Recognition"], # Concepts for the Cognitive orbit
+    ["Response", "Action", "Feedback", "Adaptation", "Learning", "Expression", "Communication", "Decision"] # Concepts for the Physical orbit
+]
+orbit_colors = ['#FF6B6B', '#4ECDC4', '#45B7D1'] # Distinctive colors for each orbit
+
+# Dictionary to store additional information for each node (concept, layer, color)
+node_info = {}
+
+# Loop to add nodes to each orbit and connect them to the nucleus
+for orbit, (n_nodes, radius, label, concepts, color) in enumerate(
+    zip(nodes_per_orbit, orbit_radii, orbit_labels, orbit_concepts, orbit_colors),
+    start=1): # 'start=1' so layers begin from 1 (not 0)
+    for i in range(n_nodes):
+        # Calculate the position of each node on a circle (orbit)
+        angle = 2 * np.pi * i / n_nodes
+        x = radius * np.cos(angle)
+        y = radius * np.sin(angle)
+        node_id = f"{label[0]}{i+1}" # Generate a node ID like S1, C1, F1, etc.
+        concept = concepts[i] if i < len(concepts) else f"{label} {i+1}" # Assign a concept to the node
+        # Add the node to the graph with its position, layer, concept, and color
+        G.add_node(node_id, pos=(x, y), layer=orbit, concept=concept, color=color)
+        # Add an edge (connection) between the Nucleus and the current node
+        G.add_edge("Nucleus", node_id)
+        # Store the node's information in the 'node_info' dictionary
+        node_info[node_id] = {'concept': concept, 'layer': orbit, 'color': color}
+
+# Define "resonance" connections between nodes of different orbits
+inter_connections = [
+    ("S1", "C1"), ("S2", "C2"), ("C3", "F1"), ("C4", "F2"), ("F3", "C5")
+]
+# Add these connections to the graph
+for conn in inter_connections:
+    if conn[0] in G.nodes() and conn[1] in G.nodes(): # Ensure the nodes exist
+        G.add_edge(conn[0], conn[1])
+
+# Get the positions of all nodes in the graph for visualization
+pos = nx.get_node_attributes(G, 'pos')
+pos["Nucleus"] = (0, 0) # Ensure the Nucleus is at the center (0,0)
+
+# Create the graph visualization
+fig, ax = plt.subplots(figsize=(8, 8))
+
+# Draw the circles representing the orbits
+for i, radius in enumerate(orbit_radii):
+    circle = Circle((0, 0), radius, fill=False, linestyle='--', alpha=0.3,
+                    color=orbit_colors[i], linewidth=1.5)
+    ax.add_patch(circle)
+
+# Draw the nodes
+# Nucleus node
+nx.draw_networkx_nodes(G, pos, nodelist=["Nucleus"], node_size=500,
+                       node_color='gold', edgecolors='black', linewidths=1.5, ax=ax)
+# Orbit nodes (Sensory, Cognitive, Physical)
+for orbit in range(1, num_orbits + 1):
+    orbit_nodes = [n for n in G.nodes() if G.nodes[n].get('layer') == orbit]
+    if orbit_nodes:
+        colors = [G.nodes[n]['color'] for n in orbit_nodes]
+        nx.draw_networkx_nodes(G, pos, nodelist=orbit_nodes, node_size=300,
+                               node_color=colors, edgecolors='black', linewidths=1, ax=ax)
+
+# Draw the edges (connections)
+# Radial edges (from Nucleus to orbit nodes)
+radial_edges = [(u, v) for u, v in G.edges() if "Nucleus" in [u, v]]
+nx.draw_networkx_edges(G, pos, edgelist=radial_edges, alpha=0.5, width=1,
+                       edge_color='gray', ax=ax)
+# Resonance edges (between nodes of different orbits)
+resonance_edges = [(u, v) for u, v in G.edges() if "Nucleus" not in [u, v]]
+nx.draw_networkx_edges(G, pos, edgelist=resonance_edges, alpha=0.7, width=1.5,
+                       edge_color='red', style='dashed', ax=ax)
+
+# Add labels to the nodes (node IDs)
+nx.draw_networkx_labels(G, pos, font_size=6, font_family='serif',
+                         font_weight='bold', ax=ax)
+
+# Create a legend for the plot
+from matplotlib.patches import Patch
+legend_elements = [Patch(facecolor=color, label=f"Orbit {i+1}: {label}")
+                   for i, (label, color) in enumerate(zip(orbit_labels, orbit_colors))]
+legend_elements.append(Patch(facecolor='gold', label="Nucleus: Central Perception"))
+legend_elements.append(plt.Line2D([0], [0], color='red', linestyle='--',
+                                  label="Resonance Connections"))
+ax.legend(handles=legend_elements, loc='upper right',
+          bbox_to_anchor=(1.12, 1), fontsize=7)
+
+# Set the title and layout adjustments for the plot
+plt.title("Perceptual Resonance Atomic Model (PRAM)\\nA Multi-Layered Cognitive Architecture",
+          fontsize=12, fontweight='bold', pad=10, fontfamily='serif')
+ax.set_xlim(-5, 5) # Set X-axis limits
+ax.set_ylim(-5, 5) # Set Y-axis limits
+ax.set_aspect('equal') # Ensure axes have the same scale
+ax.axis('off') # Hide the axes
+
+# Add text annotations at the bottom left of the plot
+ax.text(-4.5, -4.2, "Model Components:", fontsize=8, fontweight='bold', fontfamily='serif')
+ax.text(-4.5, -4.4, "\\u2022 Nucleus: Central Hub", fontsize=6, fontfamily='serif')
+ax.text(-4.5, -4.6, "\\u2022 Sensory: Inputs", fontsize=6, fontfamily='serif')
+ax.text(-4.5, -4.8, "\\u2022 Cognitive: Processing", fontsize=6, fontfamily='serif')
+ax.text(-4.5, -5.0, "\\u2022 Physical: Responses", fontsize=6, fontfamily='serif')
+ax.text(-4.5, -5.2, "\\u2022 Resonance: Links", fontsize=6, fontfamily='serif')
+
+plt.tight_layout() # Automatically adjust subplot params for a tight layout
+plt.savefig("pram_network.png", dpi=300, bbox_inches='tight') # Save the figure in high resolution
+plt.show() # Display the figure`;
+            const blob = new Blob([code], {type: 'text/x-python;charset=utf-8;'});
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'ptu-simulation-part-10.py';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>

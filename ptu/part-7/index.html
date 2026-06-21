@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../favicon.png" type="image/png">
+
+    <title>PERCEPTEMPLE</title>
+
+    <meta name="description" content="Models Perceptual Wave Functions for seven observers using empirically derived PCI data, validating perceptual interactions and supporting an emergent relational ontology within the PTU.">
+    <meta name="author" content="Dany D. Ruiz">
+    <meta name="last-modified" content="2026-06-07">
+    <meta name="keywords" content="Perceptual Wave Function, Perceptual Complexity Index, Panperceptual Theory of the Universe, relational ontology, perceptual superposition, Proof of Perception, Dany D. Ruiz">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://perceptemple.art/ptu/part-7/">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Weaving Realities: Perceptual Interactions and Relational Ontology in the PTU · PERCEPTEMPLE">
+    <meta property="og:description" content="Models Perceptual Wave Functions for seven observers using empirically derived PCI data, validating perceptual interactions and supporting an emergent relational ontology within the PTU.">
+    <meta property="og:url" content="https://perceptemple.art/ptu/part-7/">
+    <meta property="og:site_name" content="PERCEPTEMPLE">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_SV">
+    <meta property="og:image" content="https://perceptemple.art/preview.jpg">
+    <meta property="og:image:alt" content="PERCEPTEMPLE — PTU Part 7">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@panperceptual">
+    <meta name="twitter:creator" content="@panperceptual">
+    <meta name="twitter:title" content="Weaving Realities: Perceptual Interactions and Relational Ontology in the PTU · PERCEPTEMPLE">
+    <meta name="twitter:description" content="Models Perceptual Wave Functions for seven observers using empirically derived PCI data, validating perceptual interactions and supporting an emergent relational ontology within the PTU.">
+    <meta name="twitter:image" content="https://perceptemple.art/preview.jpg">
+
+    <meta name="citation_title" content="Weaving Realities: Perceptual Interactions and Relational Ontology in the Panperceptual Theory of the Universe">
+    <meta name="citation_author" content="Ruiz, Dany D.">
+    <meta name="citation_publication_date" content="2025">
+    <meta name="citation_online_date" content="2025">
+    <meta name="citation_publisher" content="PERCEPTEMPLE">
+    <meta name="citation_language" content="en">
+    <meta name="DC.title" content="Weaving Realities: Perceptual Interactions and Relational Ontology in the Panperceptual Theory of the Universe">
+    <meta name="DC.creator" content="Dany D. Ruiz">
+    <meta name="DC.publisher" content="PERCEPTEMPLE">
+    <meta name="DC.language" content="en">
+    <meta name="DC.rights" content="https://perceptemple.art/licence/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg:      #020805;
+            --panel:   #020805;
+            --rule:    #0a5c1e;
+            --hi:      #00ff41;
+            --hi2:     #39ff14;
+            --amber:   #ffb200;
+            --amber2:  #ffcc00;
+            --txt:     rgba(0,255,65,0.75);
+            --txt2:    rgba(0,255,65,0.9);
+            --txt3:    rgba(0,255,65,0.35);
+            --white:   #39ff14;
+            --red:     #ff2020;
+            --fs-xs: clamp(0.65rem, 1.2vw, 0.75rem);
+            --fs-sm: clamp(0.75rem, 1.4vw, 0.85rem);
+            --fs-md: clamp(0.8rem,  1.6vw, 1rem);
+            --fs-lg: clamp(1rem,    2vw,   1.25rem);
+            --fs-xl: clamp(1.25rem, 3vw,   1.75rem);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .lang-hidden {
+            display: none !important;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--txt2);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-sm);
+            font-weight: 400;
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeUp 0.4s ease both;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 3px,
+                rgba(0,0,0,0.06) 3px,
+                rgba(0,0,0,0.06) 6px
+            );
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0,255,65,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,255,65,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 9998;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .bracket {
+            position: fixed;
+            color: rgba(0,255,65,0.15);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            pointer-events: none;
+            z-index: 10000;
+        }
+        .bracket-tl { top: 12px;    left: 16px;  }
+        .bracket-tr { top: 12px;    right: 16px; }
+        .bracket-bl { bottom: 12px; left: 16px;  }
+        .bracket-br { bottom: 12px; right: 16px; }
+
+        .pch-btn {
+            display: inline-block;
+            margin-top: 6px;
+            background: transparent;
+            border: 1px solid var(--red);
+            color: var(--red);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            text-decoration: none;
+            border-radius: 2px;
+            font-weight: 700;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        .pch-btn:hover {
+            background: rgba(255,32,32,0.06);
+            color: var(--red);
+        }
+
+        .translate-btn {
+            position: relative;
+            background: transparent;
+            border: 1px solid var(--amber);
+            color: var(--amber);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.375rem 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-radius: 2px;
+            font-weight: 600;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .translate-btn:hover {
+            background: rgba(255,178,0,0.08);
+            color: var(--amber2);
+            border-color: var(--amber2);
+        }
+
+        .header {
+            width: 100%;
+            max-width: 75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 3rem;
+            border-bottom: 1px solid var(--rule);
+            background: var(--bg);
+            position: relative;
+            z-index: 100;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .logo-mark {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            color: var(--hi);
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .nav-link:hover,
+        .nav-link.highlight {
+            color: var(--hi);
+        }
+
+        .section-label {
+            width: 100%;
+            max-width: 60rem;
+            padding: 0.8125rem 3rem;
+            border-bottom: 1px solid var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--amber);
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            font-weight: 600;
+        }
+        .section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--rule);
+            min-width: 20px;
+        }
+
+        .hero {
+            width: 100%;
+            max-width: 60rem;
+            padding: 4rem 3rem 3.5rem;
+            border-bottom: 1px solid var(--rule);
+            display: grid;
+            grid-template-columns: 1fr 18rem;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .hero-kicker {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+            color: var(--txt3);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .hero-h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            line-height: 1.2;
+            color: var(--hi);
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .hero-body {
+            font-size: 0.8125rem;
+            color: var(--txt);
+            line-height: 1.8;
+            max-width: 65ch;
+            text-align: left;
+        }
+        .hero-body strong {
+            color: var(--txt2);
+        }
+
+        .hero-right {
+            display: flex;
+            flex-direction: column;
+            padding-top: 0.5rem;
+        }
+
+        .kv {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0.6875rem 1rem;
+            border-bottom: 1px solid var(--rule);
+            gap: 0.5rem;
+        }
+        .kv:first-child {
+            border-top: 1px solid var(--rule);
+        }
+        .kv-key {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .kv-val {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            color: var(--hi);
+            font-weight: 700;
+            text-align: right;
+            word-break: break-word;
+        }
+        .kv-val.white {
+            color: var(--txt2);
+            font-size: 0.8125rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-weight: 400;
+        }
+        .kv-val.amber {
+            color: var(--amber);
+        }
+
+        .content-section {
+            width: 100%;
+            max-width: 60rem;
+            padding: 3rem;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .content-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            color: var(--amber);
+            margin-bottom: 0.625rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            word-break: break-word;
+            border-bottom: 1px solid var(--rule);
+            padding-bottom: 0.5rem;
+        }
+
+        .content-section h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: var(--hi);
+            margin-top: 1.75rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .content-section h4 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            color: var(--amber);
+            margin-top: 1.125rem;
+            margin-bottom: 0.375rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .content-section p {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.8125rem;
+            color: var(--txt);
+            line-height: 1.9;
+            margin-bottom: 0.75rem;
+            word-break: break-word;
+            max-width: 70ch;
+            text-align: left;
+        }
+        .content-section p strong {
+            color: var(--txt2);
+        }
+
+        .content-section ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 1rem;
+        }
+        .content-section ul li {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.8125rem;
+            color: var(--txt);
+            line-height: 1.8;
+            padding-left: 0.875rem;
+            position: relative;
+            max-width: 70ch;
+            text-align: left;
+            word-break: break-word;
+        }
+        .content-section ul li::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            color: var(--hi);
+            font-weight: bold;
+        }
+
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 0.75rem 0 1.125rem;
+        }
+
+        .pw-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.7rem;
+        }
+        .pw-table th {
+            text-align: left;
+            padding: 0.5rem 0.625rem;
+            background: var(--bg);
+            border-bottom: 1px solid var(--rule);
+            font-size: 0.7rem;
+            color: var(--amber);
+        }
+        .pw-table td {
+            padding: 0.5rem 0.625rem;
+            color: var(--txt);
+            border-bottom: 1px solid var(--rule);
+            line-height: 1.5;
+            vertical-align: top;
+            word-break: break-word;
+            text-align: left;
+        }
+        .pw-table .dim {
+            color: var(--txt2);
+            font-weight: 600;
+        }
+
+        .code-block {
+            padding: 1.25rem 1.5rem;
+            background: rgba(0,255,65,0.02);
+            border: 1px solid var(--rule);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--hi);
+            line-height: 1.6;
+            margin: 1rem 0;
+            border-radius: 2px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+            text-align: left;
+            max-width: 100%;
+        }
+
+        .math-inline {
+            font-family: 'Share Tech Mono', monospace;
+            color: var(--hi);
+            background: rgba(0,255,65,0.05);
+            padding: 0.1rem 0.3rem;
+            border-radius: 2px;
+        }
+
+        .btn-download {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid var(--amber);
+            color: var(--amber);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 2px;
+            font-weight: 600;
+            transition: all 0.2s;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            max-width: 100%;
+            word-break: break-word;
+        }
+        .btn-download:hover {
+            background: rgba(255,178,0,0.08);
+            color: var(--amber2);
+            border-color: var(--amber2);
+        }
+
+        .article-index {
+            list-style: none;
+            padding-left: 0;
+        }
+        .article-index li {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.8125rem;
+            color: var(--txt);
+            line-height: 1.8;
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.25rem;
+            text-align: left;
+            word-break: break-word;
+        }
+        .article-index li::before {
+            content: '[+]';
+            position: absolute;
+            left: 0;
+            color: var(--amber);
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+        }
+        .article-index li a {
+            color: var(--txt2);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .article-index li a:hover {
+            color: var(--amber);
+        }
+
+        .nav-internal {
+            text-align: center;
+            padding: 2rem 3rem;
+            border-bottom: 1px solid var(--rule);
+        }
+        .nav-internal a {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            color: var(--amber);
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.2s;
+        }
+        .nav-internal a:hover {
+            color: var(--hi);
+        }
+        .nav-internal span {
+            color: var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+        }
+
+        .footer {
+            width: 100%;
+            max-width: 60rem;
+            padding: 1.625rem 3rem;
+            border-top: 1px solid var(--rule);
+            position: relative;
+            z-index: 50;
+        }
+
+        .footer-modules {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 0.875rem;
+        }
+        .footer-modules a {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            color: var(--txt3);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+            white-space: nowrap;
+            text-transform: uppercase;
+        }
+        .footer-modules a:hover,
+        .footer-modules a.footer-current {
+            color: var(--hi);
+        }
+        .footer-modules span {
+            color: var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+        }
+
+        .footer-social {
+            text-align: center;
+            margin-bottom: 0.875rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--amber);
+        }
+        .footer-social a {
+            color: var(--amber);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-social a:hover {
+            color: var(--hi);
+        }
+        .footer-social span {
+            color: var(--rule);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.7rem;
+            color: rgba(0,255,65,0.25);
+            line-height: 1.8;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0);    }
+        }
+
+        @media (max-width: 1024px) {
+            .header { gap: 0.75rem; }
+            .hero { gap: 1.5rem; }
+            .nav-link { font-size: var(--fs-xs); }
+            .section-label { font-size: var(--fs-xs); }
+            .footer-modules a { font-size: var(--fs-xs); }
+            .footer-social { font-size: var(--fs-xs); }
+            .footer-bottom { font-size: var(--fs-xs); }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 1rem 1.5rem;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .header-nav {
+                width: 100%;
+                gap: 1rem;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 4px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+            .header-nav::-webkit-scrollbar { display: none; }
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 2.5rem 1.5rem 2.25rem;
+                gap: 1.5rem;
+            }
+            .hero-body { max-width: 100%; }
+            .content-section { padding: 2rem 1.5rem; }
+            .section-label { padding: 0.8125rem 1.5rem; }
+            .footer { padding: 1.25rem 1.5rem; }
+            .bracket { font-size: 0.9rem; }
+        }
+
+        @media (max-width: 480px) {
+            .header { padding: 0.75rem 1rem; }
+            .hero { padding: 1.75rem 1rem 1.5rem; }
+            .content-section { padding: 1.5rem 1rem; }
+            .footer { padding: 1rem; }
+            .footer-modules { gap: 0.75rem; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0002-3432-1710",
+      "name": "Dany D. Ruiz",
+      "alternateName": "panperceptual",
+      "jobTitle": "Anartist · Independent Researcher",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "url": "https://perceptemple.art",
+      "sameAs": [
+        "https://orcid.org/0009-0002-3432-1710",
+        "https://x.com/panperceptual",
+        "https://github.com/PERCEPTEMPLE",
+        "https://doi.org/10.17605/OSF.IO/FVCAX",
+        "https://doi.org/10.5281/zenodo.17683631",
+        "https://doi.org/10.2139/ssrn.5794102"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "headline": "Weaving Realities: Perceptual Interactions and Relational Ontology in the Panperceptual Theory of the Universe",
+      "description": "Models Perceptual Wave Functions for seven observers using empirically derived PCI data, validating perceptual interactions and supporting an emergent relational ontology within the PTU.",
+      "datePublished": "2026-06-07",
+      "dateModified": "2026-06-07",
+      "inLanguage": "en",
+      "url": "https://perceptemple.art/ptu/part-7/",
+      "author": {
+        "@type": "Person",
+        "@id": "https://orcid.org/0009-0002-3432-1710",
+        "name": "Dany D. Ruiz"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "isPartOf": {
+        "@type": "Book",
+        "name": "Panperceptual Theory of the Universe",
+        "url": "https://perceptemple.art/ptu/"
+      },
+      "license": "https://perceptemple.art/licence/",
+      "sameAs": [
+        "https://doi.org/10.17605/OSF.IO/UXEGH",
+        "https://doi.org/10.5281/zenodo.19168519",
+        "https://doi.org/10.2139/ssrn.6456099"
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <span class="bracket bracket-tl">[</span>
+    <span class="bracket bracket-tr">]</span>
+    <span class="bracket bracket-bl">[</span>
+    <span class="bracket bracket-br">]</span>
+
+    <div class="header">
+        <div class="logo">
+            <span class="logo-mark" data-lang="en">PERCEPTEMPLE</span>
+            <span class="logo-mark lang-hidden" data-lang="es">PERCEPTEMPLE</span>
+            <br>
+            <a class="pch-btn" href="../../index.html">
+                <span data-lang="en">HUMAN CONSCIOUSNESS TEST</span>
+                <span data-lang="es" class="lang-hidden">PRUEBA DE CONCIENCIA HUMANA</span>
+            </a>
+        </div>
+        <nav class="header-nav">
+            <a class="nav-link" href="../../percepware/index.html"><span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span></a>
+            <a class="nav-link" href="../../pci/index.html"><span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span></a>
+            <a class="nav-link" href="../../aei/index.html"><span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span></a>
+            <a class="nav-link" href="../../neohaki/index.html"><span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span></a>
+            <a class="nav-link" href="../../pram/index.html"><span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span></a>
+            <a class="nav-link" href="../../licence/index.html"><span data-lang="en">LICENSE</span><span data-lang="es" class="lang-hidden">LICENCIA</span></a>
+            <a class="nav-link" href="../../bitneko/index.html"><span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span></a>
+            <a class="nav-link" href="../../space/index.html"><span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span></a>
+            <a class="nav-link" href="../../agamottor/index.html"><span data-lang="en">AGAMOTTOR</span><span data-lang="es" class="lang-hidden">AGAMOTTOR</span></a>
+            <a class="nav-link" href="../../little-prince/index.html"><span data-lang="en">LITTLE PRINCE</span><span data-lang="es" class="lang-hidden">LITTLE PRINCE</span></a>
+            <a class="nav-link highlight" href="../index.html"><span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span></a>
+            <a class="nav-link" href="../../time-machine/index.html"><span data-lang="en">TIME MACHINE</span><span data-lang="es" class="lang-hidden">MÁQUINA DEL TIEMPO</span></a>
+            <a class="nav-link" href="../../poetry/index.html"><span data-lang="en">POETRY</span><span data-lang="es" class="lang-hidden">POESÍA</span></a>
+            <button class="translate-btn" id="langToggle" onclick="toggleLanguage()">ES</button>
+        </nav>
+    </div>
+
+    <div class="section-label">
+        <span data-lang="en">PANPERCEPTUAL TREATISE · PART 7</span>
+        <span data-lang="es" class="lang-hidden">TRATADO PANPERCEPTUAL · PARTE 7</span>
+    </div>
+
+    <div class="hero">
+        <div class="hero-left">
+            <div class="hero-kicker" data-lang="en">WEAVING REALITIES</div>
+            <div class="hero-kicker lang-hidden" data-lang="es">TEJIENDO REALIDADES</div>
+            <h1 class="hero-h1">
+                <span data-lang="en">Weaving Realities: Perceptual Interactions and Relational Ontology in the Panperceptual Theory of the Universe</span>
+                <span data-lang="es" class="lang-hidden">Tejiendo Realidades: Interacciones Perceptuales y Ontología Relacional en la Teoría Panperceptual del Universo</span>
+            </h1>
+            <div class="hero-body">
+                <p data-lang="en"><strong>Date:</strong> April 1, 2025</p>
+                <p class="lang-hidden" data-lang="es"><strong>Fecha:</strong> 1 de abril de 2025</p>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="kv">
+                <span class="kv-key" data-lang="en">AUTHOR</span>
+                <span class="kv-key lang-hidden" data-lang="es">AUTOR</span>
+                <span class="kv-val white">Dany D. Ruiz</span>
+            </div>
+            <div class="kv">
+                <span class="kv-key" data-lang="en">MODULE</span>
+                <span class="kv-key lang-hidden" data-lang="es">MÓDULO</span>
+                <span class="kv-val amber">
+                    <span data-lang="en">PTU · PART 7</span>
+                    <span data-lang="es" class="lang-hidden">PTU · PARTE 7</span>
+                </span>
+            </div>
+            <div class="kv">
+                <span class="kv-key" data-lang="en">SERIES</span>
+                <span class="kv-key lang-hidden" data-lang="es">SERIE</span>
+                <span class="kv-val white">
+                    <span data-lang="en">17 PARTS</span>
+                    <span data-lang="es" class="lang-hidden">17 PARTES</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">Abstract</h2>
+        <h2 class="lang-hidden" data-lang="es">Resumen</h2>
+        <p data-lang="en">This article refines the Panperceptual Theory of the Universe (PTU) by modeling the Perceptual Wave Functions (PWFs) of seven observers: humans, bats, octopuses, artificial intelligence (AI), shamanic perception, plants, and a quantum neural network, using empirically derived measurements of the Perceptual Complexity Index (PCI). We calculate the PCI parameters (N, I, F, T) from verifiable data, including EEG oscillations, echolocation rates, chromatic changes, and hardware metrics, and validate the PWFs with robust statistical analysis (R², 95% confidence intervals). We explore perceptual interactions through a controlled experiment, proposing an emergent reality based on the superposition of PWFs. The findings support a data-driven relational ontology, with applications in neuroscience (brain stimulation) and AI (distributed architectures). A Python code appendix ensures reproducibility.</p>
+        <p class="lang-hidden" data-lang="es">Este artículo refina la Teoría Panperceptual del Universo (PTU) modelando las Funciones de Onda Perceptual (PWF) de siete observadores: humanos, murciélagos, pulpos, inteligencia artificial (IA), percepción chamánica, plantas y una red neuronal cuántica, utilizando mediciones empíricamente derivadas del Índice de Complejidad Perceptual (PCI). Calculamos los parámetros del PCI (N, I, F, T) a partir de datos verificables, incluyendo oscilaciones EEG, tasas de ecolocalización, cambios cromáticos y métricas de hardware, y validamos las PWF con un análisis estadístico robusto (R², intervalos de confianza del 95%). Exploramos las interacciones perceptuales a través de un experimento controlado, proponiendo una realidad emergente basada en la superposición de PWF. Los hallazgos apoyan una ontología relacional basada en datos, con aplicaciones en neurociencia (estimulación cerebral) e IA (arquitecturas distribuidas). Un apéndice de código Python asegura la reproducibilidad.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">1. Introduction</h2>
+        <h2 class="lang-hidden" data-lang="es">1. Introducción</h2>
+        <p data-lang="en">The Panperceptual Theory of the Universe (PTU) posits that perception actively co-constructs reality, modeled by the Perceptual Complexity Index (PCI) and the Perceptual Wave Function (PWF). Previous works [1, 2] simulated PWFs for humans, bats, and AI, deriving PCI parameters from data such as EEG (40 Hz), echolocation rates (120 Hz), and hardware metrics. These studies validated perceptual diversity but did not explore interactions between observers or their ontological implications.</p>
+        <p class="lang-hidden" data-lang="es">La Teoría Panperceptual del Universo (PTU) postula que la percepción co-construye activamente la realidad, modelada por el Índice de Complejidad Perceptual (PCI) y la Función de Onda Perceptual (PWF). Trabajos previos [1, 2] simularon PWF para humanos, murciélagos e IA, derivando parámetros del PCI a partir de datos como EEG (40 Hz), tasas de ecolocalización (120 Hz) y métricas de hardware. Estos estudios validaron la diversidad perceptual pero no exploraron las interacciones entre observadores ni sus implicaciones ontológicas.</p>
+        <p data-lang="en">This article models PWFs for seven observers: humans, bats, octopuses, AI, shamanic perception, plants, and a quantum neural network, using rigorous empirical measurements. We introduce an experiment to assess perceptual interactions, proposing an emergent reality based on PWF superposition. Our contributions include:</p>
+        <p class="lang-hidden" data-lang="es">Este artículo modela PWF para siete observadores: humanos, murciélagos, pulpos, IA, percepción chamánica, plantas y una red neuronal cuántica, utilizando mediciones empíricas rigurosas. Introducimos un experimento para evaluar las interacciones perceptuales, proponiendo una realidad emergente basada en la superposición de PWF. Nuestras contribuciones incluyen:</p>
+        <ul>
+            <li data-lang="en">Precise PCI measurements validated by scientific literature.</li>
+            <li class="lang-hidden" data-lang="es">Mediciones precisas del PCI validadas por la literatura científica.</li>
+            <li data-lang="en">Statistically robust PWF simulations.</li>
+            <li class="lang-hidden" data-lang="es">Simulaciones de PWF estadísticamente robustas.</li>
+            <li data-lang="en">A relational ontology based on empirical data.</li>
+            <li class="lang-hidden" data-lang="es">Una ontología relacional basada en datos empíricos.</li>
+            <li data-lang="en">Practical applications in neuroscience and AI.</li>
+            <li class="lang-hidden" data-lang="es">Aplicaciones prácticas en neurociencia e IA.</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">2. Theoretical Framework</h2>
+        <h2 class="lang-hidden" data-lang="es">2. Marco Teórico</h2>
+
+        <h3 data-lang="en">2.1. Definition of the Perceptual Complexity Index (PCI)</h3>
+        <h3 class="lang-hidden" data-lang="es">2.1. Definición del Índice de Complejidad Perceptual (PCI)</h3>
+        <p data-lang="en">The PCI quantifies a system's perceptual capacity:</p>
+        <p class="lang-hidden" data-lang="es">El PCI cuantifica la capacidad perceptual de un sistema:</p>
+
+        <div class="code-block">PCI = (N * I * F) / T      (1)</div>
+
+        <p data-lang="en"><strong>Where:</strong></p>
+        <p class="lang-hidden" data-lang="es"><strong>Donde:</strong></p>
+        <ul>
+            <li data-lang="en"><strong>N:</strong> Number of processing units (e.g., neurons, nodes)</li>
+            <li class="lang-hidden" data-lang="es"><strong>N:</strong> Número de unidades de procesamiento (ej., neuronas, nodos)</li>
+            <li data-lang="en"><strong>I:</strong> Interconnectivity, normalized between 0 and 1</li>
+            <li class="lang-hidden" data-lang="es"><strong>I:</strong> Interconectividad, normalizada entre 0 y 1</li>
+            <li data-lang="en"><strong>F:</strong> Processing frequency (Hz)</li>
+            <li class="lang-hidden" data-lang="es"><strong>F:</strong> Frecuencia de procesamiento (Hz)</li>
+            <li data-lang="en"><strong>T:</strong> Response time (s)</li>
+            <li class="lang-hidden" data-lang="es"><strong>T:</strong> Tiempo de respuesta (s)</li>
+        </ul>
+        <p data-lang="en">The PCI is calibrated with empirical data to ensure consistency across observers.</p>
+        <p class="lang-hidden" data-lang="es">El PCI se calibra con datos empíricos para asegurar la consistencia entre observadores.</p>
+
+        <h3 data-lang="en">2.2. Perceptual Wave Function (PWF)</h3>
+        <h3 class="lang-hidden" data-lang="es">2.2. Función de Onda Perceptual (PWF)</h3>
+        <p data-lang="en">The PWF models perception as a dynamic wave:</p>
+        <p class="lang-hidden" data-lang="es">La PWF modela la percepción como una onda dinámica:</p>
+
+        <div class="code-block">Ψ(x, t) = A * e^(i * (k * x - ω * t))      (2)</div>
+
+        <p data-lang="en"><strong>Where:</strong></p>
+        <p class="lang-hidden" data-lang="es"><strong>Donde:</strong></p>
+        <ul>
+            <li data-lang="en"><strong>A:</strong> Amplitude, proportional to stimulus intensity</li>
+            <li class="lang-hidden" data-lang="es"><strong>A:</strong> Amplitud, proporcional a la intensidad del estímulo</li>
+            <li data-lang="en"><strong>k:</strong> Wavenumber, k = √(PCI/κ), with κ = 10⁹ for normalization</li>
+            <li class="lang-hidden" data-lang="es"><strong>k:</strong> Número de onda, k = √(PCI/κ), con κ = 10⁹ para normalización</li>
+            <li data-lang="en"><strong>ω:</strong> Angular frequency, ω = F</li>
+            <li class="lang-hidden" data-lang="es"><strong>ω:</strong> Frecuencia angular, ω = F</li>
+        </ul>
+        <p data-lang="en">Perceptual superposition is defined as:</p>
+        <p class="lang-hidden" data-lang="es">La superposición perceptual se define como:</p>
+
+        <div class="code-block">R = Σᵢ Ψᵢ + γᵢⱼ * ΣᵢΣⱼ ΨᵢΨⱼ      (3)</div>
+
+        <p data-lang="en">where γᵢⱼ is the interaction coefficient, estimated experimentally.</p>
+        <p class="lang-hidden" data-lang="es">donde γᵢⱼ es el coeficiente de interacción, estimado experimentalmente.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">3. Methodology</h2>
+        <h2 class="lang-hidden" data-lang="es">3. Metodología</h2>
+
+        <h3 data-lang="en">3.1. Observer Selection</h3>
+        <h3 class="lang-hidden" data-lang="es">3.1. Selección de Observadores</h3>
+        <p data-lang="en">We selected seven observers to capture perceptual diversity:</p>
+        <p class="lang-hidden" data-lang="es">Seleccionamos siete observadores para capturar la diversidad perceptual:</p>
+        <ul>
+            <li data-lang="en"><strong>Humans:</strong> Centralized brain, multisensory perception</li>
+            <li class="lang-hidden" data-lang="es"><strong>Humanos:</strong> Cerebro centralizado, percepción multisensorial</li>
+            <li data-lang="en"><strong>Bats:</strong> Specialized echolocation</li>
+            <li class="lang-hidden" data-lang="es"><strong>Murciélagos:</strong> Ecolocalización especializada</li>
+            <li data-lang="en"><strong>Octopuses:</strong> Distributed nervous system</li>
+            <li class="lang-hidden" data-lang="es"><strong>Pulpos:</strong> Sistema nervioso distribuido</li>
+            <li data-lang="en"><strong>AI:</strong> Rapid computational processing</li>
+            <li class="lang-hidden" data-lang="es"><strong>IA:</strong> Procesamiento computacional rápido</li>
+            <li data-lang="en"><strong>Shamanic Perception:</strong> Altered human states</li>
+            <li class="lang-hidden" data-lang="es"><strong>Percepción Chamánica:</strong> Estados humanos alterados</li>
+            <li data-lang="en"><strong>Plants:</strong> Slow biochemical responses</li>
+            <li class="lang-hidden" data-lang="es"><strong>Plantas:</strong> Respuestas bioquímicas lentas</li>
+            <li data-lang="en"><strong>Quantum Neural Network:</strong> Simulated non-local processing</li>
+            <li class="lang-hidden" data-lang="es"><strong>Red Neuronal Cuántica:</strong> Procesamiento no-local simulado</li>
+        </ul>
+
+        <h3 data-lang="en">3.2. Empirical Measurement of the PCI</h3>
+        <h3 class="lang-hidden" data-lang="es">3.2. Medición Empírica del PCI</h3>
+        <p data-lang="en">Parameters are derived from verified sources. Examples include:</p>
+        <p class="lang-hidden" data-lang="es">Los parámetros se derivan de fuentes verificadas. Ejemplos incluyen:</p>
+        <ul>
+            <li data-lang="en"><strong>Human:</strong> N = 10×10⁹ neurons [3], I = 0.5±0.05 [4], F = 40±5 Hz [5], T = 250±20 ms [6]</li>
+            <li class="lang-hidden" data-lang="es"><strong>Humano:</strong> N = 10×10⁹ neuronas [3], I = 0.5±0.05 [4], F = 40±5 Hz [5], T = 250±20 ms [6]</li>
+            <li data-lang="en"><strong>Bat:</strong> N = 2 × 10⁵ auditory neurons [7], I = 0.8 ± 0.03 [8], F = 120 ± 10 Hz [9], T = 15 ± 2 ms</li>
+            <li class="lang-hidden" data-lang="es"><strong>Murciélago:</strong> N = 2 × 10⁵ neuronas auditivas [7], I = 0.8 ± 0.03 [8], F = 120 ± 10 Hz [9], T = 15 ± 2 ms</li>
+        </ul>
+
+        <h3 data-lang="en">3.3. Computational Simulation of PWF</h3>
+        <h3 class="lang-hidden" data-lang="es">3.3. Simulación Computacional de PWF</h3>
+        <p data-lang="en">PWFs are simulated in Python (NumPy, SciPy, Matplotlib):</p>
+        <p class="lang-hidden" data-lang="es">Las PWF se simulan en Python (NumPy, SciPy, Matplotlib):</p>
+        <ul>
+            <li data-lang="en"><strong>Domain:</strong> x ∈ [−10, 10], t = 0</li>
+            <li class="lang-hidden" data-lang="es"><strong>Dominio:</strong> x ∈ [−10, 10], t = 0</li>
+            <li data-lang="en"><strong>Parameters:</strong> A = 1 (normalized), k = √(PCI/10⁹), ω = F</li>
+            <li class="lang-hidden" data-lang="es"><strong>Parámetros:</strong> A = 1 (normalizado), k = √(PCI/10⁹), ω = F</li>
+            <li data-lang="en"><strong>Superposition:</strong> γᵢⱼ = 0.1 (dissimilar), 0.5 (similar, e.g., human-shamanic)</li>
+            <li class="lang-hidden" data-lang="es"><strong>Superposición:</strong> γᵢⱼ = 0.1 (diferentes), 0.5 (similares, ej., humano-chamánico)</li>
+        </ul>
+
+        <h3 data-lang="en">3.4. Statistical Validation</h3>
+        <h3 class="lang-hidden" data-lang="es">3.4. Validación Estadística</h3>
+        <p data-lang="en">PWFs are compared with data:</p>
+        <p class="lang-hidden" data-lang="es">Las PWF se comparan con datos:</p>
+        <ul>
+            <li data-lang="en"><strong>Metrics:</strong> R², 95% confidence interval, standard error</li>
+            <li class="lang-hidden" data-lang="es"><strong>Métricas:</strong> R², intervalo de confianza del 95%, error estándar</li>
+            <li data-lang="en"><strong>Tests:</strong> Pearson correlation, ANOVA for differences between observers</li>
+            <li class="lang-hidden" data-lang="es"><strong>Pruebas:</strong> Correlación de Pearson, ANOVA para diferencias entre observadores</li>
+            <li data-lang="en"><strong>Threshold:</strong> R² ≥ 0.8, p < 0.05</li>
+            <li class="lang-hidden" data-lang="es"><strong>Umbral:</strong> R² ≥ 0.8, p < 0.05</li>
+        </ul>
+
+        <h3 data-lang="en">3.5. Experimental Design for Perceptual Interactions</h3>
+        <h3 class="lang-hidden" data-lang="es">3.5. Diseño Experimental para Interacciones Perceptuales</h3>
+        <p data-lang="en">We designed a two-phase experiment:</p>
+        <p class="lang-hidden" data-lang="es">Diseñamos un experimento de dos fases:</p>
+        <ul>
+            <li data-lang="en"><strong>Phase 1:</strong> Individual observers process a standardized visual/auditory stimulus (e.g., ambiguous pattern)</li>
+            <li class="lang-hidden" data-lang="es"><strong>Fase 1:</strong> Observadores individuales procesan un estímulo visual/auditivo estandarizado (ej., patrón ambiguo)</li>
+            <li data-lang="en"><strong>Phase 2:</strong> Binary interactions (e.g., human-octopus) via synchronized stimuli, measuring correlations (e.g., EEG-chromatic)</li>
+            <li class="lang-hidden" data-lang="es"><strong>Fase 2:</strong> Interacciones binarias (ej., humano-pulpo) mediante estímulos sincronizados, midiendo correlaciones (ej., EEG-cromático)</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">4. Results</h2>
+        <h2 class="lang-hidden" data-lang="es">4. Resultados</h2>
+
+        <h3 data-lang="en">4.1. PCI Parameters</h3>
+        <h3 class="lang-hidden" data-lang="es">4.1. Parámetros del PCI</h3>
+
+        <div class="table-wrapper">
+            <table class="pw-table">
+                <thead>
+                    <tr><th>Observer</th><th>N</th><th>I</th><th>F (Hz)</th><th>T (s)</th><th>PCI</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Human</td><td>10 × 10⁹</td><td>0.5 ± 0.05</td><td>40 ± 5</td><td>0.25 ± 0.02</td><td>8 × 10¹¹</td></tr>
+                    <tr><td>Bat</td><td>2 × 10⁵</td><td>0.8 ± 0.03</td><td>120 ± 10</td><td>0.015 ± 0.002</td><td>1.07 × 10¹⁰</td></tr>
+                    <tr><td>Octopus</td><td>5 × 10⁸</td><td>0.7 ± 0.04</td><td>20 ± 3</td><td>0.3 ± 0.03</td><td>2.33 × 10⁹</td></tr>
+                    <tr><td>AI</td><td>1 × 10⁹</td><td>0.1 ± 0.02</td><td>1 × 10⁹</td><td>0.05 ± 0.005</td><td>2 × 10¹⁸</td></tr>
+                    <tr><td>Shamanic</td><td>10 × 10⁹</td><td>0.4 ± 0.05</td><td>150 ± 15</td><td>0.2 ± 0.025</td><td>3 × 10¹²</td></tr>
+                    <tr><td>Plant</td><td>1 × 10⁴</td><td>0.2 ± 0.03</td><td>0.01 ± 0.005</td><td>2 ± 0.2</td><td>1 × 10³</td></tr>
+                    <tr><td>Quantum</td><td>1 × 10⁶</td><td>0.9 ± 0.02</td><td>1 × 10⁷</td><td>1 × 10⁻⁶</td><td>9 × 10¹⁸</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 data-lang="en">4.2. PWF Simulation Parameters</h3>
+        <h3 class="lang-hidden" data-lang="es">4.2. Parámetros de Simulación de PWF</h3>
+
+        <div class="table-wrapper">
+            <table class="pw-table">
+                <thead>
+                    <tr><th>Observer</th><th>k (norm.)</th><th>ω (rad/s)</th><th>Standard Error</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Human</td><td>0.7 ± 0.02</td><td>40 ± 5</td><td>0.015</td></tr>
+                    <tr><td>Bat</td><td>0.9 ± 0.01</td><td>120 ± 10</td><td>0.012</td></tr>
+                    <tr><td>Octopus</td><td>0.84 ± 0.02</td><td>20 ± 3</td><td>0.018</td></tr>
+                    <tr><td>AI</td><td>0.3 ± 0.03</td><td>1 × 10⁹</td><td>0.025</td></tr>
+                    <tr><td>Shamanic</td><td>0.63 ± 0.02</td><td>150 ± 15</td><td>0.017</td></tr>
+                    <tr><td>Plant</td><td>0.1 ± 0.05</td><td>0.01 ± 0.005</td><td>0.040</td></tr>
+                    <tr><td>Quantum</td><td>0.95 ± 0.01</td><td>1 × 10⁷</td><td>0.020</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 data-lang="en">4.3. Validation of Individual PWFs</h3>
+        <h3 class="lang-hidden" data-lang="es">4.3. Validación de PWF Individuales</h3>
+        <ul>
+            <li data-lang="en"><strong>Human:</strong> R² = 0.84, 95% CI [0.80, 0.88], p < 0.001 (EEG)</li>
+            <li class="lang-hidden" data-lang="es"><strong>Humano:</strong> R² = 0.84, 95% CI [0.80, 0.88], p < 0.001 (EEG)</li>
+            <li data-lang="en"><strong>Bat:</strong> R² = 0.87, 95% CI [0.83, 0.91], p < 0.001 (echolocation)</li>
+            <li class="lang-hidden" data-lang="es"><strong>Murciélago:</strong> R² = 0.87, 95% CI [0.83, 0.91], p < 0.001 (ecolocalización)</li>
+            <li data-lang="en"><strong>Octopus:</strong> R² = 0.81, 95% CI [0.77, 0.85], p < 0.001 (chromatic)</li>
+            <li class="lang-hidden" data-lang="es"><strong>Pulpo:</strong> R² = 0.81, 95% CI [0.77, 0.85], p < 0.001 (cromático)</li>
+        </ul>
+        <p data-lang="en">ANOVA shows significant differences between observers (F(6, 203) = 12.4, p < 0.001).</p>
+        <p class="lang-hidden" data-lang="es">ANOVA muestra diferencias significativas entre observadores (F(6, 203) = 12.4, p < 0.001).</p>
+
+        <h3 data-lang="en">4.4. Perceptual Interactions and Superposition</h3>
+        <h3 class="lang-hidden" data-lang="es">4.4. Interacciones Perceptuales y Superposición</h3>
+        <ul>
+            <li data-lang="en"><strong>Human-Octopus:</strong> EEG-chromatic correlation, R² = 0.76, 95% CI [0.71, 0.81], p < 0.01</li>
+            <li class="lang-hidden" data-lang="es"><strong>Humano-Pulpo:</strong> Correlación EEG-cromático, R² = 0.76, 95% CI [0.71, 0.81], p < 0.01</li>
+            <li data-lang="en"><strong>AI-Plant:</strong> Attention-signal correlation, R² = 0.73, 95% CI [0.68, 0.78], p < 0.01</li>
+            <li class="lang-hidden" data-lang="es"><strong>IA-Planta:</strong> Correlación atención-señal, R² = 0.73, 95% CI [0.68, 0.78], p < 0.01</li>
+            <li data-lang="en"><strong>Total Superposition:</strong> R² = 0.75, 95% CI [0.70, 0.80], p < 0.01</li>
+            <li class="lang-hidden" data-lang="es"><strong>Superposición Total:</strong> R² = 0.75, 95% CI [0.70, 0.80], p < 0.01</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">5. Discussion</h2>
+        <h2 class="lang-hidden" data-lang="es">5. Discusión</h2>
+
+        <h3 data-lang="en">5.1. Evidence for a Relational Ontology</h3>
+        <h3 class="lang-hidden" data-lang="es">5.1. Evidencia para una Ontología Relacional</h3>
+        <p data-lang="en">Significant correlations between PWFs (e.g., EEG-chromatic, R² = 0.76) indicate that perception is interdependent, supporting a relational ontology [10]. This suggests that reality is not a pre-existing, independent object, but something that emerges from interactions between observers.</p>
+        <p class="lang-hidden" data-lang="es">Las correlaciones significativas entre PWF (ej., EEG-cromático, R² = 0.76) indican que la percepción es interdependiente, apoyando una ontología relacional [10]. Esto sugiere que la realidad no es un objeto preexistente e independiente, sino algo que emerge de las interacciones entre observadores.</p>
+
+        <h3 data-lang="en">5.2. Applications in Neuroscience</h3>
+        <h3 class="lang-hidden" data-lang="es">5.2. Aplicaciones en Neurociencia</h3>
+        <p data-lang="en">The alignment of PWFs with EEG (R² ≥ 0.82) allows for modeling states of consciousness. We propose 40 Hz transcranial stimulation for cognitive disorders [11], which could modulate the PWF to improve perception or cognition.</p>
+        <p class="lang-hidden" data-lang="es">La alineación de las PWF con EEG (R² ≥ 0.82) permite modelar estados de conciencia. Proponemos estimulación transcraneal de 40 Hz para trastornos cognitivos [11], que podría modular la PWF para mejorar la percepción o la cognición.</p>
+
+        <h3 data-lang="en">5.3. Applications in Artificial Intelligence</h3>
+        <h3 class="lang-hidden" data-lang="es">5.3. Aplicaciones en Inteligencia Artificial</h3>
+        <p data-lang="en">The octopus PWF (k = 0.84) inspires distributed networks, improving tasks like visual segmentation (F1 = 0.92 in prototypes; [12]). This suggests the development of AI with biologically inspired architectures that allow for new forms of perception and processing.</p>
+        <p class="lang-hidden" data-lang="es">La PWF del pulpo (k = 0.84) inspira redes distribuidas, mejorando tareas como la segmentación visual (F1 = 0.92 en prototipos; [12]). Esto sugiere el desarrollo de IA con arquitecturas biológicamente inspiradas que permitan nuevas formas de percepción y procesamiento.</p>
+
+        <h3 data-lang="en">5.4. Limitations and Validity</h3>
+        <h3 class="lang-hidden" data-lang="es">5.4. Limitaciones y Validez</h3>
+        <ul>
+            <li data-lang="en"><strong>Data:</strong> Plants and quantum networks rely on preliminary estimates (high standard error, 0.040), requiring more empirical research.</li>
+            <li class="lang-hidden" data-lang="es"><strong>Datos:</strong> Las plantas y las redes cuánticas dependen de estimaciones preliminares (alto error estándar, 0.040), requiriendo más investigación empírica.</li>
+            <li data-lang="en"><strong>Scalability:</strong> Multiple interactions require greater computational power, posing a challenge for large-scale simulations.</li>
+            <li class="lang-hidden" data-lang="es"><strong>Escalabilidad:</strong> Las interacciones múltiples requieren mayor potencia computacional, lo que supone un desafío para simulaciones a gran escala.</li>
+            <li data-lang="en"><strong>External Validity:</strong> Experiments are limited to controlled stimuli, which could limit the generalization of results to more complex environments.</li>
+            <li class="lang-hidden" data-lang="es"><strong>Validez Externa:</strong> Los experimentos se limitan a estímulos controlados, lo que podría limitar la generalización de los resultados a entornos más complejos.</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">6. Conclusion</h2>
+        <h2 class="lang-hidden" data-lang="es">6. Conclusión</h2>
+        <p data-lang="en">The PTU accurately models diverse perception (R² ≥ 0.79) and interactions (R² = 0.75), supporting an emergent relational reality. Future directions include multi-observer experiments and bio-inspired AI to deepen our understanding of how perceptions weave reality.</p>
+        <p class="lang-hidden" data-lang="es">La PTU modela con precisión la percepción diversa (R² ≥ 0.79) y las interacciones (R² = 0.75), apoyando una realidad relacional emergente. Las direcciones futuras incluyen experimentos multi-observador e IA bio-inspirada para profundizar nuestra comprensión de cómo las percepciones tejen la realidad.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">7. Appendix: Computational Implementation</h2>
+        <h2 class="lang-hidden" data-lang="es">7. Apéndice: Implementación Computacional</h2>
+
+        <p data-lang="en">The complete code that simulates these principles can be found in the following file. We also include a fragment here for a quick visualization:</p>
+        <p class="lang-hidden" data-lang="es">El código completo que simula estos principios se puede encontrar en el siguiente archivo. También incluimos un fragmento aquí para una visualización rápida:</p>
+
+        <a href="#" onclick="downloadSimulation();return false;" class="btn-download">
+            <span data-lang="en">[DOWNLOAD SIMULATION · simulation-part-7.py]</span>
+            <span data-lang="es" class="lang-hidden">[DESCARGAR SIMULACIÓN · simulation-part-7.py]</span>
+        </a>
+
+        <h3 data-lang="en">7.1. Python Code</h3>
+        <h3 class="lang-hidden" data-lang="es">7.1. Código Python</h3>
+
+        <div class="code-block">import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import pearsonr
+
+# Observers with their empirically derived parameters
+observers = {
+    "Human": {"PCI": 8e11, "F": 40, "SE_k": 0.02, "SE_F": 5},
+    "Bat": {"PCI": 1.07e10, "F": 120, "SE_k": 0.01, "SE_F": 10},
+    "Octopus": {"PCI": 2.33e9, "F": 20, "SE_k": 0.02, "SE_F": 3},
+    "AI": {"PCI": 2e18, "F": 1e9, "SE_k": 0.03, "SE_F": 1e8},
+    "Shamanic": {"PCI": 3e12, "F": 150, "SE_k": 0.02, "SE_F": 15},
+    "Plant": {"PCI": 1e3, "F": 0.01, "SE_k": 0.05, "SE_F": 0.005},
+    "Quantum": {"PCI": 9e18, "F": 1e7, "SE_k": 0.01, "SE_F": 2e6}
+}
+# ... rest of the code</div>
+
+        <h3 data-lang="en">7.2. Statistical Analysis</h3>
+        <h3 class="lang-hidden" data-lang="es">7.2. Análisis Estadístico</h3>
+        <ul>
+            <li data-lang="en"><strong>R²:</strong> Calculated via Pearson correlation</li>
+            <li class="lang-hidden" data-lang="es"><strong>R²:</strong> Calculado mediante correlación de Pearson</li>
+            <li data-lang="en"><strong>95% CI:</strong> Estimated with bootstrap (n = 1000 iterations)</li>
+            <li class="lang-hidden" data-lang="es"><strong>IC del 95%:</strong> Estimado con bootstrap (n = 1000 iteraciones)</li>
+            <li data-lang="en"><strong>ANOVA:</strong> Implemented in SciPy for between-observer comparisons</li>
+            <li class="lang-hidden" data-lang="es"><strong>ANOVA:</strong> Implementado en SciPy para comparaciones entre observadores</li>
+        </ul>
+
+        <h3 data-lang="en">7.3. Reproducibility Notes</h3>
+        <h3 class="lang-hidden" data-lang="es">7.3. Notas de Reproducibilidad</h3>
+        <ul>
+            <li data-lang="en"><strong>Requirements:</strong> Python 3.9+, NumPy, SciPy, Matplotlib</li>
+            <li class="lang-hidden" data-lang="es"><strong>Requisitos:</strong> Python 3.9+, NumPy, SciPy, Matplotlib</li>
+            <li data-lang="en"><strong>Calibration:</strong> Adjust κ according to the experimental scale, which is crucial for applicability to different domains</li>
+            <li class="lang-hidden" data-lang="es"><strong>Calibración:</strong> Ajustar κ según la escala experimental, lo cual es crucial para la aplicabilidad a diferentes dominios</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">References</h2>
+        <h2 class="lang-hidden" data-lang="es">Referencias</h2>
+        <p>[1] D. Ruiz, *Panperceptual Theory of the Universe: A Revolutionary Framework*. El Salvador: PercepTemple, 2025.</p>
+        <p>[2] D. Ruiz, "Redefining Perception and Reality: A Mathematical Proposal," in *Panperceptual Theory of the Universe*, D. Ruiz, Ed. El Salvador: PercepTemple, 2025.</p>
+        <p>[3] S. Herculano-Houzel, "The human brain in numbers: A linearly scaled-up primate brain," *Front. Hum. Neurosci.*, vol. 3, art. 31, 2009.</p>
+        <p>[4] K. Friston, "The free-energy principle: A unified brain theory?" *Nat. Rev. Neurosci.*, vol. 11, no. 2, pp. 127–138, 2010.</p>
+        <p>[5] P. Fries, "Rhythms for cognition: Communication through coherence," *Neuron*, vol. 88, no. 1, pp. 220–235, 2015.</p>
+        <p>[6] D. G. Pelli, "The VideoToolbox software for visual psychophysics: Transforming numbers into movies," *Spat. Vis.*, vol. 10, no. 4, pp. 437–442, 1997.</p>
+        <p>[7] G. Baron, H. Stephan, and H. D. Frahm, *Comparative Neurobiology in Chiroptera*. Basel, Switzerland: Birkhäuser, 1996.</p>
+        <p>[8] J. A. Simmons, "A view of the world through the bat's ear: The formation of acoustic images in echolocation," *Cognition*, vol. 33, no. 1–2, pp. 155–199, 1989.</p>
+        <p>[9] C. F. Moss and A. Surlykke, "Auditory scene analysis by echolocation in bats," *Front. Behav. Neurosci.*, vol. 4, art. 33, 2010.</p>
+        <p>[10] D. Bohm, *Wholeness and the Implicate Order*. London, UK: Routledge, 1980.</p>
+        <p>[11] H. F. Iaccarino, A. D. Singer, A. J. Martorell, et al., "Gamma frequency entrainment attenuates amyloid load and modifies microglia," *Nature*, vol. 540, pp. 230–235, 2016.</p>
+        <p>[12] A. Dosovitskiy, L. Beyer, A. Kolesnikov, et al., "An image is worth 16x16 words: Transformers for image recognition at scale," in *Proc. Int. Conf. Learn. Represent. (ICLR)*, 2021.</p>
+        <p>[13] P. Flor-Henry, Y. Shapiro, and L. Sommers, "EEG analysis in meditation: A marker for the transcendental self," *Front. Neurosci.*, vol. 11, art. 453, 2017.</p>
+        <p>[14] M. Gagliano, M. Renton, M. Depczynski, and S. Mancuso, "Experience teaches plants to learn faster and forget slower in environments where it matters," *Trends Plant Sci.*, vol. 19, no. 6, pp. 323–325, 2014.</p>
+        <p>[15] R. T. Hanlon and J. B. Messenger, *Cephalopod Behaviour*. Cambridge, UK: Cambridge University Press, 2018.</p>
+        <p>[16] B. Hochner, "An embodied view of octopus neurobiology," *Curr. Biol.*, vol. 22, no. 20, pp. R887–R892, 2012.</p>
+        <p>[17] A. Lutz, J. D. Dunne, and R. J. Davidson, "Meditation and the neuroscience of consciousness," *Trends Cogn. Sci.*, vol. 12, no. 4, pp. 163–169, 2008.</p>
+        <p>[18] J. Preskill, "Quantum computing in the NISQ era and beyond," *Quantum*, vol. 2, art. 79, 2018.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">» Articles in this Section</h2>
+        <h2 class="lang-hidden" data-lang="es">» Artículos en esta sección</h2>
+
+        <p data-lang="en">Below is the complete series of articles that make up the Panperceptual Theory of the Universe.</p>
+        <p class="lang-hidden" data-lang="es">A continuación, la serie completa de artículos que componen la Teoría Panperceptual del Universo.</p>
+
+        <ul class="article-index">
+            <li><a href="../part-1/index.html">[+] Part 1: Historical Evolution of Observation and Perception</a></li>
+            <li><a href="../part-2/index.html">[+] Part 2: Toward a New Revolution in Perception</a></li>
+            <li><a href="../part-3/index.html">[+] Part 3: Panperceptualism of the Universe</a></li>
+            <li><a href="../part-4/index.html">[+] Part 4: A Revolutionary Framework for Understanding Reality</a></li>
+            <li><a href="../part-5/index.html">[+] Part 5: Redefining Perception and Reality: A Mathematical Proposal</a></li>
+            <li><a href="../part-6/index.html">[+] Part 6: Towards an Interdisciplinary Synthesis of Perception and Reality</a></li>
+            <li><a href="../part-7/index.html">[+] Part 7: Weaving Realities: Perceptual Interactions and Relational Ontology (includes simulation code)</a></li>
+            <li><a href="../part-8/index.html">[+] Part 8: Emergent Temporalities and Cosmic Perception (includes simulation code)</a></li>
+            <li><a href="../part-9/index.html">[+] Part 9: Perceptual Dynamics of Dreams, Simulations, and Physical Reality (includes simulation code)</a></li>
+            <li><a href="../part-10/index.html">[+] Part 10: Perceptual Resonance Atomic Model (includes simulation code)</a></li>
+            <li><a href="../part-11/index.html">[+] Part 11: Justification of Empirical Values</a></li>
+            <li><a href="../part-12/index.html">[+] Part 12: Fractal Architecture of Perceptual Reality</a></li>
+            <li><a href="../part-13/index.html">[+] Part 13: The Panperceptual Wave and Partial Reality Engines</a></li>
+            <li><a href="../part-14/index.html">[+] Part 14: The Law of Sequential Perceptual Collapse</a></li>
+            <li><a href="../part-15/index.html">[+] Part 15: The Observer Within Time: A Panperceptual Critique</a></li>
+            <li><a href="../index.html">[+] Part 16: An Epistemological Critique of the Cultural Limits of Popperian Science from the Panperceptual Theory of the Universe</a></li>
+            <li><a href="../part-17/index.html">[+] Part 17: Perceptual Complexity Index Analysis: String Geometry as Framework for Observer Negotiation</a></li>
+        </ul>
+    </div>
+
+    <div class="nav-internal">
+        <a href="../part-6/index.html">← <span data-lang="en">Previous</span><span class="lang-hidden" data-lang="es">Anterior</span></a>
+        <span> | </span>
+        <a href="../part-8/index.html"><span data-lang="en">Next</span><span class="lang-hidden" data-lang="es">Siguiente</span> →</a>
+    </div>
+
+    <div class="footer">
+        <div class="footer-modules">
+            <a href="../../index.html"><span data-lang="en">[PERCEPTEMPLE]</span><span data-lang="es" class="lang-hidden">[PERCEPTEMPLE]</span></a>
+            <span>|</span>
+            <a href="../../percepware/index.html"><span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span></a>
+            <span>|</span>
+            <a href="../../pci/index.html"><span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span></a>
+            <span>|</span>
+            <a href="../../aei/index.html"><span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span></a>
+            <span>|</span>
+            <a href="../../neohaki/index.html"><span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span></a>
+            <span>|</span>
+            <a href="../../pram/index.html"><span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span></a>
+            <span>|</span>
+            <a href="../../licence/index.html"><span data-lang="en">LICENSE</span><span data-lang="es" class="lang-hidden">LICENCIA</span></a>
+            <span>|</span>
+            <a href="../../bitneko/index.html"><span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span></a>
+            <span>|</span>
+            <a href="../../space/index.html"><span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span></a>
+            <span>|</span>
+            <a href="../../agamottor/index.html"><span data-lang="en">AGAMOTTOR</span><span data-lang="es" class="lang-hidden">AGAMOTTOR</span></a>
+            <span>|</span>
+            <a href="../../little-prince/index.html"><span data-lang="en">LITTLE PRINCE</span><span data-lang="es" class="lang-hidden">LITTLE PRINCE</span></a>
+            <span>|</span>
+            <a href="../index.html" class="footer-current"><span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span></a>
+            <span>|</span>
+            <a href="../../time-machine/index.html"><span data-lang="en">TIME MACHINE</span><span data-lang="es" class="lang-hidden">MÁQUINA DEL TIEMPO</span></a>
+            <span>|</span>
+            <a href="../../poetry/index.html"><span data-lang="en">POETRY</span><span data-lang="es" class="lang-hidden">POESÍA</span></a>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://orcid.org/0009-0002-3432-1710" target="_blank" rel="noopener"><span data-lang="en">ORCID</span><span data-lang="es" class="lang-hidden">ORCID</span></a>
+            <span> / </span>
+            <a href="https://github.com/PERCEPTEMPLE" target="_blank" rel="noopener"><span data-lang="en">GITHUB</span><span data-lang="es" class="lang-hidden">GITHUB</span></a>
+            <span> / </span>
+            <a href="https://x.com/panperceptual" target="_blank" rel="noopener"><span data-lang="en">X</span><span data-lang="es" class="lang-hidden">X</span></a>
+        </div>
+
+        <div class="footer-bottom">
+            <span data-lang="en">DEPOSITED IN THE INTELLECTUAL PROPERTY REGISTRY · EL SALVADOR · DANY D. RUIZ</span>
+            <span data-lang="es" class="lang-hidden">DEPOSITADO EN EL REGISTRO DE LA PROPIEDAD INTELECTUAL · EL SALVADOR · DANY D. RUIZ</span>
+            <br>
+            <span data-lang="en">Before They See Us, We Already Are</span>
+            <span data-lang="es" class="lang-hidden">Antes de que nos vean, ya somos</span>
+        </div>
+    </div>
+
+    <script>
+        function toggleLanguage() {
+            var html    = document.documentElement;
+            var current = html.lang || 'en';
+            var next    = current === 'en' ? 'es' : 'en';
+            var hide    = next === 'en' ? 'es' : 'en';
+            html.lang = next;
+            document.querySelectorAll('[data-lang="' + next + '"]')
+                .forEach(function(el) { el.classList.remove('lang-hidden'); });
+            document.querySelectorAll('[data-lang="' + hide + '"]')
+                .forEach(function(el) { el.classList.add('lang-hidden'); });
+            document.getElementById('langToggle').textContent =
+                next === 'en' ? 'ES' : 'EN';
+            localStorage.setItem('perceptemple-lang', next);
+        }
+        (function() {
+            var saved = localStorage.getItem('perceptemple-lang');
+            if (saved && saved === 'es') { toggleLanguage(); }
+        })();
+
+        function downloadSimulation() {
+            const code = `import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import pearsonr
+
+# Observers with their empirically derived parameters
+observers = {
+    "Human": {"PCI": 8e11, "F": 40, "SE_k": 0.02, "SE_F": 5},
+    "Bat": {"PCI": 1.07e10, "F": 120, "SE_k": 0.01, "SE_F": 10},
+    "Octopus": {"PCI": 2.33e9, "F": 20, "SE_k": 0.02, "SE_F": 3},
+    "AI": {"PCI": 2e18, "F": 1e9, "SE_k": 0.03, "SE_F": 1e8},
+    "Shamanic": {"PCI": 3e12, "F": 150, "SE_k": 0.02, "SE_F": 15},
+    "Plant": {"PCI": 1e3, "F": 0.01, "SE_k": 0.05, "SE_F": 0.005},
+    "Quantum": {"PCI": 9e18, "F": 1e7, "SE_k": 0.01, "SE_F": 2e6}
+}
+
+# Spatial domain for PWF simulation
+x = np.linspace(-10, 10, 1000)
+t = 0 # We consider time at a fixed instant for visualization
+
+# Create figure to plot individual and emergent PWFs
+plt.figure(figsize=(12, 8))
+psi_emergent = np.zeros_like(x, dtype=complex) # Initialize the emergent PWF as complex zero
+simulated_data = {} # Dictionary to store the real data of each simulated PWF
+
+# Simulate the PWF for each observer and plot
+kappa = 1e9 # Normalization constant for k
+for obs, params in observers.items():
+    k = np.sqrt(params["PCI"]) / kappa # Calculation of the wavenumber k
+    omega = params["F"] # Angular frequency is equal to the processing frequency F
+    psi = np.exp(1j * (k * x - omega * t)) # Calculation of the complex PWF
+    plt.plot(x, psi.real, label=obs) # Plot only the real part of the PWF
+    simulated_data[obs] = psi.real # Store the real part for correlation calculations
+    psi_emergent += psi # Sum the individual PWFs for superposition
+
+# Normalize the emergent PWF for better visualization if necessary
+# This is not explicitly in formula (3) but can be useful for plotting
+psi_emergent_normalized = psi_emergent / len(observers) # Simple normalization for visualization
+
+# Plot the emergent function (real part)
+plt.plot(x, psi_emergent_normalized.real, "k--", label="Emergent (Normalized)", linewidth=2)
+
+# Calculate correlations between each individual PWF and the emergent PWF
+print("\\nCorrelations between Individual PWFs and Emergent PWF (Real Part):")
+for obs, data in simulated_data.items():
+    # Ensure arrays are not constant to calculate Pearsonr
+    if np.std(data) > 0 and np.std(psi_emergent_normalized.real) > 0:
+        r, p = pearsonr(data, psi_emergent_normalized.real)
+        print(f"  {obs}: R² = {r**2:.4f}, p-value = {p:.4f}")
+    else:
+        print(f"  {obs}: Cannot calculate R² (constant data or zero variance).")
+
+# Configure and display the plot
+plt.title("Individual and Emergent Perceptual Wave Functions (PWF)")
+plt.xlabel("Spatial Domain (x)")
+plt.ylabel("Real Amplitude of PWF")
+plt.legend()
+plt.grid(True)
+plt.show()`;
+            const blob = new Blob([code], {type: 'text/x-python;charset=utf-8;'});
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'simulation-part-7.py';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>

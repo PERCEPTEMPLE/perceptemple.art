@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../favicon.png" type="image/png">
+
+    <title>PERCEPTEMPLE</title>
+
+    <meta name="description" content="The Panperceptual Wave (PWF) reframes reality as locally collapsed by conscious resonance, not an external simulation. Part 13 of the PTU by Dany D. Ruiz.">
+    <meta name="author" content="Dany D. Ruiz">
+    <meta name="last-modified" content="2026-06-07">
+    <meta name="keywords" content="Panperceptual Theory of the Universe, PTU, Panperceptual Wave, PWF, Partial Reality Engines, Perceptual Collapse, Dany D. Ruiz">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://perceptemple.art/ptu/part-13/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="The Panperceptual Wave and Partial Reality Engines · PERCEPTEMPLE">
+    <meta property="og:description" content="The Panperceptual Wave (PWF) reframes reality as locally collapsed by conscious resonance, not an external simulation. Part 13 of the PTU by Dany D. Ruiz.">
+    <meta property="og:url" content="https://perceptemple.art/ptu/part-13/">
+    <meta property="og:site_name" content="PERCEPTEMPLE">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_SV">
+    <meta property="og:image" content="https://perceptemple.art/preview.jpg">
+    <meta property="og:image:alt" content="PERCEPTEMPLE — PTU Part 13">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@panperceptual">
+    <meta name="twitter:creator" content="@panperceptual">
+    <meta name="twitter:title" content="The Panperceptual Wave and Partial Reality Engines · PERCEPTEMPLE">
+    <meta name="twitter:description" content="The Panperceptual Wave (PWF) reframes reality as locally collapsed by conscious resonance, not an external simulation. Part 13 of the PTU by Dany D. Ruiz.">
+    <meta name="twitter:image" content="https://perceptemple.art/preview.jpg">
+    <meta name="citation_title" content="The Panperceptual Wave and Partial Reality Engines">
+    <meta name="citation_author" content="Ruiz, Dany D.">
+    <meta name="citation_publication_date" content="2025">
+    <meta name="citation_online_date" content="2025">
+    <meta name="citation_publisher" content="PERCEPTEMPLE">
+    <meta name="citation_language" content="en">
+    <meta name="DC.title" content="The Panperceptual Wave and Partial Reality Engines">
+    <meta name="DC.creator" content="Dany D. Ruiz">
+    <meta name="DC.publisher" content="PERCEPTEMPLE">
+    <meta name="DC.language" content="en">
+    <meta name="DC.rights" content="https://perceptemple.art/licence/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg:      #020805;
+            --panel:   #020805;
+            --rule:    #0a5c1e;
+            --hi:      #00ff41;
+            --hi2:     #39ff14;
+            --amber:   #ffb200;
+            --amber2:  #ffcc00;
+            --txt:     rgba(0,255,65,0.75);
+            --txt2:    rgba(0,255,65,0.9);
+            --txt3:    rgba(0,255,65,0.35);
+            --white:   #39ff14;
+            --red:     #ff2020;
+            --fs-xs: clamp(0.65rem, 1.2vw, 0.75rem);
+            --fs-sm: clamp(0.75rem, 1.4vw, 0.85rem);
+            --fs-md: clamp(0.8rem,  1.6vw, 1rem);
+            --fs-lg: clamp(1rem,    2vw,   1.25rem);
+            --fs-xl: clamp(1.25rem, 3vw,   1.75rem);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .lang-hidden {
+            display: none !important;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--txt2);
+            font-family: 'Share Tech Mono', monospace;
+            font-weight: 400;
+            font-size: var(--fs-sm);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeUp 0.4s ease both;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 3px,
+                rgba(0,0,0,0.06) 3px,
+                rgba(0,0,0,0.06) 6px
+            );
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0,255,65,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,255,65,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 9998;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        canvas {
+            max-width: 100%;
+        }
+
+        .bracket {
+            position: fixed;
+            color: rgba(0,255,65,0.15);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-lg);
+            pointer-events: none;
+            z-index: 10000;
+        }
+        .bracket-tl { top: 12px;    left: 16px;  }
+        .bracket-tr { top: 12px;    right: 16px; }
+        .bracket-bl { bottom: 12px; left: 16px;  }
+        .bracket-br { bottom: 12px; right: 16px; }
+
+        .pch-btn {
+            display: inline-block;
+            margin-top: 6px;
+            background: transparent;
+            border: 1px solid var(--red);
+            color: var(--red);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            text-decoration: none;
+            border-radius: 2px;
+            font-weight: 700;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        .pch-btn:hover {
+            background: rgba(255,32,32,0.06);
+            color: var(--red);
+        }
+
+        .translate-btn {
+            position: relative;
+            background: transparent;
+            border: 1px solid var(--amber);
+            color: var(--amber);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.375rem 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-radius: 2px;
+            font-weight: 600;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .translate-btn:hover {
+            background: rgba(255,178,0,0.08);
+            color: var(--amber2);
+            border-color: var(--amber2);
+        }
+
+        .header {
+            width: 100%;
+            max-width: 75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 3rem;
+            border-bottom: 1px solid var(--rule);
+            background: var(--bg);
+            position: relative;
+            z-index: 100;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .logo-mark {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-lg);
+            color: var(--hi);
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .nav-link:hover,
+        .nav-link.highlight {
+            color: var(--hi);
+        }
+
+        .section-label {
+            width: 100%;
+            max-width: 60rem;
+            padding: 0.8125rem 3rem;
+            border-bottom: 1px solid var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--amber);
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            font-weight: 600;
+        }
+        .section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--rule);
+            min-width: 20px;
+        }
+
+        .hero {
+            width: 100%;
+            max-width: 60rem;
+            padding: 4rem 3rem 3.5rem;
+            border-bottom: 1px solid var(--rule);
+            display: grid;
+            grid-template-columns: 1fr 18rem;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .hero-kicker {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 4px;
+            color: var(--txt3);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .hero-h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xl);
+            line-height: 1.2;
+            color: var(--hi);
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .hero-body {
+            font-size: var(--fs-sm);
+            color: var(--txt);
+            line-height: 1.8;
+            max-width: 65ch;
+            text-align: left;
+        }
+        .hero-body strong {
+            color: var(--txt2);
+        }
+
+        .hero-right {
+            display: flex;
+            flex-direction: column;
+            padding-top: 0.5rem;
+        }
+
+        .kv {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0.6875rem 1rem;
+            border-bottom: 1px solid var(--rule);
+            gap: 0.5rem;
+        }
+        .kv:first-child {
+            border-top: 1px solid var(--rule);
+        }
+        .kv-key {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .kv-val {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-md);
+            color: var(--hi);
+            font-weight: 700;
+            text-align: right;
+            word-break: break-word;
+        }
+        .kv-val.white {
+            color: var(--txt2);
+            font-size: var(--fs-sm);
+            font-family: 'Share Tech Mono', monospace;
+            font-weight: 400;
+        }
+        .kv-val.amber {
+            color: var(--amber);
+        }
+
+        .content-section {
+            width: 100%;
+            max-width: 60rem;
+            padding: 3rem;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .content-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-lg);
+            color: var(--amber);
+            margin-bottom: 0.625rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            word-break: break-word;
+            border-bottom: 1px solid var(--rule);
+            padding-bottom: 0.5rem;
+        }
+
+        .content-section h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-md);
+            color: var(--hi);
+            margin-top: 1.75rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .content-section h4 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            color: var(--amber);
+            margin-top: 1.125rem;
+            margin-bottom: 0.375rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .content-section p {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-sm);
+            color: var(--txt);
+            line-height: 1.9;
+            margin-bottom: 0.75rem;
+            word-break: break-word;
+            max-width: 70ch;
+            text-align: left;
+        }
+        .content-section p strong {
+            color: var(--txt2);
+        }
+
+        .content-section ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 1rem;
+        }
+        .content-section ul li {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-sm);
+            color: var(--txt);
+            line-height: 1.8;
+            padding-left: 0.875rem;
+            position: relative;
+            max-width: 70ch;
+            text-align: left;
+            word-break: break-word;
+        }
+        .content-section ul li::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            color: var(--hi);
+            font-weight: bold;
+        }
+
+        .content-section ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .content-section ol li {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-sm);
+            color: var(--txt);
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+            max-width: 70ch;
+            text-align: left;
+            word-break: break-word;
+        }
+
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 0.75rem 0 1.125rem;
+        }
+
+        .pw-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-xs);
+        }
+        .pw-table th {
+            text-align: left;
+            padding: 0.5rem 0.625rem;
+            background: var(--bg);
+            border-bottom: 1px solid var(--rule);
+            font-size: var(--fs-xs);
+            color: var(--amber);
+        }
+        .pw-table td {
+            padding: 0.5rem 0.625rem;
+            color: var(--txt);
+            border-bottom: 1px solid var(--rule);
+            line-height: 1.5;
+            vertical-align: top;
+            word-break: break-word;
+            text-align: left;
+        }
+        .pw-table .dim {
+            color: var(--txt2);
+            font-weight: 600;
+        }
+
+        .code-block {
+            padding: 1.25rem 1.5rem;
+            background: rgba(0,255,65,0.02);
+            border: 1px solid var(--rule);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-xs);
+            color: var(--hi);
+            line-height: 1.6;
+            margin: 1rem 0;
+            border-radius: 2px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+            text-align: left;
+        }
+
+        .quote-block {
+            padding: 1rem 1.25rem;
+            background: rgba(0,255,65,0.03);
+            border-left: 2px solid var(--hi);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: var(--fs-sm);
+            color: var(--hi);
+            line-height: 1.8;
+            margin: 1rem 0;
+            border-radius: 0 2px 2px 0;
+            font-weight: 400;
+            word-break: break-word;
+            text-align: left;
+        }
+
+        .article-index {
+            list-style: none;
+            padding-left: 0;
+        }
+        .article-index li {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-sm);
+            color: var(--txt);
+            line-height: 1.8;
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.25rem;
+            text-align: left;
+            word-break: break-word;
+        }
+        .article-index li::before {
+            content: '[+]';
+            position: absolute;
+            left: 0;
+            color: var(--amber);
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+        }
+        .article-index li a {
+            color: var(--txt2);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .article-index li a:hover {
+            color: var(--amber);
+        }
+
+        .nav-internal {
+            text-align: center;
+            padding: 2rem 3rem;
+            border-bottom: 1px solid var(--rule);
+        }
+        .nav-internal a {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            color: var(--amber);
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.2s;
+        }
+        .nav-internal a:hover {
+            color: var(--hi);
+        }
+        .nav-internal span {
+            color: var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+        }
+
+        .footer {
+            width: 100%;
+            max-width: 60rem;
+            padding: 1.625rem 3rem;
+            border-top: 1px solid var(--rule);
+            position: relative;
+            z-index: 50;
+        }
+
+        .footer-modules {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 0.875rem;
+        }
+        .footer-modules a {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            color: var(--txt3);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+            white-space: nowrap;
+            text-transform: uppercase;
+        }
+        .footer-modules a:hover,
+        .footer-modules a.footer-current {
+            color: var(--hi);
+        }
+        .footer-modules span {
+            color: var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+        }
+
+        .footer-social {
+            text-align: center;
+            margin-bottom: 0.875rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-xs);
+            color: var(--amber);
+        }
+        .footer-social a {
+            color: var(--amber);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-social a:hover {
+            color: var(--hi);
+        }
+        .footer-social span {
+            color: var(--rule);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: var(--fs-xs);
+            color: rgba(0,255,65,0.25);
+            line-height: 1.8;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0);    }
+        }
+
+        @media (max-width: 1024px) {
+            .header { gap: 0.75rem; }
+            .hero { gap: 1.5rem; }
+            .nav-link { font-size: var(--fs-xs); }
+            .section-label { font-size: var(--fs-xs); }
+            .footer-modules a { font-size: var(--fs-xs); }
+            .footer-social { font-size: var(--fs-xs); }
+            .footer-bottom { font-size: var(--fs-xs); }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 1rem 1.5rem;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .header-nav {
+                width: 100%;
+                gap: 1rem;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 4px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+            .header-nav::-webkit-scrollbar { display: none; }
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 2.5rem 1.5rem 2.25rem;
+                gap: 1.5rem;
+            }
+            .hero-body { max-width: 100%; }
+            .content-section { padding: 2rem 1.5rem; }
+            .section-label { padding: 0.8125rem 1.5rem; }
+            .footer { padding: 1.25rem 1.5rem; }
+            .bracket { font-size: 0.9rem; }
+            [class*="grid"],
+            [class*="cols"],
+            [class*="columns"] {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header { padding: 0.75rem 1rem; }
+            .hero { padding: 1.75rem 1rem 1.5rem; }
+            .content-section { padding: 1.5rem 1rem; }
+            .footer { padding: 1rem; }
+            .footer-modules { gap: 0.75rem; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0002-3432-1710",
+      "name": "Dany D. Ruiz",
+      "alternateName": "panperceptual",
+      "jobTitle": "Anartist · Independent Researcher",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "url": "https://perceptemple.art",
+      "sameAs": [
+        "https://orcid.org/0009-0002-3432-1710",
+        "https://x.com/panperceptual",
+        "https://github.com/PERCEPTEMPLE",
+        "https://doi.org/10.17605/OSF.IO/FVCAX",
+        "https://doi.org/10.5281/zenodo.17683631",
+        "https://doi.org/10.2139/ssrn.5794102"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "headline": "The Panperceptual Wave and Partial Reality Engines",
+      "description": "The Panperceptual Wave (PWF) reframes reality as locally collapsed by conscious resonance, not an external simulation. Part 13 of the PTU by Dany D. Ruiz.",
+      "datePublished": "2026-06-07",
+      "dateModified": "2026-06-07",
+      "inLanguage": "en",
+      "url": "https://perceptemple.art/ptu/part-13/",
+      "author": {
+        "@type": "Person",
+        "@id": "https://orcid.org/0009-0002-3432-1710",
+        "name": "Dany D. Ruiz"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "isPartOf": {
+        "@type": "Book",
+        "name": "Panperceptual Theory of the Universe",
+        "url": "https://perceptemple.art/ptu/"
+      },
+      "license": "https://perceptemple.art/licence/",
+      "sameAs": [
+        "https://doi.org/10.17605/OSF.IO/UXEGH",
+        "https://doi.org/10.5281/zenodo.19168519",
+        "https://doi.org/10.2139/ssrn.6456099"
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <span class="bracket bracket-tl">[</span>
+    <span class="bracket bracket-tr">]</span>
+    <span class="bracket bracket-bl">[</span>
+    <span class="bracket bracket-br">]</span>
+
+    <div class="header">
+        <div class="logo">
+            <span class="logo-mark lang-hidden" data-lang="es">PERCEPTEMPLE</span>
+            <span class="logo-mark" data-lang="en">PERCEPTEMPLE</span>
+            <br>
+            <a class="pch-btn" href="../../index.html">
+                <span class="lang-hidden" data-lang="es">PRUEBA DE CONCIENCIA HUMANA</span>
+                <span data-lang="en">HUMAN CONSCIOUSNESS TEST</span>
+            </a>
+        </div>
+        <nav class="header-nav">
+            <a class="nav-link" href="../../percepware/index.html"><span class="lang-hidden" data-lang="es">PercepWare</span><span data-lang="en">PercepWare</span></a>
+            <a class="nav-link" href="../../pci/index.html"><span class="lang-hidden" data-lang="es">PCI</span><span data-lang="en">PCI</span></a>
+            <a class="nav-link" href="../../aei/index.html"><span class="lang-hidden" data-lang="es">AEI</span><span data-lang="en">AEI</span></a>
+            <a class="nav-link" href="../../neohaki/index.html"><span class="lang-hidden" data-lang="es">NEOHAKI</span><span data-lang="en">NEOHAKI</span></a>
+            <a class="nav-link" href="../../pram/index.html"><span class="lang-hidden" data-lang="es">PRAM</span><span data-lang="en">PRAM</span></a>
+            <a class="nav-link" href="../../licence/index.html"><span class="lang-hidden" data-lang="es">LICENCIA</span><span data-lang="en">LICENSE</span></a>
+            <a class="nav-link" href="../../bitneko/index.html"><span class="lang-hidden" data-lang="es">BITNEKO</span><span data-lang="en">BITNEKO</span></a>
+            <a class="nav-link" href="../../space/index.html"><span class="lang-hidden" data-lang="es">SPACE</span><span data-lang="en">SPACE</span></a>
+            <a class="nav-link" href="../../agamottor/index.html"><span class="lang-hidden" data-lang="es">AGAMOTTOR</span><span data-lang="en">AGAMOTTOR</span></a>
+            <a class="nav-link" href="../../little-prince/index.html"><span class="lang-hidden" data-lang="es">LITTLE PRINCE</span><span data-lang="en">LITTLE PRINCE</span></a>
+            <a class="nav-link highlight" href="../index.html"><span class="lang-hidden" data-lang="es">PTU</span><span data-lang="en">PTU</span></a>
+            <a class="nav-link" href="../../time-machine/index.html"><span class="lang-hidden" data-lang="es">MÁQUINA DEL TIEMPO</span><span data-lang="en">TIME MACHINE</span></a>
+            <a class="nav-link" href="../../poetry/index.html"><span class="lang-hidden" data-lang="es">POESÍA</span><span data-lang="en">POETRY</span></a>
+            <button class="translate-btn" id="langToggle" onclick="toggleLanguage()">ES</button>
+        </nav>
+    </div>
+
+    <div class="section-label">
+        <span class="lang-hidden" data-lang="es">TRATADO PANPERCEPTUAL · PARTE 13</span>
+        <span data-lang="en">PANPERCEPTUAL TREATISE · PART 13</span>
+    </div>
+
+    <div class="hero">
+        <div class="hero-left">
+            <div class="hero-kicker lang-hidden" data-lang="es">LA ONDA PANPERCEPTUAL Y LOS MOTORES DE REALIDAD PARCIAL</div>
+            <div class="hero-kicker" data-lang="en">THE PANPERCEPTUAL WAVE AND PARTIAL REALITY ENGINES</div>
+            <h1 class="hero-h1">
+                <span class="lang-hidden" data-lang="es">La Onda Panperceptual y los Motores de Realidad Parcial</span>
+                <span data-lang="en">The Panperceptual Wave and Partial Reality Engines</span>
+            </h1>
+            <div class="hero-body">
+                <p class="lang-hidden" data-lang="es"><strong>Fecha:</strong> Junio 2025</p>
+                <p data-lang="en"><strong>Date:</strong> June 2025</p>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="kv">
+                <span class="kv-key lang-hidden" data-lang="es">AUTOR</span>
+                <span class="kv-key" data-lang="en">AUTHOR</span>
+                <span class="kv-val white">Dany D. Ruiz</span>
+            </div>
+            <div class="kv">
+                <span class="kv-key lang-hidden" data-lang="es">MÓDULO</span>
+                <span class="kv-key" data-lang="en">MODULE</span>
+                <span class="kv-val amber">
+                    <span class="lang-hidden" data-lang="es">PTU · PARTE 13</span>
+                    <span data-lang="en">PTU · PART 13</span>
+                </span>
+            </div>
+            <div class="kv">
+                <span class="kv-key lang-hidden" data-lang="es">SERIE</span>
+                <span class="kv-key" data-lang="en">SERIES</span>
+                <span class="kv-val white">
+                    <span class="lang-hidden" data-lang="es">17 PARTES</span>
+                    <span data-lang="en">17 PARTS</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="lang-hidden" data-lang="es">Introducción</h2>
+        <h2 data-lang="en">Introduction</h2>
+        <p class="lang-hidden" data-lang="es">La Onda Panperceptual (PWF), el núcleo dinámico de la Teoría Panperceptual del Universo (PTU), no debe entenderse como una onda física tradicional. No viaja a través de un medio, ni responde a una sola fuente, sino que representa el patrón resonante mediante el cual una porción del universo colapsa en una forma perceptible, según las capacidades y los marcos del observador.</p>
+        <p data-lang="en">The Panperceptual Wave (PWF), the dynamic core of the Panperceptual Theory of the Universe (PTU), should not be understood as a traditional physical wave. It does not travel through a medium, nor does it respond to a single source, but rather represents the resonant pattern through which a portion of the universe collapses into a perceivable form, according to the observer's capabilities and frameworks.</p>
+        <p class="lang-hidden" data-lang="es">Este principio encuentra una poderosa metáfora técnica en los videojuegos de la era N64/PS1, donde los mundos virtuales no existían completamente cargados desde el inicio, sino que se renderizaban en tiempo real alrededor del jugador. Esta técnica, motivada por limitaciones de hardware, refleja involuntariamente una profunda verdad perceptual: <strong>la realidad no necesita estar 'toda ahí' si no va a ser percibida</strong>.</p>
+        <p data-lang="en">This principle finds a powerful technical metaphor in the video games of the N64/PS1 era, where virtual worlds did not exist fully loaded from the start but were rendered in real-time around the player. This technique, motivated by hardware limitations, unintentionally reflects a profound perceptual truth: <strong>reality does not need to be 'all there' if it is not going to be perceived</strong>.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 class="lang-hidden" data-lang="es">Renderizado Local como Colapso Perceptual</h2>
+        <h2 data-lang="en">Local Rendering as Perceptual Collapse</h2>
+        <p class="lang-hidden" data-lang="es">En los videojuegos de tercera generación (Nintendo 64, PlayStation 1, Sega Saturn), los desarrolladores implementaron técnicas como:</p>
+        <p data-lang="en">In third-generation video games (Nintendo 64, PlayStation 1, Sega Saturn), developers implemented techniques such as:</p>
+        <ul>
+            <li class="lang-hidden" data-lang="es"><strong>Culling</strong>: no renderizar lo que no está en el campo de visión del jugador.</li>
+            <li data-lang="en"><strong>Culling</strong>: not rendering what is not in the player's field of view.</li>
+            <li class="lang-hidden" data-lang="es"><strong>Niebla</strong>: difuminar áreas distantes para ocultar que no están completamente construidas.</li>
+            <li data-lang="en"><strong>Fog</strong>: blurring distant areas to hide that they are not fully constructed.</li>
+            <li class="lang-hidden" data-lang="es"><strong>Transmisión de Niveles</strong>: el entorno se carga progresivamente a medida que el jugador avanza.</li>
+            <li data-lang="en"><strong>Level Streaming</strong>: the environment is loaded progressively as the player advances.</li>
+        </ul>
+        <p class="lang-hidden" data-lang="es">Estas estrategias técnicas no solo optimizaban recursos sino que también <strong>emulaban involuntariamente el principio de la Onda Panperceptual</strong>: el mundo emerge en función de la mirada. Lo que no se observa permanece en un estado potencial o simplemente es ignorado por el sistema.</p>
+        <p data-lang="en">These technical strategies not only optimized resources but also unintentionally <strong>emulated the principle of the Panperceptual Wave</strong>: the world emerges as a function of the gaze. What is not observed remains in a potential state or is simply ignored by the system.</p>
+        <p class="lang-hidden" data-lang="es">Esto se asemeja a cómo, en la PTU, la realidad no existe como una totalidad objetiva, sino como una malla de posibilidades colapsadas localmente por la percepción consciente.</p>
+        <p data-lang="en">This parallels how, in the PTU, reality does not exist as an objective totality, but as a mesh of possibilities locally collapsed by conscious perception.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 class="lang-hidden" data-lang="es">La Velocidad de la Luz como Límite de Resonancia</h2>
+        <h2 data-lang="en">The Speed of Light as a Resonance Limit</h2>
+        <p class="lang-hidden" data-lang="es">En este marco, la velocidad de la luz deja de ser una constante física aislada y se entiende en su lugar como un <strong>límite de sincronización entre percepción y fenómeno</strong>. Lo que no puede ser percibido dentro del ritmo resonante de la luz aún no se manifiesta. La realidad, entonces, no es un bloque fijo sino una <strong>estructura actualizable</strong>, como los mapas en los videojuegos: solo aparecen cuando la mirada los convoca.</p>
+        <p data-lang="en">In this framework, the speed of light ceases to be an isolated physical constant and is instead understood as a <strong>limit of synchronization between perception and phenomenon</strong>. What cannot be perceived within the resonant rhythm of light does not yet manifest. Reality, then, is not a fixed block but an <strong>updatable structure</strong>, like maps in video games: they only appear when the gaze summons them.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 class="lang-hidden" data-lang="es">¿Vivimos en una Simulación? Una Trampa Epistemológica</h2>
+        <h2 data-lang="en">Are We Living in a Simulation? An Epistemological Trap</h2>
+        <p class="lang-hidden" data-lang="es">La coincidencia entre el funcionamiento técnico de ciertos videojuegos y la experiencia cotidiana de la realidad ha llevado a muchas personas a argumentar que "vivimos en una simulación". Aunque esta hipótesis nace de una intuición válida —la experiencia de una realidad que parece actualizarse según la observación— es epistemológicamente una trampa. ¿Por qué?</p>
+        <p data-lang="en">The coincidence between the technical functioning of certain video games and the everyday experience of reality has led many people to argue that "we live in a simulation." Although this hypothesis is born from a valid intuition—the experience of a reality that seems to update according to observation—it is epistemologically a trap. Why?</p>
+        <ol>
+            <li class="lang-hidden" data-lang="es"><strong>Asume un programador externo</strong>: La noción de simulación implica una entidad "fuera" del universo que la diseñó, lo que nos sitúa en una posición pasiva y secundaria. Resucita el viejo teísmo disfrazado de tecnología.</li>
+            <li data-lang="en"><strong>It assumes an external programmer</strong>: The notion of a simulation implies an entity "outside" the universe that designed it, which places us in a passive and secondary position. It brings back old theism disguised as technology.</li>
+            <li class="lang-hidden" data-lang="es"><strong>Confunde metáfora con estructura</strong>: Que algo funcione <em>como si</em> fuera una simulación no significa que lo sea. Es una proyección antropotécnica basada en nuestras herramientas actuales, no una verdad última.</li>
+            <li data-lang="en"><strong>It confuses metaphor with structure</strong>: That something functions <em>as if</em> it were a simulation does not mean that it is. It is an anthropotechnical projection based on our current tools, not an ultimate truth.</li>
+            <li class="lang-hidden" data-lang="es"><strong>Reduce la conciencia a un error o una ilusión</strong>: En muchas versiones de la teoría de la simulación, la conciencia es vista como un efecto secundario, no como el eje central. Esto contradice radicalmente el modelo panperceptual, donde la conciencia es el mismísimo generador del colapso de lo real.</li>
+            <li data-lang="en"><strong>It reduces consciousness to a bug or an illusion</strong>: In many versions of the simulation theory, consciousness is seen as a side effect, not as the central axis. This radically contradicts the panperceptual model, where consciousness is the very generator of the collapse of the real.</li>
+            <li class="lang-hidden" data-lang="es"><strong>Cero falsabilidad</strong>: La hipótesis de la simulación no puede ser probada ni refutada definitivamente. Cualquier refutación puede ser absorbida como "parte del código". Esto la hace epistemológicamente estéril.</li>
+            <li data-lang="en"><strong>Zero falsifiability</strong>: The simulation hypothesis cannot be definitively proven or refuted. Any refutation can be absorbed as "part of the code." This makes it epistemologically sterile.</li>
+        </ol>
+    </div>
+
+    <div class="content-section">
+        <h2 class="lang-hidden" data-lang="es">Comparación de Enfoques</h2>
+        <h2 data-lang="en">Comparison of Approaches</h2>
+        <div class="table-wrapper">
+            <table class="pw-table">
+                <thead>
+                    <tr><th class="lang-hidden" data-lang="es">Enfoque</th><th data-lang="en">Approach</th><th class="lang-hidden" data-lang="es">Simulación Tradicional</th><th data-lang="en">Traditional Simulation</th><th class="lang-hidden" data-lang="es">Panpercepción Resonante</th><th data-lang="en">Resonant Panperception</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td class="dim lang-hidden" data-lang="es">Fuente de la realidad</td><td class="dim" data-lang="en">Source of reality</td><td class="lang-hidden" data-lang="es">Programador externo</td><td data-lang="en">External programmer</td><td class="lang-hidden" data-lang="es">Observador resonante</td><td data-lang="en">Resonant observer</td></tr>
+                    <tr><td class="dim lang-hidden" data-lang="es">Rol de la conciencia</td><td class="dim" data-lang="en">Role of consciousness</td><td class="lang-hidden" data-lang="es">Irrelevante o subproducto local</td><td data-lang="en">Irrelevant or local byproduct</td><td class="lang-hidden" data-lang="es">Núcleo generador de la existencia</td><td data-lang="en">Generating core of existence</td></tr>
+                    <tr><td class="dim lang-hidden" data-lang="es">Naturaleza de lo no visto</td><td class="dim" data-lang="en">Nature of the unseen</td><td class="lang-hidden" data-lang="es">Predefinido pero oculto</td><td data-lang="en">Predefined but hidden</td><td class="lang-hidden" data-lang="es">Potencialidad aún no colapsada</td><td data-lang="en">Potentiality not yet collapsed</td></tr>
+                    <tr><td class="dim lang-hidden" data-lang="es">Validación epistémica</td><td class="dim" data-lang="en">Epistemic validation</td><td class="lang-hidden" data-lang="es">Circular y no falsable</td><td data-lang="en">Circular and non-falsifiable</td><td class="lang-hidden" data-lang="es">Emergente de la experiencia perceptual</td><td data-lang="en">Emerging from perceptual experience</td></tr>
+                    <tr><td class="dim lang-hidden" data-lang="es">Poder del observador</td><td class="dim" data-lang="en">Power of the observer</td><td class="lang-hidden" data-lang="es">Limitado por el diseño externo</td><td data-lang="en">Limited by external design</td><td class="lang-hidden" data-lang="es">Capaz de generar realidad localmente</td><td data-lang="en">Capable of generating reality locally</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="lang-hidden" data-lang="es">Conclusión</h2>
+        <h2 data-lang="en">Conclusion</h2>
+        <p class="lang-hidden" data-lang="es">El universo no necesita estar completamente desplegado todo el tiempo. Lo que no se observa permanece en un estado de potencialidad. Esta lógica, observable tanto en los videojuegos antiguos como en la percepción cotidiana, apunta a una estructura de la realidad que no es fija, ni digital, ni completamente programada, sino <strong>resonante, contextual y co-creada</strong>.</p>
+        <p data-lang="en">The universe does not need to be fully deployed all the time. What is not observed remains in a state of potentiality. This logic, observable both in old video games and in everyday perception, points to a structure of reality that is not fixed, nor digital, nor completely programmed, but <strong>resonant, contextual, and co-created</strong>.</p>
+        <p class="lang-hidden" data-lang="es">No estamos atrapados en una simulación. Estamos participando activamente en el renderizado perceptual del mundo.</p>
+        <p data-lang="en">We are not trapped in a simulation. We are actively participating in the perceptual rendering of the world.</p>
+        <p class="lang-hidden" data-lang="es">La Onda Panperceptual no sugiere que el universo se "cargue" como un software. Lo que propone es que el universo <strong>es convocado, actualizado y colapsado por cada nodo de conciencia capaz de resonarlo</strong>.</p>
+        <p data-lang="en">The Panperceptual Wave does not suggest that the universe is "loaded" like software. What it proposes is that the universe <strong>is summoned, updated, and collapsed by each node of consciousness capable of resonating it.</strong></p>
+        
+        <div class="quote-block">
+            <p class="lang-hidden" data-lang="es">"Lo que no es percibido no es falso.<br>Es pura potencialidad esperando resonancia."</p>
+            <p data-lang="en">"What is not perceived is not false.<br>It is pure potential awaiting resonance."</p>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="lang-hidden" data-lang="es">» Artículos en esta sección</h2>
+        <h2 data-lang="en">» Articles in this Section</h2>
+
+        <p class="lang-hidden" data-lang="es">A continuación, la serie completa de artículos que componen la Teoría Panperceptual del Universo.</p>
+        <p data-lang="en">Below is the complete series of articles that make up the Panperceptual Theory of the Universe.</p>
+
+        <ul class="article-index">
+            <li><a href="../../ptu/part-1/index.html">[+] Part 1: Historical Evolution of Observation and Perception</a></li>
+            <li><a href="../../ptu/part-2/index.html">[+] Part 2: Toward a New Revolution in Perception</a></li>
+            <li><a href="../../ptu/part-3/index.html">[+] Part 3: Panperceptualism of the Universe</a></li>
+            <li><a href="../../ptu/part-4/index.html">[+] Part 4: A Revolutionary Framework for Understanding Reality</a></li>
+            <li><a href="../../ptu/part-5/index.html">[+] Part 5: Redefining Perception and Reality: A Mathematical Proposal</a></li>
+            <li><a href="../../ptu/part-6/index.html">[+] Part 6: Towards an Interdisciplinary Synthesis of Perception and Reality</a></li>
+            <li><a href="../../ptu/part-7/index.html">[+] Part 7: Weaving Realities: Perceptual Interactions and Relational Ontology (includes simulation code)</a></li>
+            <li><a href="../../ptu/part-8/index.html">[+] Part 8: Emergent Temporalities and Cosmic Perception (includes simulation code)</a></li>
+            <li><a href="../../ptu/part-9/index.html">[+] Part 9: Perceptual Dynamics of Dreams, Simulations, and Physical Reality (includes simulation code)</a></li>
+            <li><a href="../../ptu/part-10/index.html">[+] Part 10: Perceptual Resonance Atomic Model (includes simulation code)</a></li>
+            <li><a href="../../ptu/part-11/index.html">[+] Part 11: Justification of Empirical Values</a></li>
+            <li><a href="../../ptu/part-12/index.html">[+] Part 12: Fractal Architecture of Perceptual Reality</a></li>
+            <li><a href="../../ptu/part-13/index.html">[+] Part 13: The Panperceptual Wave and Partial Reality Engines</a></li>
+            <li><a href="../../ptu/part-14/index.html">[+] Part 14: The Law of Sequential Perceptual Collapse</a></li>
+            <li><a href="../../ptu/part-15/index.html">[+] Part 15: The Observer Within Time: A Panperceptual Critique</a></li>
+            <li><a href="../../ptu/index.html">[+] Part 16: An Epistemological Critique of the Cultural Limits of Popperian Science from the Panperceptual Theory of the Universe</a></li>
+            <li><a href="../../ptu/part-17/index.html">[+] Part 17: Perceptual Complexity Index Analysis: String Geometry as Framework for Observer Negotiation</a></li>
+        </ul>
+    </div>
+
+    <div class="nav-internal">
+        <a href="../part-12/index.html">← <span class="lang-hidden" data-lang="es">Anterior</span><span data-lang="en">Previous</span></a>
+        <span> | </span>
+        <a href="../part-14/index.html"><span data-lang="en">Next</span><span class="lang-hidden" data-lang="es">Siguiente</span> →</a>
+    </div>
+
+    <div class="footer">
+        <div class="footer-modules">
+            <a href="../../index.html"><span class="lang-hidden" data-lang="es">[PERCEPTEMPLE]</span><span data-lang="en">[PERCEPTEMPLE]</span></a>
+            <span>|</span>
+            <a href="../../percepware/index.html"><span class="lang-hidden" data-lang="es">PercepWare</span><span data-lang="en">PercepWare</span></a>
+            <span>|</span>
+            <a href="../../pci/index.html"><span class="lang-hidden" data-lang="es">PCI</span><span data-lang="en">PCI</span></a>
+            <span>|</span>
+            <a href="../../aei/index.html"><span class="lang-hidden" data-lang="es">AEI</span><span data-lang="en">AEI</span></a>
+            <span>|</span>
+            <a href="../../neohaki/index.html"><span class="lang-hidden" data-lang="es">NEOHAKI</span><span data-lang="en">NEOHAKI</span></a>
+            <span>|</span>
+            <a href="../../pram/index.html"><span class="lang-hidden" data-lang="es">PRAM</span><span data-lang="en">PRAM</span></a>
+            <span>|</span>
+            <a href="../../licence/index.html"><span class="lang-hidden" data-lang="es">LICENCIA</span><span data-lang="en">LICENSE</span></a>
+            <span>|</span>
+            <a href="../../bitneko/index.html"><span class="lang-hidden" data-lang="es">BITNEKO</span><span data-lang="en">BITNEKO</span></a>
+            <span>|</span>
+            <a href="../../space/index.html"><span class="lang-hidden" data-lang="es">SPACE</span><span data-lang="en">SPACE</span></a>
+            <span>|</span>
+            <a href="../../agamottor/index.html"><span class="lang-hidden" data-lang="es">AGAMOTTOR</span><span data-lang="en">AGAMOTTOR</span></a>
+            <span>|</span>
+            <a href="../../little-prince/index.html"><span class="lang-hidden" data-lang="es">LITTLE PRINCE</span><span data-lang="en">LITTLE PRINCE</span></a>
+            <span>|</span>
+            <a href="../index.html" class="footer-current"><span class="lang-hidden" data-lang="es">PTU</span><span data-lang="en">PTU</span></a>
+            <span>|</span>
+            <a href="../../time-machine/index.html"><span class="lang-hidden" data-lang="es">MÁQUINA DEL TIEMPO</span><span data-lang="en">TIME MACHINE</span></a>
+            <span>|</span>
+            <a href="../../poetry/index.html"><span class="lang-hidden" data-lang="es">POESÍA</span><span data-lang="en">POETRY</span></a>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://orcid.org/0009-0002-3432-1710" target="_blank" rel="noopener"><span class="lang-hidden" data-lang="es">ORCID</span><span data-lang="en">ORCID</span></a>
+            <span> / </span>
+            <a href="https://github.com/PERCEPTEMPLE" target="_blank" rel="noopener"><span class="lang-hidden" data-lang="es">GITHUB</span><span data-lang="en">GITHUB</span></a>
+            <span> / </span>
+            <a href="https://x.com/panperceptual" target="_blank" rel="noopener"><span class="lang-hidden" data-lang="es">X</span><span data-lang="en">X</span></a>
+        </div>
+
+        <div class="footer-bottom">
+            <span class="lang-hidden" data-lang="es">DEPOSITADO EN EL REGISTRO DE LA PROPIEDAD INTELECTUAL · EL SALVADOR · DANY D. RUIZ</span>
+            <span data-lang="en">DEPOSITED IN THE INTELLECTUAL PROPERTY REGISTRY · EL SALVADOR · DANY D. RUIZ</span>
+            <br>
+            <span class="lang-hidden" data-lang="es">Antes de que nos vean, ya somos</span>
+            <span data-lang="en">Before They See Us, We Already Are</span>
+        </div>
+    </div>
+
+    <script>
+        function toggleLanguage() {
+            var html    = document.documentElement;
+            var current = html.lang || 'en';
+            var next    = current === 'en' ? 'es' : 'en';
+            var hide    = next === 'en' ? 'es' : 'en';
+            html.lang = next;
+            document.querySelectorAll('[data-lang="' + next + '"]')
+                .forEach(function(el) { el.classList.remove('lang-hidden'); });
+            document.querySelectorAll('[data-lang="' + hide + '"]')
+                .forEach(function(el) { el.classList.add('lang-hidden'); });
+            document.getElementById('langToggle').textContent =
+                next === 'en' ? 'ES' : 'EN';
+            localStorage.setItem('perceptemple-lang', next);
+        }
+        (function() {
+            var saved = localStorage.getItem('perceptemple-lang');
+            if (saved && saved === 'es') { toggleLanguage(); }
+        })();
+    </script>
+</body>
+</html>

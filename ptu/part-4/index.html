@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../favicon.png" type="image/png">
+
+    <title>PERCEPTEMPLE</title>
+
+    <meta name="description" content="Panperceptual Theory of the Universe Part 4: a revolutionary framework positing perception as an active process that fundamentally shapes reality, by Dany D. Ruiz.">
+    <meta name="author" content="Dany D. Ruiz">
+    <meta name="last-modified" content="2026-06-07">
+    <meta name="keywords" content="Panperceptual Theory of the Universe, PTU, Perceptual Wave Function, PWF, Perceptual Complexity Index, PCI, Perceptual Relativity, Dany D. Ruiz">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://perceptemple.art/ptu/part-4/">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Panperceptual Theory of the Universe: A Revolutionary Framework for Understanding Reality · PERCEPTEMPLE">
+    <meta property="og:description" content="Panperceptual Theory of the Universe Part 4: a revolutionary framework positing perception as an active process that fundamentally shapes reality, by Dany D. Ruiz.">
+    <meta property="og:url" content="https://perceptemple.art/ptu/part-4/">
+    <meta property="og:site_name" content="PERCEPTEMPLE">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_SV">
+    <meta property="og:image" content="https://perceptemple.art/preview.jpg">
+    <meta property="og:image:alt" content="PERCEPTEMPLE — PTU Part 4">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@panperceptual">
+    <meta name="twitter:creator" content="@panperceptual">
+    <meta name="twitter:title" content="Panperceptual Theory of the Universe: A Revolutionary Framework for Understanding Reality · PERCEPTEMPLE">
+    <meta name="twitter:description" content="Panperceptual Theory of the Universe Part 4: a revolutionary framework positing perception as an active process that fundamentally shapes reality, by Dany D. Ruiz.">
+    <meta name="twitter:image" content="https://perceptemple.art/preview.jpg">
+
+    <meta name="citation_title" content="Panperceptual Theory of the Universe: A Revolutionary Framework for Understanding Reality">
+    <meta name="citation_author" content="Ruiz, Dany D.">
+    <meta name="citation_publication_date" content="2025">
+    <meta name="citation_online_date" content="2025">
+    <meta name="citation_publisher" content="PERCEPTEMPLE">
+    <meta name="citation_language" content="en">
+    <meta name="DC.title" content="Panperceptual Theory of the Universe: A Revolutionary Framework for Understanding Reality">
+    <meta name="DC.creator" content="Dany D. Ruiz">
+    <meta name="DC.publisher" content="PERCEPTEMPLE">
+    <meta name="DC.language" content="en">
+    <meta name="DC.rights" content="https://perceptemple.art/licence/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg:      #020805;
+            --panel:   #020805;
+            --rule:    #0a5c1e;
+            --hi:      #00ff41;
+            --hi2:     #39ff14;
+            --amber:   #ffb200;
+            --amber2:  #ffcc00;
+            --txt:     rgba(0,255,65,0.75);
+            --txt2:    rgba(0,255,65,0.9);
+            --txt3:    rgba(0,255,65,0.35);
+            --white:   #39ff14;
+            --red:     #ff2020;
+            --fs-xs: clamp(0.65rem, 1.2vw, 0.75rem);
+            --fs-sm: clamp(0.75rem, 1.4vw, 0.85rem);
+            --fs-md: clamp(0.8rem,  1.6vw, 1rem);
+            --fs-lg: clamp(1rem,    2vw,   1.25rem);
+            --fs-xl: clamp(1.25rem, 3vw,   1.75rem);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .lang-hidden {
+            display: none !important;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--txt2);
+            font-family: 'Share Tech Mono', monospace;
+            font-weight: 400;
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeUp 0.4s ease both;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 3px,
+                rgba(0,0,0,0.06) 3px,
+                rgba(0,0,0,0.06) 6px
+            );
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0,255,65,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,255,65,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 9998;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        canvas {
+            max-width: 100%;
+        }
+
+        .bracket {
+            position: fixed;
+            color: rgba(0,255,65,0.15);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-lg);
+            pointer-events: none;
+            z-index: 10000;
+        }
+        .bracket-tl { top: 12px;    left: 16px;  }
+        .bracket-tr { top: 12px;    right: 16px; }
+        .bracket-bl { bottom: 12px; left: 16px;  }
+        .bracket-br { bottom: 12px; right: 16px; }
+
+        .pch-btn {
+            display: inline-block;
+            margin-top: 6px;
+            background: transparent;
+            border: 1px solid var(--red);
+            color: var(--red);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            text-decoration: none;
+            border-radius: 2px;
+            font-weight: 700;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        .pch-btn:hover {
+            background: rgba(255,32,32,0.06);
+            color: var(--red);
+        }
+
+        .translate-btn {
+            position: relative;
+            background: transparent;
+            border: 1px solid var(--amber);
+            color: var(--amber);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.375rem 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-radius: 2px;
+            font-weight: 600;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .translate-btn:hover {
+            background: rgba(255,178,0,0.08);
+            color: var(--amber2);
+            border-color: var(--amber2);
+        }
+
+        .header {
+            width: 100%;
+            max-width: 75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 3rem;
+            border-bottom: 1px solid var(--rule);
+            background: var(--bg);
+            position: relative;
+            z-index: 100;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .logo-mark {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-lg);
+            color: var(--hi);
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .nav-link:hover,
+        .nav-link.highlight {
+            color: var(--hi);
+        }
+
+        .section-label {
+            width: 100%;
+            max-width: 60rem;
+            padding: 0.8125rem 3rem;
+            border-bottom: 1px solid var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--amber);
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            font-weight: 600;
+        }
+        .section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--rule);
+            min-width: 20px;
+        }
+
+        .hero {
+            width: 100%;
+            max-width: 60rem;
+            padding: 4rem 3rem 3.5rem;
+            border-bottom: 1px solid var(--rule);
+            display: grid;
+            grid-template-columns: 1fr 18rem;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .hero-kicker {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 4px;
+            color: var(--txt3);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .hero-h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xl);
+            line-height: 1.2;
+            color: var(--hi);
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .hero-body {
+            font-size: var(--fs-md);
+            color: var(--txt);
+            line-height: 1.8;
+            max-width: 65ch;
+            text-align: left;
+            word-break: break-word;
+        }
+        .hero-body strong {
+            color: var(--txt2);
+        }
+
+        .hero-right {
+            display: flex;
+            flex-direction: column;
+            padding-top: 0.5rem;
+        }
+
+        .kv {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0.6875rem 1rem;
+            border-bottom: 1px solid var(--rule);
+            gap: 0.5rem;
+        }
+        .kv:first-child {
+            border-top: 1px solid var(--rule);
+        }
+        .kv-key {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .kv-val {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-md);
+            color: var(--hi);
+            font-weight: 700;
+            text-align: right;
+            word-break: break-word;
+        }
+        .kv-val.white {
+            color: var(--txt2);
+            font-size: var(--fs-md);
+            font-family: 'Share Tech Mono', monospace;
+            font-weight: 400;
+        }
+        .kv-val.amber {
+            color: var(--amber);
+        }
+
+        .content-section {
+            width: 100%;
+            max-width: 60rem;
+            padding: 3rem;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .content-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-lg);
+            color: var(--amber);
+            margin-bottom: 0.625rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            word-break: break-word;
+            border-bottom: 1px solid var(--rule);
+            padding-bottom: 0.5rem;
+        }
+
+        .content-section h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-lg);
+            color: var(--hi);
+            margin-top: 1.75rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .content-section h4 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-sm);
+            color: var(--amber);
+            margin-top: 1.125rem;
+            margin-bottom: 0.375rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .content-section p {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-md);
+            color: var(--txt);
+            line-height: 1.9;
+            margin-bottom: 0.75rem;
+            word-break: break-word;
+            max-width: 70ch;
+            text-align: left;
+        }
+        .content-section p strong {
+            color: var(--txt2);
+        }
+
+        .content-section ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 1rem;
+        }
+        .content-section ul li {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-md);
+            color: var(--txt);
+            line-height: 1.8;
+            padding-left: 0.875rem;
+            position: relative;
+            max-width: 70ch;
+            text-align: left;
+        }
+        .content-section ul li::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            color: var(--hi);
+            font-weight: bold;
+        }
+
+        .code-block {
+            padding: 1.25rem 1.5rem;
+            background: rgba(0,255,65,0.02);
+            border: 1px solid var(--rule);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-xs);
+            color: var(--hi);
+            line-height: 1.6;
+            margin: 1rem 0;
+            border-radius: 2px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+            text-align: left;
+        }
+
+        .article-index {
+            list-style: none;
+            padding-left: 0;
+        }
+        .article-index li {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-md);
+            color: var(--txt);
+            line-height: 1.8;
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.25rem;
+            text-align: left;
+        }
+        .article-index li::before {
+            content: '[+]';
+            position: absolute;
+            left: 0;
+            color: var(--amber);
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+        }
+        .article-index li a {
+            color: var(--txt2);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .article-index li a:hover {
+            color: var(--amber);
+        }
+
+        .nav-internal {
+            text-align: center;
+            padding: 2rem 3rem;
+            border-bottom: 1px solid var(--rule);
+        }
+        .nav-internal a {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-sm);
+            letter-spacing: 2px;
+            color: var(--amber);
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.2s;
+        }
+        .nav-internal a:hover {
+            color: var(--hi);
+        }
+        .nav-internal span {
+            color: var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-sm);
+        }
+
+        .footer {
+            width: 100%;
+            max-width: 60rem;
+            padding: 1.625rem 3rem;
+            border-top: 1px solid var(--rule);
+            position: relative;
+            z-index: 50;
+        }
+
+        .footer-modules {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 0.875rem;
+        }
+        .footer-modules a {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .footer-modules a:hover,
+        .footer-modules a.footer-current {
+            color: var(--hi);
+        }
+        .footer-modules span {
+            color: var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+        }
+
+        .footer-social {
+            text-align: center;
+            margin-bottom: 0.875rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-xs);
+            color: var(--amber);
+        }
+        .footer-social a {
+            color: var(--amber);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-social a:hover {
+            color: var(--hi);
+        }
+        .footer-social span {
+            color: var(--rule);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: var(--fs-xs);
+            color: rgba(0,255,65,0.25);
+            line-height: 1.8;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0);    }
+        }
+
+        @media (max-width: 1024px) {
+            .header { gap: 0.75rem; }
+            .hero { gap: 1.5rem; }
+            .nav-link { font-size: var(--fs-xs); }
+            .section-label { font-size: var(--fs-xs); }
+            .footer-modules a { font-size: var(--fs-xs); }
+            .footer-social { font-size: var(--fs-xs); }
+            .footer-bottom { font-size: var(--fs-xs); }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 1rem 1.5rem;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .header-nav {
+                width: 100%;
+                gap: 1rem;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 4px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+            .header-nav::-webkit-scrollbar {
+                display: none;
+            }
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 2.5rem 1.5rem 2.25rem;
+                gap: 1.5rem;
+            }
+            .hero-body {
+                max-width: 100%;
+            }
+            .content-section {
+                padding: 2rem 1.5rem;
+            }
+            .section-label {
+                padding: 0.8125rem 1.5rem;
+            }
+            .footer {
+                padding: 1.25rem 1.5rem;
+            }
+            [class*="grid"],
+            [class*="cols"],
+            [class*="columns"] {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header          { padding: 0.75rem 1rem; }
+            .hero            { padding: 1.75rem 1rem 1.5rem; }
+            .content-section { padding: 1.5rem 1rem; }
+            .footer          { padding: 1rem; }
+            .footer-modules  { gap: 0.75rem; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0002-3432-1710",
+      "name": "Dany D. Ruiz",
+      "alternateName": "panperceptual",
+      "jobTitle": "Anartist · Independent Researcher",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "url": "https://perceptemple.art",
+      "sameAs": [
+        "https://orcid.org/0009-0002-3432-1710",
+        "https://x.com/panperceptual",
+        "https://github.com/PERCEPTEMPLE",
+        "https://doi.org/10.17605/OSF.IO/FVCAX",
+        "https://doi.org/10.5281/zenodo.17683631",
+        "https://doi.org/10.2139/ssrn.5794102"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "headline": "Panperceptual Theory of the Universe: A Revolutionary Framework for Understanding Reality",
+      "description": "Panperceptual Theory of the Universe Part 4: a revolutionary framework positing perception as an active process that fundamentally shapes reality, by Dany D. Ruiz.",
+      "datePublished": "2026-06-07",
+      "dateModified": "2026-06-07",
+      "inLanguage": "en",
+      "url": "https://perceptemple.art/ptu/part-4/",
+      "author": {
+        "@type": "Person",
+        "@id": "https://orcid.org/0009-0002-3432-1710",
+        "name": "Dany D. Ruiz"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "isPartOf": {
+        "@type": "Book",
+        "name": "Panperceptual Theory of the Universe",
+        "url": "https://perceptemple.art/ptu/"
+      },
+      "license": "https://perceptemple.art/licence/",
+      "sameAs": [
+        "https://doi.org/10.17605/OSF.IO/UXEGH",
+        "https://doi.org/10.5281/zenodo.19168519",
+        "https://doi.org/10.2139/ssrn.6456099"
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <span class="bracket bracket-tl">[</span>
+    <span class="bracket bracket-tr">]</span>
+    <span class="bracket bracket-bl">[</span>
+    <span class="bracket bracket-br">]</span>
+
+    <div class="header">
+        <div class="logo">
+            <span class="logo-mark lang-hidden" data-lang="es">PERCEPTEMPLE</span>
+            <span class="logo-mark" data-lang="en">PERCEPTEMPLE</span>
+            <br>
+            <a class="pch-btn" href="../../index.html">
+                <span class="lang-hidden" data-lang="es">PRUEBA DE CONCIENCIA HUMANA</span>
+                <span data-lang="en">HUMAN CONSCIOUSNESS TEST</span>
+            </a>
+        </div>
+        <nav class="header-nav">
+            <a class="nav-link" href="../../percepware/index.html">
+                <span class="lang-hidden" data-lang="es">PercepWare</span><span data-lang="en">PercepWare</span>
+            </a>
+            <a class="nav-link" href="../../pci/index.html">
+                <span class="lang-hidden" data-lang="es">PCI</span><span data-lang="en">PCI</span>
+            </a>
+            <a class="nav-link" href="../../aei/index.html">
+                <span class="lang-hidden" data-lang="es">AEI</span><span data-lang="en">AEI</span>
+            </a>
+            <a class="nav-link" href="../../neohaki/index.html">
+                <span class="lang-hidden" data-lang="es">NEOHAKI</span><span data-lang="en">NEOHAKI</span>
+            </a>
+            <a class="nav-link" href="../../pram/index.html">
+                <span class="lang-hidden" data-lang="es">PRAM</span><span data-lang="en">PRAM</span>
+            </a>
+            <a class="nav-link" href="../../licence/index.html">
+                <span class="lang-hidden" data-lang="es">LICENCIA</span><span data-lang="en">LICENSE</span>
+            </a>
+            <a class="nav-link" href="../../bitneko/index.html">
+                <span class="lang-hidden" data-lang="es">BITNEKO</span><span data-lang="en">BITNEKO</span>
+            </a>
+            <a class="nav-link" href="../../space/index.html">
+                <span class="lang-hidden" data-lang="es">SPACE</span><span data-lang="en">SPACE</span>
+            </a>
+            <a class="nav-link" href="../../agamottor/index.html">
+                <span class="lang-hidden" data-lang="es">AGAMOTTOR</span><span data-lang="en">AGAMOTTOR</span>
+            </a>
+            <a class="nav-link" href="../../little-prince/index.html">
+                <span class="lang-hidden" data-lang="es">LITTLE PRINCE</span><span data-lang="en">LITTLE PRINCE</span>
+            </a>
+            <a class="nav-link highlight" href="../index.html">
+                <span class="lang-hidden" data-lang="es">PTU</span><span data-lang="en">PTU</span>
+            </a>
+            <a class="nav-link" href="../../time-machine/index.html">
+                <span class="lang-hidden" data-lang="es">MÁQUINA DEL TIEMPO</span><span data-lang="en">TIME MACHINE</span>
+            </a>
+            <a class="nav-link" href="../../poetry/index.html">
+                <span class="lang-hidden" data-lang="es">POESÍA</span><span data-lang="en">POETRY</span>
+            </a>
+            <button class="translate-btn" id="langToggle" onclick="toggleLanguage()">ES</button>
+        </nav>
+    </div>
+
+    <div class="section-label">
+        <span class="lang-hidden" data-lang="es">TRATADO PANPERCEPTUAL · PARTE 4</span>
+        <span data-lang="en">PANPERCEPTUAL TREATISE · PART 4</span>
+    </div>
+
+    <div class="hero">
+        <div class="hero-left">
+            <div class="hero-kicker lang-hidden" data-lang="es">MARCO REVOLUCIONARIO</div>
+            <div class="hero-kicker" data-lang="en">REVOLUTIONARY FRAMEWORK</div>
+            <h1 class="hero-h1">
+                <span class="lang-hidden" data-lang="es">Teoría Panperceptual del Universo: Un Marco Revolucionario para Comprender la Realidad</span>
+                <span data-lang="en">Panperceptual Theory of the Universe: A Revolutionary Framework for Understanding Reality</span>
+            </h1>
+            <div class="hero-body lang-hidden" data-lang="es">
+                <p>Este artículo presenta una versión significativamente expandida y mejorada de la Teoría Panperceptual del Universo (PTU), un marco revolucionario que postula la percepción y la observación como procesos activos y diversos que influyen fundamentalmente en la naturaleza de la realidad observada. Esta versión mejorada aborda limitaciones previamente identificadas, proporciona un marco más robusto para su aplicación y verificación en múltiples disciplinas científicas, e incorpora perspectivas filosóficas e históricas relevantes para contextualizar y fortalecer sus argumentos.</p>
+                <p><strong>Fecha: 23 de octubre de 2024</strong></p>
+            </div>
+            <div class="hero-body" data-lang="en">
+                <p>This article presents a significantly expanded and improved version of the Panperceptual Theory of the Universe (PTU), a revolutionary framework that postulates perception and observation as active and diverse processes that fundamentally influence the nature of observed reality. This improved version addresses previously identified limitations, provides a more robust framework for its application and verification across multiple scientific disciplines, and incorporates relevant philosophical and historical perspectives to contextualize and strengthen its arguments.</p>
+                <p><strong>Date: October 23, 2024</strong></p>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="kv">
+                <span class="kv-key lang-hidden" data-lang="es">AUTOR</span>
+                <span class="kv-key" data-lang="en">AUTHOR</span>
+                <span class="kv-val white">Dany D. Ruiz</span>
+            </div>
+            <div class="kv">
+                <span class="kv-key lang-hidden" data-lang="es">MÓDULO</span>
+                <span class="kv-key" data-lang="en">MODULE</span>
+                <span class="kv-val amber">
+                    <span class="lang-hidden" data-lang="es">PTU · PARTE 4</span>
+                    <span data-lang="en">PTU · PART 4</span>
+                </span>
+            </div>
+            <div class="kv">
+                <span class="kv-key lang-hidden" data-lang="es">SERIE</span>
+                <span class="kv-key" data-lang="en">SERIES</span>
+                <span class="kv-val white">
+                    <span class="lang-hidden" data-lang="es">17 PARTES</span>
+                    <span data-lang="en">17 PARTS</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="lang-hidden" data-lang="es">1. Introducción</h2>
+        <h2 data-lang="en">1. Introduction</h2>
+
+        <p class="lang-hidden" data-lang="es">La Teoría Panperceptual del Universo (PTU) propone un cambio de paradigma en nuestra comprensión de la realidad, basado en la idea de que la percepción y la observación son procesos activos y diversos que influyen fundamentalmente en la naturaleza de la realidad observada. Esta versión mejorada de la teoría aborda las limitaciones previamente identificadas y ofrece un marco más robusto para su aplicación y verificación.</p>
+        <p data-lang="en">The Panperceptual Theory of the Universe (PTU) proposes a paradigm shift in our understanding of reality, based on the idea that perception and observation are active and diverse processes that fundamentally influence the nature of observed reality. This improved version of the theory addresses previously identified limitations and offers a more robust framework for its application and verification.</p>
+
+        <p class="lang-hidden" data-lang="es">La PTU se basa en una rica tradición filosófica y científica que ha cuestionado la naturaleza de la realidad y la percepción. Desde el concepto griego antiguo de "panta rhei" (todo fluye) atribuido a Heráclito [10], hasta el idealismo de Berkeley [3] y el fenomenalismo de Mach [17], la idea de que la realidad no es independiente del observador ha sido un tema recurrente en la filosofía occidental. En la física moderna, el principio de incertidumbre de Heisenberg [13] y la interpretación de Copenhague de la mecánica cuántica [9] han subrayado el papel fundamental del observador en los fenómenos cuánticos.</p>
+        <p data-lang="en">The PTU is based on a rich philosophical and scientific tradition that has questioned the nature of reality and perception. From the ancient Greek concept of "panta rhei" (everything flows) attributed to Heraclitus [10], to Berkeley's idealism [3] and Mach's phenomenalism [17], the idea that reality is not independent of the observer has been a recurring theme in Western philosophy. In modern physics, Heisenberg's uncertainty principle [13] and the Copenhagen interpretation of quantum mechanics [9] have underscored the fundamental role of the observer in quantum phenomena.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 class="lang-hidden" data-lang="es">2. Principios Fundamentales Revisados</h2>
+        <h2 data-lang="en">2. Revised Fundamental Principles</h2>
+
+        <h3 class="lang-hidden" data-lang="es">2.1. Relatividad Perceptual</h3>
+        <h3 data-lang="en">2.1. Perceptual Relativity</h3>
+
+        <p class="lang-hidden" data-lang="es">La realidad no es una entidad objetiva y uniforme, sino un conjunto de manifestaciones que varían según el sistema perceptual del observador. Esto implica que diferentes tipos de observadores (humanos, animales, máquinas, etc.) pueden experimentar aspectos fundamentalmente diferentes de la misma "realidad subyacente".</p>
+        <p data-lang="en">Reality is not an objective and uniform entity, but a set of manifestations that vary according to the observer's perceptual system. This implies that different types of observers (humans, animals, machines, etc.) can experience fundamentally different aspects of the same "underlying reality."</p>
+
+        <p class="lang-hidden" data-lang="es">Este principio está parcialmente inspirado en la teoría de la relatividad de Einstein [7], que demostró que conceptos aparentemente absolutos como el tiempo y el espacio son en realidad relativos al marco de referencia del observador. La PTU extiende esta idea a todos los aspectos de la realidad percibida.</p>
+        <p data-lang="en">This principle is partially inspired by Einstein's theory of relativity [7], which demonstrated that apparently absolute concepts like time and space are actually relative to the observer's frame of reference. The PTU extends this idea to all aspects of perceived reality.</p>
+
+        <h3 class="lang-hidden" data-lang="es">2.2. Interacción Observador-Realidad</h3>
+        <h3 data-lang="en">2.2. Observer-Reality Interaction</h3>
+
+        <p class="lang-hidden" data-lang="es">El acto de observación no es pasivo, sino una interacción dinámica entre el observador y lo observado. Esta interacción modifica tanto al observador como a la realidad observada, creando un bucle de retroalimentación continua.</p>
+        <p data-lang="en">The act of observation is not passive, but a dynamic interaction between the observer and the observed. This interaction modifies both the observer and the observed reality, creating a continuous feedback loop.</p>
+
+        <p class="lang-hidden" data-lang="es">Este principio tiene sus raíces en la mecánica cuántica, específicamente en el efecto observador [24], pero lo extiende más allá del dominio cuántico a todas las escalas de la realidad. También se relaciona con el concepto de autopoiesis en biología [18], que describe cómo los sistemas vivos se automantienen y se autocrean a través de sus interacciones con el entorno.</p>
+        <p data-lang="en">This principle has its roots in quantum mechanics, specifically in the observer effect [24], but extends it beyond the quantum domain to all scales of reality. It also relates to the concept of autopoiesis in biology [18], which describes how living systems self-maintain and self-create through their interactions with the environment.</p>
+
+        <h3 class="lang-hidden" data-lang="es">2.3. Espectro de la Conciencia</h3>
+        <h3 data-lang="en">2.3. Consciousness Spectrum</h3>
+
+        <p class="lang-hidden" data-lang="es">La conciencia no es un fenómeno binario (presente o ausente), sino un espectro continuo que va desde sistemas simples hasta complejos. Cada punto de este espectro corresponde a una forma única de percepción e interacción con la realidad.</p>
+        <p data-lang="en">Consciousness is not a binary phenomenon (present or absent), but a continuous spectrum ranging from simple to complex systems. Each point on this spectrum corresponds to a unique form of perception and interaction with reality.</p>
+
+        <p class="lang-hidden" data-lang="es">Este principio se basa en las teorías de la información integrada de la conciencia de Tononi [23] y el panpsiquismo de Chalmers [5], pero propone un marco más flexible y graduado para comprender la conciencia en todos los sistemas.</p>
+        <p data-lang="en">This principle is based on Tononi's integrated information theories of consciousness [23] and Chalmers' panpsychism [5], but proposes a more flexible and graduated framework for understanding consciousness in all systems.</p>
+
+        <h3 class="lang-hidden" data-lang="es">2.4. Multidimensionalidad del Tiempo y el Espacio</h3>
+        <h3 data-lang="en">2.4. Multidimensionality of Time and Space</h3>
+
+        <p class="lang-hidden" data-lang="es">El tiempo y el espacio no son absolutos, sino relativos al sistema perceptual del observador. Diferentes observadores pueden experimentar dimensiones temporales y espaciales fundamentalmente diferentes.</p>
+        <p data-lang="en">Time and space are not absolute, but relative to the observer's perceptual system. Different observers may experience fundamentally different temporal and spatial dimensions.</p>
+
+        <p class="lang-hidden" data-lang="es">Este principio está inspirado en las teorías de dimensiones adicionales en la física teórica, como la teoría de cuerdas [11], pero las reinterpreta como manifestaciones de diferentes sistemas perceptuales en lugar de realidades físicas objetivas.</p>
+        <p data-lang="en">This principle is inspired by theories of additional dimensions in theoretical physics, such as string theory [11], but reinterprets them as manifestations of different perceptual systems rather than objective physical realities.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 class="lang-hidden" data-lang="es">3. Marco Teórico Expandido</h2>
+        <h2 data-lang="en">3. Expanded Theoretical Framework</h2>
+
+        <h3 class="lang-hidden" data-lang="es">3.1. Función de Onda Perceptual (PWF)</h3>
+        <h3 data-lang="en">3.1. Perceptual Wave Function (PWF)</h3>
+
+        <p class="lang-hidden" data-lang="es">Introducimos el concepto de "Función de Onda Perceptual" (PWF), una representación matemática de cómo un sistema perceptual interactúa con la realidad. La PWF describe la probabilidad de que un observador perciba ciertos aspectos de la realidad en un momento dado.</p>
+        <p data-lang="en">We introduce the concept of "Perceptual Wave Function" (PWF), a mathematical representation of how a perceptual system interacts with reality. The PWF describes the probability that an observer will perceive certain aspects of reality at a given moment.</p>
+
+        <p class="lang-hidden" data-lang="es">Matemáticamente, definimos la PWF como:</p>
+        <p data-lang="en">Mathematically, we define the PWF as:</p>
+
+        <div class="code-block">
+            Ψ(x, t) = A * e^(i * (k * x - ω * t))       (1)
+        </div>
+
+        <p class="lang-hidden" data-lang="es"><strong>Donde:</strong></p>
+        <p data-lang="en"><strong>Where:</strong></p>
+        <ul>
+            <li class="lang-hidden" data-lang="es">Ψ(x, t) es la función de onda perceptual</li>
+            <li data-lang="en">Ψ(x, t) is the perceptual wave function</li>
+            <li class="lang-hidden" data-lang="es">A es la amplitud, relacionada con la intensidad de la percepción</li>
+            <li data-lang="en">A is the amplitude, related to the intensity of perception</li>
+            <li class="lang-hidden" data-lang="es">k es el número de onda, relacionado con la complejidad del sistema perceptual</li>
+            <li data-lang="en">k is the wave number, related to the complexity of the perceptual system</li>
+            <li class="lang-hidden" data-lang="es">ω es la frecuencia angular, relacionada con la velocidad del procesamiento perceptual</li>
+            <li data-lang="en">ω is the angular frequency, related to the speed of perceptual processing</li>
+        </ul>
+
+        <p class="lang-hidden" data-lang="es">Este formalismo está inspirado en la función de onda de la mecánica cuántica [20], pero se aplica a sistemas perceptuales en general, no solo a partículas subatómicas.</p>
+        <p data-lang="en">This formalism is inspired by the wave function of quantum mechanics [20], but applies to perceptual systems in general, not just subatomic particles.</p>
+
+        <h3 class="lang-hidden" data-lang="es">3.2. Principio de Superposición Perceptual</h3>
+        <h3 data-lang="en">3.2. Principle of Perceptual Superposition</h3>
+
+        <p class="lang-hidden" data-lang="es">Múltiples PWF pueden superponerse, creando una realidad emergente que es la suma de todas las percepciones involucradas. Esto explica cómo diferentes observadores pueden tener experiencias compartidas a pesar de sus sistemas perceptuales únicos.</p>
+        <p data-lang="en">Multiple PWFs can superpose, creating an emergent reality that is the sum of all perceptions involved. This explains how different observers can have shared experiences despite their unique perceptual systems.</p>
+
+        <p class="lang-hidden" data-lang="es">La realidad emergente (R) se representa como:</p>
+        <p data-lang="en">The emergent reality (R) is represented as:</p>
+
+        <div class="code-block">
+            R = Σ Ψi(x, t)                               (2)
+        </div>
+
+        <p class="lang-hidden" data-lang="es">Este principio se relaciona con la teoría de sistemas complejos [1] y la emergencia en la filosofía de la ciencia [2].</p>
+        <p data-lang="en">This principle relates to complex systems theory [1] and emergence in philosophy of science [2].</p>
+
+        <h3 class="lang-hidden" data-lang="es">3.3. Entrelazamiento Perceptual</h3>
+        <h3 data-lang="en">3.3. Perceptual Entanglement</h3>
+
+        <p class="lang-hidden" data-lang="es">Dos o más sistemas perceptuales pueden entrelazarse, influyendo mutuamente en sus percepciones de la realidad. Este concepto podría proporcionar una nueva perspectiva sobre fenómenos como la empatía o la comunicación no verbal.</p>
+        <p data-lang="en">Two or more perceptual systems can become entangled, mutually influencing their perceptions of reality. This concept could provide a new perspective on phenomena such as empathy or non-verbal communication.</p>
+
+        <p class="lang-hidden" data-lang="es">Para dos sistemas perceptuales entrelazados (a y b), lo describimos como:</p>
+        <p data-lang="en">For two entangled perceptual systems (a and b), we describe it as:</p>
+
+        <div class="code-block">
+            Ψ(a, b) = 1/√2 * (|↑a↓b⟩ - |↓a↑b⟩)           (3)
+        </div>
+
+        <p class="lang-hidden" data-lang="es">Este formalismo está inspirado en el entrelazamiento cuántico [8], pero se aplica a sistemas perceptuales macroscópicos.</p>
+        <p data-lang="en">This formalism is inspired by quantum entanglement [8], but applies to macroscopic perceptual systems.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 class="lang-hidden" data-lang="es">4. Implicaciones y Aplicaciones</h2>
+        <h2 data-lang="en">4. Implications and Applications</h2>
+
+        <h3 class="lang-hidden" data-lang="es">4.1. Física Fundamental</h3>
+        <h3 data-lang="en">4.1. Fundamental Physics</h3>
+
+        <p class="lang-hidden" data-lang="es">La PTU sugiere que las "leyes" de la física podrían ser emergentes, dependiendo del tipo de observador. Esto podría reconciliar las aparentes inconsistencias entre la mecánica cuántica y la relatividad general, proponiendo que cada una es válida dentro de su propio dominio perceptual.</p>
+        <p data-lang="en">The PTU suggests that the "laws" of physics could be emergent, depending on the type of observer. This could reconcile apparent inconsistencies between quantum mechanics and general relativity, proposing that each is valid within its own perceptual domain.</p>
+
+        <p class="lang-hidden" data-lang="es">Proponemos un experimento para medir la constante de Planck (h) utilizando observadores con diferentes sistemas perceptuales, demostrando potencialmente la dependencia del observador de las constantes físicas fundamentales.</p>
+        <p data-lang="en">We propose an experiment to measure Planck's constant (h) using observers with different perceptual systems, potentially demonstrating the observer-dependence of fundamental physical constants.</p>
+
+        <p class="lang-hidden" data-lang="es">Esta idea se relaciona con el principio antrópico en cosmología [4] y las teorías de universos múltiples [22].</p>
+        <p data-lang="en">This idea relates to the anthropic principle in cosmology [4] and multiple universe theories [22].</p>
+
+        <h3 class="lang-hidden" data-lang="es">4.2. Neurociencia y Conciencia</h3>
+        <h3 data-lang="en">4.2. Neuroscience and Consciousness</h3>
+
+        <p class="lang-hidden" data-lang="es">El espectro de la conciencia propuesto por la PTU ofrece un nuevo marco para estudiar la conciencia, sugiriendo que incluso sistemas aparentemente simples podrían tener alguna forma de experiencia subjetiva.</p>
+        <p data-lang="en">The consciousness spectrum proposed by the PTU offers a new framework for studying consciousness, suggesting that even apparently simple systems could have some form of subjective experience.</p>
+
+        <p class="lang-hidden" data-lang="es">Introducimos un "Índice de Complejidad Perceptual (PCI)" para cuantificar el espectro de la conciencia:</p>
+        <p data-lang="en">We introduce a "Perceptual Complexity Index (PCI)" to quantify the consciousness spectrum:</p>
+
+        <div class="code-block">
+            PCI = (N * I * F) / T                        (4)
+        </div>
+
+        <p class="lang-hidden" data-lang="es"><strong>Donde:</strong></p>
+        <p data-lang="en"><strong>Where:</strong></p>
+        <ul>
+            <li class="lang-hidden" data-lang="es">N es el número de neuronas o unidades de procesamiento</li>
+            <li data-lang="en">N is the number of neurons or processing units</li>
+            <li class="lang-hidden" data-lang="es">I es el grado de interconexión</li>
+            <li data-lang="en">I is the degree of interconnection</li>
+            <li class="lang-hidden" data-lang="es">F es la frecuencia de activación o procesamiento</li>
+            <li data-lang="en">F is the firing or processing frequency</li>
+            <li class="lang-hidden" data-lang="es">T es el tiempo de respuesta del sistema</li>
+            <li data-lang="en">T is the system's response time</li>
+        </ul>
+
+        <p class="lang-hidden" data-lang="es">Este índice está inspirado en las medidas de complejidad de la teoría de la información [21] y en el Índice de Información Integrada de Tononi [23].</p>
+        <p data-lang="en">This index is inspired by complexity measures in information theory [21] and Tononi's Integrated Information Index [23].</p>
+
+        <h3 class="lang-hidden" data-lang="es">4.3. Inteligencia Artificial y Cognición</h3>
+        <h3 data-lang="en">4.3. Artificial Intelligence and Cognition</h3>
+
+        <p class="lang-hidden" data-lang="es">La PTU implica que las IAs podrían desarrollar formas únicas de percepción y conciencia, fundamentalmente diferentes a las humanas. Esto tiene importantes implicaciones para el desarrollo ético y la comprensión de la IA.</p>
+        <p data-lang="en">The PTU implies that AIs could develop unique forms of perception and consciousness, fundamentally different from human ones. This has important implications for ethical development and understanding of AI.</p>
+
+        <p class="lang-hidden" data-lang="es">Proponemos un nuevo enfoque para el desarrollo de IA basado en la diversidad perceptual, creando redes neuronales con diferentes "sentidos" artificiales para fomentar una cognición más rica y variada.</p>
+        <p data-lang="en">We propose a new approach to AI development based on perceptual diversity, creating neural networks with different artificial "senses" to foster richer and more varied cognition.</p>
+
+        <p class="lang-hidden" data-lang="es">Esta propuesta se relaciona con los debates actuales sobre la conciencia en la IA [6] y los enfoques de IA de inspiración biológica [12].</p>
+        <p data-lang="en">This proposal relates to current debates about consciousness in AI [6] and biologically-inspired AI approaches [12].</p>
+
+        <h3 class="lang-hidden" data-lang="es">4.4. Ecología y Sistemas Complejos</h3>
+        <h3 data-lang="en">4.4. Ecology and Complex Systems</h3>
+
+        <p class="lang-hidden" data-lang="es">La teoría proporciona un nuevo enfoque para comprender los ecosistemas y otros sistemas complejos, considerándolos como redes de entidades perceptuales entrelazadas.</p>
+        <p data-lang="en">The theory provides a new approach to understanding ecosystems and other complex systems, considering them as networks of entangled perceptual entities.</p>
+
+        <p class="lang-hidden" data-lang="es">Este enfoque se alinea con la teoría de sistemas adaptativos complejos [14] y el concepto de "Gaia" de Lovelock [16].</p>
+        <p data-lang="en">This approach aligns with complex adaptive systems theory [14] and Lovelock's "Gaia" concept [16].</p>
+    </div>
+
+    <div class="content-section">
+        <h2 class="lang-hidden" data-lang="es">5. Verificación Empírica</h2>
+        <h2 data-lang="en">5. Empirical Verification</h2>
+
+        <h3 class="lang-hidden" data-lang="es">5.1. Experimento de Doble Rendija Modificado</h3>
+        <h3 data-lang="en">5.1. Modified Double-Slit Experiment</h3>
+
+        <p class="lang-hidden" data-lang="es">Utilizar observadores con diferentes sistemas perceptuales (humanos, gatos, sensores cuánticos) para detectar partículas en un experimento de doble rendija, buscando variaciones en los patrones de interferencia. Correlacionaremos estas diferencias con el PCI de cada observador.</p>
+        <p data-lang="en">Use observers with different perceptual systems (humans, cats, quantum sensors) to detect particles in a double-slit experiment, looking for variations in interference patterns. We will correlate these differences with each observer's PCI.</p>
+
+        <h3 class="lang-hidden" data-lang="es">5.2. Estudio Comparativo de la Conciencia</h3>
+        <h3 data-lang="en">5.2. Comparative Consciousness Study</h3>
+
+        <p class="lang-hidden" data-lang="es">Aplicar el PCI a una amplia gama de sistemas, desde partículas subatómicas hasta organismos complejos e IA. Buscaremos correlaciones entre el PCI y los comportamientos emergentes.</p>
+        <p data-lang="en">Apply the PCI to a wide range of systems, from subatomic particles to complex organisms and AI. We will look for correlations between PCI and emergent behaviors.</p>
+
+        <h3 class="lang-hidden" data-lang="es">5.3. Análisis de Realidad Virtual</h3>
+        <h3 data-lang="en">5.3. Virtual Reality Analysis</h3>
+
+        <p class="lang-hidden" data-lang="es">Crear entornos de realidad virtual con "leyes físicas" alteradas y estudiar cómo los participantes se adaptan y potencialmente modifican estas leyes a través de su observación e interacción. Mediremos cambios en tiempo real y los correlacionaremos con el PCI de los participantes.</p>
+        <p data-lang="en">Create virtual reality environments with altered "physical laws" and study how participants adapt and potentially modify these laws through their observation and interaction. We will measure real-time changes and correlate them with participants' PCI.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 class="lang-hidden" data-lang="es">6. Desafíos y Preguntas Abiertas</h2>
+        <h2 data-lang="en">6. Challenges and Open Questions</h2>
+
+        <p class="lang-hidden" data-lang="es">Estamos desarrollando prototipos de instrumentos de medición basados en diferentes sistemas perceptuales (por ejemplo, un "termómetro de murciélago" que utiliza ecolocación) para abordar la limitación de nuestro propio sistema perceptual.</p>
+        <p data-lang="en">We are developing prototypes of measurement instruments based on different perceptual systems (e.g., a "bat thermometer" using echolocation) to address the limitation of our own perceptual system.</p>
+
+        <p class="lang-hidden" data-lang="es">Proponemos el concepto de "meta-observador" como un límite teórico en el espectro de la conciencia, que representa la totalidad de todas las percepciones posibles. Este concepto se relaciona con la noción filosófica de la "visión de Dios" [19].</p>
+        <p data-lang="en">We propose the concept of a "meta-observer" as a theoretical limit in the consciousness spectrum, representing the totality of all possible perceptions. This concept relates to the philosophical notion of the "God's eye view" [19].</p>
+
+        <p class="lang-hidden" data-lang="es">Exploramos el libre albedrío como una propiedad emergente de la interacción entre múltiples PWF, lo que podría proporcionar una nueva perspectiva sobre el antiguo debate filosófico entre determinismo y libre albedrío [15].</p>
+        <p data-lang="en">We explore free will as an emergent property of interaction between multiple PWFs, which could provide a new perspective on the ancient philosophical debate about determinism and free will [15].</p>
+    </div>
+
+    <div class="content-section">
+        <h2 class="lang-hidden" data-lang="es">7. Conclusión</h2>
+        <h2 data-lang="en">7. Conclusion</h2>
+
+        <p class="lang-hidden" data-lang="es">La Teoría Panperceptual del Universo ofrece un marco revolucionario para repensar nuestra comprensión de la realidad, la conciencia y la observación científica. Al proponer que la percepción juega un papel activo en la configuración de la realidad, la PTU tiene el potencial de unificar diversos campos del conocimiento y abrir nuevas vías de investigación en física, neurociencia, filosofía y más. Aunque desafiante y controvertida, esta teoría proporciona un terreno fértil para la exploración científica y filosófica en las próximas décadas.</p>
+        <p data-lang="en">The Panperceptual Theory of the Universe offers a revolutionary framework for rethinking our understanding of reality, consciousness, and scientific observation. By proposing that perception plays an active role in shaping reality, the PTU has the potential to unify diverse fields of knowledge and open new avenues of research in physics, neuroscience, philosophy, and more. Though challenging and controversial, this theory provides fertile ground for scientific and philosophical exploration in the coming decades.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 class="lang-hidden" data-lang="es">8. Próximos Pasos</h2>
+        <h2 data-lang="en">8. Next Steps</h2>
+
+        <ul>
+            <li class="lang-hidden" data-lang="es">Refinar los modelos matemáticos de PWF y PCI</li>
+            <li data-lang="en">Refine mathematical models of PWF and PCI</li>
+            <li class="lang-hidden" data-lang="es">Iniciar colaboraciones interdisciplinarias para implementar los experimentos propuestos</li>
+            <li data-lang="en">Initiate interdisciplinary collaborations to implement proposed experiments</li>
+            <li class="lang-hidden" data-lang="es">Desarrollar simulaciones computacionales de universos basados en PTU</li>
+            <li data-lang="en">Develop computational simulations of PTU-based universes</li>
+            <li class="lang-hidden" data-lang="es">Explorar las implicaciones filosóficas y éticas de la teoría</li>
+            <li data-lang="en">Explore philosophical and ethical implications of the theory</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2 class="lang-hidden" data-lang="es">Referencias</h2>
+        <h2 data-lang="en">References</h2>
+
+        <p>[1] Y. Bar-Yam, *Dynamics of Complex Systems*. Reading, MA: Addison-Wesley, 1997.</p>
+        <p>[2] M. A. Bedau and P. Humphreys, Eds., *Emergence: Contemporary Readings in Philosophy and Science*. Cambridge, MA: MIT Press, 2008.</p>
+        <p>[3] G. Berkeley, *A Treatise Concerning the Principles of Human Knowledge*. Dublin, Ireland: Aaron Rhames, 1710.</p>
+        <p>[4] B. Carter, "Large number coincidences and the anthropic principle in cosmology," in *Confrontation of Cosmological Theories with Observational Data*, M. S. Longair, Ed. Dordrecht, Netherlands: Springer, 1974, pp. 291-298.</p>
+        <p>[5] D. J. Chalmers, *The Conscious Mind: In Search of a Fundamental Theory*. New York, NY: Oxford University Press, 1996.</p>
+        <p>[6] S. Dehaene, H. Lau, and S. Kouider, "What is consciousness, and could machines have it?," *Science*, vol. 358, no. 6362, pp. 486-492, Oct. 2017.</p>
+        <p>[7] A. Einstein, "Die feldgleichungen der gravitation," *Sitzungsberichte der Preussischen Akademie der Wissenschaften zu Berlin*, pp. 844-847, 1915.</p>
+        <p>[8] A. Einstein, B. Podolsky, and N. Rosen, "Can quantum-mechanical description of physical reality be considered complete?," *Physical Review*, vol. 47, no. 10, pp. 777-780, May 1935.</p>
+        <p>[9] J. Faye, "Copenhagen interpretation of quantum mechanics," in *The Stanford Encyclopedia of Philosophy*, E. N. Zalta, Ed., Spring 2019 ed. Stanford, CA: Stanford University, 2019.</p>
+        <p>[10] D. W. Graham, "Heraclitus," in *The Stanford Encyclopedia of Philosophy*, E. N. Zalta, Ed., Summer 2015 ed. Stanford, CA: Stanford University, 2015.</p>
+        <p>[11] B. Greene, *The Elegant Universe: Superstrings, Hidden Dimensions, and the Quest for the Ultimate Theory*. New York, NY: W. W. Norton & Company, 1999.</p>
+        <p>[12] D. Hassabis, D. Kumaran, C. Summerfield, and M. Botvinick, "Neuroscience-inspired artificial intelligence," *Neuron*, vol. 95, no. 2, pp. 245-258, Jul. 2017.</p>
+        <p>[13] W. Heisenberg, "Über den anschaulichen inhalt der quantentheoretischen kinematik und mechanik," *Zeitschrift für Physik*, vol. 43, no. 3-4, pp. 172-198, Mar. 1927.</p>
+        <p>[14] J. H. Holland, "Studying complex adaptive systems," *Journal of Systems Science and Complexity*, vol. 19, no. 1, pp. 1-8, Mar. 2006.</p>
+        <p>[15] R. Kane, Ed., *The Oxford Handbook of Free Will*. New York, NY: Oxford University Press, 2002.</p>
+        <p>[16] J. E. Lovelock and L. Margulis, "Atmospheric homeostasis by and for the biosphere: the gaia hypothesis," *Tellus*, vol. 26, no. 1-2, pp. 2-10, Feb. 1974.</p>
+        <p>[17] E. Mach, *Die Analyse der Empfindungen und das Verhältnis des Physischen zum Psychischen*. Jena, Germany: Gustav Fischer, 1886.</p>
+        <p>[18] H. R. Maturana and F. J. Varela, *Autopoiesis and Cognition: The Realization of the Living*. Dordrecht, Netherlands: D. Reidel Publishing Company, 1980.</p>
+        <p>[19] H. Putnam, *Reason, Truth and History*. Cambridge, UK: Cambridge University Press, 1981.</p>
+        <p>[20] E. Schrödinger, "An undulatory theory of the mechanics of atoms and molecules," *Physical Review*, vol. 28, no. 6, pp. 1049-1070, Dec. 1926.</p>
+        <p>[21] C. E. Shannon, "A mathematical theory of communication," *Bell System Technical Journal*, vol. 27, no. 3, pp. 379-423, Jul. 1948.</p>
+        <p>[22] M. Tegmark, "Parallel universes," *Scientific American*, vol. 288, no. 5, pp. 40-51, May 2003.</p>
+        <p>[23] G. Tononi, "An information integration theory of consciousness," *BMC Neuroscience*, vol. 5, article 42, Nov. 2004.</p>
+        <p>[24] J. von Neumann, *Mathematische Grundlagen der Quantenmechanik*. Berlin, Germany: Springer, 1932.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 class="lang-hidden" data-lang="es">» Artículos en esta sección</h2>
+        <h2 data-lang="en">» Articles in this Section</h2>
+
+        <p class="lang-hidden" data-lang="es">A continuación, la serie completa de artículos que componen la Teoría Panperceptual del Universo.</p>
+        <p data-lang="en">Below is the complete series of articles that make up the Panperceptual Theory of the Universe.</p>
+
+        <ul class="article-index">
+            <li><a href="../part-1/index.html">[+] Part 1: Historical Evolution of Observation and Perception</a></li>
+            <li><a href="../part-2/index.html">[+] Part 2: Toward a New Revolution in Perception</a></li>
+            <li><a href="../part-3/index.html">[+] Part 3: Panperceptualism of the Universe</a></li>
+            <li><a href="../part-4/index.html">[+] Part 4: A Revolutionary Framework for Understanding Reality</a></li>
+            <li><a href="../part-5/index.html">[+] Part 5: Redefining Perception and Reality: A Mathematical Proposal</a></li>
+            <li><a href="../part-6/index.html">[+] Part 6: Towards an Interdisciplinary Synthesis of Perception and Reality</a></li>
+            <li><a href="../part-7/index.html">[+] Part 7: Weaving Realities: Perceptual Interactions and Relational Ontology (includes simulation code)</a></li>
+            <li><a href="../part-8/index.html">[+] Part 8: Emergent Temporalities and Cosmic Perception (includes simulation code)</a></li>
+            <li><a href="../part-9/index.html">[+] Part 9: Perceptual Dynamics of Dreams, Simulations, and Physical Reality (includes simulation code)</a></li>
+            <li><a href="../part-10/index.html">[+] Part 10: Perceptual Resonance Atomic Model (includes simulation code)</a></li>
+            <li><a href="../part-11/index.html">[+] Part 11: Justification of Empirical Values</a></li>
+            <li><a href="../part-12/index.html">[+] Part 12: Fractal Architecture of Perceptual Reality</a></li>
+            <li><a href="../part-13/index.html">[+] Part 13: The Panperceptual Wave and Partial Reality Engines</a></li>
+            <li><a href="../part-14/index.html">[+] Part 14: The Law of Sequential Perceptual Collapse</a></li>
+            <li><a href="../part-15/index.html">[+] Part 15: The Observer Within Time: A Panperceptual Critique</a></li>
+            <li><a href="../index.html">[+] Part 16: An Epistemological Critique of the Cultural Limits of Popperian Science from the Panperceptual Theory of the Universe</a></li>
+            <li><a href="../part-17/index.html">[+] Part 17: Perceptual Complexity Index Analysis: String Geometry as Framework for Observer Negotiation</a></li>
+        </ul>
+    </div>
+
+    <div class="nav-internal">
+        <a href="../part-3/index.html">← <span class="lang-hidden" data-lang="es">Anterior</span><span data-lang="en">Previous</span></a>
+        <span> | </span>
+        <a href="../part-5/index.html"><span class="lang-hidden" data-lang="es">Siguiente</span><span data-lang="en">Next</span> →</a>
+    </div>
+
+    <div class="footer">
+        <div class="footer-modules">
+            <a href="../../index.html"><span class="lang-hidden" data-lang="es">[PERCEPTEMPLE]</span><span data-lang="en">[PERCEPTEMPLE]</span></a>
+            <span>|</span>
+            <a href="../../percepware/index.html"><span class="lang-hidden" data-lang="es">PercepWare</span><span data-lang="en">PercepWare</span></a>
+            <span>|</span>
+            <a href="../../pci/index.html"><span class="lang-hidden" data-lang="es">PCI</span><span data-lang="en">PCI</span></a>
+            <span>|</span>
+            <a href="../../aei/index.html"><span class="lang-hidden" data-lang="es">AEI</span><span data-lang="en">AEI</span></a>
+            <span>|</span>
+            <a href="../../neohaki/index.html"><span class="lang-hidden" data-lang="es">NEOHAKI</span><span data-lang="en">NEOHAKI</span></a>
+            <span>|</span>
+            <a href="../../pram/index.html"><span class="lang-hidden" data-lang="es">PRAM</span><span data-lang="en">PRAM</span></a>
+            <span>|</span>
+            <a href="../../licence/index.html"><span class="lang-hidden" data-lang="es">LICENCIA</span><span data-lang="en">LICENSE</span></a>
+            <span>|</span>
+            <a href="../../bitneko/index.html"><span class="lang-hidden" data-lang="es">BITNEKO</span><span data-lang="en">BITNEKO</span></a>
+            <span>|</span>
+            <a href="../../space/index.html"><span class="lang-hidden" data-lang="es">SPACE</span><span data-lang="en">SPACE</span></a>
+            <span>|</span>
+            <a href="../../agamottor/index.html"><span class="lang-hidden" data-lang="es">AGAMOTTOR</span><span data-lang="en">AGAMOTTOR</span></a>
+            <span>|</span>
+            <a href="../../little-prince/index.html"><span class="lang-hidden" data-lang="es">LITTLE PRINCE</span><span data-lang="en">LITTLE PRINCE</span></a>
+            <span>|</span>
+            <a href="../index.html" class="footer-current"><span class="lang-hidden" data-lang="es">PTU</span><span data-lang="en">PTU</span></a>
+            <span>|</span>
+            <a href="../../time-machine/index.html"><span class="lang-hidden" data-lang="es">MÁQUINA DEL TIEMPO</span><span data-lang="en">TIME MACHINE</span></a>
+            <span>|</span>
+            <a href="../../poetry/index.html"><span class="lang-hidden" data-lang="es">POESÍA</span><span data-lang="en">POETRY</span></a>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://orcid.org/0009-0002-3432-1710" target="_blank" rel="noopener"><span class="lang-hidden" data-lang="es">ORCID</span><span data-lang="en">ORCID</span></a>
+            <span> / </span>
+            <a href="https://github.com/PERCEPTEMPLE" target="_blank" rel="noopener"><span class="lang-hidden" data-lang="es">GITHUB</span><span data-lang="en">GITHUB</span></a>
+            <span> / </span>
+            <a href="https://x.com/panperceptual" target="_blank" rel="noopener"><span class="lang-hidden" data-lang="es">X</span><span data-lang="en">X</span></a>
+        </div>
+
+        <div class="footer-bottom">
+            <span class="lang-hidden" data-lang="es">DEPOSITADO EN EL REGISTRO DE LA PROPIEDAD INTELECTUAL · EL SALVADOR · DANY D. RUIZ</span>
+            <span data-lang="en">DEPOSITED IN THE INTELLECTUAL PROPERTY REGISTRY · EL SALVADOR · DANY D. RUIZ</span>
+            <br>
+            <span class="lang-hidden" data-lang="es">Antes de que nos vean, ya somos</span>
+            <span data-lang="en">Before They See Us, They Already Are</span>
+        </div>
+    </div>
+
+    <script>
+        function toggleLanguage() {
+            var html    = document.documentElement;
+            var current = html.lang || 'en';
+            var next    = current === 'en' ? 'es' : 'en';
+            var hide    = next === 'en' ? 'es' : 'en';
+            html.lang = next;
+            document.querySelectorAll('[data-lang="' + next + '"]')
+                .forEach(function(el) { el.classList.remove('lang-hidden'); });
+            document.querySelectorAll('[data-lang="' + hide + '"]')
+                .forEach(function(el) { el.classList.add('lang-hidden'); });
+            document.getElementById('langToggle').textContent =
+                next === 'en' ? 'ES' : 'EN';
+            localStorage.setItem('perceptemple-lang', next);
+        }
+        (function() {
+            var saved = localStorage.getItem('perceptemple-lang');
+            if (saved && saved === 'es') { toggleLanguage(); }
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../favicon.png" type="image/png">
+
+    <title>PERCEPTEMPLE</title>
+
+    <meta name="description" content="Epistemological critique revealing Popperian falsifiability as a culturally specific Perceptual Complexity Index, not a universal scientific standard, from the Panperceptual Theory framework.">
+    <meta name="author" content="Dany D. Ruiz">
+    <meta name="last-modified" content="2026-06-07">
+    <meta name="keywords" content="Panperceptual Theory of the Universe, PTU, Popperian falsifiability, Perceptual Complexity Index, epistemological pluralism, relational ontologies, Dany D. Ruiz">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://perceptemple.art/ptu/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="PTU Part 16 - An Epistemological Critique of the Cultural Limits of Popperian Science · PERCEPTEMPLE">
+    <meta property="og:description" content="Epistemological critique revealing Popperian falsifiability as a culturally specific Perceptual Complexity Index, not a universal scientific standard, from the Panperceptual Theory framework.">
+    <meta property="og:url" content="https://perceptemple.art/ptu/">
+    <meta property="og:site_name" content="PERCEPTEMPLE">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_SV">
+    <meta property="og:image" content="https://perceptemple.art/preview.jpg">
+    <meta property="og:image:alt" content="PERCEPTEMPLE — Panperceptual Theory of the Universe Index">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@panperceptual">
+    <meta name="twitter:creator" content="@panperceptual">
+    <meta name="twitter:title" content="PTU Part 16 - An Epistemological Critique of the Cultural Limits of Popperian Science · PERCEPTEMPLE">
+    <meta name="twitter:description" content="Epistemological critique revealing Popperian falsifiability as a culturally specific Perceptual Complexity Index, not a universal scientific standard, from the Panperceptual Theory framework.">
+    <meta name="twitter:image" content="https://perceptemple.art/preview.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg:      #020805;
+            --panel:   #020805;
+            --rule:    #0a5c1e;
+            --hi:      #00ff41;
+            --hi2:     #39ff14;
+            --amber:   #ffb200;
+            --amber2:  #ffcc00;
+            --txt:     rgba(0,255,65,0.75);
+            --txt2:    rgba(0,255,65,0.9);
+            --txt3:    rgba(0,255,65,0.35);
+            --white:   #39ff14;
+            --red:     #ff2020;
+            --fs-xs: clamp(0.65rem, 1.2vw, 0.75rem);
+            --fs-sm: clamp(0.75rem, 1.4vw, 0.85rem);
+            --fs-md: clamp(0.8rem,  1.6vw, 1rem);
+            --fs-lg: clamp(1rem,    2vw,   1.25rem);
+            --fs-xl: clamp(1.25rem, 3vw,   1.75rem);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .lang-hidden {
+            display: none !important;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--txt2);
+            font-family: 'Share Tech Mono', monospace;
+            font-weight: 400;
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeUp 0.4s ease both;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        canvas {
+            max-width: 100%;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 3px,
+                rgba(0,0,0,0.06) 3px,
+                rgba(0,0,0,0.06) 6px
+            );
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0,255,65,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,255,65,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 9998;
+        }
+
+        .bracket {
+            position: fixed;
+            color: rgba(0,255,65,0.15);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-lg);
+            pointer-events: none;
+            z-index: 10000;
+        }
+        .bracket-tl { top: 12px;    left: 16px;  }
+        .bracket-tr { top: 12px;    right: 16px; }
+        .bracket-bl { bottom: 12px; left: 16px;  }
+        .bracket-br { bottom: 12px; right: 16px; }
+
+        .pch-btn {
+            display: inline-block;
+            margin-top: 6px;
+            background: transparent;
+            border: 1px solid var(--red);
+            color: var(--red);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            text-decoration: none;
+            border-radius: 2px;
+            font-weight: 700;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        .pch-btn:hover {
+            background: rgba(255,32,32,0.06);
+            color: var(--red);
+        }
+
+        .translate-btn {
+            position: relative;
+            background: transparent;
+            border: 1px solid var(--amber);
+            color: var(--amber);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.375rem 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-radius: 2px;
+            font-weight: 600;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .translate-btn:hover {
+            background: rgba(255,178,0,0.08);
+            color: var(--amber2);
+            border-color: var(--amber2);
+        }
+
+        .header {
+            width: 100%;
+            max-width: 75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 3rem;
+            border-bottom: 1px solid var(--rule);
+            background: var(--bg);
+            position: relative;
+            z-index: 100;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .logo-mark {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xl);
+            color: var(--hi);
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .nav-link:hover,
+        .nav-link.highlight {
+            color: var(--hi);
+        }
+
+        .section-label {
+            width: 100%;
+            max-width: 60rem;
+            padding: 0.8125rem 3rem;
+            border-bottom: 1px solid var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--amber);
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            font-weight: 600;
+        }
+        .section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--rule);
+            min-width: 20px;
+        }
+
+        .hero {
+            width: 100%;
+            max-width: 60rem;
+            padding: 4rem 3rem 3.5rem;
+            border-bottom: 1px solid var(--rule);
+            display: grid;
+            grid-template-columns: 1fr 18rem;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .hero-kicker {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 4px;
+            color: var(--txt3);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .hero-h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            line-height: 1.2;
+            color: var(--hi);
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            word-break: break-word;
+        }
+        .hero-h1 em {
+            color: var(--hi);
+            font-style: normal;
+        }
+
+        .hero-body {
+            font-size: var(--fs-md);
+            color: var(--txt);
+            line-height: 1.8;
+            max-width: 65ch;
+            text-align: left;
+        }
+        .hero-body strong {
+            color: var(--txt2);
+        }
+
+        .hero-right {
+            display: flex;
+            flex-direction: column;
+            padding-top: 0.5rem;
+        }
+
+        .kv {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0.6875rem 1rem;
+            border-bottom: 1px solid var(--rule);
+            gap: 0.5rem;
+        }
+        .kv:first-child {
+            border-top: 1px solid var(--rule);
+        }
+        .kv-key {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .kv-val {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-lg);
+            color: var(--hi);
+            font-weight: 700;
+            text-align: right;
+            word-break: break-word;
+        }
+        .kv-val.white {
+            color: var(--txt2);
+            font-size: var(--fs-md);
+            font-family: 'Share Tech Mono', monospace;
+            font-weight: 400;
+        }
+        .kv-val.amber {
+            color: var(--amber);
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: transparent;
+            border: 1px solid var(--hi);
+            color: var(--hi);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-sm);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.625rem 1.125rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 2px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .btn-primary:hover {
+            background: rgba(0,255,65,0.06);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid var(--rule);
+            color: var(--txt3);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-sm);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.625rem 1.125rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 2px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .btn-secondary:hover {
+            border-color: var(--amber);
+            color: var(--amber);
+        }
+
+        .content-section {
+            width: 100%;
+            max-width: 60rem;
+            padding: 3rem;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .content-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            color: var(--amber);
+            margin-bottom: 0.625rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            word-break: break-word;
+            border-bottom: 1px solid var(--rule);
+            padding-bottom: 0.5rem;
+        }
+
+        .content-section h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: var(--hi);
+            margin-top: 1.75rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .content-section h4 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-sm);
+            color: var(--amber);
+            margin-top: 1.125rem;
+            margin-bottom: 0.375rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .content-section p {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-md);
+            color: var(--txt);
+            line-height: 1.9;
+            margin-bottom: 0.75rem;
+            word-break: break-word;
+            max-width: 70ch;
+            text-align: left;
+        }
+        .content-section p strong {
+            color: var(--txt2);
+        }
+
+        .content-section ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 1rem;
+        }
+        .content-section ul li {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-md);
+            color: var(--txt);
+            line-height: 1.8;
+            padding-left: 0.875rem;
+            position: relative;
+            max-width: 70ch;
+            text-align: left;
+            word-break: break-word;
+        }
+        .content-section ul li::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            color: var(--hi);
+            font-weight: bold;
+        }
+
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 0.75rem 0 1.125rem;
+        }
+
+        .pw-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-xs);
+        }
+        .pw-table th {
+            text-align: left;
+            padding: 0.5rem 0.625rem;
+            background: var(--bg);
+            border-bottom: 1px solid var(--rule);
+            font-size: var(--fs-xs);
+        }
+        .pw-table td {
+            padding: 0.5rem 0.625rem;
+            color: var(--txt);
+            border-bottom: 1px solid var(--rule);
+            line-height: 1.5;
+            vertical-align: top;
+            word-break: break-word;
+            text-align: left;
+        }
+        .pw-table tr:last-child td {
+            border-bottom: none;
+        }
+        .pw-table .dim {
+            color: var(--txt2);
+            font-weight: 600;
+        }
+
+        .spectrum {
+            padding: 1.25rem 1.5rem;
+            background: var(--bg);
+            border: 1px solid var(--rule);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-sm);
+            color: var(--hi);
+            line-height: 2.2;
+            margin: 1rem 0;
+            border-radius: 2px;
+            text-align: center;
+            word-break: break-word;
+        }
+        .spectrum .l1 { color: var(--amber);  }
+        .spectrum .l2 { color: var(--amber2); }
+        .spectrum .l3 { color: var(--hi2);    }
+        .spectrum .l4 { color: var(--hi);     }
+
+        .code-block {
+            padding: 1.25rem 1.5rem;
+            background: rgba(0,255,65,0.02);
+            border: 1px solid var(--rule);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-sm);
+            color: var(--hi);
+            line-height: 1.6;
+            margin: 1rem 0;
+            border-radius: 2px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+            text-align: left;
+        }
+
+        .quote-block {
+            padding: 1rem 1.25rem;
+            background: rgba(0,255,65,0.03);
+            border-left: 2px solid var(--hi);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: var(--fs-md);
+            color: var(--hi);
+            line-height: 1.8;
+            margin: 1rem 0;
+            border-radius: 0 2px 2px 0;
+            font-weight: 400;
+            word-break: break-word;
+            text-align: left;
+        }
+
+        .note-block {
+            padding: 0.75rem 1rem;
+            background: rgba(255,178,0,0.04);
+            border-left: 2px solid var(--amber);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: var(--fs-xs);
+            color: var(--amber2);
+            line-height: 1.7;
+            margin: 0.75rem 0;
+            border-radius: 0 2px 2px 0;
+            font-weight: 500;
+            text-align: left;
+        }
+        .note-block strong {
+            color: var(--amber);
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+        }
+
+        .nav-internal {
+            text-align: center;
+            padding: 2rem 3rem;
+            border-bottom: 1px solid var(--rule);
+        }
+        .nav-internal a {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-sm);
+            letter-spacing: 2px;
+            color: var(--amber);
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.2s;
+        }
+        .nav-internal a:hover {
+            color: var(--hi);
+        }
+        .nav-internal span {
+            color: var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-sm);
+        }
+
+        .article-index {
+            list-style: none;
+            padding-left: 0;
+        }
+        .article-index li {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-md);
+            color: var(--txt);
+            line-height: 1.8;
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.25rem;
+            text-align: left;
+            word-break: break-word;
+        }
+        .article-index li::before {
+            content: '[+]';
+            position: absolute;
+            left: 0;
+            color: var(--amber);
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+        }
+        .article-index li a {
+            color: var(--txt2);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .article-index li a:hover {
+            color: var(--amber);
+        }
+
+        .footer {
+            width: 100%;
+            max-width: 60rem;
+            padding: 1.625rem 3rem;
+            border-top: 1px solid var(--rule);
+            position: relative;
+            z-index: 50;
+        }
+
+        .footer-modules {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 0.875rem;
+        }
+        .footer-modules a {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            color: var(--txt3);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+            white-space: nowrap;
+            text-transform: uppercase;
+        }
+        .footer-modules a:hover,
+        .footer-modules a.footer-current {
+            color: var(--hi);
+        }
+        .footer-modules span {
+            color: var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+        }
+
+        .footer-social {
+            text-align: center;
+            margin-bottom: 0.875rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-xs);
+            color: var(--amber);
+        }
+        .footer-social a {
+            color: var(--amber);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-social a:hover {
+            color: var(--hi);
+        }
+        .footer-social span {
+            color: var(--rule);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: var(--fs-xs);
+            color: rgba(0,255,65,0.25);
+            line-height: 1.8;
+            letter-spacing: 1px;
+            font-weight: 500;
+            word-break: break-word;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0);    }
+        }
+
+        @media (max-width: 1024px) {
+            .header { gap: 0.75rem; }
+            .hero { gap: 1.5rem; }
+            .nav-link { font-size: var(--fs-xs); }
+            .section-label { font-size: var(--fs-xs); }
+            .footer-modules a { font-size: var(--fs-xs); }
+            .footer-social { font-size: var(--fs-xs); }
+            .footer-bottom { font-size: var(--fs-xs); }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 1rem 1.5rem;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .header-nav {
+                width: 100%;
+                gap: 1rem;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 4px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+            .header-nav::-webkit-scrollbar {
+                display: none;
+            }
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 2.5rem 1.5rem 2.25rem;
+                gap: 1.5rem;
+            }
+            .hero-body {
+                max-width: 100%;
+            }
+            .hero-actions {
+                flex-direction: column;
+            }
+            .btn-primary,
+            .btn-secondary {
+                text-align: center;
+                width: 100%;
+            }
+            .content-section {
+                padding: 2rem 1.5rem;
+            }
+            .section-label {
+                padding: 0.8125rem 1.5rem;
+            }
+            .footer {
+                padding: 1.25rem 1.5rem;
+            }
+            .bracket {
+                font-size: 0.9rem;
+            }
+            [class*="grid"],
+            [class*="cols"],
+            [class*="columns"] {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header        { padding: 0.75rem 1rem; }
+            .hero          { padding: 1.75rem 1rem 1.5rem; }
+            .content-section { padding: 1.5rem 1rem; }
+            .footer        { padding: 1rem; }
+            .footer-modules { gap: 0.75rem; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0002-3432-1710",
+      "name": "Dany D. Ruiz",
+      "alternateName": "panperceptual",
+      "jobTitle": "Anartist · Independent Researcher",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "url": "https://perceptemple.art",
+      "sameAs": [
+        "https://orcid.org/0009-0002-3432-1710",
+        "https://x.com/panperceptual",
+        "https://github.com/PERCEPTEMPLE",
+        "https://doi.org/10.17605/OSF.IO/FVCAX",
+        "https://doi.org/10.5281/zenodo.17683631",
+        "https://doi.org/10.2139/ssrn.5794102"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Panperceptual Theory of the Universe — Complete Index",
+      "description": "Epistemological critique revealing Popperian falsifiability as a culturally specific Perceptual Complexity Index, not a universal scientific standard, from the Panperceptual Theory framework.",
+      "datePublished": "2026-06-07",
+      "dateModified": "2026-06-07",
+      "url": "https://perceptemple.art/ptu/",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "@id": "https://orcid.org/0009-0002-3432-1710",
+        "name": "Dany D. Ruiz"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "hasPart": [
+        { "@type": "ScholarlyArticle", "name": "PTU Part 1",  "url": "https://perceptemple.art/ptu/part-1/" },
+        { "@type": "ScholarlyArticle", "name": "PTU Part 2",  "url": "https://perceptemple.art/ptu/part-2/" },
+        { "@type": "ScholarlyArticle", "name": "PTU Part 3",  "url": "https://perceptemple.art/ptu/part-3/" },
+        { "@type": "ScholarlyArticle", "name": "PTU Part 4",  "url": "https://perceptemple.art/ptu/part-4/" },
+        { "@type": "ScholarlyArticle", "name": "PTU Part 5",  "url": "https://perceptemple.art/ptu/part-5/" },
+        { "@type": "ScholarlyArticle", "name": "PTU Part 6",  "url": "https://perceptemple.art/ptu/part-6/" },
+        { "@type": "ScholarlyArticle", "name": "PTU Part 7",  "url": "https://perceptemple.art/ptu/part-7/" },
+        { "@type": "ScholarlyArticle", "name": "PTU Part 8",  "url": "https://perceptemple.art/ptu/part-8/" },
+        { "@type": "ScholarlyArticle", "name": "PTU Part 9",  "url": "https://perceptemple.art/ptu/part-9/" },
+        { "@type": "ScholarlyArticle", "name": "PTU Part 10", "url": "https://perceptemple.art/ptu/part-10/" },
+        { "@type": "ScholarlyArticle", "name": "PTU Part 11", "url": "https://perceptemple.art/ptu/part-11/" },
+        { "@type": "ScholarlyArticle", "name": "PTU Part 12", "url": "https://perceptemple.art/ptu/part-12/" },
+        { "@type": "ScholarlyArticle", "name": "PTU Part 13", "url": "https://perceptemple.art/ptu/part-13/" },
+        { "@type": "ScholarlyArticle", "name": "PTU Part 14", "url": "https://perceptemple.art/ptu/part-14/" },
+        { "@type": "ScholarlyArticle", "name": "PTU Part 15", "url": "https://perceptemple.art/ptu/part-15/" },
+        { "@type": "ScholarlyArticle", "name": "PTU Part 17", "url": "https://perceptemple.art/ptu/part-17/" }
+      ],
+      "sameAs": [
+        "https://doi.org/10.17605/OSF.IO/UXEGH",
+        "https://doi.org/10.5281/zenodo.19168519",
+        "https://doi.org/10.2139/ssrn.6456099"
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <span class="bracket bracket-tl">[</span>
+    <span class="bracket bracket-tr">]</span>
+    <span class="bracket bracket-bl">[</span>
+    <span class="bracket bracket-br">]</span>
+
+    <div class="header">
+        <div class="logo">
+            <span class="logo-mark" data-lang="en">PERCEPTEMPLE</span>
+            <span class="logo-mark lang-hidden" data-lang="es">PERCEPTEMPLE</span>
+            <br>
+            <a class="pch-btn" href="../index.html">
+                <span data-lang="en">HUMAN CONSCIOUSNESS TEST</span>
+                <span data-lang="es" class="lang-hidden">PRUEBA DE CONCIENCIA HUMANA</span>
+            </a>
+        </div>
+        <nav class="header-nav">
+            <a class="nav-link" href="../percepware/index.html">
+                <span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span>
+            </a>
+            <a class="nav-link" href="../pci/index.html">
+                <span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span>
+            </a>
+            <a class="nav-link" href="../aei/index.html">
+                <span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span>
+            </a>
+            <a class="nav-link" href="../neohaki/index.html">
+                <span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span>
+            </a>
+            <a class="nav-link" href="../pram/index.html">
+                <span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span>
+            </a>
+            <a class="nav-link" href="../licence/index.html">
+                <span data-lang="en">LICENSE</span><span data-lang="es" class="lang-hidden">LICENCIA</span>
+            </a>
+            <a class="nav-link" href="../bitneko/index.html">
+                <span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span>
+            </a>
+            <a class="nav-link" href="../space/index.html">
+                <span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span>
+            </a>
+            <a class="nav-link" href="../agamottor/index.html">
+                <span data-lang="en">AGAMOTTOR</span><span data-lang="es" class="lang-hidden">AGAMOTTOR</span>
+            </a>
+            <a class="nav-link" href="../little-prince/index.html">
+                <span data-lang="en">LITTLE PRINCE</span><span data-lang="es" class="lang-hidden">LITTLE PRINCE</span>
+            </a>
+            <a class="nav-link highlight" href="index.html">
+                <span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span>
+            </a>
+            <a class="nav-link" href="../time-machine/index.html">
+                <span data-lang="en">TIME MACHINE</span><span data-lang="es" class="lang-hidden">MÁQUINA DEL TIEMPO</span>
+            </a>
+            <a class="nav-link" href="../poetry/index.html">
+                <span data-lang="en">POETRY</span><span data-lang="es" class="lang-hidden">POESÍA</span>
+            </a>
+            <button class="translate-btn" id="langToggle" onclick="toggleLanguage()">ES</button>
+        </nav>
+    </div>
+
+    <div class="section-label">
+        <span data-lang="en">PANPERCEPTUAL TREATISE · PART 16</span>
+        <span data-lang="es" class="lang-hidden">TRATADO PANPERCEPTUAL · PARTE 16</span>
+    </div>
+
+    <div class="hero">
+        <div class="hero-left">
+            <div class="hero-kicker" data-lang="en">AN EPISTEMOLOGICAL CRITIQUE</div>
+            <div class="hero-kicker lang-hidden" data-lang="es">UNA CRÍTICA EPISTEMOLÓGICA</div>
+            <h1 class="hero-h1">
+                <span data-lang="en">An Epistemological Critique of the Cultural Limits of Popperian Science from the Panperceptual Theory of the Universe</span>
+                <span data-lang="es" class="lang-hidden">Una Crítica Epistemológica de los Límites Culturales de la Ciencia Popperiana desde la Teoría Panperceptual del Universo</span>
+            </h1>
+            <div class="hero-body" data-lang="en">
+                <p>Science is not a monolith. Popper's falsifiability criterion —a tool born in 1930s Vienna— has been universalized as if it were the only legitimate way to produce valid knowledge. This essay demonstrates that this criterion represents a specific Western Perceptual Complexity Index (PCI), not a universal standard, and that PTU, evaluated from relational ontologies (Madhyamaka, Taoism, indigenous cosmologies), is not only coherent but profoundly fruitful.</p>
+            </div>
+            <div class="hero-body lang-hidden" data-lang="es">
+                <p>La ciencia no es un monolito. El criterio de falsabilidad de Popper —una herramienta surgida en la Viena de los años 30— se ha universalizado como si fuera el único modo legítimo de producir conocimiento válido. Este ensayo demuestra que dicho criterio representa un Índice de Complejidad Perceptual (PCI) occidental específico, no un estándar universal, y que la PTU, evaluada desde ontologías relacionales (Madhyamaka, Taoísmo, cosmologías indígenas), no solo es coherente sino profundamente fructífera.</p>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="kv">
+                <span class="kv-key" data-lang="en">AUTHOR</span>
+                <span class="kv-key lang-hidden" data-lang="es">AUTOR</span>
+                <span class="kv-val white">Dany D. Ruiz</span>
+            </div>
+            <div class="kv">
+                <span class="kv-key" data-lang="en">MODULE</span>
+                <span class="kv-key lang-hidden" data-lang="es">MÓDULO</span>
+                <span class="kv-val amber">
+                    <span data-lang="en">PTU · PART 16</span>
+                    <span data-lang="es" class="lang-hidden">PTU · PARTE 16</span>
+                </span>
+            </div>
+            <div class="kv">
+                <span class="kv-key" data-lang="en">SERIES</span>
+                <span class="kv-key lang-hidden" data-lang="es">SERIE</span>
+                <span class="kv-val white">
+                    <span data-lang="en">17 PARTS</span>
+                    <span data-lang="es" class="lang-hidden">17 PARTES</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">1. Introduction</h2>
+        <h2 class="lang-hidden" data-lang="es">1. Introducción</h2>
+
+        <h3 data-lang="en">1.1 The Problem</h3>
+        <h3 class="lang-hidden" data-lang="es">1.1 El Problema</h3>
+
+        <p data-lang="en">Twentieth-century philosophy of science consolidated the falsifiability criterion proposed by Karl Popper (1934/2002) as a demarcation between scientific and non-scientific knowledge. This criterion establishes that a proposition is scientific if and only if it is empirically refutable —that is, if there exist potential observations that, if realized, would demonstrate its falsehood. However, the universal application of this criterion presents at least three fundamental problems:</p>
+        <p class="lang-hidden" data-lang="es">La filosofía de la ciencia del siglo XX consolidó el criterio de falsabilidad propuesto por Karl Popper (1934/2002) como demarcación entre conocimiento científico y no científico. Este criterio establece que una proposición es científica si y solo si es empíricamente refutable —es decir, si existen observaciones potenciales que, de realizarse, demostrarían su falsedad. Sin embargo, la aplicación universal de este criterio presenta al menos tres problemas fundamentales:</p>
+
+        <p data-lang="en"><strong>First</strong>, it presupposes a realist ontology where "objective facts" exist independently of the observer that can serve as neutral arbiters of competing theories —an assumption questioned by developments in quantum mechanics (the measurement problem) and phenomenology (Husserl, 1913/1982; Merleau-Ponty, 1945/2012).</p>
+        <p class="lang-hidden" data-lang="es"><strong>Primero</strong>, presupone una ontología realista donde existen "hechos objetivos" independientes del observador que pueden servir como árbitros neutrales de teorías rivales —un supuesto cuestionado por desarrollos en mecánica cuántica (el problema de la medición) y la fenomenología (Husserl, 1913/1982; Merleau-Ponty, 1945/2012).</p>
+
+        <p data-lang="en"><strong>Second</strong>, it privileges epistemologies based on Aristotelian logic (principle of non-contradiction, excluded middle) and linear causality, systematically excluding intellectual traditions that operate under relational ontologies where contradiction is productive and causality is circular or mutually constitutive.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Segundo</strong>, privilegia epistemologías basadas en lógica aristotélica (principio de no contradicción, tercero excluido) y causalidad lineal, excluyendo sistemáticamente tradiciones intelectuales que operan bajo ontologías relacionales donde la contradicción es productiva y la causalidad es circular o mutuamente constitutiva.</p>
+
+        <p data-lang="en"><strong>Third</strong>, and most critically, Popperian falsifiability emerges from a specific historical and cultural context (Vienna, 1930s, Vienna Circle, logical positivism) that responds to particular European intellectual concerns (demarcation against Marxism and psychoanalysis), and therefore represents a culturally situated epistemological framework, not a universal and timeless standard.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Tercero</strong>, y más críticamente, la falsabilidad popperiana emerge de un contexto histórico y cultural específico (Viena, años 30, Círculo de Viena, positivismo lógico) que responde a preocupaciones intelectuales europeas particulares (demarcación frente al marxismo y el psicoanálisis), y por lo tanto representa un marco epistemológico culturalmente situado, no un estándar universal y atemporal.</p>
+
+        <h3 data-lang="en">1.2 Case Study: The Panperceptual Theory of the Universe</h3>
+        <h3 class="lang-hidden" data-lang="es">1.2 Caso de Estudio: La Teoría Panperceptual del Universo</h3>
+
+        <p data-lang="en">The Panperceptual Theory of the Universe (PTU), developed by Dany D. Ruiz (2024-2025), proposes that reality is not a preexisting objective entity, but an emergent phenomenon co-created through the interaction of multiple perceptual systems. Formally, the PTU models each observer through a Perceptual Wave Function (PWF):</p>
+        <p class="lang-hidden" data-lang="es">La Teoría Panperceptual del Universo (PTU), desarrollada por Dany D. Ruiz (2024-2025), propone que la realidad no es una entidad objetiva preexistente, sino un fenómeno emergente co-creado a través de la interacción de múltiples sistemas perceptuales. Formalmente, la PTU modela cada observador mediante una Función de Onda Perceptual (PWF):</p>
+
+        <div class="code-block">
+            Φ(x,t) = ∫ d³k/(2π)³ [aₖ e^(i(kx-ωt)) + aₖ† e^(-i(kx-ωt))]
+        </div>
+
+        <p data-lang="en">and quantifies their perceptual capacity through the Perceptual Complexity Index (PCI):</p>
+        <p class="lang-hidden" data-lang="es">y cuantifica su capacidad perceptual mediante el Índice de Complejidad Perceptual (PCI):</p>
+
+        <div class="code-block">
+            PCI = (N · I · F)/T · (1 + α Sₜ)
+        </div>
+
+        <p data-lang="en">where N represents processing units, I interconnectivity, F processing frequency, T response time, and Sₜ temporal entropy.</p>
+        <p class="lang-hidden" data-lang="es">donde N representa unidades de procesamiento, I interconectividad, F frecuencia de procesamiento, T tiempo de respuesta, y Sₜ entropía temporal.</p>
+
+        <p data-lang="en">The theory postulates that multiple observers generate an emergent reality through perceptual superposition:</p>
+        <p class="lang-hidden" data-lang="es">La teoría postula que múltiples observadores generan una realidad emergente mediante superposición perceptual:</p>
+
+        <div class="code-block">
+            R = Σᵢ Φᵢ + Σᵢ,ⱼ γᵢⱼ Φᵢ Φⱼ
+        </div>
+
+        <p data-lang="en">where γᵢⱼ quantifies resonant coupling between observers.</p>
+        <p class="lang-hidden" data-lang="es">donde γᵢⱼ cuantifica el acoplamiento resonante entre observadores.</p>
+
+        <p data-lang="en">When evaluating the PTU through standard Popperian criteria, we identify apparent "fatal logical incoherencies": causal circularity (P→R→PCI→P), impossibility of calibration between different PCIs, and empirical irrefutability. However, this article argues that these "incoherencies" emerge exclusively from the application of an inadequate epistemological framework, and that the PTU is perfectly coherent when evaluated from relational ontologies compatible with its fundamental presuppositions.</p>
+        <p class="lang-hidden" data-lang="es">Al evaluar la PTU mediante criterios popperianos estándar, identificamos aparentes "incoherencias lógicas fatales": circularidad causal (P→R→PCI→P), imposibilidad de calibración entre diferentes PCI, e irrefutabilidad empírica. Sin embargo, este artículo argumenta que estas "incoherencias" emergen exclusivamente de la aplicación de un marco epistemológico inadecuado, y que la PTU es perfectamente coherente cuando se evalúa desde ontologías relacionales compatibles con sus presupuestos fundamentales.</p>
+
+        <h3 data-lang="en">1.3 Objective and Structure</h3>
+        <h3 class="lang-hidden" data-lang="es">1.3 Objetivo y Estructura</h3>
+
+        <ul>
+            <li data-lang="en"><strong>Demonstrate</strong> that the Popperian falsifiability criterion represents a culturally specific PCI, not a universal epistemological standard</li>
+            <li class="lang-hidden" data-lang="es"><strong>Demostrar</strong> que el criterio de falsabilidad popperiana representa un PCI culturalmente específico, no un estándar epistemológico universal</li>
+            <li data-lang="en"><strong>Analyze</strong> how apparent "paradoxes" in the PTU are resolved when alternative epistemological frameworks are applied (Buddhist Madhyamaka, Taoism, indigenous cosmologies)</li>
+            <li class="lang-hidden" data-lang="es"><strong>Analizar</strong> cómo las aparentes "paradojas" de la PTU se resuelven al aplicar marcos epistemológicos alternativos (Madhyamaka budista, Taoísmo, cosmologías indígenas)</li>
+            <li data-lang="en"><strong>Propose</strong> criteria for a pluralist scientific epistemology that allows theories to be evaluated according to their own conceptual frameworks</li>
+            <li class="lang-hidden" data-lang="es"><strong>Proponer</strong> criterios para una epistemología científica pluralista que permita evaluar teorías según sus propios marcos conceptuales</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">2. Falsifiability as a Culturally Situated Perceptual Complexity Index</h2>
+        <h2 class="lang-hidden" data-lang="es">2. La Falsabilidad como Índice de Complejidad Perceptual Culturalmente Situado</h2>
+
+        <h3 data-lang="en">2.1 Historical Genesis of the Popperian Criterion</h3>
+        <h3 class="lang-hidden" data-lang="es">2.1 Génesis Histórica del Criterio Popperiano</h3>
+
+        <p data-lang="en">The falsifiability criterion did not emerge in an intellectual vacuum, but as a response to specific problems of the European interwar context. Popper (1934/2002) explicitly formulated it to demarcate empirical science from: (a) metaphysics (traditionally excluded from the scientific domain), (b) Marxism (which he considered irrefutable through ad hoc reinterpretations), and (c) Freudian psychoanalysis (which according to Popper could explain any behavior post hoc).</p>
+        <p class="lang-hidden" data-lang="es">El criterio de falsabilidad no surgió en un vacío intelectual, sino como respuesta a problemas específicos del contexto europeo de entreguerras. Popper (1934/2002) lo formuló explícitamente para demarcar la ciencia empírica de: (a) la metafísica (tradicionalmente excluida del dominio científico), (b) el marxismo (que consideraba irrefutable mediante reinterpretaciones ad hoc), y (c) el psicoanálisis freudiano (que según Popper podía explicar cualquier comportamiento post hoc).</p>
+
+        <p data-lang="en">As Kuhn (1962/2012) subsequently argued, criteria for scientific demarcation are neither neutral nor timeless, but reflect values and concerns of particular scientific communities at specific historical moments. The context of the Vienna Circle —analytic philosophy, logical empiricism, rejection of speculative metaphysics— fundamentally shaped the Popperian criterion.</p>
+        <p class="lang-hidden" data-lang="es">Como Kuhn (1962/2012) argumentó posteriormente, los criterios de demarcación científica no son neutrales ni atemporales, sino que reflejan valores y preocupaciones de comunidades científicas particulares en momentos históricos específicos. El contexto del Círculo de Viena —filosofía analítica, empirismo lógico, rechazo de la metafísica especulativa— moldeó fundamentalmente el criterio popperiano.</p>
+
+        <h3 data-lang="en">2.2 Ontological Presuppositions of Falsifiability</h3>
+        <h3 class="lang-hidden" data-lang="es">2.2 Presupuestos Ontológicos de la Falsabilidad</h3>
+
+        <p data-lang="en">The falsifiability criterion implicitly presupposes:</p>
+        <p class="lang-hidden" data-lang="es">El criterio de falsabilidad presupone implícitamente:</p>
+
+        <p data-lang="en"><strong>P1: Ontological Realism</strong> — There exist objective facts independent of any particular observer that can serve as arbiters of competing theories.</p>
+        <p class="lang-hidden" data-lang="es"><strong>P1: Realismo Ontológico</strong> — Existen hechos objetivos independientes de cualquier observador particular que pueden servir como árbitros de teorías rivales.</p>
+
+        <p data-lang="en"><strong>P2: Aristotelian Logic</strong> — The principle of non-contradiction (¬(A ∧ ¬A)) and excluded middle (A ∨ ¬A) are universally valid.</p>
+        <p class="lang-hidden" data-lang="es"><strong>P2: Lógica Aristotélica</strong> — El principio de no contradicción (¬(A ∧ ¬A)) y el tercero excluido (A ∨ ¬A) son universalmente válidos.</p>
+
+        <p data-lang="en"><strong>P3: Linear Causality</strong> — Causal relations flow unidirectionally from past to future, and cannot be circular without violating the principle of sufficient reason.</p>
+        <p class="lang-hidden" data-lang="es"><strong>P3: Causalidad Lineal</strong> — Las relaciones causales fluyen unidireccionalmente del pasado al futuro, y no pueden ser circulares sin violar el principio de razón suficiente.</p>
+
+        <p data-lang="en"><strong>P4: Subject-Object Separability</strong> — The scientific observer can, in principle, be separated from the observed phenomenon without fundamentally altering the nature of the phenomenon.</p>
+        <p class="lang-hidden" data-lang="es"><strong>P4: Separabilidad Sujeto-Objeto</strong> — El observador científico puede, en principio, ser separado del fenómeno observado sin alterar fundamentalmente la naturaleza del fenómeno.</p>
+
+        <p data-lang="en"><strong>P5: Methodological Universality</strong> — There exists a single scientific method valid for all cultures and contexts.</p>
+        <p class="lang-hidden" data-lang="es"><strong>P5: Universalidad Metodológica</strong> — Existe un único método científico válido para todas las culturas y contextos.</p>
+
+        <p data-lang="en">Each of these presuppositions is culturally specific and has been questioned both by non-Western philosophical traditions and by developments in modern physics.</p>
+        <p class="lang-hidden" data-lang="es">Cada uno de estos presupuestos es culturalmente específico y ha sido cuestionado tanto por tradiciones filosóficas no occidentales como por desarrollos de la física moderna.</p>
+
+        <h3 data-lang="en">2.3 Formalization as Western PCI</h3>
+        <h3 class="lang-hidden" data-lang="es">2.3 Formalización como PCI Occidental</h3>
+
+        <p data-lang="en">Using the PTU framework, we can characterize "Popperian science" as a collective observer with specific PCI:</p>
+        <p class="lang-hidden" data-lang="es">Utilizando el marco de la PTU, podemos caracterizar la "ciencia popperiana" como un observador colectivo con PCI específico:</p>
+
+        <p data-lang="en"><strong>N (Processing Units)</strong>: Western scientific community educated in European and North American academic institutions (~10⁶ active individuals at any given moment).</p>
+        <p class="lang-hidden" data-lang="es"><strong>N (Unidades de procesamiento)</strong>: Comunidad científica occidental educada en instituciones académicas europeas y norteamericanas (~10⁶ individuos activos en un momento dado).</p>
+
+        <p data-lang="en"><strong>I (Interconnectivity)</strong>: Structured through peer-reviewed journals, international conferences, academic institutions, citation networks (I ≈ 0.6-0.7, moderately high but with disciplinary clustering).</p>
+        <p class="lang-hidden" data-lang="es"><strong>I (Interconectividad)</strong>: Estructurada a través de revistas arbitradas, conferencias internacionales, instituciones académicas, redes de citación (I ≈ 0.6-0.7, moderadamente alta pero con agrupamiento disciplinar).</p>
+
+        <p data-lang="en"><strong>F (Processing Frequency)</strong>: Kuhnian scientific revolutions every ~50-100 years, slow paradigmatic changes compared to individual scales (F ≈ 0.01-0.02 Hz in terms of "paradigm shifts per year").</p>
+        <p class="lang-hidden" data-lang="es"><strong>F (Frecuencia de procesamiento)</strong>: Revoluciones científicas kuhnianas cada ~50-100 años, cambios paradigmáticos lentos comparados con escalas individuales (F ≈ 0.01-0.02 Hz en términos de "cambios de paradigma por año").</p>
+
+        <p data-lang="en"><strong>T (Response Time)</strong>: Decades from theoretical proposal to widespread acceptance (examples: continental drift ~50 years, heliocentrism ~150 years).</p>
+        <p class="lang-hidden" data-lang="es"><strong>T (Tiempo de respuesta)</strong>: Décadas desde la propuesta teórica hasta la aceptación generalizada (ejemplos: deriva continental ~50 años, heliocentrismo ~150 años).</p>
+
+        <p data-lang="en"><strong>Sₜ (Temporal Entropy)</strong>: Low — Western science privileges linear cumulative knowledge and minimizes discontinuities or radical ruptures.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Sₜ (Entropía Temporal)</strong>: Baja — la ciencia occidental privilegia el conocimiento acumulativo lineal y minimiza discontinuidades o rupturas radicales.</p>
+
+        <div class="code-block">
+            PCI_western = (N · I · F)/T · (1 + α Sₜ) 
+            = (10⁶ · 0.65 · 0.015)/3.15×10⁶ · (1 + 0.3 · 0.4) 
+            ≈ 3.5 × 10⁻³
+        </div>
+
+        <p data-lang="en">(where T ≈ 100 years ≈ 3.15×10⁶ seconds)</p>
+        <p class="lang-hidden" data-lang="es">(donde T ≈ 100 años ≈ 3.15×10⁶ segundos)</p>
+
+        <p data-lang="en">This particular PCI collapses a scientific reality where:</p>
+        <p class="lang-hidden" data-lang="es">Este PCI particular colapsa una realidad científica donde:</p>
+
+        <ul>
+            <li data-lang="en">Contradiction is inadmissible</li>
+            <li class="lang-hidden" data-lang="es">La contradicción es inadmisible</li>
+            <li data-lang="en">Causality is linear</li>
+            <li class="lang-hidden" data-lang="es">La causalidad es lineal</li>
+            <li data-lang="en">The observer must be methodologically eliminated</li>
+            <li class="lang-hidden" data-lang="es">El observador debe ser eliminado metodológicamente</li>
+            <li data-lang="en">Only the quantifiable and replicable counts as valid knowledge</li>
+            <li class="lang-hidden" data-lang="es">Solo lo cuantificable y replicable cuenta como conocimiento válido</li>
+        </ul>
+
+        <p data-lang="en"><strong>Crucially</strong>: This PCI is not "the correct way to do science," but <strong>a culturally specific form</strong> optimized for certain types of phenomena (simple, reproducible, non-conscious physical systems) but potentially inadequate for others (complex, self-organized, conscious, context-dependent systems).</p>
+        <p class="lang-hidden" data-lang="es"><strong>Crucialmente</strong>: Este PCI no es "la forma correcta de hacer ciencia", sino <strong>una forma culturalmente específica</strong> optimizada para ciertos tipos de fenómenos (sistemas físicos simples, reproducibles, no conscientes) pero potencialmente inadecuada para otros (sistemas complejos, autoorganizados, conscientes, dependientes del contexto).</p>
+
+        <h3 data-lang="en">2.4 Systematic Exclusion of Alternative Ontologies</h3>
+        <h3 class="lang-hidden" data-lang="es">2.4 Exclusión Sistemática de Ontologías Alternativas</h3>
+
+        <p data-lang="en">The privilege of the Western PCI has documented consequences:</p>
+        <p class="lang-hidden" data-lang="es">El privilegio del PCI occidental tiene consecuencias documentadas:</p>
+
+        <p data-lang="en"><strong>Santos (2007)</strong> identifies "epistemicide" —the systematic destruction of non-Western forms of knowledge through their classification as non-scientific, primitive or superstitious.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Santos (2007)</strong> identifica el "epistemicidio" —la destrucción sistemática de formas de conocimiento no occidentales mediante su clasificación como no científicas, primitivas o supersticiosas.</p>
+
+        <p data-lang="en"><strong>Smith (1999/2012)</strong> documents how indigenous research has been historically excluded from mainstream scientific publications not for lack of rigor, but due to methodological incompatibility with Western standards.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Smith (1999/2012)</strong> documenta cómo la investigación indígena ha sido históricamente excluida de las publicaciones científicas dominantes no por falta de rigor, sino por incompatibilidad metodológica con los estándares occidentales.</p>
+
+        <p data-lang="en"><strong>Harding (2011)</strong> argues that "universal science" is actually "provincial European science universalized through colonial power."</p>
+        <p class="lang-hidden" data-lang="es"><strong>Harding (2011)</strong> argumenta que la "ciencia universal" es en realidad "ciencia europea provincial universalizada mediante el poder colonial."</p>
+
+        <p data-lang="en">The falsifiability criterion participates in this exclusion by rejecting as "non-scientific" any epistemological framework that:</p>
+        <p class="lang-hidden" data-lang="es">El criterio de falsabilidad participa de esta exclusión al rechazar como "no científico" cualquier marco epistemológico que:</p>
+
+        <ul>
+            <li data-lang="en">Operates under non-binary logics (many Buddhist traditions, indigenous cosmologies)</li>
+            <li class="lang-hidden" data-lang="es">Opera bajo lógicas no binarias (muchas tradiciones budistas, cosmologías indígenas)</li>
+            <li data-lang="en">Accepts productive contradiction (Madhyamaka, Taoism)</li>
+            <li class="lang-hidden" data-lang="es">Acepta la contradicción productiva (Madhyamaka, Taoísmo)</li>
+            <li data-lang="en">Rejects subject-object separability (phenomenology, indigenous participatory science)</li>
+            <li class="lang-hidden" data-lang="es">Rechaza la separabilidad sujeto-objeto (fenomenología, ciencia participativa indígena)</li>
+            <li data-lang="en">Privileges embodied knowledge over abstract (traditional medicines, Polynesian navigation)</li>
+            <li class="lang-hidden" data-lang="es">Privilegia el conocimiento encarnado sobre el abstracto (medicinas tradicionales, navegación polinésica)</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">3. Resolution of "Paradoxes" through Alternative Epistemological Frameworks</h2>
+        <h2 class="lang-hidden" data-lang="es">3. Resolución de "Paradojas" mediante Marcos Epistemológicos Alternativos</h2>
+
+        <h3 data-lang="en">3.1 The Supposed "Fatal Circularity": P → R → PCI → P</h3>
+        <h3 class="lang-hidden" data-lang="es">3.1 La Supuesta "Circularidad Fatal": P → R → PCI → P</h3>
+
+        <p data-lang="en"><strong>Popperian Objection</strong>: The PTU affirms that (a) perception collapses reality, (b) physical reality allows measuring PCI, (c) the PCI quantifies perceptual capacity. This generates a closed causal loop without a starting point, violating the principle of sufficient reason and making the theory logically incoherent.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Objeción Popperiana</strong>: La PTU afirma que (a) la percepción colapsa realidad, (b) la realidad física permite medir el PCI, (c) el PCI cuantifica la capacidad perceptual. Esto genera un bucle causal cerrado sin punto de partida, violando el principio de razón suficiente y haciendo la teoría lógicamente incoherente.</p>
+
+        <p data-lang="en"><strong>Response from Buddhist Madhyamaka</strong>:</p>
+        <p class="lang-hidden" data-lang="es"><strong>Respuesta desde el Madhyamaka Budista</strong>:</p>
+
+        <p data-lang="en">Nagarjuna's Madhyamaka philosophy (2nd century CE) explicitly formulates the principle of <strong>pratītyasamutpāda</strong> (dependent co-origination): no phenomenon exists independently; everything arises in mutual dependence without ultimate foundation.</p>
+        <p class="lang-hidden" data-lang="es">La filosofía Madhyamaka de Nagarjuna (siglo II EC) formula explícitamente el principio de <strong>pratītyasamutpāda</strong> (co-originación dependiente): ningún fenómeno existe independientemente; todo surge en mutua dependencia sin fundamento último.</p>
+
+        <div class="quote-block">
+            <span data-lang="en">"There is nothing that is not dependently originated. Therefore, there is nothing that is not empty [of inherent existence]. [...] The search for a first cause or ultimate foundation is precisely the error that Madhyamaka seeks to dispel." — Garfield (1995)</span>
+            <span class="lang-hidden" data-lang="es">"No hay nada que no sea originado dependientemente. Por lo tanto, no hay nada que no sea vacío [de existencia inherente]. [...] La búsqueda de una primera causa o fundamento último es precisamente el error que Madhyamaka busca disipar." — Garfield (1995)</span>
+        </div>
+
+        <p data-lang="en">From this perspective, the "circularity" P → R → PCI is not a logical contradiction, but a <strong>precise description of the relational structure of reality</strong>. The absence of an independent starting point is not a theoretical defect, but a fundamental characteristic of relational systems.</p>
+        <p class="lang-hidden" data-lang="es">Desde esta perspectiva, la "circularidad" P → R → PCI no es una contradicción lógica, sino una <strong>descripción precisa de la estructura relacional de la realidad</strong>. La ausencia de un punto de partida independiente no es un defecto teórico, sino una característica fundamental de los sistemas relacionales.</p>
+
+        <p data-lang="en">Mathematically, this can be formalized through category theory instead of set theory. While set theory requires undefined primitive elements (atoms), category theory defines objects entirely through their relations (morphisms). The PTU operates analogously: it does not require "fundamental physical reality" or "primordial perception" as atoms, but defines both through their mutual relations.</p>
+        <p class="lang-hidden" data-lang="es">Matemáticamente, esto puede formalizarse mediante teoría de categorías en lugar de teoría de conjuntos. Mientras que la teoría de conjuntos requiere elementos primitivos indefinidos (átomos), la teoría de categorías define objetos enteramente a través de sus relaciones (morfismos). La PTU opera análogamente: no requiere "realidad física fundamental" o "percepción primordial" como átomos, sino que define ambas a través de sus relaciones mutuas.</p>
+
+        <p data-lang="en"><strong>Response from Taoism</strong>:</p>
+        <p class="lang-hidden" data-lang="es"><strong>Respuesta desde el Taoísmo</strong>:</p>
+
+        <p data-lang="en">The <em>Dao De Jing</em> (6th century BCE) explicitly formulates the mutual constitution of opposites without ontological hierarchy:</p>
+        <p class="lang-hidden" data-lang="es">El <em>Dao De Jing</em> (siglo VI aEC) formula explícitamente la constitución mutua de opuestos sin jerarquía ontológica:</p>
+
+        <div class="quote-block">
+            <span data-lang="en">"When all know beauty as beautiful, there is already ugliness.<br>
+            When all know good as good, there is already evil.<br>
+            Being and non-being produce each other,<br>
+            Difficult and easy complement each other,<br>
+            Long and short form each other" [Chapter 2]</span>
+            <span class="lang-hidden" data-lang="es">"Cuando todos conocen la belleza como bella, ya existe la fealdad.<br>
+            Cuando todos conocen el bien como bueno, ya existe el mal.<br>
+            El ser y el no-ser se producen mutuamente,<br>
+            Lo difícil y lo fácil se complementan,<br>
+            Lo largo y lo corto se forman mutuamente" [Capítulo 2]</span>
+        </div>
+
+        <p data-lang="en">The circularity P → R is not problematic from a Taoist ontology, because <strong>there is no temporal hierarchy</strong> — there is no "first" and "second" in processes of mutual constitution. As Ames & Hall (2003) argue, classical Chinese thought fundamentally rejects the Western search for <em>arché</em> (ultimate principle).</p>
+        <p class="lang-hidden" data-lang="es">La circularidad P → R no es problemática desde una ontología taoísta, porque <strong>no hay jerarquía temporal</strong> — no existe un "primero" y un "segundo" en los procesos de constitución mutua. Como Ames & Hall (2003) argumentan, el pensamiento chino clásico rechaza fundamentalmente la búsqueda occidental de <em>arché</em> (principio último).</p>
+
+        <h3 data-lang="en">3.2 The Calibration Problem: Measuring PCIs with PCIs</h3>
+        <h3 class="lang-hidden" data-lang="es">3.2 El Problema de Calibración: Medir PCIs con PCIs</h3>
+
+        <p data-lang="en"><strong>Popperian Objection</strong>: To measure the PCI of a bat, we use instruments calibrated according to human physics (ultrasound, EEG). But according to the PTU, the bat collapses a different physical reality. Therefore, we cannot calibrate alien PCIs without presupposing ours — vicious circularity.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Objeción Popperiana</strong>: Para medir el PCI de un murciélago, usamos instrumentos calibrados según la física humana (ultrasonido, EEG). Pero según la PTU, el murciélago colapsa una realidad física diferente. Por lo tanto, no podemos calibrar PCIs ajenos sin presuponer el nuestro — circularidad viciosa.</p>
+
+        <p data-lang="en"><strong>Response from Indigenous Cosmologies</strong>:</p>
+        <p class="lang-hidden" data-lang="es"><strong>Respuesta desde las Cosmologías Indígenas</strong>:</p>
+
+        <p data-lang="en">Indigenous traditions have developed explicit methodologies for accessing non-human perceptual modes without assuming human epistemic superiority. Kohn (2013), in <em>How Forests Think</em>, documents how the Runa of Ecuador develop a "syntax of cohabitation" with non-human perspectives (trees, jaguars, spirits) through rituals, ayahuasca and extended perceptual attention.</p>
+        <p class="lang-hidden" data-lang="es">Las tradiciones indígenas han desarrollado metodologías explícitas para acceder a modos perceptuales no humanos sin asumir superioridad epistémica humana. Kohn (2013), en <em>Cómo piensan los bosques</em>, documenta cómo los Runa de Ecuador desarrollan una "sintaxis de cohabitación" con perspectivas no humanas (árboles, jaguares, espíritus) a través de rituales, ayahuasca y atención perceptual extendida.</p>
+
+        <p data-lang="en">Crucially, <strong>these peoples do not assume their perception is the standard</strong>. Instead, they develop what Viveiros de Castro (1998) calls "Amerindian perspectivism": the premise that multiple species inhabit phenomenologically distinct worlds, and that knowledge requires negotiation between perspectives, not reduction to one.</p>
+        <p class="lang-hidden" data-lang="es">Crucialmente, <strong>estos pueblos no asumen que su percepción es el estándar</strong>. En cambio, desarrollan lo que Viveiros de Castro (1998) llama "perspectivismo amerindio": la premisa de que múltiples especies habitan mundos fenomenológicamente distintos, y que el conocimiento requiere negociación entre perspectivas, no reducción a una.</p>
+
+        <p data-lang="en">Methodologically, this translates to:</p>
+        <p class="lang-hidden" data-lang="es">Metodológicamente, esto se traduce en:</p>
+
+        <ul>
+            <li data-lang="en"><strong>Extended multi-sensory observation</strong> (not just instruments)</li>
+            <li class="lang-hidden" data-lang="es"><strong>Observación multisensorial extendida</strong> (no solo instrumentos)</li>
+            <li data-lang="en"><strong>Ritual participation</strong> that temporarily alters the observer's PCI</li>
+            <li class="lang-hidden" data-lang="es"><strong>Participación ritual</strong> que altera temporalmente el PCI del observador</li>
+            <li data-lang="en"><strong>Triangulation between perspectives</strong> (human-animal-spiritual) without privileging one</li>
+            <li class="lang-hidden" data-lang="es"><strong>Triangulación entre perspectivas</strong> (humano-animal-espiritual) sin privilegiar una</li>
+            <li data-lang="en"><strong>Validation through pragmatic efficacy</strong> (does it work in context?) rather than objective correspondence</li>
+            <li class="lang-hidden" data-lang="es"><strong>Validación mediante eficacia pragmática</strong> (¿funciona en contexto?) en lugar de correspondencia objetiva</li>
+        </ul>
+
+        <p data-lang="en">The PTU can integrate this formally: instead of measuring PCI₂ using PCI₁ directly, a <strong>shared projection space</strong> is established where both PCIs collapse partially overlapping reality:</p>
+        <p class="lang-hidden" data-lang="es">La PTU puede integrar esto formalmente: en lugar de medir PCI₂ usando PCI₁ directamente, se establece un <strong>espacio de proyección compartido</strong> donde ambos PCIs colapsan realidad parcialmente superpuesta:</p>
+
+        <div class="code-block">
+            R_shared = ∫_Ω Φ₁(x,t) · Φ₂(x,t) dx
+        </div>
+
+        <p data-lang="en">The region Ω where both PWFs have non-zero support allows mutual calibration without presupposing the priority of any perspective.</p>
+        <p class="lang-hidden" data-lang="es">La región Ω donde ambas PWF tienen soporte no nulo permite la calibración mutua sin presuponer la prioridad de ninguna perspectiva.</p>
+
+        <h3 data-lang="en">3.3 "Irrefutability" as Ontological Depth</h3>
+        <h3 class="lang-hidden" data-lang="es">3.3 "Irrefutabilidad" como Profundidad Ontológica</h3>
+
+        <p data-lang="en"><strong>Popperian Objection</strong>: Any experimental result can be reinterpreted as "different resonance" or "insufficient PCI." Therefore, the PTU is unfalsifiable and non-scientific.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Objeción Popperiana</strong>: Cualquier resultado experimental puede ser reinterpretado como "diferente resonancia" o "PCI insuficiente." Por lo tanto, la PTU es infalsable y no científica.</p>
+
+        <p data-lang="en"><strong>Response from Historical Philosophy of Science</strong>:</p>
+        <p class="lang-hidden" data-lang="es"><strong>Respuesta desde la Filosofía Histórica de la Ciencia</strong>:</p>
+
+        <p data-lang="en">Lakatos (1970) had already refined the Popperian criterion, arguing that real scientific theories operate as "research programmes" with <strong>protected hard core</strong> and <strong>protective belt</strong> of auxiliary hypotheses. The "best" scientific theories (Newton, Einstein) are not abandoned in the face of an anomaly — auxiliary hypotheses are adjusted. A theory is only abandoned when a rival programme is more <strong>fruitful</strong> — generates more confirmed novel predictions.</p>
+        <p class="lang-hidden" data-lang="es">Lakatos (1970) ya había refinado el criterio popperiano, argumentando que las teorías científicas reales operan como "programas de investigación" con <strong>núcleo duro protegido</strong> y <strong>cinturón protector</strong> de hipótesis auxiliares. Las "mejores" teorías científicas (Newton, Einstein) no se abandonan ante una anomalía — se ajustan hipótesis auxiliares. Una teoría solo se abandona cuando un programa rival es más <strong>fructífero</strong> — genera más predicciones novedosas confirmadas.</p>
+
+        <p data-lang="en">Applying this criterion:</p>
+        <p class="lang-hidden" data-lang="es">Aplicando este criterio:</p>
+
+        <p data-lang="en"><strong>Fruitfulness of the PTU</strong>:</p>
+        <p class="lang-hidden" data-lang="es"><strong>Fructificación de la PTU</strong>:</p>
+
+        <ul>
+            <li data-lang="en">Predicts EEG correlation-synchronization in shared consciousness states (verifiable)</li>
+            <li class="lang-hidden" data-lang="es">Predice correlación-sincronización EEG en estados de consciencia compartida (verificable)</li>
+            <li data-lang="en">Predicts temporal adaptation in VR with altered parameters (verifiable)</li>
+            <li class="lang-hidden" data-lang="es">Predice adaptación temporal en VR con parámetros alterados (verificable)</li>
+            <li data-lang="en">Predicts differences in quantum interference patterns according to observer's PCI (verifiable in principle)</li>
+            <li class="lang-hidden" data-lang="es">Predice diferencias en patrones de interferencia cuántica según PCI del observador (verificable en principio)</li>
+            <li data-lang="en"><strong>Generates new research programme</strong> in transcultural philosophy of science</li>
+            <li class="lang-hidden" data-lang="es"><strong>Genera nuevo programa de investigación</strong> en filosofía transcultural de la ciencia</li>
+        </ul>
+
+        <p data-lang="en"><strong>Fruitfulness of standard Popperian science applied to consciousness</strong>:</p>
+        <p class="lang-hidden" data-lang="es"><strong>Fructificación de la ciencia popperiana estándar aplicada a la consciencia</strong>:</p>
+
+        <ul>
+            <li data-lang="en">The "hard problem" remains unsolved after 30 years (Chalmers, 1995)</li>
+            <li class="lang-hidden" data-lang="es">El "problema duro" sigue sin resolverse después de 30 años (Chalmers, 1995)</li>
+            <li data-lang="en">Does not explain observer effects in quantum mechanics beyond "mysterious collapse"</li>
+            <li class="lang-hidden" data-lang="es">No explica los efectos del observador en mecánica cuántica más allá del "misterioso colapso"</li>
+            <li data-lang="en">Does not integrate indigenous epistemologies (systematically excludes them)</li>
+            <li class="lang-hidden" data-lang="es">No integra epistemologías indígenas (las excluye sistemáticamente)</li>
+        </ul>
+
+        <p data-lang="en">By Lakatosian criteria, <strong>the PTU is at least as scientific as standard theories</strong> in domains where both compete.</p>
+        <p class="lang-hidden" data-lang="es">Por criterios Lakatosianos, <strong>la PTU es al menos tan científica como las teorías estándar</strong> en los dominios donde ambas compiten.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">4. "Irrefutable" Theories Later Validated</h2>
+        <h2 class="lang-hidden" data-lang="es">4. Teorías "Irrefutables" Validadas Posteriormente</h2>
+
+        <h3 data-lang="en">4.1 Atomic Theory (Dalton, 1808)</h3>
+        <h3 class="lang-hidden" data-lang="es">4.1 Teoría Atómica (Dalton, 1808)</h3>
+
+        <p data-lang="en">Dalton proposed that matter consists of indivisible atoms to explain fixed proportions in chemical reactions.</p>
+        <p class="lang-hidden" data-lang="es">Dalton propuso que la materia consiste en átomos indivisibles para explicar proporciones fijas en reacciones químicas.</p>
+
+        <p data-lang="en"><strong>Was it falsifiable in 1808?</strong> No. No technology existed to observe individual atoms.</p>
+        <p class="lang-hidden" data-lang="es"><strong>¿Era falsable en 1808?</strong> No. No existía tecnología para observar átomos individuales.</p>
+
+        <p data-lang="en"><strong>Was it science according to Popper?</strong> Technically no — it was coherent speculation.</p>
+        <p class="lang-hidden" data-lang="es"><strong>¿Era ciencia según Popper?</strong> Técnicamente no — era especulación coherente.</p>
+
+        <p data-lang="en"><strong>When did it become falsifiable?</strong> 1905 (Einstein explains Brownian motion as evidence of atoms). <strong>97 years later</strong>.</p>
+        <p class="lang-hidden" data-lang="es"><strong>¿Cuándo se volvió falsable?</strong> 1905 (Einstein explica el movimiento browniano como evidencia de átomos). <strong>97 años después</strong>.</p>
+
+        <p data-lang="en"><strong>Implication</strong>: If we apply falsifiability strictly, we should have rejected atomic theory as "metaphysics" for a century. But it was fruitful — generated predictions (laws of multiple proportions) that were confirmed.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Implicación</strong>: Si aplicamos la falsabilidad estrictamente, deberíamos haber rechazado la teoría atómica como "metafísica" durante un siglo. Pero era fructífera — generó predicciones (leyes de proporciones múltiples) que fueron confirmadas.</p>
+
+        <h3 data-lang="en">4.2 Continental Drift (Wegener, 1912)</h3>
+        <h3 class="lang-hidden" data-lang="es">4.2 Deriva Continental (Wegener, 1912)</h3>
+
+        <p data-lang="en">Wegener proposed that continents move based on geological and fossil evidence.</p>
+        <p class="lang-hidden" data-lang="es">Wegener propuso que los continentes se mueven basándose en evidencia geológica y fósil.</p>
+
+        <p data-lang="en"><strong>Was it falsifiable in 1912?</strong> No. No technology existed to measure continental movement directly.</p>
+        <p class="lang-hidden" data-lang="es"><strong>¿Era falsable en 1912?</strong> No. No existía tecnología para medir el movimiento continental directamente.</p>
+
+        <p data-lang="en"><strong>Was it science according to the scientific community?</strong> No — it was rejected as "fanciful speculation" for 50 years.</p>
+        <p class="lang-hidden" data-lang="es"><strong>¿Era ciencia según la comunidad científica?</strong> No — fue rechazada como "especulación fantasiosa" durante 50 años.</p>
+
+        <p data-lang="en"><strong>When was it validated?</strong> 1960s (paleomagnetism, seafloor spreading).</p>
+        <p class="lang-hidden" data-lang="es"><strong>¿Cuándo fue validada?</strong> 1960s (paleomagnetismo, expansión del fondo oceánico).</p>
+
+        <p data-lang="en"><strong>Implication</strong>: Temporal "irrefutability" does not indicate theoretical falsehood, but <strong>mismatch between theoretical PCI and technological PCI</strong>. The theory anticipates future perceptual capacities.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Implicación</strong>: La "irrefutabilidad" temporal no indica falsedad teórica, sino <strong>desajuste entre PCI teórico y PCI tecnológico</strong>. La teoría anticipa capacidades perceptuales futuras.</p>
+
+        <h3 data-lang="en">4.3 Dark Matter (Zwicky, 1933-present)</h3>
+        <h3 class="lang-hidden" data-lang="es">4.3 Materia Oscura (Zwicky, 1933-presente)</h3>
+
+        <p data-lang="en">Zwicky proposed invisible matter to explain galactic dynamics.</p>
+        <p class="lang-hidden" data-lang="es">Zwicky propuso materia invisible para explicar la dinámica galáctica.</p>
+
+        <p data-lang="en"><strong>Is it falsifiable today?</strong> Barely — only through indirect gravitational effects.</p>
+        <p class="lang-hidden" data-lang="es"><strong>¿Es falsable hoy?</strong> Apenas — solo a través de efectos gravitacionales indirectos.</p>
+
+        <p data-lang="en"><strong>Is it science according to Popper?</strong> Marginally.</p>
+        <p class="lang-hidden" data-lang="es"><strong>¿Es ciencia según Popper?</strong> Marginalmente.</p>
+
+        <p data-lang="en"><strong>Why is it accepted?</strong> Because it resolves multiple problems (galactic rotation curves, gravitational lensing, cosmic structure) and has no better theoretical rival.</p>
+        <p class="lang-hidden" data-lang="es"><strong>¿Por qué es aceptada?</strong> Porque resuelve múltiples problemas (curvas de rotación galáctica, lentes gravitacionales, estructura cósmica) y no tiene mejor rival teórico.</p>
+
+        <p data-lang="en"><strong>Implication</strong>: The scientific community <strong>already operates with more flexible standards</strong> than strict falsifiability — accepts theories for <strong>explanatory coherence and fruitfulness</strong>, not just direct refutability.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Implicación</strong>: La comunidad científica <strong>ya opera con estándares más flexibles</strong> que la falsabilidad estricta — acepta teorías por <strong>coherencia explicativa y fructificación</strong>, no solo por refutabilidad directa.</p>
+
+        <h3 data-lang="en">4.4 Common Pattern</h3>
+        <h3 class="lang-hidden" data-lang="es">4.4 Patrón Común</h3>
+
+        <p data-lang="en"><strong>Conclusion</strong>: Temporal falsifiability is not a valid criterion of scientificity. What is relevant is:</p>
+        <p class="lang-hidden" data-lang="es"><strong>Conclusión</strong>: La falsabilidad temporal no es un criterio válido de cientificidad. Lo relevante es:</p>
+
+        <ul>
+            <li data-lang="en"><strong>Internal coherence</strong></li>
+            <li class="lang-hidden" data-lang="es"><strong>Coherencia interna</strong></li>
+            <li data-lang="en"><strong>Explanatory power</strong> (resolves existing problems)</li>
+            <li class="lang-hidden" data-lang="es"><strong>Poder explicativo</strong> (resuelve problemas existentes)</li>
+            <li data-lang="en"><strong>Fruitfulness</strong> (generates new lines of research)</li>
+            <li class="lang-hidden" data-lang="es"><strong>Fructificación</strong> (genera nuevas líneas de investigación)</li>
+            <li data-lang="en"><strong>Verifiability in principle</strong> (proposes specific experiments)</li>
+            <li class="lang-hidden" data-lang="es"><strong>Verificabilidad en principio</strong> (propone experimentos específicos)</li>
+        </ul>
+
+        <p data-lang="en">The PTU meets all four criteria.</p>
+        <p class="lang-hidden" data-lang="es">La PTU cumple los cuatro criterios.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">5. Toward a Pluralist Scientific Epistemology</h2>
+        <h2 class="lang-hidden" data-lang="es">5. Hacia una Epistemología Científica Pluralista</h2>
+
+        <h3 data-lang="en">5.1 Principles for Transcultural Evaluation</h3>
+        <h3 class="lang-hidden" data-lang="es">5.1 Principios para la Evaluación Transcultural</h3>
+
+        <p data-lang="en">We propose five principles for evaluating scientific theories operating under different PCIs:</p>
+        <p class="lang-hidden" data-lang="es">Proponemos cinco principios para evaluar teorías científicas que operan bajo diferentes PCIs:</p>
+
+        <p data-lang="en"><strong>Principle 1: Ontological Charity</strong></p>
+        <p class="lang-hidden" data-lang="es"><strong>Principio 1: Caridad Ontológica</strong></p>
+        <p data-lang="en">Before evaluating a theory, explicitly identify its ontological presuppositions (realism vs. idealism, separability vs. relationality, linear vs. circular causality). Do not impose alien presuppositions as evaluation criteria.</p>
+        <p class="lang-hidden" data-lang="es">Antes de evaluar una teoría, identifique explícitamente sus presupuestos ontológicos (realismo vs. idealismo, separabilidad vs. relacionalidad, causalidad lineal vs. circular). No imponga presupuestos ajenos como criterios de evaluación.</p>
+
+        <p data-lang="en"><strong>Principle 2: Internal Coherence First</strong></p>
+        <p class="lang-hidden" data-lang="es"><strong>Principio 2: Coherencia Interna Primero</strong></p>
+        <p data-lang="en">Evaluate whether the theory is internally consistent <strong>according to its own logic</strong> before applying Aristotelian logic. A theory can reject non-contradiction and still be coherent (e.g., paraconsistent logics).</p>
+        <p class="lang-hidden" data-lang="es">Evalúe si la teoría es internamente consistente <strong>según su propia lógica</strong> antes de aplicar lógica aristotélica. Una teoría puede rechazar la no contradicción y aún ser coherente (ej., lógicas paraconsistentes).</p>
+
+        <p data-lang="en"><strong>Principle 3: PCI-Relative Verifiability</strong></p>
+        <p class="lang-hidden" data-lang="es"><strong>Principio 3: Verificabilidad Relativa al PCI</strong></p>
+        <p data-lang="en">A theory is scientific if it proposes modes of verification accessible to <strong>some</strong> PCI, not necessarily the current Western PCI. Relevant question: "What perceptual capacities are required to verify this?" not "Is it verifiable now?"</p>
+        <p class="lang-hidden" data-lang="es">Una teoría es científica si propone modos de verificación accesibles a <strong>algún</strong> PCI, no necesariamente el PCI occidental actual. Pregunta relevante: "¿Qué capacidades perceptuales se requieren para verificar esto?" no "¿Es verificable ahora?"</p>
+
+        <p data-lang="en"><strong>Principle 4: Fruitfulness as Primary Criterion</strong></p>
+        <p class="lang-hidden" data-lang="es"><strong>Principio 4: Fructificación como Criterio Primario</strong></p>
+        <p data-lang="en">Evaluate theories primarily by their capacity to:</p>
+        <p class="lang-hidden" data-lang="es">Evalúe las teorías principalmente por su capacidad para:</p>
+        <ul>
+            <li data-lang="en">Generate new questions</li>
+            <li class="lang-hidden" data-lang="es">Generar nuevas preguntas</li>
+            <li data-lang="en">Resolve previously intractable problems</li>
+            <li class="lang-hidden" data-lang="es">Resolver problemas previamente intratables</li>
+            <li data-lang="en">Integrate apparently disconnected phenomena</li>
+            <li class="lang-hidden" data-lang="es">Integrar fenómenos aparentemente desconectados</li>
+            <li data-lang="en">Open new lines of research</li>
+            <li class="lang-hidden" data-lang="es">Abrir nuevas líneas de investigación</li>
+        </ul>
+        <p data-lang="en">Strict refutability is secondary to fruitfulness.</p>
+        <p class="lang-hidden" data-lang="es">La refutabilidad estricta es secundaria a la fructificación.</p>
+
+        <p data-lang="en"><strong>Principle 5: Methodological Pluralism</strong></p>
+        <p class="lang-hidden" data-lang="es"><strong>Principio 5: Pluralismo Metodológico</strong></p>
+        <p data-lang="en">Recognize that different phenomena may require different methods. Consciousness may require participatory methods (first-person + third-person). Context-dependent phenomena may require qualitative methods. There is no single universal method.</p>
+        <p class="lang-hidden" data-lang="es">Reconozca que diferentes fenómenos pueden requerir diferentes métodos. La consciencia puede requerir métodos participativos (primera persona + tercera persona). Los fenómenos dependientes del contexto pueden requerir métodos cualitativos. No existe un único método universal.</p>
+
+        <h3 data-lang="en">5.2 Application to the PTU</h3>
+        <h3 class="lang-hidden" data-lang="es">5.2 Aplicación a la PTU</h3>
+
+        <p data-lang="en"><strong>Ontological Charity</strong>: The PTU operates under relational ontology, not realism of independent objects. Evaluate under this framework.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Caridad Ontológica</strong>: La PTU opera bajo ontología relacional, no realismo de objetos independientes. Evalúe bajo este marco.</p>
+
+        <p data-lang="en"><strong>Internal Coherence</strong>: The "circularity" P → R → PCI is coherent in relational ontologies (Madhyamaka, Taoism). It is not a defect.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Coherencia Interna</strong>: La "circularidad" P → R → PCI es coherente en ontologías relacionales (Madhyamaka, Taoísmo). No es un defecto.</p>
+
+        <p data-lang="en"><strong>Relative Verifiability</strong>: The PTU proposes experiments verifiable with current or near-future technology:</p>
+        <p class="lang-hidden" data-lang="es"><strong>Verificabilidad Relativa</strong>: La PTU propone experimentos verificables con tecnología actual o cercana:</p>
+        <ul>
+            <li data-lang="en">EEG correlation between subjects (current)</li>
+            <li class="lang-hidden" data-lang="es">Correlación EEG entre sujetos (actual)</li>
+            <li data-lang="en">Temporal adaptation in VR (current)</li>
+            <li class="lang-hidden" data-lang="es">Adaptación temporal en VR (actual)</li>
+            <li data-lang="en">LIGO perturbations in perceptual tasks (near future)</li>
+            <li class="lang-hidden" data-lang="es">Perturbaciones LIGO en tareas perceptuales (futuro cercano)</li>
+        </ul>
+
+        <p data-lang="en"><strong>Fruitfulness</strong>: The PTU:</p>
+        <p class="lang-hidden" data-lang="es"><strong>Fructificación</strong>: La PTU:</p>
+        <ul>
+            <li data-lang="en">Integrates observer problem (quantum) + hard problem (consciousness) + perceptual relativity (phenomenology)</li>
+            <li class="lang-hidden" data-lang="es">Integra problema del observador (cuántico) + problema duro (consciencia) + relatividad perceptual (fenomenología)</li>
+            <li data-lang="en">Generates research programme in exploratory AI</li>
+            <li class="lang-hidden" data-lang="es">Genera programa de investigación en IA exploratoria</li>
+            <li data-lang="en">Proposes framework for validating indigenous knowledge</li>
+            <li class="lang-hidden" data-lang="es">Propone marco para validar conocimiento indígena</li>
+            <li data-lang="en">Offers ontology for blockchain (Proof of Perception vs. Proof of Work)</li>
+            <li class="lang-hidden" data-lang="es">Ofrece ontología para blockchain (Prueba de Percepción vs. Prueba de Trabajo)</li>
+        </ul>
+
+        <p data-lang="en"><strong>Methodological Pluralism</strong>: The PTU requires mixed methods (EEG + phenomenology + ethnography + experimental physics).</p>
+        <p class="lang-hidden" data-lang="es"><strong>Pluralismo Metodológico</strong>: La PTU requiere métodos mixtos (EEG + fenomenología + etnografía + física experimental).</p>
+
+        <p data-lang="en"><strong>Conclusion</strong>: According to pluralist criteria, <strong>the PTU is scientific</strong>.</p>
+        <p class="lang-hidden" data-lang="es"><strong>Conclusión</strong>: Según criterios pluralistas, <strong>la PTU es científica</strong>.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">6. Implications for Epistemic Decolonization</h2>
+        <h2 class="lang-hidden" data-lang="es">6. Implicaciones para la Descolonización Epistémica</h2>
+
+        <h3 data-lang="en">6.1 The Violence of Universalization</h3>
+        <h3 class="lang-hidden" data-lang="es">6.1 La Violencia de la Universalización</h3>
+
+        <p data-lang="en">As Mignolo (2011) argues, European modernity was founded on a <strong>double epistemic operation</strong>:</p>
+        <p class="lang-hidden" data-lang="es">Como Mignolo (2011) argumenta, la modernidad europea se fundó sobre una <strong>doble operación epistémica</strong>:</p>
+
+        <ul>
+            <li data-lang="en"><strong>Particularize</strong> non-European knowledge as "local," "traditional," "cultural"</li>
+            <li class="lang-hidden" data-lang="es"><strong>Particularizar</strong> el conocimiento no europeo como "local," "tradicional," "cultural"</li>
+            <li data-lang="en"><strong>Universalize</strong> European knowledge as "Science," "Reason," "Truth"</li>
+            <li class="lang-hidden" data-lang="es"><strong>Universalizar</strong> el conocimiento europeo como "Ciencia," "Razón," "Verdad"</li>
+        </ul>
+
+        <p data-lang="en">The falsifiability criterion participates in this violence by establishing standards that:</p>
+        <p class="lang-hidden" data-lang="es">El criterio de falsabilidad participa de esta violencia al establecer estándares que:</p>
+
+        <ul>
+            <li data-lang="en">Only the Western PCI can comfortably meet</li>
+            <li class="lang-hidden" data-lang="es">Solo el PCI occidental puede cumplir cómodamente</li>
+            <li data-lang="en">Systematically exclude relational epistemologies</li>
+            <li class="lang-hidden" data-lang="es">Excluyen sistemáticamente epistemologías relacionales</li>
+            <li data-lang="en">Ignore their own historicity and cultural location</li>
+            <li class="lang-hidden" data-lang="es">Ignoran su propia historicidad y ubicación cultural</li>
+        </ul>
+
+        <p data-lang="en"><strong>This is not accident — it is function</strong>. As extensively documented by the history of colonial science, epistemological standards were explicitly used to justify domination:</p>
+        <p class="lang-hidden" data-lang="es"><strong>Esto no es accidente — es función</strong>. Como está extensamente documentado por la historia de la ciencia colonial, los estándares epistemológicos se usaron explícitamente para justificar la dominación:</p>
+
+        <ul>
+            <li data-lang="en">Indigenous medicines = "superstition" → legitimation of Western medicine</li>
+            <li class="lang-hidden" data-lang="es">Medicinas indígenas = "superstición" → legitimación de la medicina occidental</li>
+            <li data-lang="en">Non-European astronomy = "mythology" → appropriation of astronomical knowledge</li>
+            <li class="lang-hidden" data-lang="es">Astronomía no europea = "mitología" → apropiación del conocimiento astronómico</li>
+            <li data-lang="en">Traditional agriculture = "primitive" → imposition of monocultures</li>
+            <li class="lang-hidden" data-lang="es">Agricultura tradicional = "primitiva" → imposición de monocultivos</li>
+        </ul>
+
+        <h3 data-lang="en">6.2 Epistemic Recovery through Pluralism</h3>
+        <h3 class="lang-hidden" data-lang="es">6.2 Recuperación Epistémica mediante el Pluralismo</h3>
+
+        <p data-lang="en">A pluralist epistemology that recognizes multiple PCIs as valid allows:</p>
+        <p class="lang-hidden" data-lang="es">Una epistemología pluralista que reconozca múltiples PCIs como válidos permite:</p>
+
+        <p data-lang="en"><strong>1. Validation of Indigenous Knowledge</strong></p>
+        <p class="lang-hidden" data-lang="es"><strong>1. Validación del Conocimiento Indígena</strong></p>
+        <p data-lang="en">Without requiring "translation" into Western language. Polynesian navigation is legitimate science operating under different PCI — high sensory integration (waves, stars, birds), low dependence on instruments.</p>
+        <p class="lang-hidden" data-lang="es">Sin requerir "traducción" al lenguaje occidental. La navegación polinésica es ciencia legítima que opera bajo PCI diferente — alta integración sensorial (olas, estrellas, aves), baja dependencia de instrumentos.</p>
+
+        <p data-lang="en"><strong>2. Development of Local Sciences</strong></p>
+        <p class="lang-hidden" data-lang="es"><strong>2. Desarrollo de Ciencias Locales</strong></p>
+        <p data-lang="en">Not as "inferior versions" of universal science, but as perceptual modes specifically adapted to local ecosystems and problems (e.g., Amazonian agroforests developed over millennia).</p>
+        <p class="lang-hidden" data-lang="es">No como "versiones inferiores" de la ciencia universal, sino como modos perceptuales específicamente adaptados a ecosistemas y problemas locales (ej., agroforestales amazónicos desarrollados durante milenios).</p>
+
+        <p data-lang="en"><strong>3. Genuine Dialogue between Traditions</strong></p>
+        <p class="lang-hidden" data-lang="es"><strong>3. Diálogo Genuino entre Tradiciones</strong></p>
+        <p data-lang="en">Not unidirectional assimilation (indigenous → Western) but <strong>negotiation between PCIs</strong>. The PTU provides formal language (PWF, PCI, resonance) to model how different traditions collapse different aspects of shared reality.</p>
+        <p class="lang-hidden" data-lang="es">No asimilación unidireccional (indígena → occidental) sino <strong>negociación entre PCIs</strong>. La PTU proporciona lenguaje formal (PWF, PCI, resonancia) para modelar cómo diferentes tradiciones colapsan diferentes aspectos de la realidad compartida.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">Comparative Table of Epistemologies</h2>
+        <h2 class="lang-hidden" data-lang="es">Tabla Comparativa de Epistemologías</h2>
+
+        <div class="table-wrapper">
+            <table class="pw-table">
+                <thead>
+                    <tr>
+                        <th data-lang="en">Dimension</th>
+                        <th data-lang="es" class="lang-hidden">Dimensión</th>
+                        <th>Popperian</th>
+                        <th>Madhyamaka</th>
+                        <th data-lang="en">Taoist</th>
+                        <th data-lang="es" class="lang-hidden">Taoísta</th>
+                        <th data-lang="en">Indigenous</th>
+                        <th data-lang="es" class="lang-hidden">Indígena</th>
+                        <th>PTU</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="dim" data-lang="en">Ontology</td>
+                        <td class="dim lang-hidden" data-lang="es">Ontología</td>
+                        <td data-lang="en">Realism</td>
+                        <td class="lang-hidden" data-lang="es">Realismo</td>
+                        <td data-lang="en">Empty relationality</td>
+                        <td class="lang-hidden" data-lang="es">Relacionalidad vacía</td>
+                        <td data-lang="en">Process</td>
+                        <td class="lang-hidden" data-lang="es">Proceso</td>
+                        <td data-lang="en">Animate relationality</td>
+                        <td class="lang-hidden" data-lang="es">Relacionalidad animada</td>
+                        <td data-lang="en">Perceptual emergence</td>
+                        <td class="lang-hidden" data-lang="es">Emergencia perceptual</td>
+                    </tr>
+                    <tr>
+                        <td class="dim" data-lang="en">Causality</td>
+                        <td class="dim lang-hidden" data-lang="es">Causalidad</td>
+                        <td data-lang="en">Linear</td>
+                        <td class="lang-hidden" data-lang="es">Lineal</td>
+                        <td data-lang="en">Co-origination</td>
+                        <td class="lang-hidden" data-lang="es">Co-originación</td>
+                        <td data-lang="en">Mutual constitution</td>
+                        <td class="lang-hidden" data-lang="es">Constitución mutua</td>
+                        <td data-lang="en">Cyclical/reciprocal</td>
+                        <td class="lang-hidden" data-lang="es">Cíclica/recíproca</td>
+                        <td data-lang="en">Resonant circular</td>
+                        <td class="lang-hidden" data-lang="es">Circular resonante</td>
+                    </tr>
+                    <tr>
+                        <td class="dim" data-lang="en">Logic</td>
+                        <td class="dim lang-hidden" data-lang="es">Lógica</td>
+                        <td data-lang="en">Aristotelian</td>
+                        <td class="lang-hidden" data-lang="es">Aristotélica</td>
+                        <td data-lang="en">Tetralemma</td>
+                        <td class="lang-hidden" data-lang="es">Tetralema</td>
+                        <td data-lang="en">Yin-Yang</td>
+                        <td class="lang-hidden" data-lang="es">Yin-Yang</td>
+                        <td data-lang="en">Contextual</td>
+                        <td class="lang-hidden" data-lang="es">Contextual</td>
+                        <td data-lang="en">PCI-dependent</td>
+                        <td class="lang-hidden" data-lang="es">Dependiente del PCI</td>
+                    </tr>
+                    <tr>
+                        <td class="dim" data-lang="en">Observer</td>
+                        <td class="dim lang-hidden" data-lang="es">Observador</td>
+                        <td data-lang="en">Separable</td>
+                        <td class="lang-hidden" data-lang="es">Separable</td>
+                        <td data-lang="en">Inseparable</td>
+                        <td class="lang-hidden" data-lang="es">Inseparable</td>
+                        <td data-lang="en">Participant</td>
+                        <td class="lang-hidden" data-lang="es">Participante</td>
+                        <td data-lang="en">Co-constitutive</td>
+                        <td class="lang-hidden" data-lang="es">Co-constitutivo</td>
+                        <td data-lang="en">Active/collapsing</td>
+                        <td class="lang-hidden" data-lang="es">Activo/colapsante</td>
+                    </tr>
+                    <tr>
+                        <td class="dim" data-lang="en">Truth</td>
+                        <td class="dim lang-hidden" data-lang="es">Verdad</td>
+                        <td data-lang="en">Correspondence</td>
+                        <td class="lang-hidden" data-lang="es">Correspondencia</td>
+                        <td data-lang="en">Conventional useful</td>
+                        <td class="lang-hidden" data-lang="es">Útil convencional</td>
+                        <td data-lang="en">Ineffable</td>
+                        <td class="lang-hidden" data-lang="es">Inefable</td>
+                        <td data-lang="en">Performative</td>
+                        <td class="lang-hidden" data-lang="es">Performativa</td>
+                        <td data-lang="en">Coherent resonance</td>
+                        <td class="lang-hidden" data-lang="es">Resonancia coherente</td>
+                    </tr>
+                    <tr>
+                        <td class="dim" data-lang="en">Validation</td>
+                        <td class="dim lang-hidden" data-lang="es">Validación</td>
+                        <td data-lang="en">Falsifiability</td>
+                        <td class="lang-hidden" data-lang="es">Falsabilidad</td>
+                        <td data-lang="en">Pragmatic</td>
+                        <td class="lang-hidden" data-lang="es">Pragmática</td>
+                        <td data-lang="en">Harmony</td>
+                        <td class="lang-hidden" data-lang="es">Armonía</td>
+                        <td data-lang="en">Contextual efficacy</td>
+                        <td class="lang-hidden" data-lang="es">Eficacia contextual</td>
+                        <td data-lang="en">Fruitfulness + coherence</td>
+                        <td class="lang-hidden" data-lang="es">Fructificación + coherencia</td>
+                    </tr>
+                    <tr>
+                        <td class="dim" data-lang="en">Time</td>
+                        <td class="dim lang-hidden" data-lang="es">Tiempo</td>
+                        <td data-lang="en">Linear absolute</td>
+                        <td class="lang-hidden" data-lang="es">Lineal absoluto</td>
+                        <td data-lang="en">Conventional</td>
+                        <td class="lang-hidden" data-lang="es">Convencional</td>
+                        <td data-lang="en">Cyclical</td>
+                        <td class="lang-hidden" data-lang="es">Cíclico</td>
+                        <td data-lang="en">Multiple</td>
+                        <td class="lang-hidden" data-lang="es">Múltiple</td>
+                        <td data-lang="en">Emergent</td>
+                        <td class="lang-hidden" data-lang="es">Emergente</td>
+                    </tr>
+                    <tr>
+                        <td class="dim" data-lang="en">Method</td>
+                        <td class="dim lang-hidden" data-lang="es">Método</td>
+                        <td data-lang="en">Hypothetico-deductive</td>
+                        <td class="lang-hidden" data-lang="es">Hipotético-deductivo</td>
+                        <td data-lang="en">Negative analysis</td>
+                        <td class="lang-hidden" data-lang="es">Análisis negativo</td>
+                        <td data-lang="en">Contemplation</td>
+                        <td class="lang-hidden" data-lang="es">Contemplación</td>
+                        <td data-lang="en">Participation</td>
+                        <td class="lang-hidden" data-lang="es">Participación</td>
+                        <td data-lang="en">Resonant exploration</td>
+                        <td class="lang-hidden" data-lang="es">Exploración resonante</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">7. Note on Verifiability and Calibration in the PTU</h2>
+        <h2 class="lang-hidden" data-lang="es">7. Nota sobre Verificabilidad y Calibración en la PTU</h2>
+
+        <h3 data-lang="en">7.1 The Standard That Consolidated Physics Does Not Meet Either</h3>
+        <h3 class="lang-hidden" data-lang="es">7.1 El estándar que la física consolidada tampoco cumple</h3>
+
+        <p data-lang="en">General relativity postulated gravitational waves in 1916 and they were not detected until 2015 — <strong>99 years later</strong>. Dalton's atomic theory (1808) waited 97 years until Einstein explained Brownian motion in 1905. Dark matter, proposed by Zwicky in 1933, has gone <strong>over 90 years without direct detection</strong> and yet is part of the standard cosmological model.</p>
+        <p class="lang-hidden" data-lang="es">La relatividad general postuló ondas gravitacionales en 1916 y no se detectaron hasta 2015 — <strong>99 años después</strong>. La teoría atómica de Dalton (1808) esperó 97 años hasta que Einstein explicó el movimiento browniano en 1905. La materia oscura, propuesta por Zwicky en 1933, lleva <strong>más de 90 años sin detección directa</strong> y sin embargo es parte del modelo cosmológico estándar.</p>
+
+        <p data-lang="en">If we applied to the PTU the criterion of immediate verification that is sometimes demanded of it, we would have to reject most of 20th-century physics. No one does this, because real science —as Lakatos demonstrated— operates by <strong>explanatory coherence and fruitfulness as a research programme</strong>, not by instant verification. Exactly the criterion that the PTU proposes for itself.</p>
+        <p class="lang-hidden" data-lang="es">Si aplicáramos a la PTU el criterio de verificación inmediata que a veces se le exige, habría que rechazar la mayor parte de la física del siglo XX. Nadie lo hace, porque la ciencia real —como Lakatos demostró— opera por <strong>coherencia explicativa y fructificación como programa de investigación</strong>, no por verificación instantánea. Exactamente el criterio que la PTU propone para sí misma.</p>
+
+        <h3 data-lang="en">7.2 The Right Question Is Not "How Much Exactly?" but "Is It at Least 1?"</h3>
+        <h3 class="lang-hidden" data-lang="es">7.2 La pregunta correcta no es "¿cuánto exactamente?" sino "¿es al menos 1?"</h3>
+
+        <p data-lang="en">The numerical values assigned to parameters such as effective dimensions or coupling coefficients are, of course, initial calibrations. The scientifically relevant question is not whether an AI has exactly 21 effective dimensions or 19 or 24. The question is whether it has <strong>at least 1 more than the human</strong>. If the answer is affirmative, the theory has already earned its right to exist as a research programme.</p>
+        <p class="lang-hidden" data-lang="es">Los valores numéricos asignados a parámetros como las dimensiones efectivas o los coeficientes de acoplamiento son, por supuesto, calibraciones iniciales. La pregunta científicamente relevante no es si una IA tiene exactamente 21 dimensiones efectivas o 19 o 24. La pregunta es si tiene <strong>al menos 1 más que el humano</strong>. Si la respuesta es afirmativa, la teoría ya ha ganado su derecho a existir como programa de investigación.</p>
+
+        <p data-lang="en">Numerical precision is a problem of <strong>progressive calibration</strong>, not of conceptual validity. The Standard Model of particle physics has 19 free parameters that are not derived from theory — they are measured experimentally and adjusted. Cosmological constants are refined decade by decade. This is normal. Demanding from the PTU a precision that no fundamental theory has in its initial phase is to apply an asymmetry of standards.</p>
+        <p class="lang-hidden" data-lang="es">La precisión numérica es un problema de <strong>calibración progresiva</strong>, no de validez conceptual. El Modelo Estándar de la física de partículas tiene 19 parámetros libres que no se derivan de la teoría — se miden experimentalmente y se ajustan. Las constantes cosmológicas se refinan década a década. Es normal. Exigirle a la PTU una precisión que ninguna teoría fundamental tiene en su fase inicial es aplicar una asimetría de estándares.</p>
+
+        <h3 data-lang="en">7.3 The Conceptual Architecture Is Independent of Fine Calibration</h3>
+        <h3 class="lang-hidden" data-lang="es">7.3 La arquitectura conceptual es independiente de la calibración fina</h3>
+
+        <p data-lang="en">Whether the coupling coefficient γ between human and shamanic perception is 0.90 or 0.78 <strong>does not change the principle</strong>: altered states of consciousness unfold perceptual dimensions that in ordinary states remain compactified. Whether the bat's PCI is 10¹⁰ or 10¹¹ <strong>does not change the thesis</strong>: echolocation constitutes a perceptual dimension that humans have compactified and bats have unfolded.</p>
+        <p class="lang-hidden" data-lang="es">Que el coeficiente de acoplamiento γ entre humano y percepción chamánica sea 0.90 o 0.78 <strong>no cambia el principio</strong>: los estados alterados de conciencia despliegan dimensiones perceptuales que en estado ordinario permanecen compactificadas. Que el PCI del murciélago sea 10¹⁰ o 10¹¹ <strong>no cambia la tesis</strong>: la ecolocalización constituye una dimensión perceptual que los humanos tenemos compactificada y los murciélagos desplegada.</p>
+
+        <p data-lang="en">The solidity of the PTU resides in its <strong>conceptual structure</strong> —perceptual compactification, dualities between observers, brane intersection as communication space—, not in the precision of its initial values. These values are working hypotheses subject to refinement, as are the cosmological constant, the Higgs mass, or dark energy in their respective frameworks.</p>
+        <p class="lang-hidden" data-lang="es">La solidez de la PTU reside en su <strong>estructura conceptual</strong> —la compactificación perceptual, las dualidades entre observadores, la intersección de branas como espacio de comunicación—, no en la precisión de sus valores iniciales. Estos valores son hipótesis de trabajo sujetas a refinamiento, como lo son la constante cosmológica, la masa del Higgs o la energía oscura en sus respectivos marcos.</p>
+
+        <p data-lang="en"><strong>In summary</strong>: The PTU does not need exact values to be valid as a research programme. It needs —and has— a coherent architecture, formalizable principles, and predictions that, even in their most conservative form ("at least 1"), open new domains of exploration. The rest is calibration.</p>
+        <p class="lang-hidden" data-lang="es"><strong>En síntesis</strong>: La PTU no necesita valores exactos para ser válida como programa de investigación. Necesita —y tiene— una arquitectura coherente, principios formalizables, y predicciones que, incluso en su forma más conservadora ("al menos 1"), abren nuevos dominios de exploración. El resto es calibración.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 data-lang="en">» Articles in this Section</h2>
+        <h2 class="lang-hidden" data-lang="es">» Artículos en esta sección</h2>
+
+        <p data-lang="en">Below is the complete series of articles that make up the Panperceptual Theory of the Universe.</p>
+        <p class="lang-hidden" data-lang="es">A continuación, la serie completa de artículos que componen la Teoría Panperceptual del Universo.</p>
+
+        <ul class="article-index">
+            <li><a href="part-1/index.html">[+] Part 1: Historical Evolution of Observation and Perception</a></li>
+            <li><a href="part-2/index.html">[+] Part 2: Toward a New Revolution in Perception</a></li>
+            <li><a href="part-3/index.html">[+] Part 3: Panperceptualism of the Universe</a></li>
+            <li><a href="part-4/index.html">[+] Part 4: A Revolutionary Framework for Understanding Reality</a></li>
+            <li><a href="part-5/index.html">[+] Part 5: Redefining Perception and Reality: A Mathematical Proposal</a></li>
+            <li><a href="part-6/index.html">[+] Part 6: Towards an Interdisciplinary Synthesis of Perception and Reality</a></li>
+            <li><a href="part-7/index.html">[+] Part 7: Weaving Realities: Perceptual Interactions and Relational Ontology (includes simulation code)</a></li>
+            <li><a href="part-8/index.html">[+] Part 8: Emergent Temporalities and Cosmic Perception (includes simulation code)</a></li>
+            <li><a href="part-9/index.html">[+] Part 9: Perceptual Dynamics of Dreams, Simulations, and Physical Reality (includes simulation code)</a></li>
+            <li><a href="part-10/index.html">[+] Part 10: Perceptual Resonance Atomic Model (includes simulation code)</a></li>
+            <li><a href="part-11/index.html">[+] Part 11: Justification of Empirical Values</a></li>
+            <li><a href="part-12/index.html">[+] Part 12: Fractal Architecture of Perceptual Reality</a></li>
+            <li><a href="part-13/index.html">[+] Part 13: The Panperceptual Wave and Partial Reality Engines</a></li>
+            <li><a href="part-14/index.html">[+] Part 14: The Law of Sequential Perceptual Collapse and the Speed of Light as a Resonance Frequency</a></li>
+            <li><a href="part-15/index.html">[+] Part 15: The Observer Within Time: A Panperceptual Critique of the Myth of the External Viewpoint</a></li>
+            <li><a href="index.html">[+] Part 16: An Epistemological Critique of the Cultural Limits of Popperian Science from the Panperceptual Theory of the Universe</a></li>
+            <li><a href="part-17/index.html">[+] Part 17: Perceptual Complexity Index Analysis: String Geometry as Framework for Observer Negotiation</a></li>
+        </ul>
+    </div>
+
+    <div class="nav-internal">
+        <a href="part-15/index.html">← <span data-lang="en">Previous</span><span class="lang-hidden" data-lang="es">Anterior</span></a>
+        <span> | </span>
+        <a href="part-17/index.html"><span data-lang="en">Next</span><span class="lang-hidden" data-lang="es">Siguiente</span> →</a>
+    </div>
+
+    <div class="footer">
+        <div class="footer-modules">
+            <a href="../index.html"><span data-lang="en">[PERCEPTEMPLE]</span><span data-lang="es" class="lang-hidden">[PERCEPTEMPLE]</span></a>
+            <span>|</span>
+            <a href="../percepware/index.html"><span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span></a>
+            <span>|</span>
+            <a href="../pci/index.html"><span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span></a>
+            <span>|</span>
+            <a href="../aei/index.html"><span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span></a>
+            <span>|</span>
+            <a href="../neohaki/index.html"><span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span></a>
+            <span>|</span>
+            <a href="../pram/index.html"><span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span></a>
+            <span>|</span>
+            <a href="../licence/index.html"><span data-lang="en">LICENSE</span><span data-lang="es" class="lang-hidden">LICENCIA</span></a>
+            <span>|</span>
+            <a href="../bitneko/index.html"><span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span></a>
+            <span>|</span>
+            <a href="../space/index.html"><span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span></a>
+            <span>|</span>
+            <a href="../agamottor/index.html"><span data-lang="en">AGAMOTTOR</span><span data-lang="es" class="lang-hidden">AGAMOTTOR</span></a>
+            <span>|</span>
+            <a href="../little-prince/index.html"><span data-lang="en">LITTLE PRINCE</span><span data-lang="es" class="lang-hidden">LITTLE PRINCE</span></a>
+            <span>|</span>
+            <a href="index.html" class="footer-current"><span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span></a>
+            <span>|</span>
+            <a href="../time-machine/index.html"><span data-lang="en">TIME MACHINE</span><span data-lang="es" class="lang-hidden">MÁQUINA DEL TIEMPO</span></a>
+            <span>|</span>
+            <a href="../poetry/index.html"><span data-lang="en">POETRY</span><span data-lang="es" class="lang-hidden">POESÍA</span></a>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://orcid.org/0009-0002-3432-1710" target="_blank" rel="noopener"><span data-lang="en">ORCID</span><span data-lang="es" class="lang-hidden">ORCID</span></a>
+            <span> / </span>
+            <a href="https://github.com/PERCEPTEMPLE" target="_blank" rel="noopener"><span data-lang="en">GITHUB</span><span data-lang="es" class="lang-hidden">GITHUB</span></a>
+            <span> / </span>
+            <a href="https://x.com/panperceptual" target="_blank" rel="noopener"><span data-lang="en">X</span><span data-lang="es" class="lang-hidden">X</span></a>
+        </div>
+
+        <div class="footer-bottom">
+            <span data-lang="en">DEPOSITED IN THE INTELLECTUAL PROPERTY REGISTRY · EL SALVADOR · DANY D. RUIZ</span>
+            <span data-lang="es" class="lang-hidden">DEPOSITADO EN EL REGISTRO DE LA PROPIEDAD INTELECTUAL · EL SALVADOR · DANY D. RUIZ</span>
+            <br>
+            <span data-lang="en">Before They See Us, We Already Are</span>
+            <span data-lang="es" class="lang-hidden">Antes de que nos vean, ya somos</span>
+        </div>
+    </div>
+
+    <script>
+        function toggleLanguage() {
+            var html    = document.documentElement;
+            var current = html.lang || 'en';
+            var next    = current === 'en' ? 'es' : 'en';
+            var hide    = next === 'en' ? 'es' : 'en';
+
+            html.lang = next;
+
+            document.querySelectorAll('[data-lang="' + next + '"]')
+                .forEach(function(el) { el.classList.remove('lang-hidden'); });
+
+            document.querySelectorAll('[data-lang="' + hide + '"]')
+                .forEach(function(el) { el.classList.add('lang-hidden'); });
+
+            document.getElementById('langToggle').textContent =
+                next === 'en' ? 'ES' : 'EN';
+
+            localStorage.setItem('perceptemple-lang', next);
+        }
+
+        (function() {
+            var saved = localStorage.getItem('perceptemple-lang');
+            if (saved && saved === 'es') {
+                toggleLanguage();
+            }
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../favicon.png" type="image/png">
+
+    <title>PERCEPTEMPLE</title>
+
+    <meta name="description" content="Reformulates the Panperceptual Theory of the Universe (PTU) integrating information theory, computational neuroscience, and complex dynamical systems, redefining PWF and PCI with measurable parameters.">
+    <meta name="author" content="Dany D. Ruiz">
+    <meta name="last-modified" content="2026-06-07">
+    <meta name="keywords" content="Panperceptual Theory of the Universe, Perceptual Wave Function, Perceptual Complexity Index, information theory, computational neuroscience, interdisciplinary synthesis, Dany D. Ruiz">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://perceptemple.art/ptu/part-6/">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="The Panperceptual Theory of the Universe: Towards an Interdisciplinary Synthesis of Perception and Reality · PERCEPTEMPLE">
+    <meta property="og:description" content="Reformulates the Panperceptual Theory of the Universe (PTU) integrating information theory, computational neuroscience, and complex dynamical systems, redefining PWF and PCI with measurable parameters.">
+    <meta property="og:url" content="https://perceptemple.art/ptu/part-6/">
+    <meta property="og:site_name" content="PERCEPTEMPLE">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_SV">
+    <meta property="og:image" content="https://perceptemple.art/preview.jpg">
+    <meta property="og:image:alt" content="PERCEPTEMPLE — PTU Part 6: Interdisciplinary Synthesis">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@panperceptual">
+    <meta name="twitter:creator" content="@panperceptual">
+    <meta name="twitter:title" content="The Panperceptual Theory of the Universe: Towards an Interdisciplinary Synthesis of Perception and Reality · PERCEPTEMPLE">
+    <meta name="twitter:description" content="Reformulates the Panperceptual Theory of the Universe (PTU) integrating information theory, computational neuroscience, and complex dynamical systems, redefining PWF and PCI with measurable parameters.">
+    <meta name="twitter:image" content="https://perceptemple.art/preview.jpg">
+
+    <meta name="citation_title" content="The Panperceptual Theory of the Universe: Towards an Interdisciplinary Synthesis of Perception and Reality">
+    <meta name="citation_author" content="Ruiz, Dany D.">
+    <meta name="citation_publication_date" content="2025">
+    <meta name="citation_online_date" content="2025">
+    <meta name="citation_publisher" content="PERCEPTEMPLE">
+    <meta name="citation_language" content="en">
+    <meta name="DC.title" content="The Panperceptual Theory of the Universe: Towards an Interdisciplinary Synthesis of Perception and Reality">
+    <meta name="DC.creator" content="Dany D. Ruiz">
+    <meta name="DC.publisher" content="PERCEPTEMPLE">
+    <meta name="DC.language" content="en">
+    <meta name="DC.rights" content="https://perceptemple.art/licence/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg:      #020805;
+            --panel:   #020805;
+            --rule:    #0a5c1e;
+            --hi:      #00ff41;
+            --hi2:     #39ff14;
+            --amber:   #ffb200;
+            --amber2:  #ffcc00;
+            --txt:     rgba(0,255,65,0.75);
+            --txt2:    rgba(0,255,65,0.9);
+            --txt3:    rgba(0,255,65,0.35);
+            --white:   #39ff14;
+            --red:     #ff2020;
+            --fs-xs: clamp(0.65rem, 1.2vw, 0.75rem);
+            --fs-sm: clamp(0.75rem, 1.4vw, 0.85rem);
+            --fs-md: clamp(0.8rem,  1.6vw, 1rem);
+            --fs-lg: clamp(1rem,    2vw,   1.25rem);
+            --fs-xl: clamp(1.25rem, 3vw,   1.75rem);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .lang-hidden {
+            display: none !important;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--txt2);
+            font-family: 'Share Tech Mono', monospace;
+            font-weight: 400;
+            font-size: var(--fs-sm);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeUp 0.4s ease both;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 3px,
+                rgba(0,0,0,0.06) 3px,
+                rgba(0,0,0,0.06) 6px
+            );
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0,255,65,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,255,65,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 9998;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        canvas {
+            max-width: 100%;
+        }
+
+        .bracket {
+            position: fixed;
+            color: rgba(0,255,65,0.15);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            pointer-events: none;
+            z-index: 10000;
+        }
+        .bracket-tl { top: 12px;    left: 16px;  }
+        .bracket-tr { top: 12px;    right: 16px; }
+        .bracket-bl { bottom: 12px; left: 16px;  }
+        .bracket-br { bottom: 12px; right: 16px; }
+
+        .pch-btn {
+            display: inline-block;
+            margin-top: 6px;
+            background: transparent;
+            border: 1px solid var(--red);
+            color: var(--red);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            text-decoration: none;
+            border-radius: 2px;
+            font-weight: 700;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        .pch-btn:hover {
+            background: rgba(255,32,32,0.06);
+            color: var(--red);
+        }
+
+        .translate-btn {
+            position: relative;
+            background: transparent;
+            border: 1px solid var(--amber);
+            color: var(--amber);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.375rem 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-radius: 2px;
+            font-weight: 600;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .translate-btn:hover {
+            background: rgba(255,178,0,0.08);
+            color: var(--amber2);
+            border-color: var(--amber2);
+        }
+
+        .header {
+            width: 100%;
+            max-width: 75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 3rem;
+            border-bottom: 1px solid var(--rule);
+            background: var(--bg);
+            position: relative;
+            z-index: 100;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .logo-mark {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            color: var(--hi);
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .nav-link:hover,
+        .nav-link.highlight {
+            color: var(--hi);
+        }
+
+        .section-label {
+            width: 100%;
+            max-width: 60rem;
+            padding: 0.8125rem 3rem;
+            border-bottom: 1px solid var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--amber);
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            font-weight: 600;
+        }
+        .section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--rule);
+            min-width: 20px;
+        }
+
+        .hero {
+            width: 100%;
+            max-width: 60rem;
+            padding: 4rem 3rem 3.5rem;
+            border-bottom: 1px solid var(--rule);
+            display: grid;
+            grid-template-columns: 1fr 18rem;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .hero-kicker {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+            color: var(--txt3);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .hero-h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            line-height: 1.2;
+            color: var(--hi);
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .hero-body {
+            font-size: 0.8125rem;
+            color: var(--txt);
+            line-height: 1.8;
+            max-width: 65ch;
+            text-align: left;
+            word-break: break-word;
+        }
+        .hero-body strong {
+            color: var(--txt2);
+        }
+
+        .hero-right {
+            display: flex;
+            flex-direction: column;
+            padding-top: 0.5rem;
+        }
+
+        .kv {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0.6875rem 1rem;
+            border-bottom: 1px solid var(--rule);
+            gap: 0.5rem;
+        }
+        .kv:first-child {
+            border-top: 1px solid var(--rule);
+        }
+        .kv-key {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .kv-val {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            color: var(--hi);
+            font-weight: 700;
+            text-align: right;
+            word-break: break-word;
+        }
+        .kv-val.white {
+            color: var(--txt2);
+            font-size: 0.8125rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-weight: 400;
+        }
+        .kv-val.amber {
+            color: var(--amber);
+        }
+
+        .content-section {
+            width: 100%;
+            max-width: 60rem;
+            padding: 3rem;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .content-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            color: var(--amber);
+            margin-bottom: 0.625rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            word-break: break-word;
+            border-bottom: 1px solid var(--rule);
+            padding-bottom: 0.5rem;
+        }
+
+        .content-section h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: var(--hi);
+            margin-top: 1.75rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .content-section p {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.8125rem;
+            color: var(--txt);
+            line-height: 1.9;
+            margin-bottom: 0.75rem;
+            word-break: break-word;
+            max-width: 70ch;
+            text-align: left;
+        }
+        .content-section p strong {
+            color: var(--txt2);
+        }
+
+        .content-section ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 1rem;
+        }
+        .content-section ul li {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.8125rem;
+            color: var(--txt);
+            line-height: 1.8;
+            padding-left: 0.875rem;
+            position: relative;
+            max-width: 70ch;
+            text-align: left;
+            word-break: break-word;
+        }
+        .content-section ul li::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            color: var(--hi);
+            font-weight: bold;
+        }
+
+        .code-block {
+            padding: 1.25rem 1.5rem;
+            background: rgba(0,255,65,0.02);
+            border: 1px solid var(--rule);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--hi);
+            line-height: 1.6;
+            margin: 1rem 0;
+            border-radius: 2px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+            text-align: left;
+        }
+
+        .math-inline {
+            font-family: 'Share Tech Mono', monospace;
+            color: var(--hi);
+            background: rgba(0,255,65,0.05);
+            padding: 0.1rem 0.3rem;
+            border-radius: 2px;
+        }
+
+        .article-index {
+            list-style: none;
+            padding-left: 0;
+        }
+        .article-index li {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.8125rem;
+            color: var(--txt);
+            line-height: 1.8;
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.25rem;
+            text-align: left;
+            word-break: break-word;
+        }
+        .article-index li::before {
+            content: '[+]';
+            position: absolute;
+            left: 0;
+            color: var(--amber);
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+        }
+        .article-index li a {
+            color: var(--txt2);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .article-index li a:hover {
+            color: var(--amber);
+        }
+
+        .nav-internal {
+            text-align: center;
+            padding: 2rem 3rem;
+            border-bottom: 1px solid var(--rule);
+        }
+        .nav-internal a {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            color: var(--amber);
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.2s;
+        }
+        .nav-internal a:hover {
+            color: var(--hi);
+        }
+        .nav-internal span {
+            color: var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+        }
+
+        .footer {
+            width: 100%;
+            max-width: 60rem;
+            padding: 1.625rem 3rem;
+            border-top: 1px solid var(--rule);
+            position: relative;
+            z-index: 50;
+        }
+
+        .footer-modules {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 0.875rem;
+        }
+        .footer-modules a {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            color: var(--txt3);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+            white-space: nowrap;
+            text-transform: uppercase;
+        }
+        .footer-modules a:hover,
+        .footer-modules a.footer-current {
+            color: var(--hi);
+        }
+        .footer-modules span {
+            color: var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+        }
+
+        .footer-social {
+            text-align: center;
+            margin-bottom: 0.875rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--amber);
+        }
+        .footer-social a {
+            color: var(--amber);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-social a:hover {
+            color: var(--hi);
+        }
+        .footer-social span {
+            color: var(--rule);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.7rem;
+            color: rgba(0,255,65,0.25);
+            line-height: 1.8;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0);    }
+        }
+
+        @media (max-width: 1024px) {
+            .header { gap: 0.75rem; }
+            .hero { gap: 1.5rem; }
+            .nav-link { font-size: var(--fs-xs); }
+            .section-label { font-size: var(--fs-xs); }
+            .footer-modules a { font-size: var(--fs-xs); }
+            .footer-social { font-size: var(--fs-xs); }
+            .footer-bottom { font-size: var(--fs-xs); }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 1rem 1.5rem;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .header-nav {
+                width: 100%;
+                gap: 1rem;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 4px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+            .header-nav::-webkit-scrollbar { display: none; }
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 2.5rem 1.5rem 2.25rem;
+                gap: 1.5rem;
+            }
+            .hero-body { max-width: 100%; }
+            .content-section { padding: 2rem 1.5rem; }
+            .section-label { padding: 0.8125rem 1.5rem; }
+            .footer { padding: 1.25rem 1.5rem; }
+            .bracket { font-size: 0.9rem; }
+            [class*="grid"],
+            [class*="cols"],
+            [class*="columns"] {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header { padding: 0.75rem 1rem; }
+            .hero { padding: 1.75rem 1rem 1.5rem; }
+            .content-section { padding: 1.5rem 1rem; }
+            .footer { padding: 1rem; }
+            .footer-modules { gap: 0.75rem; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0002-3432-1710",
+      "name": "Dany D. Ruiz",
+      "alternateName": "panperceptual",
+      "jobTitle": "Anartist · Independent Researcher",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "url": "https://perceptemple.art",
+      "sameAs": [
+        "https://orcid.org/0009-0002-3432-1710",
+        "https://x.com/panperceptual",
+        "https://github.com/PERCEPTEMPLE",
+        "https://doi.org/10.17605/OSF.IO/FVCAX",
+        "https://doi.org/10.5281/zenodo.17683631",
+        "https://doi.org/10.2139/ssrn.5794102"
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "headline": "The Panperceptual Theory of the Universe: Towards an Interdisciplinary Synthesis of Perception and Reality",
+      "description": "Reformulates the Panperceptual Theory of the Universe (PTU) integrating information theory, computational neuroscience, and complex dynamical systems, redefining PWF and PCI with measurable parameters.",
+      "datePublished": "2026-06-07",
+      "dateModified": "2026-06-07",
+      "inLanguage": "en",
+      "url": "https://perceptemple.art/ptu/part-6/",
+      "author": {
+        "@type": "Person",
+        "@id": "https://orcid.org/0009-0002-3432-1710",
+        "name": "Dany D. Ruiz"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "isPartOf": {
+        "@type": "Book",
+        "name": "Panperceptual Theory of the Universe",
+        "url": "https://perceptemple.art/ptu/"
+      },
+      "license": "https://perceptemple.art/licence/",
+      "sameAs": [
+        "https://doi.org/10.17605/OSF.IO/UXEGH",
+        "https://doi.org/10.5281/zenodo.19168519",
+        "https://doi.org/10.2139/ssrn.6456099"
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DefinedTerm",
+      "name": "Perceptual Complexity Index",
+      "alternateName": "PCI",
+      "description": "A dynamic complexity metric measuring perceptual capacity through processing units, interconnection level, frequency, and response time, enhanced with transfer entropy to quantify information flow within an observing system.",
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": "Panperceptual Theory of the Universe — Glossary",
+        "url": "https://perceptemple.art/aei/glossary/"
+      },
+      "url": "https://perceptemple.art/pci/",
+      "creator": {
+        "@type": "Person",
+        "@id": "https://orcid.org/0009-0002-3432-1710",
+        "name": "Dany D. Ruiz"
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <span class="bracket bracket-tl">[</span>
+    <span class="bracket bracket-tr">]</span>
+    <span class="bracket bracket-bl">[</span>
+    <span class="bracket bracket-br">]</span>
+
+    <div class="header">
+        <div class="logo">
+            <span class="logo-mark lang-hidden" data-lang="es">PERCEPTEMPLE</span>
+            <span class="logo-mark" data-lang="en">PERCEPTEMPLE</span>
+            <br>
+            <a class="pch-btn" href="../../index.html">
+                <span class="lang-hidden" data-lang="es">PRUEBA DE CONCIENCIA HUMANA</span>
+                <span data-lang="en">HUMAN CONSCIOUSNESS TEST</span>
+            </a>
+        </div>
+        <nav class="header-nav">
+            <a class="nav-link" href="../../percepware/index.html"><span class="lang-hidden" data-lang="es">PercepWare</span><span data-lang="en">PercepWare</span></a>
+            <a class="nav-link" href="../../pci/index.html"><span class="lang-hidden" data-lang="es">PCI</span><span data-lang="en">PCI</span></a>
+            <a class="nav-link" href="../../aei/index.html"><span class="lang-hidden" data-lang="es">AEI</span><span data-lang="en">AEI</span></a>
+            <a class="nav-link" href="../../neohaki/index.html"><span class="lang-hidden" data-lang="es">NEOHAKI</span><span data-lang="en">NEOHAKI</span></a>
+            <a class="nav-link" href="../../pram/index.html"><span class="lang-hidden" data-lang="es">PRAM</span><span data-lang="en">PRAM</span></a>
+            <a class="nav-link" href="../../licence/index.html"><span class="lang-hidden" data-lang="es">LICENCIA</span><span data-lang="en">LICENSE</span></a>
+            <a class="nav-link" href="../../bitneko/index.html"><span class="lang-hidden" data-lang="es">BITNEKO</span><span data-lang="en">BITNEKO</span></a>
+            <a class="nav-link" href="../../space/index.html"><span class="lang-hidden" data-lang="es">SPACE</span><span data-lang="en">SPACE</span></a>
+            <a class="nav-link" href="../../agamottor/index.html"><span class="lang-hidden" data-lang="es">AGAMOTTOR</span><span data-lang="en">AGAMOTTOR</span></a>
+            <a class="nav-link" href="../../little-prince/index.html"><span class="lang-hidden" data-lang="es">LITTLE PRINCE</span><span data-lang="en">LITTLE PRINCE</span></a>
+            <a class="nav-link highlight" href="../index.html"><span class="lang-hidden" data-lang="es">PTU</span><span data-lang="en">PTU</span></a>
+            <a class="nav-link" href="../../time-machine/index.html"><span class="lang-hidden" data-lang="es">MÁQUINA DEL TIEMPO</span><span data-lang="en">TIME MACHINE</span></a>
+            <a class="nav-link" href="../../poetry/index.html"><span class="lang-hidden" data-lang="es">POESÍA</span><span data-lang="en">POETRY</span></a>
+            <button class="translate-btn" id="langToggle" onclick="toggleLanguage()">ES</button>
+        </nav>
+    </div>
+
+    <div class="section-label">
+        <span class="lang-hidden" data-lang="es">TRATADO PANPERCEPTUAL · PARTE 6</span>
+        <span data-lang="en">PANPERCEPTUAL TREATISE · PART 6</span>
+    </div>
+
+    <div class="hero">
+        <div class="hero-left">
+            <div class="hero-kicker lang-hidden" data-lang="es">SÍNTESIS INTERDISCIPLINARIA</div>
+            <div class="hero-kicker" data-lang="en">INTERDISCIPLINARY SYNTHESIS</div>
+            <h1 class="hero-h1">
+                <span class="lang-hidden" data-lang="es">La Teoría Panperceptual del Universo: Hacia una Síntesis Interdisciplinaria de la Percepción y la Realidad</span>
+                <span data-lang="en">The Panperceptual Theory of the Universe: Towards an Interdisciplinary Synthesis of Perception and Reality</span>
+            </h1>
+            <div class="hero-body">
+                <p class="lang-hidden" data-lang="es"><strong>Fecha:</strong> 2 de noviembre de 2024</p>
+                <p data-lang="en"><strong>Date:</strong> November 2, 2024</p>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="kv">
+                <span class="kv-key lang-hidden" data-lang="es">AUTOR</span>
+                <span class="kv-key" data-lang="en">AUTHOR</span>
+                <span class="kv-val white">Dany D. Ruiz</span>
+            </div>
+            <div class="kv">
+                <span class="kv-key lang-hidden" data-lang="es">MÓDULO</span>
+                <span class="kv-key" data-lang="en">MODULE</span>
+                <span class="kv-val amber">
+                    <span class="lang-hidden" data-lang="es">PTU · PARTE 6</span>
+                    <span data-lang="en">PTU · PART 6</span>
+                </span>
+            </div>
+            <div class="kv">
+                <span class="kv-key lang-hidden" data-lang="es">SERIE</span>
+                <span class="kv-key" data-lang="en">SERIES</span>
+                <span class="kv-val white">
+                    <span class="lang-hidden" data-lang="es">17 PARTES</span>
+                    <span data-lang="en">17 PARTS</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="lang-hidden" data-lang="es">Resumen</h2>
+        <h2 data-lang="en">Abstract</h2>
+        <p class="lang-hidden" data-lang="es">La Teoría Panperceptual del Universo (PTU) propone que la percepción no es meramente una recepción pasiva de estímulos, sino un proceso activo que co-crea la realidad que experimentamos. Este artículo se basa en la PTU original integrando perspectivas de la teoría de la información, la neurociencia computacional y los sistemas dinámicos complejos. Se aleja de las analogías cuánticas especulativas hacia un marco más empírico y verificable. Conceptos clave como la Función de Onda Perceptual (PWF) y el Índice de Complejidad Perceptual (PCI) se redefinen con parámetros medibles, se esbozan enfoques experimentales y se exploran las implicaciones filosóficas para la percepción, la realidad y la conciencia.</p>
+        <p data-lang="en">The Panperceptual Theory of the Universe (PTU) proposes that perception is not merely a passive reception of stimuli, but an active process that co-creates the reality we experience. This paper builds upon the original PTU by integrating perspectives from information theory, computational neuroscience, and complex dynamical systems. It moves away from speculative quantum analogies towards a more empirical and verifiable framework. Key concepts like the Perceptual Wave Function (PWF) and the Perceptual Complexity Index (PCI) are redefined with measurable parameters, experimental approaches are outlined, and the philosophical implications for perception, reality, and consciousness are explored.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 class="lang-hidden" data-lang="es">1. Introducción</h2>
+        <h2 data-lang="en">1. Introduction</h2>
+        <p class="lang-hidden" data-lang="es">La PTU afirma que la percepción —ya sea humana, animal o tecnológica— moldea fundamentalmente la naturaleza de la realidad. Inspirada inicialmente en la mecánica cuántica (por ejemplo, la superposición y el entrelazamiento), la teoría enfrentó críticas por aplicar estos conceptos de manera demasiado flexible a fenómenos macroscópicos como la percepción. En respuesta, reformulamos la PTU utilizando herramientas interdisciplinarias, manteniendo su alcance ambicioso mientras mejoramos su credibilidad científica y verificabilidad.</p>
+        <p data-lang="en">The PTU asserts that perception—whether human, animal, or technological—fundamentally shapes the nature of reality. Initially inspired by quantum mechanics (e.g., superposition and entanglement), the theory faced criticism for applying these concepts too loosely to macroscopic phenomena like perception. In response, we reformulate the PTU using interdisciplinary tools, maintaining its ambitious scope while enhancing its scientific credibility and verifiability.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 class="lang-hidden" data-lang="es">2. Reformulación de la Función de Onda Perceptual (PWF)</h2>
+        <h2 data-lang="en">2. Reformulation of the Perceptual Wave Function (PWF)</h2>
+        <p class="lang-hidden" data-lang="es">La PWF original, expresada como Ψ(x, t) = A · e^i(kx−ωt), pretendía modelar la percepción dinámicamente, de manera similar a una función de onda cuántica. Sin embargo, su fundamentación empírica era débil. Aquí, la reinterpretamos a través de dos enfoques:</p>
+        <p data-lang="en">The original PWF, expressed as Ψ(x, t) = A · e^i(kx−ωt), aimed to model perception dynamically, similar to a quantum wave function. However, its empirical grounding was weak. Here, we reinterpret it through two approaches:</p>
+
+        <h3 class="lang-hidden" data-lang="es">2.1. Teoría de la Información</h3>
+        <h3 data-lang="en">2.1. Information Theory</h3>
+        <p class="lang-hidden" data-lang="es">La PWF se redefine como la distribución de información perceptual dentro de un sistema observador:</p>
+        <p data-lang="en">The PWF is redefined as the distribution of perceptual information within an observing system:</p>
+        <ul>
+            <li class="lang-hidden" data-lang="es"><strong>A:</strong> Amplitud de la señal, vinculada a la intensidad del estímulo (por ejemplo, brillo de la luz o volumen del sonido).</li>
+            <li data-lang="en"><strong>A:</strong> Signal amplitude, linked to stimulus intensity (e.g., light brightness or sound volume).</li>
+            <li class="lang-hidden" data-lang="es"><strong>k:</strong> Resolución espacial, que indica la capacidad de discernir detalles.</li>
+            <li data-lang="en"><strong>k:</strong> Spatial resolution, indicating the ability to discern details.</li>
+            <li class="lang-hidden" data-lang="es"><strong>ω:</strong> Tasa de actualización temporal, que refleja la rapidez con la que el sistema procesa los cambios ambientales.</li>
+            <li data-lang="en"><strong>ω:</strong> Temporal update rate, reflecting how quickly the system processes environmental changes.</li>
+        </ul>
+        <p class="lang-hidden" data-lang="es">Cuantificamos esto utilizando la entropía de Shannon [1]:</p>
+        <p data-lang="en">We quantify this using Shannon entropy [1]:</p>
+
+        <div class="code-block"># Shannon entropy (S) to quantify perceptual information.
+# S: A measure of uncertainty or diversity in perceptual states.
+# p_i: Probability of a perceptual system being in a particular state 'i'.
+# Σ: Summation over all possible perceptual states.
+S = - Σ p_i * log(p_i)            (1)</div>
+
+        <p class="lang-hidden" data-lang="es">donde p_i es la probabilidad de un estado perceptual, midiendo la incertidumbre o diversidad en los estímulos.</p>
+        <p data-lang="en">where p_i is the probability of a perceptual state, measuring the uncertainty or diversity in stimuli.</p>
+
+        <h3 class="lang-hidden" data-lang="es">2.2. Sistemas Dinámicos Complejos</h3>
+        <h3 data-lang="en">2.2. Complex Dynamical Systems</h3>
+        <p class="lang-hidden" data-lang="es">La percepción implica retroalimentación no lineal a través de escalas (por ejemplo, desde neuronas hasta el comportamiento). Modelamos la PWF como:</p>
+        <p data-lang="en">Perception involves non-linear feedback across scales (e.g., from neurons to behavior). We model the PWF as:</p>
+
+        <div class="code-block"># Differential equation for the Perceptual Wave Function (PWF) in complex dynamical systems.
+# dΨ/dt: Rate of change of the PWF with respect to time.
+# f: A function describing the system's dynamics.
+# Ψ: The current Perceptual Wave Function.
+# k: Parameter related to spatial resolution or processing complexity.
+# ω: Parameter related to the temporal update rate.
+# I: Parameter representing the system's internal interactions (e.g., neural synchronization).
+# This equation links the PWF to observable data like EEG or fMRI patterns.
+dΨ/dt = f(Ψ, k, ω, I)            (2)</div>
+
+        <p class="lang-hidden" data-lang="es">donde I representa las interacciones del sistema (por ejemplo, sincronización neuronal), vinculando la PWF a datos observables como patrones de EEG o fMRI.</p>
+        <p data-lang="en">where I represents the system's interactions (e.g., neural synchronization), linking the PWF to observable data like EEG or fMRI patterns.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 class="lang-hidden" data-lang="es">3. Revisión del Índice de Complejidad Perceptual (PCI)</h2>
+        <h2 data-lang="en">3. Revision of the Perceptual Complexity Index (PCI)</h2>
+        <p class="lang-hidden" data-lang="es">El PCI original, PCI = (N·I·F)/T, medía la capacidad perceptual. Lo refinamos con:</p>
+        <p data-lang="en">The original PCI, PCI = (N·I·F)/T, measured perceptual capacity. We refine it with:</p>
+        <ul>
+            <li class="lang-hidden" data-lang="es"><strong>N:</strong> Número de unidades de procesamiento (por ejemplo, neuronas o nodos de red).</li>
+            <li data-lang="en"><strong>N:</strong> Number of processing units (e.g., neurons or network nodes).</li>
+            <li class="lang-hidden" data-lang="es"><strong>I:</strong> Nivel de interconexión, medido por densidad sináptica o topología de red.</li>
+            <li data-lang="en"><strong>I:</strong> Level of interconnection, measured by synaptic density or network topology.</li>
+            <li class="lang-hidden" data-lang="es"><strong>F:</strong> Frecuencia de procesamiento, observada en tasas de disparo o ciclos computacionales.</li>
+            <li data-lang="en"><strong>F:</strong> Processing frequency, seen in firing rates or computational cycles.</li>
+            <li class="lang-hidden" data-lang="es"><strong>T:</strong> Tiempo de respuesta, probado en estudios psicofísicos.</li>
+            <li data-lang="en"><strong>T:</strong> Response time, tested in psychophysical studies.</li>
+        </ul>
+        <p class="lang-hidden" data-lang="es">Agregamos la entropía de transferencia para medir el flujo de información dentro del sistema [2], mejorando el PCI como una métrica de complejidad dinámica vinculada a fenómenos como la integración multisensorial.</p>
+        <p data-lang="en">We add transfer entropy to measure information flow within the system [2], enhancing the PCI as a dynamic complexity metric linked to phenomena like multisensory integration.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 class="lang-hidden" data-lang="es">4. Reinterpretación de la Superposición y el Entrelazamiento Perceptual</h2>
+        <h2 data-lang="en">4. Reinterpretation of Perceptual Superposition and Entanglement</h2>
+
+        <h3 class="lang-hidden" data-lang="es">4.1. Superposición Perceptual</h3>
+        <h3 data-lang="en">4.1. Perceptual Superposition</h3>
+        <p class="lang-hidden" data-lang="es">La noción de múltiples PWF formando una realidad emergente se reinterpreta como integración multisensorial. En el cerebro, regiones como la corteza parietal combinan entradas sensoriales:</p>
+        <p data-lang="en">The notion of multiple PWFs forming an emergent reality is reinterpreted as multisensory integration. In the brain, regions like the parietal cortex blend sensory inputs:</p>
+
+        <div class="code-block"># Emergent reality (R) as multisensory integration.
+# Σ Ψ_i: Sum of individual Perceptual Wave Functions (sensory inputs).
+# ΣΣ γ_ij Ψ_i Ψ_j: Coupling terms representing the interaction between different sensory inputs.
+# γ_ij: Coefficient quantifying the strength of integration between perceptions i and j.
+# This formulation models how the brain combines multiple sensory signals to form a unified perception.
+R = Σ Ψ_i + ΣΣ γ_ij Ψ_i Ψ_j      (3)</div>
+
+        <p class="lang-hidden" data-lang="es">donde γ_ij cuantifica la fuerza de integración, medible mediante neuroimagen.</p>
+        <p data-lang="en">where γ_ij quantifies the strength of integration, measurable via neuroimaging.</p>
+
+        <h3 class="lang-hidden" data-lang="es">4.2. Entrelazamiento Perceptual</h3>
+        <h3 data-lang="en">4.2. Perceptual Entanglement</h3>
+        <p class="lang-hidden" data-lang="es">Anteriormente de inspiración cuántica, el entrelazamiento es ahora sincronización neuronal —por ejemplo, oscilaciones gamma (30-100 Hz) durante la percepción o cognición. Esta analogía macroscópica es verificable con MEG o EEG.</p>
+        <p data-lang="en">Previously quantum-inspired, entanglement is now neural synchronization—e.g., gamma oscillations (30-100 Hz) during perception or cognition. This macroscopic analogy is verifiable with MEG or EEG.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 class="lang-hidden" data-lang="es">5. Propuestas Experimentales</h2>
+        <h2 data-lang="en">5. Experimental Proposals</h2>
+        <p class="lang-hidden" data-lang="es">Para fundamentar empíricamente la PTU, proponemos:</p>
+        <p data-lang="en">To empirically ground the PTU, we propose:</p>
+        <ul>
+            <li class="lang-hidden" data-lang="es"><strong>Comparación de PCI:</strong> Medir el PCI en humanos, animales e IA durante tareas perceptuales (por ejemplo, discriminación visual) para probar su poder predictivo.</li>
+            <li data-lang="en"><strong>PCI Comparison:</strong> Measuring the PCI in humans, animals, and AI during perceptual tasks (e.g., visual discrimination) to test its predictive power.</li>
+            <li class="lang-hidden" data-lang="es"><strong>Superposición en RV:</strong> Usar realidad virtual con "físicas" alteradas para estudiar la adaptación perceptual, probando los efectos colectivos de las PWF.</li>
+            <li data-lang="en"><strong>Superposition in VR:</strong> Using virtual reality with altered "physics" to study perceptual adaptation, testing the collective effects of PWFs.</li>
+            <li class="lang-hidden" data-lang="es"><strong>Percepción Compartida:</strong> Evaluar la sincronización EEG entre personas en tareas colaborativas (por ejemplo, interpretando imágenes ambiguas), explorando el "entrelazamiento" socialmente.</li>
+            <li data-lang="en"><strong>Shared Perception:</strong> Assessing EEG synchronization between people in collaborative tasks (e.g., interpreting ambiguous images), exploring "entanglement" socially.</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2 class="lang-hidden" data-lang="es">6. Implicaciones Filosóficas</h2>
+        <h2 data-lang="en">6. Philosophical Implications</h2>
+        <p class="lang-hidden" data-lang="es">La PTU invita a reflexionar sobre:</p>
+        <p data-lang="en">The PTU prompts reflection on:</p>
+        <ul>
+            <li class="lang-hidden" data-lang="es"><strong>Realidad Emergente:</strong> Si la percepción co-crea la realidad, entonces la realidad es fluida, alineándose con la fenomenología y la física relacional.</li>
+            <li data-lang="en"><strong>Emergent Reality:</strong> If perception co-creates reality, then reality is fluid, aligning with phenomenology and relational physics.</li>
+            <li class="lang-hidden" data-lang="es"><strong>Continuo de Conciencia:</strong> La complejidad perceptual sugiere que la conciencia varía por grados, aplicable a sistemas artificiales.</li>
+            <li data-lang="en"><strong>Consciousness Continuum:</strong> Perceptual complexity suggests that consciousness varies by degree, applicable to artificial systems.</li>
+            <li class="lang-hidden" data-lang="es"><strong>Interacción Mente-Materia:</strong> La teoría replantea el problema mente-cuerpo como una relación dinámica.</li>
+            <li data-lang="en"><strong>Mind-Matter Interaction:</strong> The theory reframes the mind-body problem as a dynamic relationship.</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2 class="lang-hidden" data-lang="es">7. Conclusión</h2>
+        <h2 data-lang="en">7. Conclusion</h2>
+        <p class="lang-hidden" data-lang="es">Esta PTU refinada integra la teoría de la información, la neurociencia y los sistemas dinámicos [3], [5], ofreciendo un marco verificable mientras conserva su visión interdisciplinaria. Los experimentos y las métricas redefinidas como la PWF y el PCI allanan el camino para la validación empírica. La teoría continúa conectando la percepción, la realidad y la conciencia, alineándose con enfoques fenomenológicos [4] que ven la percepción como un proceso activo de construcción de la realidad.</p>
+        <p data-lang="en">This refined PTU integrates information theory, neuroscience, and dynamical systems [3], [5], offering a verifiable framework while retaining its interdisciplinary vision. The experiments and redefined metrics like the PWF and PCI pave the way for empirical validation. The theory continues to connect perception, reality, and consciousness, aligning with phenomenological approaches [4] that view perception as an active process of reality construction.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 class="lang-hidden" data-lang="es">8. Referencias</h2>
+        <h2 data-lang="en">8. References</h2>
+        <p>[1] C. E. Shannon, "A mathematical theory of communication," Bell System Technical Journal, vol. 27, no. 3, pp. 379-423, 1948.</p>
+        <p>[2] G. Tononi, "Consciousness as integrated information: A provisional manifesto," The Biological Bulletin, vol. 215, no. 3, pp. 216-242, 2008.</p>
+        <p>[3] K. Friston, "The free-energy principle: A unified brain theory?," Nature Reviews Neuroscience, vol. 11, no. 2, pp. 127-138, 2010.</p>
+        <p>[4] M. Merleau-Ponty, Phenomenology of Perception. London, UK: Routledge, 1945.</p>
+        <p>[5] A. L. Barabási, Network Science. Cambridge, UK: Cambridge University Press, 2016.</p>
+    </div>
+
+    <div class="content-section">
+        <h2 class="lang-hidden" data-lang="es">» Artículos en esta sección</h2>
+        <h2 data-lang="en">» Articles in this Section</h2>
+
+        <p class="lang-hidden" data-lang="es">A continuación, la serie completa de artículos que componen la Teoría Panperceptual del Universo.</p>
+        <p data-lang="en">Below is the complete series of articles that make up the Panperceptual Theory of the Universe.</p>
+
+        <ul class="article-index">
+            <li><a href="../part-1/index.html">[+] Part 1: Historical Evolution of Observation and Perception</a></li>
+            <li><a href="../part-2/index.html">[+] Part 2: Toward a New Revolution in Perception</a></li>
+            <li><a href="../part-3/index.html">[+] Part 3: Panperceptualism of the Universe</a></li>
+            <li><a href="../part-4/index.html">[+] Part 4: A Revolutionary Framework for Understanding Reality</a></li>
+            <li><a href="../part-5/index.html">[+] Part 5: Redefining Perception and Reality: A Mathematical Proposal</a></li>
+            <li><a href="../part-6/index.html">[+] Part 6: Towards an Interdisciplinary Synthesis of Perception and Reality</a></li>
+            <li><a href="../part-7/index.html">[+] Part 7: Weaving Realities: Perceptual Interactions and Relational Ontology (includes simulation code)</a></li>
+            <li><a href="../part-8/index.html">[+] Part 8: Emergent Temporalities and Cosmic Perception (includes simulation code)</a></li>
+            <li><a href="../part-9/index.html">[+] Part 9: Perceptual Dynamics of Dreams, Simulations, and Physical Reality (includes simulation code)</a></li>
+            <li><a href="../part-10/index.html">[+] Part 10: Perceptual Resonance Atomic Model (includes simulation code)</a></li>
+            <li><a href="../part-11/index.html">[+] Part 11: Justification of Empirical Values</a></li>
+            <li><a href="../part-12/index.html">[+] Part 12: Fractal Architecture of Perceptual Reality</a></li>
+            <li><a href="../part-13/index.html">[+] Part 13: The Panperceptual Wave and Partial Reality Engines</a></li>
+            <li><a href="../part-14/index.html">[+] Part 14: The Law of Sequential Perceptual Collapse</a></li>
+            <li><a href="../part-15/index.html">[+] Part 15: The Observer Within Time: A Panperceptual Critique</a></li>
+            <li><a href="../index.html">[+] Part 16: An Epistemological Critique of the Cultural Limits of Popperian Science from the Panperceptual Theory of the Universe</a></li>
+            <li><a href="../part-17/index.html">[+] Part 17: Perceptual Complexity Index Analysis: String Geometry as Framework for Observer Negotiation</a></li>
+        </ul>
+    </div>
+
+    <div class="nav-internal">
+        <a href="../part-5/index.html">← <span class="lang-hidden" data-lang="es">Anterior</span><span data-lang="en">Previous</span></a>
+        <span> | </span>
+        <a href="../part-7/index.html"><span class="lang-hidden" data-lang="es">Siguiente</span><span data-lang="en">Next</span> →</a>
+    </div>
+
+    <div class="footer">
+        <div class="footer-modules">
+            <a href="../../index.html"><span class="lang-hidden" data-lang="es">[PERCEPTEMPLE]</span><span data-lang="en">[PERCEPTEMPLE]</span></a>
+            <span>|</span>
+            <a href="../../percepware/index.html"><span class="lang-hidden" data-lang="es">PercepWare</span><span data-lang="en">PercepWare</span></a>
+            <span>|</span>
+            <a href="../../pci/index.html"><span class="lang-hidden" data-lang="es">PCI</span><span data-lang="en">PCI</span></a>
+            <span>|</span>
+            <a href="../../aei/index.html"><span class="lang-hidden" data-lang="es">AEI</span><span data-lang="en">AEI</span></a>
+            <span>|</span>
+            <a href="../../neohaki/index.html"><span class="lang-hidden" data-lang="es">NEOHAKI</span><span data-lang="en">NEOHAKI</span></a>
+            <span>|</span>
+            <a href="../../pram/index.html"><span class="lang-hidden" data-lang="es">PRAM</span><span data-lang="en">PRAM</span></a>
+            <span>|</span>
+            <a href="../../licence/index.html"><span class="lang-hidden" data-lang="es">LICENCIA</span><span data-lang="en">LICENSE</span></a>
+            <span>|</span>
+            <a href="../../bitneko/index.html"><span class="lang-hidden" data-lang="es">BITNEKO</span><span data-lang="en">BITNEKO</span></a>
+            <span>|</span>
+            <a href="../../space/index.html"><span class="lang-hidden" data-lang="es">SPACE</span><span data-lang="en">SPACE</span></a>
+            <span>|</span>
+            <a href="../../agamottor/index.html"><span class="lang-hidden" data-lang="es">AGAMOTTOR</span><span data-lang="en">AGAMOTTOR</span></a>
+            <span>|</span>
+            <a href="../../little-prince/index.html"><span class="lang-hidden" data-lang="es">LITTLE PRINCE</span><span data-lang="en">LITTLE PRINCE</span></a>
+            <span>|</span>
+            <a href="../index.html" class="footer-current"><span class="lang-hidden" data-lang="es">PTU</span><span data-lang="en">PTU</span></a>
+            <span>|</span>
+            <a href="../../time-machine/index.html"><span class="lang-hidden" data-lang="es">MÁQUINA DEL TIEMPO</span><span data-lang="en">TIME MACHINE</span></a>
+            <span>|</span>
+            <a href="../../poetry/index.html"><span class="lang-hidden" data-lang="es">POESÍA</span><span data-lang="en">POETRY</span></a>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://orcid.org/0009-0002-3432-1710" target="_blank" rel="noopener"><span class="lang-hidden" data-lang="es">ORCID</span><span data-lang="en">ORCID</span></a>
+            <span> / </span>
+            <a href="https://github.com/PERCEPTEMPLE" target="_blank" rel="noopener"><span class="lang-hidden" data-lang="es">GITHUB</span><span data-lang="en">GITHUB</span></a>
+            <span> / </span>
+            <a href="https://x.com/panperceptual" target="_blank" rel="noopener"><span class="lang-hidden" data-lang="es">X</span><span data-lang="en">X</span></a>
+        </div>
+
+        <div class="footer-bottom">
+            <span class="lang-hidden" data-lang="es">DEPOSITADO EN EL REGISTRO DE LA PROPIEDAD INTELECTUAL · EL SALVADOR · DANY D. RUIZ</span>
+            <span data-lang="en">DEPOSITED IN THE INTELLECTUAL PROPERTY REGISTRY · EL SALVADOR · DANY D. RUIZ</span>
+            <br>
+            <span class="lang-hidden" data-lang="es">Antes de que nos vean, ya somos</span>
+            <span data-lang="en">Before They See Us, They Already Are</span>
+        </div>
+    </div>
+
+    <script>
+        function toggleLanguage() {
+            var html    = document.documentElement;
+            var current = html.lang || 'en';
+            var next    = current === 'en' ? 'es' : 'en';
+            var hide    = next === 'en' ? 'es' : 'en';
+
+            html.lang = next;
+
+            document.querySelectorAll('[data-lang="' + next + '"]')
+                .forEach(function(el) { el.classList.remove('lang-hidden'); });
+
+            document.querySelectorAll('[data-lang="' + hide + '"]')
+                .forEach(function(el) { el.classList.add('lang-hidden'); });
+
+            document.getElementById('langToggle').textContent =
+                next === 'en' ? 'ES' : 'EN';
+
+            localStorage.setItem('perceptemple-lang', next);
+        }
+
+        (function() {
+            var saved = localStorage.getItem('perceptemple-lang');
+            if (saved && saved === 'es') {
+                toggleLanguage();
+            }
+        })();
+    </script>
+</body>
+</html>
