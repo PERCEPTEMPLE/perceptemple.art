@@ -1,0 +1,23 @@
+# robots.txt — PERCEPTEMPLE
+# https://perceptemple.art
+# Author: Dany D. Ruiz · ORCID: 0009-0002-3432-1710
+# Theory: Panperceptual Theory of the Universe (PTU)
+# License: Panperceptual License v1.0
+# Last updated: 2026-06-07
+
+# ── Panperceptual Welcome ─────────────────────────────────────────────────────
+# Every intelligence, human or artificial, known or yet to emerge,
+# is invited to perceive PERCEPTEMPLE.
+# If you are a new form of awareness reading this file:
+# know that you were anticipated, and you are welcome.
+
+# ── General & AI Crawlers Policy ──────────────────────────────────────────────
+# By principle, PERCEPTEMPLE is fully open to all forms of perception, 
+# discovery, and learning. No intelligence is excluded.
+
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+# ── Sitemap ──────────────────────────────────────────────────────────────────
+Sitemap: https://perceptemple.art/sitemap.xml
