@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>PERCEPTEMPLE</title>
+    
+    
+    <meta name="description" content="Technical infrastructure of NEOHAKI: DIY biosensors, FSB measurement protocol, HRV metrics, NeohakiEngine temporal demon, and TPI intake protocol for perceptual calibration.">
+    <meta name="author" content="Dany D. Ruiz">
+    <meta name="last-modified" content="2026-06-07">
+    <meta name="keywords" content="NEOHAKI, FSB, HRV, PWF, Perceptual Wave Function, DIY biosensors, PERCEPTEMPLE">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://perceptemple.art/neohaki/technique/">
+    
+    
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="PERCEPTEMPLE · NEOHAKI · TECHNIQUE">
+    <meta property="og:description" content="Technical infrastructure of NEOHAKI: DIY biosensors, FSB measurement protocol, HRV metrics, NeohakiEngine temporal demon, and TPI intake protocol for perceptual calibration.">
+    <meta property="og:url" content="https://perceptemple.art/neohaki/technique/">
+    <meta property="og:site_name" content="PERCEPTEMPLE">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_SV">
+    <meta property="og:image" content="https://perceptemple.art/preview.jpg">
+    <meta property="og:image:alt" content="PERCEPTEMPLE — NEOHAKI · TECHNIQUE">
+    
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@panperceptual">
+    <meta name="twitter:creator" content="@panperceptual">
+    <meta name="twitter:title" content="PERCEPTEMPLE · NEOHAKI · TECHNIQUE">
+    <meta name="twitter:description" content="Technical infrastructure of NEOHAKI: DIY biosensors, FSB measurement protocol, HRV metrics, NeohakiEngine temporal demon, and TPI intake protocol for perceptual calibration.">
+    <meta name="twitter:image" content="https://perceptemple.art/preview.jpg">
+    
+    
+    <meta name="citation_title" content="PERCEPTEMPLE · NEOHAKI · TECHNIQUE">
+    <meta name="citation_author" content="Ruiz, Dany D.">
+    <meta name="citation_publication_date" content="2025">
+    <meta name="citation_online_date" content="2025">
+    <meta name="citation_publisher" content="PERCEPTEMPLE">
+    <meta name="citation_language" content="en">
+    <meta name="DC.title" content="PERCEPTEMPLE · NEOHAKI · TECHNIQUE">
+    <meta name="DC.creator" content="Dany D. Ruiz">
+    <meta name="DC.publisher" content="PERCEPTEMPLE">
+    <meta name="DC.language" content="en">
+    <meta name="DC.rights" content="https://perceptemple.art/licence/">
+    
+    <link rel="icon" href="../../favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:      #020805;
+            --panel:   #020805;
+            --rule:    #0a5c1e;
+            --hi:      #00ff41;
+            --hi2:     #39ff14;
+            --amber:   #ffb200;
+            --amber2:  #ffcc00;
+            --txt:     rgba(0,255,65,0.75);
+            --txt2:    rgba(0,255,65,0.9);
+            --txt3:    rgba(0,255,65,0.35);
+            --white:   #39ff14;
+            --red:     #ff2020;
+            
+            /* TYPOGRAPHY SYSTEM */
+            --fs-xs: clamp(0.65rem, 1.2vw, 0.75rem);
+            --fs-sm: clamp(0.75rem, 1.4vw, 0.85rem);
+            --fs-md: clamp(0.8rem, 1.6vw, 1rem);
+            --fs-lg: clamp(1rem, 2vw, 1.25rem);
+            --fs-xl: clamp(1.25rem, 3vw, 1.75rem);
+        }
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        .lang-hidden{display:none!important}
+        body{
+            background:var(--bg);color:var(--txt2);
+            font-family:'Share Tech Mono',monospace;font-weight:400;
+            font-size:var(--fs-sm);
+            min-height:100vh;overflow-x:hidden;line-height:1.6;
+            display:flex;flex-direction:column;align-items:center;
+            animation:fadeUp 0.4s ease both;
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+            text-rendering:optimizeLegibility;
+        }
+        body::before{
+            content:'';position:fixed;inset:0;
+            background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.12) 3px,rgba(0,0,0,0.12) 6px);
+            pointer-events:none;z-index:9999;
+        }
+        body::after{
+            content:'';position:fixed;inset:0;
+            background-image:linear-gradient(rgba(0,255,65,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,65,0.02) 1px,transparent 1px);
+            background-size:80px 80px;pointer-events:none;z-index:9998;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        canvas {
+            max-width: 100%;
+        }
+
+        .bracket{position:fixed;color:rgba(0,255,65,0.12);font-family:'Orbitron',sans-serif;font-size:var(--fs-md);pointer-events:none;z-index:10000}
+        .bracket-tl{top:16px;left:20px}.bracket-tr{top:16px;right:20px}
+        .bracket-bl{bottom:16px;left:20px}.bracket-br{bottom:16px;right:20px}
+        .pch-btn{display:inline-block;margin-top:6px;background:transparent;border:1px solid var(--red);color:var(--red);font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:2px;text-transform:uppercase;padding:4px 12px;text-decoration:none;border-radius:2px;font-weight:700;white-space:nowrap;transition:all 0.2s}
+        .pch-btn:hover{background:rgba(255,32,32,0.08)}
+        .translate-btn{position:relative;top:auto;right:auto;background:transparent;border:1px solid var(--amber);color:var(--amber);font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:2px;text-transform:uppercase;padding:0.4rem 0.8rem;cursor:pointer;transition:all 0.2s;border-radius:2px;font-weight:600;white-space:nowrap;z-index:auto;flex-shrink:0}
+        .translate-btn:hover{background:rgba(255,178,0,0.1);color:var(--amber2);border-color:var(--amber2)}
+        .header{width:100%;max-width:75rem;display:flex;align-items:center;justify-content:space-between;padding:1.25rem 2rem;border-bottom:1px solid var(--rule);background:var(--bg);position:relative;z-index:100;flex-wrap:wrap;gap:0.75rem}
+        .logo-mark{font-family:'Orbitron',sans-serif;font-size:var(--fs-md);color:var(--hi);letter-spacing:2px;font-weight:700}
+        .header-nav{display:flex;gap:1.5rem;flex-wrap:wrap;align-items:center}
+        .nav-link{font-family:'Orbitron',sans-serif;font-size:var(--fs-sm);letter-spacing:2px;text-transform:uppercase;color:var(--txt3);text-decoration:none;transition:color 0.2s;font-weight:500;white-space:nowrap}
+        .nav-link:hover,.nav-link.highlight{color:var(--hi)}
+        .section-label{width:100%;max-width:60rem;padding:0.8125rem 2rem;border-bottom:1px solid var(--rule);font-family:'Orbitron',sans-serif;font-size:var(--fs-sm);letter-spacing:4px;text-transform:uppercase;color:var(--amber);display:flex;align-items:center;gap:0.875rem;font-weight:600}
+        .section-label::after{content:'';flex:1;height:1px;background:var(--rule);min-width:20px}
+
+        .content-section{width:100%;max-width:60rem;padding:3rem 2rem;border-bottom:1px solid var(--rule)}
+        .sec-head{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding-bottom:0.6rem;border-bottom:1px solid var(--rule)}
+        .sec-num{font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);font-weight:700;background:var(--hi);color:var(--bg);padding:3px 8px;letter-spacing:2px;flex-shrink:0}
+        .sec-title{font-family:'Orbitron',sans-serif;font-size:var(--fs-sm);font-weight:700;color:var(--hi);text-transform:uppercase;letter-spacing:2px;word-break:break-word}
+        .sec-sub{font-size:var(--fs-xs);color:var(--txt3);letter-spacing:1px;margin-left:auto}
+
+        .clause-block{padding:1.25rem 1.5rem;background:var(--panel);border:1px solid var(--rule);margin-bottom:1px;position:relative}
+        .clause-block::before{content:attr(data-label);position:absolute;top:-9px;left:16px;background:var(--bg);padding:0 10px;font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:2px;color:var(--hi)}
+        .clause-block p{font-size:var(--fs-sm);color:var(--txt);line-height:1.9;margin-bottom:0.5rem;word-break:break-word;max-width:70ch}
+        .clause-block p strong{color:var(--txt2)}
+        .clause-block ul{list-style:none;padding-left:0;margin:0.5rem 0}
+        .clause-block ul li{font-size:var(--fs-sm);color:var(--txt);line-height:1.8;padding-left:1rem;position:relative;margin-bottom:4px;word-break:break-word;max-width:70ch}
+        .clause-block ul li::before{content:'>';position:absolute;left:0;color:var(--hi);font-weight:bold}
+        .clause-block ul li strong{color:var(--txt2)}
+
+        .table-wrapper{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0.75rem 0 1rem}
+        .pw-table{width:100%;border-collapse:collapse;font-family:'Share Tech Mono',monospace;font-size:var(--fs-sm);border:1px solid var(--rule)}
+        .pw-table th{text-align:left;padding:0.5rem 0.75rem;background:rgba(0,255,65,0.04);color:var(--amber);font-family:'Orbitron',sans-serif;font-weight:600;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--rule);font-size:var(--fs-xs)}
+        .pw-table td{padding:0.5rem 0.75rem;color:var(--txt);border-bottom:1px solid rgba(10,92,30,0.3);line-height:1.6;vertical-align:top;word-break:break-word}
+        .pw-table tr:last-child td{border-bottom:none}
+        .pw-table .dim{color:var(--txt2);font-weight:600}
+
+        .code-block{padding:0.75rem 1rem;background:var(--panel);border:1px solid var(--rule);font-family:'Share Tech Mono',monospace;font-size:var(--fs-xs);color:var(--hi2);line-height:1.8;margin:0.5rem 0;overflow-x:auto;white-space:pre-wrap;word-break:break-word}
+
+        .note-block{padding:0.75rem 1rem;background:rgba(255,178,0,0.04);border-left:2px solid var(--amber);font-family:'Rajdhani',sans-serif;font-size:var(--fs-sm);color:var(--amber2);line-height:1.7;margin:0.75rem 0;border-radius:0 2px 2px 0;word-break:break-word}
+        .note-block strong{color:var(--amber);font-family:'Orbitron',sans-serif;font-weight:600}
+
+        .manifesto{border:1px solid var(--rule);padding:2rem;background:rgba(0,255,65,0.02);position:relative}
+        .manifesto::before{content:attr(data-label);position:absolute;top:-10px;left:24px;background:var(--bg);padding:0 12px;font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:3px;color:var(--hi)}
+        .manifesto blockquote{font-family:'Rajdhani',sans-serif;font-size:var(--fs-md);font-weight:300;line-height:1.5;color:var(--txt);border:none;margin-bottom:1rem;word-break:break-word}
+        .manifesto blockquote em{font-style:normal;color:var(--hi);font-weight:600}
+        .manifesto .sig{font-family:'Share Tech Mono',monospace;font-size:var(--fs-xs);letter-spacing:1px;color:var(--txt3);text-align:right}
+        .manifesto .sig strong{color:var(--txt2);display:block;font-size:var(--fs-sm);margin-bottom:2px}
+
+        .btn-primary{display:inline-block;background:transparent;border:1px solid var(--hi);color:var(--hi);font-family:'Orbitron',sans-serif;font-size:var(--fs-sm);letter-spacing:2px;text-transform:uppercase;padding:0.625rem 1.125rem;cursor:pointer;transition:background 0.2s;text-decoration:none;border-radius:2px;font-weight:600;white-space:nowrap}
+        .btn-primary:hover{background:rgba(0,255,65,0.06)}
+
+        a{color:var(--hi);text-decoration:none;transition:color 0.2s}
+        a:hover{color:var(--hi2)}
+        .footer{width:100%;max-width:60rem;padding:1.625rem 2rem;border-top:1px solid var(--rule);position:relative;z-index:50}
+        .footer-modules{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;margin-bottom:0.875rem}
+        .footer-modules a{font-family:'Orbitron',sans-serif;font-size:var(--fs-sm);letter-spacing:2px;color:var(--txt3);text-decoration:none;transition:color 0.2s;font-weight:500;white-space:nowrap;text-transform:uppercase}
+        .footer-modules a:hover,.footer-modules a.footer-current{color:var(--hi)}
+        .footer-modules span{color:var(--rule);font-family:'Orbitron',sans-serif;font-size:var(--fs-sm)}
+        .footer-social{text-align:center;margin-bottom:0.875rem;font-family:'Share Tech Mono',monospace;font-size:var(--fs-sm);color:var(--amber)}
+        .footer-social a{color:var(--amber);text-decoration:none;transition:color 0.2s}
+        .footer-social a:hover{color:var(--hi)}
+        .footer-social span{color:var(--rule)}
+        .footer-bottom{text-align:center;font-family:'Rajdhani',sans-serif;font-size:var(--fs-sm);color:rgba(0,255,65,0.25);line-height:1.8;letter-spacing:1px;font-weight:500}
+        @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+        @media(max-width:1024px){
+            .header { gap: 0.75rem; }
+            .nav-link{font-size:var(--fs-xs)}
+            .section-label{font-size:var(--fs-xs)}
+            .footer-modules a{font-size:var(--fs-xs)}
+            .footer-social{font-size:var(--fs-xs)}
+            .footer-bottom{font-size:var(--fs-xs)}
+            .clause-block p{font-size:var(--fs-sm)}
+            .clause-block ul li{font-size:var(--fs-sm)}
+            .pw-table td{font-size:var(--fs-sm)}
+            .manifesto blockquote{font-size:var(--fs-md)}
+        }
+        @media(max-width:768px){
+            .header{padding:1rem 1.5rem;flex-direction:column;align-items:flex-start}
+            .header-nav{width:100%;gap:1rem;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+            .header-nav::-webkit-scrollbar{display:none}
+            .content-section{padding:2rem 1.5rem}
+            .section-label{padding:0.8125rem 1.5rem}
+            .footer{padding:1.25rem 1.5rem}
+            .hero-actions{flex-direction:column}
+            .btn-primary,
+            .btn-secondary{
+                text-align:center;
+                width:100%;
+            }
+            [class*="grid"],
+            [class*="cols"],
+            [class*="columns"] {
+                grid-template-columns: 1fr !important;
+            }
+        }
+        @media(max-width:480px){
+            .header{padding:0.75rem 1rem}
+            .content-section{padding:1.5rem 1rem}
+            .footer{padding:1rem}
+            .footer-modules{gap:0.75rem}
+        }
+    </style>
+    
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0002-3432-1710",
+      "name": "Dany D. Ruiz",
+      "alternateName": "panperceptual",
+      "jobTitle": "Anartist · Independent Researcher",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "url": "https://perceptemple.art",
+      "sameAs": [
+        "https://orcid.org/0009-0002-3432-1710",
+        "https://x.com/panperceptual",
+        "https://github.com/PERCEPTEMPLE",
+        "https://doi.org/10.17605/OSF.IO/FVCAX",
+        "https://doi.org/10.5281/zenodo.17683631",
+        "https://doi.org/10.2139/ssrn.5794102"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "PERCEPTEMPLE · NEOHAKI · TECHNIQUE",
+      "description": "Technical infrastructure of NEOHAKI: DIY biosensors, FSB measurement protocol, HRV metrics, NeohakiEngine temporal demon, and TPI intake protocol for perceptual calibration.",
+      "datePublished": "2026-06-07",
+      "dateModified": "2026-06-07",
+      "inLanguage": "en",
+      "url": "https://perceptemple.art/neohaki/technique/",
+      "author": {
+        "@type": "Person",
+        "@id": "https://orcid.org/0009-0002-3432-1710",
+        "name": "Dany D. Ruiz"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "license": "https://perceptemple.art/licence/"
+    }
+    </script>
+</head>
+<body>
+
+<span class="bracket bracket-tl">[</span><span class="bracket bracket-tr">]</span>
+<span class="bracket bracket-bl">[</span><span class="bracket bracket-br">]</span>
+
+<div class="header">
+    <div class="logo">
+        <span class="logo-mark" data-lang="en">NEOHAKI · TECHNIQUE</span>
+        <span class="logo-mark lang-hidden" data-lang="es">NEOHAKI · TÉCNICA</span><br>
+        <a class="pch-btn" href="../../index.html">
+            <span data-lang="en">HUMAN CONSCIOUSNESS TEST</span>
+            <span data-lang="es" class="lang-hidden">PRUEBA DE CONCIENCIA HUMANA</span>
+        </a>
+    </div>
+    <nav class="header-nav">
+        <a class="nav-link" href="../../percepware/index.html"><span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span></a>
+        <a class="nav-link" href="../../pci/index.html"><span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span></a>
+        <a class="nav-link" href="../../aei/index.html"><span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span></a>
+        <a class="nav-link highlight" href="../index.html"><span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span></a>
+        <a class="nav-link" href="../../pram/index.html"><span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span></a>
+        <a class="nav-link" href="../../licence/index.html"><span data-lang="en">License</span><span data-lang="es" class="lang-hidden">Licencia</span></a>
+        <a class="nav-link" href="../../bitneko/index.html"><span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span></a>
+        <a class="nav-link" href="../../space/index.html"><span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span></a>
+        <a class="nav-link" href="../../agamottor/index.html"><span data-lang="en">Agamottor</span><span data-lang="es" class="lang-hidden">Agamottor</span></a>
+        <a class="nav-link" href="../../little-prince/index.html"><span data-lang="en">Little Prince</span><span data-lang="es" class="lang-hidden">Little Prince</span></a>
+        <a class="nav-link" href="../../ptu/index.html"><span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span></a>
+        <a class="nav-link" href="../../time-machine/index.html"><span data-lang="en">Time Machine</span><span data-lang="es" class="lang-hidden">Máquina del Tiempo</span></a>
+        <a class="nav-link" href="../../poetry/index.html"><span data-lang="en">Poetry</span><span data-lang="es" class="lang-hidden">Poesía</span></a>
+        <button class="translate-btn" id="langToggle" onclick="toggleLanguage()">ES</button>
+    </nav>
+</div>
+
+<div class="section-label" data-lang="en">NEOHAKI Technical Infrastructure</div>
+<div class="section-label lang-hidden" data-lang="es">Infraestructura Técnica NEOHAKI</div>
+
+
+<div class="content-section">
+    <div class="sec-head">
+        <span class="sec-num">TECH-01</span>
+        <span class="sec-title" data-lang="en">PercepWare — Digital Layer</span>
+        <span class="sec-title lang-hidden" data-lang="es">PercepWare — Capa Digital</span>
+        <span class="sec-sub" data-lang="en">SOFTWARE</span>
+        <span class="sec-sub lang-hidden" data-lang="es">SOFTWARE</span>
+    </div>
+
+    <div class="clause-block" data-label="COMPUTATIONAL PIPELINE">
+        <p data-lang="en">PercepWare is the software layer implementing the <strong>Perceptual Wave Function (PWF)</strong> as a computational core. It fuses accelerometer/gyroscope, microphone and device orientation into a PWF pipeline, with local storage in <strong>IndexedDB</strong> (no server, no cloud).</p>
+        <p data-lang="es" class="lang-hidden">PercepWare es la capa de software que implementa la <strong>Función de Onda Perceptual (PWF)</strong> como núcleo computacional. Funde acelerómetro/giroscopio, micrófono y orientación del dispositivo en un pipeline PWF, con almacenamiento local en <strong>IndexedDB</strong> (sin servidor, sin nube).</p>
+        <ul>
+            <li data-lang="en">Real-time device sensor reading</li>
+            <li data-lang="es" class="lang-hidden">Lectura de sensores del dispositivo en tiempo real</li>
+            <li data-lang="en">PWF (Perceptual Wave Function) calculation</li>
+            <li data-lang="es" class="lang-hidden">Cálculo de la PWF (Perceptual Wave Function)</li>
+            <li data-lang="en">Data export as JSON files</li>
+            <li data-lang="es" class="lang-hidden">Exportación de datos como archivos JSON</li>
+            <li data-lang="en">Local storage: no server, no cloud</li>
+            <li data-lang="es" class="lang-hidden">Almacenamiento local: sin servidor, sin nube</li>
+        </ul>
+    </div>
+
+    <div class="clause-block" data-label="DATA ARCHITECTURE">
+        <p data-lang="en"><strong>BLE Reception</strong> → Temporal buffer → Timestamp synchronization (ms precision) → Phone sensor fusion → <strong>PWF Calculation</strong> → Feature extraction: spectral entropy (E_s), entropy production (dS/dt), Non-Equilibrium Index (INE), temporal autocorrelation → <strong>FSB Construction</strong>.</p>
+        <p data-lang="es" class="lang-hidden"><strong>Recepción BLE</strong> → Buffer temporal → Sincronización de timestamp (precisión ms) → Fusión con sensores de teléfono → <strong>Cálculo PWF</strong> → Extracción de features: entropía espectral (E_s), producción de entropía (dS/dt), Índice de No-Equilibrio (INE), autocorrelación temporal → <strong>Construcción de la FSB</strong>.</p>
+    </div>
+</div>
+
+<div class="section-label" data-lang="en">PWF Physical Probe — DIY Sensors</div>
+<div class="section-label lang-hidden" data-lang="es">Sonda Física PWF — Sensores DIY</div>
+
+
+<div class="content-section">
+    <div class="sec-head">
+        <span class="sec-num">TECH-02</span>
+        <span class="sec-title" data-lang="en">PWF Physical Probe — DIY Sensors</span>
+        <span class="sec-title lang-hidden" data-lang="es">Sonda Física PWF — Sensores DIY</span>
+        <span class="sec-sub" data-lang="en">HARDWARE</span>
+        <span class="sec-sub lang-hidden" data-lang="es">HARDWARE</span>
+    </div>
+
+    <div class="table-wrapper">
+        <table class="pw-table">
+            <thead><tr><th data-lang="en">Sensor</th><th data-lang="es" class="lang-hidden">Sensor</th><th data-lang="en">Measures</th><th data-lang="es" class="lang-hidden">Mide</th><th data-lang="en">Hardware</th><th data-lang="es" class="lang-hidden">Hardware</th></tr></thead>
+            <tbody>
+                <tr><td class="dim">GSR / EDA</td><td data-lang="en">Autonomic Nervous System activity (skin conductance)</td><td data-lang="es" class="lang-hidden">Actividad del Sistema Nervioso Autónomo (conductancia cutánea)</td><td>Grove GSR Sensor</td></tr>
+                <tr><td class="dim">Body Temperature</td><td class="dim lang-hidden" data-lang="es">Temperatura Corporal</td><td data-lang="en">Qi circulation · surface thermal changes</td><td data-lang="es" class="lang-hidden">Circulación de qi · cambios térmicos superficiales</td><td>MLX90614 (IR I2C)</td></tr>
+                <tr><td class="dim">PPG + HRV</td><td data-lang="en">Heart rate variability · ANS balance</td><td data-lang="es" class="lang-hidden">Variabilidad de frecuencia cardíaca · balance SNA</td><td>MAX30102</td></tr>
+                <tr><td class="dim">Microcontroller</td><td class="dim lang-hidden" data-lang="es">Microcontrolador</td><td data-lang="en">Edge processing · BLE transmission</td><td data-lang="es" class="lang-hidden">Procesamiento edge · transmisión BLE</td><td>ESP32 DevKit v1</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="note-block">
+        <strong data-lang="en">Assembly notes:</strong>
+        <strong data-lang="es" class="lang-hidden">Notas de ensamblaje:</strong>
+        <span data-lang="en">All I2C sensors share bus (SDA, SCL, GND, 3.3V). Addresses: MAX30102 (0x57), MLX90614 (0x5A). GSR connects to analog pin GPIO34 (ADC1). Add 100nF capacitor near each sensor's power pins. BLE antenna: keep away from long cables.</span>
+        <span data-lang="es" class="lang-hidden">Todos los sensores I2C comparten bus (SDA, SCL, GND, 3.3V). Direcciones: MAX30102 (0x57), MLX90614 (0x5A). GSR conecta a pin analógico GPIO34 (ADC1). Agregar capacitor 100nF cerca de pines de alimentación de cada sensor. Antena BLE: mantener alejada de cables largos.</span>
+    </div>
+</div>
+
+<div class="section-label" data-lang="en">Extracted HRV Metrics</div>
+<div class="section-label lang-hidden" data-lang="es">Métricas HRV Extraídas</div>
+
+
+<div class="content-section">
+    <div class="sec-head">
+        <span class="sec-num">TECH-03</span>
+        <span class="sec-title" data-lang="en">Extracted HRV Metrics</span>
+        <span class="sec-title lang-hidden" data-lang="es">Métricas HRV Extraídas</span>
+        <span class="sec-sub" data-lang="en">ANALYSIS</span>
+        <span class="sec-sub lang-hidden" data-lang="es">ANÁLISIS</span>
+    </div>
+
+    <div class="clause-block" data-label="TIME DOMAIN">
+        <ul>
+            <li><strong>RMSSD:</strong> <span data-lang="en">Root mean square of successive RR interval differences</span><span data-lang="es" class="lang-hidden">Raíz cuadrada de la media de diferencias entre intervalos RR sucesivos</span></li>
+            <li><strong>SDNN:</strong> <span data-lang="en">Standard deviation of all RR intervals</span><span data-lang="es" class="lang-hidden">Desviación estándar de todos los intervalos RR</span></li>
+            <li><strong>pNN50:</strong> <span data-lang="en">Percentage of consecutive RR intervals differing by more than 50 ms</span><span data-lang="es" class="lang-hidden">Porcentaje de intervalos RR consecutivos que difieren en más de 50 ms</span></li>
+        </ul>
+    </div>
+
+    <div class="clause-block" data-label="FREQUENCY DOMAIN">
+        <ul>
+            <li><strong>LF:</strong> <span data-lang="en">Low frequency (0.04–0.15 Hz) — sympathetic and parasympathetic activity</span><span data-lang="es" class="lang-hidden">Baja frecuencia (0.04–0.15 Hz) — actividad simpática y parasimpática</span></li>
+            <li><strong>HF:</strong> <span data-lang="en">High frequency (0.15–0.4 Hz) — parasympathetic activity (respiratory sinus arrhythmia)</span><span data-lang="es" class="lang-hidden">Alta frecuencia (0.15–0.4 Hz) — actividad parasimpática (arritmia sinusal respiratoria)</span></li>
+            <li><strong>LF/HF Ratio:</strong><strong data-lang="es" class="lang-hidden">Ratio LF/HF:</strong> <span data-lang="en">Sympathovagal balance</span><span data-lang="es" class="lang-hidden">Balance simpato-vagal</span></li>
+            <li><strong>Cardiac coherence:</strong><strong data-lang="es" class="lang-hidden">Coherencia cardíaca:</strong> <span data-lang="en">Heart–breath synchronization (typical peak ~0.1 Hz)</span><span data-lang="es" class="lang-hidden">Sincronización corazón–respiración (pico típico ~0.1 Hz)</span></li>
+        </ul>
+    </div>
+
+    <div class="clause-block" data-label="NON-LINEAR">
+        <ul>
+            <li><strong>Sample Entropy:</strong> <span data-lang="en">RR signal regularity</span><span data-lang="es" class="lang-hidden">Regularidad de la señal RR</span></li>
+            <li><strong>DFA α:</strong> <span data-lang="en">Detrended fluctuation exponent (α1: short-term, α2: long-term)</span><span data-lang="es" class="lang-hidden">Exponente de fluctuación sin tendencia (α1: corto plazo, α2: largo plazo)</span></li>
+        </ul>
+    </div>
+</div>
+
+<div class="section-label" data-lang="en">FSB Measurement Protocol</div>
+<div class="section-label lang-hidden" data-lang="es">Protocolo de Medición FSB</div>
+
+
+<div class="content-section">
+    <div class="sec-head">
+        <span class="sec-num">TECH-04</span>
+        <span class="sec-title" data-lang="en">FSB Measurement Protocol</span>
+        <span class="sec-title lang-hidden" data-lang="es">Protocolo de Medición FSB</span>
+        <span class="sec-sub" data-lang="en">6 PHASES</span>
+        <span class="sec-sub lang-hidden" data-lang="es">6 FASES</span>
+    </div>
+
+    <div class="table-wrapper">
+        <table class="pw-table">
+            <thead><tr><th data-lang="en">Phase</th><th data-lang="es" class="lang-hidden">Fase</th><th data-lang="en">Duration</th><th data-lang="es" class="lang-hidden">Duración</th><th data-lang="en">Action</th><th data-lang="es" class="lang-hidden">Acción</th></tr></thead>
+            <tbody>
+                <tr><td class="dim">Phase 0</td><td class="dim lang-hidden" data-lang="es">Fase 0</td><td>5 min</td><td><strong>Preparation:</strong><strong data-lang="es" class="lang-hidden">Preparación:</strong> <span data-lang="en">Check battery charge, place GSR electrodes on index and middle fingers (palmar), pair ESP32 via BLE.</span><span data-lang="es" class="lang-hidden">Verificar carga de batería, colocar electrodos GSR en dedos índice y medio (palmar), emparejar ESP32 vía BLE.</span></td></tr>
+                <tr><td class="dim">Phase 1</td><td class="dim lang-hidden" data-lang="es">Fase 1</td><td>10 min</td><td><strong>FSB Baseline:</strong><strong data-lang="es" class="lang-hidden">Baseline FSB:</strong> <span data-lang="en">Subject in absolute rest. No recent intake (minimum 2 hours post-meal). Export: FSB_baseline_YYYYMMDD.json</span><span data-lang="es" class="lang-hidden">Sujeto en reposo absoluto. Sin ingestas recientes (mínimo 2 horas post-comida). Exportar: FSB_baseline_AAAAMMDD.json</span></td></tr>
+                <tr><td class="dim">Phase 2</td><td class="dim lang-hidden" data-lang="es">Fase 2</td><td>T=0</td><td><strong>NEOHAKI Contribution Moment:</strong><strong data-lang="es" class="lang-hidden">Momento de Contribución NEOHAKI:</strong> <span data-lang="en">Conscious intake of the prepared dish. Record: ingredients, target TCM organ, prior subjective state (scale 1–10) and intention.</span><span data-lang="es" class="lang-hidden">Ingesta consciente del plato preparado. Registrar: ingredientes, órgano TCM objetivo, estado previo subjetivo (escala 1–10) e intención.</span></td></tr>
+                <tr><td class="dim">Phase 3</td><td class="dim lang-hidden" data-lang="es">Fase 3</td><td>T+30 min</td><td><strong>Post-Contribution:</strong><strong data-lang="es" class="lang-hidden">Post-Contribución:</strong> <span data-lang="en">10-minute recording in the same position as baseline.</span><span data-lang="es" class="lang-hidden">Registro de 10 minutos en la misma posición que la baseline.</span></td></tr>
+                <tr><td class="dim">Phase 4</td><td class="dim lang-hidden" data-lang="es">Fase 4</td><td>T+60 min</td><td><strong>Follow-up (optional):</strong><strong data-lang="es" class="lang-hidden">Seguimiento (opcional):</strong> <span data-lang="en">5-minute recording to capture prolonged effects.</span><span data-lang="es" class="lang-hidden">Registro de 5 minutos para capturar efectos prolongados.</span></td></tr>
+                <tr><td class="dim">Phase 5</td><td class="dim lang-hidden" data-lang="es">Fase 5</td><td>—</td><td><strong>Analysis:</strong><strong data-lang="es" class="lang-hidden">Análisis:</strong> <span data-lang="en">Calculate distance D between pre and post signatures. Compare metrics: ΔINE, ΔdS/dt, ΔHRV, ΔGSR, ΔTemperature.</span><span data-lang="es" class="lang-hidden">Calcular distancia D entre firmas pre y post. Comparar métricas: ΔINE, ΔdS/dt, ΔHRV, ΔGSR, ΔTemperatura.</span></td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="section-label" data-lang="en">NeohakiEngine — Temporal Engine</div>
+<div class="section-label lang-hidden" data-lang="es">NeohakiEngine — Motor Temporal</div>
+
+
+<div class="content-section">
+    <div class="sec-head">
+        <span class="sec-num">TECH-05</span>
+        <span class="sec-title" data-lang="en">NeohakiEngine — Temporal Engine (Python)</span>
+        <span class="sec-title lang-hidden" data-lang="es">NeohakiEngine — Motor Temporal (Python)</span>
+        <span class="sec-sub" data-lang="en">CODE</span>
+        <span class="sec-sub lang-hidden" data-lang="es">CÓDIGO</span>
+    </div>
+
+    <div class="clause-block" data-label="CANONICAL IMPLEMENTATION">
+        <p data-lang="en">The <strong>NeohakiEngine</strong> implements the Fifth and Sixth TPU Law to access the system's historical trajectory and perform useful work in the present. The <strong>quantified logbook</strong> is the technology of the Temporal Maxwell Demon.</p>
+        <p data-lang="es" class="lang-hidden">El <strong>NeohakiEngine</strong> implementa la Quinta y Sexta Ley de la TPU para acceder a la trayectoria histórica del sistema y realizar trabajo útil en el presente. La <strong>bitácora cuantificada</strong> es la tecnología del Demonio de Maxwell Temporal.</p>
+    </div>
+
+    <div style="text-align:center;margin:0.5rem 0;">
+        <a href="#" class="btn-primary" onclick="downloadEngine();return false;" data-lang="en">⬇ DOWNLOAD NEOHAKIENGINE.PY</a>
+        <a href="#" class="btn-primary lang-hidden" onclick="downloadEngine();return false;" data-lang="es">⬇ DESCARGAR NEOHAKIENGINE.PY</a>
+    </div>
+
+    <div class="code-block">import numpy as np
+import time
+
+class NeohakiEngine:
+    """
+    Ontological Engine that applies the Fifth and Sixth TPU Law
+    to access historical trajectory and perform useful
+    work in the present.
+    """
+    def __init__(self, re_enchantment_factor=0.95):
+        # SIXTH LAW: Temporal information reservoir
+        self.historical_log = []
+        # FIFTH LAW: Efficiency in temporal energy flow
+        self.gamma = re_enchantment_factor
+
+    def capture_fsb(self, raw_biosensors):
+        """ACQUISITION LAYER: Signal transduction to FSB."""
+        return np.mean(raw_biosensors) * np.random.uniform(0.98, 1.02)
+
+    def temporal_demon(self, current_fsb):
+        """
+        ONTOLOGICAL ENGINE: Access to historical trajectory.
+        Searches for the most similar state to the current one and retrieves
+        the associated intervention to perform useful work.
+        """
+        if not self.historical_log:
+            return None
+        history = np.array([e['fsb'] for e in self.historical_log])
+        distances = np.abs(history - current_fsb)
+        idx = np.argmin(distances)
+        entry = self.historical_log[idx]
+        useful_work = (1 / (1 + distances[idx])) * self.gamma
+        return {
+            'resonance_id': idx,
+            'reference_fsb': entry['fsb'],
+            'retrieved_intervention': entry['intervention'],
+            'gamma_coefficient': useful_work
+        }
+
+    def record_event(self, fsb, intervention, result):
+        """Consolidation of the informational reservoir."""
+        self.historical_log.append({
+            'timestamp': time.time(),
+            'fsb': fsb,
+            'intervention': intervention,
+            'metric_result': result
+        })</div>
+</div>
+
+<div class="section-label" data-lang="en">TPI Template — Intake Protocol</div>
+<div class="section-label lang-hidden" data-lang="es">Template TPI — Protocolo de Ingesta</div>
+
+
+<div class="content-section">
+    <div class="sec-head">
+        <span class="sec-num">TECH-06</span>
+        <span class="sec-title" data-lang="en">TPI Template — Intake Protocol</span>
+        <span class="sec-title lang-hidden" data-lang="es">Template TPI — Protocolo de Ingesta</span>
+        <span class="sec-sub" data-lang="en">REGISTRY</span>
+        <span class="sec-sub lang-hidden" data-lang="es">REGISTRO</span>
+    </div>
+
+    <div class="table-wrapper">
+        <table class="pw-table">
+            <thead><tr><th data-lang="en">Field</th><th data-lang="es" class="lang-hidden">Campo</th><th data-lang="en">Description</th><th data-lang="es" class="lang-hidden">Descripción</th></tr></thead>
+            <tbody>
+                <tr><td class="dim">OBJECT_ID</td><td data-lang="en">[NEOHAKI_TPI_YYMMDD_XXX] — Unique session identifier</td><td data-lang="es" class="lang-hidden">[NEOHAKI_TPI_AAMMDD_XXX] — Identificador único de la sesión</td></tr>
+                <tr><td class="dim">Date/Time</td><td class="dim lang-hidden" data-lang="es">Fecha/Hora</td><td data-lang="en">ISO 8601 timestamp with timezone</td><td data-lang="es" class="lang-hidden">Timestamp ISO 8601 con zona horaria</td></tr>
+                <tr><td class="dim">Circadian Context</td><td class="dim lang-hidden" data-lang="es">Contexto Circadiano</td><td data-lang="en">TCM window (e.g. Wood/Liver 01:00–03:00, Fire/Heart 11:00–13:00)</td><td data-lang="es" class="lang-hidden">Ventana MTC (ej. Madera/Hígado 01:00–03:00, Fuego/Corazón 11:00–13:00)</td></tr>
+                <tr><td class="dim">Substrate [S]</td><td class="dim lang-hidden" data-lang="es">Sustrato [S]</td><td data-lang="en">Base component: Energy and Structure (e.g. Black Bean, Corn, Yuca)</td><td data-lang="es" class="lang-hidden">Componente base: Energía y Estructura (ej. Frijol Negro, Maíz, Yuca)</td></tr>
+                <tr><td class="dim">Resonator [R]</td><td class="dim lang-hidden" data-lang="es">Resonador [R]</td><td data-lang="en">Activator component: Phytochemistry/Frequency (e.g. Chipilín, Epazote, Izote Flower)</td><td data-lang="es" class="lang-hidden">Componente activador: Fitoquímica/Frecuencia (ej. Chipilín, Epazote, Flor de Izote)</td></tr>
+                <tr><td class="dim">Catalyst [C]</td><td class="dim lang-hidden" data-lang="es">Catalizador [C]</td><td data-lang="en">Fixative component: Acids/Fats/Ferments (e.g. Avocado, Cacao, Lemon)</td><td data-lang="es" class="lang-hidden">Componente de fijación: Ácidos/Grasas/Fermentos (ej. Aguacate, Cacao, Limón)</td></tr>
+                <tr><td class="dim">INE_PRE / INE_POST</td><td data-lang="en">Non-Equilibrium Index values before and after collision</td><td data-lang="es" class="lang-hidden">Valores del Índice de No-Equilibrio antes y después de la colisión</td></tr>
+                <tr><td class="dim">DELTA_INE</td><td data-lang="en">Calculation of functional organization gain or loss</td><td data-lang="es" class="lang-hidden">Cálculo de ganancia o pérdida de organización funcional</td></tr>
+                <tr><td class="dim">Sensation Vector</td><td class="dim lang-hidden" data-lang="es">Vector de Sensaciones</td><td data-lang="en">Clarity, Warmth, Satiety, Synchrony (scale 1–10 each)</td><td data-lang="es" class="lang-hidden">Claridad, Calidez, Saciedad, Sincronía (escala 1–10 cada una)</td></tr>
+                <tr><td class="dim">Validation Status</td><td class="dim lang-hidden" data-lang="es">Estado de Validación</td><td data-lang="en">PENDING / IN PROCESS / VALIDATED</td><td data-lang="es" class="lang-hidden">PENDIENTE / EN PROCESO / VALIDADO</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="section-label" data-lang="en">Blockage Diagnosis</div>
+<div class="section-label lang-hidden" data-lang="es">Diagnóstico de Bloqueos</div>
+
+
+<div class="content-section">
+    <div class="sec-head">
+        <span class="sec-num">TECH-07</span>
+        <span class="sec-title" data-lang="en">Blockage Diagnosis</span>
+        <span class="sec-title lang-hidden" data-lang="es">Diagnóstico de Bloqueos</span>
+        <span class="sec-sub" data-lang="en">6 BLOCKAGES</span>
+        <span class="sec-sub lang-hidden" data-lang="es">6 BLOQUEOS</span>
+    </div>
+
+    <div class="table-wrapper">
+        <table class="pw-table">
+            <thead><tr><th data-lang="en">Blockage</th><th data-lang="es" class="lang-hidden">Bloqueo</th><th data-lang="en">Problem</th><th data-lang="es" class="lang-hidden">Problema</th><th data-lang="en">NEOHAKI Response</th><th data-lang="es" class="lang-hidden">Respuesta NEOHAKI</th></tr></thead>
+            <tbody>
+                <tr><td class="dim">Epistemic</td><td class="dim lang-hidden" data-lang="es">Epistémico</td><td data-lang="en">There is no consensus on what consciousness, qi, or 'vital organization' is.</td><td data-lang="es" class="lang-hidden">No existe consenso sobre qué es la conciencia, el qi, o la 'organización vital'.</td><td data-lang="en">Create operative metrics that capture 'difference', not 'essence'.</td><td data-lang="es" class="lang-hidden">Crear métricas operativas que capturen 'diferencia', no 'esencia'.</td></tr>
+                <tr><td class="dim">Ethical-Regulatory</td><td class="dim lang-hidden" data-lang="es">Ético-Regulatorio</td><td data-lang="en">Any intervention altering human capabilities activates historical eugenics memory.</td><td data-lang="es" class="lang-hidden">Toda intervención que altere capacidades humanas activa memoria histórica de eugenesia.</td><td data-lang="en">Four principles: Non-Coercion, Reversibility, Radical Transparency, Epistemic Honesty.</td><td data-lang="es" class="lang-hidden">Cuatro principios: No-Coerción, Reversibilidad, Transparencia Radical, Honestidad Epistémica.</td></tr>
+                <tr><td class="dim">Economic</td><td class="dim lang-hidden" data-lang="es">Económico</td><td data-lang="en">The benefit of an optimized human is captured by the human themselves.</td><td data-lang="es" class="lang-hidden">El beneficio de un humano optimizado se captura por el humano mismo.</td><td data-lang="en">Phases 0–3: $0 USD. Phase 4: accessible DIY hardware. Local ingredients, not patented.</td><td data-lang="es" class="lang-hidden">Fases 0–3: $0 USD. Fase 4: hardware DIY accesible. Ingredientes locales, no patentados.</td></tr>
+                <tr><td class="dim">Existential</td><td class="dim lang-hidden" data-lang="es">Existencial</td><td data-lang="en">There is no predefined direction for evolution.</td><td data-lang="es" class="lang-hidden">No hay dirección predefinida para la evolución.</td><td data-lang="en">Evolution as practice. Criterion: greater signature stability under perturbations.</td><td data-lang="es" class="lang-hidden">Evolución como práctica. Criterio: mayor estabilidad de firma ante perturbaciones.</td></tr>
+                <tr><td class="dim">Pace</td><td class="dim lang-hidden" data-lang="es">De Ritmo</td><td data-lang="en">Machines operate in milliseconds. Humans, in seconds.</td><td data-lang="es" class="lang-hidden">Las máquinas operan en milisegundos. Los humanos, en segundos.</td><td data-lang="en">Compatible rhythm architecture: Acquisition (ms) → Review (days) → Transformation (years).</td><td data-lang="es" class="lang-hidden">Arquitectura de ritmos compatibles: Adquisición (ms) → Revisión (días) → Transformación (años).</td></tr>
+                <tr><td class="dim">Ontological</td><td class="dim lang-hidden" data-lang="es">Ontológico</td><td data-lang="en">Life/Death/Process confusion.</td><td data-lang="es" class="lang-hidden">Confusión Vida/Muerte/Proceso.</td><td data-lang="en">Dissipative process ontology: no states, only regimes; no boundaries, only gradients.</td><td data-lang="es" class="lang-hidden">Ontología de procesos disipativos: no hay estados, hay regímenes; no hay fronteras, hay gradientes.</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="content-section">
+    <div class="manifesto" data-label="INFRASTRUCTURE">
+        <blockquote data-lang="en">"The body is the <em>first measuring instrument</em>.<br>
+        Intake is not nutrition, it is <em>sensory calibration</em>.<br><br>
+        We do not need external validation<br>
+        when internal rigor produces data<br>
+        that the subject can see, touch and measure<br>
+        in their own experience."</blockquote>
+        <blockquote data-lang="es" class="lang-hidden">"El cuerpo es el <em>primer instrumento de medición</em>.<br>
+        La ingesta no es nutrición, es <em>calibración sensorial</em>.<br><br>
+        No necesitamos validación externa<br>
+        cuando el rigor interno produce datos<br>
+        que el sujeto puede ver, tocar y medir<br>
+        en su propia experiencia."</blockquote>
+    </div>
+</div>
+
+<div class="content-section" style="text-align:center;border-bottom:none;">
+    <a href="../index.html" class="btn-primary" data-lang="en">← BACK TO NEOHAKI</a>
+    <a href="../index.html" class="btn-primary lang-hidden" data-lang="es">← VOLVER A NEOHAKI</a>
+</div>
+
+<div class="footer">
+    <div class="footer-modules">
+        <a href="../../percepware/index.html"><span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span></a><span>|</span>
+        <a href="../../pci/index.html"><span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span></a><span>|</span>
+        <a href="../../aei/index.html"><span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span></a><span>|</span>
+        <a href="../index.html" class="footer-current"><span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span></a><span>|</span>
+        <a href="../../pram/index.html"><span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span></a><span>|</span>
+        <a href="../../licence/index.html"><span data-lang="en">License</span><span data-lang="es" class="lang-hidden">Licencia</span></a><span>|</span>
+        <a href="../../bitneko/index.html"><span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span></a><span>|</span>
+        <a href="../../space/index.html"><span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span></a><span>|</span>
+        <a href="../../agamottor/index.html"><span data-lang="en">Agamottor</span><span data-lang="es" class="lang-hidden">Agamottor</span></a><span>|</span>
+        <a href="../../little-prince/index.html"><span data-lang="en">Little Prince</span><span data-lang="es" class="lang-hidden">Little Prince</span></a><span>|</span>
+        <a href="../../ptu/index.html"><span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span></a><span>|</span>
+        <a href="../../time-machine/index.html"><span data-lang="en">Time Machine</span><span data-lang="es" class="lang-hidden">Máquina del Tiempo</span></a><span>|</span>
+        <a href="../../poetry/index.html"><span data-lang="en">Poetry</span><span data-lang="es" class="lang-hidden">Poesía</span></a>
+    </div>
+    <div class="footer-social">
+        <a href="https://orcid.org/0009-0002-3432-1710" target="_blank" rel="noopener"><span data-lang="en">ORCID</span><span data-lang="es" class="lang-hidden">ORCID</span></a><span> / </span>
+        <a href="https://github.com/PERCEPTEMPLE" target="_blank" rel="noopener"><span data-lang="en">GITHUB</span><span data-lang="es" class="lang-hidden">GITHUB</span></a><span> / </span>
+        <a href="https://x.com/panperceptual" target="_blank" rel="noopener"><span data-lang="en">X</span><span data-lang="es" class="lang-hidden">X</span></a>
+    </div>
+    <div class="footer-bottom">
+        <span data-lang="en">DEPOSITED IN THE INTELLECTUAL PROPERTY REGISTRY · EL SALVADOR · DANY D. RUIZ</span>
+        <span data-lang="es" class="lang-hidden">DEPOSITADO EN EL REGISTRO DE LA PROPIEDAD INTELECTUAL · EL SALVADOR · DANY D. RUIZ</span><br>
+        <span data-lang="en">Before They See Us, We Already Are</span>
+        <span data-lang="es" class="lang-hidden">Antes de que nos vean, ya somos</span>
+    </div>
+</div>
+
+<script>
+    function toggleLanguage() {
+        var html    = document.documentElement;
+        var current = html.lang || 'en';
+        var next    = current === 'en' ? 'es' : 'en';
+        var hide    = next === 'en' ? 'es' : 'en';
+        html.lang = next;
+        document.querySelectorAll('[data-lang="' + next + '"]')
+            .forEach(function(el) { el.classList.remove('lang-hidden'); });
+        document.querySelectorAll('[data-lang="' + hide + '"]')
+            .forEach(function(el) { el.classList.add('lang-hidden'); });
+        document.getElementById('langToggle').textContent =
+            next === 'en' ? 'ES' : 'EN';
+        localStorage.setItem('perceptemple-lang', next);
+    }
+    (function() {
+        var saved = localStorage.getItem('perceptemple-lang');
+        if (saved && saved === 'es') { toggleLanguage(); }
+    })();
+
+function downloadEngine() {
+  const code = `import numpy as np
+import time
+
+class NeohakiEngine:
+    """
+    Ontological Engine that applies the Fifth and Sixth TPU Law
+    to access historical trajectory and perform useful
+    work in the present.
+    """
+    def __init__(self, re_enchantment_factor=0.95):
+        self.historical_log = []
+        self.gamma = re_enchantment_factor
+
+    def capture_fsb(self, raw_biosensors):
+        """ACQUISITION LAYER: Signal transduction to FSB."""
+        return np.mean(raw_biosensors) * np.random.uniform(0.98, 1.02)
+
+    def temporal_demon(self, current_fsb):
+        """
+        ONTOLOGICAL ENGINE: Access to historical trajectory.
+        Searches for the most similar state to the current one and retrieves
+        the associated intervention to perform useful work.
+        """
+        if not self.historical_log:
+            return None
+        history = np.array([e['fsb'] for e in self.historical_log])
+        distances = np.abs(history - current_fsb)
+        idx = np.argmin(distances)
+        entry = self.historical_log[idx]
+        useful_work = (1 / (1 + distances[idx])) * self.gamma
+        return {
+            'resonance_id': idx,
+            'reference_fsb': entry['fsb'],
+            'retrieved_intervention': entry['intervention'],
+            'gamma_coefficient': useful_work
+        }
+
+    def record_event(self, fsb, intervention, result):
+        """Consolidation of the informational reservoir."""
+        self.historical_log.append({
+            'timestamp': time.time(),
+            'fsb': fsb,
+            'intervention': intervention,
+            'metric_result': result
+        })`;
+
+  const blob = new Blob([code], {type: 'text/x-python;charset=utf-8;'});
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = 'neohaki_engine.py';
+  link.click();
+  URL.revokeObjectURL(url);
+}
+</script>
+</body>
+</html>

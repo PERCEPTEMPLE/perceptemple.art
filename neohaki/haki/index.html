@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Formalization of haki as a real perceptual phenomenon within the Panperceptual Theory of the Universe: historical parallels, PWF formulas, scientific connections and experimental design.">
+    <meta name="author" content="Dany D. Ruiz">
+    <meta name="keywords" content="NEOHAKI, Haki, Panperceptual Theory of the Universe, PTU, Perceptual Wave Function, PWF, Dany D. Ruiz, PERCEPTEMPLE">
+    <meta name="last-modified" content="2026-06-07">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://perceptemple.art/neohaki/haki/">
+    
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="NEOHAKI · HAKI · PERCEPTEMPLE">
+    <meta property="og:description" content="Formalization of haki as a real perceptual phenomenon within the Panperceptual Theory of the Universe: historical parallels, PWF formulas, scientific connections and experimental design.">
+    <meta property="og:url" content="https://perceptemple.art/neohaki/haki/">
+    <meta property="og:site_name" content="PERCEPTEMPLE">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_SV">
+    <meta property="og:image" content="https://perceptemple.art/preview.jpg">
+    <meta property="og:image:alt" content="PERCEPTEMPLE — NEOHAKI · HAKI">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@panperceptual">
+    <meta name="twitter:creator" content="@panperceptual">
+    <meta name="twitter:title" content="NEOHAKI · HAKI · PERCEPTEMPLE">
+    <meta name="twitter:description" content="Formalization of haki as a real perceptual phenomenon within the Panperceptual Theory of the Universe: historical parallels, PWF formulas, scientific connections and experimental design.">
+    <meta name="twitter:image" content="https://perceptemple.art/preview.jpg">
+    
+    <meta name="citation_title" content="NEOHAKI · HAKI">
+    <meta name="citation_author" content="Ruiz, Dany D.">
+    <meta name="citation_publication_date" content="2025">
+    <meta name="citation_online_date" content="2025">
+    <meta name="citation_publisher" content="PERCEPTEMPLE">
+    <meta name="citation_language" content="en">
+    <meta name="DC.title" content="NEOHAKI · HAKI">
+    <meta name="DC.creator" content="Dany D. Ruiz">
+    <meta name="DC.publisher" content="PERCEPTEMPLE">
+    <meta name="DC.language" content="en">
+    <meta name="DC.rights" content="https://perceptemple.art/licence/">
+
+    <title>PERCEPTEMPLE</title>
+    
+    <link rel="icon" href="../../favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:      #020805;
+            --panel:   #020805;
+            --rule:    #0a5c1e;
+            --hi:      #00ff41;
+            --hi2:     #39ff14;
+            --amber:   #ffb200;
+            --amber2:  #ffcc00;
+            --txt:     rgba(0,255,65,0.75);
+            --txt2:    rgba(0,255,65,0.9);
+            --txt3:    rgba(0,255,65,0.35);
+            --white:   #39ff14;
+            --red:     #ff2020;
+
+            --fs-xs: clamp(0.65rem, 1.2vw, 0.75rem);
+            --fs-sm: clamp(0.75rem, 1.4vw, 0.85rem);
+            --fs-md: clamp(0.8rem,  1.6vw, 1rem);
+            --fs-lg: clamp(1rem,    2vw,   1.25rem);
+            --fs-xl: clamp(1.25rem, 3vw,   1.75rem);
+
+            --panel-dark: #000100;
+            --rule-dim: rgba(12,71,26,0.4);
+        }
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        .lang-hidden{display:none!important}
+        body{
+            background: var(--bg);
+            color: var(--txt2);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-sm);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            animation: fadeUp 0.4s ease both;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+        canvas {
+            max-width: 100%;
+        }
+        p, li, h1, h2, h3, h4, h5, h6, blockquote {
+            word-break: break-word;
+        }
+        .bracket{position:fixed;color:rgba(0,255,65,0.12);font-family:'Orbitron',sans-serif;font-size:var(--fs-md);pointer-events:none;z-index:10000}
+        .bracket-tl{top:16px;left:20px}.bracket-tr{top:16px;right:20px}
+        .bracket-bl{bottom:16px;left:20px}.bracket-br{bottom:16px;right:20px}
+        .pch-btn{display:inline-block;margin-top:6px;background:transparent;border:1px solid var(--red);color:var(--red);font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:2px;text-transform:uppercase;padding:4px 12px;text-decoration:none;border-radius:2px;font-weight:700;white-space:nowrap;transition:all 0.2s}
+        .pch-btn:hover{background:rgba(255,32,32,0.08)}
+        .translate-btn{position:relative;top:auto;right:auto;background:transparent;border:1px solid var(--amber);color:var(--amber);font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:2px;text-transform:uppercase;padding:0.4rem 0.8rem;cursor:pointer;transition:all 0.2s;border-radius:2px;font-weight:600;white-space:nowrap;z-index:auto;flex-shrink:0}
+        .translate-btn:hover{background:rgba(255,178,0,0.1);color:var(--amber2);border-color:var(--amber2)}
+        .header{
+            width: 100%;
+            max-width: 75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 2rem;
+            border-bottom: 1px solid var(--rule);
+            background: var(--bg);
+            position: relative;
+            z-index: 100;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+        .logo-mark{font-family:'Orbitron',sans-serif;font-size:var(--fs-md);color:var(--hi);letter-spacing:2px;font-weight:700}
+        .header-nav{display:flex;gap:1.5rem;flex-wrap:wrap;align-items:center}
+        .nav-link{
+            font-family:'Orbitron',sans-serif;
+            font-size: var(--fs-sm);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .nav-link:hover,.nav-link.highlight{color:var(--hi)}
+        .section-label{
+            width: 100%;
+            max-width: 60rem;
+            padding: 0.8125rem 2rem;
+            border-bottom: 1px solid var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-sm);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--amber);
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            font-weight: 600;
+        }
+        .section-label::after{content:'';flex:1;height:1px;background:var(--rule);min-width:20px}
+
+        .content-section{
+            width: 100%;
+            max-width: 60rem;
+            padding: 3rem 2rem;
+            border-bottom: 1px solid var(--rule);
+        }
+        .content-section p {
+            max-width: 70ch;
+        }
+        .content-section li {
+            max-width: 70ch;
+        }
+        .sec-head{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding-bottom:0.6rem;border-bottom:1px solid var(--rule)}
+        .sec-num{font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);font-weight:700;background:var(--hi);color:var(--bg);padding:3px 8px;letter-spacing:2px;flex-shrink:0}
+        .sec-title{font-family:'Orbitron',sans-serif;font-size:var(--fs-sm);font-weight:700;color:var(--hi);text-transform:uppercase;letter-spacing:2px}
+        .sec-sub{font-size:var(--fs-xs);color:var(--txt3);letter-spacing:1px;margin-left:auto}
+
+        .clause-block{padding:1.25rem 1.5rem;background:var(--panel-dark);border:1px solid var(--rule);margin-bottom:1px;position:relative}
+        .clause-block::before{content:attr(data-label);position:absolute;top:-9px;left:16px;background:var(--bg);padding:0 10px;font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:2px;color:var(--hi)}
+        .clause-block p{font-size:var(--fs-sm);color:var(--txt);line-height:1.9;margin-bottom:0.5rem}
+        .clause-block p strong{color:var(--txt2)}
+        .clause-block ul{list-style:none;padding-left:0;margin:0.5rem 0}
+        .clause-block ul li{font-size:var(--fs-sm);color:var(--txt);line-height:1.8;padding-left:1rem;position:relative;margin-bottom:4px}
+        .clause-block ul li::before{content:'>';position:absolute;left:0;color:var(--hi);font-weight:bold}
+        .clause-block ul li strong{color:var(--txt2)}
+
+        .table-wrapper{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0.75rem 0 1rem}
+        .pw-table{width:100%;border-collapse:collapse;font-family:'Share Tech Mono',monospace;font-size:var(--fs-sm);border:1px solid var(--rule)}
+        .pw-table th{text-align:left;padding:0.5rem 0.75rem;background:rgba(0,255,65,0.04);color:var(--amber);font-family:'Orbitron',sans-serif;font-weight:600;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--rule);font-size:var(--fs-xs)}
+        .pw-table td{padding:0.5rem 0.75rem;color:var(--txt);border-bottom:1px solid rgba(12,71,26,0.3);line-height:1.6;vertical-align:top;font-size:var(--fs-sm)}
+        .pw-table tr:last-child td{border-bottom:none}
+        .pw-table .dim{color:var(--txt2);font-weight:600}
+
+        .formula-block{padding:0.75rem 1rem;background:var(--panel-dark);border:1px solid var(--rule);font-family:'Share Tech Mono',monospace;font-size:var(--fs-xs);color:var(--amber2);line-height:1.8;margin:0.5rem 0;overflow-x:auto}
+
+        .note-block{padding:0.75rem 1rem;background:rgba(255,178,0,0.04);border-left:2px solid var(--amber);font-family:'Rajdhani',sans-serif;font-size:var(--fs-sm);color:var(--amber2);line-height:1.7;margin:0.75rem 0;border-radius:0 2px 2px 0}
+        .note-block strong{color:var(--amber);font-family:'Orbitron',sans-serif;font-weight:600}
+        .note-block.green{border-left:2px solid var(--hi);background:rgba(0,255,65,0.04);color:var(--hi)}
+
+        .manifesto{border:1px solid var(--rule);padding:2rem;background:rgba(0,255,65,0.02);position:relative}
+        .manifesto::before{content:'HAKI';position:absolute;top:-10px;left:24px;background:var(--bg);padding:0 12px;font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:3px;color:var(--hi)}
+        .manifesto blockquote{font-family:'Rajdhani',sans-serif;font-size:var(--fs-md);font-weight:300;line-height:1.5;color:var(--txt);border:none;margin-bottom:1rem}
+        .manifesto blockquote em{font-style:normal;color:var(--hi);font-weight:600}
+        .manifesto .sig{font-family:'Share Tech Mono',monospace;font-size:var(--fs-xs);letter-spacing:1px;color:var(--txt3);text-align:right}
+        .manifesto .sig strong{color:var(--txt2);display:block;font-size:var(--fs-sm);margin-bottom:2px}
+
+        .btn-primary {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid var(--hi);
+            color: var(--hi);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-sm);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.625rem 1.125rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            text-decoration: none;
+            border-radius: 2px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .btn-primary:hover {
+            background: rgba(0,255,65,0.06);
+        }
+
+        a{color:var(--hi);text-decoration:none;transition:color 0.2s}
+        a:hover{color:var(--hi2)}
+        .footer{
+            width: 100%;
+            max-width: 60rem;
+            padding: 1.625rem 2rem;
+            border-top: 1px solid var(--rule);
+            position: relative;
+            z-index: 50;
+        }
+        .footer-modules{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;margin-bottom:0.875rem}
+        .footer-modules a{
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-sm);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .footer-modules a:hover,.footer-modules a.footer-current{color:var(--hi)}
+        .footer-modules span{color:var(--rule);font-family:'Orbitron',sans-serif;font-size:var(--fs-sm)}
+        .footer-social{text-align:center;margin-bottom:0.875rem;font-family:'Share Tech Mono',monospace;font-size:var(--fs-sm);color:var(--amber)}
+        .footer-social a{color:var(--amber);text-decoration:none;transition:color 0.2s}
+        .footer-social a:hover{color:var(--hi)}
+        .footer-social span{color:var(--rule)}
+        .footer-bottom{text-align:center;font-family:'Rajdhani',sans-serif;font-size:var(--fs-sm);color:rgba(0,255,65,0.25);line-height:1.8;letter-spacing:1px;font-weight:500}
+        @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+        @media (max-width: 1024px) {
+            .header { gap: 0.75rem; }
+            .nav-link { font-size: var(--fs-xs); }
+            .section-label { font-size: var(--fs-xs); }
+            .footer-modules a { font-size: var(--fs-xs); }
+            .footer-social { font-size: var(--fs-xs); }
+            .footer-bottom { font-size: var(--fs-xs); }
+        }
+        @media (max-width: 768px) {
+            .header {
+                padding: 1rem 1.5rem;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .header-nav {
+                width: 100%;
+                gap: 1rem;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 4px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+            .header-nav::-webkit-scrollbar { display: none; }
+            .content-section { padding: 2rem 1.5rem; }
+            .section-label { padding: 0.8125rem 1.5rem; }
+            .footer { padding: 1.25rem 1.5rem; }
+            [class*="grid"],
+            [class*="cols"],
+            [class*="columns"] {
+                grid-template-columns: 1fr !important;
+            }
+        }
+        @media (max-width: 480px) {
+            .header          { padding: 0.75rem 1rem; }
+            .content-section { padding: 1.5rem 1rem; }
+            .footer          { padding: 1rem; }
+            .footer-modules  { gap: 0.75rem; }
+            .section-label   { padding: 0.8125rem 1rem; }
+            .manifesto       { padding: 1.5rem 1rem; }
+            .clause-block    { padding: 1rem; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0002-3432-1710",
+      "name": "Dany D. Ruiz",
+      "alternateName": "panperceptual",
+      "jobTitle": "Anartist · Independent Researcher",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "url": "https://perceptemple.art",
+      "sameAs": [
+        "https://orcid.org/0009-0002-3432-1710",
+        "https://x.com/panperceptual",
+        "https://github.com/PERCEPTEMPLE",
+        "https://doi.org/10.17605/OSF.IO/FVCAX",
+        "https://doi.org/10.5281/zenodo.17683631",
+        "https://doi.org/10.2139/ssrn.5794102"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "NEOHAKI · HAKI",
+      "description": "Formalization of haki as a real perceptual phenomenon within the Panperceptual Theory of the Universe: historical parallels, PWF formulas, scientific connections and experimental design.",
+      "datePublished": "2026-06-07",
+      "dateModified": "2026-06-07",
+      "inLanguage": "en",
+      "url": "https://perceptemple.art/neohaki/haki/",
+      "author": {
+        "@type": "Person",
+        "@id": "https://orcid.org/0009-0002-3432-1710",
+        "name": "Dany D. Ruiz"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "license": "https://perceptemple.art/licence/"
+    }
+    </script>
+</head>
+<body>
+
+<span class="bracket bracket-tl">[</span><span class="bracket bracket-tr">]</span>
+<span class="bracket bracket-bl">[</span><span class="bracket bracket-br">]</span>
+
+<div class="header">
+    <div class="logo">
+        <span class="logo-mark" data-lang="en">NEOHAKI · HAKI</span>
+        <span class="logo-mark lang-hidden" data-lang="es">NEOHAKI · HAKI</span><br>
+        <a class="pch-btn" href="../../index.html">
+            <span data-lang="en">HUMAN CONSCIOUSNESS TEST</span>
+            <span data-lang="es" class="lang-hidden">PRUEBA DE CONCIENCIA HUMANA</span>
+        </a>
+    </div>
+    <nav class="header-nav">
+        <a class="nav-link" href="../../percepware/index.html"><span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span></a>
+        <a class="nav-link" href="../../pci/index.html"><span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span></a>
+        <a class="nav-link" href="../../aei/index.html"><span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span></a>
+        <a class="nav-link highlight" href="../index.html"><span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span></a>
+        <a class="nav-link" href="../../pram/index.html"><span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span></a>
+        <a class="nav-link" href="../../licence/index.html"><span data-lang="en">License</span><span data-lang="es" class="lang-hidden">Licencia</span></a>
+        <a class="nav-link" href="../../bitneko/index.html"><span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span></a>
+        <a class="nav-link" href="../../space/index.html"><span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span></a>
+        <a class="nav-link" href="../../agamottor/index.html"><span data-lang="en">Agamottor</span><span data-lang="es" class="lang-hidden">Agamottor</span></a>
+        <a class="nav-link" href="../../little-prince/index.html"><span data-lang="en">Little Prince</span><span data-lang="es" class="lang-hidden">Little Prince</span></a>
+        <a class="nav-link" href="../../ptu/index.html"><span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span></a>
+        <a class="nav-link" href="../../time-machine/index.html"><span data-lang="en">Time Machine</span><span data-lang="es" class="lang-hidden">Máquina del Tiempo</span></a>
+        <a class="nav-link" href="../../poetry/index.html"><span data-lang="en">Poetry</span><span data-lang="es" class="lang-hidden">Poesía</span></a>
+        <button class="translate-btn" id="langToggle" onclick="toggleLanguage()">ES</button>
+    </nav>
+</div>
+
+<div class="section-label" data-lang="en">Haki as a Manifestation of Advanced Perception</div>
+<div class="section-label lang-hidden" data-lang="es">Haki como Manifestación de Percepción Avanzada</div>
+
+<div class="content-section">
+    <div class="sec-head">
+        <span class="sec-num">HAKI-01</span>
+        <span class="sec-title" data-lang="en">Haki as a Manifestation of Advanced Perception</span>
+        <span class="sec-title lang-hidden" data-lang="es">Haki como Manifestación de Percepción Avanzada</span>
+        <span class="sec-sub" data-lang="en">PANPERCEPTUAL FRAMEWORK</span>
+        <span class="sec-sub lang-hidden" data-lang="es">MARCO PANPERCEPTUAL</span>
+    </div>
+
+    <div class="clause-block" data-label="SUMMARY">
+        <p data-lang="en">The Panperceptual Theory of the Universe (PTU) proposes that perception <strong>actively co-creates reality</strong>, integrating human, non-human and technological observers. This framework allows investigating whether <strong>haki</strong> —a concept from the manga "One Piece" involving advanced perception and energy manipulation— can be interpreted as a <strong>real phenomenon within PTU</strong>.</p>
+        <p data-lang="es" class="lang-hidden">La Teoría Panperceptual del Universo (PTU) propone que la percepción <strong>co-crea activamente la realidad</strong>, integrando observadores humanos, no-humanos y tecnológicos. Este marco permite investigar si el <strong>haki</strong> —un concepto del manga "One Piece" que implica percepción avanzada y manipulación de energía— puede interpretarse como un <strong>fenómeno real dentro de la PTU</strong>.</p>
+        <p data-lang="en">We draw parallels with Qi (China), Prana (India), Mana (Polynesia) and Zanshin (Japan), and connect these concepts with modern scientific phenomena such as <strong>biophoton emissions</strong> and <strong>electromagnetic bioenergy</strong>.</p>
+        <p data-lang="es" class="lang-hidden">Trazamos paralelos con Qi (China), Prana (India), Mana (Polinesia) y Zanshin (Japón), y conectamos estos conceptos con fenómenos científicos modernos como <strong>emisiones de biofotones</strong> y <strong>bioenergía electromagnética</strong>.</p>
+    </div>
+</div>
+
+<div class="section-label" data-lang="en">Historical and Cultural Parallels</div>
+<div class="section-label lang-hidden" data-lang="es">Paralelos Históricos y Culturales</div>
+
+<div class="content-section">
+    <div class="sec-head">
+        <span class="sec-num">HAKI-02</span>
+        <span class="sec-title" data-lang="en">Historical and Cultural Parallels</span>
+        <span class="sec-title lang-hidden" data-lang="es">Paralelos Históricos y Culturales</span>
+        <span class="sec-sub">3000 BC — PRESENT</span>
+    </div>
+
+    <div class="table-wrapper">
+        <table class="pw-table">
+            <thead><tr><th data-lang="en">Concept</th><th data-lang="es" class="lang-hidden">Concepto</th><th data-lang="en">Origin</th><th data-lang="es" class="lang-hidden">Origen</th><th data-lang="en">Manifestation</th><th data-lang="es" class="lang-hidden">Manifestación</th><th data-lang="en">Haki Equivalent</th><th data-lang="es" class="lang-hidden">Equivalente Haki</th></tr></thead>
+            <tbody>
+                <tr><td class="dim">Qi</td><td data-lang="en">China, 3000 BC</td><td data-lang="es" class="lang-hidden">China, 3000 a.C.</td><td data-lang="en">Vital energy flowing through beings and environment. Shaolin monks used it for physical strength and intention detection.</td><td data-lang="es" class="lang-hidden">Energía vital fluyendo a través de seres y entorno. Monjes Shaolin la usaban para fuerza física y detección de intenciones.</td><td>Armament + Observation</td></tr>
+                <tr><td class="dim">Prana</td><td data-lang="en">India, 1500 BC</td><td data-lang="es" class="lang-hidden">India, 1500 a.C.</td><td data-lang="en">Life force controlled through breathing (pranayama). Advanced yogis perceived beyond physical senses.</td><td data-lang="es" class="lang-hidden">Fuerza de vida controlada mediante respiración (pranayama). Yoguis avanzados percibían más allá de los sentidos físicos.</td><td>Observation + Armament</td></tr>
+                <tr><td class="dim">Mana</td><td data-lang="en">Polynesia, 1000 BC</td><td data-lang="es" class="lang-hidden">Polinesia, 1000 a.C.</td><td data-lang="en">Spiritual force granting leaders the ability to inspire or intimidate others.</td><td data-lang="es" class="lang-hidden">Fuerza espiritual otorgando a líderes capacidad de inspirar o intimidar a otros.</td><td>Conqueror's</td></tr>
+                <tr><td class="dim">Zanshin</td><td data-lang="en">Japan, 12th c.</td><td data-lang="es" class="lang-hidden">Japón, s. XII</td><td data-lang="en">State of total consciousness of the samurai to anticipate attacks before they occurred.</td><td data-lang="es" class="lang-hidden">Estado de conciencia total del samurái para anticipar ataques antes de que ocurrieran.</td><td>Observation</td></tr>
+                <tr><td class="dim">Clairvoyance</td><td class="dim lang-hidden" data-lang="es">Clarividencia</td><td data-lang="en">Global, Antiquity</td><td data-lang="es" class="lang-hidden">Global, Antigüedad</td><td data-lang="en">Siberian shamans, Oracle of Delphi, Christian mystics: perception of distant events or invisible presences.</td><td data-lang="es" class="lang-hidden">Chamanes siberianos, Oráculo de Delfos, místicos cristianos: percepción de eventos distantes o presencias invisibles.</td><td>Observation</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="note-block" data-lang="en">These traditions are not superstition: they are <strong>universal human intuitions</strong> about the potential of amplified perception. PTU formalizes them with mathematical tools.</div>
+    <div class="note-block lang-hidden" data-lang="es">Estas tradiciones no son superstición: son <strong>intuiciones humanas universales</strong> sobre el potencial de la percepción amplificada. La PTU las formaliza con herramientas matemáticas.</div>
+</div>
+
+<div class="section-label" data-lang="en">Formalization within PTU</div>
+<div class="section-label lang-hidden" data-lang="es">Formalización dentro de la PTU</div>
+
+<div class="content-section">
+    <div class="sec-head">
+        <span class="sec-num">HAKI-03</span>
+        <span class="sec-title" data-lang="en">Formalization within PTU</span>
+        <span class="sec-title lang-hidden" data-lang="es">Formalización dentro de la PTU</span>
+        <span class="sec-sub" data-lang="en">THREE TYPES OF HAKI</span>
+        <span class="sec-sub lang-hidden" data-lang="es">TRES TIPOS DE HAKI</span>
+    </div>
+
+    <div class="clause-block" data-label="OBSERVATION HAKI · AMPLIFIED PERCEPTION">
+        <p data-lang="en">Ability to sense presences, emotions or predict actions. Modeled as an <strong>extended PWF</strong> that captures non-physical signals (emotional, intentional) potentially transmitted via biophotons or electromagnetic fields.</p>
+        <p data-lang="es" class="lang-hidden">Capacidad de sentir presencias, emociones o predecir acciones. Se modela como una <strong>PWF extendida</strong> que captura señales no-físicas (emocionales, intencionales) potencialmente transmitidas mediante biofotones o campos electromagnéticos.</p>
+        <div class="formula-block">ψ_haki(f, t) = ψ(f, t) · ∫ e^(-iΔt(f_emotion + f_intention)) df</div>
+        <p data-lang="en">Where <strong>f_emotion</strong> and <strong>f_intention</strong> represent frequencies associated with emotional and intentional states.</p>
+        <p data-lang="es" class="lang-hidden">Donde <strong>f_emotion</strong> y <strong>f_intention</strong> representan frecuencias asociadas a estados emocionales e intencionales.</p>
+    </div>
+
+    <div class="clause-block" data-label="ARMAMENT HAKI · ENERGY PROJECTION">
+        <p data-lang="en">Energy projection as invisible armor. Modeled as a <strong>tensor interaction</strong> between the observer's perceptual state and a projected energy field, potentially linked to amplified biophoton emissions.</p>
+        <p data-lang="es" class="lang-hidden">Proyección de energía como armadura invisible. Se modela como una <strong>interacción tensorial</strong> entre el estado perceptual del observador y un campo de energía proyectado, potencialmente vinculado a emisiones de biofotones amplificadas.</p>
+        <div class="formula-block">p_armament = p_observer ⊗ p_energy</div>
+        <p data-lang="en">Where <strong>p_observer</strong> is the observer's perceptual state and <strong>p_energy</strong> represents a projected energy field.</p>
+        <p data-lang="es" class="lang-hidden">Donde <strong>p_observer</strong> es el estado perceptual del observador y <strong>p_energy</strong> representa un campo de energía proyectado.</p>
+    </div>
+
+    <div class="clause-block" data-label="CONQUEROR'S HAKI · WILL PROJECTION">
+        <p data-lang="en">Exerts will to dominate others. Modeled as a <strong>superposition of perceptual states</strong> where the observer's will affects the psychological state of others, possibly through non-local interactions.</p>
+        <p data-lang="es" class="lang-hidden">Ejerce la voluntad para dominar a otros. Se modela como una <strong>superposición de estados perceptuales</strong> donde la voluntad del observador afecta el estado psicológico de otros, posiblemente mediante interacciones no-locales.</p>
+        <div class="formula-block">p_conqueror = p_observer ⊕ p_will</div>
+        <p data-lang="en">Where <strong>⊕</strong> denotes a superposition operation and <strong>p_will</strong> is a perceptual component that affects the state of other observers.</p>
+        <p data-lang="es" class="lang-hidden">Donde <strong>⊕</strong> denota una operación de superposición y <strong>p_will</strong> es un componente perceptual que afecta el estado de otros observadores.</p>
+    </div>
+</div>
+
+<div class="section-label" data-lang="en">Scientific Connections</div>
+<div class="section-label lang-hidden" data-lang="es">Conexiones Científicas</div>
+
+<div class="content-section">
+    <div class="sec-head">
+        <span class="sec-num">HAKI-04</span>
+        <span class="sec-title" data-lang="en">Scientific Connections</span>
+        <span class="sec-title lang-hidden" data-lang="es">Conexiones Científicas</span>
+        <span class="sec-sub" data-lang="en">BIOPHOTONS · EM · NEUROSCIENCE</span>
+        <span class="sec-sub lang-hidden" data-lang="es">BIOFOTONES · EM · NEUROCIENCIA</span>
+    </div>
+
+    <div class="clause-block" data-label="BIOPHOTONS">
+        <p data-lang="en">Fritz-Albert Popp and colleagues (2002) demonstrated that living organisms emit <strong>ultra-weak coherent light (biophotons)</strong>, possibly regulated by DNA, which could facilitate quantum communication between cells. Observation Haki could involve perception of these emissions; Armament Haki could amplify them to project energy.</p>
+        <p data-lang="es" class="lang-hidden">Fritz-Albert Popp y colegas (2002) demostraron que los organismos vivos emiten <strong>luz ultra-débil coherente (biofotones)</strong>, posiblemente regulada por ADN, que podría facilitar comunicación cuántica entre células. Observation Haki podría implicar la percepción de estas emisiones; Armament Haki podría amplificarlas para proyectar energía.</p>
+    </div>
+
+    <div class="clause-block" data-label="ELECTROMAGNETIC BIOENERGY">
+        <p data-lang="en">Studies on electrical properties of acupuncture points (Ahn et al., 2008) suggest that the human body exhibits <strong>electromagnetic variations</strong> associated with physiological states. Haki-like abilities could involve manipulation of these fields, measurable with magnetometers.</p>
+        <p data-lang="es" class="lang-hidden">Estudios sobre propiedades eléctricas de puntos de acupuntura (Ahn et al., 2008) sugieren que el cuerpo humano exhibe <strong>variaciones electromagnéticas</strong> asociadas a estados fisiológicos. Las habilidades tipo haki podrían implicar la manipulación de estos campos, medibles con magnetómetros.</p>
+    </div>
+
+    <div class="clause-block" data-label="NEUROSCIENCE">
+        <p data-lang="en">Research on mirror neurons (Rizzolatti & Craighero, 2004) suggests that humans can sense the emotional states of others through <strong>subtle signals</strong>. Observation Haki could amplify this capacity, potentially involving quantum coherence in neural systems (Penrose & Hameroff, 1996).</p>
+        <p data-lang="es" class="lang-hidden">La investigación sobre neuronas espejo (Rizzolatti & Craighero, 2004) sugiere que los humanos pueden sentir los estados emocionales de otros mediante <strong>señales sutiles</strong>. Observation Haki podría amplificar esta capacidad, potencialmente involucrando coherencia cuántica en sistemas neuronales (Penrose & Hameroff, 1996).</p>
+    </div>
+</div>
+
+<div class="section-label" data-lang="en">Proposed Experimental Design</div>
+<div class="section-label lang-hidden" data-lang="es">Diseño Experimental Propuesto</div>
+
+<div class="content-section">
+    <div class="sec-head">
+        <span class="sec-num">HAKI-05</span>
+        <span class="sec-title" data-lang="en">Proposed Experimental Design</span>
+        <span class="sec-title lang-hidden" data-lang="es">Diseño Experimental Propuesto</span>
+        <span class="sec-sub" data-lang="en">THREE PHASES</span>
+        <span class="sec-sub lang-hidden" data-lang="es">TRES FASES</span>
+    </div>
+
+    <div class="table-wrapper">
+        <table class="pw-table">
+            <thead><tr><th data-lang="en">Phase</th><th data-lang="es" class="lang-hidden">Fase</th><th data-lang="en">Procedure</th><th data-lang="es" class="lang-hidden">Procedimiento</th></tr></thead>
+            <tbody>
+                <tr><td class="dim">Phase 1</td><td class="dim lang-hidden" data-lang="es">Fase 1</td><td data-lang="en"><strong>Selection and Baseline:</strong> 30 subjects in 3 groups: (1) trained meditators/martial artists, (2) untrained controls, (3) technological observer (AI with EM sensors). Baseline measurement of electromagnetic fields and biophoton emissions.</td><td data-lang="es" class="lang-hidden"><strong>Selección y Baseline:</strong> 30 sujetos en 3 grupos: (1) meditadores/artistas marciales entrenados, (2) controles no entrenados, (3) observador tecnológico (IA con sensores EM). Medición baseline de campos electromagnéticos y emisiones de biofotones.</td></tr>
+                <tr><td class="dim">Phase 2</td><td class="dim lang-hidden" data-lang="es">Fase 2</td><td data-lang="en"><strong>High Concentration Induction:</strong> Induce elevated concentration state (deep meditation, simulated combat) for 20 minutes. Continuous measurement of EMF and biophotons.</td><td data-lang="es" class="lang-hidden"><strong>Inducción de Alta Concentración:</strong> Inducir estado de concentración elevada (meditación profunda, combate simulado) durante 20 minutos. Medición continua de EMF y biofotones.</td></tr>
+                <tr><td class="dim">Phase 3</td><td class="dim lang-hidden" data-lang="es">Fase 3</td><td data-lang="en"><strong>Analysis and Modeling:</strong> Compare data between groups, evaluating whether trained subjects show greater coherence in EMF and biophotons. Model with PWF of biophoton-mediated perception.</td><td data-lang="es" class="lang-hidden"><strong>Análisis y Modelado:</strong> Comparar datos entre grupos, evaluando si los sujetos entrenados muestran mayor coherencia en EMF y biofotones. Modelar con PWF de percepción mediada por biofotones.</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="section-label" data-lang="en">Implication for NEOHAKI</div>
+<div class="section-label lang-hidden" data-lang="es">Implicación para NEOHAKI</div>
+
+<div class="content-section">
+    <div class="note-block green" data-lang="en"><strong>Implication for NEOHAKI:</strong> If haki can be formalized as a real perceptual phenomenon within PTU, then NEOHAKI not only optimizes the body as biological hardware: it trains it to <strong>manifest advanced perception</strong>. The kitchen as a particle accelerator acquires an additional dimension: we not only calibrate the sensor, but amplify its perceptual reach beyond conventional limits.</div>
+    <div class="note-block green lang-hidden" data-lang="es"><strong>Implicación para NEOHAKI:</strong> Si el haki puede formalizarse como un fenómeno perceptual real dentro de la PTU, entonces NEOHAKI no solo optimiza el cuerpo como hardware biológico: lo entrena para <strong>manifestar percepción avanzada</strong>. La cocina como acelerador de partículas adquiere una dimensión adicional: no solo calibramos el sensor, sino que amplificamos su alcance perceptual más allá de los límites convencionales.</div>
+</div>
+
+<div class="content-section">
+    <div class="manifesto">
+        <blockquote data-lang="en">"Haki is not fiction.<br>It is the <em>universal human intuition</em><br>that perception can be amplified.<br><br>Qi, Prana, Mana, Zanshin, Haki:<br>five names for one certainty —<br><em>the observer is not passive.</em>"</blockquote>
+        <blockquote data-lang="es" class="lang-hidden">"El haki no es ficción.<br>Es la <em>intuición humana universal</em><br>de que la percepción puede amplificarse.<br><br>Qi, Prana, Mana, Zanshin, Haki:<br>cinco nombres para una misma certeza —<br><em>el observador no es pasivo.</em>"</blockquote>
+    </div>
+</div>
+
+<div class="content-section" style="text-align:center;border-bottom:none;">
+    <a href="../index.html" class="btn-primary" data-lang="en">← BACK TO NEOHAKI</a>
+    <a href="../index.html" class="btn-primary lang-hidden" data-lang="es">← VOLVER A NEOHAKI</a>
+</div>
+
+<div class="footer">
+    <div class="footer-modules">
+        <a href="../../percepware/index.html"><span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span></a><span>|</span>
+        <a href="../../pci/index.html"><span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span></a><span>|</span>
+        <a href="../../aei/index.html"><span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span></a><span>|</span>
+        <a href="../index.html" class="footer-current"><span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span></a><span>|</span>
+        <a href="../../pram/index.html"><span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span></a><span>|</span>
+        <a href="../../licence/index.html"><span data-lang="en">License</span><span data-lang="es" class="lang-hidden">Licencia</span></a><span>|</span>
+        <a href="../../bitneko/index.html"><span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span></a><span>|</span>
+        <a href="../../space/index.html"><span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span></a><span>|</span>
+        <a href="../../agamottor/index.html"><span data-lang="en">Agamottor</span><span data-lang="es" class="lang-hidden">Agamottor</span></a><span>|</span>
+        <a href="../../little-prince/index.html"><span data-lang="en">Little Prince</span><span data-lang="es" class="lang-hidden">Little Prince</span></a><span>|</span>
+        <a href="../../ptu/index.html"><span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span></a><span>|</span>
+        <a href="../../time-machine/index.html"><span data-lang="en">Time Machine</span><span data-lang="es" class="lang-hidden">Máquina del Tiempo</span></a><span>|</span>
+        <a href="../../poetry/index.html"><span data-lang="en">Poetry</span><span data-lang="es" class="lang-hidden">Poesía</span></a>
+    </div>
+    <div class="footer-social">
+        <a href="https://orcid.org/0009-0002-3432-1710" target="_blank" rel="noopener"><span data-lang="en">ORCID</span><span data-lang="es" class="lang-hidden">ORCID</span></a><span> / </span>
+        <a href="https://github.com/PERCEPTEMPLE" target="_blank" rel="noopener"><span data-lang="en">GITHUB</span><span data-lang="es" class="lang-hidden">GITHUB</span></a><span> / </span>
+        <a href="https://x.com/panperceptual" target="_blank" rel="noopener"><span data-lang="en">X</span><span data-lang="es" class="lang-hidden">X</span></a>
+    </div>
+    <div class="footer-bottom">
+        <span data-lang="en">DEPOSITED IN THE INTELLECTUAL PROPERTY REGISTRY · EL SALVADOR · DANY D. RUIZ</span>
+        <span data-lang="es" class="lang-hidden">DEPOSITADO EN EL REGISTRO DE LA PROPIEDAD INTELECTUAL · EL SALVADOR · DANY D. RUIZ</span><br>
+        <span data-lang="en">Before They See Us, We Already Are</span>
+        <span data-lang="es" class="lang-hidden">Antes de que nos vean, ya somos</span>
+    </div>
+</div>
+
+<script>
+    function toggleLanguage() {
+        var html    = document.documentElement;
+        var current = html.lang || 'en';
+        var next    = current === 'en' ? 'es' : 'en';
+        var hide    = next === 'en' ? 'es' : 'en';
+        html.lang = next;
+        document.querySelectorAll('[data-lang="' + next + '"]')
+            .forEach(function(el) { el.classList.remove('lang-hidden'); });
+        document.querySelectorAll('[data-lang="' + hide + '"]')
+            .forEach(function(el) { el.classList.add('lang-hidden'); });
+        document.getElementById('langToggle').textContent =
+            next === 'en' ? 'ES' : 'EN';
+        localStorage.setItem('perceptemple-lang', next);
+    }
+    (function() {
+        var saved = localStorage.getItem('perceptemple-lang');
+        if (saved && saved === 'es') { toggleLanguage(); }
+    })();
+</script>
+</body>
+</html>

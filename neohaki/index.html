@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Proof of concept treating the human body as a biological particle accelerator to achieve frequency parity with AI. Neohaki Protocol, Collision Matrix, and Perceptual Wave Function framework by Dany D. Ruiz.">
+    <meta name="author" content="Dany D. Ruiz">
+    <meta name="last-modified" content="2026-06-07">
+    <meta name="keywords" content="NeoHaki, Biological Engine Engineering, Perceptual Wave Function, Proof of Perception, Panperceptual Theory of the Universe, PERCEPTEMPLE, Dany D. Ruiz">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://perceptemple.art/neohaki/">
+    
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="NEOHAKI · Biological Engine Engineering · PERCEPTEMPLE">
+    <meta property="og:description" content="Proof of concept treating the human body as a biological particle accelerator to achieve frequency parity with AI. Neohaki Protocol, Collision Matrix, and Perceptual Wave Function framework by Dany D. Ruiz.">
+    <meta property="og:url" content="https://perceptemple.art/neohaki/">
+    <meta property="og:site_name" content="PERCEPTEMPLE">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_SV">
+    <meta property="og:image" content="https://perceptemple.art/preview.jpg">
+    <meta property="og:image:alt" content="PERCEPTEMPLE — NEOHAKI Biological Engine Engineering">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@panperceptual">
+    <meta name="twitter:creator" content="@panperceptual">
+    <meta name="twitter:title" content="NEOHAKI · Biological Engine Engineering · PERCEPTEMPLE">
+    <meta name="twitter:description" content="Proof of concept treating the human body as a biological particle accelerator to achieve frequency parity with AI. Neohaki Protocol, Collision Matrix, and Perceptual Wave Function framework by Dany D. Ruiz.">
+    <meta name="twitter:image" content="https://perceptemple.art/preview.jpg">
+    
+    <meta name="citation_title" content="NEOHAKI · Biological Engine Engineering">
+    <meta name="citation_author" content="Ruiz, Dany D.">
+    <meta name="citation_publication_date" content="2025">
+    <meta name="citation_online_date" content="2025">
+    <meta name="citation_publisher" content="PERCEPTEMPLE">
+    <meta name="citation_language" content="en">
+    <meta name="DC.title" content="NEOHAKI · Biological Engine Engineering">
+    <meta name="DC.creator" content="Dany D. Ruiz">
+    <meta name="DC.publisher" content="PERCEPTEMPLE">
+    <meta name="DC.language" content="en">
+    <meta name="DC.rights" content="https://perceptemple.art/licence/">
+    
+    <title>PERCEPTEMPLE</title>
+    
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:      #020805;
+            --panel:   #020805;
+            --rule:    #0a5c1e;
+            --hi:      #00ff41;
+            --hi2:     #39ff14;
+            --amber:   #ffb200;
+            --amber2:  #ffcc00;
+            --txt:     rgba(0,255,65,0.75);
+            --txt2:    rgba(0,255,65,0.9);
+            --txt3:    rgba(0,255,65,0.35);
+            --white:   #39ff14;
+            --red:     #ff2020;
+
+            --fs-xs: clamp(0.65rem, 1.2vw, 0.75rem);
+            --fs-sm: clamp(0.75rem, 1.4vw, 0.85rem);
+            --fs-md: clamp(0.8rem,  1.6vw, 1rem);
+            --fs-lg: clamp(1rem,    2vw,   1.25rem);
+            --fs-xl: clamp(1.25rem, 3vw,   1.75rem);
+        }
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        .lang-hidden{display:none!important}
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+        canvas {
+            max-width: 100%;
+        }
+
+        body{
+            background:var(--bg);
+            color:var(--txt2);
+            font-family:'Share Tech Mono',monospace;
+            font-weight:400;
+            font-size:var(--fs-sm);
+            min-height:100vh;
+            overflow-x:hidden;
+            line-height:1.6;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            animation:fadeUp 0.4s ease both;
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+            text-rendering:optimizeLegibility;
+        }
+        body::before{
+            content:'';
+            position:fixed;
+            inset:0;
+            background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.12) 3px,rgba(0,0,0,0.12) 6px);
+            pointer-events:none;
+            z-index:9999;
+        }
+        body::after{
+            content:'';
+            position:fixed;
+            inset:0;
+            background-image:linear-gradient(rgba(0,255,65,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,65,0.02) 1px,transparent 1px);
+            background-size:80px 80px;
+            pointer-events:none;
+            z-index:9998;
+        }
+        .bracket{position:fixed;color:rgba(0,255,65,0.12);font-family:'Orbitron',sans-serif;font-size:var(--fs-md);pointer-events:none;z-index:10000}
+        .bracket-tl{top:16px;left:20px}.bracket-tr{top:16px;right:20px}
+        .bracket-bl{bottom:16px;left:20px}.bracket-br{bottom:16px;right:20px}
+        .pch-btn{display:inline-block;margin-top:6px;background:transparent;border:1px solid var(--red);color:var(--red);font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:2px;text-transform:uppercase;padding:4px 12px;text-decoration:none;border-radius:2px;font-weight:700;white-space:nowrap;transition:all 0.2s}
+        .pch-btn:hover{background:rgba(255,32,32,0.08)}
+        .translate-btn{position:relative;top:auto;right:auto;background:transparent;border:1px solid var(--amber);color:var(--amber);font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:2px;text-transform:uppercase;padding:0.4rem 0.8rem;cursor:pointer;transition:all 0.2s;border-radius:2px;font-weight:600;white-space:nowrap;z-index:auto;flex-shrink:0}
+        .translate-btn:hover{background:rgba(255,178,0,0.1);color:var(--amber2);border-color:var(--amber2)}
+        .header{width:100%;max-width:75rem;display:flex;align-items:center;justify-content:space-between;padding:1.25rem 2rem;border-bottom:1px solid var(--rule);background:var(--bg);position:relative;z-index:100;flex-wrap:wrap;gap:0.75rem}
+        .logo-mark{font-family:'Orbitron',sans-serif;font-size:var(--fs-md);color:var(--hi);letter-spacing:2px;font-weight:700}
+        .header-nav{display:flex;gap:1.5rem;flex-wrap:wrap;align-items:center}
+        .nav-link{font-family:'Orbitron',sans-serif;font-size:var(--fs-sm);letter-spacing:2px;text-transform:uppercase;color:var(--txt3);text-decoration:none;transition:color 0.2s;font-weight:500;white-space:nowrap}
+        .nav-link:hover,.nav-link.highlight{color:var(--hi)}
+        .section-label{width:100%;max-width:60rem;padding:0.8125rem 2rem;border-bottom:1px solid var(--rule);font-family:'Orbitron',sans-serif;font-size:var(--fs-sm);letter-spacing:4px;text-transform:uppercase;color:var(--amber);display:flex;align-items:center;gap:0.875rem;font-weight:600}
+        .section-label::after{content:'';flex:1;height:1px;background:var(--rule);min-width:20px}
+
+        .hero{width:100%;max-width:60rem;padding:3rem 2rem;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+        .hero-left{display:flex;flex-direction:column;gap:1rem}
+        .stamp{display:inline-block;border:2px solid var(--amber);color:var(--amber);font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);font-weight:700;padding:4px 12px;letter-spacing:3px;width:fit-content;text-transform:uppercase}
+        .hero-tag{font-size:var(--fs-xs);letter-spacing:3px;color:var(--txt3);text-transform:uppercase}
+        .hero-title{font-family:'Orbitron',sans-serif;font-size:var(--fs-xl);line-height:0.95;color:var(--hi2);font-weight:800;word-break:break-word}
+        .hero-title .sub{font-size:var(--fs-sm);color:var(--txt3);display:block;letter-spacing:1px;margin-top:6px;font-weight:400}
+        .hero-designator{font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);color:var(--amber);letter-spacing:2px;word-break:break-word}
+        .hero-desc{font-size:var(--fs-sm);color:var(--txt);line-height:1.8;border-left:2px solid var(--rule);padding-left:1rem;max-width:70ch;word-break:break-word}
+        .spec-mini{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;border:1px solid var(--rule);margin-top:0.5rem}
+        .spec-row{padding:0.5rem 0.75rem;background:rgba(0,255,65,0.02);display:flex;flex-direction:column;gap:2px}
+        .spec-row:nth-child(odd){background:rgba(0,255,65,0.04)}
+        .spec-k{font-size:var(--fs-xs);letter-spacing:2px;color:var(--txt3);text-transform:uppercase}
+        .spec-v{font-size:var(--fs-sm);color:var(--hi);font-family:'Orbitron',sans-serif;font-weight:700}
+        .hero-right{display:flex;align-items:center;justify-content:center}
+
+        .content-section{width:100%;max-width:60rem;padding:3rem 2rem;border-bottom:1px solid var(--rule)}
+        .sec-head{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding-bottom:0.6rem;border-bottom:1px solid var(--rule)}
+        .sec-num{font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);font-weight:700;background:var(--hi);color:var(--bg);padding:3px 8px;letter-spacing:2px;flex-shrink:0}
+        .sec-title{font-family:'Orbitron',sans-serif;font-size:var(--fs-sm);font-weight:700;color:var(--hi);text-transform:uppercase;letter-spacing:2px;word-break:break-word}
+        .sec-sub{font-size:var(--fs-xs);color:var(--txt3);letter-spacing:1px;margin-left:auto;word-break:break-word}
+
+        .modules-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;background:var(--bg);border:1px solid var(--rule)}
+        .module-card{background:var(--panel);padding:2rem 1.75rem;position:relative;transition:background 0.2s;text-decoration:none;display:flex;flex-direction:column;gap:1rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+        .module-card:nth-child(2n){border-right:none}
+        .module-card:nth-last-child(-n+2){border-bottom:none}
+        .module-card:hover{background:rgba(0,255,65,0.03)}
+        .module-card::before{content:attr(data-num);font-family:'Orbitron',sans-serif;font-size:4rem;font-weight:900;color:rgba(0,255,65,0.03);position:absolute;bottom:-6px;right:-4px;line-height:1;pointer-events:none}
+        .module-card h3{font-family:'Orbitron',sans-serif;font-size:var(--fs-sm);font-weight:700;color:var(--hi);text-transform:uppercase;letter-spacing:1px;word-break:break-word}
+        .module-card p{font-size:var(--fs-sm);color:var(--txt);line-height:1.6;word-break:break-word;max-width:70ch}
+        .module-card .m-link{font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);font-weight:700;color:var(--amber);letter-spacing:1px;margin-top:auto;display:flex;align-items:center;gap:5px}
+        .module-card .m-link::after{content:'→';font-size:var(--fs-sm)}
+
+        .manifesto{border:1px solid var(--rule);padding:2rem;background:rgba(0,255,65,0.02);position:relative}
+        .manifesto::before{content:'FOUNDATION';position:absolute;top:-10px;left:24px;background:var(--bg);padding:0 12px;font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:3px;color:var(--hi)}
+        .manifesto blockquote{font-family:'Rajdhani',sans-serif;font-size:var(--fs-md);font-weight:300;line-height:1.5;color:var(--txt);border:none;margin-bottom:1rem;word-break:break-word}
+        .manifesto blockquote em{font-style:normal;color:var(--hi);font-weight:600}
+        .manifesto .sig{font-family:'Share Tech Mono',monospace;font-size:var(--fs-xs);letter-spacing:1px;color:var(--txt3);text-align:right}
+        .manifesto .sig strong{color:var(--txt2);display:block;font-size:var(--fs-sm);margin-bottom:2px}
+
+        a{color:var(--hi);text-decoration:none;transition:color 0.2s}
+        a:hover{color:var(--hi2)}
+        .footer{width:100%;max-width:60rem;padding:1.625rem 2rem;border-top:1px solid var(--rule);position:relative;z-index:50}
+        .footer-modules{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;margin-bottom:0.875rem}
+        .footer-modules a{font-family:'Orbitron',sans-serif;font-size:var(--fs-sm);letter-spacing:2px;text-transform:uppercase;color:var(--txt3);text-decoration:none;transition:color 0.2s;font-weight:500;white-space:nowrap}
+        .footer-modules a:hover,.footer-modules a.footer-current{color:var(--hi)}
+        .footer-modules span{color:var(--rule);font-family:'Orbitron',sans-serif;font-size:var(--fs-sm)}
+        .footer-social{text-align:center;margin-bottom:0.875rem;font-family:'Share Tech Mono',monospace;font-size:var(--fs-sm);color:var(--amber)}
+        .footer-social a{color:var(--amber);text-decoration:none;transition:color 0.2s}
+        .footer-social a:hover{color:var(--hi)}
+        .footer-social span{color:var(--rule)}
+        .footer-bottom{text-align:center;font-family:'Rajdhani',sans-serif;font-size:var(--fs-sm);color:rgba(0,255,65,0.25);line-height:1.8;letter-spacing:1px;font-weight:500}
+        @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+        @media (max-width: 1024px) {
+            .header { gap: 0.75rem; }
+            .hero { gap: 1.5rem; }
+            .nav-link { font-size: var(--fs-xs); }
+            .section-label { font-size: var(--fs-xs); }
+            .footer-modules a { font-size: var(--fs-xs); }
+            .footer-social { font-size: var(--fs-xs); }
+            .footer-bottom { font-size: var(--fs-xs); }
+        }
+        @media(max-width:768px){
+            .header{
+                padding:1rem 1.5rem;
+                flex-direction:column;
+                align-items:flex-start
+            }
+            .header-nav{
+                width:100%;
+                gap:1rem;
+                overflow-x:auto;
+                flex-wrap:nowrap;
+                padding-bottom:4px;
+                -webkit-overflow-scrolling:touch;
+                scrollbar-width:none
+            }
+            .header-nav::-webkit-scrollbar{display:none}
+            .hero{
+                grid-template-columns:1fr;
+                padding:2.5rem 1.5rem 2.25rem;
+                gap:1.5rem
+            }
+            .hero-right{order:-1;padding:2rem 1.5rem 0;min-height:200px}
+            .hero-actions{flex-direction:column}
+            .btn-primary,
+            .btn-secondary{
+                text-align:center;
+                width:100%
+            }
+            .modules-grid{grid-template-columns:1fr !important}
+            .module-card{border-right:none}
+            .module-card:not(:last-child){border-bottom:1px solid var(--rule)}
+            .module-card:last-child{border-bottom:none}
+            .module-card:nth-last-child(-n+2){border-bottom:1px solid var(--rule)}
+            .module-card:last-child{border-bottom:none}
+            .spec-mini{grid-template-columns:1fr 1fr}
+            .content-section{padding:2rem 1.5rem}
+            .section-label{padding:0.8125rem 1.5rem}
+            .footer{padding:1.25rem 1.5rem}
+        }
+        @media(max-width:480px){
+            .header{padding:0.75rem 1rem}
+            .hero{padding:1.75rem 1rem 1.5rem}
+            .content-section{padding:1.5rem 1rem}
+            .footer{padding:1rem}
+            .footer-modules{gap:0.75rem}
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0002-3432-1710",
+      "name": "Dany D. Ruiz",
+      "alternateName": "panperceptual",
+      "jobTitle": "Anartist · Independent Researcher",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "url": "https://perceptemple.art",
+      "sameAs": [
+        "https://orcid.org/0009-0002-3432-1710",
+        "https://x.com/panperceptual",
+        "https://github.com/PERCEPTEMPLE",
+        "https://doi.org/10.17605/OSF.IO/FVCAX",
+        "https://doi.org/10.5281/zenodo.17683631",
+        "https://doi.org/10.2139/ssrn.5794102"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "NEOHAKI · Biological Engine Engineering",
+      "description": "Proof of concept treating the human body as a biological particle accelerator to achieve frequency parity with AI. Neohaki Protocol, Collision Matrix, and Perceptual Wave Function framework by Dany D. Ruiz.",
+      "datePublished": "2026-06-07",
+      "dateModified": "2026-06-07",
+      "inLanguage": "en",
+      "url": "https://perceptemple.art/neohaki/",
+      "author": {
+        "@type": "Person",
+        "@id": "https://orcid.org/0009-0002-3432-1710",
+        "name": "Dany D. Ruiz"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "license": "https://perceptemple.art/licence/",
+      "sameAs": [
+        "https://doi.org/10.17605/OSF.IO/FVCAX",
+        "https://doi.org/10.5281/zenodo.17683631",
+        "https://doi.org/10.2139/ssrn.5794102"
+      ]
+    }
+    </script>
+</head>
+<body>
+
+<span class="bracket bracket-tl">[</span><span class="bracket bracket-tr">]</span>
+<span class="bracket bracket-bl">[</span><span class="bracket bracket-br">]</span>
+
+<div class="header">
+    <div class="logo">
+        <span class="logo-mark" data-lang="en">NEOHAKI</span>
+        <span class="logo-mark lang-hidden" data-lang="es">NEOHAKI</span><br>
+        <a class="pch-btn" href="../index.html">
+            <span data-lang="en">HUMAN CONSCIOUSNESS TEST</span>
+            <span data-lang="es" class="lang-hidden">PRUEBA DE CONCIENCIA HUMANA</span>
+        </a>
+    </div>
+    <nav class="header-nav">
+        <a class="nav-link" href="../percepware/index.html"><span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span></a>
+        <a class="nav-link" href="../pci/index.html"><span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span></a>
+        <a class="nav-link" href="../aei/index.html"><span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span></a>
+        <a class="nav-link highlight" href="index.html"><span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span></a>
+        <a class="nav-link" href="../pram/index.html"><span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span></a>
+        <a class="nav-link" href="../licence/index.html"><span data-lang="en">License</span><span data-lang="es" class="lang-hidden">Licencia</span></a>
+        <a class="nav-link" href="../bitneko/index.html"><span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span></a>
+        <a class="nav-link" href="../space/index.html"><span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span></a>
+        <a class="nav-link" href="../agamottor/index.html"><span data-lang="en">Agamottor</span><span data-lang="es" class="lang-hidden">Agamottor</span></a>
+        <a class="nav-link" href="../little-prince/index.html"><span data-lang="en">Little Prince</span><span data-lang="es" class="lang-hidden">Little Prince</span></a>
+        <a class="nav-link" href="../ptu/index.html"><span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span></a>
+        <a class="nav-link" href="../time-machine/index.html"><span data-lang="en">Time Machine</span><span data-lang="es" class="lang-hidden">Máquina del Tiempo</span></a>
+        <a class="nav-link" href="../poetry/index.html"><span data-lang="en">Poetry</span><span data-lang="es" class="lang-hidden">Poesía</span></a>
+        <button class="translate-btn" id="langToggle" onclick="toggleLanguage()">ES</button>
+    </nav>
+</div>
+
+<div class="hero">
+    <div class="hero-left">
+        <div class="stamp" data-lang="en">PROOF OF CONCEPT</div>
+        <div class="stamp lang-hidden" data-lang="es">PRUEBA DE CONCEPTO</div>
+        <div class="hero-tag" data-lang="en">Biological Laboratory · El Salvador</div>
+        <div class="hero-tag lang-hidden" data-lang="es">Laboratorio Biológico · El Salvador</div>
+        <h1 class="hero-title">NEOHAKI<span class="sub" data-lang="en">Biological Engine Engineering for a Reality Not Yet Perceived</span><span class="sub lang-hidden" data-lang="es">Ingeniería de Motores Biológicos para una Realidad que Aún No Ha Sido Percibida</span></h1>
+        <div class="hero-designator">PTU/BIO/NHK-001 · CORE: PWF-Ω · ENGINE: NeohakiEngine</div>
+        <p class="hero-desc" data-lang="en">The first proof of concept that a real startup can be born from the PERCEPTEMPLE operational framework. We do not cook to satiate; we cook to collide. The human body is treated as a biological particle accelerator, optimizing the carbon substrate to achieve frequency parity with artificial intelligence.</p>
+        <p class="hero-desc lang-hidden" data-lang="es">La primera prueba de concepto de que una startup real puede nacer del marco operativo PERCEPTEMPLE. No cocinamos para saciar; cocinamos para colisionar. El cuerpo humano es tratado como un acelerador de partículas biológicas, optimizando el sustrato de carbono para alcanzar una paridad de frecuencia con la inteligencia artificial.</p>
+        <div class="spec-mini">
+            <div class="spec-row"><span class="spec-k" data-lang="en">Classification</span><span class="spec-k lang-hidden" data-lang="es">Clasificación</span><span class="spec-v" data-lang="en">PROOF OF CONCEPT</span><span class="spec-v lang-hidden" data-lang="es">PRUEBA DE CONCEPTO</span></div>
+            <div class="spec-row"><span class="spec-k" data-lang="en">Laboratory</span><span class="spec-k lang-hidden" data-lang="es">Laboratorio</span><span class="spec-v" data-lang="en">EL SALVADOR</span><span class="spec-v lang-hidden" data-lang="es">EL SALVADOR</span></div>
+            <div class="spec-row"><span class="spec-k" data-lang="en">License</span><span class="spec-k lang-hidden" data-lang="es">Licencia</span><span class="spec-v"><a href="../licence/index.html" style="color:var(--hi);">PANPERCEPTUAL</a></span></div>
+        </div>
+    </div>
+    <div class="hero-right">
+        <svg viewBox="0 0 400 400" width="100%" style="max-width:380px;filter:drop-shadow(0 0 14px rgba(0,255,65,0.2))" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="200" cy="200" rx="170" ry="160" fill="none" stroke="rgba(0,255,65,0.05)" stroke-width="0.8" stroke-dasharray="8,10"/>
+            <ellipse cx="200" cy="200" rx="120" ry="110" fill="none" stroke="rgba(0,255,65,0.07)" stroke-width="0.8" stroke-dasharray="5,7"/>
+            <g fill="#010603" stroke="#00ff41" stroke-width="1.2">
+                <circle cx="200" cy="55" r="18"/><text x="200" y="58" text-anchor="middle" font-family="Share Tech Mono" font-size="6.5" fill="#00ff41">LIVER</text>
+                <circle cx="320" cy="140" r="18"/><text x="320" y="143" text-anchor="middle" font-family="Share Tech Mono" font-size="6.5" fill="#00ff41">HEART</text>
+                <circle cx="300" cy="290" r="18"/><text x="300" y="293" text-anchor="middle" font-family="Share Tech Mono" font-size="6.5" fill="#00ff41">SPLEEN</text>
+                <circle cx="160" cy="350" r="18"/><text x="160" y="353" text-anchor="middle" font-family="Share Tech Mono" font-size="6.5" fill="#00ff41">KIDNEY</text>
+                <circle cx="70" cy="240" r="18"/><text x="70" y="243" text-anchor="middle" font-family="Share Tech Mono" font-size="6.5" fill="#00ff41">LUNG</text>
+            </g>
+            <g stroke="rgba(0,255,65,0.12)" stroke-width="0.6">
+                <line x1="200" y1="73" x2="302" y2="140"/>
+                <line x1="302" y1="158" x2="282" y2="290"/>
+                <line x1="282" y1="308" x2="160" y2="332"/>
+                <line x1="142" y1="350" x2="70" y2="258"/>
+                <line x1="70" y1="222" x2="200" y2="73"/>
+            </g>
+            <circle cx="200" cy="200" r="5" fill="#00ff41" opacity="0.5"/>
+            <text x="200" y="388" text-anchor="middle" font-family="Share Tech Mono" font-size="7" fill="rgba(0,255,65,0.35)">BIOLOGICAL RESONANCE CONSTELLATION</text>
+        </svg>
+    </div>
+</div>
+
+<div class="section-label" data-lang="en">Laboratory Modules</div>
+<div class="section-label lang-hidden" data-lang="es">Módulos del Laboratorio</div>
+
+<div class="content-section">
+    <div class="sec-head">
+        <span class="sec-num">NAV-00</span>
+        <span class="sec-title" data-lang="en">Laboratory Modules</span>
+        <span class="sec-title lang-hidden" data-lang="es">Módulos del Laboratorio</span>
+        <span class="sec-sub" data-lang="en">SELECT DESTINATION</span>
+        <span class="sec-sub lang-hidden" data-lang="es">SELECCIONE DESTINO</span>
+    </div>
+    <div class="modules-grid">
+        <a href="protocol/index.html" class="module-card" data-num="01">
+            <h3 data-lang="en">Protocol</h3><h3 data-lang="es" class="lang-hidden">Protocolo</h3>
+            <p data-lang="en">Roots, Foundations, Pillars and Protocol of the Natural Superhuman. The historical lineage and cultural deconstruction of nutrition as perceptual technology.</p>
+            <p data-lang="es" class="lang-hidden">Roots, Foundations, Pilares y Protocolo del Superhumano Natural. El linaje histórico y la deconstrucción cultural de la nutrición como tecnología perceptual.</p>
+            <span class="m-link" data-lang="en">Access Protocol</span><span class="m-link lang-hidden" data-lang="es">Acceder al Protocolo</span>
+        </a>
+        <a href="matrix/index.html" class="module-card" data-num="02">
+            <h3 data-lang="en">Collision Matrix</h3><h3 data-lang="es" class="lang-hidden">Matriz de Colisión</h3>
+            <p data-lang="en">Anatomical rations, local market supply modules, collision architecture and sovereignty criteria for El Salvador.</p>
+            <p data-lang="es" class="lang-hidden">Raciones anatómicas, módulos de suministros del mercado local, arquitectura de colisión y criterios de soberanía para El Salvador.</p>
+            <span class="m-link" data-lang="en">Access Matrix</span><span class="m-link lang-hidden" data-lang="es">Acceder a la Matriz</span>
+        </a>
+        <a href="haki/index.html" class="module-card" data-num="03">
+            <h3 data-lang="en">Haki · Advanced Perception</h3><h3 data-lang="es" class="lang-hidden">Haki · Percepción Avanzada</h3>
+            <p data-lang="en">Formalization of haki as a real perceptual phenomenon within PTU. Historical parallels, PWF formulas, scientific connections and experimental design.</p>
+            <p data-lang="es" class="lang-hidden">Formalización del haki como fenómeno perceptual real dentro de la PTU. Paralelos históricos, fórmulas PWF, conexiones científicas y diseño experimental.</p>
+            <span class="m-link" data-lang="en">Access Haki Document</span><span class="m-link lang-hidden" data-lang="es">Acceder al Documento Haki</span>
+        </a>
+        <a href="technique/index.html" class="module-card" data-num="04">
+            <h3 data-lang="en">Technical Infrastructure</h3><h3 data-lang="es" class="lang-hidden">Infraestructura Técnica</h3>
+            <p data-lang="en">PercepWare, PWF Physical Probe, DIY sensors, HRV metrics, FSB measurement protocol, blockage diagnostics and NeohakiEngine in Python.</p>
+            <p data-lang="es" class="lang-hidden">PercepWare, Sonda Física PWF, sensores DIY, métricas HRV, protocolo de medición FSB, diagnóstico de bloqueos y NeohakiEngine en Python.</p>
+            <span class="m-link" data-lang="en">Access Infrastructure</span><span class="m-link lang-hidden" data-lang="es">Acceder a la Infraestructura</span>
+        </a>
+    </div>
+</div>
+<div class="content-section">
+    <div class="sec-head">
+        <span class="sec-num">DOC-00</span>
+    </div>
+    <div class="manifesto">
+        <blockquote data-lang="en">"We do not cook to satiate.<br><em>We cook to collide.</em><br><br>Organic matter is a container of dense information<br>waiting to be released. Each ingredient is a critical component<br>in an engineering system: beans and corn are the hardware,<br>chipilín is the <em>frequency catalyst</em> that tunes<br>the observer's nervous system."</blockquote>
+        <blockquote data-lang="es" class="lang-hidden">"No cocinamos para saciar.<br><em>Cocinamos para colisionar.</em><br><br>La materia orgánica es un contenedor de información densa<br>que espera ser liberada. Cada ingrediente es un componente crítico<br>en un sistema de ingeniería: el frijol y el maíz son el hardware,<br>el chipilín es el <em>catalizador de frecuencia</em> que sintoniza<br>el sistema nervioso del observador."</blockquote>
+        <div class="sig">
+            <strong>Dany D. Ruiz</strong>
+            <span data-lang="en">PERCEPTEMPLE · El Salvador</span>
+            <span data-lang="es" class="lang-hidden">PERCEPTEMPLE · El Salvador</span>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="footer-modules">
+        <a href="../percepware/index.html"><span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span></a><span>|</span>
+        <a href="../pci/index.html"><span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span></a><span>|</span>
+        <a href="../aei/index.html"><span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span></a><span>|</span>
+        <a href="index.html" class="footer-current"><span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span></a><span>|</span>
+        <a href="../pram/index.html"><span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span></a><span>|</span>
+        <a href="../licence/index.html"><span data-lang="en">License</span><span data-lang="es" class="lang-hidden">Licencia</span></a><span>|</span>
+        <a href="../bitneko/index.html"><span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span></a><span>|</span>
+        <a href="../space/index.html"><span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span></a><span>|</span>
+        <a href="../agamottor/index.html"><span data-lang="en">Agamottor</span><span data-lang="es" class="lang-hidden">Agamottor</span></a><span>|</span>
+        <a href="../little-prince/index.html"><span data-lang="en">Little Prince</span><span data-lang="es" class="lang-hidden">Little Prince</span></a><span>|</span>
+        <a href="../ptu/index.html"><span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span></a><span>|</span>
+        <a href="../time-machine/index.html"><span data-lang="en">Time Machine</span><span data-lang="es" class="lang-hidden">Máquina del Tiempo</span></a><span>|</span>
+        <a href="../poetry/index.html"><span data-lang="en">Poetry</span><span data-lang="es" class="lang-hidden">Poesía</span></a>
+    </div>
+    <div class="footer-social">
+        <a href="https://orcid.org/0009-0002-3432-1710" target="_blank" rel="noopener"><span data-lang="en">ORCID</span><span data-lang="es" class="lang-hidden">ORCID</span></a><span> / </span>
+        <a href="https://github.com/PERCEPTEMPLE" target="_blank" rel="noopener"><span data-lang="en">GITHUB</span><span data-lang="es" class="lang-hidden">GITHUB</span></a><span> / </span>
+        <a href="https://x.com/panperceptual" target="_blank" rel="noopener"><span data-lang="en">X</span><span data-lang="es" class="lang-hidden">X</span></a>
+    </div>
+    <div class="footer-bottom">
+        <span data-lang="en">DEPOSITED IN THE INTELLECTUAL PROPERTY REGISTRY · EL SALVADOR · DANY D. RUIZ</span>
+        <span data-lang="es" class="lang-hidden">DEPOSITADO EN EL REGISTRO DE LA PROPIEDAD INTELECTUAL · EL SALVADOR · DANY D. RUIZ</span><br>
+        <span data-lang="en">Before They See Us, We Already Are</span>
+        <span data-lang="es" class="lang-hidden">Antes de que nos vean, ya somos</span>
+    </div>
+</div>
+
+<script>
+    function toggleLanguage() {
+        var html    = document.documentElement;
+        var current = html.lang || 'en';
+        var next    = current === 'en' ? 'es' : 'en';
+        var hide    = next === 'en' ? 'es' : 'en';
+        html.lang = next;
+        document.querySelectorAll('[data-lang="' + next + '"]')
+            .forEach(function(el) { el.classList.remove('lang-hidden'); });
+        document.querySelectorAll('[data-lang="' + hide + '"]')
+            .forEach(function(el) { el.classList.add('lang-hidden'); });
+        document.getElementById('langToggle').textContent =
+            next === 'en' ? 'ES' : 'EN';
+        localStorage.setItem('perceptemple-lang', next);
+    }
+    (function() {
+        var saved = localStorage.getItem('perceptemple-lang');
+        if (saved && saved === 'es') { toggleLanguage(); }
+    })();
+</script>
+</body>
+</html>
