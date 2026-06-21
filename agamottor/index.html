@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERCEPTEMPLE</title>
+    <meta name="description" content="Perception simulator where thought does not measure the world but collapses a field. Eight conceptual domains execute perceptual collapse under the Panperceptual Theory of the Universe.">
+    <meta name="author" content="Dany D. Ruiz">
+    <meta name="last-modified" content="2026-06-07">
+    <meta name="keywords" content="AgamottOR, Perceptual Wave Function, Proof of Perception, Panperceptual Theory of the Universe, Perceptual Complexity Index, perception simulator, Dany D. Ruiz">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://perceptemple.art/agamottor/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="PERCEPTEMPLE · AGAMOTTOR">
+    <meta property="og:description" content="Perception simulator where thought does not measure the world but collapses a field. Eight conceptual domains execute perceptual collapse under the Panperceptual Theory of the Universe.">
+    <meta property="og:url" content="https://perceptemple.art/agamottor/">
+    <meta property="og:site_name" content="PERCEPTEMPLE">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_SV">
+    <meta property="og:image" content="https://perceptemple.art/preview.jpg">
+    <meta property="og:image:alt" content="PERCEPTEMPLE — AGAMOTTOR perception simulator">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@panperceptual">
+    <meta name="twitter:creator" content="@panperceptual">
+    <meta name="twitter:title" content="PERCEPTEMPLE · AGAMOTTOR">
+    <meta name="twitter:description" content="Perception simulator where thought does not measure the world but collapses a field. Eight conceptual domains execute perceptual collapse under the Panperceptual Theory of the Universe.">
+    <meta name="twitter:image" content="https://perceptemple.art/preview.jpg">
+    <meta name="citation_title" content="AGAMOTTOR: Perception Simulator and Post-Collapse States">
+    <meta name="citation_author" content="Ruiz, Dany D.">
+    <meta name="citation_publication_date" content="2025">
+    <meta name="citation_online_date" content="2025">
+    <meta name="citation_publisher" content="PERCEPTEMPLE">
+    <meta name="citation_language" content="en">
+    <meta name="DC.title" content="PERCEPTEMPLE · AGAMOTTOR">
+    <meta name="DC.creator" content="Dany D. Ruiz">
+    <meta name="DC.publisher" content="PERCEPTEMPLE">
+    <meta name="DC.language" content="en">
+    <meta name="DC.rights" content="https://perceptemple.art/licence/">
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <style>
+        :root {
+            --bg: #020805;
+            --panel: #020805;
+            --rule: #0a5c1e;
+            --hi: #00ff41;
+            --hi2: #39ff14;
+            --amber: #ffb200;
+            --amber2: #ffcc00;
+            --txt: rgba(0,255,65,0.75);
+            --txt2: rgba(0,255,65,0.9);
+            --txt3: rgba(0,255,65,0.35);
+            --white: #39ff14;
+            --red: #ff2020;
+            --fs-xs: clamp(0.65rem, 1.2vw, 0.75rem);
+            --fs-sm: clamp(0.75rem, 1.4vw, 0.85rem);
+            --fs-md: clamp(0.8rem,  1.6vw, 1rem);
+            --fs-lg: clamp(1rem,    2vw,   1.25rem);
+            --fs-xl: clamp(1.25rem, 3vw,   1.75rem);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .lang-hidden { display: none !important; }
+        body {
+            background: var(--bg);
+            color: var(--txt2);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-sm);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,0,0,0.06) 3px, rgba(0,0,0,0.06) 6px);
+            pointer-events: none;
+            z-index: 9999;
+        }
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: linear-gradient(rgba(0,255,65,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,255,65,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 9998;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+        canvas {
+            max-width: 100%;
+        }
+        .bracket {
+            position: fixed;
+            color: rgba(0,255,65,0.15);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            pointer-events: none;
+            z-index: 10000;
+        }
+        .bracket-tl { top: 12px; left: 16px; }
+        .bracket-tr { top: 12px; right: 16px; }
+        .bracket-bl { bottom: 12px; left: 16px; }
+        .bracket-br { bottom: 12px; right: 16px; }
+        .pch-btn {
+            display: inline-block;
+            margin-top: 6px;
+            background: transparent;
+            border: 1px solid var(--red);
+            color: var(--red);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            text-decoration: none;
+            border-radius: 2px;
+            font-weight: 700;
+            transition: all 0.2s;
+        }
+        .pch-btn:hover { background: rgba(255,32,32,0.06); }
+        .translate-btn {
+            background: transparent;
+            border: 1px solid var(--amber);
+            color: var(--amber);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.375rem 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-radius: 2px;
+            font-weight: 600;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .translate-btn:hover { background: rgba(255,178,0,0.08); color: var(--amber2); border-color: var(--amber2); }
+        .header {
+            width: 100%;
+            max-width: 75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 3rem;
+            border-bottom: 1px solid var(--rule);
+            background: var(--bg);
+            position: relative;
+            z-index: 100;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+        .logo-mark {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            color: var(--hi);
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+        .header-nav {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .nav-link {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .nav-link:hover, .nav-link.highlight { color: var(--hi); }
+        .section-label {
+            width: 100%;
+            max-width: 60rem;
+            padding: 0.8125rem 3rem;
+            border-bottom: 1px solid var(--rule);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--amber);
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            font-weight: 600;
+        }
+        .section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--rule);
+        }
+        .hero {
+            width: 100%;
+            max-width: 60rem;
+            padding: 4rem 3rem 3.5rem;
+            border-bottom: 1px solid var(--rule);
+        }
+        .hero-kicker {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 4px;
+            color: var(--txt3);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        .hero-h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            line-height: 0.95;
+            color: var(--hi2);
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            word-break: break-word;
+        }
+        .amber-notice {
+            background: rgba(255, 178, 0, 0.05);
+            border: 1px solid var(--amber);
+            border-left: 4px solid var(--amber);
+            padding: 1.25rem 1.5rem;
+            margin: 1rem 0 0 0;
+            border-radius: 2px;
+            font-family: 'Rajdhani', monospace;
+            font-size: var(--fs-sm);
+            line-height: 1.65;
+            color: var(--amber2);
+            letter-spacing: 0.3px;
+            word-break: break-word;
+        }
+        .amber-notice strong {
+            color: var(--amber);
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            display: inline-block;
+            margin-right: 8px;
+        }
+        .content-section {
+            width: 100%;
+            max-width: 60rem;
+            padding: 3rem;
+            border-bottom: 1px solid var(--rule);
+        }
+        .content-section p {
+            max-width: 70ch;
+            word-break: break-word;
+        }
+        .content-section li {
+            max-width: 70ch;
+            word-break: break-word;
+        }
+        .domain-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            border: 1px solid var(--rule);
+            margin: 1.5rem 0;
+        }
+        .domain-card {
+            background: rgba(3, 11, 7, 0.9);
+            border-right: 1px solid var(--rule);
+            border-bottom: 1px solid var(--rule);
+            padding: 14px;
+            cursor: pointer;
+            transition: 0.15s linear;
+        }
+        .domain-card:nth-child(4n) { border-right: none; }
+        .domain-card:nth-last-child(-n+4) { border-bottom: none; }
+        .domain-card:hover { background: rgba(0,255,65,0.04); border-left: 1px solid var(--hi); }
+        .domain-card.selected {
+            background: rgba(10,92,30,0.2);
+            border: 1px solid var(--hi) !important;
+            box-shadow: inset 0 0 12px rgba(0,255,65,0.1);
+        }
+        .domain-card-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        .domain-card-icon {
+            font-size: 1.2rem;
+            color: var(--hi);
+        }
+        .domain-card-name {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-md);
+            color: var(--hi2);
+            font-weight: 500;
+        }
+        .domain-card-sub {
+            font-size: var(--fs-xs);
+            color: var(--txt);
+            font-family: 'Share Tech Mono', monospace;
+        }
+        .domain-card canvas {
+            display: block;
+            width: 100%;
+            height: 38px;
+            background: transparent;
+            border: 1px solid #0a2a12;
+        }
+        #detail {
+            background: var(--panel);
+            border: 1px solid var(--rule);
+            padding: 18px;
+            margin-top: 1rem;
+            display: none;
+            box-shadow: 0 0 12px rgba(0,0,0,0.6);
+        }
+        #detail.show { display: block; }
+        .detail-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            border-bottom: 1px solid var(--rule);
+            padding-bottom: 8px;
+        }
+        .detail-title {
+            font-family: 'Orbitron', monospace;
+            font-size: var(--fs-sm);
+            color: var(--amber2);
+            letter-spacing: 0.1em;
+            word-break: break-word;
+        }
+        .detail-close {
+            background: none;
+            border: 1px solid var(--rule);
+            color: var(--txt);
+            padding: 2px 10px;
+            cursor: pointer;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-xs);
+        }
+        .detail-close:hover { border-color: var(--red); color: var(--red); }
+        .detail-desc {
+            font-size: var(--fs-md);
+            color: var(--txt);
+            line-height: 1.7;
+            margin-bottom: 14px;
+            font-family: 'Rajdhani', monospace;
+            word-break: break-word;
+        }
+        .conceptual-note {
+            background: rgba(0, 255, 65, 0.03);
+            border-left: 2px solid var(--amber);
+            padding: 0.65rem 0.9rem;
+            margin: 0.75rem 0 1rem 0;
+            font-size: var(--fs-xs);
+            font-family: 'Share Tech Mono', monospace;
+            color: var(--amber2);
+            line-height: 1.6;
+            word-break: break-word;
+        }
+        .conceptual-note strong {
+            color: var(--amber);
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        .detail-params {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        .param-group { flex: 1; min-width: 150px; }
+        .param-label {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-xs);
+            color: var(--amber);
+            letter-spacing: 0.06em;
+            margin-bottom: 4px;
+            word-break: break-word;
+        }
+        .param-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .param-row input[type=range] {
+            flex: 1;
+            height: 2px;
+            background: var(--rule);
+            accent-color: var(--hi);
+        }
+        .param-val {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-xs);
+            color: var(--hi2);
+            min-width: 48px;
+        }
+        .detail-canvas {
+            width: 100%;
+            height: 80px;
+            background: #010502;
+            border: 1px solid var(--rule);
+            margin: 12px 0;
+        }
+        .detail-legend {
+            display: flex;
+            gap: 18px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-xs);
+            color: var(--txt);
+        }
+        .detail-legend span { display: inline-flex; align-items: center; gap: 6px; }
+        .leg-line { width: 20px; height: 1.5px; background: var(--hi); }
+        .leg-dash { width: 18px; border-top: 1px dashed var(--amber); }
+        .leg-dot { width: 7px; height: 7px; background: var(--hi); }
+        .pipeline {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin: 14px 0 6px;
+            font-size: var(--fs-xs);
+        }
+        .pipe-step {
+            background: #010502;
+            border: 1px solid var(--rule);
+            padding: 5px 9px;
+            text-align: center;
+        }
+        .pipe-step span {
+            display: block;
+            font-size: 9px;
+            color: var(--amber);
+            text-transform: uppercase;
+        }
+        .pipe-arrow { color: var(--rule); font-weight: bold; }
+        .quote-block {
+            padding: 1rem 1.25rem;
+            background: rgba(0,255,65,0.03);
+            border-left: 2px solid var(--hi);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: var(--fs-md);
+            color: var(--hi);
+            line-height: 1.8;
+            margin: 1rem 0;
+            word-break: break-word;
+        }
+        .note-block {
+            padding: 0.75rem 1rem;
+            background: rgba(255,178,0,0.04);
+            border-left: 2px solid var(--amber);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: var(--fs-xs);
+            color: var(--amber2);
+            line-height: 1.7;
+            margin: 0.75rem 0;
+            word-break: break-word;
+        }
+        .note-block strong { color: var(--amber); font-family: 'Orbitron', sans-serif; }
+
+        /* ============================================
+           POST-COLLAPSE SECTION
+           ============================================ */
+        .postcollapse-section {
+            margin: 2.5rem 0 0 0;
+            padding: 1.75rem 1.5rem 1.5rem;
+            border: 1px solid var(--rule);
+            background: rgba(0,255,65,0.012);
+            position: relative;
+        }
+        .postcollapse-label {
+            position: absolute;
+            top: -0.6rem;
+            left: 1rem;
+            background: var(--bg);
+            padding: 0 0.75rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 3px;
+            color: var(--amber);
+        }
+        .postcollapse-opening {
+            margin-bottom: 1.5rem;
+            padding: 0;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: var(--fs-sm);
+            color: var(--hi);
+            line-height: 1.8;
+            border-left: 2px solid var(--hi);
+            padding-left: 1.25rem;
+            word-break: break-word;
+        }
+        .postcollapse-opening em {
+            font-style: normal;
+            color: var(--hi2);
+        }
+        .pc-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0;
+            border: 1px solid var(--rule);
+        }
+        .pc-card {
+            background: rgba(3, 11, 7, 0.7);
+            border-right: 1px solid var(--rule);
+            border-bottom: 1px solid var(--rule);
+            padding: 16px 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .pc-card:nth-child(2n) { border-right: none; }
+        .pc-card:nth-last-child(-n+2) { border-bottom: none; }
+        .pc-status {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 2px 8px;
+            display: inline-block;
+            width: fit-content;
+            border: 1px solid var(--rule);
+            color: var(--txt3);
+        }
+        .pc-status.conceptual { color: var(--amber); border-color: var(--amber); }
+        .pc-card-tag {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            word-break: break-word;
+        }
+        .pc-card-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-md);
+            color: var(--hi2);
+            font-weight: 600;
+            word-break: break-word;
+        }
+        .pc-card-desc {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: var(--fs-xs);
+            color: var(--txt);
+            line-height: 1.65;
+            flex: 1;
+            word-break: break-word;
+        }
+        .pc-card-formula {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-xs);
+            color: var(--hi);
+            background: rgba(0,255,65,0.03);
+            padding: 5px 10px;
+            border: 1px solid var(--rule);
+            letter-spacing: 1px;
+            text-align: center;
+            margin-top: auto;
+            word-break: break-word;
+        }
+        .postcollapse-closing {
+            margin-top: 1.5rem;
+            padding: 0.75rem 1rem;
+            background: rgba(255,178,0,0.025);
+            border-left: 2px solid var(--hi);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: var(--fs-sm);
+            color: var(--hi);
+            line-height: 1.7;
+            word-break: break-word;
+        }
+        .postcollapse-closing strong {
+            color: var(--hi2);
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .footer {
+            width: 100%;
+            max-width: 60rem;
+            padding: 1.625rem 3rem;
+            border-top: 1px solid var(--rule);
+        }
+        .footer-modules {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 0.875rem;
+        }
+        .footer-modules a {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            color: var(--txt3);
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .footer-modules a:hover, .footer-modules a.footer-current { color: var(--hi); }
+        .footer-modules span { color: var(--rule); }
+        .footer-social {
+            text-align: center;
+            margin-bottom: 0.875rem;
+            font-size: var(--fs-xs);
+            color: var(--amber);
+        }
+        .footer-social a { color: var(--amber); text-decoration: none; }
+        .footer-social a:hover { color: var(--hi); }
+        .footer-social span { color: var(--rule); }
+        .footer-bottom {
+            text-align: center;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: var(--fs-xs);
+            color: rgba(0,255,65,0.25);
+            line-height: 1.8;
+            word-break: break-word;
+        }
+
+        @media (max-width: 1024px) {
+            .header { gap: 0.75rem; }
+            .hero { gap: 1.5rem; }
+            .nav-link { font-size: var(--fs-xs); }
+            .section-label { font-size: var(--fs-xs); }
+            .footer-modules a { font-size: var(--fs-xs); }
+            .footer-social { font-size: var(--fs-xs); }
+            .footer-bottom { font-size: var(--fs-xs); }
+            .domain-card { padding: 1.5rem 1.25rem; }
+            .pc-card { padding: 1.25rem 1rem; }
+        }
+        @media (max-width: 900px) {
+            .domain-grid { grid-template-columns: repeat(2, 1fr); }
+            .domain-card:nth-child(2n) { border-right: none; }
+            .domain-card:nth-child(4n) { border-right: 1px solid var(--rule); }
+            .domain-card:nth-last-child(-n+2) { border-bottom: none; }
+        }
+        @media (max-width: 768px) {
+            .header {
+                padding: 1rem 1.5rem;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .header-nav {
+                width: 100%;
+                gap: 1rem;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 4px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+            .header-nav::-webkit-scrollbar { display: none; }
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 2.5rem 1.5rem 2.25rem;
+                gap: 1.5rem;
+            }
+            .content-section { padding: 2rem 1.5rem; }
+            .section-label { padding: 0.8125rem 1.5rem; }
+            .footer { padding: 1.25rem 1.5rem; }
+            .hero-actions { flex-direction: column; }
+            .btn-primary,
+            .btn-secondary {
+                text-align: center;
+                width: 100%;
+            }
+            .domain-grid { grid-template-columns: 1fr !important; }
+            .domain-card { border-right: none; }
+            .domain-card:not(:last-child) { border-bottom: 1px solid var(--rule); }
+            .domain-card:last-child { border-bottom: none; }
+            .domain-card:nth-child(4n) { border-right: none; }
+            .pc-grid { grid-template-columns: 1fr !important; }
+            .pc-card { border-right: none; }
+            .pc-card:nth-child(2n) { border-right: none; }
+            .pc-card:not(:last-child) { border-bottom: 1px solid var(--rule); }
+            .pc-card:nth-last-child(-n+2) { border-bottom: 1px solid var(--rule); }
+            .pc-card:last-child { border-bottom: none; }
+            .postcollapse-section { padding: 1.25rem 1rem 1rem; }
+        }
+        @media (max-width: 480px) {
+            .header          { padding: 0.75rem 1rem; }
+            .hero            { padding: 1.75rem 1rem 1.5rem; }
+            .content-section { padding: 1.5rem 1rem; }
+            .footer          { padding: 1rem; }
+            .footer-modules  { gap: 0.75rem; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0002-3432-1710",
+      "name": "Dany D. Ruiz",
+      "alternateName": "panperceptual",
+      "jobTitle": "Anartist · Independent Researcher",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "url": "https://perceptemple.art",
+      "sameAs": [
+        "https://orcid.org/0009-0002-3432-1710",
+        "https://x.com/panperceptual",
+        "https://github.com/PERCEPTEMPLE",
+        "https://doi.org/10.17605/OSF.IO/FVCAX",
+        "https://doi.org/10.5281/zenodo.17683631",
+        "https://doi.org/10.2139/ssrn.5794102"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AgamottOR",
+      "description": "Perception simulator where thought does not measure the world but collapses a field. Eight conceptual domains execute perceptual collapse under the Panperceptual Theory of the Universe.",
+      "datePublished": "2026-06-07",
+      "dateModified": "2026-06-07",
+      "applicationCategory": "ScientificApplication",
+      "operatingSystem": "Web",
+      "url": "https://perceptemple.art/agamottor/",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "@id": "https://orcid.org/0009-0002-3432-1710",
+        "name": "Dany D. Ruiz"
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "license": "https://perceptemple.art/licence/"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "headline": "AGAMOTTOR: Perception Simulator and Post-Collapse States",
+      "description": "Perception simulator where thought does not measure the world but collapses a field. Eight conceptual domains execute perceptual collapse under the Panperceptual Theory of the Universe.",
+      "datePublished": "2026-06-07",
+      "dateModified": "2026-06-07",
+      "inLanguage": "en",
+      "url": "https://perceptemple.art/agamottor/",
+      "author": {
+        "@type": "Person",
+        "@id": "https://orcid.org/0009-0002-3432-1710",
+        "name": "Dany D. Ruiz"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "isPartOf": {
+        "@type": "Book",
+        "name": "Panperceptual Theory of the Universe",
+        "url": "https://perceptemple.art/ptu/"
+      },
+      "license": "https://perceptemple.art/licence/",
+      "sameAs": [
+        "https://doi.org/10.17605/OSF.IO/UXEGH",
+        "https://doi.org/10.5281/zenodo.19168519",
+        "https://doi.org/10.2139/ssrn.6456099"
+      ]
+    }
+    </script>
+</head>
+<body>
+    <span class="bracket bracket-tl">[</span>
+    <span class="bracket bracket-tr">]</span>
+    <span class="bracket bracket-bl">[</span>
+    <span class="bracket bracket-br">]</span>
+
+    <div class="header">
+        <div class="logo">
+            <span class="logo-mark" data-lang="en">AGAMOTTOR</span>
+            <span class="logo-mark lang-hidden" data-lang="es">AGAMOTTOR</span><br>
+            <a class="pch-btn" href="../index.html"><span data-lang="en">HUMAN CONSCIOUSNESS TEST</span><span data-lang="es" class="lang-hidden">PRUEBA DE CONCIENCIA HUMANA</span></a>
+        </div>
+        <nav class="header-nav">
+            <a class="nav-link" href="../percepware/index.html"><span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span></a>
+            <a class="nav-link" href="../pci/index.html"><span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span></a>
+            <a class="nav-link" href="../aei/index.html"><span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span></a>
+            <a class="nav-link" href="../neohaki/index.html"><span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span></a>
+            <a class="nav-link" href="../pram/index.html"><span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span></a>
+            <a class="nav-link" href="../licence/index.html"><span data-lang="en">LICENSE</span><span data-lang="es" class="lang-hidden">LICENCIA</span></a>
+            <a class="nav-link" href="../bitneko/index.html"><span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span></a>
+            <a class="nav-link" href="../space/index.html"><span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span></a>
+            <a class="nav-link highlight" href="index.html"><span data-lang="en">AGAMOTTOR</span><span data-lang="es" class="lang-hidden">AGAMOTTOR</span></a>
+            <a class="nav-link" href="../little-prince/index.html"><span data-lang="en">LITTLE PRINCE</span><span data-lang="es" class="lang-hidden">LITTLE PRINCE</span></a>
+            <a class="nav-link" href="../ptu/index.html"><span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span></a>
+            <a class="nav-link" href="../time-machine/index.html"><span data-lang="en">TIME MACHINE</span><span data-lang="es" class="lang-hidden">MÁQUINA DEL TIEMPO</span></a>
+            <a class="nav-link" href="../poetry/index.html"><span data-lang="en">POETRY</span><span data-lang="es" class="lang-hidden">POESÍA</span></a>
+            <button class="translate-btn" id="langToggle" onclick="toggleLanguage()">ES</button>
+        </nav>
+    </div>
+
+    <div class="hero">
+        <div class="hero-kicker" data-lang="en">MODULE · PERCEPTION SIMULATOR</div>
+        <div class="hero-kicker lang-hidden" data-lang="es">MÓDULO · SIMULADOR DE PERCEPCIÓN</div>
+        <div class="hero-h1">Agamott<span style="color:#00ff41;">OR</span></div>
+        <div class="amber-notice">
+            <strong data-lang="en">⚠ CONCEPTUAL DEVELOPMENT IN PROGRESS</strong>
+            <strong data-lang="es" class="lang-hidden">⚠ PROYECTO EN DESARROLLO CONCEPTUAL</strong>
+            <span data-lang="en">Thought simulator where perception does not measure the world, but collapses a field. Each domain executes its own perceptual collapse.</span>
+            <span data-lang="es" class="lang-hidden">Simulador de pensamiento donde la percepción no mide el mundo, sino que colapsa un campo. Cada dominio ejecuta su propio colapso perceptual.</span>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <div class="section-label" style="padding:0 0 0.5rem 0;" data-lang="en">// CONCEPTUAL EXECUTION DOMAINS </div>
+        <div class="section-label lang-hidden" style="padding:0 0 0.5rem 0;" data-lang="es">// DOMINIOS CONCEPTUALES DE EJECUCIÓN </div>
+        <div class="domain-grid" id="domain-grid"></div>
+        <div id="detail"></div>
+        <div class="quote-block" data-lang="en">"Imagine a sensor does not measure the world. Imagine it collapses a field of perception."</div>
+        <div class="quote-block lang-hidden" data-lang="es">"Imagina que un sensor no mide el mundo. Imagina que colapsa un campo de percepción."</div>
+        <div class="note-block">
+            <strong data-lang="en">τ · collapse threshold</strong><span data-lang="en"> | Perception emerges when |Ψ| crosses the line.</span>
+            <strong data-lang="es" class="lang-hidden">τ · umbral de colapso</strong><span data-lang="es" class="lang-hidden"> | La percepción emerge cuando |Ψ| supera la línea.</span>
+        </div>
+
+        <section class="postcollapse-section">
+            <div class="postcollapse-label" data-lang="en">// POST-COLLAPSE STATE</div>
+            <div class="postcollapse-label lang-hidden" data-lang="es">// ESTADO POST-COLAPSO</div>
+            <div class="postcollapse-opening" data-lang="en">Perception does not record a pre-existing reality: it <em>constitutes</em> it. If that is true, then the post-collapse state cannot be zero. It must be <em>something</em>. What follows are the architectural consequences of taking that axiom seriously.</div>
+            <div class="postcollapse-opening lang-hidden" data-lang="es">La percepción no registra una realidad preexistente: <em>la constituye</em>. Si eso es cierto, entonces el estado post-colapso no puede ser cero. Tiene que ser <em>algo</em>. Lo que sigue son las consecuencias arquitectónicas de tomar ese axioma en serio.</div>
+
+            <div class="pc-grid">
+                <div class="pc-card" data-index="01">
+                    <div class="pc-status conceptual" data-lang="en">Conceptual</div>
+                    <div class="pc-status conceptual lang-hidden" data-lang="es">Conceptual</div>
+                    <div class="pc-card-tag" data-lang="en">Systemic property · all domains</div>
+                    <div class="pc-card-tag lang-hidden" data-lang="es">Propiedad sistémica · todos los dominios</div>
+                    <div class="pc-card-title" data-lang="en">Field Memory · ψ<sub>R</sub></div>
+                    <div class="pc-card-title lang-hidden" data-lang="es">Memoria del Campo · ψ<sub>R</sub></div>
+                    <div class="pc-card-desc" data-lang="en">The wave function does not return to zero after collapse. It leaves a residue ψ<sub>R</sub>(t) that lowers threshold τ for subsequent collapses. The field <em>remembers having perceived</em> — and that memory makes it progressively more sensitive. Without containment, the drift drives τ to zero: the system collapses always, which is a form of blindness by excess. The Saturation card proposes that braking mechanism.</div>
+                    <div class="pc-card-desc lang-hidden" data-lang="es">La función de onda no regresa a cero después del colapso. Deja un residuo ψ<sub>R</sub>(t) que reduce el umbral τ para los colapsos subsecuentes. El campo <em>recuerda haber percibido</em> — y esa memoria lo hace progresivamente más sensible. Sin contención, la deriva lleva τ a cero: el sistema colapsa siempre, que es una forma de ceguera por exceso. La card de Saturación propone ese mecanismo de freno.</div>
+                    <div class="pc-card-formula">τ<sub>n+1</sub> = τ<sub>n</sub> − α·ψ<sub>R</sub>(t)</div>
+                </div>
+
+                <div class="pc-card" data-index="02">
+                    <div class="pc-status" data-lang="en">v2 · Detail panel</div>
+                    <div class="pc-status lang-hidden" data-lang="es">v2 · Panel de detalle</div>
+                    <div class="pc-card-tag" data-lang="en">Second phase · N consecutive collapses</div>
+                    <div class="pc-card-tag lang-hidden" data-lang="es">Segunda fase · N colapsos consecutivos</div>
+                    <div class="pc-card-title" data-lang="en">Saturation Activation</div>
+                    <div class="pc-card-title lang-hidden" data-lang="es">Activación por Saturación</div>
+                    <div class="pc-card-desc" data-lang="en">When a domain accumulates N consecutive collapses without returning below τ, the detail panel enters a second visual phase: the signal changes color, the threshold rises, and a sustained perception event is recorded. This phase acts as a <em>containment mechanism</em> for the Field Memory from card 01: saturation halts the threshold drift toward zero, forcing a reset or reconfiguration of τ.</div>
+                    <div class="pc-card-desc lang-hidden" data-lang="es">Cuando un dominio acumula N colapsos consecutivos sin regresar por debajo de τ, el panel de detalle entra en una segunda fase visual: la señal cambia de color, el umbral se eleva, y se registra un evento de percepción sostenida. Esta fase actúa como <em>mecanismo de contención</em> para la Memoria del Campo de la card 01: la saturación frena la deriva del umbral hacia cero, forzando un reseteo o una reconfiguración del τ.</div>
+                    <div class="pc-card-formula">N<sub>collapse</sub> ≥ θ → fase II</div>
+                </div>
+
+                <div class="pc-card" data-index="03">
+                    <div class="pc-status" data-lang="en">Research</div>
+                    <div class="pc-status lang-hidden" data-lang="es">Investigación</div>
+                    <div class="pc-card-tag" data-lang="en">Cross-domain coupling</div>
+                    <div class="pc-card-tag lang-hidden" data-lang="es">Acoplamiento entre dominios</div>
+                    <div class="pc-card-title" data-lang="en">Cross-Collapse</div>
+                    <div class="pc-card-title lang-hidden" data-lang="es">Colapso Cruzado</div>
+                    <div class="pc-card-desc" data-lang="en">Cross-domain coupling is not a simulation feature. It is how the PTU models distributed perception: no field collapses in isolation. If perception constitutes reality, then the reality of one domain modifies the conditions of possibility for the next.</div>
+                    <div class="pc-card-desc lang-hidden" data-lang="es">El acoplamiento entre dominios no es una feature de simulación. Es la forma en que el PTU modela la percepción distribuida: ningún campo colapsa en aislamiento. Si la percepción constituye realidad, entonces la realidad de un dominio modifica las condiciones de posibilidad del siguiente.</div>
+                    <div class="pc-card-formula">τ<sub>B</sub> ← f(Ψ<sub>A</sub>, τ<sub>B</sub>)</div>
+                </div>
+
+                <div class="pc-card" data-index="04">
+                    <div class="pc-status conceptual" data-lang="en">Conceptual · PTU</div>
+                    <div class="pc-status conceptual lang-hidden" data-lang="es">Conceptual · PTU</div>
+                    <div class="pc-card-tag" data-lang="en">ICP integration</div>
+                    <div class="pc-card-tag lang-hidden" data-lang="es">Integración con ICP</div>
+                    <div class="pc-card-title" data-lang="en">Perceptual Density Log</div>
+                    <div class="pc-card-title lang-hidden" data-lang="es">Registro de Densidad Perceptual</div>
+                    <div class="pc-card-desc" data-lang="en">Accumulated perceptual density is not an activity metric — it is the imprint time leaves when compressed by perceptual intensity. ICP<sub>T</sub> does not measure how much occurred: it measures how much was perceived, which within the PTU is the same thing.</div>
+                    <div class="pc-card-desc lang-hidden" data-lang="es">La densidad perceptual acumulada no es una métrica de actividad — es la huella que el tiempo deja cuando es comprimido por intensidad perceptual. ICP<sub>T</sub> no mide cuánto ocurrió: mide cuánto fue percibido, que dentro del PTU es la misma cosa.</div>
+                    <div class="pc-card-formula">ICP<sub>T</sub> = ∫ ρ<sub>Ψ</sub>(t) dt</div>
+                </div>
+            </div>
+
+            <div class="postcollapse-closing">
+                <strong data-lang="en">AGAMOTTOR v2</strong>
+                <strong data-lang="es" class="lang-hidden">AGAMOTTOR v2</strong>
+                <span data-lang="en"> — Collapse is not the end. It is the point where signal becomes structure. What follows is not silence: it is the modified field upon which the next collapse will operate. Determining the precise nature of that field — whether it has memory, whether it couples, whether it accumulates density — is the problem this module leaves open for its next iteration.</span>
+                <span data-lang="es" class="lang-hidden"> — El colapso no es el final. Es el punto donde la señal se convierte en estructura. Lo que sigue no es silencio: es el campo modificado sobre el cual operará el próximo colapso. Determinar la naturaleza precisa de ese campo — si tiene memoria, si se acopla, si acumula densidad — es el problema que este módulo deja abierto para su próxima iteración.</span>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-modules">
+            <a href="../percepware/index.html">PercepWare</a><span>|</span>
+            <a href="../pci/index.html">PCI</a><span>|</span>
+            <a href="../aei/index.html">AEI</a><span>|</span>
+            <a href="../neohaki/index.html">NEOHAKI</a><span>|</span>
+            <a href="../pram/index.html">PRAM</a><span>|</span>
+            <a href="../licence/index.html">LICENSE</a><span>|</span>
+            <a href="../bitneko/index.html">BITNEKO</a><span>|</span>
+            <a href="../space/index.html">SPACE</a><span>|</span>
+            <a href="index.html" class="footer-current">AGAMOTTOR</a><span>|</span>
+            <a href="../little-prince/index.html">LITTLE PRINCE</a><span>|</span>
+            <a href="../ptu/index.html">PTU</a><span>|</span>
+            <a href="../time-machine/index.html">TIME MACHINE</a><span>|</span>
+            <a href="../poetry/index.html">POETRY</a>
+        </div>
+        <div class="footer-social"><a href="https://orcid.org/0009-0002-3432-1710">ORCID</a> <span>/</span> <a href="https://github.com/PERCEPTEMPLE">GITHUB</a> <span>/</span> <a href="https://x.com/panperceptual">X</a></div>
+        <div class="footer-bottom"><span data-lang="en">DEPOSITED IN THE INTELLECTUAL PROPERTY REGISTRY · EL SALVADOR · DANY D. RUIZ</span><span data-lang="es" class="lang-hidden">DEPOSITADO EN EL REGISTRO DE LA PROPIEDAD INTELECTUAL · EL SALVADOR · DANY D. RUIZ</span><br><span data-lang="en">Before They See Us, We Already Are</span><span data-lang="es" class="lang-hidden">Antes de que nos vean, ya somos</span></div>
+    </footer>
+
+    <script>
+        function toggleLanguage() {
+            var html    = document.documentElement;
+            var current = html.lang || 'en';
+            var next    = current === 'en' ? 'es' : 'en';
+            var hide    = next === 'en' ? 'es' : 'en';
+            html.lang = next;
+            document.querySelectorAll('[data-lang="' + next + '"]')
+                .forEach(function(el) { el.classList.remove('lang-hidden'); });
+            document.querySelectorAll('[data-lang="' + hide + '"]')
+                .forEach(function(el) { el.classList.add('lang-hidden'); });
+            document.getElementById('langToggle').textContent =
+                next === 'en' ? 'ES' : 'EN';
+            localStorage.setItem('perceptemple-lang', next);
+            refreshDomainGridLanguage();
+            if (selected && document.getElementById('detail')?.classList.contains('show')) {
+                refreshDetail(selected);
+            }
+        }
+        (function() {
+            var saved = localStorage.getItem('perceptemple-lang');
+            if (saved && saved === 'es') { toggleLanguage(); }
+        })();
+        
+        const domains = [
+            {id:'proximity',name:'Proximidad',nameEn:'Proximity',sub:'Campo cercano',subEn:'Near field',omega:2*Math.PI*5,tau:0.28,color:'#00ff41',icon:'ti-radar-2',
+             desc:'Un campo de distancia oscila. La presencia se <em>percibe</em> cuando la amplitud cruza el umbral.',
+             descEn:'A distance field oscillates. Presence is <em>perceived</em> when amplitude crosses threshold.',
+             amp:t=>Math.max(0,Math.min(1,0.45+0.40*Math.sin(0.7*t)+0.12*Math.sin(3.1*t))),
+             note:null},
+            {id:'orbital',name:'Orbital',nameEn:'Orbital',sub:'Tránsito planetario',subEn:'Planetary transit',omega:2*Math.PI*0.9,tau:0.25,color:'#39ff14',icon:'ti-planet',
+             desc:'El tránsito no se detecta: <em>colapsa</em> cuando la señal supera el ruido de fondo.',
+             descEn:'The transit <em>collapses</em> when signal exceeds background noise.',
+             amp:t=>Math.max(0,Math.min(1,0.55+0.42*Math.sin(0.5*t))),
+             note:null},
+            {id:'neural',name:'Neural',nameEn:'Neural',sub:'Potencial evocado',subEn:'Evoked potential',omega:2*Math.PI*12,tau:0.40,color:'#0aff5e',icon:'ti-activity',
+             desc:'El campo oscilatorio <em>colapsa</em> en un potencial evocado.',
+             descEn:'The oscillatory field <em>collapses</em> into an evoked potential.',
+             amp:t=>Math.max(0,Math.min(1,0.38+0.32*Math.sin(3.2*t)+0.18*Math.sin(11.3*t+0.7))),
+             note:null},
+            {id:'seismic',name:'Sísmico',nameEn:'Seismic',sub:'Aceleración telúrica',subEn:'Telluric acceleration',omega:2*Math.PI*2,tau:0.35,color:'#ffb200',icon:'ti-wave-sine',
+             desc:'Cuando amplitud cruza τ, el sistema <em>sabe</em> que algo ocurrió.',
+             descEn:'When amplitude crosses τ, the system <em>knows</em> something happened.',
+             amp:t=>Math.max(0,Math.min(1,0.06+0.78*Math.max(0,Math.sin(t*0.25))*Math.abs(Math.sin(t*6.7)))),
+             note:null},
+            {id:'radio',name:'Radio',nameEn:'Radio',sub:'Espectro anómalo',subEn:'Anomalous spectrum',omega:2*Math.PI*1.5,tau:0.20,color:'#ffcc00',icon:'ti-antenna',
+             desc:'Potencia espectral como amplitud. Una anomalía emerge del ruido porque el umbral τ es bajo.',
+             descEn:'Spectral power as amplitude. An anomaly emerges from noise because threshold τ is low.',
+             amp:t=>Math.max(0,Math.min(1,0.03+0.80*Math.max(0,Math.sin(t*0.12))*Math.max(0,Math.sin(t*1.9)))),
+             note:'El espectro anómalo es perfecto para el concepto de colapso: una señal emerge del ruido cuando supera τ. Es un dominio clásico de detección.'},
+            {id:'market',name:'Mercado',nameEn:'Market',sub:'Series de precios',subEn:'Price series',omega:2*Math.PI*3,tau:0.30,color:'#ffb200',icon:'ti-chart-line',
+             desc:'Una subida de volatilidad cruza τ, el sistema colapsa en un nuevo régimen.',
+             descEn:'Volatility crosses τ, system collapses into new regime.',
+             amp:t=>Math.max(0,Math.min(1,0.35+0.22*Math.sin(t*1.1)+0.15*Math.sin(t*4.7)+0.1*Math.sin(t*2.3+0.5))),
+             note:'La volatilidad financiera es un fenómeno real donde el "colapso perceptual" (un trader que decide comprar/vender) ocurre cuando la señal cruza un umbral. Es osado incluir finanzas, y eso lo hace interesante.'},
+            {id:'thermal',name:'Térmico',nameEn:'Thermal',sub:'Radiación de cuerpo negro',subEn:'Black body radiation',omega:2*Math.PI*0.7,tau:0.32,color:'#ff6600',icon:'ti-temperature',
+             desc:'Un objeto caliente irradia. El sensor no ve grados, colapsa cuando la amplitud térmica cruza el umbral.',
+             descEn:'A hot object radiates. The sensor collapses when thermal amplitude crosses threshold.',
+             amp:t=>Math.max(0,Math.min(1,0.10+0.75*Math.exp(-Math.pow((t%5-2.5),2)/2)+0.08*Math.sin(2.3*t))),
+             note:null},
+            {id:'magnetic',name:'Magnético',nameEn:'Magnetic',sub:'Anomalía ferro-magnética',subEn:'Ferro-magnetic anomaly',omega:2*Math.PI*1.2,tau:0.28,color:'#aa66ff',icon:'ti-magnet',
+             desc:'El campo magnético es constante. Una anomalía lo distorsiona. El sistema colapsa cuando la perturbación cruza τ.',
+             descEn:'Earth\'s magnetic field is constant. The system collapses when perturbation crosses τ.',
+             amp:t=>Math.max(0,Math.min(1,0.05+0.68*Math.exp(-Math.pow((t%7-3.5)/1.2,2))+0.06*Math.sin(4.1*t))),
+             note:null}
+        ];
+
+        function refreshDomainGridLanguage() {
+            const lang = document.documentElement.getAttribute('lang')||'en';
+            domains.forEach(d => {
+                const card = document.getElementById('card-'+d.id);
+                if(!card) return;
+                const nameEl = card.querySelector('.domain-card-name');
+                const subEl = card.querySelector('.domain-card-sub');
+                if(nameEl) nameEl.textContent = lang === 'en' ? d.nameEn : d.name;
+                if(subEl) subEl.textContent = lang === 'en' ? d.subEn : d.sub;
+            });
+        }
+
+        const userOmega = {}, userTau = {};
+        domains.forEach(d => { userOmega[d.id] = d.omega; userTau[d.id] = d.tau; });
+        let selected = null;
+        const t0 = Date.now();
+
+        function getPsi(t,d) { return d.amp(t) * Math.sin(userOmega[d.id] * t); }
+
+        function drawMini(cv,d,off) {
+            if(!cv) return;
+            const W = cv.clientWidth || 140, H = 38;
+            cv.width = W; cv.height = H;
+            const ctx = cv.getContext('2d');
+            ctx.clearRect(0,0,W,H);
+            const tau = userTau[d.id];
+            ctx.strokeStyle = '#0a5c1e'; ctx.lineWidth=0.7; ctx.setLineDash([2,3]);
+            ctx.beginPath(); ctx.moveTo(0, H/2 - tau*(H/2-3)); ctx.lineTo(W, H/2 - tau*(H/2-3)); ctx.stroke();
+            ctx.beginPath(); ctx.moveTo(0, H/2 + tau*(H/2-3)); ctx.lineTo(W, H/2 + tau*(H/2-3)); ctx.stroke();
+            ctx.setLineDash([]);
+            ctx.beginPath(); ctx.strokeStyle = d.color; ctx.lineWidth=1.2;
+            for(let i=0;i<80;i++) {
+                const t = (i/18)+off*0.5;
+                const P = getPsi(t,d);
+                const x = (i/80)*W, y = H/2 - P*(H/2-3);
+                i===0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+            }
+            ctx.stroke();
+        }
+
+        function drawDetailCanvas(cv,d,off) {
+            if(!cv) return;
+            const W = cv.clientWidth || 600, H = 80;
+            cv.width = W; cv.height = H;
+            const ctx = cv.getContext('2d');
+            ctx.clearRect(0,0,W,H);
+            const tau = userTau[d.id];
+            ctx.strokeStyle='#0a5c1e'; ctx.lineWidth=0.6;
+            ctx.beginPath(); ctx.moveTo(0,H/2); ctx.lineTo(W,H/2); ctx.stroke();
+            ctx.strokeStyle='#ffb200'; ctx.setLineDash([3,4]);
+            ctx.beginPath(); ctx.moveTo(0, H/2 - tau*(H/2-5)); ctx.lineTo(W, H/2 - tau*(H/2-5)); ctx.stroke();
+            ctx.beginPath(); ctx.moveTo(0, H/2 + tau*(H/2-5)); ctx.lineTo(W, H/2 + tau*(H/2-5)); ctx.stroke();
+            ctx.setLineDash([]);
+            ctx.beginPath(); ctx.strokeStyle = d.color; ctx.lineWidth=1.4;
+            for(let i=0;i<180;i++) {
+                const t = (i/22)+off*0.4;
+                const P = getPsi(t,d);
+                const x = (i/180)*W, y = H/2 - P*(H/2-5);
+                i===0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+            }
+            ctx.stroke();
+            ctx.fillStyle = d.color;
+            for(let i=0;i<180;i++) {
+                const t = (i/22)+off*0.4;
+                if(Math.abs(getPsi(t,d)) > userTau[d.id]) {
+                    const x = (i/180)*W;
+                    ctx.beginPath(); ctx.arc(x, H/2, 2, 0, Math.PI*2); ctx.fill();
+                }
+            }
+        }
+
+        function refreshDetail(d) {
+            if(!d) return;
+            const lang = document.documentElement.getAttribute('lang')||'en';
+            const desc = (lang==='en' && d.descEn) ? d.descEn : d.desc;
+            const detailDiv = document.getElementById('detail');
+            if(detailDiv && detailDiv.querySelector('.detail-desc')) {
+                detailDiv.querySelector('.detail-desc').innerHTML = desc;
+                if(detailDiv.querySelector('.detail-close')) detailDiv.querySelector('.detail-close').textContent = (lang==='en'?'close':'cerrar');
+                if(detailDiv.querySelector('.detail-title')) detailDiv.querySelector('.detail-title').innerHTML = (lang==='en' ? d.nameEn : d.name).toUpperCase() + (lang==='en'?' // CONCEPTUAL DOMAIN':' // DOMINIO CONCEPTUAL');
+                const labels = detailDiv.querySelectorAll('.param-label');
+                if(labels[0]) labels[0].innerHTML = (lang==='en'?'ω · perceptual frequency':'ω · frecuencia perceptual');
+                if(labels[1]) labels[1].innerHTML = (lang==='en'?'τ · collapse threshold':'τ · umbral de colapso');
+            }
+        }
+
+        window.selectDomain = function(id) {
+            domains.forEach(d => { const card = document.getElementById('card-'+d.id); if(card) card.classList.remove('selected'); });
+            const d = domains.find(x=>x.id===id);
+            const card = document.getElementById('card-'+id);
+            if(card) card.classList.add('selected');
+            selected = d;
+            const lang = document.documentElement.getAttribute('lang')||'en';
+            const desc = (lang==='en' && d.descEn) ? d.descEn : d.desc;
+            const domainName = lang==='en' ? d.nameEn : d.name;
+            const detail = document.getElementById('detail');
+            detail.classList.add('show');
+            let conceptualHtml = '';
+            if (d.note && lang === 'es') conceptualHtml = `<div class="conceptual-note"><strong>▌ NOTA CONCEPTUAL</strong><br>${d.note}</div>`;
+            if (d.note && lang === 'en') {
+                let enNote = '';
+                if (d.id === 'radio') enNote = 'The anomalous spectrum is perfect for the collapse concept: a signal emerges from noise when it exceeds τ. A classic detection domain.';
+                if (d.id === 'market') enNote = 'Financial volatility is a real phenomenon where "perceptual collapse" (a trader deciding to buy/sell) occurs when the signal crosses a threshold. Including finance is bold, and that makes it interesting.';
+                conceptualHtml = `<div class="conceptual-note"><strong>▌ CONCEPTUAL NOTE</strong><br>${enNote}</div>`;
+            }
+            detail.innerHTML = `<div class="detail-header"><div class="detail-title">${domainName.toUpperCase()}${lang==='en'?' // CONCEPTUAL DOMAIN':' // DOMINIO CONCEPTUAL'}</div><button class="detail-close" onclick="document.getElementById('detail').classList.remove('show');selected=null;">${lang==='en'?'close':'cerrar'}</button></div>
+                <div class="detail-desc">${desc}</div>
+                ${conceptualHtml}
+                <div class="detail-params"><div class="param-group"><div class="param-label">${lang==='en'?'ω · perceptual frequency':'ω · frecuencia perceptual'}</div><div class="param-row"><input type="range" id="sl-omega" min="0.5" max="20" step="0.5" value="${(userOmega[d.id]/(2*Math.PI)).toFixed(1)}"><span class="param-val" id="omega-val">${(userOmega[d.id]/(2*Math.PI)).toFixed(1)} Hz</span></div></div><div class="param-group"><div class="param-label">${lang==='en'?'τ · collapse threshold':'τ · umbral de colapso'}</div><div class="param-row"><input type="range" id="sl-tau" min="5" max="85" step="1" value="${Math.round(userTau[d.id]*100)}"><span class="param-val" id="tau-val">${userTau[d.id].toFixed(2)}</span></div></div></div>
+                <div class="pipeline">
+                    <div class="pipe-step">
+                        <span data-lang="en">input</span>
+                        <span data-lang="es" class="lang-hidden">entrada</span>
+                        <span data-lang="en" style="display:block;font-size:9px;color:var(--amber);text-transform:uppercase;">signal</span>
+                        <span data-lang="es" class="lang-hidden" style="display:block;font-size:9px;color:var(--amber);text-transform:uppercase;">señal</span>
+                    </div>
+                    <span class="pipe-arrow">→</span>
+                    <div class="pipe-step">
+                        <span data-lang="en">amplitude</span>
+                        <span data-lang="es" class="lang-hidden">amplitud</span>
+                        <span style="display:block;font-size:9px;color:var(--amber);text-transform:uppercase;">A(t)∈[0,1]</span>
+                    </div>
+                    <span class="pipe-arrow">→</span>
+                    <div class="pipe-step" style="border-color:#0a5c1e;">
+                        <span style="display:block;font-size:9px;color:var(--amber);text-transform:uppercase;">pwf</span>
+                        <span>Ψ=A·sin(ωt)</span>
+                    </div>
+                    <span class="pipe-arrow">→</span>
+                    <div class="pipe-step">
+                        <span data-lang="en">collapse</span>
+                        <span data-lang="es" class="lang-hidden">colapso</span>
+                        <span style="display:block;font-size:9px;color:var(--amber);text-transform:uppercase;">|Ψ|>τ</span>
+                    </div>
+                </div>
+                <canvas class="detail-canvas" id="cv-detail" height="80"></canvas>
+                <div class="detail-legend"><span><span class="leg-line"></span> Ψ(t)</span><span><span class="leg-dash"></span> τ</span><span><span class="leg-dot"></span> ${lang==='en'?'collapse':'colapso'}</span></div>`;
+            const slOmega = document.getElementById('sl-omega');
+            const slTau = document.getElementById('sl-tau');
+            if(slOmega) slOmega.addEventListener('input',function(){ const hz=parseFloat(this.value); userOmega[d.id]=2*Math.PI*hz; document.getElementById('omega-val').innerText=hz.toFixed(1)+' Hz'; });
+            if(slTau) slTau.addEventListener('input',function(){ const tv=parseInt(this.value)/100; userTau[d.id]=tv; document.getElementById('tau-val').innerText=tv.toFixed(2); });
+        };
+
+        function init() {
+            const gridDiv = document.getElementById('domain-grid');
+            if(!gridDiv) return;
+            const lang = document.documentElement.getAttribute('lang')||'en';
+            domains.forEach(d => {
+                const card = document.createElement('div');
+                card.className = 'domain-card';
+                card.id = 'card-'+d.id;
+                card.innerHTML = `<div class="domain-card-header"><i class="ti ${d.icon} domain-card-icon"></i><div><div class="domain-card-name">${lang === 'en' ? d.nameEn : d.name}</div><div class="domain-card-sub">${lang === 'en' ? d.subEn : d.sub}</div></div></div><canvas id="cv-${d.id}" height="38"></canvas>`;
+                card.addEventListener('click', () => selectDomain(d.id));
+                gridDiv.appendChild(card);
+            });
+            selectDomain('proximity');
+            function animate() {
+                const off = (Date.now()-t0)/1000;
+                domains.forEach(d => { const cv = document.getElementById('cv-'+d.id); if(cv) drawMini(cv,d,off); });
+                if(selected && document.getElementById('cv-detail')) drawDetailCanvas(document.getElementById('cv-detail'),selected,off);
+                requestAnimationFrame(animate);
+            }
+            animate();
+        }
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
