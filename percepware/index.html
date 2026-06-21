@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PercepWare applies the Perceptual Wave Function (PWF) and Perceptual Complexity Index (PCI) as a perceptual layer before the operating system, filtering signals via the collapse threshold τ without training.">
+    <meta name="author" content="Dany D. Ruiz">
+    <meta name="last-modified" content="2026-06-07">
+    <meta name="keywords" content="PercepWare, Perceptual Wave Function, PWF, Perceptual Complexity Index, PCI, Perceptual Filter, PERCEPTEMPLE">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://perceptemple.art/percepware/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="PERCEPTEMPLE · PERCEPWARE">
+    <meta property="og:description" content="PercepWare applies the Perceptual Wave Function (PWF) and Perceptual Complexity Index (PCI) as a perceptual layer before the operating system, filtering signals via the collapse threshold τ without training.">
+    <meta property="og:url" content="https://perceptemple.art/percepware/">
+    <meta property="og:site_name" content="PERCEPTEMPLE">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_SV">
+    <meta property="og:image" content="https://perceptemple.art/preview.jpg">
+    <meta property="og:image:alt" content="PERCEPTEMPLE — PercepWare">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@panperceptual">
+    <meta name="twitter:creator" content="@panperceptual">
+    <meta name="twitter:title" content="PERCEPTEMPLE · PERCEPWARE">
+    <meta name="twitter:description" content="PercepWare applies the Perceptual Wave Function (PWF) and Perceptual Complexity Index (PCI) as a perceptual layer before the operating system, filtering signals via the collapse threshold τ without training.">
+    <meta name="twitter:image" content="https://perceptemple.art/preview.jpg">
+    
+    <title>PERCEPTEMPLE</title>
+    
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:      #020805;
+            --panel:   #020805;
+            --rule:    #0a5c1e;
+            --hi:      #00ff41;
+            --hi2:     #39ff14;
+            --amber:   #ffb200;
+            --amber2:  #ffcc00;
+            --txt:     rgba(0,255,65,0.75);
+            --txt2:    rgba(0,255,65,0.9);
+            --txt3:    rgba(0,255,65,0.35);
+            --white:   #39ff14;
+            --red:     #ff2020;
+
+            --fs-xs: clamp(0.65rem, 1.2vw, 0.75rem);
+            --fs-sm: clamp(0.75rem, 1.4vw, 0.85rem);
+            --fs-md: clamp(0.8rem,  1.6vw, 1rem);
+            --fs-lg: clamp(1rem,    2vw,   1.25rem);
+            --fs-xl: clamp(1.25rem, 3vw,   1.75rem);
+        }
+
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        .lang-hidden{display:none!important}
+        body{
+            background: var(--bg);
+            color: var(--txt2);
+            font-family: 'Share Tech Mono', monospace;
+            font-weight: 400;
+            font-size: var(--fs-sm);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeUp 0.4s ease both;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+        body::before{
+            content:'';position:fixed;inset:0;
+            background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.12) 3px,rgba(0,0,0,0.12) 6px);
+            pointer-events:none;z-index:9999;
+        }
+        body::after{
+            content:'';position:fixed;inset:0;
+            background-image:linear-gradient(rgba(0,255,65,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,65,0.02) 1px,transparent 1px);
+            background-size:80px 80px;pointer-events:none;z-index:9998;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        canvas {
+            max-width: 100%;
+        }
+
+        .bracket{position:fixed;color:rgba(0,255,65,0.12);font-family:'Orbitron',sans-serif;font-size:var(--fs-md);pointer-events:none;z-index:10000}
+        .bracket-tl{top:16px;left:20px}.bracket-tr{top:16px;right:20px}
+        .bracket-bl{bottom:16px;left:20px}.bracket-br{bottom:16px;right:20px}
+        .pch-btn{display:inline-block;margin-top:6px;background:transparent;border:1px solid var(--red);color:var(--red);font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:2px;text-transform:uppercase;padding:4px 12px;text-decoration:none;border-radius:2px;font-weight:700;white-space:nowrap;transition:all 0.2s;box-shadow:0 0 8px rgba(255,32,32,0.1)}
+        .pch-btn:hover{background:rgba(255,32,32,0.08);box-shadow:0 0 15px rgba(255,32,32,0.25)}
+        .translate-btn{position:relative;top:auto;right:auto;background:transparent;border:1px solid var(--amber);color:var(--amber);font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:2px;text-transform:uppercase;padding:0.4rem 0.8rem;cursor:pointer;transition:all 0.2s;border-radius:2px;font-weight:600;white-space:nowrap;z-index:auto;flex-shrink:0}
+        .translate-btn:hover{background:rgba(255,178,0,0.1);color:var(--amber2);border-color:var(--amber2)}
+        .header{width:100%;max-width:75rem;display:flex;align-items:center;justify-content:space-between;padding:1.25rem 2rem;border-bottom:1px solid var(--rule);background:var(--bg);position:relative;z-index:100;flex-wrap:wrap;gap:0.75rem}
+        .logo-mark{font-family:'Orbitron',sans-serif;font-size:var(--fs-md);color:var(--hi);letter-spacing:2px;font-weight:700}
+        .header-nav{display:flex;gap:1.5rem;flex-wrap:wrap;align-items:center}
+        .nav-link{font-family:'Orbitron',sans-serif;font-size:var(--fs-sm);letter-spacing:2px;text-transform:uppercase;color:var(--txt3);text-decoration:none;transition:color 0.2s;font-weight:500;white-space:nowrap}
+        .nav-link:hover,.nav-link.highlight{color:var(--hi)}
+        .section-label{width:100%;max-width:60rem;padding:0.8125rem 2rem;border-bottom:1px solid var(--rule);font-family:'Orbitron',sans-serif;font-size:var(--fs-sm);letter-spacing:4px;text-transform:uppercase;color:var(--amber);display:flex;align-items:center;gap:0.875rem;font-weight:600}
+        .section-label::after{content:'';flex:1;height:1px;background:var(--rule);min-width:20px}
+        .hero{width:100%;max-width:60rem;padding:3rem 2rem 2.5rem;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:1fr 16rem;gap:2rem;align-items:start}
+        .hero-kicker{font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:4px;color:var(--txt3);text-transform:uppercase;margin-bottom:0.75rem;font-weight:500}
+        .hero-h1{font-family:'Orbitron',sans-serif;font-size:var(--fs-xl);line-height:0.95;color:var(--hi2);letter-spacing:1px;margin-bottom:1rem;font-weight:800;word-break:break-word}
+        .hero-h1 em{color:var(--hi);font-style:normal}
+        .hero-body{font-size:var(--fs-sm);color:var(--txt);line-height:1.7;max-width:60ch;word-break:break-word}
+        .hero-body strong{color:var(--txt2)}
+        .hero-right{display:flex;flex-direction:column;padding-top:0.25rem}
+        .kv{display:flex;justify-content:space-between;align-items:baseline;padding:0.5rem 0.75rem;border-bottom:1px solid var(--rule);gap:0.5rem}
+        .kv:first-child{border-top:1px solid var(--rule)}
+        .kv-key{font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:1.5px;text-transform:uppercase;color:var(--txt3);font-weight:500;white-space:nowrap}
+        .kv-val{font-family:'Orbitron',sans-serif;font-size:var(--fs-md);color:var(--hi);font-weight:700;text-align:right;word-break:break-word}
+        .kv-val.amber{color:var(--amber)}
+        .kv-val.small{font-size:var(--fs-sm);font-family:'Share Tech Mono',monospace;color:var(--txt2);font-weight:400}
+
+        .lab-container{width:100%;max-width:60rem;display:grid;grid-template-columns:1.3fr 1fr;gap:1.5rem;padding:1.5rem 2rem;border-bottom:none;background:var(--bg)}
+        .oscilloscope-module{background:var(--panel);border:2px dashed var(--rule);border-radius:4px;padding:1rem;box-shadow:0 0 20px rgba(0,255,65,0.15);position:relative;overflow:hidden;display:flex;flex-direction:column;gap:0.75rem}
+        .oscilloscope-module::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.18) 3px,rgba(0,0,0,0.18) 6px);pointer-events:none;z-index:10}
+        .visualizer-screen{position:relative;height:200px;border:1px solid var(--rule);background:#000100;border-radius:2px;overflow:hidden}
+        .visualizer-screen canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+        .screen-tag{position:absolute;top:8px;left:12px;font-size:var(--fs-xs);letter-spacing:2px;text-transform:uppercase;font-family:'Orbitron',sans-serif;color:rgba(0,255,65,0.45);z-index:5;background:rgba(1,6,3,0.9);padding:2px 8px;border:1px solid var(--rule);border-radius:2px;pointer-events:none}
+
+        .controls-panel{display:flex;flex-direction:column;gap:0.75rem;border:1px solid var(--rule);border-radius:4px;padding:1rem;background:rgba(10,92,30,0.04)}
+        .panel-block-title{font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:3px;color:var(--amber);text-transform:uppercase;margin-bottom:0.4rem;font-weight:700;border-bottom:1px solid rgba(10,92,30,0.4);padding-bottom:3px}
+        .control-group{display:flex;flex-direction:column;gap:0.25rem;margin-bottom:0.4rem}
+        .control-group:last-child{margin-bottom:0}
+        .control-label{font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);color:var(--txt);display:flex;justify-content:space-between;font-weight:600;letter-spacing:1px}
+        .param-val{color:var(--hi);font-family:'Share Tech Mono',monospace;font-size:var(--fs-xs)}
+        .param-val.amber{color:var(--amber)}
+        input[type="range"]{width:100%;accent-color:var(--hi2);cursor:pointer;background:rgba(10,92,30,0.4);height:4px;border-radius:2px}
+        .presets-deck{display:flex;gap:0.4rem;margin-top:0.25rem}
+        .preset-chip{flex:1;text-align:center;font-size:var(--fs-xs);font-family:'Orbitron',sans-serif;border:1px solid rgba(10,92,30,0.4);padding:4px 2px;border-radius:2px;color:var(--txt3);cursor:pointer;transition:all 0.2s;text-transform:uppercase;background:transparent}
+        .preset-chip:hover,.preset-chip.active{border-color:var(--amber);color:var(--amber);background:rgba(255,178,0,0.05)}
+        .btn-deck{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5rem;margin-top:0.25rem}
+        .btn-sm{background:transparent;border:1px solid var(--rule);color:var(--txt2);font-family:'Share Tech Mono',monospace;font-size:var(--fs-xs);letter-spacing:1.5px;text-transform:uppercase;padding:6px 6px;cursor:pointer;transition:all 0.2s;text-align:center;border-radius:2px;font-weight:bold}
+        .btn-sm:hover{border-color:var(--hi);color:var(--hi);background:rgba(0,255,65,0.04)}
+        .btn-sm.warning{border-color:var(--amber);color:var(--amber)}
+        .btn-sm.warning:hover{background:rgba(255,178,0,0.06);border-color:var(--amber2);color:var(--amber2)}
+        .btn-sm.active{border-color:var(--hi);color:var(--hi);background:rgba(0,255,65,0.04)}
+        .manual-box{background:rgba(10,92,30,0.06);border-left:2px solid var(--amber);padding:0.5rem 0.75rem;border-radius:0 2px 2px 0;margin-top:0.25rem}
+        .manual-box h4{font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);color:var(--amber);letter-spacing:1px;text-transform:uppercase;margin-bottom:2px}
+        .manual-box p{font-size:var(--fs-xs);color:var(--txt);line-height:1.4}
+
+        .deck-wrapper{width:100%;max-width:60rem;display:flex;flex-direction:column;border-bottom:1px solid var(--rule)}
+        .metrics-bar{width:100%;display:grid;grid-template-columns:repeat(6,1fr);gap:0;border-top:1px solid var(--rule)}
+        .met-block{text-align:center;padding:0.75rem 0.5rem;border-right:1px solid var(--rule);background:var(--bg)}
+        .met-block:last-child{border-right:none}
+        .met-value{font-family:'Orbitron',sans-serif;font-size:var(--fs-md);font-weight:700;color:var(--hi)}
+        .met-value.bad{color:var(--red)}
+        .met-value.amber{color:var(--amber)}
+        .met-label{font-size:var(--fs-xs);color:var(--txt3);letter-spacing:1.5px;text-transform:uppercase;margin-top:2px}
+
+        .results-panel{width:100%;max-width:60rem;background:rgba(0,255,65,0.01);border:1px solid var(--rule);border-top:none;padding:1rem 2rem;display:none}
+        .results-panel.visible{display:block}
+        .results-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0.75rem;margin-bottom:0.75rem}
+        .res-item{text-align:center}
+        .res-val{font-family:'Orbitron',sans-serif;font-size:var(--fs-md);font-weight:700;color:var(--hi)}
+        .res-val.good{color:var(--hi)}
+        .res-val.warn{color:var(--amber)}
+        .res-val.bad{color:var(--red)}
+        .res-lbl{font-size:var(--fs-xs);color:var(--txt3);letter-spacing:1.5px;text-transform:uppercase;margin-top:2px}
+        .res-table{width:100%;border-collapse:collapse;font-size:var(--fs-xs);margin-top:0.5rem}
+        .res-table th{text-align:left;padding:3px 6px;color:var(--amber);font-family:'Orbitron',sans-serif;font-weight:600;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--rule);font-size:var(--fs-xs)}
+        .res-table td{padding:2px 6px;color:var(--txt);border-bottom:1px solid rgba(10,92,30,0.3)}
+        .res-table .highlight-row{background:rgba(0,255,65,0.02)}
+
+        .content-section{width:100%;max-width:60rem;padding:3rem 2rem;border-bottom:1px solid var(--rule)}
+        .content-section h2{font-family:'Orbitron',sans-serif;font-size:var(--fs-lg);color:var(--hi2);margin-bottom:0.625rem;font-weight:700;letter-spacing:1px;word-break:break-word}
+        .content-section h3{font-family:'Orbitron',sans-serif;font-size:var(--fs-md);color:var(--hi);margin-top:1.5rem;margin-bottom:0.5rem;letter-spacing:1px;font-weight:600;word-break:break-word}
+        .content-section p{font-family:'Share Tech Mono',monospace;font-size:var(--fs-sm);color:var(--txt);line-height:1.9;margin-bottom:0.75rem;max-width:70ch;word-break:break-word}
+        .content-section p strong{color:var(--txt2)}
+        .content-section ul{list-style:none;padding-left:0;margin-bottom:1rem}
+        .content-section ul li{font-family:'Share Tech Mono',monospace;font-size:var(--fs-sm);color:var(--txt);line-height:1.8;padding-left:0.875rem;position:relative;max-width:70ch;word-break:break-word}
+        .content-section ul li::before{content:'>';position:absolute;left:0;color:var(--hi);font-weight:bold}
+        .table-wrapper{width:100%;overflow-x:auto;margin:0.75rem 0 1.125rem;-webkit-overflow-scrolling:touch}
+        .pw-table{width:100%;border-collapse:collapse;font-family:'Share Tech Mono',monospace;font-size:var(--fs-sm)}
+        .pw-table th{text-align:left;padding:0.5rem 0.625rem;background:var(--bg);color:var(--amber);font-family:'Orbitron',sans-serif;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;border-bottom:1px solid var(--rule);font-size:var(--fs-xs)}
+        .pw-table td{padding:0.5rem 0.625rem;color:var(--txt);border-bottom:1px solid var(--rule);line-height:1.5;vertical-align:top}
+        .pw-table tr:last-child td{border-bottom:none}
+        .pw-table .dim{color:var(--txt2);font-weight:600}
+        .note-block{padding:0.75rem 1rem;background:rgba(255,178,0,0.04);border-left:2px solid var(--amber);font-family:'Rajdhani',sans-serif;font-size:var(--fs-sm);color:var(--amber2);line-height:1.7;margin:0.75rem 0;border-radius:0 2px 2px 0;font-weight:500;word-break:break-word}
+        .note-block strong{color:var(--amber);font-family:'Orbitron',sans-serif;font-weight:600}
+        .disclaimer-block{padding:0.75rem 1rem;background:rgba(255,32,32,0.03);border-left:2px solid var(--red);font-family:'Rajdhani',sans-serif;font-size:var(--fs-sm);color:var(--red);line-height:1.7;margin:0.75rem 0;border-radius:0 2px 2px 0;font-weight:500;word-break:break-word}
+        a{color:var(--hi);text-decoration:none;transition:color 0.2s}
+        a:hover{color:var(--hi2)}
+        .footer{width:100%;max-width:60rem;padding:1.625rem 2rem;border-top:1px solid var(--rule);position:relative;z-index:50}
+        .footer-modules{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;margin-bottom:0.875rem}
+        .footer-modules a{font-family:'Orbitron',sans-serif;font-size:var(--fs-sm);letter-spacing:2px;color:var(--txt3);text-decoration:none;transition:color 0.2s;font-weight:500;white-space:nowrap;text-transform:uppercase}
+        .footer-modules a:hover,.footer-modules a.footer-current{color:var(--hi)}
+        .footer-modules span{color:var(--rule);font-family:'Orbitron',sans-serif;font-size:var(--fs-sm)}
+        .footer-social{text-align:center;margin-bottom:0.875rem;font-family:'Share Tech Mono',monospace;font-size:var(--fs-sm);color:var(--amber)}
+        .footer-social a{color:var(--amber);text-decoration:none;transition:color 0.2s}
+        .footer-social a:hover{color:var(--hi)}
+        .footer-social span{color:var(--rule)}
+        .footer-bottom{text-align:center;font-family:'Rajdhani',sans-serif;font-size:var(--fs-sm);color:rgba(0,255,65,0.25);line-height:1.8;letter-spacing:1px;font-weight:500}
+        @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+        @media (max-width: 1024px) {
+            .header { gap: 0.75rem; }
+            .hero { gap: 1.5rem; }
+            .nav-link { font-size: var(--fs-xs); }
+            .section-label { font-size: var(--fs-xs); }
+            .footer-modules a { font-size: var(--fs-xs); }
+            .footer-social { font-size: var(--fs-xs); }
+            .footer-bottom { font-size: var(--fs-xs); }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 1rem 1.5rem;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .header-nav {
+                width: 100%;
+                gap: 1rem;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 4px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+            .header-nav::-webkit-scrollbar { display: none; }
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 2.5rem 1.5rem 2.25rem;
+                gap: 1.5rem;
+            }
+            .content-section { padding: 2rem 1.5rem; }
+            .section-label { padding: 0.8125rem 1.5rem; }
+            .footer { padding: 1.25rem 1.5rem; }
+            .hero-actions { flex-direction: column; }
+            .btn-primary,
+            .btn-secondary {
+                text-align: center;
+                width: 100%;
+            }
+            [class*="grid"],
+            [class*="cols"],
+            [class*="columns"] {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header          { padding: 0.75rem 1rem; }
+            .hero            { padding: 1.75rem 1rem 1.5rem; }
+            .content-section { padding: 1.5rem 1rem; }
+            .footer          { padding: 1rem; }
+            .footer-modules  { gap: 0.75rem; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0002-3432-1710",
+      "name": "Dany D. Ruiz",
+      "alternateName": "panperceptual",
+      "jobTitle": "Anartist · Independent Researcher",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "url": "https://perceptemple.art",
+      "sameAs": [
+        "https://orcid.org/0009-0002-3432-1710",
+        "https://x.com/panperceptual",
+        "https://github.com/PERCEPTEMPLE",
+        "https://doi.org/10.17605/OSF.IO/FVCAX",
+        "https://doi.org/10.5281/zenodo.17683631",
+        "https://doi.org/10.2139/ssrn.5794102"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["SoftwareApplication", "WebApplication"],
+      "name": "PercepWare",
+      "description": "PercepWare applies the Perceptual Wave Function (PWF) and Perceptual Complexity Index (PCI) as a perceptual layer before the operating system, filtering signals via the collapse threshold τ without training.",
+      "datePublished": "2026-06-07",
+      "dateModified": "2026-06-07",
+      "applicationCategory": "ScientificApplication",
+      "operatingSystem": "Web",
+      "url": "https://perceptemple.art/percepware/",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "@id": "https://orcid.org/0009-0002-3432-1710",
+        "name": "Dany D. Ruiz"
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "license": "https://perceptemple.art/licence/"
+    }
+    </script>
+</head>
+<body>
+
+<span class="bracket bracket-tl">[</span><span class="bracket bracket-tr">]</span>
+<span class="bracket bracket-bl">[</span><span class="bracket bracket-br">]</span>
+
+<div class="header">
+    <div class="logo">
+        <span class="logo-mark" data-lang="en">PERCEPWARE</span>
+        <span class="logo-mark lang-hidden" data-lang="es">PERCEPWARE</span><br>
+        <a class="pch-btn" href="../index.html">
+            <span data-lang="en">HUMAN CONSCIOUSNESS TEST</span>
+            <span data-lang="es" class="lang-hidden">PRUEBA DE CONCIENCIA HUMANA</span>
+        </a>
+    </div>
+    <nav class="header-nav">
+        <a class="nav-link highlight" href="index.html"><span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span></a>
+        <a class="nav-link" href="../pci/index.html"><span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span></a>
+        <a class="nav-link" href="../aei/index.html"><span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span></a>
+        <a class="nav-link" href="../neohaki/index.html"><span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span></a>
+        <a class="nav-link" href="../pram/index.html"><span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span></a>
+        <a class="nav-link" href="../licence/index.html"><span data-lang="en">License</span><span data-lang="es" class="lang-hidden">Licencia</span></a>
+        <a class="nav-link" href="../bitneko/index.html"><span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span></a>
+        <a class="nav-link" href="../space/index.html"><span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span></a>
+        <a class="nav-link" href="../agamottor/index.html"><span data-lang="en">Agamottor</span><span data-lang="es" class="lang-hidden">Agamottor</span></a>
+        <a class="nav-link" href="../little-prince/index.html"><span data-lang="en">Little Prince</span><span data-lang="es" class="lang-hidden">Little Prince</span></a>
+        <a class="nav-link" href="../ptu/index.html"><span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span></a>
+        <a class="nav-link" href="../time-machine/index.html"><span data-lang="en">Time Machine</span><span data-lang="es" class="lang-hidden">Máquina del Tiempo</span></a>
+        <a class="nav-link" href="../poetry/index.html"><span data-lang="en">Poetry</span><span data-lang="es" class="lang-hidden">Poesía</span></a>
+        <button class="translate-btn" id="langToggle" onclick="toggleLanguage()">ES</button>
+    </nav>
+</div>
+
+<div class="hero">
+    <div>
+        <h1 class="hero-h1"><span data-lang="en">Perceptual Layer<br>Before the<br><em>Operating System</em></span><span data-lang="es" class="lang-hidden">Capa Perceptual<br>Anterior al<br><em>Sistema Operativo</em></span></h1>
+        <p class="hero-body" data-lang="en"><strong>PercepWare</strong> applies the <strong>Perceptual Wave Function (PWF)</strong> and a single parameter —<strong>τ</strong>— to decide which data crosses the significance threshold. No training. No neural networks. Just physics.</p>
+        <p class="hero-body lang-hidden" data-lang="es"><strong>PercepWare</strong> aplica la <strong>Función de Onda Perceptual (PWF)</strong> y un único parámetro —<strong>τ</strong>— para decidir qué datos cruzan el umbral de significancia. Sin entrenamiento. Sin redes neuronales. Solo física.</p>
+    </div>
+    <div class="hero-right">
+        <div class="kv"><span class="kv-key" data-lang="en">Validation</span><span class="kv-key lang-hidden" data-lang="es">Validación</span><span class="kv-val small" data-lang="en">TESS · WASP-18b</span><span class="kv-val small lang-hidden" data-lang="es">TESS · WASP-18b</span></div>
+        <div class="kv"><span class="kv-key" data-lang="en">Engine</span><span class="kv-key lang-hidden" data-lang="es">Motor</span><span class="kv-val amber" data-lang="en">Dynamic</span><span class="kv-val amber lang-hidden" data-lang="es">Dinámico</span></div>
+        <div class="kv"><span class="kv-key" data-lang="en">Algorithm</span><span class="kv-key lang-hidden" data-lang="es">Algoritmo</span><span class="kv-val" data-lang="en">PWF + PCI</span><span class="kv-val lang-hidden" data-lang="es">PWF + PCI</span></div>
+        <div class="kv"><span class="kv-key" data-lang="en">Parameters</span><span class="kv-key lang-hidden" data-lang="es">Parámetros</span><span class="kv-val amber" data-lang="en">τ, θₘ</span><span class="kv-val amber lang-hidden" data-lang="es">τ, θₘ</span></div>
+        <div class="kv"><span class="kv-key" data-lang="en">Next</span><span class="kv-key lang-hidden" data-lang="es">Próximo</span><span class="kv-val" style="color:var(--hi2);font-size:var(--fs-sm);" data-lang="en">MAST FITS L2</span><span class="kv-val lang-hidden" style="color:var(--hi2);font-size:var(--fs-sm);" data-lang="es">MAST FITS L2</span></div>
+    </div>
+</div>
+
+<div class="section-label" id="demo" data-lang="en">Laboratory · TESS · WASP-18b</div>
+<div class="section-label lang-hidden" data-lang="es">Laboratorio · TESS · WASP-18b</div>
+
+<div class="lab-container">
+    <div class="oscilloscope-module">
+        <div class="visualizer-screen">
+            <span class="screen-tag">CH1: <span data-lang="en">TESS PHOTOMETRY</span><span data-lang="es" class="lang-hidden">FOTOMETRÍA TESS</span></span>
+            <canvas id="osc-flux"></canvas>
+        </div>
+        <div class="visualizer-screen">
+            <span class="screen-tag">CH2: Φ(t) · <span data-lang="en">PERCEPTUAL COHERENCE</span><span data-lang="es" class="lang-hidden">COHERENCIA PERCEPTUAL</span></span>
+            <canvas id="osc-pci"></canvas>
+        </div>
+    </div>
+    <div class="controls-panel">
+        <div class="panel-block-title" data-lang="en">1. Environment Astrophysics</div>
+        <div class="panel-block-title lang-hidden" data-lang="es">1. Astrofísica del Entorno</div>
+        <div class="control-group">
+            <label class="control-label"><span data-lang="en">Transit Depth</span><span data-lang="es" class="lang-hidden">Profundidad de Tránsito</span><span class="param-val" id="val-depth">0.0101</span></label>
+            <input type="range" id="param-depth" min="0.0010" max="0.0250" step="0.0005" value="0.0101">
+        </div>
+        <div class="control-group">
+            <label class="control-label"><span data-lang="en">Background Noise (ppm)</span><span data-lang="es" class="lang-hidden">Ruido de Fondo (ppm)</span><span class="param-val" id="val-noise">200</span></label>
+            <input type="range" id="param-noise" min="30" max="700" step="10" value="200">
+        </div>
+
+        <div class="panel-block-title" style="margin-top:0.5rem;" data-lang="en">2. Perceptual Filter</div>
+        <div class="panel-block-title lang-hidden" style="margin-top:0.5rem;" data-lang="es">2. Filtro Perceptual</div>
+        <div class="control-group">
+            <label class="control-label"><span>τ · <span data-lang="en">Collapse Threshold</span><span data-lang="es" class="lang-hidden">Umbral de Colapso</span></span><span class="param-val amber" id="val-tau">0.15</span></label>
+            <input type="range" id="param-tau" min="0.02" max="0.50" step="0.01" value="0.15">
+        </div>
+        <div class="control-group">
+            <label class="control-label"><span>θₘ · <span data-lang="en">Session Minimum</span><span data-lang="es" class="lang-hidden">Mínimo de Sesión</span></span><span class="param-val amber" id="val-theta">0.06</span></label>
+            <input type="range" id="param-theta" min="0.01" max="0.30" step="0.01" value="0.06">
+        </div>
+
+        <div class="panel-block-title" style="margin-top:0.25rem;" data-lang="en">3. Experiments</div>
+        <div class="panel-block-title lang-hidden" style="margin-top:0.25rem;" data-lang="es">3. Experimentos</div>
+        <div class="presets-deck">
+            <div class="preset-chip active" id="preset-normal" onclick="window.setPreset('normal')"><span data-lang="en">Standard</span><span data-lang="es" class="lang-hidden">Estándar</span></div>
+            <div class="preset-chip" id="preset-ceguera" onclick="window.setPreset('ceguera')"><span data-lang="en">Blindness</span><span data-lang="es" class="lang-hidden">Ceguera</span></div>
+            <div class="preset-chip" id="preset-tormenta" onclick="window.setPreset('tormenta')"><span data-lang="en">Storm</span><span data-lang="es" class="lang-hidden">Tormenta</span></div>
+        </div>
+        <div class="manual-box">
+            <h4 id="manual-title" data-lang="en">Standard Experiment</h4>
+            <h4 id="manual-title-es" class="lang-hidden" data-lang="es">Experimento Estándar</h4>
+            <p id="manual-desc" data-lang="en">WASP-18b under nominal conditions. With τ=0.15 and θₘ=0.06, PercepWare detects the transit without false positives.</p>
+            <p id="manual-desc-es" class="lang-hidden" data-lang="es">WASP-18b bajo condiciones nominales. Con τ=0.15 y θₘ=0.06, PercepWare detecta el tránsito sin falsos positivos.</p>
+        </div>
+
+        <div class="btn-deck">
+            <button class="btn-sm warning" id="btn-flare" onclick="window.injectFlare()"><span data-lang="en">Flare</span><span data-lang="es" class="lang-hidden">Llamarada</span></button>
+            <button class="btn-sm" id="btn-reset" onclick="window.setPreset('normal')"><span data-lang="en">↺ Reset</span><span data-lang="es" class="lang-hidden">↺ Reset</span></button>
+            <button class="btn-sm" id="btn-results"><span data-lang="en">⊡ Data</span><span data-lang="es" class="lang-hidden">⊡ Datos</span></button>
+            <button class="btn-sm" id="btn-export" style="grid-column:span 2;"><span data-lang="en">⬇ Export CSV</span><span data-lang="es" class="lang-hidden">⬇ Exportar CSV</span></button>
+        </div>
+    </div>
+</div>
+
+<div class="deck-wrapper">
+    <div class="metrics-bar">
+        <div class="met-block"><div class="met-value" id="m-collapse">—</div><div class="met-label" data-lang="en">Collapses</div><div class="met-label lang-hidden" data-lang="es">Colapsos</div></div>
+        <div class="met-block"><div class="met-value" id="m-pci-max">—</div><div class="met-label">PCI max</div></div>
+        <div class="met-block"><div class="met-value amber" id="m-detect">—</div><div class="met-label" data-lang="en">Detection</div><div class="met-label lang-hidden" data-lang="es">Detección</div></div>
+        <div class="met-block"><div class="met-value" id="m-fp">—</div><div class="met-label">FP</div></div>
+        <div class="met-block"><div class="met-value" id="m-fn">—</div><div class="met-label">FN</div></div>
+        <div class="met-block"><div class="met-value" id="m-tp">—</div><div class="met-label">TP</div></div>
+    </div>
+</div>
+
+<div class="results-panel" id="results-panel">
+    <div class="results-grid" id="results-grid"></div>
+    <table class="res-table"><thead><tr><th data-lang="en">Window</th><th data-lang="es" class="lang-hidden">Ventana</th><th>PCI</th><th data-lang="en">Decision</th><th data-lang="es" class="lang-hidden">Decisión</th><th data-lang="en">Actual</th><th data-lang="es" class="lang-hidden">Real</th></tr></thead><tbody id="results-tbody"></tbody></table>
+</div>
+
+<div class="section-label" id="doc" data-lang="en">PercepWare · Definition</div>
+<div class="section-label lang-hidden" data-lang="es">PercepWare · Definición</div>
+
+<div class="content-section">
+    <h2 data-lang="en">The First Stratum that Decides What Deserves to be Real</h2>
+    <h2 data-lang="es" class="lang-hidden">El Primer Estrato que Decide qué Merece ser Real</h2>
+    <p data-lang="en">Current systems assume all data is relevant by default. <strong>There is no mechanism that asks "does this deserve to be perceived?"</strong> PercepWare is that mechanism.</p>
+    <p data-lang="es" class="lang-hidden">Los sistemas computacionales asumen que todo dato es relevante por defecto. <strong>No existe un mecanismo que pregunte "¿esto merece ser percibido?"</strong> PercepWare es ese mecanismo.</p>
+
+    <h3 data-lang="en">How It Works</h3>
+    <h3 data-lang="es" class="lang-hidden">Cómo Funciona</h3>
+    <div class="table-wrapper">
+        <table class="pw-table">
+            <thead><tr><th data-lang="en">Step</th><th data-lang="es" class="lang-hidden">Paso</th><th data-lang="en">Operation</th><th data-lang="es" class="lang-hidden">Operación</th></tr></thead>
+            <tbody>
+                <tr><td class="dim">1</td><td data-lang="en">Signal enters from sensor</td><td data-lang="es" class="lang-hidden">La señal entra del sensor</td></tr>
+                <tr><td class="dim">2</td><td data-lang="en">PWF: Φ(t) = √[(ds/dt)² + (ω·s)²] — ω from phenomenon physics</td><td data-lang="es" class="lang-hidden">PWF: Φ(t) = √[(ds/dt)² + (ω·s)²] — ω desde la física del fenómeno</td></tr>
+                <tr><td class="dim">3</td><td data-lang="en"><a href="../pci/index.html" style="color:var(--hi);">PCI</a> = Φ(t) / |s(t)| — measures perceptual coherence</td><td data-lang="es" class="lang-hidden"><a href="../pci/index.html" style="color:var(--hi);">PCI</a> = Φ(t) / |s(t)| — mide coherencia perceptual</td></tr>
+                <tr><td class="dim" style="color:var(--hi);">4</td><td style="color:var(--hi);" data-lang="en"><a href="../pci/index.html" style="color:var(--hi);">PCI</a> > <a href="../pci/index.html" style="color:var(--hi);">τ</a> → COLLAPSE & INTEGRATE. Else → SUPERPOSITION</td><td style="color:var(--hi);" data-lang="es" class="lang-hidden"><a href="../pci/index.html" style="color:var(--hi);">PCI</a> > <a href="../pci/index.html" style="color:var(--hi);">τ</a> → COLLAPSE & INTEGRATE. Si no → SUPERPOSITION</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="note-block" data-lang="en"><strong>Role in the <a href="../aei/index.html" style="color:var(--amber);">AEI</a>:</strong> PercepWare is the technical concretion of <strong>Layer A — Resonance Core</strong>. First step toward computers that curate their own perceptual experience.</div>
+    <div class="note-block lang-hidden" data-lang="es"><strong>Rol en la <a href="../aei/index.html" style="color:var(--amber);">AEI</a>:</strong> PercepWare es la concreción técnica de la <strong>Capa A — Núcleo de Resonancia</strong>. Es el primer paso hacia computadoras que curan su propia experiencia perceptual.</div>
+
+    <div class="disclaimer-block" data-lang="en"><strong>▸ Simulated data.</strong> Metrics come from simulation with realistic WASP-18b parameters. Next milestone —MAST FITS L2— will validate on authentic TESS light curves.</div>
+    <div class="disclaimer-block lang-hidden" data-lang="es"><strong>▸ Datos simulados.</strong> Las métricas provienen de simulación con parámetros realistas de WASP-18b. El próximo hito —MAST FITS L2— validará sobre curvas de luz auténticas del telescopio TESS.</div>
+</div>
+
+<div class="footer">
+    <div class="footer-modules">
+        <a href="index.html" class="footer-current"><span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span></a><span>|</span>
+        <a href="../pci/index.html"><span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span></a><span>|</span>
+        <a href="../aei/index.html"><span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span></a><span>|</span>
+        <a href="../neohaki/index.html"><span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span></a><span>|</span>
+        <a href="../pram/index.html"><span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span></a><span>|</span>
+        <a href="../licence/index.html"><span data-lang="en">License</span><span data-lang="es" class="lang-hidden">Licencia</span></a><span>|</span>
+        <a href="../bitneko/index.html"><span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span></a><span>|</span>
+        <a href="../space/index.html"><span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span></a><span>|</span>
+        <a href="../agamottor/index.html"><span data-lang="en">Agamottor</span><span data-lang="es" class="lang-hidden">Agamottor</span></a><span>|</span>
+        <a href="../little-prince/index.html"><span data-lang="en">Little Prince</span><span data-lang="es" class="lang-hidden">Little Prince</span></a><span>|</span>
+        <a href="../ptu/index.html"><span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span></a><span>|</span>
+        <a href="../time-machine/index.html"><span data-lang="en">Time Machine</span><span data-lang="es" class="lang-hidden">Máquina del Tiempo</span></a><span>|</span>
+        <a href="../poetry/index.html"><span data-lang="en">Poetry</span><span data-lang="es" class="lang-hidden">Poesía</span></a>
+    </div>
+    <div class="footer-social">
+        <a href="https://orcid.org/0009-0002-3432-1710" target="_blank" rel="noopener"><span data-lang="en">ORCID</span><span data-lang="es" class="lang-hidden">ORCID</span></a><span> / </span>
+        <a href="https://github.com/PERCEPTEMPLE" target="_blank" rel="noopener"><span data-lang="en">GITHUB</span><span data-lang="es" class="lang-hidden">GITHUB</span></a><span> / </span>
+        <a href="https://x.com/panperceptual" target="_blank" rel="noopener"><span data-lang="en">X</span><span data-lang="es" class="lang-hidden">X</span></a>
+    </div>
+    <div class="footer-bottom">
+        <span data-lang="en">DEPOSITED IN THE INTELLECTUAL PROPERTY REGISTRY · EL SALVADOR · DANY D. RUIZ</span>
+        <span data-lang="es" class="lang-hidden">DEPOSITADO EN EL REGISTRO DE LA PROPIEDAD INTELECTUAL · EL SALVADOR · DANY D. RUIZ</span><br>
+        <span data-lang="en">Before They See Us, We Already Are</span>
+        <span data-lang="es" class="lang-hidden">Antes de que nos vean, ya somos</span>
+    </div>
+</div>
+
+<script>
+function toggleLanguage(){
+    var h=document.documentElement,c=h.lang||'en',n=c==='en'?'es':'en',d=n==='en'?'es':'en';
+    h.lang=n;
+    document.querySelectorAll('[data-lang="'+n+'"]').forEach(function(e){e.classList.remove('lang-hidden')});
+    document.querySelectorAll('[data-lang="'+d+'"]').forEach(function(e){e.classList.add('lang-hidden')});
+    document.getElementById('langToggle').textContent=n==='en'?'ES':'EN';
+    localStorage.setItem('perceptemple-lang',n);
+    if(typeof window.updateExperimentText==='function') window.updateExperimentText();
+}
+(function(){var s=localStorage.getItem('perceptemple-lang');if(s&&s==='es')toggleLanguage()})();
+</script>
+
+<script>
+(function(){
+var TOTAL_DAYS=3, DATA_POINTS=240, TIME_STEP=TOTAL_DAYS/DATA_POINTS;
+var TRANSIT_CENTER=1.5, DURACION_DIAS=2.16/24;
+var MITAD=DURACION_DIAS/2, INGRESO=0.15*DURACION_DIAS;
+var OMEGA_DIAS=2*Math.PI/DURACION_DIAS;
+var listTime=[], listFlux=[], listClean=[], listPci=[], listPhi=[];
+var currentFlare=0;
+var currentPreset='normal';
+var resultadosVisibles=false;
+
+function gauss(mean,std){
+    var u1=0,u2=0;
+    while(u1===0)u1=Math.random();
+    while(u2===0)u2=Math.random();
+    return Math.sqrt(-2*Math.log(u1))*Math.cos(2*Math.PI*u2)*std+mean;
+}
+
+function computeData(){
+    listTime=[];listFlux=[];listClean=[];listPci=[];listPhi=[];
+    var rawNoise=parseFloat(document.getElementById('param-noise').value);
+    var rawDepth=parseFloat(document.getElementById('param-depth').value);
+    var ruidoBlanco=rawNoise*1e-6;
+    var ruidoRojo=(rawNoise*0.7)*1e-6;
+    var alpha=0.94,rR=0;
+
+    for(var i=0;i<DATA_POINTS;i++){
+        var t=i*TIME_STEP;listTime.push(t);
+        var d=Math.abs(t-TRANSIT_CENTER),prof=0;
+        if(d<MITAD-INGRESO)prof=rawDepth;
+        else if(d<MITAD)prof=rawDepth*(MITAD-d)/INGRESO;
+        var clean=1.0-prof;listClean.push(clean);
+        var blanco=gauss(0,ruidoBlanco);
+        rR=alpha*rR+(1-alpha)*gauss(0,ruidoRojo);
+        var raw=clean+blanco+rR;
+        if(currentFlare>0){
+            var flareWidth=0.15,flareCenter=0.8;
+            var fDiff=Math.abs(t-flareCenter);
+            if(fDiff<flareWidth){raw+=currentFlare*Math.exp(-fDiff*14);}
+        }
+        if(raw<0.97)raw=0.97;if(raw>1.03)raw=1.03;
+        listFlux.push(raw);
+    }
+
+    var dt_days=TIME_STEP;
+    for(var i=0;i<DATA_POINTS;i++){
+        var ds;
+        if(i===0)ds=(listFlux[1]-listFlux[0])/dt_days;
+        else if(i===DATA_POINTS-1)ds=(listFlux[DATA_POINTS-1]-listFlux[DATA_POINTS-2])/dt_days;
+        else ds=(listFlux[i+1]-listFlux[i-1])/(2*dt_days);
+        var displacement=1.0-listFlux[i];
+        var ph=Math.sqrt(ds*ds+(OMEGA_DIAS*displacement)*(OMEGA_DIAS*displacement));
+        var scaleGain=0.18;
+        var scaledPci=ph*scaleGain;
+        if(scaledPci<0)scaledPci=0;if(scaledPci>0.49)scaledPci=0.49;
+        listPhi.push(ph);
+        listPci.push(scaledPci);
+    }
+    if(currentFlare>0){currentFlare-=0.05;if(currentFlare<0)currentFlare=0;}
+}
+
+var CAD_POR_VENTANA=Math.floor(DATA_POINTS/(TOTAL_DAYS*24*2));
+var TW=Math.floor(DATA_POINTS/CAD_POR_VENTANA);
+var ventanasTransito={};
+function computeTransitWindows(){
+    var rawDepth=parseFloat(document.getElementById('param-depth').value);
+    var transitThreshold=rawDepth*0.5;
+    ventanasTransito={};
+    for(var w=0;w<TW;w++){
+        var ini=w*CAD_POR_VENTANA,fin=Math.min(ini+CAD_POR_VENTANA,DATA_POINTS);
+        var totalDip=0;
+        for(var i=ini;i<fin;i++)totalDip+=(1.0-listClean[i]);
+        if(totalDip/(fin-ini)>transitThreshold)ventanasTransito[w]=true;
+    }
+}
+
+function pciVentana(w){
+    var ini=w*CAD_POR_VENTANA,fin=Math.min(ini+CAD_POR_VENTANA,DATA_POINTS);
+    var sum=0;
+    for(var i=ini;i<fin;i++)sum+=listPci[i];
+    return sum/(fin-ini);
+}
+
+var cF=document.getElementById('osc-flux'),cP=document.getElementById('osc-pci');
+if(!cF||!cP)return;
+var ctxF=cF.getContext('2d'),ctxP=cP.getContext('2d');
+
+function adjustCanvas(){
+    var dpr=window.devicePixelRatio||1;
+    [cF,cP].forEach(function(c){
+        var r=c.parentElement.getBoundingClientRect();
+        c.width=r.width*dpr;c.height=r.height*dpr;
+        c.style.width=r.width+'px';c.style.height=r.height+'px';
+    });
+}
+
+function drawGrid(ctx,w,h,pl,pr,pt,pb,gw,gh){
+    ctx.strokeStyle='rgba(12,71,26,0.25)';ctx.lineWidth=0.75;ctx.setLineDash([3,4]);
+    for(var i=1;i<10;i++){var x=pl+(gw*i)/10;ctx.beginPath();ctx.moveTo(x,pt);ctx.lineTo(x,h-pb);ctx.stroke();}
+    for(var j=1;j<8;j++){var y=pt+(gh*j)/8;ctx.beginPath();ctx.moveTo(pl,y);ctx.lineTo(w-pr,y);ctx.stroke();}
+    ctx.setLineDash([]);
+    ctx.strokeStyle='rgba(0,255,65,0.18)';ctx.lineWidth=1;
+    ctx.beginPath();ctx.moveTo(pl+gw/2,pt);ctx.lineTo(pl+gw/2,h-pb);ctx.stroke();
+    ctx.beginPath();ctx.moveTo(pl,pt+gh/2);ctx.lineTo(w-pr,pt+gh/2);ctx.stroke();
+}
+
+function drawFlux(tau,theta){
+    var dpr=window.devicePixelRatio||1;
+    var w=cF.width/dpr,h=cF.height/dpr;
+    ctxF.setTransform(dpr,0,0,dpr,0,0);ctxF.clearRect(0,0,w,h);
+    var pl=55,pr=15,pt=35,pb=20,gw=w-pl-pr,gh=h-pt-pb;
+    drawGrid(ctxF,w,h,pl,pr,pt,pb,gw,gh);
+    var minF=0.975,maxF=1.025;
+    var sX=function(t){return pl+(t/TOTAL_DAYS)*gw;};
+    var sY=function(v){return h-pb-((v-minF)/(maxF-minF))*gh;};
+    ctxF.strokeStyle='rgba(0,255,65,0.2)';ctxF.lineWidth=1;ctxF.beginPath();
+    for(var i=0;i<DATA_POINTS;i++){var x=sX(listTime[i]),y=sY(listFlux[i]);i===0?ctxF.moveTo(x,y):ctxF.lineTo(x,y);}
+    ctxF.stroke();
+    ctxF.strokeStyle='rgba(0,255,65,0.7)';ctxF.lineWidth=1.5;ctxF.beginPath();
+    for(var i=0;i<DATA_POINTS;i++){var x=sX(listTime[i]),y=sY(listClean[i]);i===0?ctxF.moveTo(x,y):ctxF.lineTo(x,y);}
+    ctxF.stroke();
+    for(var i=0;i<DATA_POINTS;i++){
+        var p=listPci[i];
+        if(p>=tau){
+            ctxF.fillStyle='#39ff14';ctxF.beginPath();ctxF.arc(sX(listTime[i]),sY(listFlux[i]),2.2,0,2*Math.PI);ctxF.fill();
+            ctxF.fillStyle='rgba(57,255,20,0.2)';ctxF.beginPath();ctxF.arc(sX(listTime[i]),sY(listFlux[i]),5,0,2*Math.PI);ctxF.fill();
+        }else if(p>=theta){
+            ctxF.fillStyle='#ff9f00';ctxF.beginPath();ctxF.arc(sX(listTime[i]),sY(listFlux[i]),1.4,0,2*Math.PI);ctxF.fill();
+        }
+    }
+    ctxF.fillStyle='rgba(0,255,65,0.5)';ctxF.font='8px Orbitron';
+    ctxF.fillText("1.02",12,sY(1.02)+3);ctxF.fillText("1.00",12,sY(1.00)+3);ctxF.fillText("0.98",12,sY(0.98)+3);
+    ctxF.fillText("0.0d",pl,h-4);ctxF.fillText("1.5d",pl+gw/2-10,h-4);ctxF.fillText("3.0d",w-pr-25,h-4);
+}
+
+function drawPci(tau,theta){
+    var dpr=window.devicePixelRatio||1;
+    var w=cP.width/dpr,h=cP.height/dpr;
+    ctxP.setTransform(dpr,0,0,dpr,0,0);ctxP.clearRect(0,0,w,h);
+    var pl=55,pr=15,pt=35,pb=20,gw=w-pl-pr,gh=h-pt-pb;
+    drawGrid(ctxP,w,h,pl,pr,pt,pb,gw,gh);
+    var maxP=0.45;
+    var sX=function(t){return pl+(t/TOTAL_DAYS)*gw;};
+    var sY=function(v){return h-pb-(v/maxP)*gh;};
+    ctxP.fillStyle='rgba(57,255,20,0.04)';ctxP.beginPath();ctxP.moveTo(pl,h-pb);
+    for(var i=0;i<DATA_POINTS;i++)ctxP.lineTo(sX(listTime[i]),sY(listPci[i]));
+    ctxP.lineTo(pl+gw,h-pb);ctxP.closePath();ctxP.fill();
+    ctxP.strokeStyle='rgba(0,255,65,0.75)';ctxP.lineWidth=1.5;ctxP.beginPath();
+    for(var i=0;i<DATA_POINTS;i++){var x=sX(listTime[i]),y=sY(listPci[i]);i===0?ctxP.moveTo(x,y):ctxP.lineTo(x,y);}
+    ctxP.stroke();
+    var yTau=sY(tau);
+    ctxP.strokeStyle='#ff3333';ctxP.lineWidth=1;ctxP.setLineDash([4,4]);
+    ctxP.beginPath();ctxP.moveTo(pl,yTau);ctxP.lineTo(w-pr,yTau);ctxP.stroke();ctxP.setLineDash([]);
+    ctxP.fillStyle='#ff3333';ctxP.font='8px Share Tech Mono';ctxP.fillText('τ='+tau.toFixed(2),pl+10,yTau-4);
+    var yTheta=sY(theta);
+    ctxP.strokeStyle='#ff9f00';ctxP.lineWidth=1;ctxP.setLineDash([3,3]);
+    ctxP.beginPath();ctxP.moveTo(pl,yTheta);ctxP.lineTo(w-pr,yTheta);ctxP.stroke();ctxP.setLineDash([]);
+    ctxP.fillStyle='#ff9f00';ctxP.fillText('θₘ='+theta.toFixed(2),pl+10,yTheta-4);
+    ctxP.fillStyle='rgba(0,255,65,0.5)';ctxP.font='8px Orbitron';
+    ctxP.fillText("0.40",12,sY(0.40)+3);ctxP.fillText("0.20",12,sY(0.20)+3);ctxP.fillText("0.00",12,sY(0.00)+3);
+    ctxP.fillText("0.0d",pl,h-4);ctxP.fillText("1.5d",pl+gw/2-10,h-4);ctxP.fillText("3.0d",w-pr-25,h-4);
+}
+
+function updateScreen(){
+    computeData();
+    computeTransitWindows();
+    var tau=parseFloat(document.getElementById('param-tau').value);
+    var theta=parseFloat(document.getElementById('param-theta').value);
+    document.getElementById('val-tau').textContent=tau.toFixed(2);
+    document.getElementById('val-theta').textContent=theta.toFixed(2);
+    document.getElementById('val-depth').textContent=parseFloat(document.getElementById('param-depth').value).toFixed(4);
+    document.getElementById('val-noise').textContent=document.getElementById('param-noise').value;
+
+    var colapsos=0,pciMax=0;
+    for(var i=0;i<DATA_POINTS;i++){if(listPci[i]>pciMax)pciMax=listPci[i];if(listPci[i]>=tau)colapsos++;}
+
+    var tp=0,fp=0,fn=0,decisiones=[];
+    for(var w=0;w<TW;w++){
+        var p=pciVentana(w),col=(p>=tau),gt=!!ventanasTransito[w];
+        decisiones.push({w:w,pci:p,col:col,transit:gt});
+        if(col){if(gt)tp++;else fp++;}
+        else if(gt)fn++;
+    }
+    var hayTransito=tp>0;
+
+    document.getElementById('m-collapse').textContent=colapsos;
+    document.getElementById('m-pci-max').textContent=pciMax.toFixed(3);
+    document.getElementById('m-detect').textContent=hayTransito?'YES':'NO';
+    document.getElementById('m-detect').style.color=hayTransito?'var(--hi)':'var(--red)';
+    document.getElementById('m-fp').textContent=fp;
+    document.getElementById('m-fn').textContent=fn;
+    document.getElementById('m-tp').textContent=tp;
+
+    if(resultadosVisibles)buildResults(tau,theta,colapsos,pciMax,hayTransito,fp,fn,tp,decisiones);
+
+    drawFlux(tau,theta);
+    drawPci(tau,theta);
+}
+
+function buildResults(tau,theta,colapsos,pciMax,hayTransito,fp,fn,tp,decisiones){
+    var grid=document.getElementById('results-grid');
+    var ventanasGT=Object.keys(ventanasTransito).length;
+    grid.innerHTML=
+        '<div class="res-item"><div class="res-val">'+TW+'</div><div class="res-lbl" data-lang="en">Windows</div><div class="res-lbl lang-hidden" data-lang="es">Ventanas</div></div>'+
+        '<div class="res-item"><div class="res-val">'+ventanasGT+'</div><div class="res-lbl" data-lang="en">With Transit</div><div class="res-lbl lang-hidden" data-lang="es">Con Tránsito</div></div>'+
+        '<div class="res-item"><div class="res-val '+(hayTransito?'good':'bad')+'">'+(hayTransito?'YES':'NO')+'</div><div class="res-lbl" data-lang="en">Detection</div><div class="res-lbl lang-hidden" data-lang="es">Detección</div></div>'+
+        '<div class="res-item"><div class="res-val good">'+tp+'</div><div class="res-lbl">TP</div></div>'+
+        '<div class="res-item"><div class="res-val '+(fp>0?'warn':'good')+'">'+fp+'</div><div class="res-lbl">FP</div></div>'+
+        '<div class="res-item"><div class="res-val '+(fn>0?'bad':'good')+'">'+fn+'</div><div class="res-lbl">FN</div></div>'+
+        '<div class="res-item"><div class="res-val">'+pciMax.toFixed(3)+'</div><div class="res-lbl">PCI max</div></div>'+
+        '<div class="res-item"><div class="res-val">'+colapsos+'</div><div class="res-lbl" data-lang="en">Collapses</div><div class="res-lbl lang-hidden" data-lang="es">Colapsos</div></div>';
+
+    var tbody=document.getElementById('results-tbody');
+    tbody.innerHTML='';
+    for(var d=0;d<decisiones.length;d++){
+        var dec=decisiones[d],cls=dec.transit?'highlight-row':'';
+        var row=document.createElement('tr');
+        row.className=cls;
+        row.innerHTML='<td>'+(dec.w+1)+'</td><td>'+dec.pci.toFixed(4)+'</td><td style="color:'+(dec.col?'var(--hi)':'var(--txt3)')+'">'+(dec.col?'COLLAPSE':'SUPERPOSITION')+'</td><td style="color:'+(dec.transit?'var(--amber)':'var(--txt3)')+'">'+(dec.transit?'TRANSIT':'—')+'</td>';
+        tbody.appendChild(row);
+    }
+}
+
+window.injectFlare = function(){
+    currentFlare=0.024;
+    updateScreen();
+};
+
+window.setPreset = function(type){
+    currentPreset=type;
+    document.querySelectorAll('.preset-chip').forEach(function(e){e.classList.remove('active')});
+    var slTau=document.getElementById('param-tau'),slTheta=document.getElementById('param-theta');
+    var slDepth=document.getElementById('param-depth'),slNoise=document.getElementById('param-noise');
+    if(type==='ceguera'){
+        slDepth.value=0.0020;slNoise.value=80;slTau.value=0.04;slTheta.value=0.02;
+        document.getElementById('preset-ceguera').classList.add('active');
+    }else if(type==='tormenta'){
+        slDepth.value=0.0150;slNoise.value=520;slTau.value=0.28;slTheta.value=0.14;
+        document.getElementById('preset-tormenta').classList.add('active');
+    }else{
+        slDepth.value=0.0101;slNoise.value=200;slTau.value=0.15;slTheta.value=0.06;
+        document.getElementById('preset-normal').classList.add('active');
+    }
+    window.updateExperimentText();
+    updateScreen();
+};
+
+window.updateExperimentText = function(){
+    var isEn=document.documentElement.lang==='en';
+    var titulo=document.getElementById('manual-title');
+    var tituloEs=document.getElementById('manual-title-es');
+    var desc=document.getElementById('manual-desc');
+    var descEs=document.getElementById('manual-desc-es');
+    if(currentPreset==='ceguera'){
+        titulo.textContent='Experiment: Blindness';
+        tituloEs.textContent='Experimento: Ceguera';
+        desc.textContent='Tiny planet (depth 0.0020). The dip is nearly invisible on CH1. With τ=0.04 and θₘ=0.02, PercepWare must detect the signal without triggering false positives from noise.';
+        descEs.textContent='Planeta diminuto (profundidad 0.0020). La caída es casi invisible en CH1. Con τ=0.04 y θₘ=0.02, PercepWare debe detectar la señal sin disparar falsos positivos por ruido.';
+    }else if(currentPreset==='tormenta'){
+        titulo.textContent='Experiment: Storm';
+        tituloEs.textContent='Experimento: Tormenta';
+        desc.textContent='520 ppm thermal noise. Photometry is chaotic. With a massive planet (0.0150) and τ=0.28, PercepWare must filter non-causal oscillation and collapse only the transit.';
+        descEs.textContent='520 ppm de ruido térmico. La fotometría es caótica. Con un planeta masivo (0.0150) y τ=0.28, PercepWare debe filtrar la oscilación no causal y colapsar solo el tránsito.';
+    }else{
+        titulo.textContent='Standard Experiment';
+        tituloEs.textContent='Experimento Estándar';
+        desc.textContent='WASP-18b under nominal conditions. With τ=0.15 and θₘ=0.06, PercepWare detects the transit cleanly. Adjust sliders to explore the filter boundaries.';
+        descEs.textContent='WASP-18b bajo condiciones nominales. Con τ=0.15 y θₘ=0.06, PercepWare detecta el tránsito limpiamente. Ajusta los sliders para explorar los límites del filtro.';
+    }
+};
+
+document.getElementById('param-tau').addEventListener('input',updateScreen);
+document.getElementById('param-theta').addEventListener('input',updateScreen);
+document.getElementById('param-depth').addEventListener('input',updateScreen);
+document.getElementById('param-noise').addEventListener('input',updateScreen);
+document.getElementById('btn-reset').addEventListener('click',function(){window.setPreset('normal');});
+document.getElementById('btn-results').addEventListener('click',function(){
+    resultadosVisibles=!resultadosVisibles;
+    var panel=document.getElementById('results-panel');
+    var btn=document.getElementById('btn-results');
+    if(resultadosVisibles){panel.classList.add('visible');btn.classList.add('active');}
+    else{panel.classList.remove('visible');btn.classList.remove('active');}
+    if(resultadosVisibles)updateScreen();
+});
+document.getElementById('btn-export').addEventListener('click',function(){
+    var tau=parseFloat(document.getElementById('param-tau').value);
+    var theta=parseFloat(document.getElementById('param-theta').value);
+    var depth=parseFloat(document.getElementById('param-depth').value);
+    var noise=document.getElementById('param-noise').value;
+    var header='# PERCEPTEMPLE · PercepWare v1.0 · WASP-18b Transit Detection\n';
+    header+='# Parameters: τ='+tau.toFixed(2)+', θₘ='+theta.toFixed(2)+', Transit Depth='+depth.toFixed(4)+', Noise='+noise+'ppm\n';
+    header+='# Columns: Time (days), Raw Flux (normalized), Clean Model (normalized), PCI (Perceptual Complexity Index), PWF Phi (raw), In Transit (0=no, 1=yes), Decision (COLLAPSE | SUPERPOSITION)\n';
+    var csv=header+'Time_Days,Raw_Flux,Clean_Model,PCI,PWF_Phi,In_Transit,Decision\n';
+    var iniT=(TRANSIT_CENTER-MITAD)/TIME_STEP;
+    var finT=(TRANSIT_CENTER+MITAD)/TIME_STEP;
+    for(var i=0;i<DATA_POINTS;i++){
+        var inTransit=(i>=iniT&&i<=finT)?'1':'0';
+        var decision=listPci[i]>=tau?'COLLAPSE':'SUPERPOSITION';
+        csv+=listTime[i].toFixed(5)+','+listFlux[i].toFixed(6)+','+listClean[i].toFixed(6)+','+listPci[i].toFixed(6)+','+listPhi[i].toFixed(6)+','+inTransit+','+decision+'\n';
+    }
+    var b=new Blob([csv],{type:'text/csv;charset=utf-8;'});
+    var u=URL.createObjectURL(b),a=document.createElement('a');
+    a.href=u;a.download='percepware_wasp18b_v1.0.csv';a.click();URL.revokeObjectURL(u);
+});
+window.addEventListener('resize',function(){adjustCanvas();updateScreen();});
+
+adjustCanvas();
+window.setPreset('normal');
+})();
+</script>
+</body>
+</html>
