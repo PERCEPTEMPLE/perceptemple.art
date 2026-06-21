@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>PERCEPTEMPLE</title>
+    
+    
+    <meta name="description" content="Universal metric of perceptual density quantifying significant events crossing the collapse threshold τ. Part of the Panperceptual Theory of the Universe by Dany D. Ruiz.">
+    <meta name="author" content="Dany D. Ruiz">
+    <meta name="last-modified" content="2026-06-07">
+    <meta name="keywords" content="Perceptual Complexity Index, PCI, Panperceptual Theory of the Universe, PTU, Perceptual Wave Function, PWF, Proof of Perception, Epistemological Kardashev Scale">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://perceptemple.art/pci/">
+    
+    
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Perceptual Complexity Index · PERCEPTEMPLE">
+    <meta property="og:description" content="Universal metric of perceptual density quantifying significant events crossing the collapse threshold τ. Part of the Panperceptual Theory of the Universe by Dany D. Ruiz.">
+    <meta property="og:url" content="https://perceptemple.art/pci/">
+    <meta property="og:site_name" content="PERCEPTEMPLE">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_SV">
+    <meta property="og:image" content="https://perceptemple.art/preview.jpg">
+    <meta property="og:image:alt" content="PERCEPTEMPLE — Perceptual Complexity Index">
+    
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@panperceptual">
+    <meta name="twitter:creator" content="@panperceptual">
+    <meta name="twitter:title" content="Perceptual Complexity Index · PERCEPTEMPLE">
+    <meta name="twitter:description" content="Universal metric of perceptual density quantifying significant events crossing the collapse threshold τ. Part of the Panperceptual Theory of the Universe by Dany D. Ruiz.">
+    <meta name="twitter:image" content="https://perceptemple.art/preview.jpg">
+    
+    
+    <meta name="citation_title" content="Perceptual Complexity Index (PCI): A Universal Metric of Perceptual Density">
+    <meta name="citation_author" content="Ruiz, Dany D.">
+    <meta name="citation_publication_date" content="2025">
+    <meta name="citation_online_date" content="2025">
+    <meta name="citation_publisher" content="PERCEPTEMPLE">
+    <meta name="citation_language" content="en">
+    <meta name="DC.title" content="Perceptual Complexity Index (PCI): A Universal Metric of Perceptual Density">
+    <meta name="DC.creator" content="Dany D. Ruiz">
+    <meta name="DC.publisher" content="PERCEPTEMPLE">
+    <meta name="DC.language" content="en">
+    <meta name="DC.rights" content="https://perceptemple.art/licence/">
+    
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:      #020805;
+            --panel:   #020805;
+            --rule:    #0a5c1e;
+            --hi:      #00ff41;
+            --hi2:     #39ff14;
+            --amber:   #ffb200;
+            --amber2:  #ffcc00;
+            --txt:     rgba(0,255,65,0.75);
+            --txt2:    rgba(0,255,65,0.9);
+            --txt3:    rgba(0,255,65,0.35);
+            --white:   #39ff14;
+            --red:     #ff2020;
+            
+            /* TYPOGRAPHY SYSTEM */
+            --fs-xs: clamp(0.65rem, 1.2vw, 0.75rem);
+            --fs-sm: clamp(0.75rem, 1.4vw, 0.85rem);
+            --fs-md: clamp(0.8rem,  1.6vw, 1rem);
+            --fs-lg: clamp(1rem,    2vw,   1.25rem);
+            --fs-xl: clamp(1.25rem, 3vw,   1.75rem);
+        }
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        .lang-hidden{display:none!important}
+        body{
+            background:var(--bg);color:var(--txt2);
+            font-family:'Share Tech Mono',monospace;font-weight:400;
+            font-size:var(--fs-sm);
+            min-height:100vh;overflow-x:hidden;line-height:1.6;
+            display:flex;flex-direction:column;align-items:center;
+            animation:fadeUp 0.4s ease both;
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+            text-rendering:optimizeLegibility;
+        }
+        body::before{
+            content:'';position:fixed;inset:0;
+            background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.12) 3px,rgba(0,0,0,0.12) 6px);
+            pointer-events:none;z-index:9999;
+        }
+        body::after{
+            content:'';position:fixed;inset:0;
+            background-image:linear-gradient(rgba(0,255,65,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,65,0.02) 1px,transparent 1px);
+            background-size:80px 80px;pointer-events:none;z-index:9998;
+        }
+        .bracket{position:fixed;color:rgba(0,255,65,0.12);font-family:'Orbitron',sans-serif;font-size:var(--fs-md);pointer-events:none;z-index:10000}
+        .bracket-tl{top:16px;left:20px}.bracket-tr{top:16px;right:20px}
+        .bracket-bl{bottom:16px;left:20px}.bracket-br{bottom:16px;right:20px}
+        .pch-btn{display:inline-block;margin-top:6px;background:transparent;border:1px solid var(--red);color:var(--red);font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:2px;text-transform:uppercase;padding:4px 12px;text-decoration:none;border-radius:2px;font-weight:700;white-space:nowrap;transition:all 0.2s}
+        .pch-btn:hover{background:rgba(255,32,32,0.08)}
+        .translate-btn{position:relative;top:auto;right:auto;background:transparent;border:1px solid var(--amber);color:var(--amber);font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:2px;text-transform:uppercase;padding:0.4rem 0.8rem;cursor:pointer;transition:all 0.2s;border-radius:2px;font-weight:600;white-space:nowrap;z-index:auto;flex-shrink:0}
+        .translate-btn:hover{background:rgba(255,178,0,0.1);color:var(--amber2);border-color:var(--amber2)}
+        .header{width:100%;max-width:75rem;display:flex;align-items:center;justify-content:space-between;padding:1.25rem 2rem;border-bottom:1px solid var(--rule);background:var(--bg);position:relative;z-index:100;flex-wrap:wrap;gap:0.75rem}
+        .logo-mark{font-family:'Orbitron',sans-serif;font-size:var(--fs-md);color:var(--hi);letter-spacing:2px;font-weight:700}
+        .header-nav{display:flex;gap:1.5rem;flex-wrap:wrap;align-items:center}
+        .nav-link{font-family:'Orbitron',sans-serif;font-size:var(--fs-sm);letter-spacing:2px;text-transform:uppercase;color:var(--txt3);text-decoration:none;transition:color 0.2s;font-weight:500;white-space:nowrap}
+        .nav-link:hover,.nav-link.highlight{color:var(--hi)}
+        .section-label{width:100%;max-width:60rem;padding:0.8125rem 2rem;border-bottom:1px solid var(--rule);font-family:'Orbitron',sans-serif;font-size:var(--fs-sm);letter-spacing:4px;text-transform:uppercase;color:var(--amber);display:flex;align-items:center;gap:0.875rem;font-weight:600}
+        .section-label::after{content:'';flex:1;height:1px;background:var(--rule);min-width:20px}
+
+        .intro{width:100%;max-width:60rem;padding:3rem 2rem;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+        .intro-text h1{font-family:'Orbitron',sans-serif;font-size:var(--fs-xl);line-height:0.95;color:var(--hi2);margin-bottom:1rem;font-weight:800;word-break:break-word}
+        .intro-text h1 em{color:var(--hi);font-style:normal}
+        .intro-text p{font-size:var(--fs-sm);color:var(--txt);line-height:1.8;max-width:55ch;word-break:break-word}
+        .intro-text p strong{color:var(--txt2)}
+        .intro-kv{display:flex;flex-direction:column;gap:0;border:1px solid var(--rule)}
+        .intro-kv .kv{display:flex;justify-content:space-between;align-items:baseline;padding:0.6rem 0.8rem;border-bottom:1px solid var(--rule)}
+        .intro-kv .kv:last-child{border-bottom:none}
+        .kv-key{font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:1.5px;text-transform:uppercase;color:var(--txt3);font-weight:500}
+        .kv-val{font-family:'Orbitron',sans-serif;font-size:var(--fs-md);color:var(--hi);font-weight:700;text-align:right}
+        .kv-val.white{color:var(--txt2);font-size:var(--fs-sm);font-family:'Share Tech Mono',monospace;font-weight:400}
+        .formula-note{margin-top:0.75rem;padding:0.6rem 0.9rem;background:rgba(255,178,0,0.04);border-left:2px solid var(--amber);font-size:var(--fs-xs);color:var(--amber2);line-height:1.6;border-radius:0 2px 2px 0;word-break:break-word}
+        .formula-note code{color:var(--hi);font-family:'Share Tech Mono',monospace}
+
+        .questionnaire{width:100%;max-width:60rem;padding:2.5rem 2rem;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:1fr 300px;gap:2rem}
+        .questions{display:flex;flex-direction:column;gap:1.25rem}
+        .q-block{background:var(--panel);border:1px solid var(--rule);padding:1.125rem 1.25rem;border-radius:2px}
+        .q-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:0.5rem}
+        .q-dim{font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:2px;text-transform:uppercase;color:var(--amber);font-weight:600}
+        .q-weight{font-size:var(--fs-xs);color:var(--txt3);letter-spacing:1px}
+        .q-question{font-size:var(--fs-sm);color:var(--txt2);margin-bottom:0.6rem;line-height:1.5;word-break:break-word}
+        .q-slider-row{display:flex;align-items:center;gap:0.75rem}
+        .q-slider-row input[type='range']{flex:1;accent-color:var(--hi);cursor:pointer}
+        .q-slider-val{font-family:'Orbitron',sans-serif;font-size:var(--fs-md);color:var(--hi);min-width:24px;text-align:right;font-weight:700}
+        .q-desc{font-size:var(--fs-xs);color:var(--txt3);margin-top:0.4rem;line-height:1.5;word-break:break-word}
+
+        .result-panel{background:var(--panel);border:1px solid var(--rule);padding:1.5rem 1.25rem;display:flex;flex-direction:column;gap:1rem;border-radius:2px;position:sticky;top:100px}
+        .result-heading{font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:3px;text-transform:uppercase;color:var(--amber);font-weight:600}
+        .gauge-container{position:relative;width:100%;height:18px;background:#0a0f0a;border-radius:9px;overflow:hidden}
+        .gauge-fill{height:100%;border-radius:9px;background:var(--hi);transition:width 0.3s ease}
+        .gauge-threshold-zone{position:absolute;top:0;height:100%;left:50%;right:0;background:rgba(255,178,0,0.06);border-left:2px solid var(--amber);pointer-events:none}
+        .gauge-threshold-label{position:absolute;top:-18px;left:50%;transform:translateX(-50%);font-size:var(--fs-xs);color:var(--amber);letter-spacing:1px;white-space:nowrap}
+        .pci-value{font-family:'Orbitron',sans-serif;font-size:2.4rem;color:var(--hi);line-height:1;font-weight:800}
+        .pci-classification{font-size:var(--fs-sm);color:var(--txt2);line-height:1.6;padding:0.6rem 0.9rem;background:rgba(0,255,65,0.02);border-radius:2px;border-left:2px solid var(--hi);word-break:break-word}
+        .pci-verdict{font-family:'Orbitron',sans-serif;font-size:var(--fs-xs);letter-spacing:1px;text-transform:uppercase;padding:0.5rem 0.75rem;border-radius:2px;text-align:center;font-weight:700}
+        .pci-verdict.collapse{background:rgba(0,255,65,0.06);color:var(--hi);border:1px solid rgba(0,255,65,0.2)}
+        .pci-verdict.superposition{background:rgba(0,255,65,0.01);color:var(--txt3);border:1px solid var(--rule)}
+        .btn-sm{background:transparent;border:1px solid var(--rule);color:var(--txt3);font-family:'Share Tech Mono',monospace;font-size:var(--fs-xs);letter-spacing:1px;text-transform:uppercase;padding:6px 10px;cursor:pointer;transition:all 0.2s;text-align:center;width:100%}
+        .btn-sm:hover{border-color:var(--amber);color:var(--amber)}
+        .last-update{font-size:var(--fs-xs);color:var(--txt3);text-align:center;line-height:1.5}
+        .breakdown{display:flex;flex-direction:column;gap:3px}
+        .br-row{display:flex;align-items:center;gap:6px;font-size:var(--fs-xs);color:var(--txt3)}
+        .br-label{width:65px;letter-spacing:1px;text-transform:uppercase}
+        .br-bar-bg{flex:1;height:4px;background:#0a0f0a;border-radius:2px;overflow:hidden}
+        .br-bar-fill{height:100%;border-radius:2px}
+        .br-val{width:18px;text-align:right;color:var(--txt2);font-weight:600}
+
+        .content-section{width:100%;max-width:60rem;padding:3rem 2rem;border-bottom:1px solid var(--rule)}
+        .content-section h2{font-family:'Orbitron',sans-serif;font-size:var(--fs-lg);color:var(--hi2);margin-bottom:0.5rem;font-weight:700;word-break:break-word}
+        .content-section h3{font-family:'Orbitron',sans-serif;font-size:var(--fs-md);color:var(--hi);margin-top:1.75rem;margin-bottom:0.5rem;font-weight:600;word-break:break-word}
+        .content-section h4{font-family:'Orbitron',sans-serif;font-size:var(--fs-sm);color:var(--amber);margin-top:1.125rem;margin-bottom:0.375rem;letter-spacing:1px;text-transform:uppercase;font-weight:600;word-break:break-word}
+        .content-section p{font-family:'Share Tech Mono',monospace;font-size:var(--fs-sm);color:var(--txt);line-height:1.9;margin-bottom:0.75rem;max-width:70ch;word-break:break-word}
+        .content-section p strong{color:var(--txt2)}
+        .content-section ul{list-style:none;padding-left:0;margin-bottom:1rem}
+        .content-section ul li{font-family:'Share Tech Mono',monospace;font-size:var(--fs-sm);color:var(--txt);line-height:1.8;padding-left:0.875rem;position:relative;max-width:70ch;word-break:break-word}
+        .content-section ul li::before{content:'>';position:absolute;left:0;color:var(--hi);font-weight:bold}
+        .table-wrapper{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0.75rem 0 1.125rem}
+        .pw-table{width:100%;border-collapse:collapse;font-family:'Share Tech Mono',monospace;font-size:var(--fs-sm)}
+        .pw-table th{text-align:left;padding:0.5rem 0.625rem;background:var(--bg);color:var(--amber);font-family:'Orbitron',sans-serif;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;border-bottom:1px solid var(--rule);font-size:var(--fs-xs)}
+        .pw-table td{padding:0.5rem 0.625rem;color:var(--txt);border-bottom:1px solid var(--rule);line-height:1.5;vertical-align:top}
+        .pw-table tr:last-child td{border-bottom:none}
+        .pw-table .dim{color:var(--txt2);font-weight:600}
+        .code-block{background:var(--panel);border:1px solid var(--rule);padding:1rem 1.125rem;font-family:'Share Tech Mono',monospace;font-size:var(--fs-xs);color:var(--hi2);line-height:1.7;overflow-x:auto;margin:0.75rem 0 1.125rem;border-radius:2px;white-space:pre-wrap;word-break:break-word}
+        .note-block{padding:0.75rem 1rem;background:rgba(255,178,0,0.04);border-left:2px solid var(--amber);font-family:'Rajdhani',sans-serif;font-size:var(--fs-sm);color:var(--amber2);line-height:1.7;margin:0.75rem 0;border-radius:0 2px 2px 0;font-weight:500;word-break:break-word}
+        .note-block strong{color:var(--amber);font-family:'Orbitron',sans-serif;font-weight:600}
+
+        .scale-section{width:100%;max-width:60rem;padding:3rem 2rem;border-bottom:1px solid var(--rule)}
+        .scale-section h2{font-family:'Orbitron',sans-serif;font-size:var(--fs-lg);color:var(--hi2);margin-bottom:0.6rem;font-weight:700;word-break:break-word}
+        .scale-subtitle{font-size:var(--fs-sm);color:var(--txt);line-height:1.8;margin-bottom:2rem;max-width:60ch;word-break:break-word}
+        .scale-table{display:flex;flex-direction:column;gap:1px;background:var(--rule);border:1px solid var(--rule)}
+        .scale-row{display:grid;grid-template-columns:90px 90px 1fr 80px;background:var(--bg);gap:0}
+        .scale-type{padding:0.875rem 1rem;font-family:'Orbitron',sans-serif;font-size:var(--fs-md);color:var(--hi2);border-right:1px solid var(--rule);display:flex;align-items:center;font-weight:700}
+        .scale-range{padding:0.875rem 1rem;font-size:var(--fs-xs);color:var(--hi);font-weight:600;border-right:1px solid var(--rule);display:flex;align-items:center;font-family:'Share Tech Mono',monospace}
+        .scale-desc{padding:0.875rem 1rem;font-size:var(--fs-xs);color:var(--txt);line-height:1.5;border-right:1px solid var(--rule);display:flex;align-items:center;word-break:break-word}
+        .scale-bar-cell{padding:0.875rem 1rem;display:flex;align-items:center}
+        .scale-mini-bar{width:100%;height:4px;background:#0a0f0a;border-radius:2px;overflow:hidden}
+        .scale-mini-fill{height:100%;border-radius:2px}
+        .scale-note{font-size:var(--fs-xs);color:var(--txt3);margin-top:0.875rem;text-align:right}
+
+        a{color:var(--hi);text-decoration:none;transition:color 0.2s}
+        a:hover{color:var(--hi2)}
+        img{max-width:100%;height:auto;display:block}
+        svg{max-width:100%;height:auto}
+        canvas{max-width:100%}
+        .footer{width:100%;max-width:60rem;padding:1.625rem 2rem;border-top:1px solid var(--rule);position:relative;z-index:50}
+        .footer-modules{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;margin-bottom:0.875rem}
+        .footer-modules a{font-family:'Orbitron',sans-serif;font-size:var(--fs-sm);letter-spacing:2px;text-transform:uppercase;color:var(--txt3);text-decoration:none;transition:color 0.2s;font-weight:500;white-space:nowrap}
+        .footer-modules a:hover,.footer-modules a.footer-current{color:var(--hi)}
+        .footer-modules span{color:var(--rule);font-family:'Orbitron',sans-serif;font-size:var(--fs-sm)}
+        .footer-social{text-align:center;margin-bottom:0.875rem;font-family:'Share Tech Mono',monospace;font-size:var(--fs-sm);color:var(--amber)}
+        .footer-social a{color:var(--amber);text-decoration:none;transition:color 0.2s}
+        .footer-social a:hover{color:var(--hi)}
+        .footer-social span{color:var(--rule)}
+        .footer-bottom{text-align:center;font-family:'Rajdhani',sans-serif;font-size:var(--fs-sm);color:rgba(0,255,65,0.25);line-height:1.8;letter-spacing:1px;font-weight:500;word-break:break-word}
+        @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+        @media(max-width:1024px){
+            .header{gap:0.75rem}
+            .intro{gap:1.5rem}
+            .nav-link{font-size:var(--fs-xs)}
+            .section-label{font-size:var(--fs-xs)}
+            .footer-modules a{font-size:var(--fs-xs)}
+            .footer-social{font-size:var(--fs-xs)}
+            .footer-bottom{font-size:var(--fs-xs)}
+            .kv-key{font-size:var(--fs-xs)}
+            .kv-val{font-size:var(--fs-xs)}
+            .kv-val.white{font-size:var(--fs-xs)}
+        }
+        @media(max-width:768px){
+            .header{padding:1rem 1.5rem;flex-direction:column;align-items:flex-start}
+            .header-nav{width:100%;gap:1rem;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+            .header-nav::-webkit-scrollbar{display:none}
+            .intro{grid-template-columns:1fr;padding:2.5rem 1.5rem 2.25rem;gap:1.5rem}
+            .questionnaire{grid-template-columns:1fr}
+            .result-panel{position:static}
+            .scale-row{grid-template-columns:1fr 1fr}
+            .content-section,.questionnaire,.scale-section{padding:2rem 1.5rem}
+            .section-label{padding:0.8125rem 1.5rem}
+            .footer{padding:1.25rem 1.5rem}
+            [class*="grid"],[class*="cols"],[class*="columns"]{grid-template-columns:1fr !important}
+        }
+        @media(max-width:480px){
+            .header{padding:0.75rem 1rem}
+            .content-section{padding:1.5rem 1rem}
+            .footer{padding:1rem}
+            .footer-modules{gap:0.75rem}
+        }
+    </style>
+    
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0002-3432-1710",
+      "name": "Dany D. Ruiz",
+      "alternateName": "panperceptual",
+      "jobTitle": "Anartist · Independent Researcher",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "url": "https://perceptemple.art",
+      "sameAs": [
+        "https://orcid.org/0009-0002-3432-1710",
+        "https://x.com/panperceptual",
+        "https://github.com/PERCEPTEMPLE",
+        "https://doi.org/10.17605/OSF.IO/FVCAX",
+        "https://doi.org/10.5281/zenodo.17683631",
+        "https://doi.org/10.2139/ssrn.5794102"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "headline": "Perceptual Complexity Index (PCI): A Universal Metric of Perceptual Density",
+      "description": "Universal metric of perceptual density quantifying significant events crossing the collapse threshold τ. Part of the Panperceptual Theory of the Universe by Dany D. Ruiz.",
+      "datePublished": "2026-06-07",
+      "dateModified": "2026-06-07",
+      "inLanguage": "en",
+      "url": "https://perceptemple.art/pci/",
+      "author": {
+        "@type": "Person",
+        "@id": "https://orcid.org/0009-0002-3432-1710",
+        "name": "Dany D. Ruiz"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PERCEPTEMPLE",
+        "url": "https://perceptemple.art"
+      },
+      "isPartOf": {
+        "@type": "Book",
+        "name": "Panperceptual Theory of the Universe",
+        "url": "https://perceptemple.art/ptu/"
+      },
+      "license": "https://perceptemple.art/licence/",
+      "sameAs": [
+        "https://doi.org/10.17605/OSF.IO/UXEGH",
+        "https://doi.org/10.5281/zenodo.19168519",
+        "https://doi.org/10.2139/ssrn.6456099"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DefinedTerm",
+      "name": "Perceptual Complexity Index",
+      "alternateName": "PCI",
+      "description": "Universal metric of perceptual density that quantifies the proportion of time a system is formally perceiving, based on significant events crossing a collapse threshold τ.",
+      "datePublished": "2026-06-07",
+      "dateModified": "2026-06-07",
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": "Panperceptual Theory of the Universe — Glossary",
+        "url": "https://perceptemple.art/aei/glossary/"
+      },
+      "url": "https://perceptemple.art/pci/",
+      "creator": {
+        "@type": "Person",
+        "@id": "https://orcid.org/0009-0002-3432-1710",
+        "name": "Dany D. Ruiz"
+      }
+    }
+    </script>
+</head>
+<body>
+
+<span class="bracket bracket-tl">[</span><span class="bracket bracket-tr">]</span>
+<span class="bracket bracket-bl">[</span><span class="bracket bracket-br">]</span>
+
+<div class="header">
+    <div class="logo">
+        <span class="logo-mark" data-lang="en">PCI</span>
+        <span class="logo-mark lang-hidden" data-lang="es">PCI</span><br>
+        <a class="pch-btn" href="../index.html">
+            <span data-lang="en">HUMAN CONSCIOUSNESS TEST</span>
+            <span data-lang="es" class="lang-hidden">PRUEBA DE CONCIENCIA HUMANA</span>
+        </a>
+    </div>
+    <nav class="header-nav">
+        <a class="nav-link" href="../percepware/index.html"><span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span></a>
+        <a class="nav-link highlight" href="index.html"><span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span></a>
+        <a class="nav-link" href="../aei/index.html"><span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span></a>
+        <a class="nav-link" href="../neohaki/index.html"><span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span></a>
+        <a class="nav-link" href="../pram/index.html"><span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span></a>
+        <a class="nav-link" href="../licence/index.html"><span data-lang="en">License</span><span data-lang="es" class="lang-hidden">Licencia</span></a>
+        <a class="nav-link" href="../bitneko/index.html"><span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span></a>
+        <a class="nav-link" href="../space/index.html"><span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span></a>
+        <a class="nav-link" href="../agamottor/index.html"><span data-lang="en">Agamottor</span><span data-lang="es" class="lang-hidden">Agamottor</span></a>
+        <a class="nav-link" href="../little-prince/index.html"><span data-lang="en">Little Prince</span><span data-lang="es" class="lang-hidden">Little Prince</span></a>
+        <a class="nav-link" href="../ptu/index.html"><span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span></a>
+        <a class="nav-link" href="../time-machine/index.html"><span data-lang="en">Time Machine</span><span data-lang="es" class="lang-hidden">Máquina del Tiempo</span></a>
+        <a class="nav-link" href="../poetry/index.html"><span data-lang="en">Poetry</span><span data-lang="es" class="lang-hidden">Poesía</span></a>
+        <button class="translate-btn" id="langToggle" onclick="toggleLanguage()">ES</button>
+    </nav>
+</div>
+
+<div class="intro">
+    <div class="intro-text">
+        <h1 data-lang="en">Perceptual<br><em>Complexity</em><br>Index</h1>
+        <h1 data-lang="es" class="lang-hidden">Índice de<br><em>Complejidad</em><br>Perceptual</h1>
+        <p data-lang="en">The <strong>PCI (ICP)</strong> is a universal metric of perceptual density. It does not measure how much data arrived, but <strong>how much crossed the significance threshold</strong>. Applicable to any signal stream, from space telescopes to text analysis or network traffic.</p>
+        <p data-lang="es" class="lang-hidden">El <strong>ICP (o PCI)</strong> es una métrica universal de densidad perceptual. No mide cuántos datos llegaron, sino <strong>cuántos cruzaron el umbral de significancia</strong>. Aplicable a cualquier flujo de señal, desde telescopios espaciales hasta análisis de texto o tráfico de red.</p>
+        <div class="formula-note" data-lang="en"><strong>Two forms, one metric:</strong> The questionnaire uses a <strong>weighted linear sum</strong> (PCI = Σ dimᵢ × wᵢ). The technical document presents the <strong>canonical logarithmic form</strong> (<code>ICP = ln(1 + L·E)</code>). Both measure the same thing: <strong>density of significant perceptual events</strong>.</div>
+        <div class="formula-note lang-hidden" data-lang="es"><strong>Dos formas, una métrica:</strong> El cuestionario usa una <strong>suma lineal ponderada</strong> (PCI = Σ dimᵢ × wᵢ). El documento técnico presenta la <strong>forma canónica logarítmica</strong> (<code>ICP = ln(1 + L·E)</code>). Ambas miden lo mismo: <strong>densidad de eventos perceptuales significativos</strong>.</div>
+    </div>
+    <div class="intro-kv">
+        <div class="kv"><span class="kv-key" data-lang="en">Linear form</span><span class="kv-key lang-hidden" data-lang="es">Forma lineal</span><span class="kv-val white">PCI = Σ (dim × w)</span></div>
+        <div class="kv"><span class="kv-key" data-lang="en">Canonical form</span><span class="kv-key lang-hidden" data-lang="es">Forma canónica</span><span class="kv-val white">ICP = ln(1 + L·E)</span></div>
+        <div class="kv"><span class="kv-key">τ</span><span class="kv-val">5.0</span></div>
+        <div class="kv"><span class="kv-key" data-lang="en">Validation</span><span class="kv-key lang-hidden" data-lang="es">Validación</span><span class="kv-val white"><a href="index.html" style="color:var(--hi);">PoP</a> · <a href="../bitneko/index.html" style="color:var(--hi);">BITNEKO</a></span></div>
+        <div class="kv"><span class="kv-key" data-lang="en">Scale</span><span class="kv-key lang-hidden" data-lang="es">Escala</span><span class="kv-val white"><a href="#scale" style="color:var(--hi);">Type 0 – IV</a></span></div>
+    </div>
+</div>
+
+<div class="section-label" id="questionnaire" data-lang="en">PCI Questionnaire · 4 Perceptual Dimensions</div>
+<div class="section-label lang-hidden" data-lang="es">Cuestionario PCI · 4 Dimensiones Perceptuales</div>
+
+<div class="questionnaire">
+    <div class="questions">
+        <div class="q-block">
+            <div class="q-header"><span class="q-dim" data-lang="en">Dimension 1 · Resonance (R)</span><span class="q-dim lang-hidden" data-lang="es">Dimensión 1 · Resonancia (R)</span><span class="q-weight">w₁ = 0.25</span></div>
+            <div class="q-question" data-lang="en">How easily do you detect patterns or recurring structures in complex environments (data, systems, behaviors)?</div>
+            <div class="q-question lang-hidden" data-lang="es">¿Con qué facilidad detectas patrones o estructuras recurrentes en entornos complejos (datos, sistemas, comportamientos)?</div>
+            <div class="q-slider-row">
+                <span style="font-size:var(--fs-xs);color:var(--txt3);">0</span>
+                <input type="range" id="sl-resonance" min="0" max="10" step="0.5" value="5">
+                <span style="font-size:var(--fs-xs);color:var(--txt3);">10</span>
+                <span class="q-slider-val" id="v-resonance">5</span>
+            </div>
+            <div class="q-desc" data-lang="en">0 = I detect no patterns · 10 = I identify deep structures where others see noise</div>
+            <div class="q-desc lang-hidden" data-lang="es">0 = no detecto patrones · 10 = identifico estructuras profundas donde otros ven ruido</div>
+        </div>
+        <div class="q-block">
+            <div class="q-header"><span class="q-dim" data-lang="en">Dimension 2 · Semantics (S)</span><span class="q-dim lang-hidden" data-lang="es">Dimensión 2 · Semántica (S)</span><span class="q-weight">w₂ = 0.25</span></div>
+            <div class="q-question" data-lang="en">Can you interpret the meaning of information without relying on a central source to validate it?</div>
+            <div class="q-question lang-hidden" data-lang="es">¿Puedes interpretar el significado de información sin depender de una fuente central que lo valide?</div>
+            <div class="q-slider-row">
+                <span style="font-size:var(--fs-xs);color:var(--txt3);">0</span>
+                <input type="range" id="sl-semantics" min="0" max="10" step="0.5" value="5">
+                <span style="font-size:var(--fs-xs);color:var(--txt3);">10</span>
+                <span class="q-slider-val" id="v-semantics">5</span>
+            </div>
+            <div class="q-desc" data-lang="en">0 = I only trust official sources · 10 = I extract meaning from distributed signals without intermediaries</div>
+            <div class="q-desc lang-hidden" data-lang="es">0 = solo confío en fuentes oficiales · 10 = extraigo significado de señales distribuidas sin intermediarios</div>
+        </div>
+        <div class="q-block">
+            <div class="q-header"><span class="q-dim" data-lang="en">Dimension 3 · Latency (L) — inverted</span><span class="q-dim lang-hidden" data-lang="es">Dimensión 3 · Latencia (L) — invertida</span><span class="q-weight">w₃ = 0.25</span></div>
+            <div class="q-question" data-lang="en">How long does it take you to react to an unexpected change in your work environment (alert, anomaly, opportunity)?</div>
+            <div class="q-question lang-hidden" data-lang="es">¿Cuánto tardas en reaccionar ante un cambio inesperado en tu entorno de trabajo (alerta, anomalía, oportunidad)?</div>
+            <div class="q-slider-row">
+                <span style="font-size:var(--fs-xs);color:var(--txt3);">0</span>
+                <input type="range" id="sl-latency" min="0" max="10" step="0.5" value="5">
+                <span style="font-size:var(--fs-xs);color:var(--txt3);">10</span>
+                <span class="q-slider-val" id="v-latency">5</span>
+            </div>
+            <div class="q-desc" data-lang="en">0 = immediate response · 10 = I freeze or take too long to process</div>
+            <div class="q-desc lang-hidden" data-lang="es">0 = respuesta inmediata · 10 = me paralizo o tardo mucho en procesar</div>
+        </div>
+        <div class="q-block">
+            <div class="q-header"><span class="q-dim" data-lang="en">Dimension 4 · Cognitive Load (T/N)</span><span class="q-dim lang-hidden" data-lang="es">Dimensión 4 · Carga Cognitiva (T/N)</span><span class="q-weight">w₄ = 0.25</span></div>
+            <div class="q-question" data-lang="en">How much simultaneous information can you effectively process before feeling overload or decision fatigue?</div>
+            <div class="q-question lang-hidden" data-lang="es">¿Cuánta información simultánea puedes procesar de forma efectiva antes de sentir sobrecarga o fatiga de decisión?</div>
+            <div class="q-slider-row">
+                <span style="font-size:var(--fs-xs);color:var(--txt3);">0</span>
+                <input type="range" id="sl-throughput" min="0" max="10" step="0.5" value="5">
+                <span style="font-size:var(--fs-xs);color:var(--txt3);">10</span>
+                <span class="q-slider-val" id="v-throughput">5</span>
+            </div>
+            <div class="q-desc" data-lang="en">0 = one task at a time · 10 = multiple dense simultaneous streams without fatigue</div>
+            <div class="q-desc lang-hidden" data-lang="es">0 = una sola tarea a la vez · 10 = múltiples flujos densos simultáneos sin fatiga</div>
+        </div>
+    </div>
+    <div class="result-panel" id="result-panel">
+        <div class="result-heading" data-lang="en">Result</div>
+        <div class="result-heading lang-hidden" data-lang="es">Resultado</div>
+        <div class="pci-value" id="pci-display">—</div>
+        <div class="gauge-container">
+            <div class="gauge-fill" id="gauge-fill" style="width:0%"></div>
+            <div class="gauge-threshold-zone"></div>
+            <div class="gauge-threshold-label">τ = 5.0</div>
+        </div>
+        <div class="pci-classification" id="pci-classification" data-lang="en">Move the sliders. PCI is calculated <strong>in real time</strong>.</div>
+        <div class="pci-classification lang-hidden" id="pci-classification-es" data-lang="es">Mueve los deslizadores. El PCI se calcula <strong>en tiempo real</strong>.</div>
+        <div class="pci-verdict superposition" id="pci-verdict">—</div>
+        <div class="breakdown" id="breakdown"></div>
+        <button class="btn-sm" id="btn-export-csv" style="margin-top:4px"><span data-lang="en">⬇ Export CSV</span><span data-lang="es" class="lang-hidden">⬇ Exportar CSV</span></button>
+        <button class="btn-sm" id="btn-reset-pci"><span data-lang="en">↺ Reset</span><span data-lang="es" class="lang-hidden">↺ Reset</span></button>
+        <div class="last-update" id="last-update"><span data-lang="en">Last evaluation: —</span><span data-lang="es" class="lang-hidden">Última evaluación: —</span></div>
+    </div>
+</div>
+
+<div class="section-label" id="icp-doc" data-lang="en">Technical Document · ICP as Universal Metric</div>
+<div class="section-label lang-hidden" data-lang="es">Documento Técnico · ICP como Métrica Universal</div>
+
+<div class="content-section">
+    <h2 data-lang="en">The Problem ICP Solves</h2>
+    <h2 data-lang="es" class="lang-hidden">El Problema que Resuelve el ICP</h2>
+    <p data-lang="en">Every system that receives signals faces the same fundamental question: <strong>how much happened during this time interval?</strong> Not in the sense of how much data arrived, but how much of that data crossed a significance threshold — how much deserved to be integrated into the system's state.</p>
+    <p data-lang="es" class="lang-hidden">Todo sistema que recibe señales enfrenta la misma pregunta fundamental: <strong>¿cuánto ocurrió durante este intervalo de tiempo?</strong> No en el sentido de cuántos datos llegaron, sino de cuántos de esos datos cruzaron un umbral de significancia — cuántos merecían ser integrados en el estado del sistema.</p>
+
+    <div class="table-wrapper">
+        <table class="pw-table">
+            <thead><tr><th data-lang="en">Metric</th><th data-lang="es" class="lang-hidden">Métrica</th><th data-lang="en">Question it answers</th><th data-lang="es" class="lang-hidden">Pregunta que responde</th><th data-lang="en">What it ignores</th><th data-lang="es" class="lang-hidden">Lo que ignora</th></tr></thead>
+            <tbody>
+                <tr><td class="dim" data-lang="en">Mean / std dev</td><td class="dim lang-hidden" data-lang="es">Media / desv. estándar</td><td data-lang="en">What is the typical value?</td><td data-lang="es" class="lang-hidden">¿Cuál es el valor típico?</td><td data-lang="en">Temporal distribution of significant events</td><td data-lang="es" class="lang-hidden">Distribución temporal de eventos significativos</td></tr>
+                <tr><td class="dim" data-lang="en">Signal energy</td><td class="dim lang-hidden" data-lang="es">Energía de la señal</td><td data-lang="en">How much power is there?</td><td data-lang="es" class="lang-hidden">¿Cuánta potencia hay?</td><td data-lang="en">Whether that power exceeds a relevant threshold</td><td data-lang="es" class="lang-hidden">Si esa potencia supera algún umbral relevante</td></tr>
+                <tr><td class="dim" data-lang="en">Shannon entropy</td><td class="dim lang-hidden" data-lang="es">Entropía de Shannon</td><td data-lang="en">How much information is there?</td><td data-lang="es" class="lang-hidden">¿Cuánta información hay?</td><td data-lang="en">The temporal weight of events above threshold</td><td data-lang="es" class="lang-hidden">El peso temporal de los eventos sobre el umbral</td></tr>
+                <tr><td class="dim" data-lang="en">Zero-crossing rate</td><td class="dim lang-hidden" data-lang="es">Tasa de cruces por cero</td><td data-lang="en">How often does the sign change?</td><td data-lang="es" class="lang-hidden">¿Con qué frecuencia cambia el signo?</td><td data-lang="en">The magnitude of those changes</td><td data-lang="es" class="lang-hidden">La magnitud de esos cambios</td></tr>
+                <tr><td class="dim" style="color:var(--hi);">ICP / PCI</td><td style="color:var(--hi);" data-lang="en">How dense was the significant experience?</td><td style="color:var(--hi);" data-lang="es" class="lang-hidden">¿Cuán densa fue la experiencia significativa?</td><td>—</td><td>—</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="note-block" data-lang="en">Operational principle: not all data is perception. ICP quantifies the proportion of time a system was, in the formal sense of the term, perceiving.</div>
+    <div class="note-block lang-hidden" data-lang="es">Principio operacional: no todo dato es percepción. El ICP cuantifica la proporción de tiempo en que un sistema estuvo, en el sentido formal del término, percibiendo.</div>
+
+    <h3 data-lang="en">Formal Definition</h3>
+    <h3 data-lang="es" class="lang-hidden">Definición Formal</h3>
+    <p data-lang="en">Given a signal stream processed by the <a href="../percepware/index.html" style="color:var(--hi);">Perceptual Wave Function Ψ(t)</a>, with L total samples in a session and collapse threshold <a href="index.html" style="color:var(--hi);">τ</a>, we define:</p>
+    <p data-lang="es" class="lang-hidden">Dado un flujo de señal procesado por la <a href="../percepware/index.html" style="color:var(--hi);">Función de Onda Perceptual Ψ(t)</a>, con L muestras totales en una sesión y umbral de colapso <a href="index.html" style="color:var(--hi);">τ</a>, se define:</p>
+    <div class="code-block">ICP = ln(1 + L · E)
+
+where E is the resonant density:
+
+E = |{t : |Ψ(t)| > τ}| / L</div>
+    <p data-lang="en">That is, <strong>E</strong> is the fraction of samples where the magnitude of Ψ(t) exceeds the threshold τ. The product <strong>L · E</strong> counts the absolute number of perceptual collapses in the session.</p>
+    <p data-lang="es" class="lang-hidden">Es decir, <strong>E</strong> es la fracción de muestras en que la magnitud de Ψ(t) supera el umbral τ. El producto <strong>L · E</strong> cuenta el número absoluto de colapsos perceptuales en la sesión.</p>
+
+    <h4 data-lang="en">Mathematical Properties</h4>
+    <h4 data-lang="es" class="lang-hidden">Propiedades Matemáticas</h4>
+    <ul>
+        <li data-lang="en"><strong>Lower bound:</strong> ICP ≥ 0 always. ICP = 0 only if E = 0 (no sample crosses τ).</li>
+        <li data-lang="es" class="lang-hidden"><strong>Acotación inferior:</strong> ICP ≥ 0 siempre. ICP = 0 solo si E = 0 (ninguna muestra cruza τ).</li>
+        <li data-lang="en"><strong>Logarithmic growth:</strong> The logarithm prevents unbounded growth with L.</li>
+        <li data-lang="es" class="lang-hidden"><strong>Crecimiento logarítmico:</strong> El logaritmo evita crecimiento no acotado con L.</li>
+        <li data-lang="en"><strong>Dual sensitivity:</strong> Responds to changes in both L (duration) and E (collapse density), sublinearly.</li>
+        <li data-lang="es" class="lang-hidden"><strong>Sensibilidad dual:</strong> Responde tanto a cambios en L (duración) como en E (densidad de colapsos), de forma sublineal.</li>
+        <li data-lang="en"><strong>Absolute scale independence:</strong> Does not depend on original signal units. Depends on τ as a domain-relative calibrator.</li>
+        <li data-lang="es" class="lang-hidden"><strong>Independencia de escala absoluta:</strong> No depende de las unidades de la señal original. Depende de τ como calibrador relativo al dominio.</li>
+    </ul>
+
+    <h3 data-lang="en">Relationship between Linear PCI and Canonical ICP</h3>
+    <h3 data-lang="es" class="lang-hidden">Relación entre PCI Lineal e ICP Canónico</h3>
+    <p data-lang="en">The <strong>questionnaire PCI</strong> (weighted linear sum) and the <strong>canonical ICP</strong> (logarithmic) measure the same fundamental property —density of significant perceptual events— but in different contexts:</p>
+    <p data-lang="es" class="lang-hidden">El <strong>PCI del cuestionario</strong> (suma lineal ponderada) y el <strong>ICP canónico</strong> (logarítmico) miden la misma propiedad fundamental —densidad de eventos perceptuales significativos— pero en contextos distintos:</p>
+    <ul>
+        <li data-lang="en"><strong>Linear PCI (questionnaire):</strong> Designed for rapid observer evaluation via 4 self-assessed dimensions on a 0–10 scale.</li>
+        <li data-lang="es" class="lang-hidden"><strong>PCI lineal (cuestionario):</strong> Diseñado para evaluación rápida de un observador mediante 4 dimensiones autoevaluadas en escala 0–10.</li>
+        <li data-lang="en"><strong>Canonical ICP (technical document):</strong> Designed for sampled signal processing where L is known and E can be calculated.</li>
+        <li data-lang="es" class="lang-hidden"><strong>ICP canónico (documento técnico):</strong> Diseñado para procesamiento de señales muestreadas donde se conoce L y se puede calcular E.</li>
+    </ul>
+    <div class="note-block" data-lang="en">Both converge on the same interpretation: low values indicate low perceptual density (<a href="index.html" style="color:var(--amber);">SUPERPOSITION</a>), high values indicate high density (<a href="index.html" style="color:var(--amber);">COLLAPSE</a>).</div>
+    <div class="note-block lang-hidden" data-lang="es">Ambos convergen en la misma interpretación: valores bajos indican baja densidad perceptual (<a href="index.html" style="color:var(--amber);">SUPERPOSITION</a>), valores altos indican alta densidad (<a href="index.html" style="color:var(--amber);">COLLAPSE</a>).</div>
+
+    <h3 data-lang="en">Use Cases</h3>
+    <h3 data-lang="es" class="lang-hidden">Casos de Uso</h3>
+    <div class="table-wrapper">
+        <table class="pw-table">
+            <thead><tr><th>#</th><th data-lang="en">Signal</th><th data-lang="es" class="lang-hidden">Señal</th><th>τ</th><th data-lang="en">ICP measures</th><th data-lang="es" class="lang-hidden">ICP mide</th></tr></thead>
+            <tbody>
+                <tr><td class="dim">1</td><td data-lang="en">Stellar flux (TESS)</td><td data-lang="es" class="lang-hidden">Flujo estelar (TESS)</td><td>0.30</td><td data-lang="en">Transit density</td><td data-lang="es" class="lang-hidden">Densidad de tránsitos</td></tr>
+                <tr><td class="dim">2</td><td data-lang="en">Audio (microphone)</td><td data-lang="es" class="lang-hidden">Audio (micrófono)</td><td>0.2–0.4</td><td data-lang="en">Sound activity density</td><td data-lang="es" class="lang-hidden">Densidad de actividad sonora</td></tr>
+                <tr><td class="dim">3</td><td data-lang="en">Accelerometer</td><td data-lang="es" class="lang-hidden">Acelerómetro</td><td>0.15–0.25</td><td data-lang="en">Motion density</td><td data-lang="es" class="lang-hidden">Densidad de movimiento</td></tr>
+                <tr><td class="dim">4</td><td data-lang="en">EEG (neuro)</td><td data-lang="es" class="lang-hidden">EEG (neuro)</td><td>0.3–0.5</td><td data-lang="en">Sustained attention density</td><td data-lang="es" class="lang-hidden">Densidad de atención sostenida</td></tr>
+                <tr><td class="dim">5</td><td data-lang="en">Text stream (NLP)</td><td data-lang="es" class="lang-hidden">Flujo de texto (PLN)</td><td>0.6–0.8</td><td data-lang="en">On-topic content density</td><td data-lang="es" class="lang-hidden">Densidad de contenido on-topic</td></tr>
+                <tr><td class="dim">6</td><td data-lang="en">Network traffic</td><td data-lang="es" class="lang-hidden">Tráfico de red</td><td>0.5</td><td data-lang="en">Significant utilization density</td><td data-lang="es" class="lang-hidden">Densidad de utilización significativa</td></tr>
+                <tr><td class="dim">7</td><td data-lang="en">Financial price</td><td data-lang="es" class="lang-hidden">Precio financiero</td><td>0.33</td><td data-lang="en">Significant movement density</td><td data-lang="es" class="lang-hidden">Densidad de movimientos significativos</td></tr>
+                <tr><td class="dim">8</td><td data-lang="en">Multimodal fusion</td><td data-lang="es" class="lang-hidden">Fusión multimodal</td><td data-lang="en">Per channel</td><td data-lang="es" class="lang-hidden">Por canal</td><td data-lang="en">Multisensory perceptual density index</td><td data-lang="es" class="lang-hidden">Índice de densidad perceptual multisensorial</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 data-lang="en">ICP Value Interpretation</h3>
+    <h3 data-lang="es" class="lang-hidden">Interpretación de Valores ICP</h3>
+    <div class="table-wrapper">
+        <table class="pw-table">
+            <thead><tr><th>ICP</th><th data-lang="en">Interpretation</th><th data-lang="es" class="lang-hidden">Interpretación</th><th data-lang="en">Decision</th><th data-lang="es" class="lang-hidden">Decisión</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>0.0 – 0.5</td>
+                    <td data-lang="en">No significant activity</td>
+                    <td data-lang="es" class="lang-hidden">Sin actividad significativa</td>
+                    <td style="color:var(--red);" data-lang="en">DISCARD</td>
+                    <td style="color:var(--red);" data-lang="es" class="lang-hidden">DESCARTAR</td>
+                </tr>
+                <tr>
+                    <td>0.5 – 1.5</td>
+                    <td data-lang="en">Sporadic activity</td>
+                    <td data-lang="es" class="lang-hidden">Actividad esporádica</td>
+                    <td style="color:var(--amber);" data-lang="en">Discard or review</td>
+                    <td style="color:var(--amber);" data-lang="es" class="lang-hidden">Descartar o revisar</td>
+                </tr>
+                <tr>
+                    <td>1.5 – 3.0</td>
+                    <td data-lang="en">Moderate activity</td>
+                    <td data-lang="es" class="lang-hidden">Actividad moderada</td>
+                    <td style="color:var(--hi);" data-lang="en">STORE</td>
+                    <td style="color:var(--hi);" data-lang="es" class="lang-hidden">ALMACENAR</td>
+                </tr>
+                <tr>
+                    <td>3.0 – 5.0</td>
+                    <td data-lang="en">High activity</td>
+                    <td data-lang="es" class="lang-hidden">Actividad alta</td>
+                    <td style="color:var(--hi);" data-lang="en">STORE high priority</td>
+                    <td style="color:var(--hi);" data-lang="es" class="lang-hidden">ALMACENAR alta prioridad</td>
+                </tr>
+                <tr>
+                    <td>> 5.0</td>
+                    <td data-lang="en">Relative saturation</td>
+                    <td data-lang="es" class="lang-hidden">Saturación relativa</td>
+                    <td style="color:var(--amber);" data-lang="en">STORE · review τ</td>
+                    <td style="color:var(--amber);" data-lang="es" class="lang-hidden">ALMACENAR · revisar τ</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 data-lang="en">Canonical Implementation (Python)</h3>
+    <h3 data-lang="es" class="lang-hidden">Implementación Canónica (Python)</h3>
+    <div class="code-block">import numpy as np
+
+def compute_icp(signal: np.ndarray, tau: float = 0.3) -> float:
+    """Computes the Perceptual Complexity Index (ICP)."""
+    L = len(signal)
+    if L == 0:
+        return 0.0
+    E = np.sum(np.abs(signal) > tau) / L
+    return float(np.log(1.0 + L * E))
+
+
+def fuse_icp(icp_values: dict, weights: dict = None) -> float:
+    """Fuses multiple ICPs into a weighted global index."""
+    keys = list(icp_values.keys())
+    if weights is None:
+        weights = {k: 1.0 / len(keys) for k in keys}
+    return sum(weights[k] * icp_values[k] for k in keys)
+
+
+# Example: ICP on astronomical data (TESS/WASP-18b)
+flux = np.array([1.0, 0.998, 0.997, 0.995, 0.996, 0.999, 1.0, 1.001])
+icp_astro = compute_icp(flux, tau=0.30)
+print(f"Astronomical ICP = {icp_astro:.4f}")</div>
+</div>
+
+<div class="section-label" id="scale" data-lang="en">Epistemological Kardashev Scale · Types 0 to IV</div>
+<div class="section-label lang-hidden" data-lang="es">Escala Kardashev Epistemológica · Tipos 0 al IV</div>
+
+<div class="scale-section">
+    <h2 data-lang="en">The New Civilizational Scale</h2>
+    <h2 data-lang="es" class="lang-hidden">La Nueva Escala Civilizacional</h2>
+    <p class="scale-subtitle" data-lang="en">While <a href="index.html" style="color:var(--hi);">Kardashev</a> measures what a civilization <strong>consumes</strong>, the perceptual scale measures what a civilization <strong>perceives</strong>.</p>
+    <p class="scale-subtitle lang-hidden" data-lang="es">Mientras <a href="index.html" style="color:var(--hi);">Kardashev</a> mide lo que una civilización <strong>consume</strong>, la escala perceptual mide lo que una civilización <strong>percibe</strong>.</p>
+
+    <div class="scale-table">
+        <div class="scale-row">
+            <div class="scale-type"><span data-lang="en">TYPE 0</span><span data-lang="es" class="lang-hidden">TIPO 0</span></div>
+            <div class="scale-range">PCI < 2.0</div>
+            <div class="scale-desc" data-lang="en">Pre-consciousness. Linear perception. Instinctive reaction. No structural anticipation.</div>
+            <div class="scale-desc lang-hidden" data-lang="es">Pre-consciencia. Percepción lineal. Reacción instintiva. Sin anticipación estructural.</div>
+            <div class="scale-bar-cell"><div class="scale-mini-bar"><div class="scale-mini-fill" style="width:15%;background:var(--txt3);"></div></div></div>
+        </div>
+        <div class="scale-row">
+            <div class="scale-type"><span data-lang="en">TYPE I</span><span data-lang="es" class="lang-hidden">TIPO I</span></div>
+            <div class="scale-range">PCI 2.0–5.0</div>
+            <div class="scale-desc" data-lang="en">Planetary. Basic symbolic consensus. Cyclical pattern perception. High latency.</div>
+            <div class="scale-desc lang-hidden" data-lang="es">Planetario. Consenso simbólico básico. Percepción de patrones cíclicos. Latencia alta.</div>
+            <div class="scale-bar-cell"><div class="scale-mini-bar"><div class="scale-mini-fill" style="width:35%;background:var(--hi2);"></div></div></div>
+        </div>
+        <div class="scale-row">
+            <div class="scale-type"><span data-lang="en">TYPE II</span><span data-lang="es" class="lang-hidden">TIPO II</span></div>
+            <div class="scale-range">PCI 5.0–8.0</div>
+            <div class="scale-desc" data-lang="en">Star System. Harmonic resonance. High semantic depth. Anticipation of complex systemic events.</div>
+            <div class="scale-desc lang-hidden" data-lang="es">Sistema Estelar. Resonancia armónica. Alta profundidad semántica. Anticipación de eventos sistémicos complejos.</div>
+            <div class="scale-bar-cell"><div class="scale-mini-bar"><div class="scale-mini-fill" style="width:60%;background:var(--hi);"></div></div></div>
+        </div>
+        <div class="scale-row">
+            <div class="scale-type"><span data-lang="en">TYPE III</span><span data-lang="es" class="lang-hidden">TIPO III</span></div>
+            <div class="scale-range">PCI 8.0–9.5</div>
+            <div class="scale-desc" data-lang="en">Galactic. Intentional <a href="../percepware/index.html" style="color:var(--hi);">PWF</a> collapse. Full board vision. Full <a href="../aei/index.html" style="color:var(--hi);">AEI</a> infrastructure.</div>
+            <div class="scale-desc lang-hidden" data-lang="es">Galáctico. Colapso intencionado de la <a href="../percepware/index.html" style="color:var(--hi);">PWF</a>. Visión completa del tablero. Infraestructura <a href="../aei/index.html" style="color:var(--hi);">AEI</a> plena.</div>
+            <div class="scale-bar-cell"><div class="scale-mini-bar"><div class="scale-mini-fill" style="width:85%;background:var(--amber);"></div></div></div>
+        </div>
+        <div class="scale-row">
+            <div class="scale-type"><span data-lang="en">TYPE IV</span><span data-lang="es" class="lang-hidden">TIPO IV</span></div>
+            <div class="scale-range">PCI > 9.5</div>
+            <div class="scale-desc" data-lang="en">Universal. Co-creation. The observer IS the Wave Function. No distinction between perception and reality.</div>
+            <div class="scale-desc lang-hidden" data-lang="es">Universal. Co-creación. El observador ES la Función de Onda. Sin distinción entre percepción y realidad.</div>
+            <div class="scale-bar-cell"><div class="scale-mini-bar"><div class="scale-mini-fill" style="width:98%;background:var(--red);"></div></div></div>
+        </div>
+    </div>
+    <p class="scale-note" data-lang="en">* Estimated ranges. Definitive calibration pending validation with real data.</p>
+    <p class="scale-note lang-hidden" data-lang="es">* Rangos estimados. Calibración definitiva pendiente de validación con datos reales.</p>
+</div>
+
+<div class="footer">
+    <div class="footer-modules">
+        <a href="../percepware/index.html"><span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span></a><span>|</span>
+        <a href="index.html" class="footer-current"><span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span></a><span>|</span>
+        <a href="../aei/index.html"><span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span></a><span>|</span>
+        <a href="../neohaki/index.html"><span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span></a><span>|</span>
+        <a href="../pram/index.html"><span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span></a><span>|</span>
+        <a href="../licence/index.html"><span data-lang="en">License</span><span data-lang="es" class="lang-hidden">Licencia</span></a><span>|</span>
+        <a href="../bitneko/index.html"><span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span></a><span>|</span>
+        <a href="../space/index.html"><span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span></a><span>|</span>
+        <a href="../agamottor/index.html"><span data-lang="en">Agamottor</span><span data-lang="es" class="lang-hidden">Agamottor</span></a><span>|</span>
+        <a href="../little-prince/index.html"><span data-lang="en">Little Prince</span><span data-lang="es" class="lang-hidden">Little Prince</span></a><span>|</span>
+        <a href="../ptu/index.html"><span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span></a><span>|</span>
+        <a href="../time-machine/index.html"><span data-lang="en">Time Machine</span><span data-lang="es" class="lang-hidden">Máquina del Tiempo</span></a><span>|</span>
+        <a href="../poetry/index.html"><span data-lang="en">Poetry</span><span data-lang="es" class="lang-hidden">Poesía</span></a>
+    </div>
+    <div class="footer-social">
+        <a href="https://orcid.org/0009-0002-3432-1710" target="_blank" rel="noopener"><span data-lang="en">ORCID</span><span data-lang="es" class="lang-hidden">ORCID</span></a><span> / </span>
+        <a href="https://github.com/PERCEPTEMPLE" target="_blank" rel="noopener"><span data-lang="en">GITHUB</span><span data-lang="es" class="lang-hidden">GITHUB</span></a><span> / </span>
+        <a href="https://x.com/panperceptual" target="_blank" rel="noopener"><span data-lang="en">X</span><span data-lang="es" class="lang-hidden">X</span></a>
+    </div>
+    <div class="footer-bottom">
+        <span data-lang="en">DEPOSITED IN THE INTELLECTUAL PROPERTY REGISTRY · EL SALVADOR · DANY D. RUIZ</span>
+        <span data-lang="es" class="lang-hidden">DEPOSITADO EN EL REGISTRO DE LA PROPIEDAD INTELECTUAL · EL SALVADOR · DANY D. RUIZ</span><br>
+        <span data-lang="en">Before They See Us, We Already Are</span>
+        <span data-lang="es" class="lang-hidden">Antes de que nos vean, ya somos</span>
+    </div>
+</div>
+
+<script>
+    function toggleLanguage() {
+        var html    = document.documentElement;
+        var current = html.lang || 'en';
+        var next    = current === 'en' ? 'es' : 'en';
+        var hide    = next === 'en' ? 'es' : 'en';
+        html.lang = next;
+        document.querySelectorAll('[data-lang="' + next + '"]')
+            .forEach(function(el) { el.classList.remove('lang-hidden'); });
+        document.querySelectorAll('[data-lang="' + hide + '"]')
+            .forEach(function(el) { el.classList.add('lang-hidden'); });
+        document.getElementById('langToggle').textContent =
+            next === 'en' ? 'ES' : 'EN';
+        localStorage.setItem('perceptemple-lang', next);
+    }
+    (function() {
+        var saved = localStorage.getItem('perceptemple-lang');
+        if (saved && saved === 'es') { toggleLanguage(); }
+    })();
+</script>
+
+<script>
+(function(){
+var slR=document.getElementById('sl-resonance'),slS=document.getElementById('sl-semantics'),slL=document.getElementById('sl-latency'),slT=document.getElementById('sl-throughput');
+var vR=document.getElementById('v-resonance'),vS=document.getElementById('v-semantics'),vL=document.getElementById('v-latency'),vT=document.getElementById('v-throughput');
+var w1=0.25,w2=0.25,w3=0.25,w4=0.25,tauR=5.0,Lmax=10;
+var lastResult=null;
+
+function updSliders(){vR.textContent=slR.value;vS.textContent=slS.value;vL.textContent=slL.value;vT.textContent=slT.value}
+slR.addEventListener('input',function(){updSliders();updateUI()});
+slS.addEventListener('input',function(){updSliders();updateUI()});
+slL.addEventListener('input',function(){updSliders();updateUI()});
+slT.addEventListener('input',function(){updSliders();updateUI()});
+
+function calcPCI(){var R=parseFloat(slR.value),S=parseFloat(slS.value),L=parseFloat(slL.value),TN=parseFloat(slT.value);var pci=(TN*w4)+((1-L/Lmax)*w3)+(R*w1)+(S*w2);return{pci:Math.min(10,Math.max(0,pci)),R,S,L,TN,presence:(1-L/Lmax)*10}}
+function classify(pci){
+    if(pci<2.0)return{type_es:'TIPO 0',type_en:'TYPE 0',name_es:'Pre-Consciencia',name_en:'Pre-Consciousness',desc_es:'Percepción lineal. Reacción instintiva. Sin anticipación estructural.',desc_en:'Linear perception. Instinctive reaction. No structural anticipation.'};
+    if(pci<5.0)return{type_es:'TIPO I',type_en:'TYPE I',name_es:'Planetario',name_en:'Planetary',desc_es:'Consenso simbólico básico. Percepción de patrones cíclicos. Latencia alta.',desc_en:'Basic symbolic consensus. Cyclical pattern perception. High latency.'};
+    if(pci<8.0)return{type_es:'TIPO II',type_en:'TYPE II',name_es:'Sistema Estelar',name_en:'Star System',desc_es:'Resonancia armónica. Alta profundidad semántica. Anticipación de eventos sistémicos complejos.',desc_en:'Harmonic resonance. High semantic depth. Anticipation of complex systemic events.'};
+    if(pci<=9.5)return{type_es:'TIPO III',type_en:'TYPE III',name_es:'Galáctico',name_en:'Galactic',desc_es:'Colapso intencionado de la PWF. Visión completa del tablero. Infraestructura AEI plena.',desc_en:'Intentional PWF collapse. Full board vision. Full AEI infrastructure.'};
+    return{type_es:'TIPO IV',type_en:'TYPE IV',name_es:'Universal',name_en:'Universal',desc_es:'Co-creación. El observador ES la Función de Onda.',desc_en:'Co-creation. The observer IS the Wave Function.'};
+}
+
+function getTS(){var n=new Date();var off=-n.getTimezoneOffset();var oh=Math.floor(Math.abs(off)/60),om=Math.abs(off)%60;var os=(off>=0?'+':'-')+String(oh).padStart(2,'0')+':'+String(om).padStart(2,'0');var il=n.getFullYear()+'-'+String(n.getMonth()+1).padStart(2,'0')+'-'+String(n.getDate()).padStart(2,'0')+'T'+String(n.getHours()).padStart(2,'0')+':'+String(n.getMinutes()).padStart(2,'0')+':'+String(n.getSeconds()).padStart(2,'0')+os;var iu=n.toISOString();var tz=Intl.DateTimeFormat('en',{timeZoneName:'short'}).formatToParts(n).find(function(p){return p.type==='timeZoneName'})?.value||'';var dp=n.toLocaleString('es-SV',{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false,timeZoneName:'short'});var fn=il.replace(/:/g,'-').replace(/\..+/,'').replace('T','_');return{isoUTC:iu,isoLocal:il,tzAbbr:tz,display:dp,filename:fn}}
+
+function updateUI(){
+    var r=calcPCI();var pci=r.pci,R=r.R,S=r.S,L=r.L,TN=r.TN,presence=r.presence;var cl=classify(pci);var isC=pci>tauR;var ts=getTS();lastResult={pci:pci,R:R,S:S,L:L,TN:TN,presence:presence,classification:cl,isCollapse:isC,timestamp:ts};
+    var isEs=document.documentElement.lang!=='en';
+    document.getElementById('pci-display').textContent=pci.toFixed(2);
+    document.getElementById('gauge-fill').style.width=(pci*10)+'%';
+    document.getElementById('pci-classification').innerHTML='<strong>'+(isEs?cl.type_es:cl.type_en)+': '+(isEs?cl.name_es:cl.name_en)+'</strong><br>'+(isEs?cl.desc_es:cl.desc_en);
+    var ve=document.getElementById('pci-verdict');
+    if(isC){ve.textContent='● COLLAPSE & INTEGRATE';ve.className='pci-verdict collapse'}
+    else{ve.textContent='○ SUPERPOSITION';ve.className='pci-verdict superposition'}
+    document.getElementById('breakdown').innerHTML=
+        '<div class="br-row"><span class="br-label">'+(isEs?'Resonancia':'Resonance')+'</span><div class="br-bar-bg"><div class="br-bar-fill" style="width:'+(R*10)+'%;background:var(--amber);"></div></div><span class="br-val">'+R+'</span></div>'+
+        '<div class="br-row"><span class="br-label">'+(isEs?'Semántica':'Semantics')+'</span><div class="br-bar-bg"><div class="br-bar-fill" style="width:'+(S*10)+'%;background:var(--amber2);"></div></div><span class="br-val">'+S+'</span></div>'+
+        '<div class="br-row"><span class="br-label">'+(isEs?'Presencia':'Presence')+'</span><div class="br-bar-bg"><div class="br-bar-fill" style="width:'+(presence*10)+'%;background:var(--hi);"></div></div><span class="br-val">'+presence.toFixed(1)+'</span></div>'+
+        '<div class="br-row"><span class="br-label">'+(isEs?'Carga Cog.':'Cog. Load')+'</span><div class="br-bar-bg"><div class="br-bar-fill" style="width:'+(TN*10)+'%;background:var(--hi2);"></div></div><span class="br-val">'+TN+'</span></div>';
+    document.getElementById('last-update').innerHTML=(isEs?'Última evaluación:<br>':'Last evaluation:<br>')+ts.display+'<br><span style="font-size:0.44rem;">('+ts.isoLocal+')</span>';
+}
+
+function exportCSV(){
+    if(!lastResult)updateUI();if(!lastResult)return;
+    var r=lastResult;
+    var header='# PERCEPTEMPLE · PCI v1.0 · Perceptual Complexity Index Questionnaire\n';
+    header+='# Parameters: w1='+w1+', w2='+w2+', w3='+w3+', w4='+w4+', Tau='+tauR+', Scale=0-10\n';
+    header+='# Columns: UTC Timestamp, Local Timestamp (ISO), Timezone, Local Display, Resonance (R, 0-10), Semantics (S, 0-10), Latency (L, 0-10, inverted), Presence (1-L/10), Throughput (T/N, 0-10), PCI Score (0-10), Weight R, Weight S, Weight L, Weight T/N, Collapse Threshold (Tau), Classification (Kardashev Type), Verdict (COLLAPSE | SUPERPOSITION)\n';
+    var csv=header+'UTC_Timestamp,Local_Timestamp_ISO,Timezone,Local_Display,Resonance_R,Semantics_S,Latency_L,Presence,Throughput_TN,PCI_Score,Weight_R,Weight_S,Weight_L,Weight_TN,Tau,Classification,Verdict\n';
+    csv+=r.timestamp.isoUTC+','+r.timestamp.isoLocal+','+r.timestamp.tzAbbr+',"'+r.timestamp.display+'",'+r.R+','+r.S+','+r.L+','+r.presence.toFixed(1)+','+r.TN+','+r.pci.toFixed(2)+','+w1+','+w2+','+w3+','+w4+','+tauR+','+r.classification.type_en+' '+r.classification.name_en+','+(r.isCollapse?'COLLAPSE':'SUPERPOSITION')+'\n';
+    var b=new Blob([csv],{type:'text/csv;charset=utf-8;'});
+    var u=URL.createObjectURL(b);var a=document.createElement('a');
+    a.href=u;a.download='perceptemple_pci_'+r.timestamp.filename+'.csv';a.click();URL.revokeObjectURL(u);
+}
+
+document.getElementById('btn-reset-pci').addEventListener('click',function(){slR.value=5;slS.value=5;slL.value=5;slT.value=5;updSliders();updateUI()});
+document.getElementById('btn-export-csv').addEventListener('click',exportCSV);
+updSliders();updateUI();
+window.updatePCIUI=updateUI;
+})();
+</script>
+</body>
+</html>
