@@ -1,0 +1,48 @@
+/*
+  X-Robots-Tag: index, follow
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Cache-Control: public, max-age=3600
+
+/index.html
+  Cache-Control: public, max-age=1800
+
+/*.html
+  Cache-Control: public, max-age=3600
+
+/*.png
+  Cache-Control: public, max-age=604800
+
+/*.jpg
+  Cache-Control: public, max-age=604800
+
+/*.ico
+  Cache-Control: public, max-age=604800
+
+/*.css
+  Cache-Control: public, max-age=604800
+
+/*.js
+  Cache-Control: public, max-age=604800
+
+/*.woff2
+  Cache-Control: public, max-age=2592000
+
+/robots.txt
+  Cache-Control: public, max-age=86400
+  X-Robots-Tag: noindex
+
+/llms.txt
+  Cache-Control: public, max-age=86400
+  X-Robots-Tag: noindex
+
+/llms-full.txt
+  Cache-Control: public, max-age=86400
+  X-Robots-Tag: noindex
+
+/sitemap.xml
+  Cache-Control: public, max-age=86400
+
+/manifest.json
+  Cache-Control: public, max-age=604800
