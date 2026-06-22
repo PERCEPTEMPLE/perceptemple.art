@@ -86,7 +86,7 @@
   }
   </script>
 
-  <title>PERCEPTEMPLE</title>
+  <title>BITNEKO · PERCEPTEMPLE</title>
 
   <link rel="icon" href="../../favicon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -360,11 +360,11 @@
     const i18n = {
       en: {
         eyebrow: "ACCESS THE WHITE-PAPER",
-        insight: "What if Satoshi Nakamoto were a Salvadoran artisan? BITNEKO as proof that true consensus does not reside in code, but in collective perception.",
+        insight: "What if Satoshi Nakamoto were a Salvadoran artisan?<br>BITNEKO as proof that true consensus does not reside in code, but in collective perception.",
       },
       es: {
         eyebrow: "ACCEDE AL WHITE-PAPER",
-        insight: "¿Y si Satoshi Nakamoto fuera un artesano salvadoreño? BITNEKO como prueba de que el verdadero consenso no reside en el código, sino en la percepción colectiva.",
+        insight: "¿Y si Satoshi Nakamoto fuera un artesano salvadoreño?<br>BITNEKO como prueba de que el verdadero consenso no reside en el código, sino en la percepción colectiva.",
       }
     };
 
@@ -377,7 +377,7 @@
 
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        if (t[key] !== undefined) el.textContent = t[key];
+        if (t[key] !== undefined) el.innerHTML = t[key];
       });
 
       document.documentElement.setAttribute('lang', lang === 'es' ? 'es' : 'en');
