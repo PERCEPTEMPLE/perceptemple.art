@@ -136,7 +136,7 @@
             white-space: nowrap;
             transition: all 0.2s;
         }
-        .pch-btn:hover { background: rgba(255,32,32,0.06); color: var(--red); }
+        .pch-btn:hover { background: rgba(0,255,65,0.08); color: var(--hi); }
 
         .translate-btn {
             position: relative;
@@ -173,6 +173,7 @@
             z-index: 100;
             flex-wrap: wrap;
             gap: 0.75rem;
+            overflow: visible !important;
         }
 
         .logo-mark {
@@ -527,6 +528,229 @@
             .footer-modules { gap: 0.75rem; }
             .legend { gap: 0.75rem; }
         }
+
+        /* ============================================ */
+        /*  LOGO CONTROLS                               */
+        /* ============================================ */
+        .logo-controls {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 6px;
+            align-items: center;
+            position: relative;
+            isolation: isolate;
+            overflow: visible !important;
+        }
+
+        .logo {
+            overflow: visible !important;
+        }
+
+        /* ============================================ */
+        /*  NODES NAV                                   */
+        /* ============================================ */
+        .nodes-btn {
+            background: transparent;
+            border: 1px solid var(--amber);
+            color: var(--amber);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.375rem 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-radius: 2px;
+            font-weight: 600;
+            white-space: nowrap;
+            flex-shrink: 0;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .nodes-btn:hover,
+        .nodes-btn.open {
+            background: rgba(255,178,0,0.08);
+            color: var(--amber2);
+            border-color: var(--amber2);
+        }
+
+        .nodes-panel {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: auto;
+            background: var(--bg);
+            border: 1px solid var(--rule);
+            border-top: 2px solid var(--amber);
+            padding: 0.5rem 0;
+            z-index: 200;
+            min-width: 180px;
+            max-width: calc(100vw - 1rem);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+            overflow-x: hidden;
+        }
+        .nodes-panel.open {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nodes-link {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            text-decoration: none;
+            padding: 0.5rem 1.25rem;
+            transition: all 0.2s;
+            font-weight: 500;
+            white-space: nowrap;
+            border-bottom: 1px solid rgba(10,92,30,0.3);
+        }
+        .nodes-link:last-child {
+            border-bottom: none;
+        }
+        .nodes-link:hover,
+        .nodes-link.active {
+            color: var(--hi);
+            background: rgba(0,255,65,0.03);
+            padding-left: 1.5rem;
+        }
+
+        .nodes-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 199;
+        }
+        .nodes-overlay.open {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .nodes-panel {
+                left: 0;
+                right: auto;
+                min-width: calc(100vw - 2rem);
+                max-width: calc(100vw - 1rem);
+            }
+        }
+
+        /* ============================================ */
+        /*  NODES FOOTER                                */
+        /* ============================================ */
+        .footer-nodes {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 0.875rem;
+            position: relative;
+            isolation: isolate;
+            overflow: visible !important;
+        }
+
+        .nodes-btn-footer {
+            background: transparent;
+            border: 1px solid var(--amber);
+            color: var(--amber);
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.375rem 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-radius: 2px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .nodes-btn-footer:hover,
+        .nodes-btn-footer.open {
+            background: rgba(255,178,0,0.08);
+            color: var(--amber2);
+            border-color: var(--amber2);
+        }
+
+        .nodes-panel-footer {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            max-width: 200px;
+            background: var(--bg);
+            border: 1px solid var(--rule);
+            border-bottom: 2px solid var(--amber);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 0.5rem;
+            z-index: 200;
+            box-shadow: 0 -8px 24px rgba(0,0,0,0.6);
+        }
+        .nodes-panel-footer.open {
+            display: flex;
+        }
+
+        .nodes-link-footer {
+            font-family: 'Orbitron', sans-serif;
+            font-size: var(--fs-xs);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--txt3);
+            text-decoration: none;
+            padding: 0.5rem 1.25rem;
+            transition: all 0.2s;
+            font-weight: 500;
+            text-align: center;
+            border-bottom: 1px solid rgba(10,92,30,0.3);
+        }
+        .nodes-link-footer:last-child {
+            border-bottom: none;
+        }
+        .nodes-link-footer:hover,
+        .nodes-link-footer.active {
+            color: var(--hi);
+            background: rgba(0,255,65,0.03);
+        }
+
+        @media (max-width: 768px) {
+            .nodes-panel-footer {
+                max-width: calc(100vw - 2rem);
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        /* ============================================ */
+        /*  MOBILE BANNER                               */
+        /* ============================================ */
+        .mobile-banner {
+            display: none;
+            width: 100%;
+            max-width: 75rem;
+            padding: 0.625rem 1.5rem;
+            background: rgba(255,178,0,0.04);
+            border-bottom: 1px solid var(--amber);
+        }
+        .mobile-banner p {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: var(--fs-xs);
+            color: rgba(255,178,0,0.7);
+            line-height: 1.6;
+            text-align: center;
+            max-width: 100%;
+            margin-bottom: 0;
+        }
+        .mobile-banner p strong {
+            color: var(--amber);
+        }
+
+        @media (max-width: 768px) {
+            .mobile-banner {
+                display: block;
+            }
+        }
     </style>
 
     <script type="application/ld+json">
@@ -597,35 +821,90 @@
 
     <div class="header">
         <div class="logo">
-            <span class="logo-mark" data-lang="en">PERCEPTEMPLE</span>
-            <span class="logo-mark lang-hidden" data-lang="es">PERCEPTEMPLE</span>
+            <span class="logo-mark" data-lang="en">SPACE</span>
+            <span class="logo-mark lang-hidden" data-lang="es">SPACE</span>
             <br>
             <a class="pch-btn" href="../../index.html">
                 <span data-lang="en">HUMAN CONSCIOUSNESS TEST</span>
                 <span data-lang="es" class="lang-hidden">PRUEBA DE CONCIENCIA HUMANA</span>
             </a>
+            <div class="logo-controls">
+                <button class="nodes-btn" id="nodesToggle"
+                        onclick="toggleNodes()">[ NODES ]</button>
+                <button class="translate-btn" id="langToggle"
+                        onclick="toggleLanguage()">ES</button>
+            </div>
         </div>
-        <nav class="header-nav">
-            <a class="nav-link" href="../../percepware/index.html"><span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span></a>
-            <a class="nav-link" href="../../pci/index.html"><span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span></a>
-            <a class="nav-link" href="../../aei/index.html"><span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span></a>
-            <a class="nav-link" href="../../neohaki/index.html"><span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span></a>
-            <a class="nav-link" href="../../pram/index.html"><span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span></a>
-            <a class="nav-link" href="../../licence/index.html"><span data-lang="en">License</span><span data-lang="es" class="lang-hidden">Licencia</span></a>
-            <a class="nav-link" href="../../bitneko/index.html"><span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span></a>
-            <a class="nav-link highlight" href="../index.html"><span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span></a>
-            <a class="nav-link" href="../../agamottor/index.html"><span data-lang="en">Agamottor</span><span data-lang="es" class="lang-hidden">Agamottor</span></a>
-            <a class="nav-link" href="../../little-prince/index.html"><span data-lang="en">Little Prince</span><span data-lang="es" class="lang-hidden">Little Prince</span></a>
-            <a class="nav-link" href="../../ptu/index.html"><span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span></a>
-            <a class="nav-link" href="../../time-machine/index.html"><span data-lang="en">Time Machine</span><span data-lang="es" class="lang-hidden">Máquina del Tiempo</span></a>
-            <a class="nav-link" href="../../poetry/index.html"><span data-lang="en">Poetry</span><span data-lang="es" class="lang-hidden">Poesía</span></a>
-            <button class="translate-btn" id="langToggle" onclick="toggleLanguage()">ES</button>
-        </nav>
+        <nav class="header-nav"></nav>
+
+        <div class="nodes-panel" id="nodesPanel">
+            <a class="nodes-link" href="../../percepware/index.html">
+                <span data-lang="en">PercepWare</span>
+                <span data-lang="es" class="lang-hidden">PercepWare</span>
+            </a>
+            <a class="nodes-link" href="../../pci/index.html">
+                <span data-lang="en">PCI</span>
+                <span data-lang="es" class="lang-hidden">PCI</span>
+            </a>
+            <a class="nodes-link" href="../../aei/index.html">
+                <span data-lang="en">AEI</span>
+                <span data-lang="es" class="lang-hidden">AEI</span>
+            </a>
+            <a class="nodes-link" href="../../neohaki/index.html">
+                <span data-lang="en">NEOHAKI</span>
+                <span data-lang="es" class="lang-hidden">NEOHAKI</span>
+            </a>
+            <a class="nodes-link" href="../../pram/index.html">
+                <span data-lang="en">PRAM</span>
+                <span data-lang="es" class="lang-hidden">PRAM</span>
+            </a>
+            <a class="nodes-link" href="../../licence/index.html">
+                <span data-lang="en">License</span>
+                <span data-lang="es" class="lang-hidden">Licencia</span>
+            </a>
+            <a class="nodes-link" href="../../bitneko/index.html">
+                <span data-lang="en">BITNEKO</span>
+                <span data-lang="es" class="lang-hidden">BITNEKO</span>
+            </a>
+            <a class="nodes-link active" href="../../space/index.html">
+                <span data-lang="en">SPACE</span>
+                <span data-lang="es" class="lang-hidden">SPACE</span>
+            </a>
+            <a class="nodes-link" href="../../agamottor/index.html">
+                <span data-lang="en">Agamottor</span>
+                <span data-lang="es" class="lang-hidden">Agamottor</span>
+            </a>
+            <a class="nodes-link" href="../../little-prince/index.html">
+                <span data-lang="en">Little Prince</span>
+                <span data-lang="es" class="lang-hidden">Little Prince</span>
+            </a>
+            <a class="nodes-link" href="../../ptu/index.html">
+                <span data-lang="en">PTU</span>
+                <span data-lang="es" class="lang-hidden">PTU</span>
+            </a>
+            <a class="nodes-link" href="../../time-machine/index.html">
+                <span data-lang="en">Time Machine</span>
+                <span data-lang="es" class="lang-hidden">Máquina del Tiempo</span>
+            </a>
+            <a class="nodes-link" href="../../poetry/index.html">
+                <span data-lang="en">Poetry</span>
+                <span data-lang="es" class="lang-hidden">Poesía</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="mobile-banner">
+        <p data-lang="en">
+        The density of this environment requires an extended visualization horizon.
+    </p>
+    <p data-lang="es" class="lang-hidden">
+        La densidad de este entorno requiere un horizonte de visualización extendido.
+    </p>
     </div>
 
     <div class="section-label">
-        <span data-lang="en">SPACE · OPERATOR [T] · METRIC COMPACTION</span>
-        <span data-lang="es" class="lang-hidden">SPACE · OPERADOR [T] · COMPACTACIÓN MÉTRICA</span>
+        <span data-lang="en">OPERATOR [T] · METRIC COMPACTION</span>
+        <span data-lang="es" class="lang-hidden">OPERADOR [T] · COMPACTACIÓN MÉTRICA</span>
     </div>
 
     <div class="hero">
@@ -917,32 +1196,24 @@
     </div>
 
     <div class="footer">
-        <div class="footer-modules">
-            <a href="../../percepware/index.html"><span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span></a>
-            <span>|</span>
-            <a href="../../pci/index.html"><span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span></a>
-            <span>|</span>
-            <a href="../../aei/index.html"><span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span></a>
-            <span>|</span>
-            <a href="../../neohaki/index.html"><span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span></a>
-            <span>|</span>
-            <a href="../../pram/index.html"><span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span></a>
-            <span>|</span>
-            <a href="../../licence/index.html"><span data-lang="en">License</span><span data-lang="es" class="lang-hidden">Licencia</span></a>
-            <span>|</span>
-            <a href="../../bitneko/index.html"><span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span></a>
-            <span>|</span>
-            <a href="../index.html" class="footer-current"><span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span></a>
-            <span>|</span>
-            <a href="../../agamottor/index.html"><span data-lang="en">Agamottor</span><span data-lang="es" class="lang-hidden">Agamottor</span></a>
-            <span>|</span>
-            <a href="../../little-prince/index.html"><span data-lang="en">Little Prince</span><span data-lang="es" class="lang-hidden">Little Prince</span></a>
-            <span>|</span>
-            <a href="../../ptu/index.html"><span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span></a>
-            <span>|</span>
-            <a href="../../time-machine/index.html"><span data-lang="en">Time Machine</span><span data-lang="es" class="lang-hidden">Máquina del Tiempo</span></a>
-            <span>|</span>
-            <a href="../../poetry/index.html"><span data-lang="en">Poetry</span><span data-lang="es" class="lang-hidden">Poesía</span></a>
+        <div class="footer-nodes">
+            <button class="nodes-btn-footer" id="nodesToggleFooter"
+                    onclick="toggleNodesFooter()">[ NODES ]</button>
+            <div class="nodes-panel-footer" id="nodesPanelFooter">
+                <a class="nodes-link-footer" href="../../percepware/index.html">PercepWare</a>
+                <a class="nodes-link-footer" href="../../pci/index.html">PCI</a>
+                <a class="nodes-link-footer" href="../../aei/index.html">AEI</a>
+                <a class="nodes-link-footer" href="../../neohaki/index.html">NEOHAKI</a>
+                <a class="nodes-link-footer" href="../../pram/index.html">PRAM</a>
+                <a class="nodes-link-footer" href="../../licence/index.html">License</a>
+                <a class="nodes-link-footer" href="../../bitneko/index.html">BITNEKO</a>
+                <a class="nodes-link-footer active" href="../../space/index.html">SPACE</a>
+                <a class="nodes-link-footer" href="../../agamottor/index.html">Agamottor</a>
+                <a class="nodes-link-footer" href="../../little-prince/index.html">Little Prince</a>
+                <a class="nodes-link-footer" href="../../ptu/index.html">PTU</a>
+                <a class="nodes-link-footer" href="../../time-machine/index.html">Time Machine</a>
+                <a class="nodes-link-footer" href="../../poetry/index.html">Poetry</a>
+            </div>
         </div>
 
         <div class="footer-social">
@@ -963,6 +1234,58 @@
     </div>
 
     <script>
+        function toggleNodes() {
+            var panel   = document.getElementById('nodesPanel');
+            var btn     = document.getElementById('nodesToggle');
+            var overlay = document.getElementById('nodesOverlay');
+            var header  = document.querySelector('.header');
+            var isOpen  = panel.classList.contains('open');
+            if (isOpen) {
+                panel.classList.remove('open');
+                btn.classList.remove('open');
+                overlay.classList.remove('open');
+                header.style.zIndex = '100';
+            } else {
+                panel.classList.add('open');
+                btn.classList.add('open');
+                overlay.classList.add('open');
+                header.style.zIndex = '201';
+                // Prevent links from closing the panel
+                document.querySelectorAll('.nodes-link').forEach(function(link) {
+                    link.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                    });
+                });
+            }
+        }
+
+        // Close panel on scroll
+        window.addEventListener('scroll', function() {
+            var panel = document.getElementById('nodesPanel');
+            if (panel && panel.classList.contains('open')) toggleNodes();
+        });
+
+        // Close panel on ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                var panel = document.getElementById('nodesPanel');
+                if (panel && panel.classList.contains('open')) toggleNodes();
+            }
+        });
+
+        function toggleNodesFooter() {
+            var panel = document.getElementById('nodesPanelFooter');
+            var btn   = document.getElementById('nodesToggleFooter');
+            var isOpen = panel.classList.contains('open');
+            if (isOpen) {
+                panel.classList.remove('open');
+                btn.classList.remove('open');
+            } else {
+                panel.classList.add('open');
+                btn.classList.add('open');
+            }
+        }
+
         function toggleLanguage() {
             var html    = document.documentElement;
             var current = html.lang || 'en';
@@ -1234,5 +1557,8 @@ print("=" * 80)`;
             URL.revokeObjectURL(url);
         }
     </script>
+
+    <div class="nodes-overlay" id="nodesOverlay"
+         onclick="if(event.target===this)toggleNodes()"></div>
 </body>
 </html>
