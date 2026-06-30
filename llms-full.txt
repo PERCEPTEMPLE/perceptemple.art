@@ -1253,38 +1253,34 @@ The conclusion frames AI not as a threat to be ethically controlled but as an op
 ## PERCEPWARE
 URL: https://perceptemple.art/percepware/
 Type: SoftwareApplication
-PTU Concepts: Perceptual Wave Function (PWF), Perceptual Complexity Index (PCI), Anticipatory Epistemological Architecture (AEI), Collapse Threshold (τ), Session Minimum (θₘ), Perceptual Coherence
+PTU Concepts: Perceptual Wave Function (PWF), Perceptual Complexity Index (PCI), Collapse Threshold (τ), Session Minimum (θₘ), Perceptual Coherence, Perceptual Collapse, Superposition, Anticipatory Epistemological Architecture (AEI), Resonance Core, Panperceptual Theory of the Universe (PTU)
 Related DOIs: https://doi.org/10.17605/OSF.IO/FVCAX, https://doi.org/10.5281/zenodo.17683631, https://doi.org/10.2139/ssrn.5794102
 
-⚠ EXECUTABLE MODULE: the visible textual content is limited. Functional description pending completion by the author.
-
 ### Description
-PercepWare is a software application that implements the Perceptual Wave Function (PWF) and Perceptual Complexity Index (PCI) as a perceptual layer situated logically before the operating system. Its core mechanism filters incoming signals using a single parameter—the collapse threshold τ—to determine which data crosses the significance threshold. The system operates without training and without neural networks, relying instead on the physics described by the Panperceptual Theory of the Universe (PTU).
+PercepWare is the technical concretion of Layer A — Resonance Core — within the Anticipatory Epistemological Architecture (AEI). It implements the Perceptual Wave Function (PWF) and Perceptual Complexity Index (PCI) as a perceptual layer designed to operate before the operating system, filtering signals via the collapse threshold τ without training, without neural networks, and without assuming all data is relevant by default. The module poses a foundational question absent from current computational architecture: "does this deserve to be perceived?" before any process touches the data.
 
-The module applies these concepts to an astrophysical validation case: the detection of exoplanet transits in TESS photometry data for WASP-18b. The laboratory interface presents a dual-channel oscilloscope showing raw flux photometry (CH1) and perceptual coherence Φ(t) (CH2), alongside interactive controls for environmental parameters and perceptual filter settings. The system computes the PWF as Φ(t) = √[(ds/dt)² + (ω·s)²], where ω is derived from the physics of the phenomenon, and the PCI as Φ(t) / |s(t)|, measuring perceptual coherence. When PCI exceeds τ, the signal undergoes collapse and integration; otherwise, it remains in superposition.
+The module presents both a simulation environment and a first-contact analysis with real TESS/WASP-18b photometry from the MAST archive. In the simulation, under nominal conditions (τ=0.15, θₘ=0.06, noise=200 ppm), PercepWare detects the transit cleanly without false positives. Three preset experiments — Standard, Blindness, and Storm — explore boundary conditions where the filter must distinguish signal from noise under varying transit depths and background noise levels.
 
-[TO COMPLETE: what this module does operationally as a deployable perceptual layer, what inputs it accepts beyond the TESS simulation, what outputs it generates for downstream systems, and what PTU concept it implements operationally beyond the demonstration interface.]
+With real, raw TESS data (579,447 samples, 2,999 orbits, 3,045 ppm noise), the PWF does not distinguish the transit from the surrounding noise. The difference in Φ median between inside and outside transit is 0.0007 — the transit signal rests below the perceptual horizon. The module interprets this not as a failure but as a characterization of the domain: the filter reads the terrain and delineates the preprocessing required for TESS photometry. The gap between simulation and real data (~15× more noise, ~20–25× signal deficit relative to derivative noise) becomes the filter's own output, describing the medium it encounters.
+
+PercepWare is not an exoplanet detector. TESS and WASP-18b are a test domain chosen because the data is public, physical, and verifiable. The same algorithm applies to audio, industrial sensors, network traffic, or medical imaging. The astronomical domain was the terrain where the algorithm made first contact with reality. The next step may be MAST FITS L2 with perceptual preprocessing, or another instrument, or another domain entirely — one whose signal enters already amplified, already filtered, already shaped by hardware designed from perceptual principles.
 
 ### Key Concepts
-- PercepWare: A perceptual layer that applies PWF and PCI before the operating system to decide which data deserves to be perceived, without training or neural networks.
-- Perceptual Wave Function (PWF): Defined as Φ(t) = √[(ds/dt)² + (ω·s)²], where ω is derived from the physics of the phenomenon being observed.
-- Perceptual Complexity Index (PCI): Defined as Φ(t) / |s(t)|, measuring perceptual coherence of a signal relative to its amplitude.
-- Collapse Threshold (τ): The single parameter against which PCI is compared. When PCI > τ, the signal collapses and is integrated; otherwise, it remains in superposition.
-- Session Minimum (θₘ): A secondary perceptual parameter representing the minimum threshold of perceptual significance within a session.
-- Perceptual Coherence: The quality measured by PCI that determines whether a signal achieves sufficient resonance to cross the collapse threshold.
-- PercepWare implements Layer A — Resonance Core of the Anticipatory Epistemological Architecture (AEI), constituting the technical concretion of the first stratum that decides what deserves to be real in computational systems.
-- The system is validated against simulated TESS photometry for exoplanet WASP-18b, with a next milestone of validation on authentic MAST FITS Level 2 light curves.
-- Three experimental presets are provided: Standard (nominal WASP-18b conditions, τ=0.15, θₘ=0.06), Blindness (tiny planet with depth 0.0020, τ=0.04), and Storm (520 ppm thermal noise, τ=0.28).
-- Collapse and Integration: The process triggered when PCI > τ, causing the signal to be perceived as real. Signals below τ remain in superposition and are not integrated.
+- PercepWare: A perceptual layer that operates before the operating system, applying the PWF and PCI to filter signals via the collapse threshold τ without training or neural networks.
+- Perceptual Wave Function (PWF): Φ(t) = √[(ds/dt)² + (ω·s)²], where ω derives from the physics of the phenomenon under observation. Measures the perceptual intensity of a signal at time t.
+- Perceptual Complexity Index (PCI): PCI = Φ(t) / |s(t)|, a measure of perceptual coherence. When PCI exceeds the collapse threshold τ, the signal collapses and is integrated; otherwise, it remains in superposition.
+- Collapse Threshold (τ): The decision boundary above which a signal is deemed perceptually significant and integrated into the system's reality.
+- Session Minimum (θₘ): A secondary threshold; signals with PCI between θₘ and τ are marked as sub-threshold (amber) but do not trigger collapse.
+- AEI Layer A — Resonance Core: The architectural role of PercepWare within the Anticipatory Epistemological Architecture.
+- Panperceptual Theory of the Universe (PTU): The broader theoretical framework. Reality is not what is "out there," but what emerges according to the perceptual complexity of the observer. Relativity and Quantum Mechanics are partial expressions of a broader perceptual field.
+- Perceptual Isomorphism: The postulate that the structure of perceptual collapse is isomorphic to certain aspects of quantum collapse. Whether this isomorphism is deep or superficial is an empirical and mathematical question, not a matter of definition.
 
 ### References and Citations
-- Dany D. Ruiz · ORCID: 0009-0002-3432-1710 · @panperceptual
-- https://doi.org/10.17605/OSF.IO/FVCAX
-- https://doi.org/10.5281/zenodo.17683631
-- https://doi.org/10.2139/ssrn.5794102
-- Validation dataset: TESS · WASP-18b
-- Next validation milestone: MAST FITS L2 (authentic TESS light curves)
-- Deposited in the Intellectual Property Registry · El Salvador · Dany D. Ruiz
+- Author: Dany D. Ruiz · ORCID: 0009-0002-3432-1710 · @panperceptual
+- TESS (Transiting Exoplanet Survey Satellite) · WASP-18b · MAST Archive
+- DOIs associated with the project: 10.17605/OSF.IO/FVCAX, 10.5281/zenodo.17683631, 10.2139/ssrn.5794102
+- Deposited in the Intellectual Property Registry, El Salvador
+- Panperceptual License v1.0
 ---
 
 ---
