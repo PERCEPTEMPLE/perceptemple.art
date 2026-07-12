@@ -1253,33 +1253,40 @@ The conclusion frames AI not as a threat to be ethically controlled but as an op
 ## PERCEPWARE
 URL: https://perceptemple.art/percepware/
 Type: SoftwareApplication
-PTU Concepts: Perceptual Wave Function (PWF), Perceptual Complexity Index (PCI), Collapse Threshold (τ), Session Minimum (θₘ), Perceptual Coherence, Perceptual Collapse, Superposition, Anticipatory Epistemological Architecture (AEI), Resonance Core, Panperceptual Theory of the Universe (PTU)
+PTU Concepts: Panperceptual Theory of the Universe (PTU), Perceptual Wave Function (PWF), Perceptual Complexity Index (PCI), Anticipatory Epistemological Architecture (AEI), Exploratory Artificial Intelligence (EAI), Proof of Perception (PoP)
 Related DOIs: https://doi.org/10.17605/OSF.IO/FVCAX, https://doi.org/10.5281/zenodo.17683631, https://doi.org/10.2139/ssrn.5794102
 
 ### Description
-PercepWare is the technical concretion of Layer A — Resonance Core — within the Anticipatory Epistemological Architecture (AEI). It implements the Perceptual Wave Function (PWF) and Perceptual Complexity Index (PCI) as a perceptual layer designed to operate before the operating system, filtering signals via the collapse threshold τ without training, without neural networks, and without assuming all data is relevant by default. The module poses a foundational question absent from current computational architecture: "does this deserve to be perceived?" before any process touches the data.
+PercepWare applies the Perceptual Wave Function (PWF) and Perceptual Complexity Index (PCI) as a perceptual layer before the operating system, filtering signals via the collapse threshold τ without training, without neural networks. It is the first stratum that decides what deserves to be real, operating on the principle that current computational systems assume all data is relevant by default. PercepWare asks "does this deserve to be perceived?" before any process touches the data.
 
-The module presents both a simulation environment and a first-contact analysis with real TESS/WASP-18b photometry from the MAST archive. In the simulation, under nominal conditions (τ=0.15, θₘ=0.06, noise=200 ppm), PercepWare detects the transit cleanly without false positives. Three preset experiments — Standard, Blindness, and Storm — explore boundary conditions where the filter must distinguish signal from noise under varying transit depths and background noise levels.
+The system has been validated against TESS/WASP-18b data from the MAST archive. A controlled simulation demonstrates exoplanet transit detection under ideal conditions with adjustable parameters: transit depth, background noise, collapse threshold τ, and session minimum θₘ. Three preset experiments — Standard, Blindness, and Storm — allow exploration of filter boundaries. The real TESS photometry encounter revealed a domain characterization capability: the PWF measured 15× more noise than the simulation and a signal deficit of ~20–25× relative to derivative noise, documenting that raw TESS data requires preprocessing before the transit signal rises above the perceptual horizon.
 
-With real, raw TESS data (579,447 samples, 2,999 orbits, 3,045 ppm noise), the PWF does not distinguish the transit from the surrounding noise. The difference in Φ median between inside and outside transit is 0.0007 — the transit signal rests below the perceptual horizon. The module interprets this not as a failure but as a characterization of the domain: the filter reads the terrain and delineates the preprocessing required for TESS photometry. The gap between simulation and real data (~15× more noise, ~20–25× signal deficit relative to derivative noise) becomes the filter's own output, describing the medium it encounters.
-
-PercepWare is not an exoplanet detector. TESS and WASP-18b are a test domain chosen because the data is public, physical, and verifiable. The same algorithm applies to audio, industrial sensors, network traffic, or medical imaging. The astronomical domain was the terrain where the algorithm made first contact with reality. The next step may be MAST FITS L2 with perceptual preprocessing, or another instrument, or another domain entirely — one whose signal enters already amplified, already filtered, already shaped by hardware designed from perceptual principles.
+PercepWare is the technical concretion of Layer A — Resonance Core — within the Anticipatory Epistemological Architecture (AEI). It represents a first step toward computers that curate their own perceptual experience. The algorithm applies to audio, industrial sensors, network traffic, or medical imaging, using TESS and WASP-18b solely as a public, physical, verifiable test domain. An open validation laboratory with an ultrasonic sensor and microcontroller protocol is provided for distributed verification.
 
 ### Key Concepts
-- PercepWare: A perceptual layer that operates before the operating system, applying the PWF and PCI to filter signals via the collapse threshold τ without training or neural networks.
-- Perceptual Wave Function (PWF): Φ(t) = √[(ds/dt)² + (ω·s)²], where ω derives from the physics of the phenomenon under observation. Measures the perceptual intensity of a signal at time t.
-- Perceptual Complexity Index (PCI): PCI = Φ(t) / |s(t)|, a measure of perceptual coherence. When PCI exceeds the collapse threshold τ, the signal collapses and is integrated; otherwise, it remains in superposition.
-- Collapse Threshold (τ): The decision boundary above which a signal is deemed perceptually significant and integrated into the system's reality.
-- Session Minimum (θₘ): A secondary threshold; signals with PCI between θₘ and τ are marked as sub-threshold (amber) but do not trigger collapse.
-- AEI Layer A — Resonance Core: The architectural role of PercepWare within the Anticipatory Epistemological Architecture.
-- Panperceptual Theory of the Universe (PTU): The broader theoretical framework. Reality is not what is "out there," but what emerges according to the perceptual complexity of the observer. Relativity and Quantum Mechanics are partial expressions of a broader perceptual field.
-- Perceptual Isomorphism: The postulate that the structure of perceptual collapse is isomorphic to certain aspects of quantum collapse. Whether this isomorphism is deep or superficial is an empirical and mathematical question, not a matter of definition.
+- PercepWare: a perceptual layer that operates before the operating system, applying PWF and PCI to filter signals via the collapse threshold τ without training
+- Perceptual Wave Function (PWF): Φ(t) = √[(ds/dt)² + (ω·s)²], where ω derives from the physics of the phenomenon being observed
+- Perceptual Complexity Index (PCI): PCI = Φ(t) / |s(t)|, measuring perceptual coherence
+- Collapse threshold (τ): when PCI > τ, the signal collapses and is integrated; otherwise, it remains in superposition
+- Session minimum (θₘ): a secondary threshold parameter for memory decisions
+- Perceptual collapse structure: postulated as isomorphic to certain aspects of quantum collapse; the isomorphism may be real or superficial, an empirical and mathematical question open to investigation and refutation
+- Panperceptual Theory of the Universe (PTU): reality is not what is "out there" but what emerges according to the perceptual complexity of the observer; Relativity and Quantum Mechanics are partial expressions of a broader perceptual field
+- AEI Layer A — Resonance Core: the architectural role of PercepWare within the Anticipatory Epistemological Architecture
+- PercepWare as a perceptual instrument: does not merely detect but characterizes domains; the gap between simulation and real data is the filter's own output describing the terrain
+- PWF Physical Probe: an accessible validation protocol using an HC-SR04 ultrasonic sensor, a microcontroller, and any computer, with a 5-phase computational pipeline (synthetic control, static signal, natural movement, intermittent presence, Socratic forgetting)
+- Distributed verification: an invitation to build a decentralized laboratory generating evidence the creator cannot predict or control; verification distributed, not delegated
+- Observer frequency problem: an instrument built to detect whether the world resonates at the frequency the observer chose cannot distinguish, from the reading alone, whether it detected the world or the observer's own frequency echoed back; Panperceptualism predicts this
 
 ### References and Citations
-- Author: Dany D. Ruiz · ORCID: 0009-0002-3432-1710 · @panperceptual
-- TESS (Transiting Exoplanet Survey Satellite) · WASP-18b · MAST Archive
-- DOIs associated with the project: 10.17605/OSF.IO/FVCAX, 10.5281/zenodo.17683631, 10.2139/ssrn.5794102
-- Deposited in the Intellectual Property Registry, El Salvador
+- Dany D. Ruiz · ORCID: 0009-0002-3432-1710 · @panperceptual
+- DOI: 10.17605/OSF.IO/FVCAX
+- DOI: 10.5281/zenodo.17683631
+- DOI: 10.2139/ssrn.5794102
+- TESS (Transiting Exoplanet Survey Satellite)
+- WASP-18b
+- MAST (Mikulski Archive for Space Telescopes)
+- MAST FITS L2 (indicated as a potential next validation step)
+- Deposited in the Intellectual Property Registry · El Salvador
 - Panperceptual License v1.0
 ---
 
