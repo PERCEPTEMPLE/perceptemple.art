@@ -6,14 +6,12 @@
     
     <title>PERCEPTEMPLE</title>
     
-    
     <meta name="description" content="Universal metric of perceptual density quantifying significant events crossing the collapse threshold τ. Part of the Panperceptual Theory of the Universe by Dany D. Ruiz.">
     <meta name="author" content="Dany D. Ruiz">
     <meta name="last-modified" content="2026-06-07">
     <meta name="keywords" content="Perceptual Complexity Index, PCI, Panperceptual Theory of the Universe, PTU, Perceptual Wave Function, PWF, Proof of Perception, Epistemological Kardashev Scale">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://perceptemple.art/pci/">
-    
     
     <meta property="og:type" content="article">
     <meta property="og:title" content="Perceptual Complexity Index · PERCEPTEMPLE">
@@ -25,14 +23,12 @@
     <meta property="og:image" content="https://perceptemple.art/preview.jpg">
     <meta property="og:image:alt" content="PERCEPTEMPLE — Perceptual Complexity Index">
     
-    
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@panperceptual">
     <meta name="twitter:creator" content="@panperceptual">
     <meta name="twitter:title" content="Perceptual Complexity Index · PERCEPTEMPLE">
     <meta name="twitter:description" content="Universal metric of perceptual density quantifying significant events crossing the collapse threshold τ. Part of the Panperceptual Theory of the Universe by Dany D. Ruiz.">
     <meta name="twitter:image" content="https://perceptemple.art/preview.jpg">
-    
     
     <meta name="citation_title" content="Perceptual Complexity Index (PCI): A Universal Metric of Perceptual Density">
     <meta name="citation_author" content="Ruiz, Dany D.">
@@ -221,14 +217,13 @@
             .header{padding:1rem 1.5rem;flex-direction:column;align-items:flex-start}
             .header-nav{width:100%;gap:1rem;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
             .header-nav::-webkit-scrollbar{display:none}
-            .intro{grid-template-columns:1fr;padding:2.5rem 1.5rem 2.25rem;gap:1.5rem}
-            .questionnaire{grid-template-columns:1fr}
+            .intro{grid-template-columns:1fr !important;padding:2.5rem 1.5rem 2.25rem;gap:1.5rem}
+            .questionnaire{grid-template-columns:1fr !important}
             .result-panel{position:static}
-            .scale-row{grid-template-columns:1fr 1fr}
+            .scale-row{grid-template-columns:1fr 1fr !important}
             .content-section,.questionnaire,.scale-section{padding:2rem 1.5rem}
             .section-label{padding:0.8125rem 1.5rem}
             .footer{padding:1.25rem 1.5rem}
-            [class*="grid"],[class*="cols"],[class*="columns"]{grid-template-columns:1fr !important}
         }
         @media(max-width:480px){
             .header{padding:0.75rem 1rem}
@@ -237,9 +232,6 @@
             .footer-modules{gap:0.75rem}
         }
 
-        /* ============================================ */
-        /*  LOGO CONTROLS                               */
-        /* ============================================ */
         .logo-controls {
             display: flex;
             gap: 0.5rem;
@@ -249,14 +241,8 @@
             isolation: isolate;
             overflow: visible !important;
         }
+        .logo { overflow: visible !important; }
 
-        .logo {
-            overflow: visible !important;
-        }
-
-        /* ============================================ */
-        /*  NODES NAV                                   */
-        /* ============================================ */
         .nodes-btn {
             background: transparent;
             border: 1px solid var(--amber);
@@ -275,8 +261,7 @@
             touch-action: manipulation;
             -webkit-tap-highlight-color: transparent;
         }
-        .nodes-btn:hover,
-        .nodes-btn.open {
+        .nodes-btn:hover, .nodes-btn.open {
             background: rgba(255,178,0,0.08);
             color: var(--amber2);
             border-color: var(--amber2);
@@ -298,10 +283,7 @@
             box-shadow: 0 8px 24px rgba(0,0,0,0.6);
             overflow-x: hidden;
         }
-        .nodes-panel.open {
-            display: flex;
-            flex-direction: column;
-        }
+        .nodes-panel.open { display: flex; flex-direction: column; }
 
         .nodes-link {
             font-family: 'Orbitron', sans-serif;
@@ -316,29 +298,17 @@
             white-space: nowrap;
             border-bottom: 1px solid rgba(10,92,30,0.3);
         }
-        .nodes-link:last-child {
-            border-bottom: none;
-        }
-        .nodes-link:hover,
-        .nodes-link.active {
+        .nodes-link:last-child { border-bottom: none; }
+        .nodes-link:hover, .nodes-link.active {
             color: var(--hi);
             background: rgba(0,255,65,0.03);
             padding-left: 1.5rem;
         }
 
-        .nodes-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            z-index: 199;
-        }
-        .nodes-overlay.open {
-            display: block;
-        }
+        .nodes-overlay { display: none; position: fixed; inset: 0; z-index: 199; }
+        .nodes-overlay.open { display: block; }
 
-        .header {
-            position: relative !important;
-        }
+        .header { position: relative !important; }
 
         @media (max-width: 768px) {
             .nodes-panel {
@@ -349,9 +319,6 @@
             }
         }
 
-        /* ============================================ */
-        /*  NODES FOOTER                                */
-        /* ============================================ */
         .footer-nodes {
             display: flex;
             flex-direction: column;
@@ -377,8 +344,7 @@
             font-weight: 600;
             white-space: nowrap;
         }
-        .nodes-btn-footer:hover,
-        .nodes-btn-footer.open {
+        .nodes-btn-footer:hover, .nodes-btn-footer.open {
             background: rgba(255,178,0,0.08);
             color: var(--amber2);
             border-color: var(--amber2);
@@ -400,9 +366,7 @@
             z-index: 200;
             box-shadow: 0 -8px 24px rgba(0,0,0,0.6);
         }
-        .nodes-panel-footer.open {
-            display: flex;
-        }
+        .nodes-panel-footer.open { display: flex; }
 
         .nodes-link-footer {
             font-family: 'Orbitron', sans-serif;
@@ -417,11 +381,8 @@
             text-align: center;
             border-bottom: 1px solid rgba(10,92,30,0.3);
         }
-        .nodes-link-footer:last-child {
-            border-bottom: none;
-        }
-        .nodes-link-footer:hover,
-        .nodes-link-footer.active {
+        .nodes-link-footer:last-child { border-bottom: none; }
+        .nodes-link-footer:hover, .nodes-link-footer.active {
             color: var(--hi);
             background: rgba(0,255,65,0.03);
         }
@@ -434,9 +395,6 @@
             }
         }
 
-        /* ============================================ */
-        /*  MOBILE BANNER                               */
-        /* ============================================ */
         .mobile-banner {
             display: none;
             width: 100%;
@@ -454,17 +412,12 @@
             max-width: 100%;
             margin-bottom: 0;
         }
-        .mobile-banner p strong {
-            color: var(--amber);
-        }
+        .mobile-banner p strong { color: var(--amber); }
 
         @media (max-width: 768px) {
-            .mobile-banner {
-                display: block;
-            }
+            .mobile-banner { display: block; }
         }
     </style>
-    
     
     <script type="application/ld+json">
     {
@@ -561,77 +514,32 @@
             <span data-lang="es" class="lang-hidden">PRUEBA DE CONCIENCIA HUMANA</span>
         </a>
         <div class="logo-controls">
-            <button class="nodes-btn" id="nodesToggle"
-                    onclick="toggleNodes()">[ NODES ]</button>
-            <button class="translate-btn" id="langToggle"
-                    onclick="toggleLanguage()">ES</button>
+            <button class="nodes-btn" id="nodesToggle" onclick="toggleNodes()">[ NODES ]</button>
+            <button class="translate-btn" id="langToggle" onclick="toggleLanguage()">ES</button>
         </div>
     </div>
     <nav class="header-nav"></nav>
 
     <div class="nodes-panel" id="nodesPanel">
-        <a class="nodes-link" href="../percepware/index.html">
-            <span data-lang="en">PercepWare</span>
-            <span data-lang="es" class="lang-hidden">PercepWare</span>
-        </a>
-        <a class="nodes-link active" href="../pci/index.html">
-            <span data-lang="en">PCI</span>
-            <span data-lang="es" class="lang-hidden">PCI</span>
-        </a>
-        <a class="nodes-link" href="../aei/index.html">
-            <span data-lang="en">AEI</span>
-            <span data-lang="es" class="lang-hidden">AEI</span>
-        </a>
-        <a class="nodes-link" href="../neohaki/index.html">
-            <span data-lang="en">NEOHAKI</span>
-            <span data-lang="es" class="lang-hidden">NEOHAKI</span>
-        </a>
-        <a class="nodes-link" href="../pram/index.html">
-            <span data-lang="en">PRAM</span>
-            <span data-lang="es" class="lang-hidden">PRAM</span>
-        </a>
-        <a class="nodes-link" href="../licence/index.html">
-            <span data-lang="en">License</span>
-            <span data-lang="es" class="lang-hidden">Licencia</span>
-        </a>
-        <a class="nodes-link" href="../bitneko/index.html">
-            <span data-lang="en">BITNEKO</span>
-            <span data-lang="es" class="lang-hidden">BITNEKO</span>
-        </a>
-        <a class="nodes-link" href="../space/index.html">
-            <span data-lang="en">SPACE</span>
-            <span data-lang="es" class="lang-hidden">SPACE</span>
-        </a>
-        <a class="nodes-link" href="../agamottor/index.html">
-            <span data-lang="en">Agamottor</span>
-            <span data-lang="es" class="lang-hidden">Agamottor</span>
-        </a>
-        <a class="nodes-link" href="../little-prince/index.html">
-            <span data-lang="en">Little Prince</span>
-            <span data-lang="es" class="lang-hidden">Little Prince</span>
-        </a>
-        <a class="nodes-link" href="../ptu/index.html">
-            <span data-lang="en">PTU</span>
-            <span data-lang="es" class="lang-hidden">PTU</span>
-        </a>
-        <a class="nodes-link" href="../time-machine/index.html">
-            <span data-lang="en">Time Machine</span>
-            <span data-lang="es" class="lang-hidden">Máquina del Tiempo</span>
-        </a>
-        <a class="nodes-link" href="../poetry/index.html">
-            <span data-lang="en">Poetry</span>
-            <span data-lang="es" class="lang-hidden">Poesía</span>
-        </a>
+        <a class="nodes-link" href="../percepware/index.html"><span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span></a>
+        <a class="nodes-link active" href="../pci/index.html"><span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span></a>
+        <a class="nodes-link" href="../aei/index.html"><span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span></a>
+        <a class="nodes-link" href="../neohaki/index.html"><span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span></a>
+        <a class="nodes-link" href="../pram/index.html"><span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span></a>
+        <a class="nodes-link" href="../licence/index.html"><span data-lang="en">License</span><span data-lang="es" class="lang-hidden">Licencia</span></a>
+        <a class="nodes-link" href="../bitneko/index.html"><span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span></a>
+        <a class="nodes-link" href="../space/index.html"><span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span></a>
+        <a class="nodes-link" href="../agamottor/index.html"><span data-lang="en">Agamottor</span><span data-lang="es" class="lang-hidden">Agamottor</span></a>
+        <a class="nodes-link" href="../little-prince/index.html"><span data-lang="en">Little Prince</span><span data-lang="es" class="lang-hidden">Little Prince</span></a>
+        <a class="nodes-link" href="../ptu/index.html"><span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span></a>
+        <a class="nodes-link" href="../time-machine/index.html"><span data-lang="en">Time Machine</span><span data-lang="es" class="lang-hidden">Máquina del Tiempo</span></a>
+        <a class="nodes-link" href="../poetry/index.html"><span data-lang="en">Poetry</span><span data-lang="es" class="lang-hidden">Poesía</span></a>
     </div>
 </div>
 
 <div class="mobile-banner">
-    <p data-lang="en">
-    The density of this environment requires an extended visualization horizon.
-</p>
-<p data-lang="es" class="lang-hidden">
-    La densidad de este entorno requiere un horizonte de visualización extendido.
-</p>
+    <p data-lang="en">The density of this environment requires an extended visualization horizon.</p>
+    <p data-lang="es" class="lang-hidden">La densidad de este entorno requiere un horizonte de visualización extendido.</p>
 </div>
 
 <div class="intro">
@@ -934,8 +842,7 @@ print(f"Astronomical ICP = {icp_astro:.4f}")</div>
 
 <div class="footer">
     <div class="footer-nodes">
-        <button class="nodes-btn-footer" id="nodesToggleFooter"
-                onclick="toggleNodesFooter()">[ NODES ]</button>
+        <button class="nodes-btn-footer" id="nodesToggleFooter" onclick="toggleNodesFooter()">[ NODES ]</button>
         <div class="nodes-panel-footer" id="nodesPanelFooter">
             <a class="nodes-link-footer" href="../percepware/index.html">PercepWare</a>
             <a class="nodes-link-footer active" href="../pci/index.html">PCI</a>
@@ -966,76 +873,86 @@ print(f"Astronomical ICP = {icp_astro:.4f}")</div>
 </div>
 
 <script>
-    function toggleNodes() {
-        var panel   = document.getElementById('nodesPanel');
-        var btn     = document.getElementById('nodesToggle');
-        var overlay = document.getElementById('nodesOverlay');
-        var header  = document.querySelector('.header');
-        var isOpen  = panel.classList.contains('open');
-        if (isOpen) {
-            panel.classList.remove('open');
-            btn.classList.remove('open');
-            overlay.classList.remove('open');
-            header.style.zIndex = '100';
-        } else {
-            panel.classList.add('open');
-            btn.classList.add('open');
-            overlay.classList.add('open');
-            header.style.zIndex = '201';
-            // Prevent links from closing the panel
-            document.querySelectorAll('.nodes-link').forEach(function(link) {
-                link.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                });
-            });
-        }
+function toggleNodes() {
+    var panel   = document.getElementById('nodesPanel');
+    var btn     = document.getElementById('nodesToggle');
+    var overlay = document.getElementById('nodesOverlay');
+    var header  = document.querySelector('.header');
+    var isOpen  = panel.classList.contains('open');
+    if (isOpen) {
+        panel.classList.remove('open');
+        btn.classList.remove('open');
+        overlay.classList.remove('open');
+        header.style.zIndex = '100';
+    } else {
+        panel.classList.add('open');
+        btn.classList.add('open');
+        overlay.classList.add('open');
+        header.style.zIndex = '201';
+        document.querySelectorAll('.nodes-link').forEach(function(link) {
+            link.addEventListener('click', function(e) { e.stopPropagation(); });
+        });
     }
+}
 
-    // Close panel on scroll
-    window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function() {
+    var panel = document.getElementById('nodesPanel');
+    if (panel && panel.classList.contains('open')) toggleNodes();
+});
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
         var panel = document.getElementById('nodesPanel');
         if (panel && panel.classList.contains('open')) toggleNodes();
-    });
+    }
+});
 
-    // Close panel on ESC key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            var panel = document.getElementById('nodesPanel');
-            if (panel && panel.classList.contains('open')) toggleNodes();
-        }
-    });
+function toggleNodesFooter() {
+    var panel = document.getElementById('nodesPanelFooter');
+    var btn   = document.getElementById('nodesToggleFooter');
+    var isOpen = panel.classList.contains('open');
+    if (isOpen) {
+        panel.classList.remove('open');
+        btn.classList.remove('open');
+    } else {
+        panel.classList.add('open');
+        btn.classList.add('open');
+    }
+}
 
-    function toggleNodesFooter() {
-        var panel = document.getElementById('nodesPanelFooter');
-        var btn   = document.getElementById('nodesToggleFooter');
-        var isOpen = panel.classList.contains('open');
-        if (isOpen) {
+// Close footer panel on outside click
+document.addEventListener('click', function(e) {
+    var panel = document.getElementById('nodesPanelFooter');
+    var btn = document.getElementById('nodesToggleFooter');
+    if (panel && panel.classList.contains('open')) {
+        if (!panel.contains(e.target) && !btn.contains(e.target)) {
             panel.classList.remove('open');
             btn.classList.remove('open');
-        } else {
-            panel.classList.add('open');
-            btn.classList.add('open');
         }
     }
+});
 
-    function toggleLanguage() {
-        var html    = document.documentElement;
-        var current = html.lang || 'en';
-        var next    = current === 'en' ? 'es' : 'en';
-        var hide    = next === 'en' ? 'es' : 'en';
-        html.lang = next;
-        document.querySelectorAll('[data-lang="' + next + '"]')
-            .forEach(function(el) { el.classList.remove('lang-hidden'); });
-        document.querySelectorAll('[data-lang="' + hide + '"]')
-            .forEach(function(el) { el.classList.add('lang-hidden'); });
-        document.getElementById('langToggle').textContent =
-            next === 'en' ? 'ES' : 'EN';
-        localStorage.setItem('perceptemple-lang', next);
+function toggleLanguage() {
+    var html    = document.documentElement;
+    var current = html.lang || 'en';
+    var next    = current === 'en' ? 'es' : 'en';
+    var hide    = next === 'en' ? 'es' : 'en';
+    html.lang = next;
+    document.querySelectorAll('[data-lang="' + next + '"]')
+        .forEach(function(el) { el.classList.remove('lang-hidden'); });
+    document.querySelectorAll('[data-lang="' + hide + '"]')
+        .forEach(function(el) { el.classList.add('lang-hidden'); });
+    document.getElementById('langToggle').textContent =
+        next === 'en' ? 'ES' : 'EN';
+    localStorage.setItem('perceptemple-lang', next);
+    if (typeof window.updatePCIUI === 'function') {
+        window.updatePCIUI();
     }
-    (function() {
-        var saved = localStorage.getItem('perceptemple-lang');
-        if (saved && saved === 'es') { toggleLanguage(); }
-    })();
+}
+(function() {
+    var saved = localStorage.getItem('perceptemple-lang');
+    if (saved && saved === 'es') { toggleLanguage(); }
+})();
 </script>
 
 <script>
@@ -1069,8 +986,8 @@ function updateUI(){
     document.getElementById('gauge-fill').style.width=(pci*10)+'%';
     document.getElementById('pci-classification').innerHTML='<strong>'+(isEs?cl.type_es:cl.type_en)+': '+(isEs?cl.name_es:cl.name_en)+'</strong><br>'+(isEs?cl.desc_es:cl.desc_en);
     var ve=document.getElementById('pci-verdict');
-    if(isC){ve.textContent='● COLLAPSE & INTEGRATE';ve.className='pci-verdict collapse'}
-    else{ve.textContent='○ SUPERPOSITION';ve.className='pci-verdict superposition'}
+    if(isC){ve.textContent='● '+(isEs?'COLAPSO E INTEGRACIÓN':'COLLAPSE & INTEGRATE');ve.className='pci-verdict collapse'}
+    else{ve.textContent='○ '+(isEs?'SUPERPOSICIÓN':'SUPERPOSITION');ve.className='pci-verdict superposition'}
     document.getElementById('breakdown').innerHTML=
         '<div class="br-row"><span class="br-label">'+(isEs?'Resonancia':'Resonance')+'</span><div class="br-bar-bg"><div class="br-bar-fill" style="width:'+(R*10)+'%;background:var(--amber);"></div></div><span class="br-val">'+R+'</span></div>'+
         '<div class="br-row"><span class="br-label">'+(isEs?'Semántica':'Semantics')+'</span><div class="br-bar-bg"><div class="br-bar-fill" style="width:'+(S*10)+'%;background:var(--amber2);"></div></div><span class="br-val">'+S+'</span></div>'+
@@ -1099,7 +1016,6 @@ window.updatePCIUI=updateUI;
 })();
 </script>
 
-<div class="nodes-overlay" id="nodesOverlay"
-     onclick="if(event.target===this)toggleNodes()"></div>
+<div class="nodes-overlay" id="nodesOverlay" onclick="if(event.target===this)toggleNodes()"></div>
 </body>
 </html>
