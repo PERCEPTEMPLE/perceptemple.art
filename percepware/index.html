@@ -83,20 +83,9 @@
             background-size:80px 80px;pointer-events:none;z-index:9998;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        svg {
-            max-width: 100%;
-            height: auto;
-        }
-
-        canvas {
-            max-width: 100%;
-        }
+        img { max-width: 100%; height: auto; display: block; }
+        svg { max-width: 100%; height: auto; }
+        canvas { max-width: 100%; }
 
         .bracket{position:fixed;color:rgba(0,255,65,0.12);font-family:'Orbitron',sans-serif;font-size:var(--fs-md);pointer-events:none;z-index:10000}
         .bracket-tl{top:16px;left:20px}.bracket-tr{top:16px;right:20px}
@@ -243,16 +232,14 @@
             .section-label { padding: 0.8125rem 1.5rem; }
             .footer { padding: 1.25rem 1.5rem; }
             .hero-actions { flex-direction: column; }
-            .btn-primary,
-            .btn-secondary {
+            .btn-primary, .btn-secondary {
                 text-align: center;
                 width: 100%;
             }
-            [class*="grid"],
-            [class*="cols"],
-            [class*="columns"] {
-                grid-template-columns: 1fr !important;
-            }
+            .lab-container { grid-template-columns: 1fr !important; }
+            .metrics-bar { grid-template-columns: repeat(2, 1fr) !important; }
+            .results-grid { grid-template-columns: repeat(2, 1fr) !important; }
+            .btn-deck { grid-template-columns: 1fr !important; }
         }
 
         @media (max-width: 480px) {
@@ -263,9 +250,6 @@
             .footer-modules  { gap: 0.75rem; }
         }
 
-        /* ============================================ */
-        /*  LOGO CONTROLS                               */
-        /* ============================================ */
         .logo-controls {
             display: flex;
             gap: 0.5rem;
@@ -275,14 +259,8 @@
             isolation: isolate;
             overflow: visible !important;
         }
+        .logo { overflow: visible !important; }
 
-        .logo {
-            overflow: visible !important;
-        }
-
-        /* ============================================ */
-        /*  NODES NAV                                   */
-        /* ============================================ */
         .nodes-btn {
             background: transparent;
             border: 1px solid var(--amber);
@@ -301,8 +279,7 @@
             touch-action: manipulation;
             -webkit-tap-highlight-color: transparent;
         }
-        .nodes-btn:hover,
-        .nodes-btn.open {
+        .nodes-btn:hover, .nodes-btn.open {
             background: rgba(255,178,0,0.08);
             color: var(--amber2);
             border-color: var(--amber2);
@@ -324,10 +301,7 @@
             box-shadow: 0 8px 24px rgba(0,0,0,0.6);
             overflow-x: hidden;
         }
-        .nodes-panel.open {
-            display: flex;
-            flex-direction: column;
-        }
+        .nodes-panel.open { display: flex; flex-direction: column; }
 
         .nodes-link {
             font-family: 'Orbitron', sans-serif;
@@ -342,11 +316,8 @@
             white-space: nowrap;
             border-bottom: 1px solid rgba(10,92,30,0.3);
         }
-        .nodes-link:last-child {
-            border-bottom: none;
-        }
-        .nodes-link:hover,
-        .nodes-link.active {
+        .nodes-link:last-child { border-bottom: none; }
+        .nodes-link:hover, .nodes-link.active {
             color: var(--hi);
             background: rgba(0,255,65,0.03);
             padding-left: 1.5rem;
@@ -358,13 +329,9 @@
             inset: 0;
             z-index: 199;
         }
-        .nodes-overlay.open {
-            display: block;
-        }
+        .nodes-overlay.open { display: block; }
 
-        .header {
-            position: relative !important;
-        }
+        .header { position: relative !important; }
 
         @media (max-width: 768px) {
             .nodes-panel {
@@ -375,9 +342,6 @@
             }
         }
 
-        /* ============================================ */
-        /*  NODES FOOTER                                */
-        /* ============================================ */
         .footer-nodes {
             display: flex;
             flex-direction: column;
@@ -403,8 +367,7 @@
             font-weight: 600;
             white-space: nowrap;
         }
-        .nodes-btn-footer:hover,
-        .nodes-btn-footer.open {
+        .nodes-btn-footer:hover, .nodes-btn-footer.open {
             background: rgba(255,178,0,0.08);
             color: var(--amber2);
             border-color: var(--amber2);
@@ -426,9 +389,7 @@
             z-index: 200;
             box-shadow: 0 -8px 24px rgba(0,0,0,0.6);
         }
-        .nodes-panel-footer.open {
-            display: flex;
-        }
+        .nodes-panel-footer.open { display: flex; }
 
         .nodes-link-footer {
             font-family: 'Orbitron', sans-serif;
@@ -443,11 +404,8 @@
             text-align: center;
             border-bottom: 1px solid rgba(10,92,30,0.3);
         }
-        .nodes-link-footer:last-child {
-            border-bottom: none;
-        }
-        .nodes-link-footer:hover,
-        .nodes-link-footer.active {
+        .nodes-link-footer:last-child { border-bottom: none; }
+        .nodes-link-footer:hover, .nodes-link-footer.active {
             color: var(--hi);
             background: rgba(0,255,65,0.03);
         }
@@ -460,9 +418,6 @@
             }
         }
 
-        /* ============================================ */
-        /*  MOBILE BANNER                               */
-        /* ============================================ */
         .mobile-banner {
             display: none;
             width: 100%;
@@ -480,208 +435,145 @@
             max-width: 100%;
             margin-bottom: 0;
         }
-        .mobile-banner p strong {
-            color: var(--amber);
+        .mobile-banner p strong { color: var(--amber); }
+
+        @media (max-width: 768px) {
+            .mobile-banner { display: block; }
+        }
+
+        #physical-probe {
+          width: 100%;
+          max-width: 60rem;
+          margin: 0 auto;
+          background: var(--bg);
+          border-top: 1px solid var(--rule);
+          border-bottom: 1px solid var(--rule);
+          padding: 3rem 2rem;
+        }
+
+        #physical-probe .module-tag {
+          font-family: 'Orbitron', sans-serif;
+          font-size: var(--fs-xs);
+          letter-spacing: 3px;
+          color: var(--amber);
+          border: 1px solid var(--amber);
+          display: inline-block;
+          padding: 0.25rem 0.75rem;
+          margin-bottom: 1.5rem;
+          text-transform: uppercase;
+        }
+        #physical-probe .module-tag::before { content: "// "; }
+
+        #physical-probe h2 {
+          font-family: 'Orbitron', sans-serif;
+          font-size: var(--fs-lg);
+          color: var(--hi2);
+          letter-spacing: 1px;
+          margin: 0 0 1rem 0;
+          line-height: 1.2;
+          font-weight: 700;
+          word-break: break-word;
+        }
+
+        #physical-probe .probe-text {
+          font-family: 'Share Tech Mono', monospace;
+          font-size: var(--fs-sm);
+          color: var(--txt);
+          line-height: 1.9;
+          margin-bottom: 0.75rem;
+          max-width: 70ch;
+          word-break: break-word;
+        }
+
+        #physical-probe .divider {
+          font-family: 'Share Tech Mono', monospace;
+          color: var(--txt3);
+          letter-spacing: 2px;
+          font-size: var(--fs-xs);
+          margin: 2rem 0;
+          user-select: none;
+        }
+
+        #physical-probe .cursor {
+          display: inline-block;
+          width: 0.6em;
+          height: 1.1em;
+          background: var(--hi);
+          margin-left: 0.15em;
+          animation: blink 1s steps(1) infinite;
+          vertical-align: text-bottom;
+        }
+
+        @keyframes blink { 50% { opacity: 0; } }
+
+        #physical-probe .downloads {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+          margin-top: 0.5rem;
+        }
+
+        #physical-probe .download-item {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          border-left: 2px solid var(--rule);
+          padding-left: 1rem;
+        }
+
+        #physical-probe .download-label {
+          font-family: 'Orbitron', sans-serif;
+          font-size: var(--fs-sm);
+          letter-spacing: 2px;
+          color: var(--hi);
+          text-transform: uppercase;
+          font-weight: 600;
+        }
+
+        #physical-probe .download-desc {
+          font-family: 'Share Tech Mono', monospace;
+          font-size: var(--fs-xs);
+          color: var(--txt);
+          line-height: 1.6;
+          margin: 0;
+        }
+
+        #physical-probe .btn-download {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-family: 'Share Tech Mono', monospace;
+          font-size: var(--fs-sm);
+          letter-spacing: 1px;
+          text-decoration: none;
+          color: var(--hi);
+          background: transparent;
+          padding: 0.5rem 1rem;
+          border: 1px solid var(--rule);
+          cursor: pointer;
+          transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+          white-space: nowrap;
+          align-self: flex-start;
+        }
+
+        #physical-probe .btn-download:hover {
+          background: rgba(0,255,65,0.06);
+          border-color: var(--hi);
+          color: var(--hi2);
+        }
+
+        #physical-probe .btn-download:focus-visible {
+          outline: 2px solid var(--amber);
+          outline-offset: 3px;
         }
 
         @media (max-width: 768px) {
-            .mobile-banner {
-                display: block;
-            }
+          #physical-probe { padding: 2.5rem 1.5rem; }
         }
-        #physical-probe {
-  width: 100%;
-  max-width: 60rem;
-  margin: 0 auto;
-  background: var(--bg);
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
-  padding: 3rem 2rem;
-}
-
-#physical-probe .module-tag {
-  font-family: 'Orbitron', sans-serif;
-  font-size: var(--fs-xs);
-  letter-spacing: 3px;
-  color: var(--amber);
-  border: 1px solid var(--amber);
-  display: inline-block;
-  padding: 0.25rem 0.75rem;
-  margin-bottom: 1.5rem;
-  text-transform: uppercase;
-}
-
-#physical-probe .module-tag::before {
-  content: "// ";
-}
-
-#physical-probe h2 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: var(--fs-lg);
-  color: var(--hi2);
-  letter-spacing: 1px;
-  margin: 0 0 1rem 0;
-  line-height: 1.2;
-  font-weight: 700;
-  word-break: break-word;
-}
-
-#physical-probe .probe-text {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: var(--fs-sm);
-  color: var(--txt);
-  line-height: 1.9;
-  margin-bottom: 0.75rem;
-  max-width: 70ch;
-  word-break: break-word;
-}
-
-#physical-probe .divider {
-  font-family: 'Share Tech Mono', monospace;
-  color: var(--txt3);
-  letter-spacing: 2px;
-  font-size: var(--fs-xs);
-  margin: 2rem 0;
-  user-select: none;
-}
-
-#physical-probe .cursor {
-  display: inline-block;
-  width: 0.6em;
-  height: 1.1em;
-  background: var(--hi);
-  margin-left: 0.15em;
-  animation: blink 1s steps(1) infinite;
-  vertical-align: text-bottom;
-}
-
-@keyframes blink {
-  50% { opacity: 0; }
-}
-
-#physical-probe .downloads {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 0.5rem;
-}
-
-#physical-probe .download-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  border-left: 2px solid var(--rule);
-  padding-left: 1rem;
-}
-
-#physical-probe .download-label {
-  font-family: 'Orbitron', sans-serif;
-  font-size: var(--fs-sm);
-  letter-spacing: 2px;
-  color: var(--hi);
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-#physical-probe .download-desc {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: var(--fs-xs);
-  color: var(--txt);
-  line-height: 1.6;
-  margin: 0;
-}
-
-#physical-probe .btn-download {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: var(--fs-sm);
-  letter-spacing: 1px;
-  text-decoration: none;
-  color: var(--hi);
-  background: transparent;
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--rule);
-  cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
-  white-space: nowrap;
-  align-self: flex-start;
-}
-
-#physical-probe .btn-download:hover {
-  background: rgba(0,255,65,0.06);
-  border-color: var(--hi);
-  color: var(--hi2);
-}
-
-#physical-probe .btn-download:focus-visible {
-  outline: 2px solid var(--amber);
-  outline-offset: 3px;
-}
-
-@media (max-width: 768px) {
-  #physical-probe {
-    padding: 2.5rem 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  #physical-probe {
-    padding: 1.75rem 1rem;
-  }
-}
-    
+        @media (max-width: 480px) {
+          #physical-probe { padding: 1.75rem 1rem; }
+        }
     </style>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "@id": "https://orcid.org/0009-0002-3432-1710",
-      "name": "Dany D. Ruiz",
-      "alternateName": "panperceptual",
-      "jobTitle": "Anartist · Independent Researcher",
-      "affiliation": {
-        "@type": "Organization",
-        "name": "PERCEPTEMPLE",
-        "url": "https://perceptemple.art"
-      },
-      "url": "https://perceptemple.art",
-      "sameAs": [
-        "https://orcid.org/0009-0002-3432-1710",
-        "https://x.com/panperceptual",
-        "https://github.com/PERCEPTEMPLE",
-        "https://doi.org/10.17605/OSF.IO/FVCAX",
-        "https://doi.org/10.5281/zenodo.17683631",
-        "https://doi.org/10.2139/ssrn.5794102"
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": ["SoftwareApplication", "WebApplication"],
-      "name": "PercepWare",
-      "description": "PercepWare applies the Perceptual Wave Function (PWF) and Perceptual Complexity Index (PCI) as a perceptual layer before the operating system, filtering signals via the collapse threshold τ without training.",
-      "datePublished": "2026-06-07",
-      "dateModified": "2026-06-07",
-      "applicationCategory": "ScientificApplication",
-      "operatingSystem": "Web",
-      "url": "https://perceptemple.art/percepware/",
-      "inLanguage": "en",
-      "author": {
-        "@type": "Person",
-        "@id": "https://orcid.org/0009-0002-3432-1710",
-        "name": "Dany D. Ruiz"
-      },
-      "isPartOf": {
-        "@type": "WebSite",
-        "name": "PERCEPTEMPLE",
-        "url": "https://perceptemple.art"
-      },
-      "license": "https://perceptemple.art/licence/"
-    }
-    </script>
 </head>
 <body>
 
@@ -698,82 +590,40 @@
             <span data-lang="es" class="lang-hidden">PRUEBA DE CONCIENCIA HUMANA</span>
         </a>
         <div class="logo-controls">
-            <button class="nodes-btn" id="nodesToggle"
-                    onclick="toggleNodes()">[ NODES ]</button>
-            <button class="translate-btn" id="langToggle"
-                    onclick="toggleLanguage()">ES</button>
+            <button class="nodes-btn" id="nodesToggle" onclick="toggleNodes()">[ NODES ]</button>
+            <button class="translate-btn" id="langToggle" onclick="toggleLanguage()">ES</button>
         </div>
     </div>
     <nav class="header-nav"></nav>
 
     <div class="nodes-panel" id="nodesPanel">
-        <a class="nodes-link active" href="../percepware/index.html">
-            <span data-lang="en">PercepWare</span>
-            <span data-lang="es" class="lang-hidden">PercepWare</span>
-        </a>
-        <a class="nodes-link" href="../pci/index.html">
-            <span data-lang="en">PCI</span>
-            <span data-lang="es" class="lang-hidden">PCI</span>
-        </a>
-        <a class="nodes-link" href="../aei/index.html">
-            <span data-lang="en">AEI</span>
-            <span data-lang="es" class="lang-hidden">AEI</span>
-        </a>
-        <a class="nodes-link" href="../neohaki/index.html">
-            <span data-lang="en">NEOHAKI</span>
-            <span data-lang="es" class="lang-hidden">NEOHAKI</span>
-        </a>
-        <a class="nodes-link" href="../pram/index.html">
-            <span data-lang="en">PRAM</span>
-            <span data-lang="es" class="lang-hidden">PRAM</span>
-        </a>
-        <a class="nodes-link" href="../licence/index.html">
-            <span data-lang="en">License</span>
-            <span data-lang="es" class="lang-hidden">Licencia</span>
-        </a>
-        <a class="nodes-link" href="../bitneko/index.html">
-            <span data-lang="en">BITNEKO</span>
-            <span data-lang="es" class="lang-hidden">BITNEKO</span>
-        </a>
-        <a class="nodes-link" href="../space/index.html">
-            <span data-lang="en">SPACE</span>
-            <span data-lang="es" class="lang-hidden">SPACE</span>
-        </a>
-        <a class="nodes-link" href="../agamottor/index.html">
-            <span data-lang="en">Agamottor</span>
-            <span data-lang="es" class="lang-hidden">Agamottor</span>
-        </a>
-        <a class="nodes-link" href="../little-prince/index.html">
-            <span data-lang="en">Little Prince</span>
-            <span data-lang="es" class="lang-hidden">Little Prince</span>
-        </a>
-        <a class="nodes-link" href="../ptu/index.html">
-            <span data-lang="en">PTU</span>
-            <span data-lang="es" class="lang-hidden">PTU</span>
-        </a>
-        <a class="nodes-link" href="../time-machine/index.html">
-            <span data-lang="en">Time Machine</span>
-            <span data-lang="es" class="lang-hidden">Máquina del Tiempo</span>
-        </a>
-        <a class="nodes-link" href="../poetry/index.html">
-            <span data-lang="en">Poetry</span>
-            <span data-lang="es" class="lang-hidden">Poesía</span>
-        </a>
+        <a class="nodes-link active" href="../percepware/index.html"><span data-lang="en">PercepWare</span><span data-lang="es" class="lang-hidden">PercepWare</span></a>
+        <a class="nodes-link" href="../pci/index.html"><span data-lang="en">PCI</span><span data-lang="es" class="lang-hidden">PCI</span></a>
+        <a class="nodes-link" href="../aei/index.html"><span data-lang="en">AEI</span><span data-lang="es" class="lang-hidden">AEI</span></a>
+        <a class="nodes-link" href="../neohaki/index.html"><span data-lang="en">NEOHAKI</span><span data-lang="es" class="lang-hidden">NEOHAKI</span></a>
+        <a class="nodes-link" href="../pram/index.html"><span data-lang="en">PRAM</span><span data-lang="es" class="lang-hidden">PRAM</span></a>
+        <a class="nodes-link" href="../licence/index.html"><span data-lang="en">License</span><span data-lang="es" class="lang-hidden">Licencia</span></a>
+        <a class="nodes-link" href="../bitneko/index.html"><span data-lang="en">BITNEKO</span><span data-lang="es" class="lang-hidden">BITNEKO</span></a>
+        <a class="nodes-link" href="../space/index.html"><span data-lang="en">SPACE</span><span data-lang="es" class="lang-hidden">SPACE</span></a>
+        <a class="nodes-link" href="../agamottor/index.html"><span data-lang="en">Agamottor</span><span data-lang="es" class="lang-hidden">Agamottor</span></a>
+        <a class="nodes-link" href="../little-prince/index.html"><span data-lang="en">Little Prince</span><span data-lang="es" class="lang-hidden">Little Prince</span></a>
+        <a class="nodes-link" href="../ptu/index.html"><span data-lang="en">PTU</span><span data-lang="es" class="lang-hidden">PTU</span></a>
+        <a class="nodes-link" href="../time-machine/index.html"><span data-lang="en">Time Machine</span><span data-lang="es" class="lang-hidden">Máquina del Tiempo</span></a>
+        <a class="nodes-link" href="../poetry/index.html"><span data-lang="en">Poetry</span><span data-lang="es" class="lang-hidden">Poesía</span></a>
     </div>
 </div>
 
 <div class="mobile-banner">
-    <p data-lang="en">
-    The density of this environment requires an extended visualization horizon.
-</p>
-<p data-lang="es" class="lang-hidden">
-    La densidad de este entorno requiere un horizonte de visualización extendido.
-</p>
+    <p data-lang="en">The density of this environment requires an extended visualization horizon.</p>
+    <p data-lang="es" class="lang-hidden">La densidad de este entorno requiere un horizonte de visualización extendido.</p>
 </div>
 
 <div class="hero">
     <div>
-        <h1 class="hero-h1"><span data-lang="en">Perceptual Layer<br>Before the<br><em>Operating System</em></span><span data-lang="es" class="lang-hidden">Capa Perceptual<br>Anterior al<br><em>Sistema Operativo</em></span></h1>
+        <h1 class="hero-h1">
+            <span data-lang="en">Perceptual Layer<br>Before the<br><em>Operating System</em></span>
+            <span data-lang="es" class="lang-hidden">Capa Perceptual<br>Anterior al<br><em>Sistema Operativo</em></span>
+        </h1>
         <p class="hero-body" data-lang="en"><strong>PercepWare</strong> applies the <strong>Perceptual Wave Function (PWF)</strong> and a single parameter —<strong>τ</strong>— to decide which data crosses the significance threshold. No training. No neural networks. Just physics.</p>
         <p class="hero-body lang-hidden" data-lang="es"><strong>PercepWare</strong> aplica la <strong>Función de Onda Perceptual (PWF)</strong> y un único parámetro —<strong>τ</strong>— para decidir qué datos cruzan el umbral de significancia. Sin entrenamiento. Sin redes neuronales. Solo física.</p>
     </div>
@@ -785,6 +635,7 @@
         <div class="kv"><span class="kv-key" data-lang="en">Next</span><span class="kv-key lang-hidden" data-lang="es">Próximo</span><span class="kv-val" style="color:var(--hi2);font-size:var(--fs-sm);" data-lang="en">MAST FITS L2</span><span class="kv-val lang-hidden" style="color:var(--hi2);font-size:var(--fs-sm);" data-lang="es">MAST FITS L2</span></div>
     </div>
 </div>
+
 <div class="content-section">
     <h2 data-lang="en">The Panperceptual Theory is neither Relativity nor Quantum Mechanics</h2>
     <h2 data-lang="es" class="lang-hidden">La Teoría Panperceptual no es Relatividad ni Mecánica Cuántica</h2>
@@ -799,6 +650,7 @@
     <p data-lang="en">The remaining question is not "is this quantum physics?" but "is the isomorphism between perceptual collapse and quantum collapse deep or superficial?" And that is an empirical and mathematical question, not a matter of definition. It can be investigated. It can be tested. It can be refuted.</p>
     <p data-lang="es" class="lang-hidden">La pregunta restante no es "¿esto es física cuántica?" sino "¿el isomorfismo entre el colapso perceptual y el colapso cuántico es profundo o superficial?" Y esa es una pregunta empírica y matemática, no una cuestión de definición. Puede ser investigada. Puede ser testeada. Puede ser refutada.</p>
 </div>
+
 <div class="section-label" id="demo" data-lang="en">Laboratory · TESS · WASP-18b</div>
 <div class="section-label lang-hidden" data-lang="es">Laboratorio · TESS · WASP-18b</div>
 
@@ -878,87 +730,35 @@
 <div class="content-section">
     <h2 data-lang="en">First Contact with Real Data · TESS/WASP-18b · MAST Archive</h2>
     <h2 data-lang="es" class="lang-hidden">Primer Contacto con Datos Reales · TESS/WASP-18b · Archivo MAST</h2>
-
     <p data-lang="en">Above: a simulation. A controlled environment where the perceptual filter operates under ideal conditions — low noise, calibrated signal, predictable structure. Below: what happens when the same perceptual structure meets real TESS data, raw, unfiltered, as it arrives from the archive. The system does not break. It reveals something the simulation could not.</p>
     <p data-lang="es" class="lang-hidden">Arriba: una simulación. Un entorno controlado donde el filtro perceptual opera bajo condiciones ideales — ruido bajo, señal calibrada, estructura predecible. Abajo: lo que ocurre cuando la misma estructura perceptual se encuentra con datos reales de TESS, crudos, sin filtrar, tal como llegan del archivo. El sistema no se rompe. Revela algo que la simulación no podía mostrar.</p>
 
     <div class="table-wrapper">
         <table class="pw-table">
             <thead><tr>
-                <th data-lang="en">Metric</th>
-                <th data-lang="es" class="lang-hidden">Métrica</th>
-                <th data-lang="en">Simulation (Ideal)</th>
-                <th data-lang="es" class="lang-hidden">Simulación (Ideal)</th>
-                <th style="color:var(--amber);" data-lang="en">Real (Raw)</th>
-                <th style="color:var(--amber);" data-lang="es" class="lang-hidden">Real (Crudo)</th>
-                <th data-lang="en">Revealed Gap</th>
-                <th data-lang="es" class="lang-hidden">Brecha Revelada</th>
+                <th data-lang="en">Metric</th><th data-lang="es" class="lang-hidden">Métrica</th>
+                <th data-lang="en">Simulation (Ideal)</th><th data-lang="es" class="lang-hidden">Simulación (Ideal)</th>
+                <th style="color:var(--amber);" data-lang="en">Real (Raw)</th><th style="color:var(--amber);" data-lang="es" class="lang-hidden">Real (Crudo)</th>
+                <th data-lang="en">Revealed Gap</th><th data-lang="es" class="lang-hidden">Brecha Revelada</th>
             </tr></thead>
             <tbody>
-                <tr>
-                    <td data-lang="en">Noise</td>
-                    <td data-lang="es" class="lang-hidden">Ruido</td>
-                    <td style="color:var(--txt3);">200 ppm</td>
-                    <td style="color:var(--hi);">3,045 ppm</td>
-                    <td style="color:var(--amber);">~15×</td>
-                </tr>
-                <tr>
-                    <td data-lang="en">Samples</td>
-                    <td data-lang="es" class="lang-hidden">Muestras</td>
-                    <td style="color:var(--txt3);" data-lang="en">Controlled</td>
-                    <td style="color:var(--txt3);" data-lang="es" class="lang-hidden">Controladas</td>
-                    <td style="color:var(--txt2);">579,447</td>
-                    <td style="color:var(--amber);">—</td>
-                </tr>
-                <tr>
-                    <td data-lang="en">Duration</td>
-                    <td data-lang="es" class="lang-hidden">Duración</td>
-                    <td style="color:var(--txt3);" data-lang="en">1 orbit</td>
-                    <td style="color:var(--txt3);" data-lang="es" class="lang-hidden">1 órbita</td>
-                    <td style="color:var(--txt2);">2,823 days</td>
-                    <td style="color:var(--amber);">—</td>
-                </tr>
-                <tr>
-                    <td data-lang="en">Orbits</td>
-                    <td data-lang="es" class="lang-hidden">Órbitas</td>
-                    <td style="color:var(--txt3);">1</td>
-                    <td style="color:var(--txt2);">2,999</td>
-                    <td style="color:var(--amber);">—</td>
-                </tr>
+                <tr><td data-lang="en">Noise</td><td data-lang="es" class="lang-hidden">Ruido</td><td style="color:var(--txt3);">200 ppm</td><td style="color:var(--hi);">3,045 ppm</td><td style="color:var(--amber);">~15×</td></tr>
+                <tr><td data-lang="en">Samples</td><td data-lang="es" class="lang-hidden">Muestras</td><td style="color:var(--txt3);" data-lang="en">Controlled</td><td style="color:var(--txt3);" data-lang="es" class="lang-hidden">Controladas</td><td style="color:var(--txt2);">579,447</td><td style="color:var(--amber);">—</td></tr>
+                <tr><td data-lang="en">Duration</td><td data-lang="es" class="lang-hidden">Duración</td><td style="color:var(--txt3);" data-lang="en">1 orbit</td><td style="color:var(--txt3);" data-lang="es" class="lang-hidden">1 órbita</td><td style="color:var(--txt2);">2,823 days</td><td style="color:var(--amber);">—</td></tr>
+                <tr><td data-lang="en">Orbits</td><td data-lang="es" class="lang-hidden">Órbitas</td><td style="color:var(--txt3);">1</td><td style="color:var(--txt2);">2,999</td><td style="color:var(--amber);">—</td></tr>
             </tbody>
         </table>
     </div>
 
     <h3 data-lang="en">What the Perceptual Filter Encountered</h3>
     <h3 data-lang="es" class="lang-hidden">Lo que el Filtro Perceptual Encontró</h3>
-
     <div class="table-wrapper">
         <table class="pw-table">
-            <thead><tr>
-                <th data-lang="en">Zone</th>
-                <th data-lang="es" class="lang-hidden">Zona</th>
-                <th>Φ median</th>
-                <th>Φ max</th>
-            </tr></thead>
+            <thead><tr><th data-lang="en">Zone</th><th data-lang="es" class="lang-hidden">Zona</th><th>Φ median</th><th>Φ max</th></tr></thead>
             <tbody>
-                <tr>
-                    <td data-lang="en">Outside transit</td>
-                    <td data-lang="es" class="lang-hidden">Fuera del tránsito</td>
-                    <td style="color:var(--txt2);">0.1461</td>
-                    <td style="color:var(--txt2);">1.5359</td>
-                </tr>
-                <tr>
-                    <td data-lang="en">Inside transit</td>
-                    <td data-lang="es" class="lang-hidden">Dentro del tránsito</td>
-                    <td style="color:var(--txt2);">0.1454</td>
-                    <td style="color:var(--txt2);">0.6650</td>
-                </tr>
-                <tr>
-                    <td style="color:var(--amber);" data-lang="en">Difference</td>
-                    <td style="color:var(--amber);" data-lang="es" class="lang-hidden">Diferencia</td>
-                    <td style="color:var(--amber);">0.0007</td>
-                    <td style="color:var(--txt3);">—</td>
-                </tr>
+                <tr><td data-lang="en">Outside transit</td><td data-lang="es" class="lang-hidden">Fuera del tránsito</td><td style="color:var(--txt2);">0.1461</td><td style="color:var(--txt2);">1.5359</td></tr>
+                <tr><td data-lang="en">Inside transit</td><td data-lang="es" class="lang-hidden">Dentro del tránsito</td><td style="color:var(--txt2);">0.1454</td><td style="color:var(--txt2);">0.6650</td></tr>
+                <tr><td style="color:var(--amber);" data-lang="en">Difference</td><td style="color:var(--amber);" data-lang="es" class="lang-hidden">Diferencia</td><td style="color:var(--amber);">0.0007</td><td style="color:var(--txt3);">—</td></tr>
             </tbody>
         </table>
     </div>
@@ -976,8 +776,8 @@
     <div class="disclaimer-block lang-hidden" data-lang="es"><strong>Esta lectura no es el final de la pregunta. Es el comienzo.</strong> El próximo paso puede ser MAST FITS L2 con preprocesamiento perceptual. Puede ser otro telescopio, otro instrumento, otro dominio completamente distinto — uno cuya señal entre ya amplificada, ya filtrada, ya moldeada por hardware diseñado desde principios perceptuales. La brecha está documentada. Los números son públicos. La pregunta no es si PercepWare cierra la brecha. La pregunta es <strong>qué otras tecnologías emergen de la Teoría Panperceptual del Universo</strong> — tecnologías que aún no hemos nombrado, instrumentos que aún no hemos construido, estratos perceptuales que aún no hemos aprendido a leer.</div>
 </div>
 
-    <div class="section-label" data-lang="en">What Other Question Collapses Us</div>
-    <div class="section-label lang-hidden" data-lang="es">Qué Otra Pregunta Nos Colapsa</div>
+<div class="section-label" data-lang="en">What Other Question Collapses Us</div>
+<div class="section-label lang-hidden" data-lang="es">Qué Otra Pregunta Nos Colapsa</div>
 
 <div class="section-label" id="doc" data-lang="en">PercepWare · Definition</div>
 <div class="section-label lang-hidden" data-lang="es">PercepWare · Definición</div>
@@ -997,119 +797,66 @@
                 <tr><td class="dim">1</td><td data-lang="en">Signal enters from sensor</td><td data-lang="es" class="lang-hidden">La señal entra del sensor</td></tr>
                 <tr><td class="dim">2</td><td data-lang="en">PWF: Φ(t) = √[(ds/dt)² + (ω·s)²] — ω from phenomenon physics</td><td data-lang="es" class="lang-hidden">PWF: Φ(t) = √[(ds/dt)² + (ω·s)²] — ω desde la física del fenómeno</td></tr>
                 <tr><td class="dim">3</td><td data-lang="en"><a href="../pci/index.html" style="color:var(--hi);">PCI</a> = Φ(t) / |s(t)| — measures perceptual coherence</td><td data-lang="es" class="lang-hidden"><a href="../pci/index.html" style="color:var(--hi);">PCI</a> = Φ(t) / |s(t)| — mide coherencia perceptual</td></tr>
-                <tr><td class="dim" style="color:var(--hi);">4</td><td style="color:var(--hi);" data-lang="en"><a href="../pci/index.html" style="color:var(--hi);">PCI</a> > <a href="../pci/index.html" style="color:var(--hi);">τ</a> → COLLAPSE & INTEGRATE. Else → SUPERPOSITION</td><td style="color:var(--hi);" data-lang="es" class="lang-hidden"><a href="../pci/index.html" style="color:var(--hi);">PCI</a> > <a href="../pci/index.html" style="color:var(--hi);">τ</a> → COLLAPSE & INTEGRATE. Si no → SUPERPOSITION</td></tr>
+                <tr><td class="dim" style="color:var(--hi);">4</td><td style="color:var(--hi);" data-lang="en"><a href="../pci/index.html" style="color:var(--hi);">PCI</a> > <a href="../pci/index.html" style="color:var(--hi);">τ</a> → COLLAPSE & INTEGRATE. Else → SUPERPOSITION</td><td style="color:var(--hi);" data-lang="es" class="lang-hidden"><a href="../pci/index.html" style="color:var(--hi);">PCI</a> > <a href="../pci/index.html" style="color:var(--hi);">τ</a> → COLAPSO E INTEGRACIÓN. Si no → SUPERPOSICIÓN</td></tr>
             </tbody>
         </table>
     </div>
 
-    <div class="note-block" data-lang="en">
-    <strong>Role in the <a href="../aei/index.html" style="color:var(--amber);">AEI</a>:</strong> PercepWare is the technical concretion of <strong>Layer A — Resonance Core</strong>. First step toward computers that curate their own perceptual experience.<br><br>
-    <strong>PercepWare is not an exoplanet detector.</strong> TESS and WASP-18b are a test domain — chosen because the data is public, physical, and verifiable. The same algorithm applies to audio, industrial sensors, network traffic, or medical imaging. What PercepWare proposes is a layer that does not exist in current computational architecture: a mechanism that asks <em>"does this deserve to be perceived?"</em> before any process touches the data. Not a filter in the signal processing sense. A perceptual threshold that operates before the operating system. The astronomical domain was not the destination. It was the terrain where the algorithm made first contact with reality.
+    <div class="note-block" data-lang="en"><strong>Role in the <a href="../aei/index.html" style="color:var(--amber);">AEI</a>:</strong> PercepWare is the technical concretion of <strong>Layer A — Resonance Core</strong>. First step toward computers that curate their own perceptual experience.<br><br><strong>PercepWare is not an exoplanet detector.</strong> TESS and WASP-18b are a test domain — chosen because the data is public, physical, and verifiable. The same algorithm applies to audio, industrial sensors, network traffic, or medical imaging. What PercepWare proposes is a layer that does not exist in current computational architecture: a mechanism that asks <em>"does this deserve to be perceived?"</em> before any process touches the data. Not a filter in the signal processing sense. A perceptual threshold that operates before the operating system. The astronomical domain was not the destination. It was the terrain where the algorithm made first contact with reality.</div>
+    <div class="note-block lang-hidden" data-lang="es"><strong>Rol en la <a href="../aei/index.html" style="color:var(--amber);">AEI</a>:</strong> PercepWare es la concreción técnica de la <strong>Capa A — Núcleo de Resonancia</strong>. Es el primer paso hacia computadoras que curan su propia experiencia perceptual.<br><br><strong>PercepWare no es un detector de exoplanetas.</strong> TESS y WASP-18b son un dominio de prueba — elegido porque los datos son públicos, físicos y verificables. El mismo algoritmo aplica a audio, sensores industriales, tráfico de red o imágenes médicas. Lo que PercepWare propone es una capa que no existe en la arquitectura computacional actual: un mecanismo que pregunta <em>"¿esto merece ser percibido?"</em> antes de que cualquier proceso toque los datos. No un filtro en el sentido del procesamiento de señales. Un umbral perceptual que opera antes del sistema operativo. El dominio astronómico no era el destino. Era el terreno donde el algoritmo tuvo su primer contacto con la realidad.</div>
 </div>
-<div class="note-block lang-hidden" data-lang="es">
-    <strong>Rol en la <a href="../aei/index.html" style="color:var(--amber);">AEI</a>:</strong> PercepWare es la concreción técnica de la <strong>Capa A — Núcleo de Resonancia</strong>. Es el primer paso hacia computadoras que curan su propia experiencia perceptual.<br><br>
-    <strong>PercepWare no es un detector de exoplanetas.</strong> TESS y WASP-18b son un dominio de prueba — elegido porque los datos son públicos, físicos y verificables. El mismo algoritmo aplica a audio, sensores industriales, tráfico de red o imágenes médicas. Lo que PercepWare propone es una capa que no existe en la arquitectura computacional actual: un mecanismo que pregunta <em>"¿esto merece ser percibido?"</em> antes de que cualquier proceso toque los datos. No un filtro en el sentido del procesamiento de señales. Un umbral perceptual que opera antes del sistema operativo. El dominio astronómico no era el destino. Era el terreno donde el algoritmo tuvo su primer contacto con la realidad.
-</div>
-</div>
+
 <section id="physical-probe" aria-labelledby="physical-probe-heading">
-  <span class="module-tag" data-lang="en">BUILD · VERIFY</span>
-<span class="module-tag lang-hidden" data-lang="es">CONSTRUIR · VERIFICAR</span>
+    <span class="module-tag" data-lang="en">BUILD · VERIFY</span>
+    <span class="module-tag lang-hidden" data-lang="es">CONSTRUIR · VERIFICAR</span>
 
-  <h2 id="physical-probe-heading" data-lang="en">Open Validation Laboratory</h2>
-  <h2 data-lang="es" class="lang-hidden">Laboratorio de Validación Abierta</h2>
+    <h2 id="physical-probe-heading" data-lang="en">Open Validation Laboratory</h2>
+    <h2 data-lang="es" class="lang-hidden">Laboratorio de Validación Abierta</h2>
 
-  <p class="probe-text" data-lang="en">
-    PercepWare has been verified across multiple domains — from orbital telescope data
-    to signals no larger than a room. The PWF Physical Probe is the most accessible entry
-    point: a three-dollar ultrasonic sensor, a microcontroller, and any computer. No
-    specialized hardware, no institutional access required.
-  </p>
-  <p class="probe-text lang-hidden" data-lang="es">
-    PercepWare ha sido verificado en múltiples dominios — desde datos de telescopio
-    orbital hasta señales del tamaño de una habitación. El PWF Physical Probe es la
-    puerta de entrada más accesible: un sensor ultrasónico de tres dólares, un
-    microcontrolador, y cualquier computadora. Sin hardware especializado, sin acceso
-    institucional requerido.
-  </p>
+    <p class="probe-text" data-lang="en">PercepWare has been verified across multiple domains — from orbital telescope data to signals no larger than a room. The PWF Physical Probe is the most accessible entry point: a three-dollar ultrasonic sensor, a microcontroller, and any computer. No specialized hardware, no institutional access required.</p>
+    <p class="probe-text lang-hidden" data-lang="es">PercepWare ha sido verificado en múltiples dominios — desde datos de telescopio orbital hasta señales del tamaño de una habitación. El PWF Physical Probe es la puerta de entrada más accesible: un sensor ultrasónico de tres dólares, un microcontrolador, y cualquier computadora. Sin hardware especializado, sin acceso institucional requerido.</p>
 
-  <p class="probe-text" data-lang="en">
-    This is an invitation to build a decentralized laboratory: schools, independent
-    researchers, and institutions replicating the same protocol, each generating evidence
-    the creator cannot predict or control. Verification distributed, not delegated<span class="cursor"></span>
-  </p>
-  <p class="probe-text lang-hidden" data-lang="es">
-    Esta es una invitación a construir un laboratorio descentralizado: escuelas,
-    investigadores independientes e instituciones replicando el mismo protocolo, cada
-    quien generando evidencia que el creador no puede predecir ni controlar.
-    Verificación distribuida, no delegada<span class="cursor"></span>
-  </p>
+    <p class="probe-text" data-lang="en">This is an invitation to build a decentralized laboratory: schools, independent researchers, and institutions replicating the same protocol, each generating evidence the creator cannot predict or control. Verification distributed, not delegated<span class="cursor"></span></p>
+    <p class="probe-text lang-hidden" data-lang="es">Esta es una invitación a construir un laboratorio descentralizado: escuelas, investigadores independientes e instituciones replicando el mismo protocolo, cada quien generando evidencia que el creador no puede predecir ni controlar. Verificación distribuida, no delegada<span class="cursor"></span></p>
 
-<div class="note-block" data-lang="en">
-  Peer review asks whether a result repeats. It rarely asks what is repeating. Twice in
-  this project, a frequency reading turned out to be the observer's own configured
-  parameter, not the phenomenon it claimed to measure. Before trusting any result here,
-  ours or anyone's: not "does it repeat," but "what repeats?"
-  <br><br>
-  Build an instrument to detect whether the world resonates at the frequency the
-  observer chose, and there is no way to tell, from the reading alone, whether you
-  detected the world — or merely your own frequency, echoed back and mistaken for it.
-  Panperceptualism predicts exactly this: that reality is not what is out there, but
-  what emerges according to the perceptual complexity of the observer. The bug does not
-  refute the theory. It performs it.
-  <br><br>
-  <span style="color:var(--amber);">— Dany D. Ruiz</span>
-</div>
-<div class="note-block lang-hidden" data-lang="es">
-  La revisión por pares pregunta si un resultado se repite. Rara vez pregunta qué es lo
-  que se repite. Dos veces en este proyecto, una lectura de frecuencia resultó ser el
-  propio parámetro configurado del observador, no el fenómeno que decía medir. Antes de
-  confiar en cualquier resultado aquí, el nuestro o el de cualquiera: no "¿se repite?",
-  sino "¿qué se repite?"
-  <br><br>
-  Se construye un instrumento para detectar si el mundo resuena a la frecuencia que el
-  observador eligió, y no hay forma de saber, solo con la lectura, si se detectó el
-  mundo — o simplemente la propia frecuencia del observador, devuelta como eco y
-  confundida con él. El Panperceptualismo predice exactamente esto: que la realidad no
-  es lo que está ahí afuera, sino lo que emerge según la complejidad perceptual del
-  observador. El error no refuta la teoría. La representa.
-  <br><br>
-  <span style="color:var(--amber);">— Dany D. Ruiz</span>
-</div>
-  <div class="downloads">
-    <div class="download-item">
-      <span class="download-label" data-lang="en">Paper</span>
-      <span class="download-label lang-hidden" data-lang="es">Paper</span>
-      <p class="download-desc" data-lang="en">What deserves to be perceived?</p>
-      <p class="download-desc lang-hidden" data-lang="es">¿Qué merece ser percibido?</p>
-      <a class="btn-download" href="percepware-physical-probe-en.pdf" download data-lang="en">
-        Download PDF (EN)
-      </a>
-      <a class="btn-download lang-hidden" href="percepware-physical-probe-es.pdf" download data-lang="es">
-        Descargar PDF (ES)
-      </a>
+    <div class="note-block" data-lang="en">
+        Peer review asks whether a result repeats. It rarely asks what is repeating. Twice in this project, a frequency reading turned out to be the observer's own configured parameter, not the phenomenon it claimed to measure. Before trusting any result here, ours or anyone's: not "does it repeat," but "what repeats?"<br><br>
+        Build an instrument to detect whether the world resonates at the frequency the observer chose, and there is no way to tell, from the reading alone, whether you detected the world — or merely your own frequency, echoed back and mistaken for it. Panperceptualism predicts exactly this: that reality is not what is out there, but what emerges according to the perceptual complexity of the observer. The bug does not refute the theory. It performs it.<br><br>
+        <span style="color:var(--amber);">— Dany D. Ruiz</span>
+    </div>
+    <div class="note-block lang-hidden" data-lang="es">
+        La revisión por pares pregunta si un resultado se repite. Rara vez pregunta qué es lo que se repite. Dos veces en este proyecto, una lectura de frecuencia resultó ser el propio parámetro configurado del observador, no el fenómeno que decía medir. Antes de confiar en cualquier resultado aquí, el nuestro o el de cualquiera: no "¿se repite?", sino "¿qué se repite?"<br><br>
+        Se construye un instrumento para detectar si el mundo resuena a la frecuencia que el observador eligió, y no hay forma de saber, solo con la lectura, si se detectó el mundo — o simplemente la propia frecuencia del observador, devuelta como eco y confundida con él. El Panperceptualismo predice exactamente esto: que la realidad no es lo que está ahí afuera, sino lo que emerge según la complejidad perceptual del observador. El error no refuta la teoría. La representa.<br><br>
+        <span style="color:var(--amber);">— Dany D. Ruiz</span>
     </div>
 
-    <div class="download-item">
-      <span class="download-label">Host Script</span>
-      <p class="download-desc">Computational validation protocol. 5-phase pipeline: synthetic control, static signal, natural movement, intermittent presence, and Socratic forgetting. Run with <code>python percepware_demo.py --omega 6.0 --tau 0.4</code>. Requires numpy, scipy, matplotlib.</p>
-      <button class="btn-download" onclick="downloadPercepwareDemo()" type="button">
-        percepware_demo.py
-      </button>
-    </div>
+    <div class="downloads">
+        <div class="download-item">
+            <span class="download-label" data-lang="en">Paper</span>
+            <span class="download-label lang-hidden" data-lang="es">Paper</span>
+            <p class="download-desc" data-lang="en">What deserves to be perceived?</p>
+            <p class="download-desc lang-hidden" data-lang="es">¿Qué merece ser percibido?</p>
+            <a class="btn-download" href="percepware-physical-probe-en.pdf" download data-lang="en">Download PDF (EN)</a>
+            <a class="btn-download lang-hidden" href="percepware-physical-probe-es.pdf" download data-lang="es">Descargar PDF (ES)</a>
+        </div>
 
-    <div class="download-item">
-      <span class="download-label">Raspberry Script</span>
-      <p class="download-desc">Firmware for Raspberry Pi Pico + HC-SR04 ultrasonic sensor. Reads distance at 25 Hz and streams CSV over USB serial. Connections: TRIG → GP14, ECHO → GP15 (with 1k+2k voltage divider to GND).</p>
-      <button class="btn-download" onclick="downloadPwfRaspberry()" type="button">
-        pwf_raspberry.py
-      </button>
+        <div class="download-item">
+            <span class="download-label">Host Script</span>
+            <p class="download-desc">Computational validation protocol. 5-phase pipeline: synthetic control, static signal, natural movement, intermittent presence, and Socratic forgetting. Run with <code>python percepware_demo.py --omega 6.0 --tau 0.4</code>. Requires numpy, scipy, matplotlib.</p>
+            <button class="btn-download" onclick="downloadPercepwareDemo()" type="button">percepware_demo.py</button>
+        </div>
+
+        <div class="download-item">
+            <span class="download-label">Raspberry Script</span>
+            <p class="download-desc">Firmware for Raspberry Pi Pico + HC-SR04 ultrasonic sensor. Reads distance at 25 Hz and streams CSV over USB serial. Connections: TRIG → GP14, ECHO → GP15 (with 1k+2k voltage divider to GND).</p>
+            <button class="btn-download" onclick="downloadPwfRaspberry()" type="button">pwf_raspberry.py</button>
+        </div>
     </div>
-  </div>
 </section>
+
 <div class="footer">
     <div class="footer-nodes">
-        <button class="nodes-btn-footer" id="nodesToggleFooter"
-                onclick="toggleNodesFooter()">[ NODES ]</button>
+        <button class="nodes-btn-footer" id="nodesToggleFooter" onclick="toggleNodesFooter()">[ NODES ]</button>
         <div class="nodes-panel-footer" id="nodesPanelFooter">
             <a class="nodes-link-footer active" href="../percepware/index.html">PercepWare</a>
             <a class="nodes-link-footer" href="../pci/index.html">PCI</a>
@@ -1156,22 +903,17 @@ function toggleNodes() {
         btn.classList.add('open');
         overlay.classList.add('open');
         header.style.zIndex = '201';
-        // Prevent links from closing the panel
         document.querySelectorAll('.nodes-link').forEach(function(link) {
-            link.addEventListener('click', function(e) {
-                e.stopPropagation();
-            });
+            link.addEventListener('click', function(e) { e.stopPropagation(); });
         });
     }
 }
 
-// Close panel on scroll
 window.addEventListener('scroll', function() {
     var panel = document.getElementById('nodesPanel');
     if (panel && panel.classList.contains('open')) toggleNodes();
 });
 
-// Close panel on ESC key
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
         var panel = document.getElementById('nodesPanel');
@@ -1192,6 +934,18 @@ function toggleNodesFooter() {
     }
 }
 
+// Close footer panel on outside click
+document.addEventListener('click', function(e) {
+    var panel = document.getElementById('nodesPanelFooter');
+    var btn = document.getElementById('nodesToggleFooter');
+    if (panel && panel.classList.contains('open')) {
+        if (!panel.contains(e.target) && !btn.contains(e.target)) {
+            panel.classList.remove('open');
+            btn.classList.remove('open');
+        }
+    }
+});
+
 function toggleLanguage(){
     var h=document.documentElement,c=h.lang||'en',n=c==='en'?'es':'en',d=n==='en'?'es':'en';
     h.lang=n;
@@ -1200,6 +954,9 @@ function toggleLanguage(){
     document.getElementById('langToggle').textContent=n==='en'?'ES':'EN';
     localStorage.setItem('perceptemple-lang',n);
     if(typeof window.updateExperimentText==='function') window.updateExperimentText();
+    // Force visual refresh
+    var tauSlider = document.getElementById('param-tau');
+    if (tauSlider) tauSlider.dispatchEvent(new Event('input'));
 }
 (function(){var s=localStorage.getItem('perceptemple-lang');if(s&&s==='es')toggleLanguage()})();
 </script>
@@ -1388,10 +1145,12 @@ function updateScreen(){
         else if(gt)fn++;
     }
     var hayTransito=tp>0;
+    var isEn=document.documentElement.lang==='en';
+    var detectText = hayTransito ? (isEn ? 'YES' : 'SÍ') : (isEn ? 'NO' : 'NO');
 
     document.getElementById('m-collapse').textContent=colapsos;
     document.getElementById('m-pci-max').textContent=pciMax.toFixed(3);
-    document.getElementById('m-detect').textContent=hayTransito?'YES':'NO';
+    document.getElementById('m-detect').textContent=detectText;
     document.getElementById('m-detect').style.color=hayTransito?'var(--hi)':'var(--red)';
     document.getElementById('m-fp').textContent=fp;
     document.getElementById('m-fn').textContent=fn;
@@ -1406,10 +1165,13 @@ function updateScreen(){
 function buildResults(tau,theta,colapsos,pciMax,hayTransito,fp,fn,tp,decisiones){
     var grid=document.getElementById('results-grid');
     var ventanasGT=Object.keys(ventanasTransito).length;
+    var isEn=document.documentElement.lang==='en';
+    var detectText = hayTransito ? (isEn ? 'YES' : 'SÍ') : (isEn ? 'NO' : 'NO');
+    
     grid.innerHTML=
         '<div class="res-item"><div class="res-val">'+TW+'</div><div class="res-lbl" data-lang="en">Windows</div><div class="res-lbl lang-hidden" data-lang="es">Ventanas</div></div>'+
         '<div class="res-item"><div class="res-val">'+ventanasGT+'</div><div class="res-lbl" data-lang="en">With Transit</div><div class="res-lbl lang-hidden" data-lang="es">Con Tránsito</div></div>'+
-        '<div class="res-item"><div class="res-val '+(hayTransito?'good':'bad')+'">'+(hayTransito?'YES':'NO')+'</div><div class="res-lbl" data-lang="en">Detection</div><div class="res-lbl lang-hidden" data-lang="es">Detección</div></div>'+
+        '<div class="res-item"><div class="res-val '+(hayTransito?'good':'bad')+'">'+detectText+'</div><div class="res-lbl" data-lang="en">Detection</div><div class="res-lbl lang-hidden" data-lang="es">Detección</div></div>'+
         '<div class="res-item"><div class="res-val good">'+tp+'</div><div class="res-lbl">TP</div></div>'+
         '<div class="res-item"><div class="res-val '+(fp>0?'warn':'good')+'">'+fp+'</div><div class="res-lbl">FP</div></div>'+
         '<div class="res-item"><div class="res-val '+(fn>0?'bad':'good')+'">'+fn+'</div><div class="res-lbl">FN</div></div>'+
@@ -1420,9 +1182,11 @@ function buildResults(tau,theta,colapsos,pciMax,hayTransito,fp,fn,tp,decisiones)
     tbody.innerHTML='';
     for(var d=0;d<decisiones.length;d++){
         var dec=decisiones[d],cls=dec.transit?'highlight-row':'';
+        var colText = dec.col ? (isEn ? 'COLLAPSE' : 'COLAPSO') : (isEn ? 'SUPERPOSITION' : 'SUPERPOSICIÓN');
+        var transText = dec.transit ? (isEn ? 'TRANSIT' : 'TRÁNSITO') : '—';
         var row=document.createElement('tr');
         row.className=cls;
-        row.innerHTML='<td>'+(dec.w+1)+'</td><td>'+dec.pci.toFixed(4)+'</td><td style="color:'+(dec.col?'var(--hi)':'var(--txt3)')+'">'+(dec.col?'COLLAPSE':'SUPERPOSITION')+'</td><td style="color:'+(dec.transit?'var(--amber)':'var(--txt3)')+'">'+(dec.transit?'TRANSIT':'—')+'</td>';
+        row.innerHTML='<td>'+(dec.w+1)+'</td><td>'+dec.pci.toFixed(4)+'</td><td style="color:'+(dec.col?'var(--hi)':'var(--txt3)')+'">'+colText+'</td><td style="color:'+(dec.transit?'var(--amber)':'var(--txt3)')+'">'+transText+'</td>';
         tbody.appendChild(row);
     }
 }
@@ -1515,333 +1279,11 @@ window.setPreset('normal');
 })();
 </script>
 
-<div class="nodes-overlay" id="nodesOverlay"
-     onclick="if(event.target===this)toggleNodes()"></div>
-     <script>
+<div class="nodes-overlay" id="nodesOverlay" onclick="if(event.target===this)toggleNodes()"></div>
+
+<script>
 function downloadPercepwareDemo() {
-  var code = '"""\n' +
-'percepware_demo.py\n' +
-'PWF Physical Probe -- Computational Validation Protocol\n' +
-'PERCEPTEMPLE / Panperceptual Theory of the Universe\n' +
-'\n' +
-'Layer 1: synthetic signals.\n' +
-'Layer 2: real data via --csv.\n' +
-'\n' +
-'pip install numpy scipy matplotlib\n' +
-'"""\n' +
-'\n' +
-'import numpy as np\n' +
-'import matplotlib.pyplot as plt\n' +
-'from scipy.fft import rfft, rfftfreq\n' +
-'from scipy.signal import medfilt\n' +
-'import argparse, csv\n' +
-'from datetime import datetime\n' +
-'\n' +
-'D_MAX, F_HZ, PHI = 200.0, 4.0, 0.0\n' +
-'TAU, THETA_M, FS = 0.3, 1.0, 25\n' +
-'OMEGA = 2 * np.pi * F_HZ\n' +
-'N = FS * 60\n' +
-'\n' +
-'def amplitude(d, d_max=D_MAX):\n' +
-'    return 1.0 - np.clip(d, 0, d_max) / d_max\n' +
-'\n' +
-'def pwf(A, omega=OMEGA, phi=PHI, fs=FS):\n' +
-'    t = np.arange(len(A)) / fs\n' +
-'    return A * np.sin(omega * t + phi)\n' +
-'\n' +
-'def pci(psi, tau=TAU):\n' +
-'    # This is the metric that actually responds to the real input: E depends on\n' +
-'    # how often |Psi(t)| crosses tau, which tracks A(t)\'s real amplitude\n' +
-'    # dynamics, not the fixed carrier. Trust this over peak_hz when judging\n' +
-'    # whether the instrument detected something real.\n' +
-'    L = len(psi)\n' +
-'    E = np.sum(np.abs(psi) > tau) / L if L > 0 else 0.0\n' +
-'    return float(np.log(1.0 + L * E))\n' +
-'\n' +
-'def collapses(psi, tau=TAU):\n' +
-'    return np.abs(psi) > tau\n' +
-'\n' +
-'def peak_frequency(psi, fs=FS):\n' +
-'    # NOTE: extracts the dominant frequency of Psi(t) = A(t)*sin(omega*t+phi).\n' +
-'    # Under amplitude modulation this is dominated by the fixed carrier omega,\n' +
-'    # not by the frequency content of A(t) itself (where real signal movement\n' +
-'    # lives). peak_hz therefore mostly reflects the observer\'s configured omega,\n' +
-'    # not an emergent property of the input. PCI, not peak_hz, is the metric\n' +
-'    # sensitive to real-world amplitude dynamics — see pci() above.\n' +
-'    spectrum = np.abs(rfft(psi - np.mean(psi)))\n' +
-'    freqs = rfftfreq(len(psi), d=1.0 / fs)\n' +
-'    return float(freqs[np.argmax(spectrum[1:]) + 1])\n' +
-'\n' +
-'def memory_decision(pci_val, theta_m=None):\n' +
-'    thr = theta_m if theta_m is not None else THETA_M\n' +
-'    return "STORE" if pci_val > thr else "DISCARD"\n' +
-'\n' +
-'def sensor_noise(n, sigma=0.5):\n' +
-'    # Gaussian noise only. Real HC-SR04 readings include echo artifacts, angle-\n' +
-'    # dependent dropouts, and occasional timeouts that this model does not\n' +
-'    # capture. Synthetic validation (Layer 1) confirms the pipeline\'s internal\n' +
-'    # logic; it does not predict how it will behave against real hardware noise.\n' +
-'    return np.random.normal(0, sigma, n)\n' +
-'\n' +
-'def signal_phase0(n=N, fs=FS, d_c=80.0, amp=30.0,\n' +
-'                  f=4.0, sig=0.5):\n' +
-'    t = np.arange(n) / fs\n' +
-'    return d_c + amp * np.sin(2*np.pi*f*t) + sensor_noise(n, sig)\n' +
-'\n' +
-'def signal_phase1(dist_cm, n=N, sig=0.5):\n' +
-'    return np.full(n, dist_cm) + sensor_noise(n, sig)\n' +
-'\n' +
-'def signal_phase2(n=N, fs=FS, d_m=80.0, sig=0.5):\n' +
-'    t = np.arange(n) / fs\n' +
-'    comp = [(0.5,20),(1.0,18),(1.5,15),(2.0,12),(3.0,8),\n' +
-'            (4.0,5),(5.0,3),(6.0,2),(8.0,1)]\n' +
-'    s = np.zeros(n)\n' +
-'    for f, a in comp:\n' +
-'        ph = np.random.uniform(0, 2*np.pi)\n' +
-'        s += a * np.sin(2*np.pi*f*t + ph)\n' +
-'    return d_m + s + sensor_noise(n, sig)\n' +
-'\n' +
-'def signal_phase3(n=N, fs=FS, density="high",\n' +
-'                  d_p=40.0, d_a=190.0):\n' +
-'    s = np.full(n, d_a, dtype=float)\n' +
-'    tp = int(0.7*fs) if density=="high" else int(0.2*fs)\n' +
-'    ta = int(0.3*fs) if density=="high" else int(2.0*fs)\n' +
-'    i = 0\n' +
-'    while i < n:\n' +
-'        i += max(1, int(np.random.exponential(ta)))\n' +
-'        if i >= n: break\n' +
-'        end = min(i+max(1,int(np.random.exponential(tp))),n)\n' +
-'        s[i:end] = d_p + sensor_noise(end-i, 1.0)\n' +
-'        i = end\n' +
-'    return s\n' +
-'\n' +
-'def process_session(d, label, omega=OMEGA,\n' +
-'                    tau=TAU, theta_m=None, fs=FS):\n' +
-'    thr = theta_m if theta_m is not None else THETA_M\n' +
-'    df  = medfilt(d, kernel_size=3).astype(float)\n' +
-'    A   = amplitude(df)\n' +
-'    psi = pwf(A, omega=omega, fs=fs)\n' +
-'    val = pci(psi, tau)\n' +
-'    col = collapses(psi, tau)\n' +
-'    fp  = peak_frequency(psi, fs)\n' +
-'    return {"label":label,"d":df,"A":A,"psi":psi,\n' +
-'            "collapses":col,"pci":val,"peak_hz":fp,\n' +
-'            "band":"theta" if 3.0<=fp<=8.0 else "off-band",\n' +
-'            "memory":memory_decision(val,thr),\n' +
-'            "n_col":int(np.sum(col)),\n' +
-'            "E":float(np.sum(col))/len(psi)}\n' +
-'\n' +
-'def phase_0():\n' +
-'    print("\\n-- Phase 0: Synthetic Control")\n' +
-'    d = signal_phase0()\n' +
-'    r = process_session(d, "Phase 0")\n' +
-'    r["passed"] = abs(r["peak_hz"] - 4.0) < 0.5\n' +
-'    print(f"  peak={r[\'peak_hz\']:.3f} Hz  "\n' +
-'          f"{\'PASS\' if r[\'passed\'] else \'FAIL\'}")\n' +
-'    return r\n' +
-'\n' +
-'def phase_1():\n' +
-'    print("\\n-- Phase I: Static Signal")\n' +
-'    results = []\n' +
-'    for d_cm in [20, 50, 80, 120, 200]:\n' +
-'        d = signal_phase1(d_cm)\n' +
-'        r = process_session(d, f"Phase I {d_cm}cm")\n' +
-'        r["dist_cm"] = d_cm\n' +
-'        r["A_mean"]  = float(np.mean(r["A"]))\n' +
-'        print(f"  d={d_cm:3d}cm  A={r[\'A_mean\']:.3f}  "\n' +
-'              f"PCI={r[\'pci\']:.3f}")\n' +
-'        results.append(r)\n' +
-'    A_m = [r["A_mean"] for r in results]\n' +
-'    ok  = all(A_m[i]>A_m[i+1] for i in range(len(A_m)-1))\n' +
-'    print(f"  Monotonic: {\'PASS\' if ok else \'FAIL\'}")\n' +
-'    return results\n' +
-'\n' +
-'def phase_2():\n' +
-'    print("\\n-- Phase II: Natural Movement")\n' +
-'    d = signal_phase2()\n' +
-'    r = process_session(d, "Phase II")\n' +
-'    print(f"  peak={r[\'peak_hz\']:.3f} Hz  "\n' +
-'          f"band={r[\'band\']}  PCI={r[\'pci\']:.3f}")\n' +
-'    return r\n' +
-'\n' +
-'def phase_3(n=10):\n' +
-'    global THETA_M\n' +
-'    print("\\n-- Phase III: Intermittent Presence")\n' +
-'    results = []\n' +
-'    for i in range(n):\n' +
-'        den = "high" if i % 2 == 0 else "low"\n' +
-'        d = signal_phase3(density=den)\n' +
-'        r = process_session(d, f"Phase III {i+1}")\n' +
-'        r["density"] = den\n' +
-'        results.append(r)\n' +
-'        print(f"  {i+1:2d}  {den:4s}  PCI={r[\'pci\']:.3f}")\n' +
-'    hi = [r["pci"] for r in results if r["density"]=="high"]\n' +
-'    lo = [r["pci"] for r in results if r["density"]=="low"]\n' +
-'    THETA_M = (np.mean(hi) + np.mean(lo)) / 2.0\n' +
-'    all_p = [r["pci"] for r in results]\n' +
-'    print(f"  theta_m={THETA_M:.3f}  "\n' +
-'          f"std={np.std(all_p):.3f}")\n' +
-'    return results\n' +
-'\n' +
-'def phase_4(n=20):\n' +
-'    print("\\n-- Phase IV: Socratic Forgetting under Load")\n' +
-'    types = ["static_far","movement",\n' +
-'             "intermittent_high","intermittent_low"]\n' +
-'    sessions = []\n' +
-'    for i in range(n):\n' +
-'        tp = types[i % 4]\n' +
-'        if tp == "static_far":\n' +
-'            d, truth = signal_phase1(190.0), "DISCARD"\n' +
-'        elif tp == "movement":\n' +
-'            d, truth = signal_phase2(), "STORE"\n' +
-'        elif tp == "intermittent_high":\n' +
-'            d, truth = signal_phase3(density="high"), "STORE"\n' +
-'        else:\n' +
-'            d, truth = signal_phase3(density="low"), "DISCARD"\n' +
-'        r = process_session(d, f"Phase IV {i+1}")\n' +
-'        r["type"] = tp\n' +
-'        r["truth"] = truth\n' +
-'        r["ok"] = r["memory"] == truth\n' +
-'        sessions.append(r)\n' +
-'        print(f"  {\'OK\' if r[\'ok\'] else \'XX\'}  "\n' +
-'              f"{tp:22s}  PCI={r[\'pci\']:.3f}  "\n' +
-'              f"{r[\'memory\']}")\n' +
-'    acc = sum(s["ok"] for s in sessions) / n\n' +
-'    passed = acc >= 0.80\n' +
-'    print(f"  Accuracy: {acc:.1%}  "\n' +
-'          f"{\'PASS\' if passed else \'FAIL\'}")\n' +
-'    return {"sessions":sessions,"accuracy":acc,\n' +
-'            "passed":passed}\n' +
-'\n' +
-'def load_csv(path):\n' +
-'    dist = []\n' +
-'    with open(path, newline="") as f:\n' +
-'        reader = csv.DictReader(f)\n' +
-'        col = ("d_cm" if "d_cm" in reader.fieldnames\n' +
-'               else reader.fieldnames[0])\n' +
-'        for row in reader:\n' +
-'            try: dist.append(float(row[col]))\n' +
-'            except: pass\n' +
-'    return np.array(dist)\n' +
-'\n' +
-'def layer2(d_real, r_synth):\n' +
-'    # Convergence here is not guaranteed and should not be treated as a formality.\n' +
-'    # peak_hz convergence is weak evidence (both tend toward omega regardless of\n' +
-'    # input — see note in peak_frequency()). PCI convergence is the meaningful\n' +
-'    # check: it is the number that can genuinely fail, and if it does, that is\n' +
-'    # the instrument reading the world, not a bug to suppress.\n' +
-'    print("\\n-- Layer 2: Physical Confirmation")\n' +
-'    r = process_session(d_real, "Layer 2 real")\n' +
-'    df   = abs(r["peak_hz"] - r_synth["peak_hz"])\n' +
-'    dpci = abs(r["pci"]     - r_synth["pci"])\n' +
-'    print(f"  Synthetic  f={r_synth[\'peak_hz\']:.3f}  "\n' +
-'          f"PCI={r_synth[\'pci\']:.3f}")\n' +
-'    print(f"  Real       f={r[\'peak_hz\']:.3f}  "\n' +
-'          f"PCI={r[\'pci\']:.3f}")\n' +
-'    conv = df < 2.0 and dpci < 1.0\n' +
-'    print(f"  Convergence: "\n' +
-'          f"{\'CONFIRMED\' if conv else \'DIVERGENCE\'}")\n' +
-'\n' +
-'def plot_results(r0, r1, r2, r3, r4):\n' +
-'    fig, axs = plt.subplots(2, 2, figsize=(14, 9))\n' +
-'    fig.suptitle("PWF Physical Probe -- Validation\\n"\n' +
-'                 "PERCEPTEMPLE v0.1", fontsize=13)\n' +
-'    t = np.arange(N) / FS\n' +
-'    ax = axs[0,0]\n' +
-'    ax.plot(t, r0["psi"], "k", lw=0.8)\n' +
-'    ax.axhline(TAU,  color="gray", ls="--", lw=0.8)\n' +
-'    ax.axhline(-TAU, color="gray", ls="--", lw=0.8)\n' +
-'    ax.scatter(t[r0["collapses"]],\n' +
-'               r0["psi"][r0["collapses"]], c="k", s=4)\n' +
-'    ax.set_title(f"Phase 0 -- peak={r0[\'peak_hz\']:.2f} Hz")\n' +
-'    ax.set_xlabel("t (s)"); ax.set_ylabel("Psi(t)")\n' +
-'    ax = axs[0,1]\n' +
-'    ax.plot([r["dist_cm"] for r in r1],\n' +
-'            [r["A_mean"]  for r in r1], "o-k", lw=1.2)\n' +
-'    ax.set_title("Phase I -- A(t) vs Distance")\n' +
-'    ax.set_xlabel("Distance (cm)")\n' +
-'    ax.set_ylabel("Mean A(t)")\n' +
-'    ax.invert_xaxis()\n' +
-'    ax = axs[1,0]\n' +
-'    esp   = np.abs(rfft(r2["psi"] - np.mean(r2["psi"])))\n' +
-'    freqs = rfftfreq(N, d=1.0/FS)\n' +
-'    ax.plot(freqs[1:], esp[1:], "k", lw=0.8)\n' +
-'    ax.axvspan(3, 8, alpha=0.1, color="k")\n' +
-'    ax.axvline(r2["peak_hz"], color="k", ls="--", lw=0.8)\n' +
-'    ax.set_title(f"Phase II -- FFT  "\n' +
-'                 f"f={r2[\'peak_hz\']:.2f} Hz [{r2[\'band\']}]")\n' +
-'    ax.set_xlabel("Frequency (Hz)"); ax.set_xlim(0, 15)\n' +
-'    ax = axs[1,1]\n' +
-'    ax.hist([r["pci"] for r in r3], bins=6,\n' +
-'            alpha=0.5, color="k", label="Phase III")\n' +
-'    ax.hist([r["pci"] for r in r4["sessions"]], bins=6,\n' +
-'            alpha=0.3, color="gray", label="Phase IV")\n' +
-'    ax.axvline(THETA_M, color="k", ls="--", lw=1.0)\n' +
-'    ax.set_title(f"PCI -- Phase IV Accuracy: "\n' +
-'                 f"{r4[\'accuracy\']:.1%}")\n' +
-'    ax.set_xlabel("PCI"); ax.legend(fontsize=8)\n' +
-'    plt.tight_layout()\n' +
-'    fname = ("pwf_val_"\n' +
-'             + datetime.now().strftime("%Y%m%d_%H%M%S")\n' +
-'             + ".pdf")\n' +
-'    plt.savefig(fname, bbox_inches="tight", dpi=150)\n' +
-'    print(f"\\n  Figure: {fname}")\n' +
-'    plt.show()\n' +
-'\n' +
-'def report(r0, r1, r2, r3, r4):\n' +
-'    sep = "-" * 56\n' +
-'    print(f"\\n{sep}")\n' +
-'    print("  REPORT -- PWF Physical Probe v0.1")\n' +
-'    print("  PERCEPTEMPLE")\n' +
-'    print(sep)\n' +
-'    A_m = [r["A_mean"] for r in r1]\n' +
-'    mon = all(A_m[i]>A_m[i+1] for i in range(len(A_m)-1))\n' +
-'    bi  = np.std([r["pci"] for r in r3]) > 0.5\n' +
-'    print(f"  Phase 0   Synthetic control    "\n' +
-'          f"{\'OK\' if r0[\'passed\'] else \'XX\'}  "\n' +
-'          f"f={r0[\'peak_hz\']:.3f} Hz")\n' +
-'    print(f"  Phase I   Static signal        "\n' +
-'          f"{\'OK\' if mon else \'XX\'}  "\n' +
-'          f"monotonic={mon}")\n' +
-'    print(f"  Phase II  Natural movement     "\n' +
-'          f"{\'OK\' if r2[\'band\']==\'theta\' else \'~~\'}  "\n' +
-'          f"f={r2[\'peak_hz\']:.3f} Hz [{r2[\'band\']}]")\n' +
-'    print(f"  Phase III Interm. presence     "\n' +
-'          f"{\'OK\' if bi else \'XX\'}  bimodal={bi}")\n' +
-'    print(f"  Phase IV  Socratic Forgetting  "\n' +
-'          f"{\'OK\' if r4[\'passed\'] else \'XX\'}  "\n' +
-'          f"acc={r4[\'accuracy\']:.1%}")\n' +
-'    print(f"\\n  Calibrated theta_m: {THETA_M:.4f}")\n' +
-'    print(f"  omega=2pi*{F_HZ}Hz  tau={TAU}  fs={FS}Hz")\n' +
-'    print(sep)\n' +
-'\n' +
-'def main():\n' +
-'    global OMEGA, TAU, F_HZ\n' +
-'    p = argparse.ArgumentParser()\n' +
-'    p.add_argument("--csv",     default=None)\n' +
-'    p.add_argument("--omega",   type=float, default=F_HZ)\n' +
-'    p.add_argument("--tau",     type=float, default=TAU)\n' +
-'    p.add_argument("--no-plot", action="store_true")\n' +
-'    args = p.parse_args()\n' +
-'    OMEGA = 2 * np.pi * args.omega\n' +
-'    TAU   = args.tau\n' +
-'    F_HZ  = args.omega\n' +
-'    print("PWF Physical Probe -- Computational Validation")\n' +
-'    print("PERCEPTEMPLE / Panperceptual Theory of the Universe\\n")\n' +
-'    r0 = phase_0()\n' +
-'    r1 = phase_1()\n' +
-'    r2 = phase_2()\n' +
-'    r3 = phase_3()\n' +
-'    r4 = phase_4()\n' +
-'    if args.csv:\n' +
-'        layer2(load_csv(args.csv), r2)\n' +
-'    report(r0, r1, r2, r3, r4)\n' +
-'    if not args.no_plot:\n' +
-'        plot_results(r0, r1, r2, r3, r4)\n' +
-'\n' +
-'if __name__ == "__main__":\n' +
-'    main()\n' +
-'\n';
+  var code = '"""\npercepware_demo.py\nPWF Physical Probe -- Computational Validation Protocol\nPERCEPTEMPLE / Panperceptual Theory of the Universe\n\nLayer 1: synthetic signals.\nLayer 2: real data via --csv.\n\npip install numpy scipy matplotlib\n"""\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom scipy.fft import rfft, rfftfreq\nfrom scipy.signal import medfilt\nimport argparse, csv\nfrom datetime import datetime\n\nD_MAX, F_HZ, PHI = 200.0, 4.0, 0.0\nTAU, THETA_M, FS = 0.3, 1.0, 25\nOMEGA = 2 * np.pi * F_HZ\nN = FS * 60\n\ndef amplitude(d, d_max=D_MAX):\n    return 1.0 - np.clip(d, 0, d_max) / d_max\n\ndef pwf(A, omega=OMEGA, phi=PHI, fs=FS):\n    t = np.arange(len(A)) / fs\n    return A * np.sin(omega * t + phi)\n\ndef pci(psi, tau=TAU):\n    L = len(psi)\n    E = np.sum(np.abs(psi) > tau) / L if L > 0 else 0.0\n    return float(np.log(1.0 + L * E))\n\ndef collapses(psi, tau=TAU):\n    return np.abs(psi) > tau\n\ndef peak_frequency(psi, fs=FS):\n    spectrum = np.abs(rfft(psi - np.mean(psi)))\n    freqs = rfftfreq(len(psi), d=1.0 / fs)\n    return float(freqs[np.argmax(spectrum[1:]) + 1])\n\ndef memory_decision(pci_val, theta_m=None):\n    thr = theta_m if theta_m is not None else THETA_M\n    return "STORE" if pci_val > thr else "DISCARD"\n\ndef sensor_noise(n, sigma=0.5):\n    return np.random.normal(0, sigma, n)\n\ndef signal_phase0(n=N, fs=FS, d_c=80.0, amp=30.0, f=4.0, sig=0.5):\n    t = np.arange(n) / fs\n    return d_c + amp * np.sin(2*np.pi*f*t) + sensor_noise(n, sig)\n\ndef signal_phase1(dist_cm, n=N, sig=0.5):\n    return np.full(n, dist_cm) + sensor_noise(n, sig)\n\ndef signal_phase2(n=N, fs=FS, d_m=80.0, sig=0.5):\n    t = np.arange(n) / fs\n    comp = [(0.5,20),(1.0,18),(1.5,15),(2.0,12),(3.0,8),(4.0,5),(5.0,3),(6.0,2),(8.0,1)]\n    s = np.zeros(n)\n    for f, a in comp:\n        ph = np.random.uniform(0, 2*np.pi)\n        s += a * np.sin(2*np.pi*f*t + ph)\n    return d_m + s + sensor_noise(n, sig)\n\ndef signal_phase3(n=N, fs=FS, density="high", d_p=40.0, d_a=190.0):\n    s = np.full(n, d_a, dtype=float)\n    tp = int(0.7*fs) if density=="high" else int(0.2*fs)\n    ta = int(0.3*fs) if density=="high" else int(2.0*fs)\n    i = 0\n    while i < n:\n        i += max(1, int(np.random.exponential(ta)))\n        if i >= n: break\n        end = min(i+max(1,int(np.random.exponential(tp))),n)\n        s[i:end] = d_p + sensor_noise(end-i, 1.0)\n        i = end\n    return s\n\ndef process_session(d, label, omega=OMEGA, tau=TAU, theta_m=None, fs=FS):\n    thr = theta_m if theta_m is not None else THETA_M\n    df  = medfilt(d, kernel_size=3).astype(float)\n    A   = amplitude(df)\n    psi = pwf(A, omega=omega, fs=fs)\n    val = pci(psi, tau)\n    col = collapses(psi, tau)\n    fp  = peak_frequency(psi, fs)\n    return {"label":label,"d":df,"A":A,"psi":psi,"collapses":col,"pci":val,"peak_hz":fp,"band":"theta" if 3.0<=fp<=8.0 else "off-band","memory":memory_decision(val,thr),"n_col":int(np.sum(col)),"E":float(np.sum(col))/len(psi)}\n\ndef phase_0():\n    print("\\n-- Phase 0: Synthetic Control")\n    d = signal_phase0()\n    r = process_session(d, "Phase 0")\n    r["passed"] = abs(r["peak_hz"] - 4.0) < 0.5\n    print(f"  peak={r[\'peak_hz\']:.3f} Hz  {\'PASS\' if r[\'passed\'] else \'FAIL\'}")\n    return r\n\ndef phase_1():\n    print("\\n-- Phase I: Static Signal")\n    results = []\n    for d_cm in [20, 50, 80, 120, 200]:\n        d = signal_phase1(d_cm)\n        r = process_session(d, f"Phase I {d_cm}cm")\n        r["dist_cm"] = d_cm\n        r["A_mean"]  = float(np.mean(r["A"]))\n        print(f"  d={d_cm:3d}cm  A={r[\'A_mean\']:.3f}  PCI={r[\'pci\']:.3f}")\n        results.append(r)\n    A_m = [r["A_mean"] for r in results]\n    ok  = all(A_m[i]>A_m[i+1] for i in range(len(A_m)-1))\n    print(f"  Monotonic: {\'PASS\' if ok else \'FAIL\'}")\n    return results\n\ndef phase_2():\n    print("\\n-- Phase II: Natural Movement")\n    d = signal_phase2()\n    r = process_session(d, "Phase II")\n    print(f"  peak={r[\'peak_hz\']:.3f} Hz  band={r[\'band\']}  PCI={r[\'pci\']:.3f}")\n    return r\n\ndef phase_3(n=10):\n    global THETA_M\n    print("\\n-- Phase III: Intermittent Presence")\n    results = []\n    for i in range(n):\n        den = "high" if i % 2 == 0 else "low"\n        d = signal_phase3(density=den)\n        r = process_session(d, f"Phase III {i+1}")\n        r["density"] = den\n        results.append(r)\n        print(f"  {i+1:2d}  {den:4s}  PCI={r[\'pci\']:.3f}")\n    hi = [r["pci"] for r in results if r["density"]=="high"]\n    lo = [r["pci"] for r in results if r["density"]=="low"]\n    THETA_M = (np.mean(hi) + np.mean(lo)) / 2.0\n    all_p = [r["pci"] for r in results]\n    print(f"  theta_m={THETA_M:.3f}  std={np.std(all_p):.3f}")\n    return results\n\ndef phase_4(n=20):\n    print("\\n-- Phase IV: Socratic Forgetting under Load")\n    types = ["static_far","movement","intermittent_high","intermittent_low"]\n    sessions = []\n    for i in range(n):\n        tp = types[i % 4]\n        if tp == "static_far":\n            d, truth = signal_phase1(190.0), "DISCARD"\n        elif tp == "movement":\n            d, truth = signal_phase2(), "STORE"\n        elif tp == "intermittent_high":\n            d, truth = signal_phase3(density="high"), "STORE"\n        else:\n            d, truth = signal_phase3(density="low"), "DISCARD"\n        r = process_session(d, f"Phase IV {i+1}")\n        r["type"] = tp\n        r["truth"] = truth\n        r["ok"] = r["memory"] == truth\n        sessions.append(r)\n        print(f"  {\'OK\' if r[\'ok\'] else \'XX\'}  {tp:22s}  PCI={r[\'pci\']:.3f}  {r[\'memory\']}")\n    acc = sum(s["ok"] for s in sessions) / n\n    passed = acc >= 0.80\n    print(f"  Accuracy: {acc:.1%}  {\'PASS\' if passed else \'FAIL\'}")\n    return {"sessions":sessions,"accuracy":acc,"passed":passed}\n\ndef load_csv(path):\n    dist = []\n    with open(path, newline="") as f:\n        reader = csv.DictReader(f)\n        col = ("d_cm" if "d_cm" in reader.fieldnames else reader.fieldnames[0])\n        for row in reader:\n            try: dist.append(float(row[col]))\n            except: pass\n    return np.array(dist)\n\ndef layer2(d_real, r_synth):\n    print("\\n-- Layer 2: Physical Confirmation")\n    r = process_session(d_real, "Layer 2 real")\n    df   = abs(r["peak_hz"] - r_synth["peak_hz"])\n    dpci = abs(r["pci"]     - r_synth["pci"])\n    print(f"  Synthetic  f={r_synth[\'peak_hz\']:.3f}  PCI={r_synth[\'pci\']:.3f}")\n    print(f"  Real       f={r[\'peak_hz\']:.3f}  PCI={r[\'pci\']:.3f}")\n    conv = df < 2.0 and dpci < 1.0\n    print(f"  Convergence: {\'CONFIRMED\' if conv else \'DIVERGENCE\'}")\n\ndef plot_results(r0, r1, r2, r3, r4):\n    fig, axs = plt.subplots(2, 2, figsize=(14, 9))\n    fig.suptitle("PWF Physical Probe -- Validation\\nPERCEPTEMPLE v0.1", fontsize=13)\n    t = np.arange(N) / FS\n    ax = axs[0,0]\n    ax.plot(t, r0["psi"], "k", lw=0.8)\n    ax.axhline(TAU,  color="gray", ls="--", lw=0.8)\n    ax.axhline(-TAU, color="gray", ls="--", lw=0.8)\n    ax.scatter(t[r0["collapses"]], r0["psi"][r0["collapses"]], c="k", s=4)\n    ax.set_title(f"Phase 0 -- peak={r0[\'peak_hz\']:.2f} Hz")\n    ax.set_xlabel("t (s)"); ax.set_ylabel("Psi(t)")\n    ax = axs[0,1]\n    ax.plot([r["dist_cm"] for r in r1], [r["A_mean"]  for r in r1], "o-k", lw=1.2)\n    ax.set_title("Phase I -- A(t) vs Distance")\n    ax.set_xlabel("Distance (cm)"); ax.set_ylabel("Mean A(t)"); ax.invert_xaxis()\n    ax = axs[1,0]\n    esp   = np.abs(rfft(r2["psi"] - np.mean(r2["psi"])))\n    freqs = rfftfreq(N, d=1.0/FS)\n    ax.plot(freqs[1:], esp[1:], "k", lw=0.8)\n    ax.axvspan(3, 8, alpha=0.1, color="k")\n    ax.axvline(r2["peak_hz"], color="k", ls="--", lw=0.8)\n    ax.set_title(f"Phase II -- FFT  f={r2[\'peak_hz\']:.2f} Hz [{r2[\'band\']}]")\n    ax.set_xlabel("Frequency (Hz)"); ax.set_xlim(0, 15)\n    ax = axs[1,1]\n    ax.hist([r["pci"] for r in r3], bins=6, alpha=0.5, color="k", label="Phase III")\n    ax.hist([r["pci"] for r in r4["sessions"]], bins=6, alpha=0.3, color="gray", label="Phase IV")\n    ax.axvline(THETA_M, color="k", ls="--", lw=1.0)\n    ax.set_title(f"PCI -- Phase IV Accuracy: {r4[\'accuracy\']:.1%}")\n    ax.set_xlabel("PCI"); ax.legend(fontsize=8)\n    plt.tight_layout()\n    fname = ("pwf_val_" + datetime.now().strftime("%Y%m%d_%H%M%S") + ".pdf")\n    plt.savefig(fname, bbox_inches="tight", dpi=150)\n    print(f"\\n  Figure: {fname}")\n    plt.show()\n\ndef report(r0, r1, r2, r3, r4):\n    sep = "-" * 56\n    print(f"\\n{sep}")\n    print("  REPORT -- PWF Physical Probe v0.1")\n    print("  PERCEPTEMPLE")\n    print(sep)\n    A_m = [r["A_mean"] for r in r1]\n    mon = all(A_m[i]>A_m[i+1] for i in range(len(A_m)-1))\n    bi  = np.std([r["pci"] for r in r3]) > 0.5\n    print(f"  Phase 0   Synthetic control    {\'OK\' if r0[\'passed\'] else \'XX\'}  f={r0[\'peak_hz\']:.3f} Hz")\n    print(f"  Phase I   Static signal        {\'OK\' if mon else \'XX\'}  monotonic={mon}")\n    print(f"  Phase II  Natural movement     {\'OK\' if r2[\'band\']==\'theta\' else \'~~\'}  f={r2[\'peak_hz\']:.3f} Hz [{r2[\'band\']}]")\n    print(f"  Phase III Interm. presence     {\'OK\' if bi else \'XX\'}  bimodal={bi}")\n    print(f"  Phase IV  Socratic Forgetting  {\'OK\' if r4[\'passed\'] else \'XX\'}  acc={r4[\'accuracy\']:.1%}")\n    print(f"\\n  Calibrated theta_m: {THETA_M:.4f}")\n    print(f"  omega=2pi*{F_HZ}Hz  tau={TAU}  fs={FS}Hz")\n    print(sep)\n\ndef main():\n    global OMEGA, TAU, F_HZ\n    p = argparse.ArgumentParser()\n    p.add_argument("--csv",     default=None)\n    p.add_argument("--omega",   type=float, default=F_HZ)\n    p.add_argument("--tau",     type=float, default=TAU)\n    p.add_argument("--no-plot", action="store_true")\n    args = p.parse_args()\n    OMEGA = 2 * np.pi * args.omega\n    TAU   = args.tau\n    F_HZ  = args.omega\n    print("PWF Physical Probe -- Computational Validation")\n    print("PERCEPTEMPLE / Panperceptual Theory of the Universe\\n")\n    r0 = phase_0()\n    r1 = phase_1()\n    r2 = phase_2()\n    r3 = phase_3()\n    r4 = phase_4()\n    if args.csv:\n        layer2(load_csv(args.csv), r2)\n    report(r0, r1, r2, r3, r4)\n    if not args.no_plot:\n        plot_results(r0, r1, r2, r3, r4)\n\nif __name__ == "__main__":\n    main()\n';
 
   var blob = new Blob([code], {type: 'text/x-python;charset=utf-8'});
   var url = URL.createObjectURL(blob);
@@ -1853,51 +1295,7 @@ function downloadPercepwareDemo() {
 }
 
 function downloadPwfRaspberry() {
-  var code = '"""\n' +
-'pwf_raspberry.py -- PWF Physical Probe, Firmware RPi Pico\n' +
-'PERCEPTEMPLE / Panperceptual Theory of the Universe\n' +
-'Connections:\n' +
-'HC-SR04 VCC  -> VBUS (5V)\n' +
-'HC-SR04 GND  -> GND\n' +
-'HC-SR04 TRIG -> GP14 (output)\n' +
-'HC-SR04 ECHO -> GP15 (input, R1=1k + R2=2k to GND)\n' +
-'CSV output over USB serial: timestamp_ms, d_cm\n' +
-'Frequency: 25 Hz (T = 40 ms)\n' +
-'"""\n' +
-'\n' +
-'from machine import Pin, time_pulse_us\n' +
-'from utime import ticks_ms, sleep_us, sleep_ms\n' +
-'\n' +
-'TRIG = Pin(14, Pin.OUT)\n' +
-'ECHO = Pin(15, Pin.IN)\n' +
-'\n' +
-'D_MAX_CM = 200.0\n' +
-'SAMPLE_MS = 40\n' +
-'TIMEOUT_US = 30000\n' +
-'\n' +
-'TRIG.value(0)\n' +
-'sleep_ms(50)\n' +
-'\n' +
-'def measure_cm():\n' +
-'    TRIG.value(1)\n' +
-'    sleep_us(10)\n' +
-'    TRIG.value(0)\n' +
-'    us = time_pulse_us(ECHO, 1, TIMEOUT_US)\n' +
-'    if us < 0:\n' +
-'        return -1.0\n' +
-'    return round(min(us * 0.0343 / 2.0, D_MAX_CM), 2)\n' +
-'\n' +
-'print("PWF Physical Probe -- PERCEPTEMPLE v0.1")\n' +
-'print("timestamp_ms,d_cm")\n' +
-'\n' +
-'while True:\n' +
-'    t0 = ticks_ms()\n' +
-'    d = measure_cm()\n' +
-'    if d >= 0:\n' +
-'        print(f"{t0},{d}")\n' +
-'    wait = SAMPLE_MS - (ticks_ms() - t0)\n' +
-'    if wait > 0:\n' +
-'        sleep_ms(wait)\n';
+  var code = '"""\npwf_raspberry.py -- PWF Physical Probe, Firmware RPi Pico\nPERCEPTEMPLE / Panperceptual Theory of the Universe\nConnections:\nHC-SR04 VCC  -> VBUS (5V)\nHC-SR04 GND  -> GND\nHC-SR04 TRIG -> GP14 (output)\nHC-SR04 ECHO -> GP15 (input, R1=1k + R2=2k to GND)\nCSV output over USB serial: timestamp_ms, d_cm\nFrequency: 25 Hz (T = 40 ms)\n"""\n\nfrom machine import Pin, time_pulse_us\nfrom utime import ticks_ms, sleep_us, sleep_ms\n\nTRIG = Pin(14, Pin.OUT)\nECHO = Pin(15, Pin.IN)\n\nD_MAX_CM = 200.0\nSAMPLE_MS = 40\nTIMEOUT_US = 30000\n\nTRIG.value(0)\nsleep_ms(50)\n\ndef measure_cm():\n    TRIG.value(1)\n    sleep_us(10)\n    TRIG.value(0)\n    us = time_pulse_us(ECHO, 1, TIMEOUT_US)\n    if us < 0:\n        return -1.0\n    return round(min(us * 0.0343 / 2.0, D_MAX_CM), 2)\n\nprint("PWF Physical Probe -- PERCEPTEMPLE v0.1")\nprint("timestamp_ms,d_cm")\n\nwhile True:\n    t0 = ticks_ms()\n    d = measure_cm()\n    if d >= 0:\n        print(f"{t0},{d}")\n    wait = SAMPLE_MS - (ticks_ms() - t0)\n    if wait > 0:\n        sleep_ms(wait)\n';
 
   var blob = new Blob([code], {type: 'text/x-python;charset=utf-8'});
   var url = URL.createObjectURL(blob);
